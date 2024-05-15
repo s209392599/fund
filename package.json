@@ -1,0 +1,37 @@
+{
+  "name": "jijin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build && cd build && node update.js && npm run p 打包 && node openAddress.js",
+    "build/": "vue-cli-service build && cd build && node update.js && npm run p 打包 && node openAddress.js",
+    "p": "cd build && node push.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "echarts": "^5.3.0",
+    "element-plus": "^2.2.17",
+    "element-resize-detector": "1.2.3",
+    "qs": "^6.10.1",
+    "vue": "^3.2.40",
+    "vue-router": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "chalk": "2.4.2",
+    "node-fetch": "2.6.1",
+    "shelljs": "^0.8.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
