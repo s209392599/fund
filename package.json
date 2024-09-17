@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "chalk": "^4.1.2",
     "core-js": "^3.38.1",
     "echarts": "^5.5.1",
     "element-plus": "^2.8.3",
     "element-resize-detector": "1.2.4",
     "qs": "^6.13.0",
-    "vue": "^3.5.6",
     "shelljs": "^0.8.5",
-    "chalk": "5.3.0",
+    "vue": "^3.5.6",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
