@@ -1,4 +1,15 @@
 /*
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------- 2024年9月17日08:13:06 之前的记录
 历史业绩  近1周，1月、1年.....
 https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=400030&disclosureType=1&activeIndex=0
 

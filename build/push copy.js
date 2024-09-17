@@ -1,11 +1,8 @@
 #!/usr/bin/env node
-
-import chalk from 'chalk'; // 使用 ES Module 导入
-import shell from 'shelljs'; // 0.8.5
-
-const { exec, echo, exit, cd, which } = shell;
-
-const name = process.argv[2] || 'Auto-commit';
+let name = process.argv[2] || 'Auto-commit';
+let chalk = require('chalk'); // 2.4.2
+let shell = require('shelljs'); // 0.8.5
+let { exec, echo, exit, cd, which } = shell;
 
 cd('../');
 
@@ -36,3 +33,15 @@ if (exec('git push').code !== 0) {
   exit(1);
 }
 echo(chalk.bold.blue(`git success ${name}`));
+
+/* 和远程有冲突时，合并更新到本地
+git stash
+git pull origin master
+git stash pop
+
+本地进行代码冲突处理
+
+git add .
+git commit -m '提交信息'
+git push
+*/

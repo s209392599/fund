@@ -10,7 +10,7 @@ const routes = [
     path: '/index',
     name: 'Index',
     component: () => import('../views/index.vue'),
-    redirect: '/index/home',
+    redirect: '/index/fund09',
     children: [
       {
         path: 'home', // 查看
