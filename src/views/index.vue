@@ -12,6 +12,7 @@
     <router-link to="/index/fund04">历史净值</router-link> |
     <router-link to="/index/fund07">地址导航</router-link> |
     <router-link to="/index/edit">编辑</router-link>
+    <router-link to="/index/edit">编辑</router-link>
     <!-- <router-link to="/index/edit">编辑</router-link> | -->
     <!-- <router-link to="/index/selfEdit">自选编辑</router-link> -->
     <router-view />
