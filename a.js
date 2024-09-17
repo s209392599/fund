@@ -16,10 +16,10 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITPAGETOKEN }}
+          github_token: ${{ secrets.BOXUE_FUND }}
           publish_dir: ./dist
           publish_branch: gh-pages
+         clean: true
 
-          
           
 */
