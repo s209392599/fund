@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build && cd build && node update.js && npm run p 打包 && node openAddress.js",
-    "build/": "vue-cli-service build && cd build && node update.js && npm run p 打包 && node openAddress.js",
+    "build": "vue-cli-service build",
+    "c": "vue-cli-service build && cd build && node update.js && npm run p 打包 && node openAddress.js",
+    "c/": "vue-cli-service build && cd build && node update.js && npm run p 打包 && node openAddress.js",
     "p": "cd build && node push.js",
     "lint": "vue-cli-service lint"
   },
