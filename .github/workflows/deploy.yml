@@ -12,20 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js (if using Node.js)
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20' # 或者你项目所需的版本
-
-      - name: Install dependencies
-        run: npm install # 安装依赖
-
-      - name: Build project
-        run: npm run build # 根据你的项目配置运行构建命令
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist # 指定要发布的目录
           publish_branch: gh-pages # 指定要部署的分支
