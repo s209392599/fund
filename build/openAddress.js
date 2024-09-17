@@ -1,6 +1,6 @@
 var c = require('child_process');
 
-var address = 'https://gitee.com/gkjson/fund/pages';
+var address = 'https://s209392599.github.io/fund/#/index/fund09';
 
 let platform = process.platform;
 if (platform.startsWith('win')) {
