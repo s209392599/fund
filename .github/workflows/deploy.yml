@@ -16,5 +16,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # 指定要发布的目录
-          publish_branch: gh-pages # 指定要部署的分支
+          publish_dir: ./dist
+          publish_branch: gh-pages
