@@ -5,31 +5,90 @@
     <div style="height: 5px"></div>
 
     <el-row>
-      <el-button class="opa_btn" type="primary" @click="addInfo">新增</el-button>
-      <el-button class="opa_btn" type="primary" @click="copyData">复制数据</el-button>
-      <el-button class="opa_btn" type="primary" @click="importDataVisible = true">导入数据</el-button>
-      <el-button class="opa_btn" type="primary" @click="importDataZhuyawen">导入朱雅文数据</el-button>
+      <el-button class="opa_btn" type="primary" @click="addInfo"
+        >新增</el-button
+      >
+      <el-button class="opa_btn" type="primary" @click="copyData"
+        >复制数据</el-button
+      >
+      <el-button
+        class="opa_btn"
+        type="primary"
+        @click="importDataVisible = true"
+        >导入数据</el-button
+      >
+      <el-button class="opa_btn" type="primary" @click="importDataGuokun"
+        >导入郭坤数据</el-button
+      >
+      <el-button class="opa_btn" type="primary" @click="importDataZhuyawen"
+        >导入朱雅文数据</el-button
+      >
     </el-row>
 
-    <el-table :data="tableData" stripe style="width: 100%" max-height="765" id="viewsAbout">
+    <el-table
+      :data="tableData"
+      stripe
+      style="width: 100%"
+      max-height="765"
+      id="viewsAbout"
+    >
       <el-table-column fixed type="index" width="34"></el-table-column>
-      <el-table-column prop="number" label="代号" min-width="66px"></el-table-column>
-      <el-table-column fixed prop="name" label="名称" min-width="160px"></el-table-column>
-      <el-table-column prop="remarks" label="备注" min-width="160px"></el-table-column>
-      <el-table-column prop="notice" label="提示点位" min-width="90px" class="wert"></el-table-column>
+      <el-table-column
+        prop="number"
+        label="代号"
+        min-width="66px"
+      ></el-table-column>
+      <el-table-column
+        fixed
+        prop="name"
+        label="名称"
+        min-width="160px"
+      ></el-table-column>
+      <el-table-column
+        prop="remarks"
+        label="备注"
+        min-width="160px"
+      ></el-table-column>
+      <el-table-column
+        prop="notice"
+        label="提示点位"
+        min-width="90px"
+        class="wert"
+      ></el-table-column>
       <el-table-column label="操作" min-width="280px" class="guokun">
         <template #default="scope">
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row, 1)">编辑</el-button>
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row, 2)">插入</el-button>
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row, 3)">追加</el-button>
-          <el-button size="mini" type="danger" @click="handleDelete(scope.$index)">删除</el-button>
+          <el-button size="mini" @click="handleEdit(scope.$index, scope.row, 1)"
+            >编辑</el-button
+          >
+          <el-button size="mini" @click="handleEdit(scope.$index, scope.row, 2)"
+            >插入</el-button
+          >
+          <el-button size="mini" @click="handleEdit(scope.$index, scope.row, 3)"
+            >追加</el-button
+          >
+          <el-button
+            size="mini"
+            type="danger"
+            @click="handleDelete(scope.$index)"
+            >删除</el-button
+          >
         </template>
       </el-table-column>
     </el-table>
 
     <el-dialog title="导入数据" v-model="importDataVisible">
-      <el-form :model="modelData" class="demo-ruleForm" :rules="rules" ref="importDataModalBox">
-        <el-input type="textarea" :rows="10" placeholder="请输入内容" v-model="importTextarea">
+      <el-form
+        :model="modelData"
+        class="demo-ruleForm"
+        :rules="rules"
+        ref="importDataModalBox"
+      >
+        <el-input
+          type="textarea"
+          :rows="10"
+          placeholder="请输入内容"
+          v-model="importTextarea"
+        >
         </el-input>
       </el-form>
 
@@ -42,12 +101,21 @@
     </el-dialog>
 
     <el-dialog title="编辑" v-model="dialogFormVisible">
-      <el-form :model="modelData" class="demo-ruleForm" :rules="rules" ref="numberValidateForm">
+      <el-form
+        :model="modelData"
+        class="demo-ruleForm"
+        :rules="rules"
+        ref="numberValidateForm"
+      >
         <el-form-item label="代号" :label-width="formLabelWidth" prop="number">
           <el-input v-model="modelData.number" autocomplete="off"></el-input>
         </el-form-item>
 
-        <el-form-item label="基金名称" :label-width="formLabelWidth" prop="name">
+        <el-form-item
+          label="基金名称"
+          :label-width="formLabelWidth"
+          prop="name"
+        >
           <el-input v-model="modelData.name" autocomplete="off"></el-input>
         </el-form-item>
 
@@ -55,7 +123,11 @@
           <el-input v-model="modelData.remarks" autocomplete="off"></el-input>
         </el-form-item>
 
-        <el-form-item label="提示点位" :label-width="formLabelWidth" prop="notice">
+        <el-form-item
+          label="提示点位"
+          :label-width="formLabelWidth"
+          prop="notice"
+        >
           <el-input v-model="modelData.notice" autocomplete="off"></el-input>
         </el-form-item>
 
@@ -66,7 +138,9 @@
       <template #footer>
         <span class="dialog-footer">
           <el-button @click="dialogFormVisible = false">取 消</el-button>
-          <el-button type="primary" @click="editSure('numberValidateForm')">确 定</el-button>
+          <el-button type="primary" @click="editSure('numberValidateForm')"
+            >确 定</el-button
+          >
         </span>
       </template>
     </el-dialog>
@@ -114,6 +188,16 @@ export default {
     importDataZhuyawen() {
       try {
         var arr = window.globalProperties.defaultArr;
+        localStorage.setItem('info', JSON.stringify(arr));
+        window.location.reload();
+      } catch (err) {
+        console.log('导入数据失败', err);
+      }
+    },
+    // 导入郭坤数据
+    importDataGuokun() {
+      try {
+        var arr = window.globalProperties.guokun;
         localStorage.setItem('info', JSON.stringify(arr));
         window.location.reload();
       } catch (err) {
@@ -262,14 +346,14 @@ export default {
   background-color: #f00 !important;
 }
 
-.el-table__body tr.hover-row.el-table__row--striped>td,
-.el-table__body tr.hover-row>td {
+.el-table__body tr.hover-row.el-table__row--striped > td,
+.el-table__body tr.hover-row > td {
   background-color: #e0e2e8;
   color: #303133;
 }
 
-.el-table__body tr.hover-row.el-table__row--striped>td.el-table__cell,
-.el-table__body tr.hover-row>td.el-table__cell {
+.el-table__body tr.hover-row.el-table__row--striped > td.el-table__cell,
+.el-table__body tr.hover-row > td.el-table__cell {
   background-color: #e0e2e8;
 }
 </style>

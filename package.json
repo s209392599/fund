@@ -2,7 +2,6 @@
   "name": "jijin",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build && cd build && node update.js && npm run p 打包 && node openAddress.js",

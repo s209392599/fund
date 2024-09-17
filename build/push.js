@@ -1,7 +1,11 @@
 #!/usr/bin/env node
-
-import chalk from 'chalk'; // 使用 ES Module 导入
-import shell from 'shelljs'; // 0.8.5
+(async () => {
+  const chalk = await import('chalk');
+  console.log(chalk.default.green('Hello World!'));
+})();
+// import chalk from 'chalk'; // 使用 ES Module 导入
+// import shell from 'shelljs'; // 0.8.5
+let shell = require('shelljs'); // 0.8.5
 
 const { exec, echo, exit, cd, which } = shell;
 
