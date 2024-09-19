@@ -1,4 +1,4 @@
-/* 
+/*
 name: Deploy to GitHub Pages
 
 on:
@@ -20,6 +20,4 @@ jobs:
           publish_dir: ./dist
           publish_branch: gh-pages
          clean: true
-
-          
 */
