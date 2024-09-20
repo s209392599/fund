@@ -19,7 +19,7 @@ https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=400030&disc
 基金诊断
 https://lc.jr.jd.com/fund/funddiagnosis/index/?itemId=106545
 
-天天基金H5详情
+天天基金--H5详情
 https://h5.1234567.com.cn/app/fund-details/?fCode=008087
 
 var arr = [

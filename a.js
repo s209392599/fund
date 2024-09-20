@@ -4,6 +4,8 @@ https://lc.jr.jd.com/finance/fund/latestdetail/index/?fundCode=400030&fundUtmSou
 
 getFundDetailPageInfo
 
+https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailPageInfo
+reqData: {"itemId":"","createOrdermaket":"","fundCode":"400030","clientVersion":null,"channel":"9"}
 
 
 上面的产品详情点击交易规则：

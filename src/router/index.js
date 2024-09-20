@@ -71,6 +71,12 @@ const routes = [
         component: () => import('../components/fund10.vue'),
       },
       {
+        // 费率
+        path: 'fund11',
+        name: 'fund11',
+        component: () => import('../components/fund11.vue'),
+      },
+      {
         path: 'edit',
         name: 'edit',
         component: () => import('../views/edit.vue'),

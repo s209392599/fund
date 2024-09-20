@@ -2,6 +2,7 @@
   <div>
     <!--  <router-link to="/index/home">进入浮动</router-link> | -->
     <router-link to="/index/fund09">今日收益</router-link> |
+    <router-link to="/index/fund11">费率</router-link> |
     <router-link to="/index/fund10">累计净值</router-link> |
     <router-link to="/index/fund05">业绩表现</router-link> |
     <!-- <router-link to="/index/selfHome">自选查看</router-link> | -->
