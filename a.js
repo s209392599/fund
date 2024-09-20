@@ -1,8 +1,5 @@
 /*
-产品详情
-https://lc.jr.jd.com/finance/fund/latestdetail/index/?fundCode=400030&fundUtmSource=340&fundUtmParam=AppShare&utm_term=wxfriends&utm_source=iOS_url_1712791482459&utm_medium=jrappshare
 
-getFundDetailPageInfo
 
 https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailPageInfo
 reqData: {"itemId":"","createOrdermaket":"","fundCode":"400030","clientVersion":null,"channel":"9"}

@@ -1,5 +1,13 @@
 const fetch = require('node-fetch');
 
+/*
+产品详情
+https://lc.jr.jd.com/finance/fund/latestdetail/index/?fundCode=400030&fundUtmSource=340&fundUtmParam=AppShare&utm_term=wxfriends&utm_source=iOS_url_1712791482459&utm_medium=jrappshare
+
+getFundDetailPageInfo
+
+*/
+
 var code = '400030';
 // var code = '007220';
 let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailPageInfo`;
@@ -18,7 +26,6 @@ fetch(u, {
     if (res.resultData.code === '0000') {
       const datas = res.resultData.datas;
       console.log(`a001.js 67 [res]`, datas);
-      console.log(`a001.js 67 [res]`, datas.fundNoticeJumpData);
     }
     console.log(`a001.js 71 [datas]`, res);
   }).catch(err => {
