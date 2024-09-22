@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 
-var code = '400030';
-let u = `https://1799001811503384.cn-shanghai.fc.aliyuncs.com/2023-03-30/functions/getFundDetail/invocations`;
+u = `https://775477fdb4134cd5924c62381cf95ed0.apig.cn-east-3.huaweicloudapis.com/evtest`;
 
 fetch(u)
   .then((res) => res.json())

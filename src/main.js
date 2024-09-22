@@ -124,8 +124,8 @@ window.globalProperties = {
       notice: '1.5,1.7',
     },
   ],
-  fundURL:
-    'https://1799001811503384.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/fund',
+  fundURL: 'https://test/fund',
+  // 'https://1799001811503384.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/fund',
 };
 
 /*
