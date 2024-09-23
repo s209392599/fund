@@ -5,9 +5,9 @@ exports.handler = function (event, context, callback) {
 
   if (event.httpMethod === 'POST') {
     const decodedBody = Buffer.from(event.body, 'base64').toString('utf-8');
-    requestData = JSON.parse(decodedBody || { name: 'post', age: 1 });
+    requestData = JSON.parse(decodedBody);
   } else if (event.httpMethod === 'GET') {
-    requestData = event.queryStringParameters || { name: 'get', age: 1 };
+    requestData = event.queryStringParameters;
   }
 
   const code = requestData.name || '400030';
