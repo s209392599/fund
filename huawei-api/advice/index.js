@@ -23,7 +23,7 @@ exports.handler = function (event, context, callback) {
           'Content-Type': 'application/json',
         },
         isBase64Encoded: false,
-        body: JSON.stringify(data),
+        body: JSON.stringify({ success: true, ...data }),
       };
       callback(error, output);
     })

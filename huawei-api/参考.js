@@ -133,3 +133,10 @@ exports.main = async (event, context) => {
     };
 };
 */
+
+/*
+event:表示输入的信息
+context：云函数执行时，上下文信息（如：环境变量）
+callback：输出（返回结果）
+logger：记录日志（四个级别：debug、info、warn、error）
+*/
