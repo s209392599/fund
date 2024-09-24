@@ -1,4 +1,3 @@
-// index.js
 exports.handler = async function (event, context, callback) {
   let requestData = {};
 
@@ -26,12 +25,25 @@ exports.handler = async function (event, context, callback) {
         };
         callback(null, output);
       } else {
-        callback(null, { statusCode: 404, body: JSON.stringify({ success: false, message: 'API not found' }) });
+        callback(null, {
+          statusCode: 404,
+          body: JSON.stringify({ success: false, message: 'API not found' }),
+        });
       }
     } catch (error) {
-      callback(null, { statusCode: 500, body: JSON.stringify({ success: false, message: error.message }) });
+      callback(null, {
+        statusCode: 500,
+        body: JSON.stringify({ success: false, message: error.message }),
+      });
     }
   } else {
-    callback(null, { statusCode: 400, body: JSON.stringify({ success: false, msg: '需要传递接口名称' }) });
+    callback(null, {
+      statusCode: 400,
+      body: JSON.stringify({
+        success: false,
+        msg: '需要传递接口名称',
+        requestData,
+      }),
+    });
   }
 };
