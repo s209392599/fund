@@ -1,4 +1,4 @@
-/* 基金建议 */
+/* 累计、单位净值、涨跌幅 */
 const fetch = require('node-fetch');
 const config = require('./base.js');
 
@@ -8,7 +8,7 @@ fetch(config.baseApi, {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    name: 'advice',
+    name: 'jing_zhi',
     code: '400030',
   }),
 })

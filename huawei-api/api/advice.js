@@ -15,7 +15,7 @@ exports.handler = async function (requestData) {
   } catch (error) {
     return {
       success: false,
-      message: error.message, // Corrected from `err` to `error`
+      message: error.message,
     };
   }
 };
