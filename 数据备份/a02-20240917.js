@@ -55,7 +55,7 @@ const guokun = [
     skuId: '1007214',
     status: '4',
   },
-  { number: '000116', name: '嘉实丰益(1)10-21)', remarks: '', notice: '' },
+  { number: '000116', name: '嘉实丰益(1)', remarks: '', notice: '' },
   {
     number: '519762',
     name: '交银裕通',

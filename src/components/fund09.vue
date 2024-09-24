@@ -2,22 +2,52 @@
   <div class="about">
     <div style="height: 15px"></div>
 
-    <el-table :data="tableData" stripe style="width: 100%" max-height="765" id="viewsAbout">
+    <el-table
+      :data="tableData"
+      stripe
+      style="width: 100%"
+      max-height="765"
+      id="viewsAbout"
+    >
       <el-table-column fixed type="index" width="28px"></el-table-column>
-      <el-table-column fixed prop="number" label="代号" width="64px"></el-table-column>
-      <el-table-column prop="name" label="名称" width="126px"></el-table-column>
-      <el-table-column prop="update_zhangfu" label="万元收入" width="66px" align="right">
+      <el-table-column
+        fixed
+        prop="number"
+        label="代号"
+        width="56px"
+      ></el-table-column>
+      <el-table-column prop="name" label="名称" width="120px"></el-table-column>
+      <el-table-column
+        prop="update_zhangfu"
+        label="万元收入"
+        width="60px"
+        align="right"
+      >
         <template v-slot="{ row }">
-          <span class="cell_zhangfu" :class="getColor(row.update_zhangfu)">{{ row.update_zhangfu }}</span>
+          <span class="cell_zhangfu" :class="getColor(row.update_zhangfu)">{{
+            row.update_zhangfu
+          }}</span>
         </template>
       </el-table-column>
-      <el-table-column prop="update_time" label="时间" width="60px">
+      <el-table-column prop="update_time" label="时间" width="42px">
         <template v-slot="{ row }">
-          <span :class="getColor_time(row.update_time)">{{ turn_time(row.update_time) }}</span>
+          <span :class="getColor_time(row.update_time)">{{
+            turn_time(row.update_time)
+          }}</span>
         </template>
       </el-table-column>
-      <el-table-column prop="update_danweijingzhi" label="单位净值" width="70px" align="right"></el-table-column>
-      <el-table-column prop="update_leijijingzhijingzhi" label="累计净值" width="70px" align="right"></el-table-column>
+      <el-table-column
+        prop="update_danweijingzhi"
+        label="单位净值"
+        width="65px"
+        align="right"
+      ></el-table-column>
+      <el-table-column
+        prop="update_leijijingzhijingzhi"
+        label="累计净值"
+        width="65px"
+        align="right"
+      ></el-table-column>
     </el-table>
   </div>
 </template>
@@ -33,10 +63,15 @@ export default {
     };
   },
   created() {
-    let arr = localStorage.getItem("info") ? JSON.parse(localStorage.getItem("info")) : globalProperties.defaultArr;
+    let arr = localStorage.getItem('info')
+      ? JSON.parse(localStorage.getItem('info'))
+      : globalProperties.defaultArr;
+
+    // arr.length = 1;
 
     this.tableData = arr.map((item, index) => {
-      this.getShouyi({//业绩表现
+      this.getShouyi({
+        //业绩表现
         number: item.number,
         index: index,
       });
@@ -45,34 +80,46 @@ export default {
         name: item.name,
         remarks: item.remarks,
         notice: item.notice,
-        update_time: '',// 更新时间
-        update_zhangfu: '',// 今日涨幅
-        update_danweijingzhi: '',// 单位净值
-        update_leijijingzhijingzhi: '',// 累计净值
-      }
+        update_time: '', // 更新时间
+        update_zhangfu: '', // 今日涨幅
+        update_danweijingzhi: '', // 单位净值
+        update_leijijingzhijingzhi: '', // 累计净值
+      };
     });
   },
   methods: {
+    // axios.get(`${this.fundURL}/obtainNetWorth/?code=${params.number}&size=1`)
     getShouyi(params) {
       setTimeout(() => {
-        axios.get(`${this.fundURL}/obtainNetWorth/?code=${params.number}&size=1`)
-          .then(res => {
-            console.log(`fund09.vue 40 [res]`, res);
-            let data = res.data || [];
-            var obj = data[0] || {};
-            this.tableData[params.index]["update_time"] = obj.date || '';
-            this.tableData[params.index]["update_zhangfu"] = Math.round(Number(obj.dailyProfit || 0) * 100);
-            this.tableData[params.index]["update_danweijingzhi"] = obj.netValue || '';
-            this.tableData[params.index]["update_leijijingzhijingzhi"] = obj.totalNetValue || '';
-          }).catch(err => {
-            console.log("err", err);
+        axios
+          .post(process.env.VUE_APP_API_URL, {
+            code: params.number,
+            size: 1,
+            name: 'jing_zhi',
           })
-      }, 10 * params.index)
+          .then((res) => {
+            console.log(`fund09.vue 40 [res]`, res);
+            let data = res.data || {};
+            data = data.data || [];
+            var obj = data[0] || {};
+            this.tableData[params.index]['update_time'] = obj.date || '';
+            this.tableData[params.index]['update_zhangfu'] = Math.round(
+              Number(obj.dailyProfit || 0) * 100
+            );
+            this.tableData[params.index]['update_danweijingzhi'] =
+              obj.netValue || '';
+            this.tableData[params.index]['update_leijijingzhijingzhi'] =
+              obj.totalNetValue || '';
+          })
+          .catch((err) => {
+            console.log('err', err);
+          });
+      }, 10 * params.index);
     },
     getColor(v) {
       if (!v) return '';
       if (Number(v) < 0) {
-        return 'down'
+        return 'down';
       } else {
         return 'up';
       }
@@ -128,6 +175,6 @@ export default {
 }
 
 .down {
-  color: #0FA578;
+  color: #0fa578;
 }
 </style>
