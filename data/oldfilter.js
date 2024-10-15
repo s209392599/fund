@@ -72,9 +72,9 @@ async function getPageMutilDataNotLogin(u, reqData) {
     let u = `https://ms.jr.jd.com/gw2/generic/jj/h5/m/getFundSimilarRank`;
 
     let response = await fetch(u, {
-      // "body": 'reqData={"fundCode":"400030","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}',
+      "body": 'reqData={"fundCode":"400030","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}',
       // 006980为基准 2024年09月29日13:59:44
-      "body": 'reqData={"fundCode":"006980","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}',
+      // "body": 'reqData={"fundCode":"006980","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}',
       "headers": {
         "accept": "application/json, text/plain, */*",
         "content-type": "application/x-www-form-urlencoded",
@@ -166,6 +166,7 @@ async function isEligible(arr) {
     const rate = await AnnualIncome(productCode);
     console.log('rate', rate)
     if (rate === '' || Number(rate) < 6) {
+      return false;
       continue;
     }
 
