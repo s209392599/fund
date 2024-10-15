@@ -2,6 +2,10 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const { yimai, guancha, fangqi } = require('./data.js');
+var base_number = '006961';// 跑数据基准基金号
+// var base_number = '006980';// 跑数据基准基金号
+// var base_number = '400030';// 跑数据基准基金号
+
 
 // 过滤掉废除的基金
 const eliminate = [
@@ -72,9 +76,7 @@ async function getPageMutilDataNotLogin(u, reqData) {
     let u = `https://ms.jr.jd.com/gw2/generic/jj/h5/m/getFundSimilarRank`;
 
     let response = await fetch(u, {
-      "body": 'reqData={"fundCode":"400030","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}',
-      // 006980为基准 2024年09月29日13:59:44
-      // "body": 'reqData={"fundCode":"006980","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}',
+      "body": `reqData={"fundCode":"${base_number}","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}`,
       "headers": {
         "accept": "application/json, text/plain, */*",
         "content-type": "application/x-www-form-urlencoded",
