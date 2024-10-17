@@ -1,14 +1,77 @@
 [
   {
-    "productCode": "008055",
-    "productId": 110258,
-    "productName": "汇添富中债7-10年国开债C",
-    "rate": "7.65%"
+    "productCode": "007540",
+    "productName": "华泰保兴安悦债券A",
+    "rate": "12.08%"
   },
   {
-    "productCode": "008054",
-    "productId": 110256,
-    "productName": "汇添富中债7-10年国开债A",
-    "rate": "7.64%"
+    "productCode": "900018",
+    "productName": "中信证券增利一年A",
+    "rate": "9.73%"
+  },
+  {
+    "productCode": "007214",
+    "productName": "国泰惠丰纯债债券A",
+    "rate": "9.58%"
+  },
+  {
+    "productCode": "900188",
+    "productName": "中信证券增利一年C",
+    "rate": "9.30%"
+  },
+  {
+    "productCode": "016658",
+    "productName": "兴华安裕利率债A",
+    "rate": "9.13%"
+  },
+  {
+    "productCode": "016659",
+    "productName": "兴华安裕利率债C",
+    "rate": "8.72%"
+  },
+  {
+    "productCode": "017045",
+    "productName": "达诚腾益债券A",
+    "rate": "8.52%"
+  },
+  {
+    "productCode": "009435",
+    "productName": "淳厚稳嘉债券C",
+    "rate": "8.29%"
+  },
+  {
+    "productCode": "017046",
+    "productName": "达诚腾益债券C",
+    "rate": "8.00%"
+  },
+  {
+    "productCode": "002569",
+    "productName": "博时裕弘纯债债券A",
+    "rate": "7.98%"
+  },
+  {
+    "productCode": "009434",
+    "productName": "淳厚稳嘉债券A",
+    "rate": "7.95%"
+  },
+  {
+    "productCode": "008798",
+    "productName": "国金惠安利率债A",
+    "rate": "7.47%"
+  },
+  {
+    "productCode": "016604",
+    "productName": "国泰嘉睿纯债债券C",
+    "rate": "7.46%"
+  },
+  {
+    "productCode": "004960",
+    "productName": "平安合泰定开债",
+    "rate": "7.25%"
+  },
+  {
+    "productCode": "000116",
+    "productName": "嘉实丰益纯债定期债券",
+    "rate": "7.23%"
   }
 ]
