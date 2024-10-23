@@ -1,68 +1,80 @@
 [
   {
+    "productCode": "007214",
+    "productId": 1007214,
+    "productName": "国泰惠丰纯债债券A",
+    "rate": "9.50%"
+  },
+  {
+    "productCode": "016658",
+    "productId": 1016658,
+    "productName": "兴华安裕利率债A",
+    "rate": "9.16%"
+  },
+  {
     "productCode": "000116",
     "productId": 107795,
     "productName": "嘉实丰益纯债定期债券",
-    "rate": "7.75%"
+    "rate": "7.18%"
   },
   {
-    "productCode": "007769",
-    "productId": 112288,
-    "productName": "东兴兴瑞一年定开债A",
-    "rate": "7.16%"
+    "productCode": "004042",
+    "productId": 108966,
+    "productName": "华夏鼎茂债券A",
+    "rate": "6.59%"
   },
   {
-    "productCode": "005070",
-    "productId": 1005070,
-    "productName": "长江乐丰纯债",
-    "rate": "6.86%"
-  },
-  {
-    "productCode": "006980",
-    "productId": 114237,
-    "productName": "国寿安保泰恒纯债债券",
-    "rate": "6.85%"
-  },
-  {
-    "productCode": "002550",
-    "productId": 112465,
-    "productName": "嘉实稳荣债券",
-    "rate": "6.81%"
+    "productCode": "004043",
+    "productId": 108965,
+    "productName": "华夏鼎茂债券C",
+    "rate": "6.49%"
   },
   {
     "productCode": "004459",
     "productId": 112922,
     "productName": "鑫元瑞利定期开放",
-    "rate": "6.81%"
+    "rate": "6.45%"
   },
   {
-    "productCode": "003324",
-    "productId": 106555,
-    "productName": "东方永兴18个月定期开放债券A",
-    "rate": "6.36%"
+    "productCode": "006725",
+    "productId": 1006725,
+    "productName": "国泰丰盈纯债债券A",
+    "rate": "6.45%"
   },
   {
-    "productCode": "008644",
-    "productId": 112434,
-    "productName": "天弘季季兴三个月定开A",
-    "rate": "6.19%"
+    "productCode": "006549",
+    "productId": 109476,
+    "productName": "国金惠盈纯债A",
+    "rate": "6.43%"
   },
   {
-    "productCode": "018581",
-    "productId": 1018581,
-    "productName": "中银纯债债券D",
-    "rate": "6.15%"
+    "productCode": "002550",
+    "productId": 112465,
+    "productName": "嘉实稳荣债券",
+    "rate": "6.35%"
   },
   {
-    "productCode": "008645",
-    "productId": 112435,
-    "productName": "天弘季季兴三个月定开C",
-    "rate": "6.07%"
+    "productCode": "006980",
+    "productId": 114237,
+    "productName": "国寿安保泰恒纯债债券",
+    "rate": "6.25%"
+  },
+  {
+    "productCode": "016539",
+    "productId": 1016539,
+    "productName": "国泰丰盈纯债债券C",
+    "rate": "6.22%"
   },
   {
     "productCode": "007859",
     "productId": 111373,
     "productName": "平安5-10年期政策性金融债债券A",
-    "rate": "6.02%"
+    "rate": "6.16%"
+  },
+  {
+    "productCode": "007860",
+    "productId": 111372,
+    "productName": "平安5-10年期政策性金融债债券C",
+    "rate": "6.00%"
   }
 ]
