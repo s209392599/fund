@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>图片列表</title>
+  <style>
+    .list-item {
+      float: left;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .item-title {
+      /* position: absolute;
+      top: 0;
+      left: 0; */
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://fundact.eastmoney.com/banner/zq.html">债券收益排行榜</a>
+  <a href="https://fund.eastmoney.com/fundhot8.html">热销基金</a>
+  <a href="https://fund.eastmoney.com/ZQ_jzzzl.html#os_0;isall_0;ft_;pt_13">基金净值</a>
+  <a href="https://www.eastmoney.com/">净买额</a>
+  <a href="https://data.eastmoney.com/gzfx/">估值分析</a>
+  <a href="https://bond.eastmoney.com/">债券资讯、分析</a>
+  <a href="https://quote.eastmoney.com/center/">行情中心</a>
+  <a href="https://quote.eastmoney.com/center/zqsc.html">行情中心-债券市场</a>
+  <a href="https://kuaixun.eastmoney.com/zq.html">债券新闻</a>
+  <a href="https://fund.eastmoney.com/ztjj2/#!syl/D/curr/zf-热门主题">主题基金</a>
+  <!-- <div class="list-item">
+    <img
+      src=""
+      alt=""
+      srcset=""
+    >
+    <div class="item-title"></div>
+  </div> -->
+
+  <script>
+
+
+
+    const ImagesInfo = [
+      {
+        src: 'https://webquotepic.eastmoney.com/GetPic.aspx?nid=1.000011&imageType=RTOPL',
+        width: 340,
+        height: 174,
+        title: '基金行情',
+        origin: 'https://www.1234567.com.cn/',
+        desc: ''
+      }
+    ];
+
+    // 获取页面上的容器元素
+    const container = document.querySelector('body');
+
+    // 遍历ImagesInfo数组
+    ImagesInfo.forEach(info => {
+      // 创建新的div元素
+      const newItem = document.createElement('div');
+      newItem.className = 'list-item';
+
+      // 创建新的img元素
+      const img = document.createElement('img');
+      img.src = info.src;
+      img.alt = '';
+      img.width = info.width;
+      img.height = info.height;
+
+      // 创建新的div元素用于标题
+      const title = document.createElement('div');
+      title.className = 'item-title';
+      title.textContent = info.title;
+
+      // 将img和title添加到新的div中
+      newItem.appendChild(title);
+      newItem.appendChild(img);
+
+      // 将新的div添加到页面容器中
+      container.appendChild(newItem);
+    });
+  </script>
+</body>
+
+</html>
