@@ -24,6 +24,12 @@
     "rate": "6.59%"
   },
   {
+    "productCode": "006980",
+    "productId": 114237,
+    "productName": "国寿安保泰恒纯债债券",
+    "rate": "6.56%"
+  },
+  {
     "productCode": "004043",
     "productId": 108965,
     "productName": "华夏鼎茂债券C",
@@ -52,12 +58,6 @@
     "productId": 112465,
     "productName": "嘉实稳荣债券",
     "rate": "6.35%"
-  },
-  {
-    "productCode": "006980",
-    "productId": 114237,
-    "productName": "国寿安保泰恒纯债债券",
-    "rate": "6.25%"
   },
   {
     "productCode": "016539",

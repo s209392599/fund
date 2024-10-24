@@ -1,54 +1,133 @@
 // b站推荐
 const fetch = require('node-fetch');
 const fs = require('fs');
-const {
-  yimai,// 已买
-  guancha,// 观察
-  fangqi,// 放弃
-} = require('./data.js');
-let xinzeng = [];// 新过滤出来的
+const { yimai, guancha, fangqi } = require('./data.js');
 
+
+// 过滤掉废除的基金
+const eliminate = [
+  { productCode: '016951', name: '鹏华丰顺债券' },// 突然上涨的
+];
+// 过滤掉不能在京东、支付宝买的
+const eliminateBuy = [
+  // { productCode: '003384', name: '金鹰添盈纯债债券' }
+];
+// 过滤掉已经买过的基金
+const prevBuy = [
+  { productCode: '400030', name: '东方添益债券' },
+  { productCode: '485119', name: '工银信用纯债债券A' },
+  { productCode: '485019', name: '工银信用纯债债券B' },
+];
+
+// 筛选:符合条件的基金列表
+let EligibleList = [];
+// 筛选:可购买的基金列表
+let PurchaseList = [];
+// 筛选:定开的基金列表
+let FixedList = [];
+// 筛选:不可在京东、支付宝购买的基金列表
+let AvailableList = [];
+
+// async function queryResilienceInfo() {
+//   try {
+//     let u = `https://api.bilibili.com/x/web-interface/index/top/rcmd`;
+
+//     let response = await fetch(u);
+//     const res = await response.json() || {};
+//     console.log(res?.data?.item);
+//   } catch (err) {
+//     console.log('err => ', err);
+//   }
+// }
+// queryResilienceInfo();
 
 /*
-债券的同类型基金的前200个
-https://lc.jr.jd.com/finance/fund/latestdetail/peerFund/?fundCode=400030
+完全屏蔽的基金有
+003384 金鹰添盈纯债债券
 
-{
-  "nav": {
-    "value": "1.3145",
-    "valueColor": "#333333"
-  },
-  "productCode": "400030",
-  "productId": 106545,
-  "rate": {
-    "value": "6.36%",
-    "valueColor": "#EF4034"
-  },
-  "index": 33,
-  "productName": "东方添益债券"
-}
+屏蔽观察区
+
 */
-async function getPageMutilDataNotLogin(u, reqData) {
+
+
+/* 获取天天基金 近1年 收益排行榜前300个
+https://fund.eastmoney.com/trade/zq.html
+*/
+async function getPageMutilDataNotLogin() {
   let productList = [];
   try {
-    let u = `https://ms.jr.jd.com/gw2/generic/jj/h5/m/getFundSimilarRank`;
+    let u = `https://fund.eastmoney.com/data/fundtradenewapi.aspx?ft=zq&sc=1n&st=desc&pi=1&pn=300&cp=&ct=&cd=&ms=&fr=&plevel=&fst=&ftype=&fr1=&fl=0&isab=1`;
 
     let response = await fetch(u, {
-      "body": 'reqData={"fundCode":"400030","secondCategoryCode":"","fundStatus":"0","orderField":"single_year_rate","pageSize":200,"pageNum":1,"channel":"9"}',
       "headers": {
-        "accept": "application/json, text/plain, */*",
-        "content-type": "application/x-www-form-urlencoded",
+        "accept": "*/*",
+        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+        "sec-ch-ua": "\"Google Chrome\";v=\"129\", \"Not=A?Brand\";v=\"8\", \"Chromium\";v=\"129\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "sec-fetch-dest": "script",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-site": "same-origin"
       },
-      "method": "POST",
+      "referrer": "https://fund.eastmoney.com/trade/zq.html",
+      "referrerPolicy": "strict-origin-when-cross-origin",
+      "body": null,
+      "method": "GET",
+      "mode": "cors",
+      "credentials": "include"
     });
-    const res = await response.json() || {};
-    productList = res?.resultData?.productList || [];
+    const str_1 = await response.text() || {};
+    const str_2 = str_1.slice(15);
+    const str_3 = str_2.slice(0, str_2.length - 1);
+
+    const formattedStr = str_3.replace(/(\w+):/g, '"$1":') // 将键用双引号包裹
+      .replace(/'/g, '"') // 将单引号替换为双引号
+      .replace(/([a-zA-Z_]\w*)\s*:\s*\[/g, '"$1":[') // 确保数组键正确
+      .replace(/;/g, ','); // 替换分号为逗号（如果有的话）
+
+    // 解析为对象
+    let obj;
+    try {
+      obj = JSON.parse(formattedStr);
+    } catch (error) {
+      obj = { datas: [] }
+      console.error("JSON解析错误:", error);
+    }
+    productList = obj.datas.map(v => {
+      const itemArr = v.split('|');
+
+      return {
+        productCode: itemArr[0],
+        productName: itemArr[1],
+        rate: {
+          value: (itemArr[10] || 0) + '%'
+        }
+      }
+    });
+
   } catch (err) {
     console.log('err => ', err);
   } finally {
     return productList;
   }
 }
+
+/*
+{
+    nav: { value: '1.0613', valueColor: '#333333' },
+    productCode: '012692',
+    productId: 1012692,
+    rate: { value: '4.70%', valueColor: '#EF4034' },
+    isSelected: false,
+    jumpData: {
+      jumpType: 2,
+      jumpUrl: 'https://lc.jr.jd.com/finance/fund/latestdetail/index/?fundCode=012692&fundUtmSource=1336&fundUtmParam=detail'
+    },
+    index: 77,
+    productName: '博时中债0-3年国开行债券ETF联接A'
+  },
+
+*/
 
 /*
 条件一：年收益情况
@@ -115,18 +194,17 @@ async function isEligible(arr) {
   }
 
   for (let index = 0; index < arr.length; index++) {
-    log(`正在处理第${index + 1}个基金，已完成的基金数--${EligibleList.length}`);
+    console.log(`正在处理第${index + 1}个基金--${arr[index].productCode}--已完成的基金数--${EligibleList.length}`);
     if (EligibleList.length >= 15) {
       break;
     }
     const productCode = arr[index].productCode;
-    console.log(`正在处理第${index + 1}个基金,${productCode}`);
 
     // 等待计算年收益
     const rate = await AnnualIncome(productCode);
     console.log('rate', rate)
     if (rate === '' || Number(rate) < 6) {
-      continue;
+      return false;
     }
 
     // 等待计算累计净值
@@ -173,15 +251,21 @@ async function startTask() {
   filteredList = new Array(productList.length).fill({});
   // 筛选:符合条件的基金列表
   EligibleList = []
+
   await isEligible(productList);
 
 
   var writeArr = EligibleList.map(item => {
+    if (item?.rate?.value) {
+
+    } else {
+      console.log('获取失败', item)
+    }
     return {
       productCode: item.productCode,
       productId: item.productId,
       productName: item.productName,
-      rate: item.rate.value,
+      rate: item?.rate?.value || 0,
     }
   })
 
