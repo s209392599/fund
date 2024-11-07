@@ -1,27 +1,67 @@
 [
   {
-    "productCode": "007540",
-    "productName": "华泰保兴安悦债券A",
-    "rate": "12.50%"
+    "productCode": "008798",
+    "productName": "国金惠安利率债A",
+    "rate": "7.48%"
   },
   {
-    "productCode": "017045",
-    "productName": "达诚腾益债券A",
-    "rate": "9.13%"
+    "productCode": "006064",
+    "productName": "红土创新增强收益债券C",
+    "rate": "7.40%"
   },
   {
-    "productCode": "016658",
-    "productName": "兴华安裕利率债A",
-    "rate": "9.10%"
+    "productCode": "009227",
+    "productName": "平安增鑫六个月定开债A",
+    "rate": "7.27%"
   },
   {
-    "productCode": "017046",
-    "productName": "达诚腾益债券C",
-    "rate": "8.61%"
+    "productCode": "002826",
+    "productName": "中银永利半年定开债",
+    "rate": "7.06%"
   },
   {
-    "productCode": "007492",
-    "productName": "上银政策性金融债债券A",
-    "rate": "8.36%"
+    "productCode": "006970",
+    "productName": "广发景利纯债A",
+    "rate": "7.03%"
+  },
+  {
+    "productCode": "015716",
+    "productName": "华夏稳享增利6个月滚动持有债A",
+    "rate": "7.03%"
+  },
+  {
+    "productCode": "016431",
+    "productName": "中海丰盈三个月定期开放债券",
+    "rate": "7.01%"
+  },
+  {
+    "productCode": "013579",
+    "productName": "鹏扬丰利一年持有债券A",
+    "rate": "6.82%"
+  },
+  {
+    "productCode": "015717",
+    "productName": "华夏稳享增利6个月滚动持有债C",
+    "rate": "6.82%"
+  },
+  {
+    "productCode": "009229",
+    "productName": "平安增鑫六个月定开债E",
+    "rate": "6.75%"
+  },
+  {
+    "productCode": "009228",
+    "productName": "平安增鑫六个月定开债C",
+    "rate": "6.66%"
+  },
+  {
+    "productCode": "004042",
+    "productName": "华夏鼎茂债券A",
+    "rate": "6.56%"
+  },
+  {
+    "productCode": "006980",
+    "productName": "国寿安保泰恒纯债债券",
+    "rate": "6.49%"
   }
 ]

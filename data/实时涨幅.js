@@ -1,27 +1,28 @@
 // 基金实时涨幅
-const fetch = require("node-fetch");
+const fetch = require('node-fetch');
 
 var arr = [
-  { "number": "007091", "name": "东兴兴福(1年)(7月1号)", "remarks": "", "notice": "" },
-  { "number": "009461", "name": "东方臻萃(3月)(5月6号)", "remarks": "", "notice": "" },
-  { "number": "400030", "name": "东方添益(随时)", "remarks": "", "notice": "" },
-  { "number": "002988", "name": "平安鼎信(30天)", "remarks": "", "notice": "" },
-  { "number": "007214", "name": "国泰惠丰(30天)", "remarks": "", "notice": "" },
-  { "number": "008728", "name": "同泰恒利(30天)", "remarks": "", "notice": "" },
-  { "number": "009604", "name": "国金惠盈(7天)(限1000)", "remarks": "", "notice": "" },
-  { "number": "007235", "name": "广发聚利(30天)", "remarks": "", "notice": "" },
-  { "number": "485119", "name": "工银信用(稳)", "remarks": "", "notice": "" },
-  { "number": "003547", "name": "鹏华丰禄(限100)", "remarks": "", "notice": "" },
-  { "number": "007769", "name": "东兴兴瑞(1年)(11-11)", "remarks": "", "notice": "" },
-  { "number": "000116", "name": "嘉实丰益(1年)(10-21)", "remarks": "", "notice": "" },
-  { "number": "005070", "name": "长江乐丰(3月)(6-11)", "remarks": "", "notice": "" },
-  { "number": "006716", "name": "东方永泰(1年)(5-23)", "remarks": "", "notice": "" },
-  { "number": "006980", "name": "国寿安保(限500)", "remarks": "", "notice": "" },
-  { "number": "519762", "name": "交银裕通", "remarks": "", "notice": "" }
+  { number: '400030', name: '东方添益(随时)' },
+  { number: '006549', name: '国金惠盈纯债A' },
+  { number: '485119', name: '工银信用(稳)' },
+  { number: '006980', name: '国寿安保(限500)' },
+  { number: '003547', name: '鹏华丰禄(限100)' },
+  { number: '006760', name: '国金惠盈C(30)' },
+  { number: '009604', name: '国金惠盈(7-1000)' },
+  { number: '007214', name: '国泰惠丰(30天)' },
+  { number: '000116', name: '嘉实丰益(1)' },
+  { number: '519762', name: '交银裕通' },
+  { number: '007540', name: '华泰保兴安A' },
+  { number: '017593', name: '汇添富添C' },
+  { number: '008799', name: '国金惠安利C' },
+  { number: '010353', name: '南方崇元A' },
+  { number: '006961', name: '南方中债7-10' },
+  { number: '016658', name: '兴华安裕' },
+  { number: '007492', name: '上银政策性' },
 ];
 
 function realTimeInformation(str) {
-  if (str.startsWith("jsonpgz(")) {
+  if (str.startsWith('jsonpgz(')) {
     str = str.slice(8);
   }
   if (str.endsWith(');')) {
@@ -35,12 +36,19 @@ async function getFund(code, index) {
   // https://fundgz.1234567.com.cn/js/400030.js?rt=1711363239864
   let u = `https://fundgz.1234567.com.cn/js/${code}.js?rt=${+new Date()}`;
   return fetch(u, {})
-    .then(res => res.text())
-    .then(res => {
+    .then((res) => res.text())
+    .then((res) => {
       let data = realTimeInformation(res);
       let obsData = JSON.parse(data);
       // {"fundcode":"008087","name":"华夏中证5G通信主题ETF联接C","jzrq":"2024-03-22","dwjz":"0.9686","gsz":"0.9416","gszzl":"-2.78","gztime":"2024-03-25 15:00"}
-      return { code, "name": obsData.name, "gszzl": obsData.gszzl, dwjz: obsData.dwjz, gsz: obsData.gsz, gztime: obsData.gztime };
+      return {
+        code,
+        name: obsData.name,
+        gszzl: obsData.gszzl,
+        dwjz: obsData.dwjz,
+        gsz: obsData.gsz,
+        gztime: obsData.gztime,
+      };
     });
 }
 
@@ -51,12 +59,12 @@ async function fetchFundData() {
     let fundData = await getFund(arr[i].number, i);
     // IncreaseArr.push({ "number": fundData.code, "name": fundData.name, "gszzl": fundData.gszzl });
     IncreaseArr.push({
-      "code": fundData.code,
-      "name": fundData.name,
-      "gszzl": fundData.gszzl,
-      dwjz: fundData.dwjz,
-      gsz: fundData.gsz,
-      gztime: fundData.gztime
+      代号: fundData.code,
+      基金名称: fundData.name,
+      gszzl: fundData.gszzl,
+      单位净值: fundData.dwjz,
+      累计净值: fundData.gsz,
+      更新时间: fundData.gztime,
     });
   }
 }
@@ -64,8 +72,3 @@ async function fetchFundData() {
 fetchFundData().then(() => {
   console.table(IncreaseArr);
 });
-
-
-
-
-
