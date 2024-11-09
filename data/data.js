@@ -15,7 +15,6 @@ module.exports = {
     { number: '016658', name: '兴华安裕' },
     { number: '007492', name: '上银政策性' },
     { number: '000606', name: '天弘优选债券A' },
-    { number: '006475', name: '国泰嘉睿纯债债券A' },
     { number: '016604', name: '国泰嘉睿纯债债券C' },
     { number: '006061', name: '红土创新增强收益债券A' },
   ],
@@ -24,6 +23,7 @@ module.exports = {
     { number: '400030', name: '东方添益(随时)' },
     { number: '003547', name: '鹏华丰禄(限100)' },
     { number: '519762', name: '交银裕通' },
+    { number: '006475', name: '国泰嘉睿纯债债券A' }, // 016604 重复
     { number: '010353', name: '南方崇元A' },
   ],
   // 待买
