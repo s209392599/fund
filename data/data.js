@@ -1,21 +1,17 @@
 module.exports = {
   // 已买
   yimai: [
-    { number: '400030', name: '东方添益(随时)' },
+    { number: '006961', name: '南方中债7-10' },
     { number: '006549', name: '国金惠盈纯债A' },
-    { number: '485119', name: '工银信用(稳)' },
     { number: '006980', name: '国寿安保(限500)' },
-    { number: '003547', name: '鹏华丰禄(限100)' },
+
     { number: '006760', name: '国金惠盈C(30)' },
     { number: '009604', name: '国金惠盈(7-1000)' },
     { number: '007214', name: '国泰惠丰(30天)' },
     { number: '000116', name: '嘉实丰益(1)' },
-    { number: '519762', name: '交银裕通' },
     { number: '007540', name: '华泰保兴安A' },
     { number: '017593', name: '汇添富添C' },
     { number: '008799', name: '国金惠安利C' },
-    { number: '010353', name: '南方崇元A' },
-    { number: '006961', name: '南方中债7-10' },
     { number: '016658', name: '兴华安裕' },
     { number: '007492', name: '上银政策性' },
     { number: '000606', name: '天弘优选债券A' },
@@ -24,7 +20,12 @@ module.exports = {
     { number: '006061', name: '红土创新增强收益债券A' },
   ],
   // 待移除
-  daiyichu: [],
+  daiyichu: [
+    { number: '400030', name: '东方添益(随时)' },
+    { number: '003547', name: '鹏华丰禄(限100)' },
+    { number: '519762', name: '交银裕通' },
+    { number: '010353', name: '南方崇元A' },
+  ],
   // 待买
   daimai: [],
   // 观察列表
