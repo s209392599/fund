@@ -25,18 +25,23 @@ var IncreaseArr = [];
 // Number((Number("-0.07") * 100).toFixed(0))
 
 async function fetchFundData() {
+  const cur_year = new Date().getFullYear();
+  let cur_month = new Date().getMonth() + 1;
+  cur_month = cur_month < 10 ? `0${cur_month}` : cur_month;
+  let cur_day = new Date().getDate();
+  if (cur_day < 10) cur_day = `0${cur_day}`;
+  const cur_date = `${cur_year}-${cur_month}-${cur_day}`;
+
   for (let i = 0; i < arr.length; i++) {
     let obj = await getFund(arr[i].number, i);
+    const flag = obj.date === cur_date;
     IncreaseArr.push({
       代号: arr[i].number,
       名称: arr[i].name,
-      // "今日涨幅": obj.dailyProfit,
-      // "今日涨幅": Number(obj.dailyProfit) * 100,
-      // "今日涨幅": Number(Number(obj.dailyProfit).toFixed(2)) * 100,
-      今日涨幅: Math.round(Number(obj.dailyProfit) * 100),
-      单位净值: obj.netValue,
-      累计净值: obj.totalNetValue,
-      日期: obj.date,
+      今日涨幅: flag ? Math.round(Number(obj.dailyProfit) * 100) : 0,
+      单位净值: flag ? obj.netValue : '',
+      累计净值: flag ? obj.totalNetValue : '',
+      日期: flag ? obj.date : '',
     });
   }
 }
@@ -50,36 +55,3 @@ fetchFundData().then(() => {
   console.table(IncreaseArr);
   // console.table(IncreaseArr, { columns: { 今日涨幅: { align: 'right' } } });// console-table-printer'
 });
-
-// -------------------------------------------------  skuid 开始 ---------
-{
-  var itemIdArr = [];
-  async function getItemid(code, index) {
-    console.log(`正在请求第 ${index + 1} 个基金数据 ~~~`);
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailPageInfo?reqData={"itemId":"","createOrdermaket":"","fundCode":"${code}","clientVersion":null,"channel":"9"}`;
-    return fetch(u, {})
-      .then((res) => res.json())
-      .then((res) => {
-        let resultData = res.resultData || {};
-        let datas = resultData.datas || {};
-        let headerOfItem = datas.headerOfItem || [];
-        return headerOfItem.itemId || '';
-      });
-  }
-
-  async function fetchFundData() {
-    for (let i = 0; i < arr.length; i++) {
-      let itemId = await getItemid(arr[i].number, i);
-      itemIdArr.push({
-        代号: arr[i].number,
-        名称: arr[i].name,
-        itemId: itemId,
-      });
-    }
-  }
-
-  // fetchFundData().then(() => {
-  //   console.table(itemIdArr);
-  // });
-}
-// -------------------------------------------------  skuid 结束 ---------
