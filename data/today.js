@@ -38,7 +38,7 @@ async function fetchFundData() {
     IncreaseArr.push({
       代号: arr[i].number,
       名称: arr[i].name,
-      今日涨幅: flag ? Math.round(Number(obj.dailyProfit) * 100) : 0,
+      万元收入: flag ? Math.round(Number(obj.dailyProfit) * 100) : 0,
       单位净值: flag ? obj.netValue : '',
       累计净值: flag ? obj.totalNetValue : '',
       日期: flag ? obj.date : '',
@@ -48,10 +48,10 @@ async function fetchFundData() {
 
 fetchFundData().then(() => {
   const count = IncreaseArr.reduce(
-    (pre, cur) => pre + Number(cur['今日涨幅']),
+    (pre, cur) => pre + Number(cur['万元收入']),
     0
   );
   console.log('今日累计收益: ' + count + '元');
   console.table(IncreaseArr);
-  // console.table(IncreaseArr, { columns: { 今日涨幅: { align: 'right' } } });// console-table-printer'
+  // console.table(IncreaseArr, { columns: { 万元收入: { align: 'right' } } });// console-table-printer'
 });
