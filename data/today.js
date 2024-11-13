@@ -16,6 +16,7 @@ async function getFund(code, index) {
       let datas = resultData.datas || {};
       let netValueList = datas.netValueList || [];
       // '{"date":"2024-03-26","netValue":"1.3149","dailyProfit":"-0.02","totalNetValue":"1.5429"}'
+      // '{"date":"2024-03-26","netValue":"1.3149","dailyProfit":"-0.02","totalNetValue":"1.5429"}'
       return netValueList[0] || {};
     });
 }
