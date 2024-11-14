@@ -56,3 +56,51 @@ fetchFundData().then(() => {
   console.table(IncreaseArr);
   // console.table(IncreaseArr, { columns: { 万元收入: { align: 'right' } } });// console-table-printer'
 });
+
+// $(this.el).on('mousedown', '.gantt_cell', function () {
+//   $(document).on('mousemove.drag', async function (e) {
+//     //
+//   });
+
+//   $(document).on('mouseup.drag', async function (e) {
+//     //
+//   });
+// });
+// 怎么在这个里面进行鼠标点击和拖拽的判断呢？
+
+$(this.el).on('mousedown', '.gantt_cell', function (e) {
+  let isDragging = false;
+  let startX = e.pageX;
+  let moved = false;
+
+  $(document).on('mousemove.drag', function (e) {
+    if (!isDragging) {
+      let deltaX = Math.abs(e.pageX - startX);
+      if (deltaX > 5) {
+        isDragging = true;
+        moved = true;
+        console.log('开始拖拽');
+      }
+    }
+
+    if (isDragging) {
+      console.log('正在拖拽', e.pageX, e.pageY);
+    }
+  });
+
+  $(document).on('mouseup.drag', function (e) {
+    $(document).off('mousemove.drag mouseup.drag');
+
+    if (isDragging) {
+      console.log('结束拖拽');
+      // 在这里添加拖拽结束时的逻辑
+    } else if (!moved) {
+      console.log('点击事件');
+      // 在这里添加点击事件的处理代码
+    }
+
+    // 重置状态
+    isDragging = false;
+    moved = false;
+  });
+});

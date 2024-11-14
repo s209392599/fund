@@ -93,19 +93,34 @@ async function fetchFundData() {
   for (let i = 0; i < fund_data.length; i++) {
     let arr = await getFund(fund_data[i].number, i);
     let obj = getInfoObj(arr);
+
     IncreaseArr.push({
       代号: fund_data[i].number,
-      名称: fund_data[i].name,
+      // 名称: fund_data[i].name,
       // 交易天数: obj.totalDays,
       累计收益: obj.totalGetValue,
-      涨的天数: obj.increaseDays,
-      涨的天数比率: obj.increaseRate,
-      跌的天数: day_jiaoyi - obj.increaseDays,
-      最高一天收益: obj.highestIncrease,
-      最高一天下跌: obj.highestDecrease,
-      连涨天数: obj.continuousIncreaseDays,
-      连跌天数: obj.continuousDecreaseDays,
+      涨的天数: `${obj.increaseDays}-${day_jiaoyi - obj.increaseDays}-(${
+        obj.increaseRate
+      })`,
+      涨_最高: obj.highestIncrease,
+      跌_最多: obj.highestDecrease,
+      连涨_天: obj.continuousIncreaseDays,
+      连跌_天: obj.continuousDecreaseDays,
     });
+
+    // IncreaseArr.push({
+    //   代号: fund_data[i].number,
+    //   名称: fund_data[i].name,
+    //   // 交易天数: obj.totalDays,
+    //   累计收益: obj.totalGetValue,
+    //   涨的天数: obj.increaseDays,
+    //   涨的天数比率: obj.increaseRate,
+    //   跌的天数: day_jiaoyi - obj.increaseDays,
+    //   最高一天收益: obj.highestIncrease,
+    //   最高一天下跌: obj.highestDecrease,
+    //   连涨天数: obj.continuousIncreaseDays,
+    //   连跌天数: obj.continuousDecreaseDays,
+    // });
   }
 }
 
