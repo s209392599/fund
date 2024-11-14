@@ -42,7 +42,7 @@ function getInfoObj(arr) {
   daysArr.forEach((item, index) => {
     const stamp_cur_date = new Date(item.date).getTime();
     if (stamp_cur_date > stamp_prev_year) {
-      obj.leiji_jingzhi.push(item.totalNetValue); // 累计净值
+      obj.leiji_jingzhi.push(Number(item.totalNetValue * 10000)); // 累计净值
 
       let sum_05 = 0;
       for (let i = index; i > index - 5; i--) {
