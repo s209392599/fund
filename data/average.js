@@ -1,4 +1,4 @@
-// 均线
+// 均线图
 const fetch = require('node-fetch');
 const fs = require('fs');
 const { yimai, guancha, fangqi } = require('./data.js');
