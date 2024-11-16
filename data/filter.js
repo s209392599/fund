@@ -113,27 +113,6 @@ let FixedList = [];
 // 筛选:不可在京东、支付宝购买的基金列表
 let AvailableList = [];
 
-// async function queryResilienceInfo() {
-//   try {
-//     let u = `https://api.bilibili.com/x/web-interface/index/top/rcmd`;
-
-//     let response = await fetch(u);
-//     const res = await response.json() || {};
-//     console.log(res?.data?.item);
-//   } catch (err) {
-//     console.log('err => ', err);
-//   }
-// }
-// queryResilienceInfo();
-
-/*
-完全屏蔽的基金有
-003384 金鹰添盈纯债债券
-
-屏蔽观察区
-
-*/
-
 /* 获取天天基金 近1年 收益排行榜前300个
 https://fund.eastmoney.com/trade/zq.html
 */
