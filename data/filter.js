@@ -1,117 +1,9 @@
-// b站推荐
+// 过滤基金
 const fetch = require('node-fetch');
 const fs = require('fs');
-const { yimai, guancha, fangqi } = require('./data.js');
+const { fangqi } = require('./data.js');
 
-// 过滤掉废除的基金
-const eliminate = [
-  { productCode: '016951', name: '鹏华丰顺债券' }, // 突然上涨的 2024年11月7日21:45:41
-  {
-    productCode: '008883',
-    productName: '国联安增祺纯债C',
-    rate: '38.68%',
-  },
-  {
-    productCode: '017556',
-    productName: '招商安凯债券', // 不可购买
-    rate: '11.08%',
-  },
-];
-// 过滤掉不能在京东、支付宝买的
-const eliminateBuy = [
-  // { productCode: '003384', name: '金鹰添盈纯债债券' }
-];
-// 过滤掉已经买过的基金
-const prevBuy = [
-  { productCode: '400030', name: '东方添益债券' },
-  { productCode: '485119', name: '工银信用纯债债券A' },
-  { productCode: '485019', name: '工银信用纯债债券B' },
-  {
-    productCode: '007540',
-    productName: '华泰保兴安悦债券A',
-    rate: '12.52%',
-  },
-
-  {
-    productCode: '900018',
-    productName: '中信证券增利一年A',
-    rate: '9.60%',
-  },
-  {
-    productCode: '007214',
-    productName: '国泰惠丰纯债债券A',
-    rate: '9.43%',
-  },
-  {
-    productCode: '017045',
-    productName: '达诚腾益债券A',
-    rate: '9.29%',
-  },
-  {
-    productCode: '004564',
-    productName: '北信瑞丰鼎利债券A',
-    rate: '9.26%',
-  },
-  {
-    productCode: '016658',
-    productName: '兴华安裕利率债A',
-    rate: '9.18%',
-  },
-  {
-    productCode: '005193',
-    productName: '北信瑞丰鼎利债券C',
-    rate: '9.03%',
-  },
-  {
-    productCode: '650001',
-    productName: '英大纯债债券A',
-    rate: '8.95%',
-  },
-  {
-    productCode: '217024',
-    productName: '招商安盈债券A',
-    rate: '8.87%',
-  },
-  {
-    productCode: '017046',
-    productName: '达诚腾益债券C',
-    rate: '8.77%',
-  },
-  {
-    productCode: '016659',
-    productName: '兴华安裕利率债C',
-    rate: '8.74%',
-  },
-  {
-    productCode: '012233',
-    productName: '招商安盈债券C',
-    rate: '8.65%',
-  },
-  {
-    productCode: '002569',
-    productName: '博时裕弘纯债债券A',
-    rate: '8.02%',
-  },
-  {
-    productCode: '000606',
-    productName: '天弘优选债券A',
-    rate: '7.88%',
-  },
-  {
-    productCode: '006475',
-    productName: '国泰嘉睿纯债债券A',
-    rate: '7.79%',
-  },
-];
-
-// 筛选:符合条件的基金列表
-let EligibleList = [];
-// 筛选:可购买的基金列表
-let PurchaseList = [];
-// 筛选:定开的基金列表
-let FixedList = [];
-// 筛选:不可在京东、支付宝购买的基金列表
-let AvailableList = [];
+let EligibleList = []; // 符合条件的基金列表
 
 /* 获取天天基金 近1年 收益排行榜前300个
 https://fund.eastmoney.com/trade/zq.html
@@ -177,24 +69,8 @@ async function getPageMutilDataNotLogin() {
 }
 
 /*
-{
-    nav: { value: '1.0613', valueColor: '#333333' },
-    productCode: '012692',
-    productId: 1012692,
-    rate: { value: '4.70%', valueColor: '#EF4034' },
-    isSelected: false,
-    jumpData: {
-      jumpType: 2,
-      jumpUrl: 'https://lc.jr.jd.com/finance/fund/latestdetail/index/?fundCode=012692&fundUtmSource=1336&fundUtmParam=detail'
-    },
-    index: 77,
-    productName: '博时中债0-3年国开行债券ETF联接A'
-  },
-
-*/
-
-/*
 条件一：年收益情况
+https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryPerformancePageInfo?reqData={"fundCode":"400030","channel":"9"}
 */
 async function AnnualIncome(fundCode) {
   let rate = '';
@@ -288,13 +164,13 @@ async function isEligible(arr) {
 
       const flag_1 =
         nowValue_000 > nowValue_100 &&
-        (nowValue_000 - nowValue_100) / nowValue_100 > 0.01;
+        (nowValue_000 - nowValue_100) / nowValue_100 > 0.015;
       const flag_2 =
         nowValue_100 > nowValue_200 &&
-        (nowValue_100 - nowValue_200) / nowValue_200 > 0.01;
+        (nowValue_100 - nowValue_200) / nowValue_200 > 0.015;
       const flag_3 =
         nowValue_200 > nowValue_300 &&
-        (nowValue_200 - nowValue_300) / nowValue_300 > 0.01;
+        (nowValue_200 - nowValue_300) / nowValue_300 > 0.015;
       if (flag_1 && flag_2 && flag_3) {
         EligibleList.push(arr[index]);
       }
@@ -311,17 +187,9 @@ async function startTask() {
     return false;
   }
 
-  // 过滤掉废除的基金
+  // 放弃的基金
   productList = productList.filter((item) => {
-    return !eliminate.some((e) => e.productCode === item.productCode);
-  });
-  // 过滤掉不能在京东、支付宝买的
-  productList = productList.filter((item) => {
-    return !eliminateBuy.some((e) => e.productCode === item.productCode);
-  });
-  // 过滤掉已经买过的基金
-  productList = productList.filter((item) => {
-    return !prevBuy.some((e) => e.productCode === item.productCode);
+    return !fangqi.some((e) => e.productCode === item.productCode);
   });
   console.log(productList.length);
   // 初步过滤后的数组

@@ -1,5 +1,8 @@
 module.exports = {
-  // 已买(符合购买标准的前15名)
+  // 过滤掉不能在京东、支付宝购买的
+  eliminateBuy: [],
+
+  // 已买
   yimai: [
     { number: '006961', name: '南方中债7-10' },
     { number: '006549', name: '国金惠盈纯债A' },
@@ -16,9 +19,8 @@ module.exports = {
     { number: '000606', name: '天弘优选债券A' },
     { number: '016604', name: '国泰嘉睿纯债债券C' },
   ],
-
-  // 观察列表(过往买过的，或者表现下降或者快上升能购买的)
-  guancha: [
+  // 待移除
+  daiyichu: [
     { number: '400030', name: '东方添益(随时)' },
     { number: '003547', name: '鹏华丰禄(限100)' },
     { number: '519762', name: '交银裕通' },
@@ -27,59 +29,99 @@ module.exports = {
     { number: '010353', name: '南方崇元A' },
     { number: '006061', name: '红土创新增强收益债券A' },
   ],
-
+  // 待买
+  daimai: [],
+  // 观察列表
+  guancha: [],
   // 放弃的基金
   fangqi: [
-    {
-      productCode: '002569',
-      productName: '博时裕弘纯债债券A',
-      remarks: '8.03 京东金融不卖 2024年11月18日13:06:28',
-    },
     {
       number: '485019',
       name: '工银信用(稳)',
       remarks: '已经有同类的了 2024年04月21日16:24:15',
+      notice: '',
+      skuId: '107328',
+      status: '6',
     },
     {
       number: '005637',
       name: '国联聚业(3月)',
       remarks: '只能机构购买',
+      notice: '',
+      skuId: '1005637',
+      status: '6',
     },
     {
       number: '005070',
       name: '长江乐丰(3)',
+      remarks: '',
+      notice: '只能机构购买',
+      skuId: '1005070',
+      status: '4',
     },
     {
       number: '006716',
       name: '东方永泰(1)(5.23)',
+      remarks: '',
+      notice: '车日楠的有了',
+      skuId: '109338',
+      status: '4',
     },
     {
       number: '007925',
       name: '平安鑫享混合E',
+      remarks: '8.68',
+      notice: '',
+      skuId: '111377',
+      status: '6',
     },
     {
       number: '002988',
       name: '平安鼎信(30天)',
+      remarks: '',
+      notice: '',
+      skuId: '111847',
+      status: '6',
     },
     {
       number: '007235',
       name: '广发聚利(30天)',
+      remarks: '',
+      notice: '',
+      skuId: '1007235',
+      status: '6',
     },
     {
       number: '008728',
       name: '同泰恒利(30天)',
+      remarks: '',
+      notice: '',
+      skuId: '1008728',
+      status: '6',
     },
     {
       number: '011376',
       name: '华宝安享混合',
+      remarks: '7.82',
+      notice: '',
+      skuId: '1011376',
+      status: '6',
     },
     {
       number: '014767',
       name: '景顺长城华城稳健6月持有混合A',
+      remarks: '7.80',
+      notice: '',
+      skuId: '1014767',
+      status: '6',
     },
     {
       number: '006549',
       name: '国金惠盈纯债A(30)',
+      remarks: '7.99;入6',
+      notice: '',
+      skuId: '109476',
+      status: '3',
     },
   ],
 };
