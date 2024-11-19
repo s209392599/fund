@@ -3,7 +3,6 @@ const fs = require('fs');
 var IncreaseArr = [];
 let test = false;
 // test = true; // 开启测试，则只请求3个
-// 019984
 
 // 天天基金同业存单数据
 async function getAnnualIncome(fundCode) {
@@ -160,12 +159,18 @@ async function AnnualIncomeRank() {
   }
 
   let top_05_arr = IncreaseArr.slice(0, 5).map((item) => {
-    item['名称'] = item['名称'].replace(
-      /同业存单|AAA|指数|7天|持有|期|月月乐/g,
-      ''
-    );
-    return item;
+    let obj = {
+      名称: item['名称'].replace(/同业存单|AAA|指数|7天|持有|期|月月乐/g, ''),
+      累收: item['累计收益'],
+      '涨-跌-比率': item['涨-跌-比率'],
+      '涨-连': `${item['涨_最高']}-${item['连涨_天']}`,
+      '跌-连': `${item['跌_最多']}-${item['连跌_天']}`,
+    };
+
+    return obj;
   });
+
+  console.log('');
   console.log('TOP 5 同业存单排名：');
   console.table(top_05_arr);
 }
