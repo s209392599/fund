@@ -59,7 +59,7 @@ function getInfoObj(arr) {
       // 计算差值
       const increase = cur_totalNetValue - prev_totalNetValue;
       obj.totalGetValue += Math.ceil(increase); // 累计收益
-      if (increase > 0) {
+      if (increase >= 0) {
         obj.increaseDays += 1; // 涨的天数
         count_die = 0;
         count_zhang++;
