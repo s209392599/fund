@@ -160,6 +160,7 @@ async function AnnualIncomeRank() {
 
   let top_05_arr = IncreaseArr.slice(0, 5).map((item) => {
     let obj = {
+      代号: item['代号'],
       名称: item['名称'].replace(/同业存单|AAA|指数|7天|持有|期|月月乐/g, ''),
       累收: item['累计收益'],
       '涨-跌-比率': item['涨-跌-比率'],
