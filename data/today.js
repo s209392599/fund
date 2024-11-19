@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 
 const { yimai, guancha, fangqi } = require('./data.js');
 
-var arr = [...yimai, ...guancha];
+var arr = [...yimai];
 
 async function getFund(code, index) {
   console.log(`正在请求第 ${index + 1} 个基金数据 ~~~`);
