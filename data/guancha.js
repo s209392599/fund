@@ -39,7 +39,7 @@ async function fetchFundData() {
       代号: arr[i].number,
       名称: arr[i].name,
       万元收入: flag ? Math.round(Number(obj.dailyProfit) * 100) : 0,
-      单位净值: flag ? obj.netValue : '',
+      // 单位净值: flag ? obj.netValue : '',
       累计净值: flag ? obj.totalNetValue : '',
       日期: flag ? obj.date : '',
     });
