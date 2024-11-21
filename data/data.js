@@ -3,11 +3,11 @@ module.exports = {
   yimai: [
     { number: '022431', name: '华夏中证A500' },
     { number: '006962', name: '南方中债7-10' },
-    { number: '006980', name: '国寿安保(限500)' },
     { number: '007540', name: '华泰保兴安A' },
-    { number: '016659', name: '兴华安裕利率债C' },
-    { number: '016604', name: '国泰嘉睿纯债债券C' },
-    { number: '006549', name: '国金惠盈纯债A(待移除)' },
+    { number: '016659', name: '兴华安裕C' },
+    { number: '016604', name: '国泰嘉睿C' },
+    { number: '006980', name: '国寿(待移除)' },
+    { number: '006549', name: '国金(待移除)' },
   ],
 
   // 观察列表(过往买过的，或者表现下降或者快上升能购买的)
