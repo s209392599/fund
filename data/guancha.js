@@ -3,10 +3,9 @@ const fetch = require('node-fetch');
 
 const { yimai, guancha, fangqi } = require('./data.js');
 
-var arr = [...yimai];
+var arr = [...guancha];
 
 async function getFund(code, index) {
-  console.log(`正在请求第 ${index + 1} 个基金数据 ~~~`);
   // https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=400030&disclosureType=1&activeIndex=2
   let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"${code}","pageNum":1,"pageSize":69,"channel":"9"}`;
   return fetch(u, {})
@@ -15,7 +14,7 @@ async function getFund(code, index) {
       let resultData = res.resultData || {};
       let datas = resultData.datas || {};
       let netValueList = datas.netValueList || [];
-      // console.log(`today.js 18 [netValueList]`,netValueList);
+      // '{"date":"2024-03-26","netValue":"1.3149","dailyProfit":"-0.02","totalNetValue":"1.5429"}'
       // '{"date":"2024-03-26","netValue":"1.3149","dailyProfit":"-0.02","totalNetValue":"1.5429"}'
       return netValueList || [];
     });
