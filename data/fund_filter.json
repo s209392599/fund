@@ -1,73 +1,77 @@
 [
   {
-    "productCode": "008883",
-    "productName": "国联安增祺纯债C",
-    "rate": "38.67%"
-  },
-  {
     "productCode": "007540",
     "productName": "华泰保兴安悦债券A",
-    "rate": "12.46%"
+    "rate": "17.15%"
+  },
+  {
+    "productCode": "016951",
+    "productName": "鹏华丰顺债券A",
+    "rate": "16.37%"
+  },
+  {
+    "productCode": "016537",
+    "productName": "上银慧鑫利债券",
+    "rate": "15.68%"
+  },
+  {
+    "productCode": "007214",
+    "productName": "国泰惠丰纯债债券A",
+    "rate": "13.25%"
   },
   {
     "productCode": "016658",
     "productName": "兴华安裕利率债A",
-    "rate": "9.40%"
+    "rate": "12.47%"
   },
   {
     "productCode": "016659",
     "productName": "兴华安裕利率债C",
-    "rate": "8.98%"
+    "rate": "12.04%"
   },
   {
-    "productCode": "017045",
-    "productName": "达诚腾益债券A",
-    "rate": "8.23%"
-  },
-
-  {
-    "productCode": "017046",
-    "productName": "达诚腾益债券C",
-    "rate": "7.71%"
+    "productCode": "002988",
+    "productName": "平安鼎信债券A",
+    "rate": "11.45%"
   },
   {
-    "productCode": "002826",
-    "productName": "中银永利半年定开债",
-    "rate": "7.44%"
+    "productCode": "017556",
+    "productName": "招商安凯债券",
+    "rate": "11.09%"
   },
   {
-    "productCode": "013579",
-    "productName": "鹏扬丰利一年持有债券A",
-    "rate": "6.60%"
+    "productCode": "010174",
+    "productName": "英大智享债券A",
+    "rate": "10.92%"
   },
   {
-    "productCode": "006980",
-    "productName": "国寿安保泰恒纯债债券",
-    "rate": "6.59%"
+    "productCode": "010011",
+    "productName": "景顺景颐招利6个月持有期债券A",
+    "rate": "10.66%"
   },
   {
-    "productCode": "018669",
-    "productName": "兴华安惠纯债A",
-    "rate": "6.55%"
+    "productCode": "008035",
+    "productName": "蜂巢恒利债券A",
+    "rate": "10.63%"
   },
   {
-    "productCode": "007712",
-    "productName": "中银康享3个月定期开放债券",
-    "rate": "6.53%"
+    "productCode": "007492",
+    "productName": "上银政策性金融债债券A",
+    "rate": "10.59%"
   },
   {
-    "productCode": "018670",
-    "productName": "兴华安惠纯债C",
-    "rate": "6.34%"
+    "productCode": "008036",
+    "productName": "蜂巢恒利债券C",
+    "rate": "10.56%"
   },
   {
-    "productCode": "004386",
-    "productName": "广发汇安18个月定开债A",
-    "rate": "6.24%"
+    "productCode": "015625",
+    "productName": "平安添润债券A",
+    "rate": "10.33%"
   },
   {
-    "productCode": "004024",
-    "productName": "华泰保兴尊诚一年定开债",
-    "rate": "6.22%"
+    "productCode": "000254",
+    "productName": "长城增强收益定期开放债券A",
+    "rate": "10.21%"
   }
 ]

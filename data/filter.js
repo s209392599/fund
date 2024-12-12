@@ -138,8 +138,7 @@ async function isEligible(arr) {
 
   for (let index = 0; index < arr.length; index++) {
     console.log(
-      `正在处理第${index + 1}个基金--${
-        arr[index].productCode
+      `正在处理第${index + 1}个基金--${arr[index].productCode
       }--已完成的基金数--${EligibleList.length}`
     );
     if (EligibleList.length >= 15) {
@@ -173,6 +172,15 @@ async function isEligible(arr) {
         (nowValue_200 - nowValue_300) / nowValue_300 > 0.015;
       if (flag_1 && flag_2 && flag_3) {
         EligibleList.push(arr[index]);
+
+        // 将 JSON 字符串写入文件
+        fs.writeFile(`./fundData/${arr[index].productCode}.json`, JSON.stringify(netValueList), (err) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          console.log('数据已存入本地');
+        });
       }
     }
   }

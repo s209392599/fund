@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund Data Visualization</title>
+  <script src="../static/js/echarts.min.js"></script> <!-- Include ECharts -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .item {
+      float: left;
+      position: relative;
+      z-index: 2;
+    }
+
+    .fundName {
+      position: absolute;
+      left: 40px;
+      top: 2px;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .fundCode {
+      position: absolute;
+      left: 40px;
+      top: 16px;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="boxue"></div>
+
+  <script>
+    async function getFund(code, index) {
+      console.log(`正在请求第 ${index + 1} 个基金数据 ~~~`);
+      let u = `./fundData/${code}.json`;
+      return fetch(u)
+        .then((res) => res.json())
+        .then((res) => {
+          return (res || []).reverse();
+        });
+    }
+
+    async function renderchart(obj) {
+      const chartDom = document.createElement('div');
+      chartDom.className = 'item';
+      chartDom.innerHTML = `
+        <div class="fundName">${obj.fundName}</div>
+        <div class="fundCode">${obj.fundCode} ${obj.fundRate}</div>
+        <div id="chart_${obj.fundCode}" style="width:300px;height:240px;"></div>
+      `;
+      document.getElementById('boxue').appendChild(chartDom);
+
+      // {"date":"2024-12-11","netValue":"1.1257","dailyProfit":"0.46","totalNetValue":"1.6539"}
+      const dates = obj.fundData.map(item => item.date);
+      const netValues = obj.fundData.map(item => item.totalNetValue);
+
+      const myChart = echarts.init(document.getElementById(`chart_${obj.fundCode}`));
+
+      // 获取totalNetValue的最大值和最小值
+      const maxNetValue = Math.max(...netValues);
+      const minNetValue = Math.min(...netValues);
+
+      const option = {
+        // title: {
+        //   text: `${obj.fundName}`
+        // },
+        color: ['#e34641'],
+        tooltip: {
+          trigger: 'axis'
+        },
+        grid: {
+          top: 30,
+          right: 5,
+          bottom: 5,
+          left: 5,
+          containLabel: true
+        },
+        dataZoom: [{
+          type: 'inside',
+          start: 0,
+          end: 100
+        },
+        ],
+        xAxis: {
+          type: 'category',
+          data: dates,
+          axisLine: { show: false }, // Hide x-axis line
+          axisTick: { show: false }, // Hide x-axis ticks
+          axisLabel: { show: false }, // Hide x-axis labels
+          splitLine: { show: false } // Hide grid lines
+        },
+        yAxis: {
+          type: 'value',
+          max: maxNetValue,
+          min: minNetValue,
+          axisLine: { show: false }, // Hide y-axis line
+          axisTick: { show: false }, // Hide y-axis ticks
+          // axisLabel: { show: false }, // Hide y-axis labels
+          // splitLine: { show: false } // Hide grid lines
+        },
+        series: [{
+          name: '净值',
+          type: 'line',
+          data: netValues,
+          smooth: true,
+          label: {
+            show: false,
+          },
+          symbolSize: 0
+        }]
+      };
+
+      // Render the chart
+      myChart.setOption(option);
+    }
+
+    async function fetchFunds() {
+      const response = await fetch('./fund_filter.json');
+      console.log(`fund_filter.html 73 [response]`, response);
+      const funds = await response.json();
+
+      for (let index = 0; index < funds.length; index++) {
+        const fundCode = funds[index].productCode;
+        const fundName = funds[index].productName;
+        const fundRate = funds[index].rate;
+        const fundData = await getFund(fundCode, index);
+
+        if (fundData.length > 0) {
+          await renderchart({
+            fundData,
+            fundName,
+            fundCode,
+            fundRate,
+          });
+        }
+      }
+    }
+
+    fetchFunds();
+  </script>
+</body>
+
+</html>
