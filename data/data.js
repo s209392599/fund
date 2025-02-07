@@ -1,12 +1,11 @@
 module.exports = {
   // 已买(符合购买标准的前15名)
   yimai: [
-    { number: '006962', name: '南方中债7-10' },
     { number: '007540', name: '华泰保兴安A' },
+    { number: '006962', name: '南方中债7-10' },
     { number: '016659', name: '兴华安裕C' },
     { number: '016604', name: '国泰嘉睿C' },
-    { number: '006980', name: '国寿(待移除)' },
-    { number: '006549', name: '国金(待移除)' },
+    { number: '007859', name: '平安政策性金融' },
   ],
   // 股票型基金
   gupiaoxing: [{ number: '022431', name: '华夏中证A500' }],
@@ -21,6 +20,8 @@ module.exports = {
     { number: '016658', name: '兴华安裕' },
     { number: '007492', name: '上银政策' },
     { number: '000606', name: '天弘优选' },
+    { number: '006980', name: '国寿' },
+    { number: '006549', name: '国金' },
 
     { number: '400030', name: '东方添益' },
     { number: '003547', name: '鹏华丰禄' },
