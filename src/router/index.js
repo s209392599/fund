@@ -28,6 +28,11 @@ const routes = [
         component: () => import('../components/fund06.vue'), //综合观察
       },
       {
+        path: 'fund01',
+        name: 'fund01',
+        component: () => import('../components/fund01.vue'),
+      },
+      {
         path: 'fund02',
         name: 'fund02',
         component: () => import('../components/fund02.vue'),

@@ -1,14 +1,7 @@
 <template>
   <div class="hello">
-    <a
-      v-for="(item, index) in info"
-      :key="index"
-      target="_blank"
-      :href="
-        'http://fund.eastmoney.com/' + numberArr[index] + '.html?spm=aladin'
-      "
-      class="item"
-    >
+    <a v-for="(item, index) in info" :key="index" target="_blank" :href="'http://fund.eastmoney.com/' + numberArr[index] + '.html?spm=aladin'
+      " class="item">
       <img class="fundImg" :src="item" />
 
       <div class="price_Reminder">
@@ -98,17 +91,17 @@ export default {
         })
         .then((res) => {
           let currentPrice = Number(res.data.gsz) || 0;
-          console.log('107',currentPrice,params.index);
-          if(currentPrice != 0){
+          console.log('107', currentPrice, params.index);
+          if (currentPrice != 0) {
             // businessArr: [], // 基金是否买卖 -1,不显示 1,低于设定最小值 2,正常区 3,高于设定最高值
-            if(currentPrice > _this.highPoint[params.index]){
+            if (currentPrice > _this.highPoint[params.index]) {
               _this.businessArr[params.index] = 3;
-            }else if(currentPrice > _this.lowPointArr[params.index]){
+            } else if (currentPrice > _this.lowPointArr[params.index]) {
               _this.businessArr[params.index] = 2;
-            }else{
+            } else {
               _this.businessArr[params.index] = 1;
             }
-            console.log('111',_this.businessArr[params.index]);
+            console.log('111', _this.businessArr[params.index]);
           }
         })
         .catch((err) => {
@@ -121,20 +114,24 @@ export default {
 
 <style scoped>
 .fundImg {
-  width: 352px; /* 440px */
+  width: 352px;
+  /* 440px */
   height: 277px;
 }
+
 .item {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
+
 .increase {
   position: absolute;
   right: 0;
   z-index: 5;
   color: #333;
 }
+
 .price_Reminder {
   position: absolute;
   left: 48px;
@@ -143,22 +140,27 @@ export default {
   font-size: 14px;
   z-index: 5;
 }
-.price_state1{
+
+.price_state1 {
   color: green;
   font-size: 30px;
 }
-.price_state2{
+
+.price_state2 {
   color: #717171;
   font-size: 14px;
 }
-.price_state3{
+
+.price_state3 {
   color: #f00;
   font-size: 30px;
 }
-.price_highPoint{
+
+.price_highPoint {
   color: #717171;
 }
-.price_lowPoint{
+
+.price_lowPoint {
   color: #717171;
 }
 </style>

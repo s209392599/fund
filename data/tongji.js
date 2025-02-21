@@ -99,9 +99,8 @@ async function fetchFundData() {
       // 名称: fund_data[i].name,
       // 交易天数: obj.totalDays,
       累计收益: obj.totalGetValue,
-      涨的天数: `${obj.increaseDays}-${day_jiaoyi - obj.increaseDays}-(${
-        obj.increaseRate
-      })`,
+      涨的天数: `${obj.increaseDays}-${day_jiaoyi - obj.increaseDays}-(${obj.increaseRate
+        })`,
       涨_最高: obj.highestIncrease,
       跌_最多: obj.highestDecrease,
       连涨_天: obj.continuousIncreaseDays,
