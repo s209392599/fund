@@ -141,7 +141,7 @@ async function isEligible(arr) {
       `正在处理第${index + 1}个基金--${arr[index].productCode
       }--已完成的基金数--${EligibleList.length}`
     );
-    if (EligibleList.length >= 15) {
+    if (EligibleList.length >= 40) {
       break;
     }
     const productCode = arr[index].productCode;
@@ -149,7 +149,7 @@ async function isEligible(arr) {
     // 等待计算年收益
     const rate = await AnnualIncome(productCode);
     console.log('rate', rate);
-    if (rate === '' || Number(rate) < 6) {
+    if (rate === '' || Number(rate) < 4) {
       return false;
     }
 
