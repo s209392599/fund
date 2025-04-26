@@ -23,3 +23,5 @@ pnpm-debug.log*
 .history/*
 
 data/fundData/*
+aafilter/data_all/*
+aafilter/data_search/*

@@ -1,92 +1,202 @@
 [
   {
-    "productCode": "007769",
-    "productId": 112288,
-    "productName": "东兴兴瑞一年定开债A",
-    "rate": "10.43%"
+    "productCode": "002405",
+    "productName": "光大中高等级债券A",
+    "rate": "26.92%"
   },
   {
-    "productCode": "007214",
-    "productId": 1007214,
-    "productName": "国泰惠丰纯债债券",
-    "rate": "9.49%"
+    "productCode": "002406",
+    "productName": "光大中高等级债券C",
+    "rate": "26.41%"
   },
   {
-    "productCode": "009461",
-    "productId": 111156,
-    "productName": "东方臻萃3个月定开债券A",
-    "rate": "8.64%"
+    "productCode": "003092",
+    "productName": "华商丰利增强定开债A",
+    "rate": "22.92%"
   },
   {
-    "productCode": "014258",
-    "productId": 115013,
-    "productName": "国联恒泽纯债C",
-    "rate": "8.60%"
+    "productCode": "003093",
+    "productName": "华商丰利增强定开债C",
+    "rate": "22.39%"
   },
   {
-    "productCode": "009462",
-    "productId": 111154,
-    "productName": "东方臻萃3个月定开债券C",
-    "rate": "8.54%"
+    "productCode": "009512",
+    "productName": "天弘添利债券(LOF)E",
+    "rate": "22.06%"
   },
   {
-    "productCode": "000116",
-    "productId": 107795,
-    "productName": "嘉实丰益纯债定期债券",
-    "rate": "7.66%"
+    "productCode": "003341",
+    "productName": "工银瑞盈18个月定开债",
+    "rate": "18.45%"
   },
   {
-    "productCode": "006715",
-    "productId": 109339,
-    "productName": "东方永泰纯债1年定期开放债券A",
-    "rate": "7.33%"
+    "productCode": "040012",
+    "productName": "华安强化收益债券A",
+    "rate": "17.56%"
   },
   {
-    "productCode": "005070",
-    "productId": 1005070,
-    "productName": "长江乐丰纯债",
-    "rate": "7.15%"
+    "productCode": "001862",
+    "productName": "东方红收益增强债券A",
+    "rate": "17.13%"
   },
   {
-    "productCode": "006716",
-    "productId": 109338,
-    "productName": "东方永泰纯债1年定期开放债券C",
-    "rate": "7.15%"
+    "productCode": "040013",
+    "productName": "华安强化收益债券B",
+    "rate": "17.09%"
   },
   {
-    "productCode": "008798",
-    "productId": 110736,
-    "productName": "国金惠安利率债A",
-    "rate": "6.89%"
+    "productCode": "005246",
+    "productName": "国泰可转债债券",
+    "rate": "17.07%"
   },
   {
-    "productCode": "006980",
-    "productId": 114237,
-    "productName": "国寿安保泰恒纯债债券",
-    "rate": "6.86%"
+    "productCode": "001863",
+    "productName": "东方红收益增强债券C",
+    "rate": "16.66%"
   },
   {
-    "productCode": "010353",
-    "productId": 113391,
-    "productName": "南方崇元纯债债券A",
-    "rate": "6.85%"
+    "productCode": "010118",
+    "productName": "天弘多元收益债券A",
+    "rate": "15.82%"
   },
   {
-    "productCode": "003324",
-    "productId": 106555,
-    "productName": "东方永兴18个月定期开放债券A",
-    "rate": "6.80%"
+    "productCode": "163816",
+    "productName": "中银转债增强债券A",
+    "rate": "15.51%"
   },
   {
-    "productCode": "008799",
-    "productId": 110735,
-    "productName": "国金惠安利率债C",
-    "rate": "6.74%"
+    "productCode": "010119",
+    "productName": "天弘多元收益债券C",
+    "rate": "15.48%"
   },
   {
-    "productCode": "164810",
-    "productId": 107223,
-    "productName": "工银纯债定开",
-    "rate": "6.64%"
+    "productCode": "163817",
+    "productName": "中银转债增强债券B",
+    "rate": "15.12%"
+  },
+  {
+    "productCode": "000047",
+    "productName": "华夏双债债券A",
+    "rate": "14.72%"
+  },
+  {
+    "productCode": "040022",
+    "productName": "华安可转债债券A",
+    "rate": "14.69%"
+  },
+  {
+    "productCode": "000048",
+    "productName": "华夏双债债券C",
+    "rate": "14.38%"
+  },
+  {
+    "productCode": "040023",
+    "productName": "华安可转债债券B",
+    "rate": "14.25%"
+  },
+  {
+    "productCode": "004564",
+    "productName": "北信瑞丰鼎利债券A",
+    "rate": "13.90%"
+  },
+  {
+    "productCode": "005193",
+    "productName": "北信瑞丰鼎利债券C",
+    "rate": "13.42%"
+  },
+  {
+    "productCode": "014088",
+    "productName": "永赢稳健增强债券A",
+    "rate": "13.08%"
+  },
+  {
+    "productCode": "013149",
+    "productName": "鹏华双债加利债券C",
+    "rate": "12.90%"
+  },
+  {
+    "productCode": "000143",
+    "productName": "鹏华双债加利债券A",
+    "rate": "12.88%"
+  },
+  {
+    "productCode": "005717",
+    "productName": "兴业机遇债券A",
+    "rate": "12.71%"
+  },
+  {
+    "productCode": "014089",
+    "productName": "永赢稳健增强债券C",
+    "rate": "12.65%"
+  },
+  {
+    "productCode": "007540",
+    "productName": "华泰保兴安悦债券A",
+    "rate": "12.63%"
+  },
+  {
+    "productCode": "004318",
+    "productName": "国寿安保尊裕优化回报债券A",
+    "rate": "12.28%"
+  },
+  {
+    "productCode": "008222",
+    "productName": "兴业机遇债券C",
+    "rate": "12.27%"
+  },
+  {
+    "productCode": "004319",
+    "productName": "国寿安保尊裕优化回报债券C",
+    "rate": "11.85%"
+  },
+  {
+    "productCode": "002474",
+    "productName": "中邮睿信增强债",
+    "rate": "11.63%"
+  },
+  {
+    "productCode": "011416",
+    "productName": "恒越嘉鑫债券A",
+    "rate": "11.02%"
+  },
+  {
+    "productCode": "011417",
+    "productName": "恒越嘉鑫债券C",
+    "rate": "10.79%"
+  },
+  {
+    "productCode": "006839",
+    "productName": "安信聚利增强债券A",
+    "rate": "10.72%"
+  },
+  {
+    "productCode": "006840",
+    "productName": "安信聚利增强债券C",
+    "rate": "10.50%"
+  },
+  {
+    "productCode": "020019",
+    "productName": "国泰双利债券A",
+    "rate": "10.25%"
+  },
+  {
+    "productCode": "007833",
+    "productName": "长盛稳怡添利债券A",
+    "rate": "9.78%"
+  },
+  {
+    "productCode": "020020",
+    "productName": "国泰双利债券C",
+    "rate": "9.77%"
+  },
+  {
+    "productCode": "160612",
+    "productName": "鹏华丰收债券B",
+    "rate": "9.75%"
+  },
+  {
+    "productCode": "013724",
+    "productName": "信澳鑫益债券A",
+    "rate": "9.52%"
   }
 ]

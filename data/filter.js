@@ -141,7 +141,7 @@ async function isEligible(arr) {
       `正在处理第${index + 1}个基金--${arr[index].productCode
       }--已完成的基金数--${EligibleList.length}`
     );
-    if (EligibleList.length >= 40) {
+    if (EligibleList.length >= 80) {
       break;
     }
     const productCode = arr[index].productCode;
