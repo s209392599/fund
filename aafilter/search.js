@@ -2,7 +2,8 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const noText = require('./noText');
+const noText = require('./noText');// 排除的关键词
+const noFundCode = require('./noFundCode');// 排除的基金代码
 
 emptyDirectory('./data_search');// 先清空data文件夹
 
@@ -27,7 +28,8 @@ function fenxi(arr = []) {
   arr.forEach((item, index) => {
     const flag_1 = searchText.every(text => item[2].includes(text));
     const flag_2 = !noText.some(text => item[2].includes(text));
-    if (flag_1 && flag_2) {
+    const flag_3 = !noFundCode.some(text => item[0].includes(text));// 排除的基金号
+    if (flag_1 && flag_2 && flag_3) {
       const xing = item[3];// 什么类型
       if (!obj[xing]) {
         obj[xing] = [];
@@ -46,7 +48,10 @@ function fenxi(arr = []) {
   // 遍历obj的每个key，创建对应的json文件
   Object.keys(obj).forEach(key => {
     const fileName = `./data_search/${key}.json`;
-    const content = JSON.stringify(obj[key], null, 2);
+    const content = JSON.stringify({
+      count: obj[key].length,
+      data: obj[key],
+    }, null, 2);
     fs.writeFileSync(fileName, content, 'utf8');
     console.log(`已创建文件: ${fileName}`);
   });

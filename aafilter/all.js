@@ -2,22 +2,8 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const noText = require('./noText');
-
-// 清空文件夹函数
-function emptyDirectory(directory) {
-  if (fs.existsSync(directory)) {
-    fs.readdirSync(directory).forEach((file) => {
-      const curPath = path.join(directory, file);
-      if (fs.lstatSync(curPath).isDirectory()) {
-        emptyDirectory(curPath);
-        fs.rmdirSync(curPath);
-      } else {
-        fs.unlinkSync(curPath);
-      }
-    });
-  }
-}
+const noText = require('./noText');// 排除的关键词
+const noFundCode = require('./noFundCode');// 排除的基金代码
 emptyDirectory('./data_all');// 先清空文件夹
 
 // 存放分类数据
@@ -32,7 +18,10 @@ let obj = {
 function fenxi(arr = []) {
   let count = 0;// 统计数量
   arr.forEach((item, index) => {
-    if (!noText.some(text => item[2].includes(text))) {
+    const flag_2 = !noText.some(text => item[2].includes(text));
+    const flag_3 = !noFundCode.some(text => item[0].includes(text));// 排除的基金号
+
+    if (flag_2 && flag_3) {
       const xing = item[3];// 什么类型
       if (!obj[xing]) {
         obj[xing] = [];
@@ -51,7 +40,10 @@ function fenxi(arr = []) {
   // 遍历obj的每个key，创建对应的json文件
   Object.keys(obj).forEach(key => {
     const fileName = `./data_all/${key}.json`;
-    const content = JSON.stringify(obj[key], null, 2);
+    const content = JSON.stringify({
+      count: obj[key].length,
+      data: obj[key]
+    }, null, 2);
     fs.writeFileSync(fileName, content, 'utf8');
     console.log(`已创建文件: ${fileName}`);
   });
@@ -76,3 +68,18 @@ async function queryResilienceInfo() {
   }
 }
 queryResilienceInfo();
+
+// 清空文件夹函数
+function emptyDirectory(directory) {
+  if (fs.existsSync(directory)) {
+    fs.readdirSync(directory).forEach((file) => {
+      const curPath = path.join(directory, file);
+      if (fs.lstatSync(curPath).isDirectory()) {
+        emptyDirectory(curPath);
+        fs.rmdirSync(curPath);
+      } else {
+        fs.unlinkSync(curPath);
+      }
+    });
+  }
+}
