@@ -3,11 +3,11 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 
-emptyDirectory();// 先清空data文件夹
+emptyDirectory('./data_search');// 先清空data文件夹
 
 /* 需要去除掉带这些名字的基金 */
 let searchText = [
-  "黄金",// 搜索的关键词
+  "红利",// 搜索的关键词
 ]
 
 // 存放分类数据
