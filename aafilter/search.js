@@ -6,10 +6,12 @@ const noText = require('./noText');
 
 emptyDirectory('./data_search');// 先清空data文件夹
 
-/* 需要去除掉带这些名字的基金 */
-let searchText = [
-  "红利低波",// 搜索的关键词
-]
+// 获取命令行参数，去掉前两个（node 和 脚本名），如果没有则默认搜索“红利低波”
+let searchText = process.argv.slice(2);
+if (searchText.length === 0) {
+  searchText = ["红利低波"];
+}
+console.log('搜索的关键词 => ', searchText);
 
 // 存放分类数据
 let obj = {
@@ -23,7 +25,7 @@ let obj = {
 function fenxi(arr = []) {
   let count = 0;// 统计数量
   arr.forEach((item, index) => {
-    const flag_1 = searchText.some(text => item[2].includes(text));
+    const flag_1 = searchText.every(text => item[2].includes(text));
     const flag_2 = !noText.some(text => item[2].includes(text));
     if (flag_1 && flag_2) {
       const xing = item[3];// 什么类型
