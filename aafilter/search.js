@@ -2,12 +2,13 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
+const noText = require('./noText');
 
 emptyDirectory('./data_search');// 先清空data文件夹
 
 /* 需要去除掉带这些名字的基金 */
 let searchText = [
-  "红利",// 搜索的关键词
+  "红利低波",// 搜索的关键词
 ]
 
 // 存放分类数据
@@ -22,7 +23,9 @@ let obj = {
 function fenxi(arr = []) {
   let count = 0;// 统计数量
   arr.forEach((item, index) => {
-    if (searchText.some(text => item[2].includes(text))) {
+    const flag_1 = searchText.some(text => item[2].includes(text));
+    const flag_2 = !noText.some(text => item[2].includes(text));
+    if (flag_1 && flag_2) {
       const xing = item[3];// 什么类型
       if (!obj[xing]) {
         obj[xing] = [];

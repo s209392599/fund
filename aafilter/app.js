@@ -2,6 +2,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
+const noText = require('./noText');
 
 // 清空文件夹函数
 function emptyDirectory(directory) {
@@ -18,31 +19,6 @@ function emptyDirectory(directory) {
   }
 }
 emptyDirectory('./data_all');// 先清空文件夹
-
-/* 需要去除掉带这些名字的基金 */
-let noText = [
-  "三个月",
-  "六个月",
-  "3个月",
-  "6个月",
-  "12个月",
-  "18个月",
-  "30个月",
-  "39个月",
-  "60天",
-  "90天",
-  "180天",
-  "封闭",
-  "定期",
-  "定开",
-  "一年",
-  "两年",
-  "套利",
-  "后端",
-  "房地产",
-  "不动产",
-  "白银期货",
-]
 
 // 存放分类数据
 let obj = {
