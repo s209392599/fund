@@ -22,6 +22,7 @@ const noText = [
   "房地产",
   "不动产",
   "白银期货",
+  "量化",
 ];
 
 module.exports = noText;

@@ -1,6 +1,6 @@
 // 获取所有初步基金进行数据过滤
 let index_start = 0; // 多少期开始
-let index_end = 10; // 多少期结束
+let index_end = 23779; // 多少期结束
 
 const fetch = require('node-fetch');
 const fs = require('fs');
@@ -11,6 +11,10 @@ const {
   emptyDirectory, // 清空文件夹
   getFundInfo, // 获取基金详情
 } = require('./CustomFunction');
+
+if (!fs.existsSync('./data_guimo')) {
+  fs.mkdirSync('./data_guimo');
+}
 
 // 过滤出来符合规模的基金
 if (!fs.existsSync('./data_guimo/data_all')) {
@@ -74,6 +78,10 @@ async function fenxi(arr = []) {
   let count = 0; // 计数
   while (index_start < index_end) {
     const item = arr[index_start];
+    if(!item){
+      index_start++;
+      continue;
+    }
 
     // 排除一些不符合初步规则的基金
     const flag_2 = noText.some((text) => item[2].includes(text));
@@ -315,9 +323,22 @@ async function queryResilienceInfo() {
     // 将字符串转换为数组
     const fundArray = JSON.parse(arrayStr);
     console.log(`一共有${fundArray.length}个基金`);
+    index_end = fundArray.length;
     fenxi(fundArray);
   } catch (err) {
     console.log('err => ', err);
   }
 }
 queryResilienceInfo();
+
+
+/* 规模从大到小排序(>150亿)
+const sortedData = arr.sort((a, b) => {
+    // 提取数字部分（去掉"亿元"）并转换为浮点数
+    const valueA = parseFloat(a[2].replace('亿元', ''));
+    const valueB = parseFloat(b[2].replace('亿元', ''));
+    // 从大到小排序
+    return valueB - valueA;
+});
+
+*/
