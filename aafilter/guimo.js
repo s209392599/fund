@@ -1,4 +1,7 @@
 // 获取所有初步基金进行数据过滤
+let index_start = 0; // 多少期开始
+let index_end = 10; // 多少期结束
+
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
@@ -47,11 +50,14 @@ jsonFiles.forEach((file) => {
   }
 });
 
-let index_start = 0; // 多少期开始
-let index_end = 5; // 多少期结束
-
 // 存放分类数据
 let obj = {
+  // "混合型-灵活":[]
+};
+let obj_da = {
+  // "混合型-灵活":[]
+};
+let obj_xiao = {
   // "混合型-灵活":[]
 };
 let dis_fundData = []; // 京东金融不可买的基金
@@ -78,7 +84,7 @@ async function fenxi(arr = []) {
     }
 
     console.log(
-      `已完成第${index_start + 1}个基金数据请求，${item[0]} - ${item[2]}`
+      `已完成第${index_start + 1} - ${count}个基金数据请求，${item[0]} - ${item[2]}`
     );
     let res = await getFundInfo(item[0]); // 获取基金详情
 
@@ -89,16 +95,28 @@ async function fenxi(arr = []) {
         const fundProfileOfItem = res.fundProfileOfItem || {};
         const fundScale = fundProfileOfItem.fundScale || ''; // 资金规模
         if (fundScale) {
+          const xing = item[3]; // 什么类型
           if (fundScale.includes('万元')) {
             arr_xiao.push([item[0], item[2], fundScale]);
+            if (!obj_xiao[xing]) {
+              obj_xiao[xing] = [];
+            }
+            obj_xiao[xing].push([item[0], item[2], fundScale]);
           } else if (fundScale.includes('亿元')) {
             const num_val = parseFloat(fundScale.replace('亿元', ''));
             if (num_val > 150) {
               arr_da.push([item[0], item[2], fundScale]);
+              if (!obj_da[xing]) {
+                obj_da[xing] = [];
+              }
+              obj_da[xing].push([item[0], item[2], fundScale]);
             } else if (num_val < 1) {
               arr_xiao.push([item[0], item[2], fundScale]);
+              if (!obj_xiao[xing]) {
+                obj_xiao[xing] = [];
+              }
+              obj_xiao[xing].push([item[0], item[2], fundScale]);
             } else {
-              const xing = item[3]; // 什么类型
               if (!obj[xing]) {
                 obj[xing] = [];
               }
@@ -119,7 +137,7 @@ async function fenxi(arr = []) {
     index_start++;
   }
 
-  // // 遍历obj的每个key，创建对应的json文件
+  // 遍历obj的每个key，创建对应的json文件
   Object.keys(obj).forEach(key => {
     const fileName = `./data_guimo/data_all/${key}.json`;
 
@@ -150,6 +168,61 @@ async function fenxi(arr = []) {
     );
     console.log(`已更新文件: ${fileName}`);
   });
+  // 遍历obj_da的每个key，创建对应的json文件
+  Object.keys(obj_da).forEach(key => {
+    const fileName = `./data_guimo/data_guimo_da/${key}.json`;
+    let existingData = {
+      count: 0,
+      data: []
+    };
+    // 如果文件已存在，读取现有数据
+    if (fs.existsSync(fileName)) {
+      try {
+        const fileContent = fs.readFileSync(fileName, 'utf8');
+        existingData = JSON.parse(fileContent);
+      } catch (error) {
+        console.error(`读取文件 ${fileName} 失败:`, error);
+      }
+    }
+    // 合并现有数据和新数据
+    existingData.data = existingData.data.concat(obj_da[key]);
+    existingData.count = existingData.data.length;
+    // 写入合并后的数据
+    fs.writeFileSync(
+      fileName,
+      JSON.stringify(existingData, null, 2),
+      'utf8'
+    );
+    console.log(`已更新文件: ${fileName}`);
+
+  })
+  // 遍历obj_xiao的每个key，创建对应的json文件
+  Object.keys(obj_xiao).forEach(key => {
+    const fileName = `./data_guimo/data_guimo_xiao/${key}.json`;
+    let existingData = {
+      count: 0,
+      data: []
+    };
+    // 如果文件已存在，读取现有数据
+    if (fs.existsSync(fileName)) {
+      try {
+        const fileContent = fs.readFileSync(fileName, 'utf8');
+        existingData = JSON.parse(fileContent);
+      } catch (error) {
+        console.error(`读取文件 ${fileName} 失败:`, error);
+      }
+    }
+    // 合并现有数据和新数据
+    existingData.data = existingData.data.concat(obj_xiao[key]);
+    existingData.count = existingData.data.length;
+    // 写入合并后的数据
+    fs.writeFileSync(
+      fileName,
+      JSON.stringify(existingData, null, 2),
+      'utf8'
+    );
+    console.log(`已更新文件: ${fileName}`);
+  })
 
   const path_1 = './data_guimo/guimo_da.json';
   const path_2 = './data_guimo/guimo_xiao.json';
@@ -223,6 +296,9 @@ async function fenxi(arr = []) {
   console.log('小于1亿', arr_xiao);
   console.log('规模不规则', arr_no_guimo);
   console.log('获取基金详情失败的', arr_info_failed);
+
+  console.log('obj_da',obj_da);
+  console.log('obj_xiao',obj_xiao);
 
   console.log(`初步筛选了${Object.keys(obj).length}种类型 共${count}个基金`);
 }
