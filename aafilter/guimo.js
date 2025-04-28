@@ -4,116 +4,137 @@ const fs = require('fs');
 const path = require('path');
 const noText = require('./noText');// 排除的关键词
 const noFundCode = require('./noFundCode');// 排除的基金代码
+const {
+  emptyDirectory,// 清空文件夹
+  getFundInfo,// 获取基金详情
+} = require('./CustomFunction');
 
-emptyDirectory('./data_guimo/data_guimo_da');// 先清空文件夹
-emptyDirectory('./data_guimo/data_guimo_xiao');// 先清空文件夹
+// 过滤出来符合规模的基金
+if (!fs.existsSync('./data_guimo/data_all')) {
+  fs.mkdirSync('./data_guimo/data_all');
+}
+// 大于150亿 详细分类的文件夹
+if (!fs.existsSync('./data_guimo/data_guimo_da')) {
+  fs.mkdirSync('./data_guimo/data_guimo_da');
+}
+// 小于1亿 详细分类的文件夹
+if (!fs.existsSync('./data_guimo/data_guimo_xiao')) {
+  fs.mkdirSync('./data_guimo/data_guimo_xiao');
+}
+// 检查并初始化 JSON 文件
+const jsonFiles = [
+  './data_guimo/no_jd.json',// 不能在京东上购买的基金
+  './data_guimo/guimo_da.json',// 规模大于150亿的基金集合
+  './data_guimo/guimo_xiao.json',// 规模小于1亿的基金集合
+];
 
-fetch("https://ms.jr.jd.com/gw2/generic/life/h5/m/getChangesInNetAssets", {
-  "headers": {
-    "accept": "application/json, text/plain, */*",
-    "content-type": "application/x-www-form-urlencoded"
-  },
-  "body": `reqData={"fundCode":"000667","tabName":1,"channel":"9"}`,
-  "method": "POST",
-  "mode": "cors",
-  "credentials": "include"
-}).then(res => res.json()).then(data => {
-  const histogramList = data.resultData.histogramList;// 获取规模
-
-})
-.catch(err => {
-  console.error(err);
+jsonFiles.forEach(file => {
+  if (!fs.existsSync(file)) {
+    fs.writeFileSync(file, JSON.stringify({
+      length: 0,
+      data: []
+    }, null, 2), 'utf8');
+    console.log(`已创建并初始化文件: ${file}`);
+  }
 });
 
-
+let index_start = 0;// 多少期开始
+let index_end = 5;// 多少期结束
 
 // 存放分类数据
 let obj = {
   // "混合型-灵活":[]
 };
-// 京东金融不可买的基金
-let dis_fundData = [];
-
-// 获取基金信息
-const getFundInfo = async (fundCode) => {
-  let obj = {};
-  try{
-    const response = await fetch("https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailPageInfo", {
-      "headers": {
-        "accept": "application/json, text/plain, */*",
-        "content-type": "application/x-www-form-urlencoded"
-      },
-      "body": `reqData={"itemId":"","createOrdermaket":"","fundCode":"${fundCode}","clientVersion":null,"channel":"9"}`,
-      "method": "POST",
-      "mode": "cors",
-      "credentials": "include"
-    });
-    const res = (await response.json()) || {};
-    obj = res?.resultData?.datas || {};
-  }catch(err){
-    console.log(err)
-  }
-  return obj;
-}
-
+let dis_fundData = [];// 京东金融不可买的基金
+let arr_da = [];// 大于150亿
+let arr_xiao = [];// 小于1亿
+let arr_no_guimo = [];// 规模不是‘万元’ ‘亿元’
+let arr_info_failed = [];// 请求基金详情失败的
 
 /*
 ["000001","HXCZHH","华夏成长混合","混合型-灵活","HUAXIACHENGZHANGHUNHE"]
-["970212","ZXJTYX12GYCYQZQC","中信建投悠享12个月持有期债券C","债券型-混合一级","ZHONGXINJIANTOUYOUXIANG12GEYUECHIYOUQIZHAIQUANC"]
 
-https://ms.jr.jd.com/gw2/generic/life/h5/m/getChangesInNetAssets 规模变动
 */
 async function fenxi(arr = []) {
-  for(let i = 0;i<arr.length;i++){
-    let res = await getFundInfo(arr[i][0]);// 获取基金详情
+  let count = 0;// 计数
+  while(index_start < index_end){
+    const item = arr[index_start];
+
+    // 排除一些不符合初步规则的基金
+    const flag_2 = noText.some(text => item[2].includes(text));
+    const flag_3 = noFundCode.some(text => item[0].includes(text));// 排除的基金号
+    if (flag_2 || flag_3) {
+      index_start++;
+      continue;
+    }
+
+    console.log(`已完成第${index_start+1}个基金数据请求，${item[0]} - ${item[2]}`);
+    let res = await getFundInfo(item[0]);// 获取基金详情
+
     if(res.bottomButtonOfItem){
       const purchaseButton = res.bottomButtonOfItem.purchaseButton || {};
       if(!purchaseButton.dis_scale){// 京东金融可售卖
         const fundProfileOfItem = res.fundProfileOfItem || {};
         const fundScale = fundProfileOfItem.fundScale || '';// 资金规模
         if(fundScale){
-          // "10.92亿元" "5456.44万元"
-          // trendChartOfItem.chartTitleList 同类均值
+          if(fundScale.includes('万元')){
+            arr_xiao.push([item[0],item[2],fundScale]);
+          }else if(fundScale.includes('亿元')){
+            const num_val = parseFloat(fundScale.replace('亿元',''));
+            if(num_val > 150){
+              arr_da.push([item[0],item[2],fundScale]);
+            }else if(num_val < 1){
+              arr_xiao.push([item[0],item[2],fundScale]);
+            }else{
+              const xing = item[3];// 什么类型
+              if (!obj[xing]) {
+                obj[xing] = [];
+              }
+              obj[xing].push([item[0],item[2],fundScale]);
+              count++;
+            }
+          }else{
+            arr_no_guimo.push([item[0],item[2]]);// 未知规模
+          }
         }
       }else{
-        dis_fundData.push(arr[i]);// 京东金融上不可买的基金
+        dis_fundData.push([item[0],item[2]]);// 京东金融上不可买的基金
       }
     }else{
-      continue;
+      // 请求详情失败的
+      arr_info_failed.push([item[0],item[2]]);
     }
+    index_start++;
   }
 
-  let count = 0;// 统计数量
-  arr.forEach((item, index) => {
-    const flag_2 = !noText.some(text => item[2].includes(text));// 滤除 定期 等周期长的基金
-    const flag_3 = !noFundCode.some(text => item[0].includes(text));// 排除的基金号
+  // // 遍历obj的每个key，创建对应的json文件
+  // Object.keys(obj).forEach(key => {
+  //   const fileName = `./data_guimo/data_all/${key}.json`;
+  //   const content = JSON.stringify({
+  //     count: obj[key].length,
+  //     data: obj[key]
+  //   }, null, 2);
+  //   fs.writeFileSync(fileName, content, 'utf8');
+  //   console.log(`已创建文件: ${fileName}`);
+  // });
 
-    if (flag_2 && flag_3) {
-      const xing = item[3];// 什么类型
-      if (!obj[xing]) {
-        obj[xing] = [];
-      }
-      obj[xing].push(item);
-      count++;
-    }
-  });
+  // // 不能在京东上买的
+  // fs.writeFileSync('./data_guimo/no_jd.json', JSON.stringify({
+  //   length:dis_fundData.length,
+  //   data:dis_fundData
+  // }), 'utf8');
+  // // 规模不是‘万元’ ‘亿元’
+  // fs.writeFileSync('./data_guimo/no_guimo.json', JSON.stringify({
+  //   length:arr_no_guimo.length,
+  //   data:arr_no_guimo
+  // }), 'utf8');
 
-  // 创建data文件夹(如果不存在)
-  const fs = require('fs');
-  if (!fs.existsSync('./data_all')) {
-    fs.mkdirSync('./data_all');
-  }
+  console.log('京东上不可买的基金',dis_fundData);
+  console.log('大于150亿',arr_da);
+  console.log('小于1亿',arr_xiao);
+  console.log('规模不规则',arr_no_guimo);
+  console.log('获取基金详情失败的',arr_info_failed);
 
-  // 遍历obj的每个key，创建对应的json文件
-  Object.keys(obj).forEach(key => {
-    const fileName = `./data_all/${key}.json`;
-    const content = JSON.stringify({
-      count: obj[key].length,
-      data: obj[key]
-    }, null, 2);
-    fs.writeFileSync(fileName, content, 'utf8');
-    console.log(`已创建文件: ${fileName}`);
-  });
   console.log(`初步筛选了${Object.keys(obj).length}种类型 共${count}个基金`);
 }
 
@@ -136,17 +157,3 @@ async function queryResilienceInfo() {
 }
 queryResilienceInfo();
 
-// 清空文件夹函数
-function emptyDirectory(directory) {
-  if (fs.existsSync(directory)) {
-    fs.readdirSync(directory).forEach((file) => {
-      const curPath = path.join(directory, file);
-      if (fs.lstatSync(curPath).isDirectory()) {
-        emptyDirectory(curPath);
-        fs.rmdirSync(curPath);
-      } else {
-        fs.unlinkSync(curPath);
-      }
-    });
-  }
-}
