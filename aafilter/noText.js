@@ -23,6 +23,7 @@ const noText = [
   "不动产",
   "白银期货",
   "量化",
+  "REIT",
 ];
 
 module.exports = noText;
