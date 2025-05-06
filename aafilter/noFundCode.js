@@ -4,6 +4,7 @@ const noFundCode = [
   "021778",// 京东不卖
   "018738",// 京东不卖
   "021778",
+  "003929",// 只有机构持有
 ];
 
 module.exports = noFundCode;
