@@ -149,7 +149,7 @@ async function isEligible(arr) {
     // 等待计算年收益
     const rate = await AnnualIncome(productCode);
     console.log('rate', rate);
-    if (rate === '' || Number(rate) < 4) {
+    if (rate === '' || Number(rate) < 6) {
       return false;
     }
 
