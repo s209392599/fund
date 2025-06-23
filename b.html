@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #imgbox {
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    img {
+      display: block;
+      border: 1px solid #ddd;
+      margin: 2px;
+      height: 160px;
+      width: calc(50% - 4px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="imgbox">
+    <!-- 华泰柏瑞中证红利低波ETF联接C(007467) -->
+    <img src="https://j4.dfcfw.com/charts/pic6/007467.png" alt="">
+    <!-- 南方恒生科技指数发起(QDII)C(020989) -->
+    <img src="https://j4.dfcfw.com/charts/pic6/020989.png" alt="">
+    <img src="https://j4.dfcfw.com/charts/pic6/008164.png" alt="">
+
+    <img src="https://j4.dfcfw.com/charts/pic6/023918.png" alt="">
+    <img src="https://j4.dfcfw.com/charts/pic6/008087.png" alt="">
+
+    <!-- 汇添富国证港股通创新药ETF发起式联接A(021030) -->
+    <img src="https://j4.dfcfw.com/charts/pic6/021030.png" alt="">
+
+    <!-- 嘉实国证绿色电力ETF发起联接C(017057) -->
+    <img src="https://j4.dfcfw.com/charts/pic6/017057.png" alt="">
+
+    <!-- 博时上证科创板人工智能ETF发起式联接C -->
+    <img src="https://j4.dfcfw.com/charts/pic6/023521.png" alt="">
+  </div>
+
+  <!-- <script>
+    const arr = [
+      { name: '华泰柏瑞红利', value: '007467' },
+      { name: '南方红利低波50ETF', value: '008164' },
+      { name: '南方恒生科技', value: '020989' },
+      { name: '华夏自由现金流', value: '023918' },
+      { name: '华夏中证5G', value: '008087' },
+    ];
+    let HTML= '';
+  </script> -->
+
+  <script>
+    /* https://lc.jr.jd.com/finance/funddetail/home/?fundCode=008164 */
+    // fetch("https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo", {
+    //   "headers": {
+    //     "accept": "application/json, text/plain, */*",
+    //     "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    //     "content-type": "application/x-www-form-urlencoded",
+    //     "priority": "u=1, i",
+    //     "sec-fetch-dest": "empty",
+    //     "sec-fetch-mode": "cors",
+    //     "sec-fetch-site": "same-site"
+    //   },
+    //   "referrer": "https://lc.jr.jd.com/",
+    //   "referrerPolicy": "strict-origin-when-cross-origin",
+    //   "body": `reqData={"chartType":4,"fundCode":"008164","dataCycle":4,"establishedDate":"2020-01-21","clientVersion":"","navDate":"2025-06-20","fundType":207,"disclosureType":1}`,
+    //   "method": "POST",
+    //   "mode": "cors",
+    //   "credentials": "include"
+    // }).then(res => res.json()).then(res => {
+    //   console.log(res);
+    // }).catch(err => {
+    //   console.log(err);
+    // })
+  </script>
+</body>
+
+</html>
