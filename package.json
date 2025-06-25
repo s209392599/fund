@@ -1,0 +1,12 @@
+{
+  "name": "fund",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:s209392599/fund.git",
+  "author": "郭坤 <209392599@qq.com>",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "node test.js"
+  },
+  "license": "MIT"
+}
