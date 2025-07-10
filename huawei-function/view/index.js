@@ -17,7 +17,7 @@ exports.handler = (event, context, callback) => {
     const defaultFunds = [
       { code: '007467', name: '华泰柏瑞中证红利低波ETF联接C' },
       { code: '020989', name: '南方恒生科技指数发起(QDII)C' },
-      { code: '008164', name: '南方红利低波50ETF联接C' },
+      { code: '008164', name: '南方红利低波50ETF联接C',url:'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450' },
       { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },
       { code: '008087', name: '华夏中证5G通信主题ETF联接C' },
       { code: '021030', name: '汇添富国证港股通创新药ETF发起式联接A' },
@@ -32,10 +32,14 @@ exports.handler = (event, context, callback) => {
 
     return fundsToShow
       .map(
-        (fund) =>
-          `<img src="https://j4.dfcfw.com/charts/pic6/${fund.code}.png" alt="${
-            fund.name || fund.code
-          }">`
+        (item) =>{
+          let altstr = item.name || item.code;
+          if(!item.url){
+            return `<img src="https://j4.dfcfw.com/charts/pic6/${item.code}.png" alt="${altstr}">`
+          }else{
+            return `<img src="${item.url}" alt="${altstr}">`
+          }
+        }
       )
       .join('');
   };
@@ -45,6 +49,13 @@ exports.handler = (event, context, callback) => {
     if (!hasZhi) return '';
 
     const indices = [
+      // {
+      //   code: 'sh515450',
+      //   name: '红利低波50ETF',
+      //   allURL: 'https://quote.eastmoney.com/sh515450.html',
+      //   imgURL:
+      //     'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450',
+      // },
       {
         code: 'zs000001',
         name: '上证指数',
@@ -86,13 +97,6 @@ exports.handler = (event, context, callback) => {
         allURL: 'https://quote.eastmoney.com/zs399001.html',
         imgURL:
           'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=0.399001',
-      },
-      {
-        code: 'sh515450',
-        name: '红利低波50ETF',
-        allURL: 'https://quote.eastmoney.com/sh515450.html',
-        imgURL:
-          'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450',
       },
       {
         code: 'zs899050',
