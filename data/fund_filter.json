@@ -1,47 +1,37 @@
 [
   {
-    "productCode": "005908",
-    "productName": "华泰保兴尊利债券A",
-    "rate": "12.04%"
+    "productCode": "003092",
+    "productName": "华商丰利增强定开债A",
+    "rate": "36.58%"
   },
   {
-    "productCode": "005909",
-    "productName": "华泰保兴尊利债券C",
-    "rate": "11.62%"
+    "productCode": "003093",
+    "productName": "华商丰利增强定开债C",
+    "rate": "36.01%"
   },
   {
-    "productCode": "014088",
-    "productName": "永赢稳健增强债券A",
-    "rate": "11.47%"
-  },
-  {
-    "productCode": "014089",
-    "productName": "永赢稳健增强债券C",
-    "rate": "11.04%"
+    "productCode": "010630",
+    "productName": "惠升和睿兴利债券A",
+    "rate": "10.25%"
   },
   {
     "productCode": "016869",
     "productName": "景顺长城稳健增益债券A",
-    "rate": "9.75%"
+    "rate": "10.12%"
   },
   {
     "productCode": "016870",
     "productName": "景顺长城稳健增益债券C",
-    "rate": "9.33%"
+    "rate": "9.69%"
   },
   {
-    "productCode": "009730",
-    "productName": "中信保诚安鑫回报债券A",
-    "rate": "9.09%"
+    "productCode": "013214",
+    "productName": "大摩安盈稳固六个月持有债券A",
+    "rate": "9.57%"
   },
   {
-    "productCode": "009731",
-    "productName": "中信保诚安鑫回报债券C",
-    "rate": "8.64%"
-  },
-  {
-    "productCode": "017763",
-    "productName": "银河领先债券C",
-    "rate": "7.91%"
+    "productCode": "013215",
+    "productName": "大摩安盈稳固六个月持有债券C",
+    "rate": "9.11%"
   }
 ]
