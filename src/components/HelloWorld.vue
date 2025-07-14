@@ -1,43 +1,27 @@
 <script setup>
-import { ref } from 'vue'
+// defineProps({
+//   msg: String,
+// })
 
-defineProps({
-  msg: String,
-})
 
-const count = ref(0)
+const urlParams = new URLSearchParams(window.location.search);
+// 地址(adress)中获取参数zhi
+const ad_zhi = urlParams.get('zhi');
+console.log('ad_zhi', ad_zhi);
+if (ad_zhi) {
+  console.log('斗志')
+} else {
+  console.log('没有');
+}
+
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <div class="page-wrapper">
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+
+    <h1>boxue is 666! -- {{ ad_zhi ? ad_zhi : 'age:18' }}</h1>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
+<style scoped></style>
