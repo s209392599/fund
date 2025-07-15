@@ -1,9 +1,4 @@
 <script setup>
-// defineProps({
-//   msg: String,
-// })
-
-
 const urlParams = new URLSearchParams(window.location.search);
 // 地址(adress)中获取参数zhi
 const ad_zhi = urlParams.get('zhi');
@@ -13,14 +8,11 @@ if (ad_zhi) {
 } else {
   console.log('没有');
 }
-
 </script>
 
 <template>
   <div class="page-wrapper">
-
-
-    <h1>boxue is 666! -- {{ ad_zhi ? ad_zhi : 'age:18' }}</h1>
+    <h1>boxue is 888! -- {{ ad_zhi ? ad_zhi : 'age:18' }}</h1>
   </div>
 </template>
 
