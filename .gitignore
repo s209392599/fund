@@ -24,3 +24,5 @@ pnpm-debug.log*
 data/fundData/*
 aafilter/data_all/*
 aafilter/data_search/*
+
+yarn.lock
