@@ -8,6 +8,13 @@ if (ad_zhi) {
 } else {
   console.log('没有');
 }
+const ad_code_zhi = urlParams.get('zhicode');
+console.log('ad_code_zhi', ad_code_zhi);
+if (ad_code_zhi) {
+  console.log('ad_code_zhi', ad_code_zhi)
+} else {
+  console.log('没有ad_code_zhi');
+}
 </script>
 
 <template>
