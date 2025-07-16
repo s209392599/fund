@@ -1,8 +1,0 @@
-{
-  "name": "fund",
-  "custom-desc": "自定义的备注：适用于 cloudflare",
-  "compatibility_date": "2025-07-15",
-  "assets": {
-    "directory": "./dist"
-  }
-}
