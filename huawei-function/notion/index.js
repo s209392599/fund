@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `红利加仓，其它先不动`;// 右键主题
+const mail_title = `今天先不做操作哈；感兴趣的可以买入一点018561`;// 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn',// 薛炳辉
@@ -45,6 +45,8 @@ var marilArr = [
   '943836589@qq.com', // 雅苑-向阳而生(8-1-2904)
   '2505512921@qq.com', // 刘虎
   '352237248@qq.com',// 郑州帮帮群-壹陆不是16
+  '3281770@qq.com ',// 基金-俞梨(豆豆同事)
+  '837166305@qq.com',// 基金-芥末
 ]
 
 var html = `

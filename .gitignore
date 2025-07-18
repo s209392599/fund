@@ -26,3 +26,5 @@ aafilter/data_all/*
 aafilter/data_search/*
 
 yarn.lock
+
+huawei-function/search/fundData/*

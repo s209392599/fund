@@ -231,5 +231,6 @@ exports.handler = (event, context, callback) => {
       'Cache-Control': 'no-cache',
     },
     body: html,
+    // isBase64Encoded: false
   });
 };

@@ -1423,6 +1423,29 @@ var arr = [
   }
 ];
 
+let newObj = {}
+
+for(let i = 0;i<arr.length;i++){
+  let cur_name = arr[i].name;
+  let end_str = cur_name[cur_name.length - 1];// 获取最后一个字符
+  if(['A','C'].includes(end_str)){
+    let new_name = cur_name.substr(0,cur_name.length - 1)
+    if(!newObj[new_name]){
+      newObj[new_name] = []
+    }
+    if(['A'].includes(end_str)){
+      newObj[new_name].unshift(arr[i].code);
+    }else if(['C'].includes(end_str)){
+      newObj[new_name].push(arr[i].code);
+    }
+  }else{
+    newObj[cur_name] = [arr[i].code]
+  }
+}
+console.log(newObj)
+console.log(newObj.keys.length)
+
+
 
 
 /*
