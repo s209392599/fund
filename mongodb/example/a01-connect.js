@@ -6,7 +6,11 @@ const client = new MongoClient(uri, {
     version: ServerApiVersion.v1,
     strict: true,
     deprecationErrors: true,
-  }
+  },
+  tls: true,  // Explicitly enable TLS
+  tlsAllowInvalidCertificates: false,  // Keep this false for production
+  connectTimeoutMS: 10 * 1000,  // 10 seconds connection timeout
+  socketTimeoutMS: 45 * 1000,   // 45 seconds socket timeout
 });
 
 async function testConnection() {
@@ -16,7 +20,8 @@ async function testConnection() {
     console.log("连接成功！");
     return result;
   } catch (error) {
-    console.error("连接失败:", error);
+    console.error("message:", error.message);
+    console.error("stack:", error.stack);
     throw error;
   } finally {
     await client.close();
