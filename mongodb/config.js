@@ -7,5 +7,8 @@ module.exports = {
   strict: true,
   deprecationErrors: true,
   uri: "mongodb+srv://boxue:Boxueis666@boxue.lpczq.mongodb.net/?retryWrites=true&w=majority&appName=boxue",
+  // uri: "mongodb+srv://boxue:Boxueis666@boxue.lpczq.mongodb.net",
   // key: ''
 };
+/*
+*/
