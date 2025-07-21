@@ -9,7 +9,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 使用国内镜像源
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
-
+## 清华源
+pip install --retries 5 -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+## 阿里云源
+pip install -i http://mirrors.aliyun.com/pypi/simple/ --retries 5 -r requirements.txt
 
 第四步：退出虚拟环境（完成后）
 deactivate
@@ -27,6 +30,33 @@ pip install -r requirements.txt
 多次尝试：有时候只是临时网络问题，可以多次尝试：
 pip install --retries 5 -r requirements.txt
 
-升级pip:
+# 查看版本号
+pip -V
+pip --version
+
+# 升级pip
 python3 -m pip install --upgrade pip
+
+# 升级到最新
+/Users/guokun/github/fund/etf/venv/bin/python3 -m pip install --upgrade pip
+
+# 指定更新源
+/Users/guokun/github/fund/etf/venv/bin/python3 -m pip install --upgrade pip --index-url https://pypi.org/simple
+
+# 查看指定的源
+pip config list
+
+# 临时修改源
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+
+# 永久修改
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 如果您只想更改当前用户使用的源，而不影响系统或其他用户的配置，可以使用以下命令
+pip config set user.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 修改源
+pip config set global.index-url https://pypi.org/simple
+pip config set index-url https://pypi.org/simple
+
 */
