@@ -21,9 +21,9 @@ pnpm-debug.log*
 *.sw?
 
 .history/*
-data/fundData/*
-aafilter/data_all/*
-aafilter/data_search/*
+other/data/fundData/*
+other/aafilter/data_all/*
+other/aafilter/data_search/*
 
 yarn.lock
 

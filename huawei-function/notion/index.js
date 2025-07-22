@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `今天先不做操作哈；感兴趣的可以买入一点018561`;// 右键主题
+const mail_title = `中信保诚的可以再加一点；中证5G清仓！！华泰柏瑞红利少加一些；其它先不动`;// 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn',// 薛炳辉
@@ -22,7 +22,7 @@ var marilArr = [
   '724803869@qq.com',// 前端帮帮群-吴昊
   '505643270@qq.com',// 前端帮帮群-汪尚
   '512220559@qq.com',// 王梦琳
-  '491719804@qq.com',// 基金-吴美燕
+  '491719804@qq.com',// 基金-吴美燕(赵万隆姐姐)
   '944148863@qq.com',// 王文泉
   '1023447847@qq.com',// 曾楠
   '397275461@qq.com',// 曾楠
@@ -47,6 +47,7 @@ var marilArr = [
   '352237248@qq.com',// 郑州帮帮群-壹陆不是16
   '3281770@qq.com ',// 基金-俞梨(豆豆同事)
   '837166305@qq.com',// 基金-芥末
+  '875457031@qq.com',// 基金-孙锦琪 2025年07月21日15:53:59
 ]
 
 var html = `
@@ -96,6 +97,15 @@ var html = `
 
 </html>
 `;
+
+/*
+007467-华泰柏瑞中证红利低波C
+008164-南方红利低波50ETFC
+020989-南方恒生科技指数发起C
+018561-中信保诚多策略灵活C
+019269-富国恒生红利ETF联接A
+023918-华夏国证自由现金流C
+*/
 
  /*
     https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&cb=jQuery351018138707342421845_1751948554116&fields=f58%2Cf734%2Cf107%2Cf57%2Cf43%2Cf59%2Cf169%2Cf170%2Cf152%2Cf46%2Cf60%2Cf44%2Cf45%2Cf47%2Cf48%2Cf19%2Cf17%2Cf531%2Cf15%2Cf13%2Cf11%2Cf20%2Cf18%2Cf16%2Cf14%2Cf12%2Cf39%2Cf37%2Cf35%2Cf33%2Cf31%2Cf40%2Cf38%2Cf36%2Cf34%2Cf32%2Cf211%2Cf212%2Cf213%2Cf214%2Cf215%2Cf210%2Cf209%2Cf208%2Cf207%2Cf206%2Cf161%2Cf49%2Cf171%2Cf50%2Cf86%2Cf168%2Cf108%2Cf167%2Cf71%2Cf292%2Cf51%2Cf52%2Cf191%2Cf192%2Cf452%2Cf177&secid=1.515450&ut=fa5fd1943c7b386f172d6893dbfba10b&wbp2u=%7C0%7C0%7C0%7Cweb&dect=1&_=1751948554117
