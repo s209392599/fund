@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `018561继续加；如果闲钱比较多，红利类的也可以再加点`;// 右键主题
+const mail_title = `中信保诚的可以再加一点；中证5G清仓！！华泰柏瑞红利少加一些；其它先不动`;// 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn',// 薛炳辉
