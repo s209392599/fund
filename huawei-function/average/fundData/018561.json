@@ -1,0 +1,3175 @@
+[
+  {
+    "date": "2023-05-24",
+    "netValue": "1.2376",
+    "totalNetValue": "1.2376"
+  },
+  {
+    "date": "2023-05-25",
+    "netValue": "1.2343",
+    "dailyProfit": "-0.27",
+    "totalNetValue": "1.2343"
+  },
+  {
+    "date": "2023-05-26",
+    "netValue": "1.2389",
+    "dailyProfit": "0.37",
+    "totalNetValue": "1.2389"
+  },
+  {
+    "date": "2023-05-29",
+    "netValue": "1.2334",
+    "dailyProfit": "-0.44",
+    "totalNetValue": "1.2334"
+  },
+  {
+    "date": "2023-05-30",
+    "netValue": "1.2388",
+    "dailyProfit": "0.44",
+    "totalNetValue": "1.2388"
+  },
+  {
+    "date": "2023-05-31",
+    "netValue": "1.2370",
+    "dailyProfit": "-0.15",
+    "totalNetValue": "1.2370"
+  },
+  {
+    "date": "2023-06-01",
+    "netValue": "1.2446",
+    "dailyProfit": "0.61",
+    "totalNetValue": "1.2446"
+  },
+  {
+    "date": "2023-06-02",
+    "netValue": "1.2560",
+    "dailyProfit": "0.92",
+    "totalNetValue": "1.2560"
+  },
+  {
+    "date": "2023-06-05",
+    "netValue": "1.2619",
+    "dailyProfit": "0.47",
+    "totalNetValue": "1.2619"
+  },
+  {
+    "date": "2023-06-06",
+    "netValue": "1.2447",
+    "dailyProfit": "-1.36",
+    "totalNetValue": "1.2447"
+  },
+  {
+    "date": "2023-06-07",
+    "netValue": "1.2514",
+    "dailyProfit": "0.54",
+    "totalNetValue": "1.2514"
+  },
+  {
+    "date": "2023-06-08",
+    "netValue": "1.2483",
+    "dailyProfit": "-0.25",
+    "totalNetValue": "1.2483"
+  },
+  {
+    "date": "2023-06-09",
+    "netValue": "1.2458",
+    "dailyProfit": "-0.20",
+    "totalNetValue": "1.2458"
+  },
+  {
+    "date": "2023-06-12",
+    "netValue": "1.2549",
+    "dailyProfit": "0.73",
+    "totalNetValue": "1.2549"
+  },
+  {
+    "date": "2023-06-13",
+    "netValue": "1.2591",
+    "dailyProfit": "0.33",
+    "totalNetValue": "1.2591"
+  },
+  {
+    "date": "2023-06-14",
+    "netValue": "1.2649",
+    "dailyProfit": "0.46",
+    "totalNetValue": "1.2649"
+  },
+  {
+    "date": "2023-06-15",
+    "netValue": "1.2631",
+    "dailyProfit": "-0.14",
+    "totalNetValue": "1.2631"
+  },
+  {
+    "date": "2023-06-16",
+    "netValue": "1.2653",
+    "dailyProfit": "0.17",
+    "totalNetValue": "1.2653"
+  },
+  {
+    "date": "2023-06-19",
+    "netValue": "1.2604",
+    "dailyProfit": "-0.39",
+    "totalNetValue": "1.2604"
+  },
+  {
+    "date": "2023-06-20",
+    "netValue": "1.2530",
+    "dailyProfit": "-0.59",
+    "totalNetValue": "1.2530"
+  },
+  {
+    "date": "2023-06-21",
+    "netValue": "1.2423",
+    "dailyProfit": "-0.85",
+    "totalNetValue": "1.2423"
+  },
+  {
+    "date": "2023-06-26",
+    "netValue": "1.2244",
+    "dailyProfit": "-1.44",
+    "totalNetValue": "1.2244"
+  },
+  {
+    "date": "2023-06-27",
+    "netValue": "1.2475",
+    "dailyProfit": "1.89",
+    "totalNetValue": "1.2475"
+  },
+  {
+    "date": "2023-06-28",
+    "netValue": "1.2476",
+    "dailyProfit": "0.01",
+    "totalNetValue": "1.2476"
+  },
+  {
+    "date": "2023-06-29",
+    "netValue": "1.2576",
+    "dailyProfit": "0.80",
+    "totalNetValue": "1.2576"
+  },
+  {
+    "date": "2023-06-30",
+    "netValue": "1.2689",
+    "dailyProfit": "0.90",
+    "totalNetValue": "1.2689"
+  },
+  {
+    "date": "2023-07-03",
+    "netValue": "1.2722",
+    "dailyProfit": "0.26",
+    "totalNetValue": "1.2722"
+  },
+  {
+    "date": "2023-07-04",
+    "netValue": "1.2775",
+    "dailyProfit": "0.42",
+    "totalNetValue": "1.2775"
+  },
+  {
+    "date": "2023-07-05",
+    "netValue": "1.2711",
+    "dailyProfit": "-0.50",
+    "totalNetValue": "1.2711"
+  },
+  {
+    "date": "2023-07-06",
+    "netValue": "1.2709",
+    "dailyProfit": "-0.02",
+    "totalNetValue": "1.2709"
+  },
+  {
+    "date": "2023-07-07",
+    "netValue": "1.2697",
+    "dailyProfit": "-0.09",
+    "totalNetValue": "1.2697"
+  },
+  {
+    "date": "2023-07-10",
+    "netValue": "1.2727",
+    "dailyProfit": "0.24",
+    "totalNetValue": "1.2727"
+  },
+  {
+    "date": "2023-07-11",
+    "netValue": "1.2784",
+    "dailyProfit": "0.45",
+    "totalNetValue": "1.2784"
+  },
+  {
+    "date": "2023-07-12",
+    "netValue": "1.2673",
+    "dailyProfit": "-0.87",
+    "totalNetValue": "1.2673"
+  },
+  {
+    "date": "2023-07-13",
+    "netValue": "1.2758",
+    "dailyProfit": "0.67",
+    "totalNetValue": "1.2758"
+  },
+  {
+    "date": "2023-07-14",
+    "netValue": "1.2777",
+    "dailyProfit": "0.15",
+    "totalNetValue": "1.2777"
+  },
+  {
+    "date": "2023-07-17",
+    "netValue": "1.2782",
+    "dailyProfit": "0.04",
+    "totalNetValue": "1.2782"
+  },
+  {
+    "date": "2023-07-18",
+    "netValue": "1.2811",
+    "dailyProfit": "0.23",
+    "totalNetValue": "1.2811"
+  },
+  {
+    "date": "2023-07-19",
+    "netValue": "1.2846",
+    "dailyProfit": "0.27",
+    "totalNetValue": "1.2846"
+  },
+  {
+    "date": "2023-07-20",
+    "netValue": "1.2795",
+    "dailyProfit": "-0.40",
+    "totalNetValue": "1.2795"
+  },
+  {
+    "date": "2023-07-21",
+    "netValue": "1.2782",
+    "dailyProfit": "-0.10",
+    "totalNetValue": "1.2782"
+  },
+  {
+    "date": "2023-07-24",
+    "netValue": "1.2823",
+    "dailyProfit": "0.32",
+    "totalNetValue": "1.2823"
+  },
+  {
+    "date": "2023-07-25",
+    "netValue": "1.2942",
+    "dailyProfit": "0.93",
+    "totalNetValue": "1.2942"
+  },
+  {
+    "date": "2023-07-26",
+    "netValue": "1.2945",
+    "dailyProfit": "0.02",
+    "totalNetValue": "1.2945"
+  },
+  {
+    "date": "2023-07-27",
+    "netValue": "1.2871",
+    "dailyProfit": "-0.57",
+    "totalNetValue": "1.2871"
+  },
+  {
+    "date": "2023-07-28",
+    "netValue": "1.2951",
+    "dailyProfit": "0.62",
+    "totalNetValue": "1.2951"
+  },
+  {
+    "date": "2023-07-31",
+    "netValue": "1.3033",
+    "dailyProfit": "0.63",
+    "totalNetValue": "1.3033"
+  },
+  {
+    "date": "2023-08-01",
+    "netValue": "1.2944",
+    "dailyProfit": "-0.68",
+    "totalNetValue": "1.2944"
+  },
+  {
+    "date": "2023-08-02",
+    "netValue": "1.2926",
+    "dailyProfit": "-0.14",
+    "totalNetValue": "1.2926"
+  },
+  {
+    "date": "2023-08-03",
+    "netValue": "1.2896",
+    "dailyProfit": "-0.23",
+    "totalNetValue": "1.2896"
+  },
+  {
+    "date": "2023-08-04",
+    "netValue": "1.2854",
+    "dailyProfit": "-0.33",
+    "totalNetValue": "1.2854"
+  },
+  {
+    "date": "2023-08-07",
+    "netValue": "1.2786",
+    "dailyProfit": "-0.53",
+    "totalNetValue": "1.2786"
+  },
+  {
+    "date": "2023-08-08",
+    "netValue": "1.2796",
+    "dailyProfit": "0.08",
+    "totalNetValue": "1.2796"
+  },
+  {
+    "date": "2023-08-09",
+    "netValue": "1.2703",
+    "dailyProfit": "-0.73",
+    "totalNetValue": "1.2703"
+  },
+  {
+    "date": "2023-08-10",
+    "netValue": "1.2755",
+    "dailyProfit": "0.41",
+    "totalNetValue": "1.2755"
+  },
+  {
+    "date": "2023-08-11",
+    "netValue": "1.2641",
+    "dailyProfit": "-0.89",
+    "totalNetValue": "1.2641"
+  },
+  {
+    "date": "2023-08-14",
+    "netValue": "1.2735",
+    "dailyProfit": "0.74",
+    "totalNetValue": "1.2735"
+  },
+  {
+    "date": "2023-08-15",
+    "netValue": "1.2729",
+    "dailyProfit": "-0.05",
+    "totalNetValue": "1.2729"
+  },
+  {
+    "date": "2023-08-16",
+    "netValue": "1.2671",
+    "dailyProfit": "-0.46",
+    "totalNetValue": "1.2671"
+  },
+  {
+    "date": "2023-08-17",
+    "netValue": "1.2836",
+    "dailyProfit": "1.30",
+    "totalNetValue": "1.2836"
+  },
+  {
+    "date": "2023-08-18",
+    "netValue": "1.2733",
+    "dailyProfit": "-0.80",
+    "totalNetValue": "1.2733"
+  },
+  {
+    "date": "2023-08-21",
+    "netValue": "1.2712",
+    "dailyProfit": "-0.16",
+    "totalNetValue": "1.2712"
+  },
+  {
+    "date": "2023-08-22",
+    "netValue": "1.2693",
+    "dailyProfit": "-0.15",
+    "totalNetValue": "1.2693"
+  },
+  {
+    "date": "2023-08-23",
+    "netValue": "1.2570",
+    "dailyProfit": "-0.97",
+    "totalNetValue": "1.2570"
+  },
+  {
+    "date": "2023-08-24",
+    "netValue": "1.2605",
+    "dailyProfit": "0.28",
+    "totalNetValue": "1.2605"
+  },
+  {
+    "date": "2023-08-25",
+    "netValue": "1.2419",
+    "dailyProfit": "-1.48",
+    "totalNetValue": "1.2419"
+  },
+  {
+    "date": "2023-08-28",
+    "netValue": "1.2605",
+    "dailyProfit": "1.50",
+    "totalNetValue": "1.2605"
+  },
+  {
+    "date": "2023-08-29",
+    "netValue": "1.2991",
+    "dailyProfit": "3.06",
+    "totalNetValue": "1.2991"
+  },
+  {
+    "date": "2023-08-30",
+    "netValue": "1.3079",
+    "dailyProfit": "0.68",
+    "totalNetValue": "1.3079"
+  },
+  {
+    "date": "2023-08-31",
+    "netValue": "1.3025",
+    "dailyProfit": "-0.41",
+    "totalNetValue": "1.3025"
+  },
+  {
+    "date": "2023-09-01",
+    "netValue": "1.3106",
+    "dailyProfit": "0.62",
+    "totalNetValue": "1.3106"
+  },
+  {
+    "date": "2023-09-04",
+    "netValue": "1.3268",
+    "dailyProfit": "1.24",
+    "totalNetValue": "1.3268"
+  },
+  {
+    "date": "2023-09-05",
+    "netValue": "1.3207",
+    "dailyProfit": "-0.46",
+    "totalNetValue": "1.3207"
+  },
+  {
+    "date": "2023-09-06",
+    "netValue": "1.3237",
+    "dailyProfit": "0.23",
+    "totalNetValue": "1.3237"
+  },
+  {
+    "date": "2023-09-07",
+    "netValue": "1.3133",
+    "dailyProfit": "-0.79",
+    "totalNetValue": "1.3133"
+  },
+  {
+    "date": "2023-09-08",
+    "netValue": "1.3104",
+    "dailyProfit": "-0.22",
+    "totalNetValue": "1.3104"
+  },
+  {
+    "date": "2023-09-11",
+    "netValue": "1.3172",
+    "dailyProfit": "0.52",
+    "totalNetValue": "1.3172"
+  },
+  {
+    "date": "2023-09-12",
+    "netValue": "1.3170",
+    "dailyProfit": "-0.02",
+    "totalNetValue": "1.3170"
+  },
+  {
+    "date": "2023-09-13",
+    "netValue": "1.3064",
+    "dailyProfit": "-0.80",
+    "totalNetValue": "1.3064"
+  },
+  {
+    "date": "2023-09-14",
+    "netValue": "1.2971",
+    "dailyProfit": "-0.71",
+    "totalNetValue": "1.2971"
+  },
+  {
+    "date": "2023-09-15",
+    "netValue": "1.3014",
+    "dailyProfit": "0.33",
+    "totalNetValue": "1.3014"
+  },
+  {
+    "date": "2023-09-18",
+    "netValue": "1.3225",
+    "dailyProfit": "1.62",
+    "totalNetValue": "1.3225"
+  },
+  {
+    "date": "2023-09-19",
+    "netValue": "1.3094",
+    "dailyProfit": "-0.99",
+    "totalNetValue": "1.3094"
+  },
+  {
+    "date": "2023-09-20",
+    "netValue": "1.3044",
+    "dailyProfit": "-0.38",
+    "totalNetValue": "1.3044"
+  },
+  {
+    "date": "2023-09-21",
+    "netValue": "1.2952",
+    "dailyProfit": "-0.71",
+    "totalNetValue": "1.2952"
+  },
+  {
+    "date": "2023-09-22",
+    "netValue": "1.3139",
+    "dailyProfit": "1.44",
+    "totalNetValue": "1.3139"
+  },
+  {
+    "date": "2023-09-25",
+    "netValue": "1.3087",
+    "dailyProfit": "-0.40",
+    "totalNetValue": "1.3087"
+  },
+  {
+    "date": "2023-09-26",
+    "netValue": "1.3075",
+    "dailyProfit": "-0.09",
+    "totalNetValue": "1.3075"
+  },
+  {
+    "date": "2023-09-27",
+    "netValue": "1.3122",
+    "dailyProfit": "0.36",
+    "totalNetValue": "1.3122"
+  },
+  {
+    "date": "2023-09-28",
+    "netValue": "1.3243",
+    "dailyProfit": "0.92",
+    "totalNetValue": "1.3243"
+  },
+  {
+    "date": "2023-09-30",
+    "netValue": "1.3242",
+    "dailyProfit": "-0.01",
+    "totalNetValue": "1.3242"
+  },
+  {
+    "date": "2023-10-09",
+    "netValue": "1.3074",
+    "dailyProfit": "-1.27",
+    "totalNetValue": "1.3074"
+  },
+  {
+    "date": "2023-10-10",
+    "netValue": "1.3043",
+    "dailyProfit": "-0.24",
+    "totalNetValue": "1.3043"
+  },
+  {
+    "date": "2023-10-11",
+    "netValue": "1.3057",
+    "dailyProfit": "0.11",
+    "totalNetValue": "1.3057"
+  },
+  {
+    "date": "2023-10-12",
+    "netValue": "1.3083",
+    "dailyProfit": "0.20",
+    "totalNetValue": "1.3083"
+  },
+  {
+    "date": "2023-10-13",
+    "netValue": "1.2940",
+    "dailyProfit": "-1.09",
+    "totalNetValue": "1.2940"
+  },
+  {
+    "date": "2023-10-16",
+    "netValue": "1.2925",
+    "dailyProfit": "-0.12",
+    "totalNetValue": "1.2925"
+  },
+  {
+    "date": "2023-10-17",
+    "netValue": "1.2928",
+    "dailyProfit": "0.02",
+    "totalNetValue": "1.2928"
+  },
+  {
+    "date": "2023-10-18",
+    "netValue": "1.2714",
+    "dailyProfit": "-1.66",
+    "totalNetValue": "1.2714"
+  },
+  {
+    "date": "2023-10-19",
+    "netValue": "1.2667",
+    "dailyProfit": "-0.37",
+    "totalNetValue": "1.2667"
+  },
+  {
+    "date": "2023-10-20",
+    "netValue": "1.2604",
+    "dailyProfit": "-0.50",
+    "totalNetValue": "1.2604"
+  },
+  {
+    "date": "2023-10-23",
+    "netValue": "1.2344",
+    "dailyProfit": "-2.06",
+    "totalNetValue": "1.2344"
+  },
+  {
+    "date": "2023-10-24",
+    "netValue": "1.2702",
+    "dailyProfit": "2.90",
+    "totalNetValue": "1.2702"
+  },
+  {
+    "date": "2023-10-25",
+    "netValue": "1.2856",
+    "dailyProfit": "1.21",
+    "totalNetValue": "1.2856"
+  },
+  {
+    "date": "2023-10-26",
+    "netValue": "1.2850",
+    "dailyProfit": "-0.05",
+    "totalNetValue": "1.2850"
+  },
+  {
+    "date": "2023-10-27",
+    "netValue": "1.3003",
+    "dailyProfit": "1.19",
+    "totalNetValue": "1.3003"
+  },
+  {
+    "date": "2023-10-30",
+    "netValue": "1.3107",
+    "dailyProfit": "0.80",
+    "totalNetValue": "1.3107"
+  },
+  {
+    "date": "2023-10-31",
+    "netValue": "1.3125",
+    "dailyProfit": "0.14",
+    "totalNetValue": "1.3125"
+  },
+  {
+    "date": "2023-11-01",
+    "netValue": "1.3198",
+    "dailyProfit": "0.56",
+    "totalNetValue": "1.3198"
+  },
+  {
+    "date": "2023-11-02",
+    "netValue": "1.3143",
+    "dailyProfit": "-0.42",
+    "totalNetValue": "1.3143"
+  },
+  {
+    "date": "2023-11-03",
+    "netValue": "1.3201",
+    "dailyProfit": "0.44",
+    "totalNetValue": "1.3201"
+  },
+  {
+    "date": "2023-11-06",
+    "netValue": "1.3379",
+    "dailyProfit": "1.35",
+    "totalNetValue": "1.3379"
+  },
+  {
+    "date": "2023-11-07",
+    "netValue": "1.3427",
+    "dailyProfit": "0.36",
+    "totalNetValue": "1.3427"
+  },
+  {
+    "date": "2023-11-08",
+    "netValue": "1.3491",
+    "dailyProfit": "0.48",
+    "totalNetValue": "1.3491"
+  },
+  {
+    "date": "2023-11-09",
+    "netValue": "1.3464",
+    "dailyProfit": "-0.20",
+    "totalNetValue": "1.3464"
+  },
+  {
+    "date": "2023-11-10",
+    "netValue": "1.3474",
+    "dailyProfit": "0.07",
+    "totalNetValue": "1.3474"
+  },
+  {
+    "date": "2023-11-13",
+    "netValue": "1.3605",
+    "dailyProfit": "0.97",
+    "totalNetValue": "1.3605"
+  },
+  {
+    "date": "2023-11-14",
+    "netValue": "1.3604",
+    "dailyProfit": "-0.01",
+    "totalNetValue": "1.3604"
+  },
+  {
+    "date": "2023-11-15",
+    "netValue": "1.3641",
+    "dailyProfit": "0.27",
+    "totalNetValue": "1.3641"
+  },
+  {
+    "date": "2023-11-16",
+    "netValue": "1.3614",
+    "dailyProfit": "-0.20",
+    "totalNetValue": "1.3614"
+  },
+  {
+    "date": "2023-11-17",
+    "netValue": "1.3682",
+    "dailyProfit": "0.50",
+    "totalNetValue": "1.3682"
+  },
+  {
+    "date": "2023-11-20",
+    "netValue": "1.3764",
+    "dailyProfit": "0.60",
+    "totalNetValue": "1.3764"
+  },
+  {
+    "date": "2023-11-21",
+    "netValue": "1.3752",
+    "dailyProfit": "-0.09",
+    "totalNetValue": "1.3752"
+  },
+  {
+    "date": "2023-11-22",
+    "netValue": "1.3720",
+    "dailyProfit": "-0.23",
+    "totalNetValue": "1.3720"
+  },
+  {
+    "date": "2023-11-23",
+    "netValue": "1.3789",
+    "dailyProfit": "0.50",
+    "totalNetValue": "1.3789"
+  },
+  {
+    "date": "2023-11-24",
+    "netValue": "1.3727",
+    "dailyProfit": "-0.45",
+    "totalNetValue": "1.3727"
+  },
+  {
+    "date": "2023-11-27",
+    "netValue": "1.3719",
+    "dailyProfit": "-0.06",
+    "totalNetValue": "1.3719"
+  },
+  {
+    "date": "2023-11-28",
+    "netValue": "1.3766",
+    "dailyProfit": "0.34",
+    "totalNetValue": "1.3766"
+  },
+  {
+    "date": "2023-11-29",
+    "netValue": "1.3741",
+    "dailyProfit": "-0.18",
+    "totalNetValue": "1.3741"
+  },
+  {
+    "date": "2023-11-30",
+    "netValue": "1.3717",
+    "dailyProfit": "-0.17",
+    "totalNetValue": "1.3717"
+  },
+  {
+    "date": "2023-12-01",
+    "netValue": "1.3791",
+    "dailyProfit": "0.54",
+    "totalNetValue": "1.3791"
+  },
+  {
+    "date": "2023-12-04",
+    "netValue": "1.3822",
+    "dailyProfit": "0.22",
+    "totalNetValue": "1.3822"
+  },
+  {
+    "date": "2023-12-05",
+    "netValue": "1.3691",
+    "dailyProfit": "-0.95",
+    "totalNetValue": "1.3691"
+  },
+  {
+    "date": "2023-12-06",
+    "netValue": "1.3746",
+    "dailyProfit": "0.40",
+    "totalNetValue": "1.3746"
+  },
+  {
+    "date": "2023-12-07",
+    "netValue": "1.3689",
+    "dailyProfit": "-0.41",
+    "totalNetValue": "1.3689"
+  },
+  {
+    "date": "2023-12-08",
+    "netValue": "1.3510",
+    "dailyProfit": "-1.31",
+    "totalNetValue": "1.3510"
+  },
+  {
+    "date": "2023-12-11",
+    "netValue": "1.3604",
+    "dailyProfit": "0.70",
+    "totalNetValue": "1.3604"
+  },
+  {
+    "date": "2023-12-12",
+    "netValue": "1.3691",
+    "dailyProfit": "0.64",
+    "totalNetValue": "1.3691"
+  },
+  {
+    "date": "2023-12-13",
+    "netValue": "1.3687",
+    "dailyProfit": "-0.03",
+    "totalNetValue": "1.3687"
+  },
+  {
+    "date": "2023-12-14",
+    "netValue": "1.3687",
+    "dailyProfit": "0.00",
+    "totalNetValue": "1.3687"
+  },
+  {
+    "date": "2023-12-15",
+    "netValue": "1.3695",
+    "dailyProfit": "0.06",
+    "totalNetValue": "1.3695"
+  },
+  {
+    "date": "2023-12-18",
+    "netValue": "1.3585",
+    "dailyProfit": "-0.80",
+    "totalNetValue": "1.3585"
+  },
+  {
+    "date": "2023-12-19",
+    "netValue": "1.3678",
+    "dailyProfit": "0.68",
+    "totalNetValue": "1.3678"
+  },
+  {
+    "date": "2023-12-20",
+    "netValue": "1.3661",
+    "dailyProfit": "-0.12",
+    "totalNetValue": "1.3661"
+  },
+  {
+    "date": "2023-12-21",
+    "netValue": "1.3726",
+    "dailyProfit": "0.48",
+    "totalNetValue": "1.3726"
+  },
+  {
+    "date": "2023-12-22",
+    "netValue": "1.3521",
+    "dailyProfit": "-1.49",
+    "totalNetValue": "1.3521"
+  },
+  {
+    "date": "2023-12-25",
+    "netValue": "1.3401",
+    "dailyProfit": "-0.89",
+    "totalNetValue": "1.3401"
+  },
+  {
+    "date": "2023-12-26",
+    "netValue": "1.3264",
+    "dailyProfit": "-1.02",
+    "totalNetValue": "1.3264"
+  },
+  {
+    "date": "2023-12-27",
+    "netValue": "1.3361",
+    "dailyProfit": "0.73",
+    "totalNetValue": "1.3361"
+  },
+  {
+    "date": "2023-12-28",
+    "netValue": "1.3559",
+    "dailyProfit": "1.48",
+    "totalNetValue": "1.3559"
+  },
+  {
+    "date": "2023-12-29",
+    "netValue": "1.3770",
+    "dailyProfit": "1.56",
+    "totalNetValue": "1.3770"
+  },
+  {
+    "date": "2023-12-31",
+    "netValue": "1.3769",
+    "dailyProfit": "-0.01",
+    "totalNetValue": "1.3769"
+  },
+  {
+    "date": "2024-01-02",
+    "netValue": "1.3914",
+    "dailyProfit": "1.05",
+    "totalNetValue": "1.3914"
+  },
+  {
+    "date": "2024-01-03",
+    "netValue": "1.3888",
+    "dailyProfit": "-0.19",
+    "totalNetValue": "1.3888"
+  },
+  {
+    "date": "2024-01-04",
+    "netValue": "1.3916",
+    "dailyProfit": "0.20",
+    "totalNetValue": "1.3916"
+  },
+  {
+    "date": "2024-01-05",
+    "netValue": "1.3736",
+    "dailyProfit": "-1.29",
+    "totalNetValue": "1.3736"
+  },
+  {
+    "date": "2024-01-08",
+    "netValue": "1.3573",
+    "dailyProfit": "-1.19",
+    "totalNetValue": "1.3573"
+  },
+  {
+    "date": "2024-01-09",
+    "netValue": "1.3722",
+    "dailyProfit": "1.10",
+    "totalNetValue": "1.3722"
+  },
+  {
+    "date": "2024-01-10",
+    "netValue": "1.3599",
+    "dailyProfit": "-0.90",
+    "totalNetValue": "1.3599"
+  },
+  {
+    "date": "2024-01-11",
+    "netValue": "1.3766",
+    "dailyProfit": "1.23",
+    "totalNetValue": "1.3766"
+  },
+  {
+    "date": "2024-01-12",
+    "netValue": "1.3658",
+    "dailyProfit": "-0.78",
+    "totalNetValue": "1.3658"
+  },
+  {
+    "date": "2024-01-15",
+    "netValue": "1.3659",
+    "dailyProfit": "0.01",
+    "totalNetValue": "1.3659"
+  },
+  {
+    "date": "2024-01-16",
+    "netValue": "1.3622",
+    "dailyProfit": "-0.27",
+    "totalNetValue": "1.3622"
+  },
+  {
+    "date": "2024-01-17",
+    "netValue": "1.3387",
+    "dailyProfit": "-1.73",
+    "totalNetValue": "1.3387"
+  },
+  {
+    "date": "2024-01-18",
+    "netValue": "1.3228",
+    "dailyProfit": "-1.19",
+    "totalNetValue": "1.3228"
+  },
+  {
+    "date": "2024-01-19",
+    "netValue": "1.3080",
+    "dailyProfit": "-1.12",
+    "totalNetValue": "1.3080"
+  },
+  {
+    "date": "2024-01-22",
+    "netValue": "1.2334",
+    "dailyProfit": "-5.70",
+    "totalNetValue": "1.2334"
+  },
+  {
+    "date": "2024-01-23",
+    "netValue": "1.2135",
+    "dailyProfit": "-1.61",
+    "totalNetValue": "1.2135"
+  },
+  {
+    "date": "2024-01-24",
+    "netValue": "1.2355",
+    "dailyProfit": "1.81",
+    "totalNetValue": "1.2355"
+  },
+  {
+    "date": "2024-01-25",
+    "netValue": "1.2874",
+    "dailyProfit": "4.20",
+    "totalNetValue": "1.2874"
+  },
+  {
+    "date": "2024-01-26",
+    "netValue": "1.2939",
+    "dailyProfit": "0.50",
+    "totalNetValue": "1.2939"
+  },
+  {
+    "date": "2024-01-29",
+    "netValue": "1.2480",
+    "dailyProfit": "-3.55",
+    "totalNetValue": "1.2480"
+  },
+  {
+    "date": "2024-01-30",
+    "netValue": "1.2046",
+    "dailyProfit": "-3.48",
+    "totalNetValue": "1.2046"
+  },
+  {
+    "date": "2024-01-31",
+    "netValue": "1.1360",
+    "dailyProfit": "-5.69",
+    "totalNetValue": "1.1360"
+  },
+  {
+    "date": "2024-02-01",
+    "netValue": "1.1127",
+    "dailyProfit": "-2.05",
+    "totalNetValue": "1.1127"
+  },
+  {
+    "date": "2024-02-02",
+    "netValue": "1.0531",
+    "dailyProfit": "-5.36",
+    "totalNetValue": "1.0531"
+  },
+  {
+    "date": "2024-02-05",
+    "netValue": "0.9198",
+    "dailyProfit": "-12.66",
+    "totalNetValue": "0.9198"
+  },
+  {
+    "date": "2024-02-06",
+    "netValue": "0.8916",
+    "dailyProfit": "-3.07",
+    "totalNetValue": "0.8916"
+  },
+  {
+    "date": "2024-02-07",
+    "netValue": "0.8244",
+    "dailyProfit": "-7.54",
+    "totalNetValue": "0.8244"
+  },
+  {
+    "date": "2024-02-08",
+    "netValue": "0.9164",
+    "dailyProfit": "11.16",
+    "totalNetValue": "0.9164"
+  },
+  {
+    "date": "2024-02-19",
+    "netValue": "0.9663",
+    "dailyProfit": "5.45",
+    "totalNetValue": "0.9663"
+  },
+  {
+    "date": "2024-02-20",
+    "netValue": "0.9820",
+    "dailyProfit": "1.62",
+    "totalNetValue": "0.9820"
+  },
+  {
+    "date": "2024-02-21",
+    "netValue": "1.0106",
+    "dailyProfit": "2.91",
+    "totalNetValue": "1.0106"
+  },
+  {
+    "date": "2024-02-22",
+    "netValue": "1.0458",
+    "dailyProfit": "3.48",
+    "totalNetValue": "1.0458"
+  },
+  {
+    "date": "2024-02-23",
+    "netValue": "1.0836",
+    "dailyProfit": "3.61",
+    "totalNetValue": "1.0836"
+  },
+  {
+    "date": "2024-02-26",
+    "netValue": "1.1059",
+    "dailyProfit": "2.06",
+    "totalNetValue": "1.1059"
+  },
+  {
+    "date": "2024-02-27",
+    "netValue": "1.1337",
+    "dailyProfit": "2.51",
+    "totalNetValue": "1.1337"
+  },
+  {
+    "date": "2024-02-28",
+    "netValue": "1.0373",
+    "dailyProfit": "-8.50",
+    "totalNetValue": "1.0373"
+  },
+  {
+    "date": "2024-02-29",
+    "netValue": "1.0766",
+    "dailyProfit": "3.79",
+    "totalNetValue": "1.0766"
+  },
+  {
+    "date": "2024-03-01",
+    "netValue": "1.0913",
+    "dailyProfit": "1.37",
+    "totalNetValue": "1.0913"
+  },
+  {
+    "date": "2024-03-04",
+    "netValue": "1.0893",
+    "dailyProfit": "-0.18",
+    "totalNetValue": "1.0893"
+  },
+  {
+    "date": "2024-03-05",
+    "netValue": "1.0653",
+    "dailyProfit": "-2.20",
+    "totalNetValue": "1.0653"
+  },
+  {
+    "date": "2024-03-06",
+    "netValue": "1.0900",
+    "dailyProfit": "2.32",
+    "totalNetValue": "1.0900"
+  },
+  {
+    "date": "2024-03-07",
+    "netValue": "1.0944",
+    "dailyProfit": "0.40",
+    "totalNetValue": "1.0944"
+  },
+  {
+    "date": "2024-03-08",
+    "netValue": "1.1025",
+    "dailyProfit": "0.74",
+    "totalNetValue": "1.1025"
+  },
+  {
+    "date": "2024-03-11",
+    "netValue": "1.1236",
+    "dailyProfit": "1.91",
+    "totalNetValue": "1.1236"
+  },
+  {
+    "date": "2024-03-12",
+    "netValue": "1.1511",
+    "dailyProfit": "2.45",
+    "totalNetValue": "1.1511"
+  },
+  {
+    "date": "2024-03-13",
+    "netValue": "1.1554",
+    "dailyProfit": "0.37",
+    "totalNetValue": "1.1554"
+  },
+  {
+    "date": "2024-03-14",
+    "netValue": "1.1520",
+    "dailyProfit": "-0.29",
+    "totalNetValue": "1.1520"
+  },
+  {
+    "date": "2024-03-15",
+    "netValue": "1.1747",
+    "dailyProfit": "1.97",
+    "totalNetValue": "1.1747"
+  },
+  {
+    "date": "2024-03-18",
+    "netValue": "1.2023",
+    "dailyProfit": "2.35",
+    "totalNetValue": "1.2023"
+  },
+  {
+    "date": "2024-03-19",
+    "netValue": "1.2052",
+    "dailyProfit": "0.24",
+    "totalNetValue": "1.2052"
+  },
+  {
+    "date": "2024-03-20",
+    "netValue": "1.2228",
+    "dailyProfit": "1.46",
+    "totalNetValue": "1.2228"
+  },
+  {
+    "date": "2024-03-21",
+    "netValue": "1.2292",
+    "dailyProfit": "0.52",
+    "totalNetValue": "1.2292"
+  },
+  {
+    "date": "2024-03-22",
+    "netValue": "1.2114",
+    "dailyProfit": "-1.45",
+    "totalNetValue": "1.2114"
+  },
+  {
+    "date": "2024-03-25",
+    "netValue": "1.1878",
+    "dailyProfit": "-1.95",
+    "totalNetValue": "1.1878"
+  },
+  {
+    "date": "2024-03-26",
+    "netValue": "1.1921",
+    "dailyProfit": "0.36",
+    "totalNetValue": "1.1921"
+  },
+  {
+    "date": "2024-03-27",
+    "netValue": "1.1661",
+    "dailyProfit": "-2.18",
+    "totalNetValue": "1.1661"
+  },
+  {
+    "date": "2024-03-28",
+    "netValue": "1.1944",
+    "dailyProfit": "2.43",
+    "totalNetValue": "1.1944"
+  },
+  {
+    "date": "2024-03-29",
+    "netValue": "1.2113",
+    "dailyProfit": "1.41",
+    "totalNetValue": "1.2113"
+  },
+  {
+    "date": "2024-03-31",
+    "netValue": "1.2111",
+    "dailyProfit": "-0.02",
+    "totalNetValue": "1.2111"
+  },
+  {
+    "date": "2024-04-01",
+    "netValue": "1.2381",
+    "dailyProfit": "2.23",
+    "totalNetValue": "1.2381"
+  },
+  {
+    "date": "2024-04-02",
+    "netValue": "1.2477",
+    "dailyProfit": "0.78",
+    "totalNetValue": "1.2477"
+  },
+  {
+    "date": "2024-04-03",
+    "netValue": "1.2439",
+    "dailyProfit": "-0.30",
+    "totalNetValue": "1.2439"
+  },
+  {
+    "date": "2024-04-08",
+    "netValue": "1.2067",
+    "dailyProfit": "-2.99",
+    "totalNetValue": "1.2067"
+  },
+  {
+    "date": "2024-04-09",
+    "netValue": "1.2276",
+    "dailyProfit": "1.73",
+    "totalNetValue": "1.2276"
+  },
+  {
+    "date": "2024-04-10",
+    "netValue": "1.2039",
+    "dailyProfit": "-1.93",
+    "totalNetValue": "1.2039"
+  },
+  {
+    "date": "2024-04-11",
+    "netValue": "1.2113",
+    "dailyProfit": "0.61",
+    "totalNetValue": "1.2113"
+  },
+  {
+    "date": "2024-04-12",
+    "netValue": "1.2115",
+    "dailyProfit": "0.02",
+    "totalNetValue": "1.2115"
+  },
+  {
+    "date": "2024-04-15",
+    "netValue": "1.1407",
+    "dailyProfit": "-5.84",
+    "totalNetValue": "1.1407"
+  },
+  {
+    "date": "2024-04-16",
+    "netValue": "1.0462",
+    "dailyProfit": "-8.28",
+    "totalNetValue": "1.0462"
+  },
+  {
+    "date": "2024-04-17",
+    "netValue": "1.1416",
+    "dailyProfit": "9.12",
+    "totalNetValue": "1.1416"
+  },
+  {
+    "date": "2024-04-18",
+    "netValue": "1.1389",
+    "dailyProfit": "-0.24",
+    "totalNetValue": "1.1389"
+  },
+  {
+    "date": "2024-04-19",
+    "netValue": "1.1335",
+    "dailyProfit": "-0.47",
+    "totalNetValue": "1.1335"
+  },
+  {
+    "date": "2024-04-22",
+    "netValue": "1.1219",
+    "dailyProfit": "-1.02",
+    "totalNetValue": "1.1219"
+  },
+  {
+    "date": "2024-04-23",
+    "netValue": "1.1559",
+    "dailyProfit": "3.03",
+    "totalNetValue": "1.1559"
+  },
+  {
+    "date": "2024-04-24",
+    "netValue": "1.1876",
+    "dailyProfit": "2.74",
+    "totalNetValue": "1.1876"
+  },
+  {
+    "date": "2024-04-25",
+    "netValue": "1.2057",
+    "dailyProfit": "1.52",
+    "totalNetValue": "1.2057"
+  },
+  {
+    "date": "2024-04-26",
+    "netValue": "1.2125",
+    "dailyProfit": "0.56",
+    "totalNetValue": "1.2125"
+  },
+  {
+    "date": "2024-04-29",
+    "netValue": "1.2499",
+    "dailyProfit": "3.08",
+    "totalNetValue": "1.2499"
+  },
+  {
+    "date": "2024-04-30",
+    "netValue": "1.2483",
+    "dailyProfit": "-0.13",
+    "totalNetValue": "1.2483"
+  },
+  {
+    "date": "2024-05-06",
+    "netValue": "1.2794",
+    "dailyProfit": "2.49",
+    "totalNetValue": "1.2794"
+  },
+  {
+    "date": "2024-05-07",
+    "netValue": "1.2943",
+    "dailyProfit": "1.16",
+    "totalNetValue": "1.2943"
+  },
+  {
+    "date": "2024-05-08",
+    "netValue": "1.2806",
+    "dailyProfit": "-1.06",
+    "totalNetValue": "1.2806"
+  },
+  {
+    "date": "2024-05-09",
+    "netValue": "1.2957",
+    "dailyProfit": "1.18",
+    "totalNetValue": "1.2957"
+  },
+  {
+    "date": "2024-05-10",
+    "netValue": "1.2847",
+    "dailyProfit": "-0.85",
+    "totalNetValue": "1.2847"
+  },
+  {
+    "date": "2024-05-13",
+    "netValue": "1.2607",
+    "dailyProfit": "-1.87",
+    "totalNetValue": "1.2607"
+  },
+  {
+    "date": "2024-05-14",
+    "netValue": "1.2835",
+    "dailyProfit": "1.81",
+    "totalNetValue": "1.2835"
+  },
+  {
+    "date": "2024-05-15",
+    "netValue": "1.2845",
+    "dailyProfit": "0.08",
+    "totalNetValue": "1.2845"
+  },
+  {
+    "date": "2024-05-16",
+    "netValue": "1.2964",
+    "dailyProfit": "0.93",
+    "totalNetValue": "1.2964"
+  },
+  {
+    "date": "2024-05-17",
+    "netValue": "1.3063",
+    "dailyProfit": "0.76",
+    "totalNetValue": "1.3063"
+  },
+  {
+    "date": "2024-05-20",
+    "netValue": "1.3071",
+    "dailyProfit": "0.06",
+    "totalNetValue": "1.3071"
+  },
+  {
+    "date": "2024-05-21",
+    "netValue": "1.2954",
+    "dailyProfit": "-0.90",
+    "totalNetValue": "1.2954"
+  },
+  {
+    "date": "2024-05-22",
+    "netValue": "1.3038",
+    "dailyProfit": "0.65",
+    "totalNetValue": "1.3038"
+  },
+  {
+    "date": "2024-05-23",
+    "netValue": "1.2824",
+    "dailyProfit": "-1.64",
+    "totalNetValue": "1.2824"
+  },
+  {
+    "date": "2024-05-24",
+    "netValue": "1.2774",
+    "dailyProfit": "-0.39",
+    "totalNetValue": "1.2774"
+  },
+  {
+    "date": "2024-05-27",
+    "netValue": "1.2874",
+    "dailyProfit": "0.78",
+    "totalNetValue": "1.2874"
+  },
+  {
+    "date": "2024-05-28",
+    "netValue": "1.2689",
+    "dailyProfit": "-1.44",
+    "totalNetValue": "1.2689"
+  },
+  {
+    "date": "2024-05-29",
+    "netValue": "1.2794",
+    "dailyProfit": "0.83",
+    "totalNetValue": "1.2794"
+  },
+  {
+    "date": "2024-05-30",
+    "netValue": "1.2702",
+    "dailyProfit": "-0.72",
+    "totalNetValue": "1.2702"
+  },
+  {
+    "date": "2024-05-31",
+    "netValue": "1.2842",
+    "dailyProfit": "1.10",
+    "totalNetValue": "1.2842"
+  },
+  {
+    "date": "2024-06-03",
+    "netValue": "1.2583",
+    "dailyProfit": "-2.02",
+    "totalNetValue": "1.2583"
+  },
+  {
+    "date": "2024-06-04",
+    "netValue": "1.2356",
+    "dailyProfit": "-1.80",
+    "totalNetValue": "1.2356"
+  },
+  {
+    "date": "2024-06-05",
+    "netValue": "1.2079",
+    "dailyProfit": "-2.24",
+    "totalNetValue": "1.2079"
+  },
+  {
+    "date": "2024-06-06",
+    "netValue": "1.1553",
+    "dailyProfit": "-4.35",
+    "totalNetValue": "1.1553"
+  },
+  {
+    "date": "2024-06-07",
+    "netValue": "1.2024",
+    "dailyProfit": "4.08",
+    "totalNetValue": "1.2024"
+  },
+  {
+    "date": "2024-06-11",
+    "netValue": "1.1981",
+    "dailyProfit": "-0.36",
+    "totalNetValue": "1.1981"
+  },
+  {
+    "date": "2024-06-12",
+    "netValue": "1.2209",
+    "dailyProfit": "1.90",
+    "totalNetValue": "1.2209"
+  },
+  {
+    "date": "2024-06-13",
+    "netValue": "1.2159",
+    "dailyProfit": "-0.41",
+    "totalNetValue": "1.2159"
+  },
+  {
+    "date": "2024-06-14",
+    "netValue": "1.2185",
+    "dailyProfit": "0.21",
+    "totalNetValue": "1.2185"
+  },
+  {
+    "date": "2024-06-17",
+    "netValue": "1.2036",
+    "dailyProfit": "-1.22",
+    "totalNetValue": "1.2036"
+  },
+  {
+    "date": "2024-06-18",
+    "netValue": "1.2239",
+    "dailyProfit": "1.69",
+    "totalNetValue": "1.2239"
+  },
+  {
+    "date": "2024-06-19",
+    "netValue": "1.2258",
+    "dailyProfit": "0.16",
+    "totalNetValue": "1.2258"
+  },
+  {
+    "date": "2024-06-20",
+    "netValue": "1.2018",
+    "dailyProfit": "-1.96",
+    "totalNetValue": "1.2018"
+  },
+  {
+    "date": "2024-06-21",
+    "netValue": "1.2007",
+    "dailyProfit": "-0.09",
+    "totalNetValue": "1.2007"
+  },
+  {
+    "date": "2024-06-24",
+    "netValue": "1.1551",
+    "dailyProfit": "-3.80",
+    "totalNetValue": "1.1551"
+  },
+  {
+    "date": "2024-06-25",
+    "netValue": "1.1711",
+    "dailyProfit": "1.39",
+    "totalNetValue": "1.1711"
+  },
+  {
+    "date": "2024-06-26",
+    "netValue": "1.2058",
+    "dailyProfit": "2.96",
+    "totalNetValue": "1.2058"
+  },
+  {
+    "date": "2024-06-27",
+    "netValue": "1.1948",
+    "dailyProfit": "-0.91",
+    "totalNetValue": "1.1948"
+  },
+  {
+    "date": "2024-06-28",
+    "netValue": "1.2012",
+    "dailyProfit": "0.54",
+    "totalNetValue": "1.2012"
+  },
+  {
+    "date": "2024-06-30",
+    "netValue": "1.2011",
+    "dailyProfit": "-0.01",
+    "totalNetValue": "1.2011"
+  },
+  {
+    "date": "2024-07-01",
+    "netValue": "1.2093",
+    "dailyProfit": "0.68",
+    "totalNetValue": "1.2093"
+  },
+  {
+    "date": "2024-07-02",
+    "netValue": "1.2189",
+    "dailyProfit": "0.79",
+    "totalNetValue": "1.2189"
+  },
+  {
+    "date": "2024-07-03",
+    "netValue": "1.2077",
+    "dailyProfit": "-0.92",
+    "totalNetValue": "1.2077"
+  },
+  {
+    "date": "2024-07-04",
+    "netValue": "1.1739",
+    "dailyProfit": "-2.80",
+    "totalNetValue": "1.1739"
+  },
+  {
+    "date": "2024-07-05",
+    "netValue": "1.1878",
+    "dailyProfit": "1.18",
+    "totalNetValue": "1.1878"
+  },
+  {
+    "date": "2024-07-08",
+    "netValue": "1.1584",
+    "dailyProfit": "-2.48",
+    "totalNetValue": "1.1584"
+  },
+  {
+    "date": "2024-07-09",
+    "netValue": "1.1777",
+    "dailyProfit": "1.67",
+    "totalNetValue": "1.1777"
+  },
+  {
+    "date": "2024-07-10",
+    "netValue": "1.1693",
+    "dailyProfit": "-0.71",
+    "totalNetValue": "1.1693"
+  },
+  {
+    "date": "2024-07-11",
+    "netValue": "1.2050",
+    "dailyProfit": "3.05",
+    "totalNetValue": "1.2050"
+  },
+  {
+    "date": "2024-07-12",
+    "netValue": "1.2091",
+    "dailyProfit": "0.34",
+    "totalNetValue": "1.2091"
+  },
+  {
+    "date": "2024-07-15",
+    "netValue": "1.1919",
+    "dailyProfit": "-1.42",
+    "totalNetValue": "1.1919"
+  },
+  {
+    "date": "2024-07-16",
+    "netValue": "1.1880",
+    "dailyProfit": "-0.33",
+    "totalNetValue": "1.1880"
+  },
+  {
+    "date": "2024-07-17",
+    "netValue": "1.1784",
+    "dailyProfit": "-0.81",
+    "totalNetValue": "1.1784"
+  },
+  {
+    "date": "2024-07-18",
+    "netValue": "1.1717",
+    "dailyProfit": "-0.57",
+    "totalNetValue": "1.1717"
+  },
+  {
+    "date": "2024-07-19",
+    "netValue": "1.1816",
+    "dailyProfit": "0.84",
+    "totalNetValue": "1.1816"
+  },
+  {
+    "date": "2024-07-22",
+    "netValue": "1.1882",
+    "dailyProfit": "0.56",
+    "totalNetValue": "1.1882"
+  },
+  {
+    "date": "2024-07-23",
+    "netValue": "1.1734",
+    "dailyProfit": "-1.25",
+    "totalNetValue": "1.1734"
+  },
+  {
+    "date": "2024-07-24",
+    "netValue": "1.1609",
+    "dailyProfit": "-1.07",
+    "totalNetValue": "1.1609"
+  },
+  {
+    "date": "2024-07-25",
+    "netValue": "1.1727",
+    "dailyProfit": "1.02",
+    "totalNetValue": "1.1727"
+  },
+  {
+    "date": "2024-07-26",
+    "netValue": "1.1903",
+    "dailyProfit": "1.50",
+    "totalNetValue": "1.1903"
+  },
+  {
+    "date": "2024-07-29",
+    "netValue": "1.1928",
+    "dailyProfit": "0.21",
+    "totalNetValue": "1.1928"
+  },
+  {
+    "date": "2024-07-30",
+    "netValue": "1.1996",
+    "dailyProfit": "0.57",
+    "totalNetValue": "1.1996"
+  },
+  {
+    "date": "2024-07-31",
+    "netValue": "1.2279",
+    "dailyProfit": "2.36",
+    "totalNetValue": "1.2279"
+  },
+  {
+    "date": "2024-08-01",
+    "netValue": "1.2303",
+    "dailyProfit": "0.20",
+    "totalNetValue": "1.2303"
+  },
+  {
+    "date": "2024-08-02",
+    "netValue": "1.2206",
+    "dailyProfit": "-0.79",
+    "totalNetValue": "1.2206"
+  },
+  {
+    "date": "2024-08-05",
+    "netValue": "1.1990",
+    "dailyProfit": "-1.77",
+    "totalNetValue": "1.1990"
+  },
+  {
+    "date": "2024-08-06",
+    "netValue": "1.2212",
+    "dailyProfit": "1.85",
+    "totalNetValue": "1.2212"
+  },
+  {
+    "date": "2024-08-07",
+    "netValue": "1.2218",
+    "dailyProfit": "0.05",
+    "totalNetValue": "1.2218"
+  },
+  {
+    "date": "2024-08-08",
+    "netValue": "1.2222",
+    "dailyProfit": "0.03",
+    "totalNetValue": "1.2222"
+  },
+  {
+    "date": "2024-08-09",
+    "netValue": "1.2185",
+    "dailyProfit": "-0.30",
+    "totalNetValue": "1.2185"
+  },
+  {
+    "date": "2024-08-12",
+    "netValue": "1.2142",
+    "dailyProfit": "-0.35",
+    "totalNetValue": "1.2142"
+  },
+  {
+    "date": "2024-08-13",
+    "netValue": "1.2231",
+    "dailyProfit": "0.73",
+    "totalNetValue": "1.2231"
+  },
+  {
+    "date": "2024-08-14",
+    "netValue": "1.2213",
+    "dailyProfit": "-0.15",
+    "totalNetValue": "1.2213"
+  },
+  {
+    "date": "2024-08-15",
+    "netValue": "1.2263",
+    "dailyProfit": "0.41",
+    "totalNetValue": "1.2263"
+  },
+  {
+    "date": "2024-08-16",
+    "netValue": "1.2228",
+    "dailyProfit": "-0.29",
+    "totalNetValue": "1.2228"
+  },
+  {
+    "date": "2024-08-19",
+    "netValue": "1.2174",
+    "dailyProfit": "-0.44",
+    "totalNetValue": "1.2174"
+  },
+  {
+    "date": "2024-08-20",
+    "netValue": "1.2004",
+    "dailyProfit": "-1.40",
+    "totalNetValue": "1.2004"
+  },
+  {
+    "date": "2024-08-21",
+    "netValue": "1.2004",
+    "dailyProfit": "0.00",
+    "totalNetValue": "1.2004"
+  },
+  {
+    "date": "2024-08-22",
+    "netValue": "1.1893",
+    "dailyProfit": "-0.92",
+    "totalNetValue": "1.1893"
+  },
+  {
+    "date": "2024-08-23",
+    "netValue": "1.1784",
+    "dailyProfit": "-0.92",
+    "totalNetValue": "1.1784"
+  },
+  {
+    "date": "2024-08-26",
+    "netValue": "1.1959",
+    "dailyProfit": "1.49",
+    "totalNetValue": "1.1959"
+  },
+  {
+    "date": "2024-08-27",
+    "netValue": "1.1863",
+    "dailyProfit": "-0.80",
+    "totalNetValue": "1.1863"
+  },
+  {
+    "date": "2024-08-28",
+    "netValue": "1.1999",
+    "dailyProfit": "1.15",
+    "totalNetValue": "1.1999"
+  },
+  {
+    "date": "2024-08-29",
+    "netValue": "1.2119",
+    "dailyProfit": "1.00",
+    "totalNetValue": "1.2119"
+  },
+  {
+    "date": "2024-08-30",
+    "netValue": "1.2244",
+    "dailyProfit": "1.03",
+    "totalNetValue": "1.2244"
+  },
+  {
+    "date": "2024-09-02",
+    "netValue": "1.2146",
+    "dailyProfit": "-0.80",
+    "totalNetValue": "1.2146"
+  },
+  {
+    "date": "2024-09-03",
+    "netValue": "1.2204",
+    "dailyProfit": "0.48",
+    "totalNetValue": "1.2204"
+  },
+  {
+    "date": "2024-09-04",
+    "netValue": "1.2123",
+    "dailyProfit": "-0.66",
+    "totalNetValue": "1.2123"
+  },
+  {
+    "date": "2024-09-05",
+    "netValue": "1.2223",
+    "dailyProfit": "0.82",
+    "totalNetValue": "1.2223"
+  },
+  {
+    "date": "2024-09-06",
+    "netValue": "1.2035",
+    "dailyProfit": "-1.54",
+    "totalNetValue": "1.2035"
+  },
+  {
+    "date": "2024-09-09",
+    "netValue": "1.2045",
+    "dailyProfit": "0.08",
+    "totalNetValue": "1.2045"
+  },
+  {
+    "date": "2024-09-10",
+    "netValue": "1.2157",
+    "dailyProfit": "0.93",
+    "totalNetValue": "1.2157"
+  },
+  {
+    "date": "2024-09-11",
+    "netValue": "1.2066",
+    "dailyProfit": "-0.75",
+    "totalNetValue": "1.2066"
+  },
+  {
+    "date": "2024-09-12",
+    "netValue": "1.2026",
+    "dailyProfit": "-0.33",
+    "totalNetValue": "1.2026"
+  },
+  {
+    "date": "2024-09-13",
+    "netValue": "1.1905",
+    "dailyProfit": "-1.01",
+    "totalNetValue": "1.1905"
+  },
+  {
+    "date": "2024-09-18",
+    "netValue": "1.1771",
+    "dailyProfit": "-1.13",
+    "totalNetValue": "1.1771"
+  },
+  {
+    "date": "2024-09-19",
+    "netValue": "1.2055",
+    "dailyProfit": "2.41",
+    "totalNetValue": "1.2055"
+  },
+  {
+    "date": "2024-09-20",
+    "netValue": "1.1973",
+    "dailyProfit": "-0.68",
+    "totalNetValue": "1.1973"
+  },
+  {
+    "date": "2024-09-23",
+    "netValue": "1.1984",
+    "dailyProfit": "0.09",
+    "totalNetValue": "1.1984"
+  },
+  {
+    "date": "2024-09-24",
+    "netValue": "1.2277",
+    "dailyProfit": "2.44",
+    "totalNetValue": "1.2277"
+  },
+  {
+    "date": "2024-09-25",
+    "netValue": "1.2395",
+    "dailyProfit": "0.96",
+    "totalNetValue": "1.2395"
+  },
+  {
+    "date": "2024-09-26",
+    "netValue": "1.2649",
+    "dailyProfit": "2.05",
+    "totalNetValue": "1.2649"
+  },
+  {
+    "date": "2024-09-27",
+    "netValue": "1.3090",
+    "dailyProfit": "3.49",
+    "totalNetValue": "1.3090"
+  },
+  {
+    "date": "2024-09-30",
+    "netValue": "1.4172",
+    "dailyProfit": "8.27",
+    "totalNetValue": "1.4172"
+  },
+  {
+    "date": "2024-10-08",
+    "netValue": "1.4917",
+    "dailyProfit": "5.26",
+    "totalNetValue": "1.4917"
+  },
+  {
+    "date": "2024-10-09",
+    "netValue": "1.3824",
+    "dailyProfit": "-7.33",
+    "totalNetValue": "1.3824"
+  },
+  {
+    "date": "2024-10-10",
+    "netValue": "1.4011",
+    "dailyProfit": "1.35",
+    "totalNetValue": "1.4011"
+  },
+  {
+    "date": "2024-10-11",
+    "netValue": "1.3683",
+    "dailyProfit": "-2.34",
+    "totalNetValue": "1.3683"
+  },
+  {
+    "date": "2024-10-14",
+    "netValue": "1.3964",
+    "dailyProfit": "2.05",
+    "totalNetValue": "1.3964"
+  },
+  {
+    "date": "2024-10-15",
+    "netValue": "1.3903",
+    "dailyProfit": "-0.44",
+    "totalNetValue": "1.3903"
+  },
+  {
+    "date": "2024-10-16",
+    "netValue": "1.4098",
+    "dailyProfit": "1.40",
+    "totalNetValue": "1.4098"
+  },
+  {
+    "date": "2024-10-17",
+    "netValue": "1.4040",
+    "dailyProfit": "-0.41",
+    "totalNetValue": "1.4040"
+  },
+  {
+    "date": "2024-10-18",
+    "netValue": "1.4234",
+    "dailyProfit": "1.38",
+    "totalNetValue": "1.4234"
+  },
+  {
+    "date": "2024-10-21",
+    "netValue": "1.4334",
+    "dailyProfit": "0.70",
+    "totalNetValue": "1.4334"
+  },
+  {
+    "date": "2024-10-22",
+    "netValue": "1.4427",
+    "dailyProfit": "0.65",
+    "totalNetValue": "1.4427"
+  },
+  {
+    "date": "2024-10-23",
+    "netValue": "1.4439",
+    "dailyProfit": "0.08",
+    "totalNetValue": "1.4439"
+  },
+  {
+    "date": "2024-10-24",
+    "netValue": "1.4462",
+    "dailyProfit": "0.16",
+    "totalNetValue": "1.4462"
+  },
+  {
+    "date": "2024-10-25",
+    "netValue": "1.4710",
+    "dailyProfit": "1.71",
+    "totalNetValue": "1.4710"
+  },
+  {
+    "date": "2024-10-28",
+    "netValue": "1.4984",
+    "dailyProfit": "1.86",
+    "totalNetValue": "1.4984"
+  },
+  {
+    "date": "2024-10-29",
+    "netValue": "1.4814",
+    "dailyProfit": "-1.13",
+    "totalNetValue": "1.4814"
+  },
+  {
+    "date": "2024-10-30",
+    "netValue": "1.4782",
+    "dailyProfit": "-0.22",
+    "totalNetValue": "1.4782"
+  },
+  {
+    "date": "2024-10-31",
+    "netValue": "1.4873",
+    "dailyProfit": "0.62",
+    "totalNetValue": "1.4873"
+  },
+  {
+    "date": "2024-11-01",
+    "netValue": "1.4614",
+    "dailyProfit": "-1.74",
+    "totalNetValue": "1.4614"
+  },
+  {
+    "date": "2024-11-04",
+    "netValue": "1.4804",
+    "dailyProfit": "1.30",
+    "totalNetValue": "1.4804"
+  },
+  {
+    "date": "2024-11-05",
+    "netValue": "1.4914",
+    "dailyProfit": "0.74",
+    "totalNetValue": "1.4914"
+  },
+  {
+    "date": "2024-11-06",
+    "netValue": "1.4955",
+    "dailyProfit": "0.27",
+    "totalNetValue": "1.4955"
+  },
+  {
+    "date": "2024-11-07",
+    "netValue": "1.5218",
+    "dailyProfit": "1.76",
+    "totalNetValue": "1.5218"
+  },
+  {
+    "date": "2024-11-08",
+    "netValue": "1.5202",
+    "dailyProfit": "-0.11",
+    "totalNetValue": "1.5202"
+  },
+  {
+    "date": "2024-11-11",
+    "netValue": "1.5406",
+    "dailyProfit": "1.34",
+    "totalNetValue": "1.5406"
+  },
+  {
+    "date": "2024-11-12",
+    "netValue": "1.5428",
+    "dailyProfit": "0.14",
+    "totalNetValue": "1.5428"
+  },
+  {
+    "date": "2024-11-13",
+    "netValue": "1.5500",
+    "dailyProfit": "0.47",
+    "totalNetValue": "1.5500"
+  },
+  {
+    "date": "2024-11-14",
+    "netValue": "1.5217",
+    "dailyProfit": "-1.83",
+    "totalNetValue": "1.5217"
+  },
+  {
+    "date": "2024-11-15",
+    "netValue": "1.5073",
+    "dailyProfit": "-0.95",
+    "totalNetValue": "1.5073"
+  },
+  {
+    "date": "2024-11-18",
+    "netValue": "1.4853",
+    "dailyProfit": "-1.46",
+    "totalNetValue": "1.4853"
+  },
+  {
+    "date": "2024-11-19",
+    "netValue": "1.5132",
+    "dailyProfit": "1.88",
+    "totalNetValue": "1.5132"
+  },
+  {
+    "date": "2024-11-20",
+    "netValue": "1.5424",
+    "dailyProfit": "1.93",
+    "totalNetValue": "1.5424"
+  },
+  {
+    "date": "2024-11-21",
+    "netValue": "1.5547",
+    "dailyProfit": "0.80",
+    "totalNetValue": "1.5547"
+  },
+  {
+    "date": "2024-11-22",
+    "netValue": "1.5156",
+    "dailyProfit": "-2.51",
+    "totalNetValue": "1.5156"
+  },
+  {
+    "date": "2024-11-25",
+    "netValue": "1.5474",
+    "dailyProfit": "2.10",
+    "totalNetValue": "1.5474"
+  },
+  {
+    "date": "2024-11-26",
+    "netValue": "1.5473",
+    "dailyProfit": "-0.01",
+    "totalNetValue": "1.5473"
+  },
+  {
+    "date": "2024-11-27",
+    "netValue": "1.5563",
+    "dailyProfit": "0.58",
+    "totalNetValue": "1.5563"
+  },
+  {
+    "date": "2024-11-28",
+    "netValue": "1.5669",
+    "dailyProfit": "0.68",
+    "totalNetValue": "1.5669"
+  },
+  {
+    "date": "2024-11-29",
+    "netValue": "1.5860",
+    "dailyProfit": "1.22",
+    "totalNetValue": "1.5860"
+  },
+  {
+    "date": "2024-12-02",
+    "netValue": "1.6070",
+    "dailyProfit": "1.32",
+    "totalNetValue": "1.6070"
+  },
+  {
+    "date": "2024-12-03",
+    "netValue": "1.6106",
+    "dailyProfit": "0.22",
+    "totalNetValue": "1.6106"
+  },
+  {
+    "date": "2024-12-04",
+    "netValue": "1.5984",
+    "dailyProfit": "-0.76",
+    "totalNetValue": "1.5984"
+  },
+  {
+    "date": "2024-12-05",
+    "netValue": "1.6138",
+    "dailyProfit": "0.96",
+    "totalNetValue": "1.6138"
+  },
+  {
+    "date": "2024-12-06",
+    "netValue": "1.6195",
+    "dailyProfit": "0.35",
+    "totalNetValue": "1.6195"
+  },
+  {
+    "date": "2024-12-09",
+    "netValue": "1.6273",
+    "dailyProfit": "0.48",
+    "totalNetValue": "1.6273"
+  },
+  {
+    "date": "2024-12-10",
+    "netValue": "1.6329",
+    "dailyProfit": "0.34",
+    "totalNetValue": "1.6329"
+  },
+  {
+    "date": "2024-12-11",
+    "netValue": "1.6422",
+    "dailyProfit": "0.57",
+    "totalNetValue": "1.6422"
+  },
+  {
+    "date": "2024-12-12",
+    "netValue": "1.6617",
+    "dailyProfit": "1.19",
+    "totalNetValue": "1.6617"
+  },
+  {
+    "date": "2024-12-13",
+    "netValue": "1.6543",
+    "dailyProfit": "-0.45",
+    "totalNetValue": "1.6543"
+  },
+  {
+    "date": "2024-12-16",
+    "netValue": "1.6648",
+    "dailyProfit": "0.63",
+    "totalNetValue": "1.6648"
+  },
+  {
+    "date": "2024-12-17",
+    "netValue": "1.6034",
+    "dailyProfit": "-3.69",
+    "totalNetValue": "1.6034"
+  },
+  {
+    "date": "2024-12-18",
+    "netValue": "1.6040",
+    "dailyProfit": "0.04",
+    "totalNetValue": "1.6040"
+  },
+  {
+    "date": "2024-12-19",
+    "netValue": "1.6120",
+    "dailyProfit": "0.50",
+    "totalNetValue": "1.6120"
+  },
+  {
+    "date": "2024-12-20",
+    "netValue": "1.6353",
+    "dailyProfit": "1.45",
+    "totalNetValue": "1.6353"
+  },
+  {
+    "date": "2024-12-23",
+    "netValue": "1.5594",
+    "dailyProfit": "-4.64",
+    "totalNetValue": "1.5594"
+  },
+  {
+    "date": "2024-12-24",
+    "netValue": "1.5679",
+    "dailyProfit": "0.55",
+    "totalNetValue": "1.5679"
+  },
+  {
+    "date": "2024-12-25",
+    "netValue": "1.5296",
+    "dailyProfit": "-2.44",
+    "totalNetValue": "1.5296"
+  },
+  {
+    "date": "2024-12-26",
+    "netValue": "1.5529",
+    "dailyProfit": "1.52",
+    "totalNetValue": "1.5529"
+  },
+  {
+    "date": "2024-12-27",
+    "netValue": "1.5733",
+    "dailyProfit": "1.31",
+    "totalNetValue": "1.5733"
+  },
+  {
+    "date": "2024-12-30",
+    "netValue": "1.5493",
+    "dailyProfit": "-1.53",
+    "totalNetValue": "1.5493"
+  },
+  {
+    "date": "2024-12-31",
+    "netValue": "1.5251",
+    "dailyProfit": "-1.56",
+    "totalNetValue": "1.5251"
+  },
+  {
+    "date": "2025-01-02",
+    "netValue": "1.5108",
+    "dailyProfit": "-0.94",
+    "totalNetValue": "1.5108"
+  },
+  {
+    "date": "2025-01-03",
+    "netValue": "1.4514",
+    "dailyProfit": "-3.93",
+    "totalNetValue": "1.4514"
+  },
+  {
+    "date": "2025-01-06",
+    "netValue": "1.4519",
+    "dailyProfit": "0.03",
+    "totalNetValue": "1.4519"
+  },
+  {
+    "date": "2025-01-07",
+    "netValue": "1.4959",
+    "dailyProfit": "3.03",
+    "totalNetValue": "1.4959"
+  },
+  {
+    "date": "2025-01-08",
+    "netValue": "1.4950",
+    "dailyProfit": "-0.06",
+    "totalNetValue": "1.4950"
+  },
+  {
+    "date": "2025-01-09",
+    "netValue": "1.4972",
+    "dailyProfit": "0.15",
+    "totalNetValue": "1.4972"
+  },
+  {
+    "date": "2025-01-10",
+    "netValue": "1.4566",
+    "dailyProfit": "-2.71",
+    "totalNetValue": "1.4566"
+  },
+  {
+    "date": "2025-01-13",
+    "netValue": "1.4695",
+    "dailyProfit": "0.89",
+    "totalNetValue": "1.4695"
+  },
+  {
+    "date": "2025-01-14",
+    "netValue": "1.5366",
+    "dailyProfit": "4.57",
+    "totalNetValue": "1.5366"
+  },
+  {
+    "date": "2025-01-15",
+    "netValue": "1.5389",
+    "dailyProfit": "0.15",
+    "totalNetValue": "1.5389"
+  },
+  {
+    "date": "2025-01-16",
+    "netValue": "1.5446",
+    "dailyProfit": "0.37",
+    "totalNetValue": "1.5446"
+  },
+  {
+    "date": "2025-01-17",
+    "netValue": "1.5394",
+    "dailyProfit": "-0.34",
+    "totalNetValue": "1.5394"
+  },
+  {
+    "date": "2025-01-20",
+    "netValue": "1.5685",
+    "dailyProfit": "1.89",
+    "totalNetValue": "1.5685"
+  },
+  {
+    "date": "2025-01-21",
+    "netValue": "1.5604",
+    "dailyProfit": "-0.52",
+    "totalNetValue": "1.5604"
+  },
+  {
+    "date": "2025-01-22",
+    "netValue": "1.5514",
+    "dailyProfit": "-0.58",
+    "totalNetValue": "1.5514"
+  },
+  {
+    "date": "2025-01-23",
+    "netValue": "1.5610",
+    "dailyProfit": "0.62",
+    "totalNetValue": "1.5610"
+  },
+  {
+    "date": "2025-01-24",
+    "netValue": "1.5765",
+    "dailyProfit": "0.99",
+    "totalNetValue": "1.5765"
+  },
+  {
+    "date": "2025-01-27",
+    "netValue": "1.5811",
+    "dailyProfit": "0.29",
+    "totalNetValue": "1.5811"
+  },
+  {
+    "date": "2025-02-05",
+    "netValue": "1.6022",
+    "dailyProfit": "1.33",
+    "totalNetValue": "1.6022"
+  },
+  {
+    "date": "2025-02-06",
+    "netValue": "1.6174",
+    "dailyProfit": "0.95",
+    "totalNetValue": "1.6174"
+  },
+  {
+    "date": "2025-02-07",
+    "netValue": "1.6232",
+    "dailyProfit": "0.36",
+    "totalNetValue": "1.6232"
+  },
+  {
+    "date": "2025-02-10",
+    "netValue": "1.6486",
+    "dailyProfit": "1.56",
+    "totalNetValue": "1.6486"
+  },
+  {
+    "date": "2025-02-11",
+    "netValue": "1.6472",
+    "dailyProfit": "-0.08",
+    "totalNetValue": "1.6472"
+  },
+  {
+    "date": "2025-02-12",
+    "netValue": "1.6485",
+    "dailyProfit": "0.08",
+    "totalNetValue": "1.6485"
+  },
+  {
+    "date": "2025-02-13",
+    "netValue": "1.6326",
+    "dailyProfit": "-0.96",
+    "totalNetValue": "1.6326"
+  },
+  {
+    "date": "2025-02-14",
+    "netValue": "1.6353",
+    "dailyProfit": "0.17",
+    "totalNetValue": "1.6353"
+  },
+  {
+    "date": "2025-02-17",
+    "netValue": "1.6571",
+    "dailyProfit": "1.33",
+    "totalNetValue": "1.6571"
+  },
+  {
+    "date": "2025-02-18",
+    "netValue": "1.6284",
+    "dailyProfit": "-1.73",
+    "totalNetValue": "1.6284"
+  },
+  {
+    "date": "2025-02-19",
+    "netValue": "1.6507",
+    "dailyProfit": "1.37",
+    "totalNetValue": "1.6507"
+  },
+  {
+    "date": "2025-02-20",
+    "netValue": "1.6644",
+    "dailyProfit": "0.83",
+    "totalNetValue": "1.6644"
+  },
+  {
+    "date": "2025-02-21",
+    "netValue": "1.6585",
+    "dailyProfit": "-0.35",
+    "totalNetValue": "1.6585"
+  },
+  {
+    "date": "2025-02-24",
+    "netValue": "1.6689",
+    "dailyProfit": "0.63",
+    "totalNetValue": "1.6689"
+  },
+  {
+    "date": "2025-02-25",
+    "netValue": "1.6601",
+    "dailyProfit": "-0.53",
+    "totalNetValue": "1.6601"
+  },
+  {
+    "date": "2025-02-26",
+    "netValue": "1.6746",
+    "dailyProfit": "0.87",
+    "totalNetValue": "1.6746"
+  },
+  {
+    "date": "2025-02-27",
+    "netValue": "1.6761",
+    "dailyProfit": "0.09",
+    "totalNetValue": "1.6761"
+  },
+  {
+    "date": "2025-02-28",
+    "netValue": "1.6516",
+    "dailyProfit": "-1.46",
+    "totalNetValue": "1.6516"
+  },
+  {
+    "date": "2025-03-03",
+    "netValue": "1.6573",
+    "dailyProfit": "0.35",
+    "totalNetValue": "1.6573"
+  },
+  {
+    "date": "2025-03-04",
+    "netValue": "1.6745",
+    "dailyProfit": "1.04",
+    "totalNetValue": "1.6745"
+  },
+  {
+    "date": "2025-03-05",
+    "netValue": "1.6732",
+    "dailyProfit": "-0.08",
+    "totalNetValue": "1.6732"
+  },
+  {
+    "date": "2025-03-06",
+    "netValue": "1.6889",
+    "dailyProfit": "0.94",
+    "totalNetValue": "1.6889"
+  },
+  {
+    "date": "2025-03-07",
+    "netValue": "1.6836",
+    "dailyProfit": "-0.31",
+    "totalNetValue": "1.6836"
+  },
+  {
+    "date": "2025-03-10",
+    "netValue": "1.6943",
+    "dailyProfit": "0.64",
+    "totalNetValue": "1.6943"
+  },
+  {
+    "date": "2025-03-11",
+    "netValue": "1.7011",
+    "dailyProfit": "0.40",
+    "totalNetValue": "1.7011"
+  },
+  {
+    "date": "2025-03-12",
+    "netValue": "1.7063",
+    "dailyProfit": "0.31",
+    "totalNetValue": "1.7063"
+  },
+  {
+    "date": "2025-03-13",
+    "netValue": "1.7027",
+    "dailyProfit": "-0.21",
+    "totalNetValue": "1.7027"
+  },
+  {
+    "date": "2025-03-14",
+    "netValue": "1.7199",
+    "dailyProfit": "1.01",
+    "totalNetValue": "1.7199"
+  },
+  {
+    "date": "2025-03-17",
+    "netValue": "1.7294",
+    "dailyProfit": "0.55",
+    "totalNetValue": "1.7294"
+  },
+  {
+    "date": "2025-03-18",
+    "netValue": "1.7345",
+    "dailyProfit": "0.29",
+    "totalNetValue": "1.7345"
+  },
+  {
+    "date": "2025-03-19",
+    "netValue": "1.7314",
+    "dailyProfit": "-0.18",
+    "totalNetValue": "1.7314"
+  },
+  {
+    "date": "2025-03-20",
+    "netValue": "1.7348",
+    "dailyProfit": "0.20",
+    "totalNetValue": "1.7348"
+  },
+  {
+    "date": "2025-03-21",
+    "netValue": "1.7252",
+    "dailyProfit": "-0.55",
+    "totalNetValue": "1.7252"
+  },
+  {
+    "date": "2025-03-24",
+    "netValue": "1.6928",
+    "dailyProfit": "-1.88",
+    "totalNetValue": "1.6928"
+  },
+  {
+    "date": "2025-03-25",
+    "netValue": "1.6958",
+    "dailyProfit": "0.18",
+    "totalNetValue": "1.6958"
+  },
+  {
+    "date": "2025-03-26",
+    "netValue": "1.7163",
+    "dailyProfit": "1.21",
+    "totalNetValue": "1.7163"
+  },
+  {
+    "date": "2025-03-27",
+    "netValue": "1.7132",
+    "dailyProfit": "-0.18",
+    "totalNetValue": "1.7132"
+  },
+  {
+    "date": "2025-03-28",
+    "netValue": "1.6990",
+    "dailyProfit": "-0.83",
+    "totalNetValue": "1.6990"
+  },
+  {
+    "date": "2025-03-31",
+    "netValue": "1.6887",
+    "dailyProfit": "-0.61",
+    "totalNetValue": "1.6887"
+  },
+  {
+    "date": "2025-04-01",
+    "netValue": "1.7049",
+    "dailyProfit": "0.96",
+    "totalNetValue": "1.7049"
+  },
+  {
+    "date": "2025-04-02",
+    "netValue": "1.7096",
+    "dailyProfit": "0.28",
+    "totalNetValue": "1.7096"
+  },
+  {
+    "date": "2025-04-03",
+    "netValue": "1.7151",
+    "dailyProfit": "0.32",
+    "totalNetValue": "1.7151"
+  },
+  {
+    "date": "2025-04-07",
+    "netValue": "1.6219",
+    "dailyProfit": "-5.43",
+    "totalNetValue": "1.6219"
+  },
+  {
+    "date": "2025-04-08",
+    "netValue": "1.6415",
+    "dailyProfit": "1.21",
+    "totalNetValue": "1.6415"
+  },
+  {
+    "date": "2025-04-09",
+    "netValue": "1.6679",
+    "dailyProfit": "1.61",
+    "totalNetValue": "1.6679"
+  },
+  {
+    "date": "2025-04-10",
+    "netValue": "1.7001",
+    "dailyProfit": "1.93",
+    "totalNetValue": "1.7001"
+  },
+  {
+    "date": "2025-04-11",
+    "netValue": "1.7031",
+    "dailyProfit": "0.18",
+    "totalNetValue": "1.7031"
+  },
+  {
+    "date": "2025-04-14",
+    "netValue": "1.7264",
+    "dailyProfit": "1.37",
+    "totalNetValue": "1.7264"
+  },
+  {
+    "date": "2025-04-15",
+    "netValue": "1.7384",
+    "dailyProfit": "0.70",
+    "totalNetValue": "1.7384"
+  },
+  {
+    "date": "2025-04-16",
+    "netValue": "1.7247",
+    "dailyProfit": "-0.79",
+    "totalNetValue": "1.7247"
+  },
+  {
+    "date": "2025-04-17",
+    "netValue": "1.7396",
+    "dailyProfit": "0.86",
+    "totalNetValue": "1.7396"
+  },
+  {
+    "date": "2025-04-18",
+    "netValue": "1.7442",
+    "dailyProfit": "0.26",
+    "totalNetValue": "1.7442"
+  },
+  {
+    "date": "2025-04-21",
+    "netValue": "1.7591",
+    "dailyProfit": "0.85",
+    "totalNetValue": "1.7591"
+  },
+  {
+    "date": "2025-04-22",
+    "netValue": "1.7681",
+    "dailyProfit": "0.51",
+    "totalNetValue": "1.7681"
+  },
+  {
+    "date": "2025-04-23",
+    "netValue": "1.7741",
+    "dailyProfit": "0.34",
+    "totalNetValue": "1.7741"
+  },
+  {
+    "date": "2025-04-24",
+    "netValue": "1.7669",
+    "dailyProfit": "-0.41",
+    "totalNetValue": "1.7669"
+  },
+  {
+    "date": "2025-04-25",
+    "netValue": "1.7640",
+    "dailyProfit": "-0.16",
+    "totalNetValue": "1.7640"
+  },
+  {
+    "date": "2025-04-28",
+    "netValue": "1.7493",
+    "dailyProfit": "-0.83",
+    "totalNetValue": "1.7493"
+  },
+  {
+    "date": "2025-04-29",
+    "netValue": "1.7718",
+    "dailyProfit": "1.29",
+    "totalNetValue": "1.7718"
+  },
+  {
+    "date": "2025-04-30",
+    "netValue": "1.7801",
+    "dailyProfit": "0.47",
+    "totalNetValue": "1.7801"
+  },
+  {
+    "date": "2025-05-06",
+    "netValue": "1.8119",
+    "dailyProfit": "1.79",
+    "totalNetValue": "1.8119"
+  },
+  {
+    "date": "2025-05-07",
+    "netValue": "1.8231",
+    "dailyProfit": "0.62",
+    "totalNetValue": "1.8231"
+  },
+  {
+    "date": "2025-05-08",
+    "netValue": "1.8433",
+    "dailyProfit": "1.11",
+    "totalNetValue": "1.8433"
+  },
+  {
+    "date": "2025-05-09",
+    "netValue": "1.8325",
+    "dailyProfit": "-0.59",
+    "totalNetValue": "1.8325"
+  },
+  {
+    "date": "2025-05-12",
+    "netValue": "1.8422",
+    "dailyProfit": "0.53",
+    "totalNetValue": "1.8422"
+  },
+  {
+    "date": "2025-05-13",
+    "netValue": "1.8426",
+    "dailyProfit": "0.02",
+    "totalNetValue": "1.8426"
+  },
+  {
+    "date": "2025-05-14",
+    "netValue": "1.8437",
+    "dailyProfit": "0.06",
+    "totalNetValue": "1.8437"
+  },
+  {
+    "date": "2025-05-15",
+    "netValue": "1.8498",
+    "dailyProfit": "0.33",
+    "totalNetValue": "1.8498"
+  },
+  {
+    "date": "2025-05-16",
+    "netValue": "1.8548",
+    "dailyProfit": "0.27",
+    "totalNetValue": "1.8548"
+  },
+  {
+    "date": "2025-05-19",
+    "netValue": "1.8753",
+    "dailyProfit": "1.11",
+    "totalNetValue": "1.8753"
+  },
+  {
+    "date": "2025-05-20",
+    "netValue": "1.8970",
+    "dailyProfit": "1.16",
+    "totalNetValue": "1.8970"
+  },
+  {
+    "date": "2025-05-21",
+    "netValue": "1.8860",
+    "dailyProfit": "-0.58",
+    "totalNetValue": "1.8860"
+  },
+  {
+    "date": "2025-05-22",
+    "netValue": "1.8661",
+    "dailyProfit": "-1.06",
+    "totalNetValue": "1.8661"
+  },
+  {
+    "date": "2025-05-23",
+    "netValue": "1.8491",
+    "dailyProfit": "-0.91",
+    "totalNetValue": "1.8491"
+  },
+  {
+    "date": "2025-05-26",
+    "netValue": "1.8657",
+    "dailyProfit": "0.90",
+    "totalNetValue": "1.8657"
+  },
+  {
+    "date": "2025-05-27",
+    "netValue": "1.8759",
+    "dailyProfit": "0.55",
+    "totalNetValue": "1.8759"
+  },
+  {
+    "date": "2025-05-28",
+    "netValue": "1.8706",
+    "dailyProfit": "-0.28",
+    "totalNetValue": "1.8706"
+  },
+  {
+    "date": "2025-05-29",
+    "netValue": "1.8900",
+    "dailyProfit": "1.04",
+    "totalNetValue": "1.8900"
+  },
+  {
+    "date": "2025-05-30",
+    "netValue": "1.8737",
+    "dailyProfit": "-0.86",
+    "totalNetValue": "1.8737"
+  },
+  {
+    "date": "2025-06-03",
+    "netValue": "1.8889",
+    "dailyProfit": "0.81",
+    "totalNetValue": "1.8889"
+  },
+  {
+    "date": "2025-06-04",
+    "netValue": "1.9040",
+    "dailyProfit": "0.80",
+    "totalNetValue": "1.9040"
+  },
+  {
+    "date": "2025-06-05",
+    "netValue": "1.9087",
+    "dailyProfit": "0.25",
+    "totalNetValue": "1.9087"
+  },
+  {
+    "date": "2025-06-06",
+    "netValue": "1.9161",
+    "dailyProfit": "0.39",
+    "totalNetValue": "1.9161"
+  },
+  {
+    "date": "2025-06-09",
+    "netValue": "1.9304",
+    "dailyProfit": "0.75",
+    "totalNetValue": "1.9304"
+  },
+  {
+    "date": "2025-06-10",
+    "netValue": "1.9201",
+    "dailyProfit": "-0.53",
+    "totalNetValue": "1.9201"
+  },
+  {
+    "date": "2025-06-11",
+    "netValue": "1.9276",
+    "dailyProfit": "0.39",
+    "totalNetValue": "1.9276"
+  },
+  {
+    "date": "2025-06-12",
+    "netValue": "1.9361",
+    "dailyProfit": "0.44",
+    "totalNetValue": "1.9361"
+  },
+  {
+    "date": "2025-06-13",
+    "netValue": "1.9197",
+    "dailyProfit": "-0.85",
+    "totalNetValue": "1.9197"
+  },
+  {
+    "date": "2025-06-16",
+    "netValue": "1.9289",
+    "dailyProfit": "0.48",
+    "totalNetValue": "1.9289"
+  },
+  {
+    "date": "2025-06-17",
+    "netValue": "1.9266",
+    "dailyProfit": "-0.12",
+    "totalNetValue": "1.9266"
+  },
+  {
+    "date": "2025-06-18",
+    "netValue": "1.9190",
+    "dailyProfit": "-0.39",
+    "totalNetValue": "1.9190"
+  },
+  {
+    "date": "2025-06-19",
+    "netValue": "1.9032",
+    "dailyProfit": "-0.82",
+    "totalNetValue": "1.9032"
+  },
+  {
+    "date": "2025-06-20",
+    "netValue": "1.9001",
+    "dailyProfit": "-0.16",
+    "totalNetValue": "1.9001"
+  },
+  {
+    "date": "2025-06-23",
+    "netValue": "1.9185",
+    "dailyProfit": "0.97",
+    "totalNetValue": "1.9185"
+  },
+  {
+    "date": "2025-06-24",
+    "netValue": "1.9426",
+    "dailyProfit": "1.26",
+    "totalNetValue": "1.9426"
+  },
+  {
+    "date": "2025-06-25",
+    "netValue": "1.9485",
+    "dailyProfit": "0.30",
+    "totalNetValue": "1.9485"
+  },
+  {
+    "date": "2025-06-26",
+    "netValue": "1.9511",
+    "dailyProfit": "0.13",
+    "totalNetValue": "1.9511"
+  },
+  {
+    "date": "2025-06-27",
+    "netValue": "1.9614",
+    "dailyProfit": "0.53",
+    "totalNetValue": "1.9614"
+  },
+  {
+    "date": "2025-06-30",
+    "netValue": "1.9754",
+    "dailyProfit": "0.71",
+    "totalNetValue": "1.9754"
+  },
+  {
+    "date": "2025-07-01",
+    "netValue": "1.9770",
+    "dailyProfit": "0.08",
+    "totalNetValue": "1.9770"
+  },
+  {
+    "date": "2025-07-02",
+    "netValue": "1.9792",
+    "dailyProfit": "0.11",
+    "totalNetValue": "1.9792"
+  },
+  {
+    "date": "2025-07-03",
+    "netValue": "1.9847",
+    "dailyProfit": "0.28",
+    "totalNetValue": "1.9847"
+  },
+  {
+    "date": "2025-07-04",
+    "netValue": "1.9735",
+    "dailyProfit": "-0.56",
+    "totalNetValue": "1.9735"
+  },
+  {
+    "date": "2025-07-07",
+    "netValue": "1.9897",
+    "dailyProfit": "0.82",
+    "totalNetValue": "1.9897"
+  },
+  {
+    "date": "2025-07-08",
+    "netValue": "2.0028",
+    "dailyProfit": "0.66",
+    "totalNetValue": "2.0028"
+  },
+  {
+    "date": "2025-07-09",
+    "netValue": "2.0041",
+    "dailyProfit": "0.06",
+    "totalNetValue": "2.0041"
+  },
+  {
+    "date": "2025-07-10",
+    "netValue": "2.0076",
+    "dailyProfit": "0.17",
+    "totalNetValue": "2.0076"
+  },
+  {
+    "date": "2025-07-11",
+    "netValue": "2.0087",
+    "dailyProfit": "0.05",
+    "totalNetValue": "2.0087"
+  },
+  {
+    "date": "2025-07-14",
+    "netValue": "2.0193",
+    "dailyProfit": "0.53",
+    "totalNetValue": "2.0193"
+  },
+  {
+    "date": "2025-07-15",
+    "netValue": "2.0026",
+    "dailyProfit": "-0.83",
+    "totalNetValue": "2.0026"
+  },
+  {
+    "date": "2025-07-16",
+    "netValue": "2.0158",
+    "dailyProfit": "0.66",
+    "totalNetValue": "2.0158"
+  },
+  {
+    "date": "2025-07-17",
+    "netValue": "2.0209",
+    "dailyProfit": "0.25",
+    "totalNetValue": "2.0209"
+  },
+  {
+    "date": "2025-07-18",
+    "netValue": "2.0239",
+    "dailyProfit": "0.15",
+    "totalNetValue": "2.0239"
+  },
+  {
+    "date": "2025-07-21",
+    "netValue": "2.0471",
+    "dailyProfit": "1.15",
+    "totalNetValue": "2.0471"
+  },
+  {
+    "date": "2025-07-22",
+    "netValue": "2.0478",
+    "dailyProfit": "0.03",
+    "totalNetValue": "2.0478"
+  }
+]
