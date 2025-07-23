@@ -23,3 +23,19 @@ function emptyDirectory(directory) {
   }
 }
 
+/*
+https://echarts.apache.org/examples/zh/editor.html?c=candlestick-simple
+https://echarts.apache.org/examples/zh/editor.html?c=candlestick-sh
+https://echarts.apache.org/examples/zh/editor.html?c=bar-waterfall
+https://echarts.apache.org/examples/zh/editor.html?c=bar-waterfall2
+
+
+https://www.isqqw.com/viewer?id=21080
+https://www.isqqw.com/viewer?id=23215
+https://www.isqqw.com/viewer?id=30068
+https://www.isqqw.com/viewer?id=31235
+https://www.isqqw.com/viewer?id=14995
+
+https://www.amazonaws.cn/ecs/pricing/ 亚马逊是否可以免费服务器？
+
+*/
