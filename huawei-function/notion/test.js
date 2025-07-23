@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `红利加仓，其它先不动`;// 右键主题
+const mail_title = `测试邮件哈`;// 右键主题
 
 var marilArr = [
   '209392599@qq.com', // 自己
