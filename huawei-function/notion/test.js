@@ -4,7 +4,7 @@ const mail_title = `红利加仓，其它先不动`;// 右键主题
 
 var marilArr = [
   '209392599@qq.com', // 自己
-
+  // ''
 ]
 
 var html = `
