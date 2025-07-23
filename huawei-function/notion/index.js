@@ -153,7 +153,7 @@ const transporter = nodemailer.createTransport({
 // 邮件选项
 const mailOptions = {
   // from: '"发件人名称" <你的QQ邮箱@qq.com>', // 发件人信息
-  from: '"基金参考" <209392599@qq.com>', // 发件人地址
+  from: '"基金" <209392599@qq.com>', // 发件人地址
   to: marilArr.join(','), // 收件人地址，多个用逗号分隔
   subject: mail_title, // 邮件主题
   text: '基金消息提醒', // 纯文本内容
