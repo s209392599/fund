@@ -1,55 +1,55 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `中信保诚、自由现金流加仓；南方恒生卖出2%；其它先不动`;// 右键主题
+const mail_title = `中信保诚、华泰柏瑞红利、南方红利低波加仓；其它可适当卖出一丢丢`; // 右键主题
 
 var marilArr = [
-  'xuebinghui@bmrb.com.cn',// 薛炳辉
+  'xuebinghui@bmrb.com.cn', // 薛炳辉
   '209392599@qq.com', // 自己
-  'cdk1025@foxmail.com',// 前端帮帮群-Aiden
-  'liucuimin1234@163.com',// 刘翠敏
-  '2774710531@qq.com',// 基金-王亚娟
-  '245813892@qq.com',// 基金-邱欣妍(清盐)
-  '876844823@qq.com',// 于豆豆
-  '1315678738@qq.com',// 前端帮帮群-Nickii
-  '1437170263@qq.com',// 基金-王旭豪
-  '690002524@qq.com',// 袁梦-涛哥媳妇
-  '309372591@qq.com',// 基金-万万
-  'hgzc_0703@qq.com',// 郑州帮帮群-猴哥在此(侯沛源)
-  '532323146@qq.com',// 林杏
-  '1985160325@qq.com',// 赵万隆
-  '2294816863@qq.com',// 杜亚谦
-  '564749573@qq.com',// 谢孟初
-  '724803869@qq.com',// 前端帮帮群-吴昊
-  '505643270@qq.com',// 前端帮帮群-汪尚
-  '512220559@qq.com',// 王梦琳
-  '491719804@qq.com',// 基金-吴美燕(赵万隆姐姐)
-  '944148863@qq.com',// 王文泉
-  '1023447847@qq.com',// 曾楠
-  '397275461@qq.com',// 曾楠
-  '397275461@qq.com',// 基金-鲍辰路
-  '858627452@qq.com',// 张恒星
-  '893261449@qq.com',// 基金-杨国宇
-  '1257995147@qq.com',// 基金-饶东禹
-  '381851897@qq.com',// 张洪亮
-  '2216200137@qq.com',// 刘成阁
-  '992131703@qq.com',// 王梦娜
-  '1162602300@qq.com',// 吴坤
-  '2247621549@qq.com',// 邓米
-  'napp0112@163.com',// 基金群-刘成刚
-  '1978097296@qq.com',// 基金-高晓波
+  'cdk1025@foxmail.com', // 前端帮帮群-Aiden
+  'liucuimin1234@163.com', // 刘翠敏
+  '2774710531@qq.com', // 基金-王亚娟
+  '245813892@qq.com', // 基金-邱欣妍(清盐)
+  '876844823@qq.com', // 于豆豆
+  '1315678738@qq.com', // 前端帮帮群-Nickii
+  '1437170263@qq.com', // 基金-王旭豪
+  '690002524@qq.com', // 袁梦-涛哥媳妇
+  '309372591@qq.com', // 基金-万万
+  'hgzc_0703@qq.com', // 郑州帮帮群-猴哥在此(侯沛源)
+  '532323146@qq.com', // 林杏
+  '1985160325@qq.com', // 赵万隆
+  '2294816863@qq.com', // 杜亚谦
+  '564749573@qq.com', // 谢孟初
+  '724803869@qq.com', // 前端帮帮群-吴昊
+  '505643270@qq.com', // 前端帮帮群-汪尚
+  '512220559@qq.com', // 王梦琳
+  '491719804@qq.com', // 基金-吴美燕(赵万隆姐姐)
+  '944148863@qq.com', // 王文泉
+  '1023447847@qq.com', // 曾楠
+  '397275461@qq.com', // 曾楠
+  '397275461@qq.com', // 基金-鲍辰路
+  '858627452@qq.com', // 张恒星
+  '893261449@qq.com', // 基金-杨国宇
+  '1257995147@qq.com', // 基金-饶东禹
+  '381851897@qq.com', // 张洪亮
+  '2216200137@qq.com', // 刘成阁
+  '992131703@qq.com', // 王梦娜
+  '1162602300@qq.com', // 吴坤
+  '2247621549@qq.com', // 邓米
+  'napp0112@163.com', // 基金群-刘成刚
+  '1978097296@qq.com', // 基金-高晓波
   // '990635441@qq.com',// 朱雅文
-  '1147349343@qq.com',// 基金-陈卓
-  '15592191450@163.com',// 王冠涵
-  '169226991@qq.com',// 基金-小陈(抖音转化)
-  'Lud2017@163.com',// 基金-陆东
+  '1147349343@qq.com', // 基金-陈卓
+  '15592191450@163.com', // 王冠涵
+  '169226991@qq.com', // 基金-小陈(抖音转化)
+  'Lud2017@163.com', // 基金-陆东
   '943836589@qq.com', // 雅苑-向阳而生(8-1-2904)
   '2505512921@qq.com', // 刘虎
-  '352237248@qq.com',// 郑州帮帮群-壹陆不是16
-  '3281770@qq.com ',// 基金-俞梨(豆豆同事)
-  '837166305@qq.com',// 基金-芥末
-  '875457031@qq.com',// 基金-孙锦琪 2025年07月21日15:53:59
-  'lliuch321@qq.com',// 刘铖浩 2025年07月23日09:20:11
-]
+  '352237248@qq.com', // 郑州帮帮群-壹陆不是16
+  '3281770@qq.com ', // 基金-俞梨(豆豆同事)
+  '837166305@qq.com', // 基金-芥末
+  '875457031@qq.com', // 基金-孙锦琪 2025年07月21日15:53:59
+  'lliuch321@qq.com', // 刘铖浩 2025年07月23日09:20:11
+];
 
 var html = `
 <!DOCTYPE html>
@@ -92,7 +92,7 @@ var html = `
     <img src="https://j4.dfcfw.com/charts/pic6/021030.png" alt="汇添富国证港股通创新药ETF发起式联接A">
     <img src="https://j4.dfcfw.com/charts/pic6/017057.png" alt="嘉实国证绿色电力ETF发起联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/023521.png" alt="博时上证科创板人工智能ETF发起式联接C">
-    <img src="https://j4.dfcfw.com/charts/pic6/019260.png" alt="博时上证科创板人工智能ETF发起式联接C">
+    <img src="https://j4.dfcfw.com/charts/pic6/019260.png" alt="富国恒生">
   </div>
 </body>
 
@@ -108,7 +108,7 @@ var html = `
 023918-华夏国证自由现金流C
 */
 
- /*
+/*
     https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&cb=jQuery351018138707342421845_1751948554116&fields=f58%2Cf734%2Cf107%2Cf57%2Cf43%2Cf59%2Cf169%2Cf170%2Cf152%2Cf46%2Cf60%2Cf44%2Cf45%2Cf47%2Cf48%2Cf19%2Cf17%2Cf531%2Cf15%2Cf13%2Cf11%2Cf20%2Cf18%2Cf16%2Cf14%2Cf12%2Cf39%2Cf37%2Cf35%2Cf33%2Cf31%2Cf40%2Cf38%2Cf36%2Cf34%2Cf32%2Cf211%2Cf212%2Cf213%2Cf214%2Cf215%2Cf210%2Cf209%2Cf208%2Cf207%2Cf206%2Cf161%2Cf49%2Cf171%2Cf50%2Cf86%2Cf168%2Cf108%2Cf167%2Cf71%2Cf292%2Cf51%2Cf52%2Cf191%2Cf192%2Cf452%2Cf177&secid=1.515450&ut=fa5fd1943c7b386f172d6893dbfba10b&wbp2u=%7C0%7C0%7C0%7Cweb&dect=1&_=1751948554117
 
     https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f58,f734,f107,f57,f43,f59,f169,f170,f152,f46,f60,f44,f45,f47,f48,f19,f17,f531,f15,f13,f11,f20,f18,f16,f14,f12,f39,f37,f35,f33,f31,f40,f38,f36,f34,f32,f211,f212,f213,f214,f215,f210,f209,f208,f207,f206,f161,f49,f171,f50,f86,f168,f108,f167,f71,f292,f51,f52,f191,f192,f452,f177&secid=1.515450
@@ -138,7 +138,6 @@ var html = `
     });
     */
 
-
 // 创建传输器
 const transporter = nodemailer.createTransport({
   host: 'smtp.qq.com', // QQ邮箱的SMTP服务器地址
@@ -146,8 +145,8 @@ const transporter = nodemailer.createTransport({
   secure: true, // 使用SSL
   auth: {
     user: '209392599@qq.com', // 你的QQ邮箱地址
-    pass: 'ftylpxdehwowbjbd' // 你生成的授权码
-  }
+    pass: 'ftylpxdehwowbjbd', // 你生成的授权码
+  },
 });
 
 // 邮件选项
@@ -170,8 +169,8 @@ const mailOptions = {
 
 // 发送邮件
 transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        return console.log('发送失败:', error);
-    }
-    console.log('邮件已发送: %s', info.messageId);
+  if (error) {
+    return console.log('发送失败:', error);
+  }
+  console.log('邮件已发送: %s', info.messageId);
 });
