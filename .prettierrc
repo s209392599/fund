@@ -15,5 +15,8 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "vueIndentScriptAndStyle": false
 }
