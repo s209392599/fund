@@ -42,8 +42,20 @@
 
 <body>
   <div id="imgbox"></div>
+  <div>
+    <div>中信保诚多策略混合(LOF)C</div>
+    <div id="id_018561_1"></div>
+  </div>
 
   <script>
+    function jsonpgz(data) {
+      document.getElementById('id_018561_1').innerHTML = `${data.dwjz} ${data.gsz} ${data.gszzl} ${data.gztime}`;
+    }
+    const script = document.createElement('script');
+    script.src = 'https://fundgz.1234567.com.cn/js/018561.js';
+    document.body.appendChild(script);
+
+
     const reqParam = new URLSearchParams(window.location.search);
     var queryParams = {};
     for (let [key, val] of reqParam.entries()) {
@@ -63,7 +75,7 @@
         { code: '020989', name: '南方恒生科技指数发起(QDII)C' },
         { code: '019260', name: '富国恒生红利ETF联接A' },
         { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },
-        // 
+        //
         { code: '008087', name: '华夏中证5G通信主题ETF联接C' },
         { code: '021030', name: '汇添富国证港股通创新药ETF发起式联接A' },
         { code: '017057', name: '嘉实国证绿色电力ETF发起联接C' },

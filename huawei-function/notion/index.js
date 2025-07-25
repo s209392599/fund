@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `中信保诚、华泰柏瑞红利、南方红利低波加仓；其它可适当卖出一丢丢`; // 右键主题
+const mail_title = `可能会进入两周的横盘，大家做好资金使用规划；中信保诚继续加仓，其它的今天先不动，等下周一周二净值修复后再操作`; // 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn', // 薛炳辉
