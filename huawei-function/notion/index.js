@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `可能会进入两周的横盘，大家做好资金使用规划；中信保诚继续加仓，其它的今天先不动，等下周一周二净值修复后再操作`; // 右键主题
+const mail_title = `华泰柏瑞、中信保诚加仓，其它先不动；需要定制基金信息的情私聊我`; // 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn', // 薛炳辉
@@ -42,7 +42,7 @@ var marilArr = [
   '15592191450@163.com', // 王冠涵
   '169226991@qq.com', // 基金-小陈(抖音转化)
   'Lud2017@163.com', // 基金-陆东
-  '943836589@qq.com', // 雅苑-向阳而生(8-1-2904)
+  '3985713874@qq.com', // 雅苑-向阳而生(8-1-2904)
   '2505512921@qq.com', // 刘虎
   '352237248@qq.com', // 郑州帮帮群-壹陆不是16
   '3281770@qq.com ', // 基金-俞梨(豆豆同事)
