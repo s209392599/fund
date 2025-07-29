@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `华泰柏瑞、中信保诚加仓，其它先不动；需要定制基金信息的情私聊我`; // 右键主题
+const mail_title = `红利累类、中信保诚加仓，电力023521清仓，其它先不动；需要定制基金信息的情私聊我`; // 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn', // 薛炳辉
@@ -49,6 +49,7 @@ var marilArr = [
   '837166305@qq.com', // 基金-芥末
   '875457031@qq.com', // 基金-孙锦琪 2025年07月21日15:53:59
   'lliuch321@qq.com', // 刘铖浩 2025年07月23日09:20:11
+  '459947847@qq.com', // 王一行 2025年07月29日13:34:24
 ];
 
 var html = `
@@ -90,7 +91,6 @@ var html = `
     <img src="https://j4.dfcfw.com/charts/pic6/023918.png" alt="华夏国证自由现金流ETF发起式联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/008087.png" alt="华夏中证5G通信主题ETF联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/021030.png" alt="汇添富国证港股通创新药ETF发起式联接A">
-    <img src="https://j4.dfcfw.com/charts/pic6/017057.png" alt="嘉实国证绿色电力ETF发起联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/023521.png" alt="博时上证科创板人工智能ETF发起式联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/019260.png" alt="富国恒生">
   </div>
@@ -98,15 +98,6 @@ var html = `
 
 </html>
 `;
-
-/*
-007467-华泰柏瑞中证红利低波C
-008164-南方红利低波50ETFC
-020989-南方恒生科技指数发起C
-018561-中信保诚多策略灵活C
-019269-富国恒生红利ETF联接A
-023918-华夏国证自由现金流C
-*/
 
 /*
     https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&cb=jQuery351018138707342421845_1751948554116&fields=f58%2Cf734%2Cf107%2Cf57%2Cf43%2Cf59%2Cf169%2Cf170%2Cf152%2Cf46%2Cf60%2Cf44%2Cf45%2Cf47%2Cf48%2Cf19%2Cf17%2Cf531%2Cf15%2Cf13%2Cf11%2Cf20%2Cf18%2Cf16%2Cf14%2Cf12%2Cf39%2Cf37%2Cf35%2Cf33%2Cf31%2Cf40%2Cf38%2Cf36%2Cf34%2Cf32%2Cf211%2Cf212%2Cf213%2Cf214%2Cf215%2Cf210%2Cf209%2Cf208%2Cf207%2Cf206%2Cf161%2Cf49%2Cf171%2Cf50%2Cf86%2Cf168%2Cf108%2Cf167%2Cf71%2Cf292%2Cf51%2Cf52%2Cf191%2Cf192%2Cf452%2Cf177&secid=1.515450&ut=fa5fd1943c7b386f172d6893dbfba10b&wbp2u=%7C0%7C0%7C0%7Cweb&dect=1&_=1751948554117
