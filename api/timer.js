@@ -6,6 +6,10 @@ const CustomFn = require('./CustomFn.js');
 
 // 获取 中信保诚多策略混合 的涨幅
 const get_zhi_018561 = () => {
+  console.log(
+    'get_zhi_018561',
+    CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss')
+  );
   fetch('https://fundgz.1234567.com.cn/js/018561.js?v=' + +new Date())
     .then((res) => res.text())
     .then((res) => {
@@ -14,7 +18,6 @@ const get_zhi_018561 = () => {
       let str = res.replaceAll('jsonpgz(', '').replaceAll(');', '') || '{}';
       let obj = JSON.parse(str);
 
-      let cur_time = CustomFn.CustomDateFtt(new Date(), 'yyyyMMdd');
       let fileName = '018561_' + cur_time + '.json';
       let fileDir = path.join(__dirname, 'data/preview/018561');
       let filePath = path.join(fileDir, fileName);
