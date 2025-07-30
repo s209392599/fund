@@ -41,6 +41,6 @@ function loadRoutes(dir) {
 // 调用递归函数加载路由
 loadRoutes(routesDirectory);
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server listening on port http://localhost:${PORT}`);
 });
