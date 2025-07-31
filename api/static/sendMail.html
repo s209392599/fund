@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>发送邮件</title>
+</head>
+
+<body>
+
+  <script>
+    function sendMailHandler(contentMsg) {
+      if (!contentMsg) {
+        alert('请添加邮件内容');
+        return false;
+      }
+      // 创建一个 AbortController 实例
+      const controller = new AbortController();
+      const signal = controller.signal;
+
+      // 设置超时
+      const timeout = 10000; // 10秒
+      let timer = setTimeout(() => {
+        if (signal.aborted) return; // 如果请求已经被取消，则不执行任何操作
+        controller.abort(); // 取消请求
+        alert('已超时'); // 显示警告
+      }, timeout);
+
+      // 发起 fetch 请求
+      fetch('http://localhost:9999/sendNotionMail', {
+        signal, method: 'post',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          content: contentMsg
+        })
+      })
+        .then(res => {
+          if (res.ok) {
+            return res.json();
+          } else {
+            throw new Error('Network response was not ok');
+          }
+        })
+        .then(data => {
+          console.log(data);
+        })
+        .catch(err => {
+          if (err.name === 'AbortError') {
+            console.log('Fetch request was aborted due to timeout');
+          } else {
+            console.error('Fetch request failed:', err);
+          }
+        }).finally(() => {
+          clearTimeout(timer);
+        })
+    }
+    // sendMailHandler('债券类目前只推016870、003026，其它不再推荐；今天有余钱的可全面加仓一些')
+
+  </script>
+</body>
+
+</html>

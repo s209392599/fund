@@ -25,27 +25,3 @@ router.get('/get_example', (req, res) => {
 // });
 
 module.exports = router;
-
-/*
-ID：随机生成的ID(8位)
-name: 登录的账号
-password: 登录的密码
-time_resg: 注册时间
-time_end: 最后一次登录时间
-mail: 邮箱地址
-tel: 电话
-
-基金相关信息表：
-ID：基金ID
-name: 基金名称
-preview_url: 基金预览地址
-type: 基金类型
-status: 基金状态
-description: 基金描述
-time: 基金创建时间
-
-基金表：
-ID：人员ID
-name: 基金名称
-type: 基金类型
-*/
