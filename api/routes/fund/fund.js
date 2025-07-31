@@ -2,13 +2,29 @@ const express = require('express');
 const router = express.Router();
 
 // 定义一个GET路由
-router.get('/project', (req, res) => {
-  res.send('boxue is 666');
+router.get('/testget', (req, res) => {
+  const content = req.query.content || '';
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: [content || '没有传递参数哦'],
+  });
 });
 
-router.get('/get_example', (req, res) => {
-  res.send('get_example返回值');
+router.post('/testpost', (req, res) => {
+  console.log('req.body',req.body);
+  const content = req.body.content || '';
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: [content || '没有传递参数哦'],
+  });
 });
+
+// router.get('/users/:id', (req, res) => {
+//   const userId = req.params.id;
+//   res.send(`Get user with ID ${userId}`);
+// });
 
 // router.get('/api/data', (req, res) => {
 //   // 尝试调用后端接口
@@ -23,5 +39,6 @@ router.get('/get_example', (req, res) => {
 //       res.status(503).json({ error: 'Service Unavailable', data: 'Default Data' });
 //     });
 // });
+
 
 module.exports = router;

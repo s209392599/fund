@@ -1,30 +1,28 @@
 <script setup>
-console.log('server_testget', server_testget);
-
-// import { server_testget } from '@/api/index';
-
-import axios from 'axios';
-axios.get('/api/testget', {
-  params: {
-    content: 'get请求参数'
-  }
-}).then(res => {
-  console.log('axios=>', res.data);
-}).catch(err => {
-  console.log('err', err);
-});
 
 const getTestGet = async () => {
   server_testget({
     content: 'get请求参数'
   }).then(res => {
-    console.log(res)
+    console.log('get示例返回值',res)
   }).catch(err => {
     console.log('err', err)
   })
 }
 
 getTestGet();
+
+const getTestPost = async () => {
+  server_testpost({
+    content: 'post请求参数'
+  }).then(res => {
+    console.log('post示例返回值',res)
+  }).catch(err => {
+    console.log('err', err)
+  })
+}
+
+getTestPost();
 </script>
 
 <template>
