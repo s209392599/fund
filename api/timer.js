@@ -8,6 +8,7 @@ const CustomFn = require('./CustomFn.js');
 const get_zhi_018561 = () => {
   let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
   console.log('get_zhi_018561', time_stamp, '开始获取');
+
   fetch('https://fundgz.1234567.com.cn/js/018561.js?v=' + +new Date())
     .then((res) => res.text())
     .then((res) => {
@@ -42,6 +43,7 @@ const get_zhi_018561 = () => {
       // 将更新后的内容写回文件
       fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
       console.log('get_zhi_018561', time_stamp, '获取成功');
+      console.log('获取到的数据是：', obj);
     })
     .catch((err) => {
       console.log('err', err);
