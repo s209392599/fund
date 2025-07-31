@@ -1,10 +1,19 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <HelloWorld />
+  <div>
+    <router-view />
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import * as echarts from 'echarts';
+import { provide } from 'vue';
+provide('echarts', echarts);
+</script>
+
+<style>
+.el-table__body tr.hover-row.el-table__row--striped>td,
+.el-table__body tr.hover-row>td {
+  background-color: rgba(6, 6, 6, 0.5);
+  color: #fff;
+}
+</style>

@@ -25,3 +25,11 @@ function generatePassword() {
   return chars.join('');
 }
 </script>
+
+
+
+<template>
+  <div>register</div>
+</template>
+
+<style scoped lang="less"></style>

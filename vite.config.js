@@ -17,11 +17,11 @@ export default defineConfig({
     cors: true,
     https: false,
     proxy: {
-      // '/api': {
-      //   target: setting.VUE_APP_BASE_API,
-      //   changeOrigin: true,
-      //   rewrite: (path) => path.replace(/^\/api/, ''),
-      // },
+      '/api': {
+        target: 'http://localhost:9999',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
     },
   },
   css: {
