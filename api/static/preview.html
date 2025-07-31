@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>涨幅速览</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #imgbox {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    img {
+      display: block;
+      border: 1px solid #ddd;
+      margin: 2px;
+      height: 160px;
+      width: calc(50% - 4px);
+    }
+
+    @media (min-width: 1440px) {
+      img {
+        width: calc(33.33% - 4px);
+      }
+    }
+
+    @media (min-width: 1920px) {
+      img {
+        width: calc(25% - 4px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="imgbox"></div>
+  <div>
+    <div>中信保诚多策略混合C</div>
+    <div id="id_018561_1"></div>
+    <div>建信灵活配置混合C</div>
+    <div id="id_020726_1"></div>
+    <div class="">诺安多策略混合C</div>
+    <div id="id_023350_1"></div>
+  </div>
+  <div class=""></div>
+
+  <script>
+    const handPreview = [
+      {
+        code: '018561',
+        name: '中信保诚多策略C',
+      },
+      {
+        code: '020726',
+        name: '建信灵活配置混合C'
+      },
+      { code: '023350', name: '诺安多策略混合C' },
+    ];
+    handPreview.forEach(item => {
+      const script = document.createElement('script');
+      script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js`;
+      document.body.appendChild(script);
+    })
+    function jsonpgz(data) {
+      /*
+      {
+        "fundcode": "018561",
+        "name": "中信保诚多策略混合(LOF)C",
+        "jzrq": "2025-07-30",
+        "dwjz": "2.0648",
+        "gsz": "2.0477",
+        "gszzl": "-0.83",
+        "gztime": "2025-07-31 14:46"
+      }
+      */
+      document.getElementById('id_' + data.fundcode + '_1').innerHTML = `${data.dwjz} ${data.gsz} ${data.gszzl} ${data.gztime}`;
+    }
+
+
+    // 建信灵活配置混合C
+    //  { code: '', name: '' },
+
+
+    const reqParam = new URLSearchParams(window.location.search);
+    var queryParams = {};
+    for (let [key, val] of reqParam.entries()) {
+      queryParams[key] = val;
+    }
+
+    const codes = queryParams.code ? queryParams.code.split(',') : [];
+    const hasZhi = queryParams.zhi === 'true' || queryParams.zhi === '1';
+    const zhis = queryParams.zhicode ? queryParams.zhicode.split(',') : [];
+
+    // 2. 生成基金图片HTML
+    const generateFundImages = () => {
+      const defaultFunds = [
+        { code: '007467', name: '华泰柏瑞中证红利低波ETF联接C' },
+        { code: '008164', name: '南方红利低波50ETF联接C', url: 'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450' },
+        // { code: '018561', name: '中信保诚多策略灵活配置C' },
+        { code: '020989', name: '南方恒生科技指数发起(QDII)C' },
+        { code: '019260', name: '富国恒生红利ETF联接A' },
+        { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },
+        //
+        { code: '016858', name: '国金量化多因子股票C' },
+        { code: '017874', name: '国金量化多策略C' },
+        { code: '018729', name: '华夏智胜新锐股票C' },
+        { code: '024158', name: '鹏华沪深300指数量化增强I' },
+        //
+        { code: '018178', name: '华夏科创50指数增强C' },
+        { code: '008087', name: '华夏中证5G通信主题ETF联接C' },
+        { code: '021030', name: '汇添富国证港股通创新药ETF发起式联接A' },
+        { code: '017057', name: '嘉实国证绿色电力ETF发起联接C' },
+        { code: '023521', name: '博时上证科创板人工智能ETF发起式联接C' },
+      ];
+
+      const fundsToShow =
+        codes.length > 0
+          ? codes.map((code) => ({ code, name: '' }))
+          : defaultFunds;
+
+      return fundsToShow
+        .map(
+          (item) => {
+            let altstr = item.name || item.code;
+            if (!item.url) {
+              return `<img src="https://j4.dfcfw.com/charts/pic6/${item.code}.png" alt="${altstr}">`
+            } else {
+              return `<img src="${item.url}" alt="${altstr}">`
+            }
+          }
+        )
+        .join('');
+    };
+
+    // 3. 生成指数HTML（如果有base参数）
+    const generateIndexImages = () => {
+      if (!hasZhi) return '';
+
+      const indices = [
+        {
+          code: 'zs000001',
+          name: '上证指数',
+          allURL: 'https://quote.eastmoney.com/zs000001.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.000001',
+        },
+        {
+          code: 'zs399006',
+          name: '创业板',
+          allURL: 'https://quote.eastmoney.com/zs399006.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=0.399006',
+        },
+        {
+          code: 'zs000300',
+          name: '沪深300',
+          allURL: 'https://quote.eastmoney.com/zs000300.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.000300',
+        },
+        {
+          code: 'zs000016',
+          name: '上证50',
+          allURL: 'https://quote.eastmoney.com/zs000016.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.000016',
+        },
+        {
+          code: 'zs000688',
+          name: '科创50',
+          allURL: 'https://quote.eastmoney.com/zs000688.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.000688',
+        },
+        {
+          code: 'zs399001',
+          name: '深证成指',
+          allURL: 'https://quote.eastmoney.com/zs399001.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=0.399001',
+        },
+        {
+          code: 'zs899050',
+          name: '北证50',
+          allURL: 'https://quote.eastmoney.com/zs899050.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=0.899050',
+        },
+        {
+          code: 'spx500',
+          name: '标普500',
+          allURL: 'https://quote.eastmoney.com/gb/zsSPX.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=100.SPX',
+        },
+        {
+          code: 'ndaq',
+          name: '纳斯达克',
+          allURL: 'https://quote.eastmoney.com/gb/zsNDX.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=100.NDX',
+        },
+        {
+          code: 'dji',
+          name: '道琼斯',
+          allURL: 'https://quote.eastmoney.com/gb/zsDJIA.html',
+          imgURL:
+            'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=100.DJIA',
+        },
+      ];
+
+      let arr_zhi = [];
+      // 从indices中读取zhis
+      if (zhis.length > 0) {
+        zhis.forEach((zhi) => {
+          let index = indices.find((index) => index.code === zhi);
+          if (index) {
+            arr_zhi.push(index);
+          }
+        });
+      }
+
+      let endArr = indices;
+      if (zhis.length) {
+        endArr = arr_zhi;
+      }
+
+      return endArr
+        .map((index) => `<img src="${index.imgURL}" alt="${index.name}">`)
+        .join('');
+    };
+
+    // 4. 观察区的基金
+    const guanchaFundImages = () => {
+      const defaultFunds = [
+        { code: '007467', name: '华泰柏瑞中证红利低波ETF联接C' },
+        { code: '008164', name: '南方红利低波50ETF联接C', url: 'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450' },
+        // { code: '018561', name: '中信保诚多策略灵活配置C' },
+        { code: '020989', name: '南方恒生科技指数发起(QDII)C' },
+        { code: '019260', name: '富国恒生红利ETF联接A' },
+        { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },
+        //
+        { code: '018178', name: '华夏科创50指数增强C' },
+        { code: '008087', name: '华夏中证5G通信主题ETF联接C' },
+        { code: '021030', name: '汇添富国证港股通创新药ETF发起式联接A' },
+        { code: '017057', name: '嘉实国证绿色电力ETF发起联接C' },
+        { code: '023521', name: '博时上证科创板人工智能ETF发起式联接C' },
+      ];
+
+      /*
+      核能的公司再找出来一个
+      永赢制造升级智选混合发起A(024202)
+      永赢制造升级智选混合发起C(024203)
+      华富天鑫灵活配置混合A(003152)
+      华富天鑫灵活配置混合C(003153)
+
+      诺安多策略混合C(023350)
+      诺安多策略混合A(320016)
+      建信灵活配置混合A(000270)
+      建信灵活配置混合C(020726)
+      国金量化多因子股票A(006195)
+      国金量化多因子股票C(016858)
+      国金量化多策略A(005443)
+      国金量化多策略C(017874)
+      华夏智胜新锐股票A(018728)
+      华夏智胜新锐股票C(018729)
+      鹏华沪深300指数量化增强I(024158)
+
+      深海科技：
+      永赢启源混合发起C(016561)
+
+      */
+
+      /*
+      中央汇金系列：
+      华泰柏瑞沪深300ETF(510300) 场内交易
+      华泰柏瑞沪深300ETF联接A(460300)
+      华泰柏瑞沪深300ETF联接C(006131)
+      华泰柏瑞沪深300ETF联接I(022699)
+      华泰柏瑞沪深300ETF联接Y(022948)
+
+      华夏上证50ETF(510050) 场内交易
+      华夏上证50ETF联接A(001051)
+      华夏上证50ETF联接C(005733)
+      华夏上证50ETF联接Y(022959)
+
+      ---
+      医药相关：
+      国泰国证疫苗与生物科技ETF发起联接C(017186)
+      */
+
+      /*
+      其它关注：
+      富国恒生红利ETF联接C(019261)
+      中欧红利优享混合C(004815)
+      易方达恒生红利低波ETF联接C(021458)
+      万家中证港股通央企红利ETF联接C(023573)
+      摩根标普港股通低波红利指数A(005051)
+      景顺长城中证港股通科技ETF发起联接C(016496)
+      广发中证港股通非银ETF发起式联接C(020501)
+      富国中证AAA科技创新公司债ETF(159200) -- 场内交易
+      嘉实全球产业升级股票发起式(QDII)A(017730)
+      嘉实全球产业升级股票发起式(QDII)C(017731)
+      嘉实美国成长股票人民币(000043)
+      富国全球消费精选混合(QDII)人民币C(012062)
+      永赢科技智选混合发起C(022365)
+      易方达标普信息科技指数(QDII-LOF)A(人民币)(161128)
+      华宝纳斯达克精选股票发起式(QDII)C(017437)
+      华夏中证机器人ETF发起式联接C(018345)
+      */
+      const fundsToShow =
+        codes.length > 0
+          ? codes.map((code) => ({ code, name: '' }))
+          : defaultFunds;
+
+      return fundsToShow
+        .map(
+          (item) => {
+            let altstr = item.name || item.code;
+            if (!item.url) {
+              return `<img src="https://j4.dfcfw.com/charts/pic6/${item.code}.png" alt="${altstr}">`
+            } else {
+              return `<img src="${item.url}" alt="${altstr}">`
+            }
+          }
+        )
+        .join('');
+    };
+
+    let html = '';
+    html += generateFundImages();
+    html += generateIndexImages();
+    console.log('queryParams', queryParams)
+    document.getElementById('imgbox').innerHTML = html;
+  </script>
+</body>
+
+</html>
