@@ -3,7 +3,7 @@ const path = require('path');
 
 // 定义要添加的字段  {a:1,b:’‘}:添加a字段，值为1,b字段
 let obj_add = {
-  fund: [],
+  password: '',
 };
 // 定义要删减的字段  ['c']:删除c字段
 let obj_ins = [];
@@ -32,6 +32,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     // 添加字段
     for (let key in obj_add) {
       if (obj_add[key] !== null && obj_add[key] !== undefined) {
+        // item[key] = generatePassword();
         item[key] = obj_add[key];
       }
     }
