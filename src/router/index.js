@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 import Login from '@/views/login/login.vue';
 import Register from '@/views/login/register.vue';
@@ -41,7 +41,7 @@ router.beforeEach((to, from, next) => {
 
 // const base = process.env.BASE_URL || '/';
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

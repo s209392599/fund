@@ -11,6 +11,8 @@ app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'static')));
 
+app.use(express.json());
+
 app.use(function (req, res, next) {
   res.setHeader('Content-Type', 'text/html; charset=utf-8'); // 设置所有HTTP响应的字符集为UTF-8
   next();

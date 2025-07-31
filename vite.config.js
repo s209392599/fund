@@ -6,6 +6,7 @@ import { resolve } from 'path';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -64,6 +65,14 @@ export default defineConfig({
       //     importStyle: mode === 'development' ? false : 'sass',
       //   }),
       // ],
+    }),
+    // 打包时复制静态文件
+    viteStaticCopy({
+      targets: [
+        // { src: 'src/assets/html/a.html', dest: 'example' },// 复制到dist/example/a.html
+        { src: 'src/assets/html/a.html', dest: '' },
+        { src: 'src/assets/html/b.html', dest: '' },
+      ]
     }),
   ],
 });
