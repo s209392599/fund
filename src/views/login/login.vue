@@ -25,11 +25,13 @@
 // getTestPost();
 
 const testFn = () => {
-  server_fund_today_rate_by_timer({ fundcode: '023350' }).then(res => {
+  server_fund_today_rate_by_timer({ fundcode: '018561' }).then(res => {
     console.log('testFn返回值', res)
-  }).catch(err => {
-    console.log('err', err)
   })
+  // .catch(err => {
+  //   console.log('err', err)
+  //   console.log('err', err.message)
+  // })
 }
 
 testFn();
