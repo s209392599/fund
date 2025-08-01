@@ -39,3 +39,23 @@ var CustomDateFtt = (date, fmt) => {
   return fmt;
 };
 exports.CustomDateFtt = CustomDateFtt;
+
+// 随机字符串
+function generateRandomString(length = 6) {
+  const characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    result += characters[randomIndex];
+  }
+  return result;
+}
+// 生成UUID
+var CustomUUID = () => {
+  const prefix = 'fund';
+  const customDate = CustomDateFtt(new Date(), 'yyyy_MM_dd_hh_mm_ss_S');
+  const randomString = generateRandomString(6);
+  return `${prefix}_${customDate}_${randomString}`;
+};
+exports.CustomUUID = CustomUUID;

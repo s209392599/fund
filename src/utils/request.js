@@ -40,7 +40,7 @@ service.interceptors.response.use(
       if (res.code === 401) {
         router.push('/login');
       }
-      return Promise.reject(new Error(res.message || 'Error'));
+      return Promise.reject(new Error(res.message || res.msg || 'Error'));
     } else {
       return res;
     }
