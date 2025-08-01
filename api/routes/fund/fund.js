@@ -5,6 +5,15 @@ const fs = require('fs');
 const path = require('path');
 const CustomFn = require('../../CustomFn.js');
 
+// 获取用户的json数据
+const getUserJson = () => {
+  const filePath = path.join(__dirname, '../../data/base/user.json');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const jsonData = JSON.parse(fileContent);
+  const dataArray = jsonData.data;
+  return dataArray;
+};
+
 // 定义一个GET示例请求
 router.get('/testget', (req, res) => {
   const content = req.query.content || '';
@@ -28,7 +37,41 @@ router.post('/testpost', (req, res) => {
 
 // 登录
 router.post('/fund_login', (req, res) => {
-  console.log('req.body', req.body);
+  const { email = '', password = '' } = req.body;
+  if (
+    !email ||
+    !password ||
+    password.length < 4 ||
+    !CustomFn.CustomValidateEmail(email)
+  ) {
+    return res.send({
+      code: 400,
+      msg: '邮箱或密码格式不对',
+      data: [],
+    });
+  }
+  const userData = getUserJson() || [];
+  const user = userData.find((item) => item.mail === email);
+  if (!user) {
+    return res.send({
+      code: 400,
+      msg: '未获取到用户数据',
+      data: [],
+    });
+  }
+  if (user.password !== password) {
+    return res.send({
+      code: 400,
+      msg: '密码不对',
+      data: [],
+    });
+  }
+  return res.send({
+    code: 200,
+    msg: '登录成功',
+    data: userData || [],
+  });
+  // fund_login
 });
 
 // 注册

@@ -59,3 +59,10 @@ var CustomUUID = () => {
   return `${prefix}_${customDate}_${randomString}`;
 };
 exports.CustomUUID = CustomUUID;
+
+// 验证邮箱
+const CustomValidateEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+exports.CustomValidateEmail = CustomValidateEmail;
