@@ -33,24 +33,23 @@ service.interceptors.response.use(
     const res = response.data;
     if (res.code !== 200) {
       ElMessage({
-        message: res.message || 'Error',
+        message: res.msg || 'Error',
         type: 'error',
         duration: 5 * 1000,
       });
       if (res.code === 401) {
         router.push('/login');
       }
-      return Promise.reject(new Error(res.message || res.msg || 'Error'));
+      return Promise.reject(new Error(res.msg || 'Error'));
     } else {
       return res;
     }
   },
   (error) => {
-    console.error('响应拦截器错误:', error);
     ElMessage({
-      message: error.message,
+      message: error.msg || '响应错误',
       type: 'error',
-      duration: 5 * 1000,
+      duration: 2 * 1000,
     });
     return Promise.reject(error);
   }
