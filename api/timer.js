@@ -50,6 +50,90 @@ const get_zhi_018561 = () => {
     });
 };
 
+// 获取 建信灵活配置混合C 的涨幅
+const get_zhi_020726 = () => {
+  let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
+  fetch('https://fundgz.1234567.com.cn/js/020726.js?v=' + +new Date())
+    .then((res) => res.text())
+    .then((res) => {
+      let str = res.replaceAll('jsonpgz(', '').replaceAll(');', '') || '{}';
+      let obj = JSON.parse(str);
+      obj.time_stamp = time_stamp;
+
+      let cur_time = CustomFn.CustomDateFtt(new Date(), 'yyyyMMdd');
+      let fileName = '020726_' + cur_time + '.json';
+      let fileDir = path.join(__dirname, 'data/preview/020726');
+      let filePath = path.join(fileDir, fileName);
+
+      // 检查文件是否存在
+      if (!fs.existsSync(filePath)) {
+        // 文件不存在，创建新文件并写入初始内容
+        fs.writeFileSync(
+          filePath,
+          JSON.stringify({ length: 0, data: [] }, null, 2)
+        );
+      }
+
+      // 读取文件内容
+      let fileContent = fs.readFileSync(filePath, 'utf8');
+      let data = JSON.parse(fileContent);
+
+      // 更新文件内容
+      data.length += 1;
+      data.data.push(obj);
+
+      // 将更新后的内容写回文件
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      console.log('get_zhi_020726', time_stamp, '获取成功');
+      console.log('获取到的数据是：', obj);
+    })
+    .catch((err) => {
+      console.log('err', err);
+    });
+};
+
+// 获取 诺安多策略混合C 的涨幅
+const get_zhi_023350 = () => {
+  let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
+  fetch('https://fundgz.1234567.com.cn/js/023350.js?v=' + +new Date())
+    .then((res) => res.text())
+    .then((res) => {
+      let str = res.replaceAll('jsonpgz(', '').replaceAll(');', '') || '{}';
+      let obj = JSON.parse(str);
+      obj.time_stamp = time_stamp;
+
+      let cur_time = CustomFn.CustomDateFtt(new Date(), 'yyyyMMdd');
+      let fileName = '023350_' + cur_time + '.json';
+      let fileDir = path.join(__dirname, 'data/preview/023350');
+      let filePath = path.join(fileDir, fileName);
+
+      // 检查文件是否存在
+      if (!fs.existsSync(filePath)) {
+        // 文件不存在，创建新文件并写入初始内容
+        fs.writeFileSync(
+          filePath,
+          JSON.stringify({ length: 0, data: [] }, null, 2)
+        );
+      }
+
+      // 读取文件内容
+      let fileContent = fs.readFileSync(filePath, 'utf8');
+      let data = JSON.parse(fileContent);
+
+      // 更新文件内容
+      data.length += 1;
+      data.data.push(obj);
+
+      // 将更新后的内容写回文件
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      console.log('get_zhi_023350', time_stamp, '获取成功');
+      console.log('获取到的数据是：', obj);
+    })
+    .catch((err) => {
+      console.log('err', err);
+    });
+};
+
 let scheduledTasks = null; // 定时任务
 scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
   const now = new Date();
@@ -77,5 +161,7 @@ scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
     //   CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss')
     // );
     get_zhi_018561(); // 获取 中信保诚多策略混合 的涨幅
+    get_zhi_020726(); // 获取 建信灵活配置混合C 的涨幅
+    get_zhi_023350(); // 获取 诺安多策略混合C 的涨幅
   }
 });
