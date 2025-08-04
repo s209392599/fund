@@ -26,7 +26,8 @@ function fenxi(arr = []) {
       if (!obj[xing]) {
         obj[xing] = [];
       }
-      obj[xing].push(item);
+      let newArr = [item[0], item[2], item[3]];
+      obj[xing].push(newArr);
       count++;
     }
   });
