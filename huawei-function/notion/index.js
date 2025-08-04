@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `红利累类、中信保诚加仓，电力023521清仓，其它先不动；需要定制基金信息的情私聊我`; // 右键主题
+const mail_title = `今天基金先不动`; // 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn', // 薛炳辉
