@@ -16,7 +16,143 @@
       "telphone": "",
       "sub_mail": "",
       "password": "qaz123..",
-      "fund": []
+      "fund": [
+        {
+          "type": "hongli",
+          "desc": "红利",
+          "children": [
+            {
+              "code": "007467",
+              "name": "华泰柏瑞中证红利低波ETF联接C",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "008164",
+              "name": "南方红利低波50ETF联接C",
+              "short_name": "",
+              "zhang_url": "https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "019260",
+              "name": "富国恒生红利ETF联接A",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "023918",
+              "name": "华夏国证自由现金流ETF发起式联接C",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "020989",
+              "name": "南方恒生科技指数发起(QDII)C",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "type": "lianghua",
+          "desc": "量化",
+          "children": [
+            {
+              "code": "018561",
+              "name": "中信保诚多策略混合(LOF)C",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "016858",
+              "name": "国金量化多因子股票C",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "017874",
+              "name": "国金量化多策略C",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "018729",
+              "name": "华夏智胜新锐股票C",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            },
+            {
+              "code": "024158",
+              "name": "鹏华沪深300指数量化增强I",
+              "short_name": "",
+              "zhang_url": "",
+              "point_line_top": null,
+              "point_line_down": null,
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "type": "kuanji",
+          "desc": "宽基",
+          "children": [
+            {
+              "code": "018561",
+              "name": "中信保诚多策略混合(LOF)C",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "type": "other",
+          "desc": "其它",
+          "children": [
+            {
+              "code": "018561",
+              "name": "中信保诚多策略混合(LOF)C",
+              "desc": ""
+            }
+          ]
+        },
+        {
+          "type": "view",
+          "desc": "观察区",
+          "children": [
+            {
+              "code": "018561",
+              "name": "中信保诚多策略混合(LOF)C",
+              "desc": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "mail": "cdk1025@foxmail.com",

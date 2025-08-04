@@ -14,12 +14,9 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue';
-import { ElForm, ElFormItem, ElInput, ElButton } from 'element-plus';
-
 const form = reactive({
-  email: '',
-  password: ''
+  email: localStorage.getItem('email') || '',
+  password: localStorage.getItem('password') || '',
 });
 
 const rules = {
@@ -40,6 +37,17 @@ const onSubmit = () => {
     if (valid) {
       server_fund_login(form).then(res => {
         console.log('登录', res);
+        if (res.code === 200) {
+          // 登录成功
+          localStorage.setItem('email', form.email);
+          localStorage.setItem('password', form.password);
+          // 存储基金信息
+          localStorage.setItem('fund', JSON.stringify(res.data.fund || []));
+          // 跳转到
+          console.log('res', res.data)
+        } else {
+          // 登录失败
+        }
       })
     } else {
       console.log('error submit!!');

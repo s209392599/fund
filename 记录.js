@@ -15,3 +15,18 @@ https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundTradeRulesPageInfo?reqData={"fund
 
 
 */
+
+/*
+先筛选出来AC类似的(合并到一起)
+
+过滤出去不到1亿销售额的
+
+
+
+
+注意从近一年发行的基金中拿到比较优选的主题
+
+
+从下面读取 投资策略中 有量化
+http://fundf10.eastmoney.com/jbgk_018561.html
+*/

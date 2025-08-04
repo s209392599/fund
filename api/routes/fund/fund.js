@@ -69,7 +69,7 @@ router.post('/fund_login', (req, res) => {
   return res.send({
     code: 200,
     msg: '登录成功',
-    data: userData || [],
+    data: user,
   });
   // fund_login
 });

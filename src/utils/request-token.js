@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { ElMessage } from 'element-plus';
 import router from '@/router';
-import { CustomDateFtt } from '@/utils/CustomFn.js';
 
 // 创建 Axios 实例
 const service = axios.create({
@@ -43,10 +42,6 @@ service.interceptors.response.use(
       }
       return Promise.reject(new Error(res.msg || 'Error'));
     } else {
-      localStorage.setItem(
-        'last_operation_time', // 更新本地操作时间
-        CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss')
-      );
       return res;
     }
   },

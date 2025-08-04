@@ -37,20 +37,21 @@
         width: calc(25% - 4px);
       }
     }
+
+    .color-red {
+      color: red;
+    }
+
+    .color-green {
+      color: #090;
+    }
   </style>
 </head>
 
 <body>
   <div id="imgbox"></div>
-  <div>
-    <div>中信保诚多策略混合C(018561)</div>
-    <div id="id_018561_1"></div>
-    <div>建信灵活配置混合C(020726)</div>
-    <div id="id_020726_1"></div>
-    <div class="">诺安多策略混合C(023350)</div>
-    <div id="id_023350_1"></div>
-  </div>
-  <div class=""></div>
+  <!-- 量化 -->
+  <div id="lianghua_box"></div>
 
   <script>
     const handPreview = [
@@ -62,9 +63,18 @@
         code: '020726',
         name: '建信灵活配置混合C'
       },
+      { code: '018729', name: '华夏智胜新锐股票C' },
       { code: '023350', name: '诺安多策略混合C' },
+      { code: '017874', name: '国金量化多策略C' },
+      { code: '016858', name: '国金量化多因子股票C' },//
     ];
+
     handPreview.forEach(item => {
+      let htmlString = `<div>${item.name}(${item.code})</div><div id="id_${item.code}_1"></div>`;
+      let tempDiv = document.createElement('div');
+      tempDiv.innerHTML = htmlString;
+      document.getElementById('lianghua_box').appendChild(tempDiv);
+
       const script = document.createElement('script');
       script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js`;
       document.body.appendChild(script);
@@ -81,7 +91,10 @@
         "gztime": "2025-07-31 14:46"
       }
       */
-      document.getElementById('id_' + data.fundcode + '_1').innerHTML = `${data.dwjz} ${data.gsz} ${data.gszzl} ${data.gztime}`;
+      let zhang_class = '';
+      if (Number(data.gszzl) > 0) zhang_class = 'color-red';
+      if (Number(data.gszzl) < 0) zhang_class = 'color-green';
+      document.getElementById('id_' + data.fundcode + '_1').innerHTML = `${data.dwjz} ${data.gsz} <span class="${zhang_class}">${data.gszzl}</span> ${data.gztime}`;
     }
 
 
@@ -108,16 +121,13 @@
         { code: '020989', name: '南方恒生科技指数发起(QDII)C' },
         { code: '019260', name: '富国恒生红利ETF联接A' },
         { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },
-        //
-        { code: '016858', name: '国金量化多因子股票C' },
-        { code: '017874', name: '国金量化多策略C' },
-        { code: '018729', name: '华夏智胜新锐股票C' },
+        //量化
         { code: '024158', name: '鹏华沪深300指数量化增强I' },
         //
         { code: '018178', name: '华夏科创50指数增强C' },
-        { code: '008087', name: '华夏中证5G通信主题ETF联接C' },
+        // { code: '008087', name: '华夏中证5G通信主题ETF联接C' },
         { code: '021030', name: '汇添富国证港股通创新药ETF发起式联接A' },
-        { code: '017057', name: '嘉实国证绿色电力ETF发起联接C' },
+        // { code: '017057', name: '嘉实国证绿色电力ETF发起联接C' },
         { code: '023521', name: '博时上证科创板人工智能ETF发起式联接C' },
       ];
 
