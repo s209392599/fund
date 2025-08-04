@@ -32,6 +32,8 @@ const noText = [
   '养老',
   'REIT',
   '黄金',
+  '货币',
+  '人民币',
 ];
 
 module.exports = noText;
