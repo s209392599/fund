@@ -2,9 +2,9 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const noText = require('./noText');// 排除的关键词
-const noFundCode = require('./noFundCode');// 排除的基金代码
-emptyDirectory('./data_all');// 先清空文件夹
+const noText = require('./noText'); // 排除的关键词
+const noFundCode = require('./noFundCode'); // 排除的基金代码
+emptyDirectory('./data_all'); // 先清空文件夹
 
 // 存放分类数据
 let obj = {
@@ -16,13 +16,13 @@ let obj = {
 ["970212","ZXJTYX12GYCYQZQC","中信建投悠享12个月持有期债券C","债券型-混合一级","ZHONGXINJIANTOUYOUXIANG12GEYUECHIYOUQIZHAIQUANC"]
 */
 function fenxi(arr = []) {
-  let count = 0;// 统计数量
+  let count = 0; // 统计数量
   arr.forEach((item, index) => {
-    const flag_2 = !noText.some(text => item[2].includes(text));
-    const flag_3 = !noFundCode.some(text => item[0].includes(text));// 排除的基金号
+    const flag_2 = !noText.some((text) => item[2].includes(text));
+    const flag_3 = !noFundCode.some((text) => item[0].includes(text)); // 排除的基金号
 
     if (flag_2 && flag_3) {
-      const xing = item[3];// 什么类型
+      const xing = item[3]; // 什么类型
       if (!obj[xing]) {
         obj[xing] = [];
       }
@@ -38,12 +38,16 @@ function fenxi(arr = []) {
   }
 
   // 遍历obj的每个key，创建对应的json文件
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key) => {
     const fileName = `./data_all/${key}.json`;
-    const content = JSON.stringify({
-      count: obj[key].length,
-      data: obj[key]
-    }, null, 2);
+    const content = JSON.stringify(
+      {
+        count: obj[key].length,
+        data: obj[key],
+      },
+      null,
+      2
+    );
     fs.writeFileSync(fileName, content, 'utf8');
     console.log(`已创建文件: ${fileName}`);
   });
@@ -51,11 +55,12 @@ function fenxi(arr = []) {
 }
 
 async function queryResilienceInfo() {
+  console.log('开始请求~~');
   try {
     let u = `https://fund.eastmoney.com/js/fundcode_search.js`;
 
     let response = await fetch(u);
-    const res = await response.text() || {};
+    const res = (await response.text()) || {};
     // console.log(res.substring(0, 50));// 截取前50个字符
     // 提取数组部分的字符串
     const arrayStr = res.substring(res.indexOf('['), res.lastIndexOf(']') + 1);
