@@ -3,10 +3,10 @@ const path = require('path');
 
 // 定义要添加的字段  {a:1,b:’‘}:添加a字段，值为1,b字段
 let obj_add = {
-  password: '',
+  // aaa: '',
 };
 // 定义要删减的字段  ['c']:删除c字段
-let obj_ins = [];
+let obj_ins = ['aaa'];
 
 // 读取user.json文件的路径
 const filePath = path.join(__dirname, 'user.json');

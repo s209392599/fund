@@ -30,8 +30,4 @@ https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundTradeRulesPageInfo?reqData={"fund
 从下面读取 投资策略中 有量化
 http://fundf10.eastmoney.com/jbgk_018561.html
 
-24页
-https://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=fb&ft=ct&rs=&gs=0&sc=1nzf&st=desc&pi=24&pn=50&v=0.5358070692425249
-https://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=fb&ft=ct&rs=&gs=0&sc=1nzf&st=desc&pi=1&pn=50&v=0.15954062955559922
-
 */

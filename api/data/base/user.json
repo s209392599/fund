@@ -1,4 +1,136 @@
 {
+  "base_字段说明": {
+    "code": "007467",
+    "name": "华泰柏瑞中证红利低波ETF联接C",
+    "short_name": "简称",
+    "zhang_url": "涨幅预览的url,空为默认的基金官网图",
+    "point_line_top": "设置的上限提醒值",
+    "point_line_down": "设置的下限提醒值",
+    "desc": "自己的额外备注",
+    "fixed": "定投金额；0为不定投",
+    "type": "基金的类型"
+  },
+  "base": [
+    {
+      "code": "007467",
+      "name": "华泰柏瑞中证红利低波ETF联接C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "008164",
+      "name": "南方红利低波50ETF联接C",
+      "short_name": "",
+      "zhang_url": "https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "019260",
+      "name": "富国恒生红利ETF联接A",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "023918",
+      "name": "华夏国证自由现金流ETF发起式联接C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "020989",
+      "name": "南方恒生科技指数发起(QDII)C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "018561",
+      "name": "中信保诚多策略混合(LOF)C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 100,
+      "type": "量化"
+    },
+    {
+      "code": "020726",
+      "name": "建信灵活配置混合C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 100,
+      "type": "量化"
+    },
+    {
+      "code": "016858",
+      "name": "国金量化多因子股票C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "018729",
+      "name": "华夏智胜新锐股票C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "023350",
+      "name": "诺安多策略混合C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "量化"
+    }
+  ],
+  "data_字段说明": {
+    "mail": "邮箱；用于登录时的用户名",
+    "name": "姓名；用于备注",
+    "update_time": "更新时间；",
+    "telphone": "电话；",
+    "sub_mail": "子邮箱；后面看是否可以给亲属绑定一个",
+    "password": "密码；",
+    "fund": "自己私有的基金"
+  },
   "data": [
     {
       "mail": "209392599@qq.com",
@@ -7,126 +139,7 @@
       "telphone": "",
       "sub_mail": "",
       "password": "qaz123..",
-      "fund": [
-        {
-          "code": "007467",
-          "name": "华泰柏瑞中证红利低波ETF联接C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "红利"
-        },
-        {
-          "code": "008164",
-          "name": "南方红利低波50ETF联接C",
-          "short_name": "",
-          "zhang_url": "https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "红利"
-        },
-        {
-          "code": "019260",
-          "name": "富国恒生红利ETF联接A",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "红利"
-        },
-        {
-          "code": "023918",
-          "name": "华夏国证自由现金流ETF发起式联接C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "红利"
-        },
-        {
-          "code": "020989",
-          "name": "南方恒生科技指数发起(QDII)C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "红利"
-        },
-        {
-          "code": "018561",
-          "name": "中信保诚多策略混合(LOF)C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "量化"
-        },
-        {
-          "code": "016858",
-          "name": "国金量化多因子股票C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "量化"
-        },
-        {
-          "code": "017874",
-          "name": "国金量化多策略C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "量化"
-        },
-        {
-          "code": "018729",
-          "name": "华夏智胜新锐股票C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "量化"
-        },
-        {
-          "code": "024158",
-          "name": "鹏华沪深300指数量化增强I",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "量化"
-        },
-        {
-          "code": "018561",
-          "name": "中信保诚多策略混合(LOF)C",
-          "desc": "",
-          "type": "股票"
-        },
-        {
-          "code": "",
-          "name": "",
-          "desc": "",
-          "type": "债券"
-        },
-        {
-          "code": "",
-          "name": "",
-          "desc": "",
-          "type": "观察区"
-        }
-      ]
+      "fund": []
     },
     {
       "mail": "xuebinghui@bmrb.com.cn",
