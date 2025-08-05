@@ -9,6 +9,11 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm Z', // 时间格式
       watch: ['app.js', 'routes/**/*.js', 'data/base/user.json'], // 监控 app.js 和 routes 下所有文件
       force: true, // 确保覆盖默认监听规则
+      ignore_watch: ['node_modules'], // 明确忽略 node_modules
+      watch_options: {
+        followSymlinks: false, // 禁用符号链接（可选）
+        usePolling: true, // 强制轮询（解决部分文件系统问题）
+      },
       env: {
         PM2_LOGROTATE_MAX_SIZE: '100M', // 设置单个日志文件的最大大小为 100MB
         PM2_LOGROTATE_RETAIN: '30', // 设置保留的最近日志文件数量为 30 个

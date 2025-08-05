@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>涨幅速览</title>
+  <title>涨幅+均线</title>
   <style>
     * {
       margin: 0;
@@ -51,11 +51,19 @@
 </head>
 
 <body>
-  <div id="imgbox"></div>
-  <!-- 量化 -->
-  <div id="lianghua_box"></div>
+  <div class="chart-wrapper">
+    <div class="chart-line">
+      <div class="chart-image"></div>
+      <div class="chart-average"></div>
+    </div>
+  </div>
 
   <script>
+    fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
+      console.log('res', res);
+    }).catch(err => {
+      console.log('err', err);
+    })
     /*
     { code: '018561', name: '中信保诚多策略C' },// 100
     { code: '020726', name: '建信灵活配置混合C' },// 50
