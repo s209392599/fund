@@ -56,6 +56,11 @@
   <div id="lianghua_box"></div>
 
   <script>
+    fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
+      console.log('res', res);
+    }).catch(err => {
+      console.log('err', err);
+    })
     /*
     { code: '018561', name: '中信保诚多策略C' },// 100
     { code: '020726', name: '建信灵活配置混合C' },// 50

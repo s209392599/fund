@@ -1,5 +1,5 @@
 {
-  "base_字段说明": {
+  "public_fund_字段说明": {
     "code": "007467",
     "name": "华泰柏瑞中证红利低波ETF联接C",
     "short_name": "简称",
@@ -10,7 +10,7 @@
     "fixed": "定投金额；0为不定投",
     "type": "基金的类型"
   },
-  "base": [
+  "public_fund": [
     {
       "code": "007467",
       "name": "华泰柏瑞中证红利低波ETF联接C",

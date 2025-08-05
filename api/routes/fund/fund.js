@@ -10,8 +10,7 @@ const getUserJson = () => {
   const filePath = path.join(__dirname, '../../data/base/user.json');
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const jsonData = JSON.parse(fileContent);
-  const dataArray = jsonData.data;
-  return dataArray;
+  return jsonData;
 };
 
 // 定义一个GET示例请求
@@ -50,7 +49,7 @@ router.post('/fund_login', (req, res) => {
       data: [],
     });
   }
-  const userData = getUserJson() || [];
+  const userData = (getUserJson() || {}).data || [];
   const user = userData.find((item) => item.mail === email);
   if (!user) {
     return res.send({
@@ -77,6 +76,16 @@ router.post('/fund_login', (req, res) => {
 // 注册
 router.post('/fund_register', (req, res) => {
   console.log('req.body', req.body);
+});
+
+// 获取公共的基金数据
+router.get('/fund_public_fund', (req, res) => {
+  const userData = getUserJson() || [];
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: userData.public_fund || [],
+  });
 });
 
 // 读取timer监听的基金涨幅数据
