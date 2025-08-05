@@ -21,10 +21,11 @@ pnpm-debug.log*
 *.sw?
 
 .history/*
+yarn.lock
+package-lock.json
+
 other/data/fundData/*
 other/aafilter/data_all/*
 other/aafilter/data_search/*
-
-yarn.lock
-package-lock.json
 huawei-function/search/fundData/*
+api/data/preview/*.json

@@ -4,24 +4,53 @@ const fs = require('fs');
 const path = require('path');
 const CustomFn = require('./CustomFn.js');
 
-// 获取 中信保诚多策略混合 的涨幅
-const get_zhi_018561 = () => {
-  let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
-  console.log('get_zhi_018561', time_stamp, '开始获取');
-
-  fetch('https://fundgz.1234567.com.cn/js/018561.js?v=' + +new Date())
+// 天天基金上没有预览图，直接读取量化值
+const get_zhang_by_tiantian = (code, time_stamp) => {
+  fetch(`https://fundgz.1234567.com.cn/js/${code}.js?v=${new Date().getTime()}`)
     .then((res) => res.text())
     .then((res) => {
-      // jsonpgz({"fundcode":"018561","name":"中信保诚多策略混合(LOF)C","jzrq":"2025-07-29","dwjz":"2.0670","gsz":"2.0544","gszzl":"-0.61","gztime":"2025-07-30 14:08"});
-      // console.log(res);
       let str = res.replaceAll('jsonpgz(', '').replaceAll(');', '') || '{}';
       let obj = JSON.parse(str);
       obj.time_stamp = time_stamp;
 
       let cur_time = CustomFn.CustomDateFtt(new Date(), 'yyyyMMdd');
-      let fileName = '018561_' + cur_time + '.json';
-      let fileDir = path.join(__dirname, 'data/preview/018561');
+      let fileName = `${code}_${cur_time}.json`;
+      let fileDir = path.join(__dirname, `data/preview/${code}`);
       let filePath = path.join(fileDir, fileName);
+
+      // 检查文件夹在不在，不在的话创建一个
+      if (!fs.existsSync(fileDir)) {
+        fs.mkdirSync(fileDir, { recursive: true });
+      }
+
+      // 超过10个文件的时候清除一下
+      if (CustomFn.CustomDateFtt(time_stamp, 'hh:mm:ss') === '09:35:00') {
+        // 读取目录中的所有文件
+        const files = fs.readdirSync(fileDir);
+
+        // 过滤出符合命名格式的文件
+        const pattern = /^\d{6}_\d{8}\.json$/;
+        const matchedFiles = files.filter((file) => pattern.test(file));
+
+        if (matchedFiles.length > 10) {
+          // 按文件名中的日期排序（降序，最新的在前面）
+          matchedFiles.sort((a, b) => {
+            const dateA = a.split('_')[1].split('.')[0]; // 提取日期部分
+            const dateB = b.split('_')[1].split('.')[0];
+            return dateB.localeCompare(dateA); // 降序排列
+          });
+
+          // 获取需要删除的文件（保留前10个，删除其余的）
+          const filesToDelete = matchedFiles.slice(10);
+
+          // 删除旧文件
+          for (const file of filesToDelete) {
+            const filePath = path.join(fileDir, file);
+            fs.unlinkSync(filePath);
+            console.log(`已删除旧文件: ${filePath}`);
+          }
+        }
+      }
 
       // 检查文件是否存在
       if (!fs.existsSync(filePath)) {
@@ -42,92 +71,7 @@ const get_zhi_018561 = () => {
 
       // 将更新后的内容写回文件
       fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-      console.log('get_zhi_018561', time_stamp, '获取成功');
-      console.log('获取到的数据是：', obj);
-    })
-    .catch((err) => {
-      console.log('err', err);
-    });
-};
-
-// 获取 建信灵活配置混合C 的涨幅
-const get_zhi_020726 = () => {
-  let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
-  fetch('https://fundgz.1234567.com.cn/js/020726.js?v=' + +new Date())
-    .then((res) => res.text())
-    .then((res) => {
-      let str = res.replaceAll('jsonpgz(', '').replaceAll(');', '') || '{}';
-      let obj = JSON.parse(str);
-      obj.time_stamp = time_stamp;
-
-      let cur_time = CustomFn.CustomDateFtt(new Date(), 'yyyyMMdd');
-      let fileName = '020726_' + cur_time + '.json';
-      let fileDir = path.join(__dirname, 'data/preview/020726');
-      let filePath = path.join(fileDir, fileName);
-
-      // 检查文件是否存在
-      if (!fs.existsSync(filePath)) {
-        // 文件不存在，创建新文件并写入初始内容
-        fs.writeFileSync(
-          filePath,
-          JSON.stringify({ length: 0, data: [] }, null, 2)
-        );
-      }
-
-      // 读取文件内容
-      let fileContent = fs.readFileSync(filePath, 'utf8');
-      let data = JSON.parse(fileContent);
-
-      // 更新文件内容
-      data.length += 1;
-      data.data.push(obj);
-
-      // 将更新后的内容写回文件
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-      console.log('get_zhi_020726', time_stamp, '获取成功');
-      console.log('获取到的数据是：', obj);
-    })
-    .catch((err) => {
-      console.log('err', err);
-    });
-};
-
-// 获取 诺安多策略混合C 的涨幅
-const get_zhi_023350 = () => {
-  let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
-  fetch('https://fundgz.1234567.com.cn/js/023350.js?v=' + +new Date())
-    .then((res) => res.text())
-    .then((res) => {
-      let str = res.replaceAll('jsonpgz(', '').replaceAll(');', '') || '{}';
-      let obj = JSON.parse(str);
-      obj.time_stamp = time_stamp;
-
-      let cur_time = CustomFn.CustomDateFtt(new Date(), 'yyyyMMdd');
-      let fileName = '023350_' + cur_time + '.json';
-      let fileDir = path.join(__dirname, 'data/preview/023350');
-      let filePath = path.join(fileDir, fileName);
-
-      // 检查文件是否存在
-      if (!fs.existsSync(filePath)) {
-        // 文件不存在，创建新文件并写入初始内容
-        fs.writeFileSync(
-          filePath,
-          JSON.stringify({ length: 0, data: [] }, null, 2)
-        );
-      }
-
-      // 读取文件内容
-      let fileContent = fs.readFileSync(filePath, 'utf8');
-      let data = JSON.parse(fileContent);
-
-      // 更新文件内容
-      data.length += 1;
-      data.data.push(obj);
-
-      // 将更新后的内容写回文件
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-      console.log('get_zhi_023350', time_stamp, '获取成功');
-      console.log('获取到的数据是：', obj);
+      // console.log('获取到的数据是：', obj);
     })
     .catch((err) => {
       console.log('err', err);
@@ -143,6 +87,7 @@ scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
   const hours = now.getHours();
   const minutes = now.getMinutes();
   const seconds = now.getSeconds();
+  const week = now.getDay();
   // console.log(`${hours}:${minutes}:${seconds}`);
 
   const time_09_30_00 = new Date(`${year}-${month}-${day} 09:30:00`).getTime();
@@ -155,13 +100,26 @@ scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
   const flag_2 = time_current <= time_11_30_00; // 小于11点半
   const flag_3 = time_current >= time_13_30_00; // 大于9点半
   const flag_4 = time_current <= time_15_00_00; // 小于11点半
-  if (((flag_1 && flag_2) || (flag_3 && flag_4)) && seconds === 0) {
-    // console.log(
-    //   '执行任务 -> ',
-    //   CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss')
-    // );
-    get_zhi_018561(); // 获取 中信保诚多策略混合 的涨幅
-    get_zhi_020726(); // 获取 建信灵活配置混合C 的涨幅
-    get_zhi_023350(); // 获取 诺安多策略混合C 的涨幅
+  const flag_5 = [1, 2, 3, 4, 5].includes(week); // 周一到周五
+  if (flag_5 && ((flag_1 && flag_2) || (flag_3 && flag_4)) && seconds === 0) {
+    let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
+
+    get_zhang_by_tiantian('018561', time_stamp); // 中信保诚多策略C
+
+    setTimeout(() => {
+      get_zhang_by_tiantian('020726', time_stamp); // 建信灵活配置混合C
+    }, 5 * 1);
+
+    setTimeout(() => {
+      get_zhang_by_tiantian('016858', time_stamp); // 国金量化多因子股票C
+    }, 5 * 2);
+
+    setTimeout(() => {
+      get_zhang_by_tiantian('018729', time_stamp); // 华夏智胜新锐股票C
+    }, 5 * 3);
+
+    setTimeout(() => {
+      get_zhang_by_tiantian('023350', time_stamp); // 诺安多策略混合C
+    }, 5 * 4);
   }
 });
