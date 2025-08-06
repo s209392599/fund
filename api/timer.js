@@ -6,7 +6,11 @@ const CustomFn = require('./CustomFn.js');
 
 // 天天基金上没有预览图，直接读取量化值
 const get_zhang_by_tiantian = (code, time_stamp) => {
-  fetch(`https://fundgz.1234567.com.cn/js/${code}.js?v=${new Date().getTime()}`)
+  fetch(
+    `https://fundgz.1234567.com.cn/js/${code}.js?v=${new Date(
+      time_stamp
+    ).getTime()}`
+  )
     .then((res) => res.text())
     .then((res) => {
       let str = res.replaceAll('jsonpgz(', '').replaceAll(');', '') || '{}';
@@ -108,18 +112,18 @@ scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
 
     setTimeout(() => {
       get_zhang_by_tiantian('020726', time_stamp); // 建信灵活配置混合C
-    }, 5 * 1);
+    }, 50 * 1);
 
     setTimeout(() => {
       get_zhang_by_tiantian('016858', time_stamp); // 国金量化多因子股票C
-    }, 5 * 2);
+    }, 50 * 2);
 
     setTimeout(() => {
       get_zhang_by_tiantian('018729', time_stamp); // 华夏智胜新锐股票C
-    }, 5 * 3);
+    }, 50 * 3);
 
     setTimeout(() => {
       get_zhang_by_tiantian('023350', time_stamp); // 诺安多策略混合C
-    }, 5 * 4);
+    }, 50 * 4);
   }
 });

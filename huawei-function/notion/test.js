@@ -1,11 +1,11 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `测试邮件哈`;// 右键主题
+const mail_title = `测试邮件哈`; // 右键主题
 
 var marilArr = [
   '209392599@qq.com', // 自己
   // ''
-]
+];
 
 var html = `
 <!DOCTYPE html>
@@ -55,7 +55,7 @@ var html = `
 </html>
 `;
 
- /*
+/*
     https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&cb=jQuery351018138707342421845_1751948554116&fields=f58%2Cf734%2Cf107%2Cf57%2Cf43%2Cf59%2Cf169%2Cf170%2Cf152%2Cf46%2Cf60%2Cf44%2Cf45%2Cf47%2Cf48%2Cf19%2Cf17%2Cf531%2Cf15%2Cf13%2Cf11%2Cf20%2Cf18%2Cf16%2Cf14%2Cf12%2Cf39%2Cf37%2Cf35%2Cf33%2Cf31%2Cf40%2Cf38%2Cf36%2Cf34%2Cf32%2Cf211%2Cf212%2Cf213%2Cf214%2Cf215%2Cf210%2Cf209%2Cf208%2Cf207%2Cf206%2Cf161%2Cf49%2Cf171%2Cf50%2Cf86%2Cf168%2Cf108%2Cf167%2Cf71%2Cf292%2Cf51%2Cf52%2Cf191%2Cf192%2Cf452%2Cf177&secid=1.515450&ut=fa5fd1943c7b386f172d6893dbfba10b&wbp2u=%7C0%7C0%7C0%7Cweb&dect=1&_=1751948554117
 
     https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f58,f734,f107,f57,f43,f59,f169,f170,f152,f46,f60,f44,f45,f47,f48,f19,f17,f531,f15,f13,f11,f20,f18,f16,f14,f12,f39,f37,f35,f33,f31,f40,f38,f36,f34,f32,f211,f212,f213,f214,f215,f210,f209,f208,f207,f206,f161,f49,f171,f50,f86,f168,f108,f167,f71,f292,f51,f52,f191,f192,f452,f177&secid=1.515450
@@ -85,7 +85,6 @@ var html = `
     });
     */
 
-
 // 创建传输器
 const transporter = nodemailer.createTransport({
   host: 'smtp.qq.com', // QQ邮箱的SMTP服务器地址
@@ -93,8 +92,8 @@ const transporter = nodemailer.createTransport({
   secure: true, // 使用SSL
   auth: {
     user: '209392599@qq.com', // 你的QQ邮箱地址
-    pass: 'ftylpxdehwowbjbd' // 你生成的授权码
-  }
+    pass: 'ftylpxdehwowbjbd', // 你生成的授权码
+  },
 });
 
 // 邮件选项
@@ -117,8 +116,8 @@ const mailOptions = {
 
 // 发送邮件
 transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        return console.log('发送失败:', error);
-    }
-    console.log('邮件已发送: %s', info.messageId);
+  if (error) {
+    return console.log('发送失败:', error);
+  }
+  console.log('邮件已发送: %s', info.messageId);
 });

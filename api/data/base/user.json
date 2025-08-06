@@ -120,6 +120,39 @@
       "desc": "",
       "fixed": 50,
       "type": "量化"
+    },
+    {
+      "code": "020973",
+      "name": "易方达机器人ETF联接C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "机器人"
+    },
+    {
+      "code": "017437",
+      "name": "华宝纳斯达克精选股票发起式",
+      "short_name": "",
+      "zhang_url": "不提供",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "美股"
+    },
+    {
+      "code": "016452",
+      "name": "南方纳斯达克100指数发起",
+      "short_name": "",
+      "zhang_url": "不提供",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "美股"
     }
   ],
   "data_字段说明": {
@@ -139,7 +172,52 @@
       "telphone": "",
       "sub_mail": "",
       "password": "qaz123..",
-      "fund": []
+      "fund": [
+        {
+          "code": "019736",
+          "name": "宝盈纳斯达克100指数发起",
+          "short_name": "",
+          "zhang_url": "",
+          "point_line_top": null,
+          "point_line_down": null,
+          "desc": "",
+          "fixed": 50,
+          "type": "美股"
+        },
+        {
+          "code": "024158",
+          "name": "鹏华沪深300指数量化增强I",
+          "short_name": "",
+          "zhang_url": "",
+          "point_line_top": null,
+          "point_line_down": null,
+          "desc": "",
+          "fixed": 50,
+          "type": "量化"
+        },
+        {
+          "code": "018178",
+          "name": "华夏科创50指数增强C",
+          "short_name": "",
+          "zhang_url": "",
+          "point_line_top": null,
+          "point_line_down": null,
+          "desc": "",
+          "fixed": 50,
+          "type": "指数"
+        },
+        {
+          "code": "021030",
+          "name": "汇添富国证港股通创新药ETF发起式联接A",
+          "short_name": "",
+          "zhang_url": "",
+          "point_line_top": null,
+          "point_line_down": null,
+          "desc": "",
+          "fixed": 50,
+          "type": "创新药"
+        }
+      ]
     },
     {
       "mail": "xuebinghui@bmrb.com.cn",
@@ -556,6 +634,15 @@
       "telphone": "",
       "sub_mail": "",
       "password": "a5AU",
+      "fund": []
+    },
+    {
+      "mail": "1834651803@qq.com",
+      "name": "杜望",
+      "update_time": "",
+      "telphone": "",
+      "sub_mail": "",
+      "password": "123456",
       "fund": []
     }
   ]

@@ -1,6 +1,6 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `量化继续加仓或者定投，其它今天先不动`; // 右键主题
+const mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新增定投 易方达机器人ETF联接C(020973)`; // 右键主题
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn', // 薛炳辉
@@ -49,6 +49,7 @@ var marilArr = [
   '875457031@qq.com', // 基金-孙锦琪
   'lliuch321@qq.com', // 刘铖浩
   '459947847@qq.com', // 王一行
+  '1834651803@qq.com', // 杜望
 ];
 
 var html = `
