@@ -5,34 +5,6 @@ code:后面用英文逗号分割(注意输入债券型没有意义)
 zhi: 1或者true 是开启指数
 zhicode: 是输入指数的code
 */
-
-/*
-长期推荐组合：
-020989-南方恒生科技指数发起C
-023918-华夏国证自由现金流C
-008164-南方红利低波50ETFC
-007467-华泰柏瑞中证红利低波C
-006980-国寿安保泰恒纯债债券
-016870-景顺长城稳健增益C
-
-其它5+推荐：
-007540-华泰保兴安悦债券A
-007584-鹏华丰鑫债券A
-
-*/
-var arr = [
-  /*
-  007467  华泰柏瑞中证红利低波ETF联接C
-008164 南方红利低波50ETF联接C
-020989 南方恒生科技指数发起(QDII)C
-008087 华夏中证5G通信主题ETF联接C
-{ code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },
-{ code: '023521', name: '博时上证科创板人工智能ETF发起式联接C' },
-015566 万家精选混合C
-023918-华夏国证自由现金流C
-
-  */
-]
 exports.handler = (event, context, callback) => {
   // 1. 解析查询参数
   const queryParams = event.queryStringParameters || {};
@@ -45,7 +17,11 @@ exports.handler = (event, context, callback) => {
     const defaultFunds = [
       { code: '007467', name: '华泰柏瑞中证红利低波ETF联接C' },
       { code: '020989', name: '南方恒生科技指数发起(QDII)C' },
-      { code: '008164', name: '南方红利低波50ETF联接C',url:'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450' },
+      {
+        code: '008164',
+        name: '南方红利低波50ETF联接C',
+        url: 'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450',
+      },
       { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },
       { code: '008087', name: '华夏中证5G通信主题ETF联接C' },
       { code: '021030', name: '汇添富国证港股通创新药ETF发起式联接A' },
@@ -59,16 +35,14 @@ exports.handler = (event, context, callback) => {
         : defaultFunds;
 
     return fundsToShow
-      .map(
-        (item) =>{
-          let altstr = item.name || item.code;
-          if(!item.url){
-            return `<img src="https://j4.dfcfw.com/charts/pic6/${item.code}.png" alt="${altstr}">`
-          }else{
-            return `<img src="${item.url}" alt="${altstr}">`
-          }
+      .map((item) => {
+        let altstr = item.name || item.code;
+        if (!item.url) {
+          return `<img src="https://j4.dfcfw.com/charts/pic6/${item.code}.png" alt="${altstr}">`;
+        } else {
+          return `<img src="${item.url}" alt="${altstr}">`;
         }
-      )
+      })
       .join('');
   };
 

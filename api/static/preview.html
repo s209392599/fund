@@ -58,19 +58,6 @@
   <div id="lianghua_box" style="padding: 10px 10px 20px 10px;"></div>
 
   <script>
-    /*
-    { code: '018561', name: '中信保诚多策略C' },// 100
-    { code: '020726', name: '建信灵活配置混合C' },// 50
-    { code: '016858', name: '国金量化多因子股票C' },// 50
-    { code: '018729', name: '华夏智胜新锐股票C' },// 50
-    { code: '023350', name: '诺安多策略混合C' },// 50
-
-    { code: '007467', name: '华泰柏瑞中证红利低波ETF联接C' },// 30
-    { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },// 30
-    { code: '019260', name: '富国恒生红利ETF联接A' },// 30
-    { code: '008164', name: '南方红利低波50ETF联接C'}// 30
-
-    */
     fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
       console.log('res', res);
       let arr_1 = res.data || [];

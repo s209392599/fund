@@ -23,17 +23,6 @@
       "type": "红利"
     },
     {
-      "code": "008164",
-      "name": "南方红利低波50ETF联接C",
-      "short_name": "",
-      "zhang_url": "https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 30,
-      "type": "红利"
-    },
-    {
       "code": "019260",
       "name": "富国恒生红利ETF联接A",
       "short_name": "",
@@ -227,6 +216,17 @@
           "desc": "",
           "fixed": 50,
           "type": "创新药"
+        },
+        {
+          "code": "008164",
+          "name": "南方红利低波50ETF联接C",
+          "short_name": "",
+          "zhang_url": "https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450",
+          "point_line_top": null,
+          "point_line_down": null,
+          "desc": "2025年08月07日10:33:14 已合并到007467，后续不再买入",
+          "fixed": 30,
+          "type": "红利"
         }
       ]
     },

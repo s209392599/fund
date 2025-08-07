@@ -1,6 +1,7 @@
 // https://blog.csdn.net/qq_43592064/article/details/148082669 发送邮件带am参考
 const nodemailer = require('nodemailer');
-const mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新增定投 易方达机器人ETF联接C(020973)`; // 右键主题
+var mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新增定投 易方达机器人ETF联接C(020973)`; // 右键主题
+mail_title = `【重要】慎重考虑后，南方红利低波50ETF(515450) 暂时迁移到 华泰柏瑞中证红利低波ETF联接C(007467)`;
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn', // 薛炳辉
@@ -87,7 +88,6 @@ var html = `
   <div id="imgbox">
     <img src="https://j4.dfcfw.com/charts/pic6/007467.png" alt="华泰柏瑞中证红利低波ETF联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/020989.png" alt="南方恒生科技指数发起(QDII)C">
-    <img src="https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450" alt="南方红利低波50ETF联接C(008164)">
     <img src="https://j4.dfcfw.com/charts/pic6/023918.png" alt="华夏国证自由现金流ETF发起式联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/008087.png" alt="华夏中证5G通信主题ETF联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/021030.png" alt="汇添富国证港股通创新药ETF发起式联接A">

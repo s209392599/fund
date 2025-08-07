@@ -66,18 +66,7 @@
     }).catch(err => {
       console.log('err', err);
     })
-    /*
-    { code: '018561', name: '中信保诚多策略C' },// 100
-    { code: '020726', name: '建信灵活配置混合C' },// 50
-    { code: '016858', name: '国金量化多因子股票C' },// 50
-    { code: '018729', name: '华夏智胜新锐股票C' },// 50
-    { code: '023350', name: '诺安多策略混合C' },// 50
 
-    { code: '007467', name: '华泰柏瑞中证红利低波ETF联接C' },// 30
-    { code: '023918', name: '华夏国证自由现金流ETF发起式联接C' },// 50
-    { code: '019260', name: '富国恒生红利ETF联接A' },// 30
-    { code: '008164', name: '南方红利低波50ETF联接C'}// 30
-    */
     const handPreview = [
       { code: '018561', name: '中信保诚多策略C' },
       { code: '020726', name: '建信灵活配置混合C' },
@@ -134,7 +123,6 @@
     const generateFundImages = () => {
       const defaultFunds = [
         { code: '007467', name: '华泰柏瑞中证红利低波ETF联接C' },
-        { code: '008164', name: '南方红利低波50ETF联接C', url: 'https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450' },
         // { code: '018561', name: '中信保诚多策略灵活配置C' },
         { code: '020989', name: '南方恒生科技指数发起(QDII)C' },
         { code: '019260', name: '富国恒生红利ETF联接A' },
