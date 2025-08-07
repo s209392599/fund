@@ -45,8 +45,8 @@
       "type": "红利"
     },
     {
-      "code": "023918",
-      "name": "华夏国证自由现金流ETF发起式联接C",
+      "code": "020989",
+      "name": "南方恒生科技指数发起(QDII)C",
       "short_name": "",
       "zhang_url": "",
       "point_line_top": null,
@@ -56,8 +56,8 @@
       "type": "红利"
     },
     {
-      "code": "020989",
-      "name": "南方恒生科技指数发起(QDII)C",
+      "code": "023918",
+      "name": "华夏国证自由现金流ETF发起式联接C",
       "short_name": "",
       "zhang_url": "",
       "point_line_top": null,
@@ -120,6 +120,17 @@
       "desc": "",
       "fixed": 50,
       "type": "量化"
+    },
+    {
+      "code": "023521",
+      "name": "博时上证科创板人工智能ETF发起式联接C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "机器人"
     },
     {
       "code": "020973",

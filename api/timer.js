@@ -6,6 +6,7 @@ const CustomFn = require('./CustomFn.js');
 
 // 天天基金上没有预览图，直接读取量化值
 const get_zhang_by_tiantian = (code, time_stamp) => {
+  console.log(`${code} 开始请求`);
   fetch(
     `https://fundgz.1234567.com.cn/js/${code}.js?v=${new Date(
       time_stamp
@@ -75,7 +76,8 @@ const get_zhang_by_tiantian = (code, time_stamp) => {
 
       // 将更新后的内容写回文件
       fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-      // console.log('获取到的数据是：', obj);
+      //   console.log(code + '获取到的数据是：', obj);
+      console.log(code + '获取到的数据是：');
     })
     .catch((err) => {
       console.log('err', err);
@@ -108,22 +110,27 @@ scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
   if (flag_5 && ((flag_1 && flag_2) || (flag_3 && flag_4)) && seconds === 0) {
     let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
 
+    console.log('-------------------------------------');
     get_zhang_by_tiantian('018561', time_stamp); // 中信保诚多策略C
+    get_zhang_by_tiantian('020726', time_stamp); // 建信灵活配置混合C
+    get_zhang_by_tiantian('016858', time_stamp); // 国金量化多因子股票C--
+    get_zhang_by_tiantian('018729', time_stamp); // 华夏智胜新锐股票C--
+    get_zhang_by_tiantian('023350', time_stamp); // 诺安多策略混合C
 
-    setTimeout(() => {
-      get_zhang_by_tiantian('020726', time_stamp); // 建信灵活配置混合C
-    }, 50 * 1);
+    // setTimeout(() => {
+    //   console.log('第1段打印')
+    // }, 50 * 1);
 
-    setTimeout(() => {
-      get_zhang_by_tiantian('016858', time_stamp); // 国金量化多因子股票C
-    }, 50 * 2);
+    // setTimeout(() => {
+    //   console.log('第2段打印')
+    // }, 50 * 2);
 
-    setTimeout(() => {
-      get_zhang_by_tiantian('018729', time_stamp); // 华夏智胜新锐股票C
-    }, 50 * 3);
+    // setTimeout(() => {
+    //   console.log('第3段打印')
+    // }, 50 * 3);
 
-    setTimeout(() => {
-      get_zhang_by_tiantian('023350', time_stamp); // 诺安多策略混合C
-    }, 50 * 4);
+    // setTimeout(() => {
+    //   console.log('第4段打印')
+    // }, 50 * 4);
   }
 });
