@@ -29,3 +29,4 @@ other/aafilter/data_all/*
 other/aafilter/data_search/*
 huawei-function/search/fundData/*
 api/data/preview/*.json
+api/data/his_val/*.json
