@@ -78,6 +78,17 @@
       "type": "量化"
     },
     {
+      "code": "002834",
+      "name": "华夏新锦绣混合C",
+      "short_name": "",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 100,
+      "type": "量化"
+    },
+    {
       "code": "016858",
       "name": "国金量化多因子股票C",
       "short_name": "",
