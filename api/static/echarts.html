@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>涨幅均线</title>
+  <link rel="stylesheet" href="./public/atom.css">
+</head>
+
+<body>
+  <div id="id_007467" style="width: 100%;height: 100vh;border: 1px solid #000;"></div>
+
+
+  <script src="./public/jquery.min.js"></script>
+  <script src="./public/echarts.min.js"></script>
+  <script type="module">
+    const splitNum = 40;
+
+
+    // 计算简单移动平均（SMA）
+    function calculateSMA(data, period) {
+      if (data.length < period) return []; // 数据不足
+      let sma = Array(period).fill(null);
+      for (let i = period - 1; i < data.length; i++) {
+        const sum = data.slice(i - period + 1, i + 1).reduce((a, b) => a + b, 0);
+        sma.push(sum / period);
+      }
+      return sma;
+    }
+
+    // 计算标准差（Standard Deviation）
+    function calculateStdDev(data, period, sma) {
+      let stdDev = Array(period).fill(null);
+      for (let i = period - 1; i < data.length; i++) {
+        const slice = data.slice(i - period + 1, i + 1);
+        const variance = slice.reduce((sum, value) => sum + Math.pow(value - sma[i - period + 1], 2), 0) / period;
+        stdDev.push(Math.sqrt(variance));
+      }
+      return stdDev;
+    }
+
+    // 计算布林线三轨
+    function calculateBollingerBands(data, period = 20, multiplier = 2) {
+      const sma = calculateSMA(data, period); // 中轨
+      const stdDev = calculateStdDev(data, period, sma); // 标准差
+
+      const upperBand = sma.map((val, idx) => {
+        if (val === null) return null;
+        return val + multiplier * stdDev[idx]
+      }); // 上轨
+      const lowerBand = sma.map((val, idx) => {
+        if (val === null) return null;
+        return val - multiplier * stdDev[idx];
+      }); // 下轨
+
+
+      return {
+        xData: data.slice(splitNum),
+        middleBand: sma.slice(splitNum),
+        upperBand: upperBand.slice(splitNum),
+        lowerBand: lowerBand.slice(splitNum)
+      };
+    }
+
+
+    // 渲染图形
+    function renderChart(code, dataObj) {
+      // if (cur_val_obj[code].cur === '' || cur_val_obj[code].data.length === 0) {
+      //   return false;
+      // }
+      // console.log('渲染图形', cur_val_obj[code]);
+
+      let color_1 = '#f00';// y轴正数颜色
+      let color_2 = '#090';// y轴负数颜色
+      let color_3 = '';// k线的颜色
+      let color_4 = '';// 5线的颜色
+      let color_5 = '';// 60线的颜色
+      let color_6 = '#ffffff';// 布林线的颜色
+
+      // #489f6a
+
+      const chartHisData = dataObj.data || [];
+      console.log('chartHisData', chartHisData);
+
+      const closePrices = chartHisData.map(item => Number(item.totalNetValue || 0));
+      const { middleBand, upperBand, lowerBand, xData } = calculateBollingerBands(closePrices);
+
+      console.log("上轨:", upperBand);
+      console.log("中轨:", middleBand);
+      console.log("下轨:", lowerBand);
+
+      var option = {
+        backgroundColor: '#161616',
+        xAxis: { data: chartHisData.slice(splitNum).map(v => v.date) },
+        yAxis: {
+          type: 'value',
+          splitLine: {
+            show: true, // 确保为 true
+            lineStyle: {
+              type: 'dashed',
+              width: 1,
+              color: 'rgba(255, 255, 255, 0.2)'
+            }
+          },
+          axisLabel: {
+            color: function (value) {
+              return value >= 0 ? color_1 : color_2;
+            },
+          },
+        },
+        grid: {
+          top: 20,
+          left: 30,
+          right: 20,
+          bottom: 20,
+          containLabel: true,
+        },
+        series: [
+          {
+            name: '上轨',
+            data: upperBand,
+            type: 'line',
+            smooth: true,
+            lineStyle: {
+              color: color_6,
+              width: 0.5
+            },
+            symbol: 'none',
+            symbolSize: 0,
+          },
+          {
+            name: '中轨',
+            data: middleBand,
+            type: 'line',
+            smooth: true,
+            lineStyle: {
+              color: color_6,
+              width: 0.5
+            },
+            symbol: 'none',
+            symbolSize: 0,
+          },
+          {
+            name: '下轨',
+            data: lowerBand,
+            type: 'line',
+            smooth: true,
+            lineStyle: {
+              color: color_6,
+              width: 0.5
+            },
+            symbol: 'none',
+            symbolSize: 0,
+          },
+        ]
+      };
+
+      var myChart = echarts.init(document.getElementById(`id_${code}`));
+      myChart.setOption(option);
+      $(this).on('resize', function () {
+        myChart.resize({});
+      })
+
+      //       {
+      //   "netValueRowName": "单位净值",
+      //   "totalNetValueRowName": "累计净值",
+      //   "dateRowName": "日期",
+      //   "dailyRateRowRate": "日涨跌幅"
+      // }
+
+      //       {
+      //   "date": "2020-01-06",
+      //   "netValue": "1.0790",
+      //   "dailyProfit": "-0.41",
+      //   "totalNetValue": "1.0790"
+      // }
+    }
+
+
+    fetch('./007467.json')
+      .then(response => response.json())
+      .then(chartData => {
+        renderChart('007467', chartData)
+      })
+
+  </script>
+</body>
+
+</html>
