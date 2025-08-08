@@ -13,7 +13,10 @@
 <body>
   <div class="average_wrapper">
     <!-- 常规的 -->
-    <div class="average_box_1" id="average_box_1"></div>
+    <div class="average_box_1" id="average_box_1">
+      <div id="id_007467" style="width: 300px;height: 200px;border: 1px solid #000;"></div>
+      <div id="id_018561" style="width: 300px;height: 200px;border: 1px solid #000;margin-top: 10px;"></div>
+    </div>
 
     <!-- 量化等需要服务器的 -->
     <div class="average_box_2" id="average_box_2"></div>
@@ -28,53 +31,53 @@
     // 实时涨幅的对象
     let cur_val_obj = {};
 
-    fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
-      // console.log('res', res);
-      let arr_1 = res.data || [];
+    // fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
+    //   // console.log('res', res);
+    //   let arr_1 = res.data || [];
 
-      // 渲染基础的html结构
-      arr_1.forEach(item => {
-        // cur_val_obj[item.code] = {
-        //   cur: '',// 当前涨幅
-        //   data: [],// 历史累计净值
-        // }
-        if (item.zhang_url === '服务器监听') {
-          arr_3.push(item)
-        } else if (!['不提供'].includes(item.zhang_url)) {
-          arr_2.push(item)
-        }
-      })
-      // 临时模拟两个
-      arr_2.length = 1;
-      arr_3.length = 1;
-      arr_1 = [...arr_2, ...arr_3];
+    //   // 渲染基础的html结构
+    //   arr_1.forEach(item => {
+    //     // cur_val_obj[item.code] = {
+    //     //   cur: '',// 当前涨幅
+    //     //   data: [],// 历史累计净值
+    //     // }
+    //     if (item.zhang_url === '服务器监听') {
+    //       arr_3.push(item)
+    //     } else if (!['不提供'].includes(item.zhang_url)) {
+    //       arr_2.push(item)
+    //     }
+    //   })
+    //   // 临时模拟两个
+    //   arr_2.length = 1;
+    //   arr_3.length = 1;
+    //   arr_1 = [...arr_2, ...arr_3];
 
-      arr_1.forEach(item => {
-        cur_val_obj[item.code] = {
-          cur: '',// 当前涨幅
-          data: [],// 历史累计净值
-        }
-      })
+    //   arr_1.forEach(item => {
+    //     cur_val_obj[item.code] = {
+    //       cur: '',// 当前涨幅
+    //       data: [],// 历史累计净值
+    //     }
+    //   })
 
-      render_1(arr_2);
-      render_2(arr_3);
+    //   render_1(arr_2);
+    //   render_2(arr_3);
 
-      // 获取涨幅
-      arr_1.forEach(item => {
-        const script = document.createElement('script');
-        script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js`;
-        document.body.appendChild(script);
-      })
+    //   // 获取涨幅
+    //   arr_1.forEach(item => {
+    //     const script = document.createElement('script');
+    //     script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js`;
+    //     document.body.appendChild(script);
+    //   })
 
-      // 请求历史数据
-      arr_1.forEach((item, index) => {
-        setTimeout(() => {
-          getChatData(item.code)
-        }, index * 15 + 10)
-      })
-    }).catch(err => {
-      console.log('err', err);
-    })
+    //   // 请求历史数据
+    //   arr_1.forEach((item, index) => {
+    //     setTimeout(() => {
+    //       getChatData(item.code)
+    //     }, index * 15 + 10)
+    //   })
+    // }).catch(err => {
+    //   console.log('err', err);
+    // })
 
     // 常规的
     function render_1(arr) {
@@ -164,7 +167,7 @@
     // 计算简单移动平均（SMA）
     function calculateSMA(data, period) {
       if (data.length < period) return []; // 数据不足
-      const sma = [];
+      let sma = Array(period).fill(null);
       for (let i = period - 1; i < data.length; i++) {
         const sum = data.slice(i - period + 1, i + 1).reduce((a, b) => a + b, 0);
         sma.push(sum / period);
@@ -174,7 +177,7 @@
 
     // 计算标准差（Standard Deviation）
     function calculateStdDev(data, period, sma) {
-      const stdDev = [];
+      let stdDev = Array(period).fill(null);
       for (let i = period - 1; i < data.length; i++) {
         const slice = data.slice(i - period + 1, i + 1);
         const variance = slice.reduce((sum, value) => sum + Math.pow(value - sma[i - period + 1], 2), 0) / period;
@@ -188,36 +191,62 @@
       const sma = calculateSMA(data, period); // 中轨
       const stdDev = calculateStdDev(data, period, sma); // 标准差
 
-      const upperBand = sma.map((val, idx) => val + multiplier * stdDev[idx]); // 上轨
-      const lowerBand = sma.map((val, idx) => val - multiplier * stdDev[idx]); // 下轨
+      const upperBand = sma.map((val, idx) => {
+        if (val === null) return null;
+        return val + multiplier * stdDev[idx]
+      }); // 上轨
+      const lowerBand = sma.map((val, idx) => {
+        if (val === null) return null;
+        return val - multiplier * stdDev[idx];
+      }); // 下轨
 
       return { middleBand: sma, upperBand, lowerBand };
     }
 
+
     // 渲染图形
     function renderChart(code) {
-      if (cur_val_obj[code].cur === '' || cur_val_obj[code].data.length === 0) {
-        return false;
-      }
-      console.log('渲染图形', cur_val_obj[code]);
+      // if (cur_val_obj[code].cur === '' || cur_val_obj[code].data.length === 0) {
+      //   return false;
+      // }
+      // console.log('渲染图形', cur_val_obj[code]);
 
-      const closePrices = [10, 12, 11, 13, 14, 15, 16, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 8, 9, 10];
+      let color_1 = '#f00';// y轴正数颜色
+      let color_2 = '#090';// y轴负数颜色
+      let color_3 = '';// k线的颜色
+      let color_4 = '';// 5线的颜色
+      let color_5 = '';// 60线的颜色
+      let color_6 = '';//
+
+      const closePrices = [10, 12, 11, 13, 14, 15, 16, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 8, 15, 10, 14];
       const { middleBand, upperBand, lowerBand } = calculateBollingerBands(closePrices);
 
-      console.log("中轨:", middleBand);
       console.log("上轨:", upperBand);
+      console.log("中轨:", middleBand);
       console.log("下轨:", lowerBand);
 
-      // 以 ECharts 为例
-      option = {
-        xAxis: { data: ['Day1', 'Day2', 'Day3', 'Day4', 'Day5', 'Day6', 'Day7', 'Day8', 'Day9', 'Day10', 'Day11', 'Day12', 'Day13', 'Day14', 'Day15', 'Day16', 'Day17', 'Day18', 'Day19', 'Day20'] },
+      var option = {
+        xAxis: { data: ['yy1', 'yy2', 'yy3', 'yy4', 'yy5', 'yy6', 'yy7', 'yy8', 'yy9', 'yy10', 'yy11', 'yy12', 'yy13', 'yy14', 'yy15', 'yy16', 'yy17', 'yy18', 'yy19', 'yy20', 'yy21', 'yy22', 'yy23'] },
         yAxis: {},
+        grid: {
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          containLabel: true
+        },
         series: [
           { name: '上轨', data: upperBand, type: 'line' },
           { name: '中轨', data: middleBand, type: 'line' },
           { name: '下轨', data: lowerBand, type: 'line' }
         ]
       };
+
+      var myChart = echarts.init(document.getElementById(`id_${code}`));
+      myChart.setOption(option);
+      $(this).on('resize', function () {
+        myChart.resize({});
+      })
 
       //       {
       //   "netValueRowName": "单位净值",
@@ -233,6 +262,8 @@
       //   "totalNetValue": "1.0790"
       // }
     }
+    renderChart('007467')
+    renderChart('018561')
 
   </script>
 </body>
