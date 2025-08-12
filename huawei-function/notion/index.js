@@ -2,8 +2,7 @@
 const nodemailer = require('nodemailer');
 var mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新增定投 易方达机器人ETF联接C(020973)`; // 右键主题
 mail_title = `【重要】慎重考虑后，南方红利低波50ETF(515450) 暂时迁移到 华泰柏瑞中证红利低波ETF联接C(007467)`;
-mail_title = `今天先持续定投`;
-mail_title = `华泰柏瑞红利、华夏国证现金流 卖出三天定投的量；`;
+mail_title = `博时人工智能卖出一些，其它坚持定投`;
 
 var marilArr = [
   'xuebinghui@bmrb.com.cn', // 薛炳辉
