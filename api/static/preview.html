@@ -57,9 +57,6 @@
   <!-- 量化 -->
   <div id="lianghua_box" style="padding: 10px 10px 20px 10px;"></div>
 
-  <hr>
-  <div id="his_wrapper"></div>
-
   <script>
     fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
       console.log('res', res);
@@ -77,6 +74,7 @@
 
       render_1(arr_2);
       render_2(arr_3);
+      render_2(arr_2,{split:true});
     }).catch(err => {
       console.log('err', err);
     })
@@ -86,9 +84,6 @@
       let html = arr
         .map(
           (item) => {
-            document.getElementById('his_wrapper').innerHTML += `<div>${item.name}(${item.code})</div><div id="his_${item.code}"></div>`;
-            getHistoryPerformance(item.code);// 获取历史表现数据
-
             let altstr = item.name || item.code;
             if (!item.zhang_url) {
               return `<img src="https://j4.dfcfw.com/charts/pic6/${item.code}.png" alt="${altstr}">`
@@ -104,7 +99,11 @@
     }
 
     // 需要服务器监听的
-    function render_2(arr) {
+    function render_2(arr,options) {
+      if(!!(options || {}).split){
+        let tempDiv = document.createElement('hr');
+        document.getElementById('lianghua_box').appendChild(tempDiv);'';
+      }
       arr.forEach(item => {
         let htmlString = `<div>${item.name}(${item.code})</div><div id="id_${item.code}_1"></div>`;
         let tempDiv = document.createElement('div');
@@ -192,8 +191,8 @@
       let html = '';
       html += data.dwjz;// 前一日净值
       html += ' ' + curTime;// 最新净值更新时间
-      html += ' ' + `<span class="${zhang_class}">${data.gszzl}</span>`;// 最新净值涨幅 正数是红色，负数是绿色
-      html += ' ' + `今日(<span id="his_${data.fundcode}"></span>)`;// 历史表现留的插槽
+      html += ' ' + `今日(<span class="${zhang_class}">${data.gszzl}</span>)`;// 最新净值涨幅 正数是红色，负数是绿色
+      html += ' ' + `<span id="his_${data.fundcode}"></span>`;// 历史表现留的插槽
 
       document.getElementById('id_' + data.fundcode + '_1').innerHTML = html;
       getHistoryPerformance(data.fundcode);// 获取历史表现数据
