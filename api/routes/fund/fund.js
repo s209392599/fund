@@ -215,8 +215,44 @@ router.post('/fund_today_rate_by_timer', (req, res) => {
   });
 });
 
-// 获取基金的基本信息
-router.post('/fund_base_info', (req, res) => {});
+/*
+获取基金的历史业绩
+https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=0 来源页面
+
+*/
+router.post('/fund_history_performance', (req, res) => {
+  const { fundcode = '', pageSize = 10 } = req.body;
+
+  if (!fundcode) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryPerformancePageInfo?reqData={"fundCode":"${fundcode}","channel":"9"}`;
+    fetch(u, {})
+      .then((data) => data.json())
+      .then((data) => {
+        let resultData = data.resultData || {};
+        let datas = resultData.datas || {};
+        let performanceList = datas.performanceList || [];
+        res.send({
+          code: 200,
+          msg: '成功',
+          data: performanceList,
+        });
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fundcode}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
 
 // router.get('/users/:id', (req, res) => {
 //   const userId = req.params.id;
