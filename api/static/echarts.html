@@ -17,42 +17,7 @@
   <script src="./public/jquery.min.js"></script>
   <script src="./public/echarts.min.js"></script>
   <script type="module">
-    /*
-    http://j4.dfcfw.com/charts/pic6/008087.png?v=1754900040433
-    https://image.sinajs.cn/newchart/v5/fund/nav/ss/008087.gif?v=1754899979474
-
-    electron的学习
-    uniapp-开发鸿蒙开发
-    还有专门的鸿蒙开发
-    wasm开发
-    vue源码学习
-    开发模式的学习
-    开始刷算法
-    切片上传和多个大文件下载
-    负载均衡
-    性能监听、优化、错误上传
-    canvas、svg绘制图形学习
-    threejs、d3等的学习
-    绘制流程图那些插件的学习
-    wobworker的学习
-    react和angular的学习
-    ssr、SSG、ISR
-
-    next
-    nuxt
-    wss协议
-    uniapp
-    各种数据库的使用  nodejs-进行链接试试
-
-    张燕辉的学习笔记还在吗？
-
-    虚拟币交易的学习、开发
-    学一点java
-    学python
-    学rust
-    */
     const splitNum = 40;
-
 
     // 计算简单移动平均（SMA）
     function calculateSMA(data, period) {
@@ -126,11 +91,22 @@
       console.log("中轨:", middleBand);
       console.log("下轨:", lowerBand);
 
+      var all_data_arr = [...upperBand, ...lowerBand];// 综合显示的数组
+      var yval_max = Math.max(...all_data_arr);// y轴显示的最大值
+      var yval_min = Math.min(...all_data_arr);// y轴显示的最小值
+
+      console.log('yval_max', Number(((yval_max - 0.005) * 100).toFixed(0)) / 100);
+      console.log('yval_min', Number(((yval_min - 0.005) * 100).toFixed(0)) / 100);
+
       var option = {
         backgroundColor: '#161616',
         xAxis: { data: chartHisData.slice(splitNum).map(v => v.date) },
         yAxis: {
           type: 'value',
+          // interval: 0.001,
+          min: Number(((yval_min - 0.005) * 100).toFixed(0)) / 100,  // 设置Y轴的最小值
+          max: Number(((yval_max - 0.005) * 100).toFixed(0)) / 100,  // 设置Y轴的最大值
+          splitNumber: 8,  // 设置Y轴的分割段数为5
           splitLine: {
             show: true, // 确保为 true
             lineStyle: {

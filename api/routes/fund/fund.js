@@ -218,7 +218,7 @@ router.post('/fund_today_rate_by_timer', (req, res) => {
 /*
 获取基金的历史业绩
 https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=0 来源页面
-
+近一周多少、近一月多少。。。。。。
 */
 router.post('/fund_history_performance', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;

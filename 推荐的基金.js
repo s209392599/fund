@@ -44,6 +44,7 @@ http://150.158.175.108:9999/preview.html 最新的基金涨幅预览地址哈
 https://fund.eastmoney.com/pingzhongdata/019260.js?v=20250724153651
 
 实时涨幅
+https://fundgz.1234567.com.cn/js/019260.js
 https://fundgz.1234567.com.cn/js/019260.js?rt=1753342851359
 
 https://image.sinajs.cn/newchart/v5/fundpre/min_s/008164.gif 涨幅
@@ -94,4 +95,62 @@ http://fundf10.eastmoney.com/jbgk_018561.html
 永赢科技智选混合发起C(022365)
 易方达标普信息科技指数(QDII-LOF)A(人民币)(161128)
 华夏中证机器人ETF发起式联接C(018345)
+*/
+
+/*
+
+https://saithink.top/guide/demo.html 模板网站
+
+  http://j4.dfcfw.com/charts/pic6/008087.png?v=1754900040433
+  https://image.sinajs.cn/newchart/v5/fund/nav/ss/008087.gif?v=1754899979474
+  008087要进入到监控
+
+  宝盈转型动力混合C(015389)  进入量化候选：2025年08月12日14:57:23
+
+  016531 - 碳中和
+  015389 - 进入候选
+
+  银华中证5G通信主题ETF联接A(008889)
+  银华中证5G通信主题ETF联接C(010524)
+
+  华夏中证5G通信主题ETF联接A(008086)
+  华夏中证5G通信主题ETF联接D(023765)
+
+  东财互联网C(012372) 适合到一定为止，但是是否和红利类的重合？
+
+
+  qq邮件里面怎么才能渲染出来 后来才请求的内容 比如018561的实际涨幅呢？还是在服务端先整理好
+
+  electron的学习
+  uniapp-开发鸿蒙开发
+  还有专门的鸿蒙开发
+  wasm开发
+  vue源码学习
+  开发模式的学习
+  开始刷算法
+  切片上传和多个大文件下载
+  负载均衡
+  性能监听、优化、错误上传
+  canvas、svg绘制图形学习
+  threejs、d3等的学习
+  绘制流程图那些插件的学习
+  wobworker的学习
+  react和angular的学习
+  ssr、SSG、ISR
+  加密
+
+  next
+  nuxt
+  wss协议
+  uniapp
+  taro学习一下
+  各种数据库的使用  nodejs-进行链接试试
+  反编译
+
+  张燕辉的学习笔记还在吗？
+
+  虚拟币交易的学习、开发
+  学一点java
+  学python
+  学rust
 */
