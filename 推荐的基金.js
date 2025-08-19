@@ -131,13 +131,21 @@ https://saithink.top/guide/demo.html 模板网站
   切片上传和多个大文件下载
   负载均衡
   性能监听、优化、错误上传
-  canvas、svg绘制图形学习
+  canvas、svg绘制图形学习ç
   threejs、d3等的学习
   绘制流程图那些插件的学习
   wobworker的学习
   react和angular的学习
   ssr、SSG、ISR
   加密
+  WebSQL
+  WebSocket 断线重连、心跳、鉴权、房间管理、消息类型  Node.js +Socket.io可以模拟一下
+  new Event( 自定义事件
+  GPU
+  GC
+  输入网址到页面加载  看下语雀的整理
+  grid布局
+  n8n 自动工作流
 
   next
   nuxt
