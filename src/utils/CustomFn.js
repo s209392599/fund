@@ -1,6 +1,6 @@
 // CustomDateFtt(1565059668200,"yyyy-MM-dd hh:mm:ss");// '2019-08-06 10:47:48'
 // CustomDateFtt(1565059668200,"yyyy-MM-dd");// '2019-08-06'
-export const CustomDateFtt = (date, fmt) => {
+export const CustomDateFtt = (date, fmt = 'yyyy-MM-dd hh:mm:ss') => {
   if (date != null && date != '' && date != undefined) {
     if (typeof date == 'string') {
       if (date.includes('T')) {

@@ -27,6 +27,12 @@ export default defineConfig({
   },
   css: {
     // preprocessorOptions: {
+    //   scss: {
+    //     // src/assets/css/variables.scss
+    //     additionalData: `@import "@/styles/variables.scss";`, // 引入全局变量文件
+    //   },
+    // },
+    // preprocessorOptions: {
     //   less: {
     //     modifyVars: {
     //       hack: `true; @import (reference) "${resolve(
@@ -72,7 +78,7 @@ export default defineConfig({
         // { src: 'src/assets/html/a.html', dest: 'example' },// 复制到dist/example/a.html
         { src: 'src/assets/html/a.html', dest: '' },
         { src: 'src/assets/html/b.html', dest: '' },
-      ]
+      ],
     }),
   ],
 });

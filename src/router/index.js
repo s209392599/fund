@@ -1,8 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-
 import Login from '@/views/login/login.vue';
-import Register from '@/views/login/register.vue';
-import Preview from '@/views/preview/preview.vue';
 
 const routes = [
   {
@@ -10,15 +7,15 @@ const routes = [
     name: 'Login',
     component: Login,
   },
-  {
-    path: '/register',
-    name: 'Register',
-    component: Register,
-  },
+  // {
+  //   path: '/register',
+  //   name: 'Register',
+  //   component: Register,
+  // },
   {
     path: '/preview',
     name: 'Preview',
-    component: Preview,
+    component: () => import('@/views/preview/preview.vue'),
   },
 ];
 /*

@@ -8,12 +8,14 @@
       <el-input v-model="form.password"></el-input>
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="onSubmit">登录</el-button>
+      <el-button type="primary" @click="onSubmit" style="width: 100%;">登录</el-button>
     </el-form-item>
   </el-form>
 </template>
 
 <script setup>
+const router = useRouter();
+
 const form = reactive({
   email: localStorage.getItem('email') || '',
   password: localStorage.getItem('password') || '',
@@ -43,10 +45,13 @@ const onSubmit = () => {
           localStorage.setItem('password', form.password);
           // 存储基金信息
           localStorage.setItem('fund', JSON.stringify(res.data.fund || []));
-          // 跳转到
+          localStorage.setItem('loginTime', CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"));
           console.log('res', res.data)
+          // 跳转到
+          router.push('/preview');
         } else {
           // 登录失败
+          ElMessage.error('登录失败！')
         }
       })
     } else {
