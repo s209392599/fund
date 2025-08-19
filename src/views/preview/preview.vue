@@ -1,30 +1,67 @@
 <script setup>
+import { ref, reactive, markRaw, defineAsyncComponent, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
+
 const router = useRouter();
 
 const info = reactive({
   // 顶部的tab页
-  list_tab: [
+  list_default: [
     {
       id: 1,
+      show: true,
       name: '第一个',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_01.vue'))),
       desc: ''
     },
     {
       id: 2,
+      show: true,
       name: '第二个',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
       desc: ''
     },
     {
       id: 3,
+      show: true,
       name: '第三个',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
       desc: ''
     },
     {
       id: 4,
+      show: true,
       name: '第四个',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
       desc: ''
-    }
+    },
+    {
+      id: 5,
+      show: true,
+      name: '第五个',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_05.vue'))),
+      desc: ''
+    },
+    {
+      id: 6,
+      show: true,
+      name: '标准基金维护',
+      permissions: 'admin',// 管理员才能有的
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_06.vue'))),
+      desc: ''
+    },
+    {
+      id: 7,
+      show: true,
+      name: '人员维护',
+      permissions: 'admin',// 管理员才能有的
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_07.vue'))),
+      desc: ''
+    },
   ],
+  list_tabs: [],
+  active_tab: null, // 初始为null，等数据准备好再设置
   password: ''
 });
 
@@ -33,20 +70,45 @@ if ([null, '', undefined].includes(email)) {
   ElMessage.error('登录失败！')
   router.push('/');
 } else {
-  console.log('争藏');
+  console.log('账号为：', email);
+
+  if (['209392599@qq.com'].includes(email)) {
+    info.list_tabs = info.list_default.filter(item => item.show);
+  } else {
+    info.list_tabs = info.list_default.filter(item => item.show && !item.permissions);
+  }
+
+  // 从本地存储获取active_tab，确保它在可用选项中
+  const savedTab = localStorage.getItem('preview_active_tab');
+  if (savedTab && info.list_tabs.some(tab => tab.id == savedTab)) {
+    info.active_tab = parseInt(savedTab);
+  } else {
+    info.active_tab = info.list_tabs[0]?.id || null;
+  }
+}
+
+const handleClick = (tab) => {
+  const tabId = tab.props.name;
+  localStorage.setItem('preview_active_tab', tabId);
 }
 </script>
 
 <template>
-  <div class="page-wrapper flex">
-    <div class="page-tabs">
-      <el-tabs v-model="info.activeName" @tab-click="handleClick">
-        <el-tab-pane v-for="item in info.list_tab" :key="item.id" :label="item.name">
-          <div class="page-main"></div>
-        </el-tab-pane>
-      </el-tabs>
-    </div>
-    <div class="page-main"></div>
+  <div class="wrapper">
+    <el-tabs v-model="info.active_tab" @tab-click="handleClick" class="page-tabs">
+      <el-tab-pane v-for="item in info.list_tabs" :key="item.id" :label="item.name" :name="item.id">
+        <div class="tabs-content">
+          <Suspense>
+            <template #default>
+              <component :is="item.component" />
+            </template>
+            <template #fallback>
+              <div>Loading...</div>
+            </template>
+          </Suspense>
+        </div>
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 
@@ -54,10 +116,34 @@ if ([null, '', undefined].includes(email)) {
 .wrapper {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.page-tabs {
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
+:deep(.el-tabs) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .el-tabs__header {
+    /* 左右间距10px */
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .el-tabs__content {
+    flex: 1;
+    overflow: auto;
+  }
+
+  .tabs-content {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .el-tabs__item {
+    padding: 0 6px;
+  }
 }
 </style>
