@@ -12,6 +12,17 @@ const getUserJson = () => {
   const jsonData = JSON.parse(fileContent);
   return jsonData;
 };
+// 存储用户的json数据
+const updateUserJson = (newJsonData) => {
+  const filePath = path.join(__dirname, '../../data/base/user.json');
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.log('err', err);
+    return false;
+  }
+};
 
 // 定义一个GET示例请求
 router.get('/testget', (req, res) => {
@@ -50,7 +61,7 @@ router.post('/fund_login', (req, res) => {
     });
   }
   const userData = (getUserJson() || {}).data || [];
-  const user = userData.find((item) => item.mail === email);
+  const user = userData.find((item) => item.email === email);
   if (!user) {
     return res.send({
       code: 400,
@@ -70,7 +81,6 @@ router.post('/fund_login', (req, res) => {
     msg: '登录成功',
     data: user,
   });
-  // fund_login
 });
 
 // 注册
@@ -88,9 +98,57 @@ router.get('/fund_public_fund', (req, res) => {
   });
 });
 
-// 修改用户信息
+// 获取所有用户
+router.post('/fund_get_all_user_info', (req, res) => {
+  const userData = (getUserJson() || {}).data || [];
+  return res.send({
+    code: 200,
+    msg: '获取所用用户成功',
+    data: userData,
+  });
+});
+
+// 修改某个用户信息
 router.post('/fund_update_user_info', (req, res) => {
   console.log('req.body', req.body);
+});
+
+// 删除某个用户
+router.post('/fund_del_user_info', (req, res) => {
+  const { email = '' } = req.body;
+  if (!email) {
+    return res.send({
+      code: 400,
+      msg: '请传入邮箱',
+      data: [],
+    });
+  }
+  let USER_JSON = getUserJson() || {};
+  const userData = USER_JSON.data || [];
+  const user = userData.find((item) => item.email === email);
+  if (!user) {
+    return res.send({
+      code: 400,
+      msg: '未获取到用户数据',
+      data: [],
+    });
+  } else {
+    USER_JSON.data = userData.filter((v) => v.email != email);
+    const result = updateUserJson(USER_JSON);
+    if (result) {
+      res.send({
+        code: 200,
+        msg: '删除成功',
+        data: user,
+      });
+    } else {
+      return res.send({
+        code: 400,
+        msg: '删除失败',
+        data: [],
+      });
+    }
+  }
 });
 
 // 获取基金历史数据

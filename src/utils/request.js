@@ -14,7 +14,7 @@ const service = axios.create({
 service.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
-    const whiteList = ['/login', '/register'];
+    const whiteList = ['/login'];
     const isWhiteList = whiteList.includes(router.currentRoute.value.path);
 
     if (token && !isWhiteList) {

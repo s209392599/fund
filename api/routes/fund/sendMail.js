@@ -15,7 +15,7 @@ const sendMailFn = async (cakkbak_res, content) => {
   const jsonData = JSON.parse(fileContent);
   const dataArray = jsonData.data;
 
-  var marilArr = dataArray.map((v) => v.mail);
+  var marilArr = dataArray.map((v) => v.email);
   var marilArr = [
     '209392599@qq.com', // 郭坤
     's209392599@163.com', // 郭坤
