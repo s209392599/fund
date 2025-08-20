@@ -25,6 +25,10 @@ export async function server_fund_add_user_info(data) {
 export async function server_fund_del_user_info(data) {
   return request.post('/fund_del_user_info', data);
 }
+// 修改某个用户信息
+export async function server_fund_update_user_info(data) {
+  return request.post('/fund_update_user_info', data);
+}
 // 获取timer基金数据
 export async function server_fund_today_rate_by_timer(data) {
   return request.post('/fund_today_rate_by_timer', data);

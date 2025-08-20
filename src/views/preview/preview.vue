@@ -8,55 +8,69 @@ const router = useRouter();
 const info = reactive({
   // 顶部的tab页
   list_default: [
-    {
-      id: 1,
-      show: true,
-      name: '第一个',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_01.vue'))),
-      desc: ''
-    },
-    {
-      id: 2,
-      show: true,
-      name: '第二个',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
-      desc: ''
-    },
-    {
-      id: 3,
-      show: true,
-      name: '第三个',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
-      desc: ''
-    },
-    {
-      id: 4,
-      show: true,
-      name: '第四个',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
-      desc: ''
-    },
-    {
-      id: 5,
-      show: true,
-      name: '第五个',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_05.vue'))),
-      desc: ''
-    },
+    // {
+    //   id: 1,
+    //   show: true,
+    //   name: '涨幅预览',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_01.vue'))),
+    //   desc: ''
+    // },
+    // {
+    //   id: 2,
+    //   show: true,
+    //   name: '均线预览',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
+    //   desc: ''
+    // },
+    // {
+    //   id: 3,
+    //   show: true,
+    //   name: '今日收益',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
+    //   desc: ''
+    // },
+    // {
+    //   id: 4,
+    //   show: true,
+    //   name: '业绩表现',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
+    //   desc: ''
+    // },
+    // {
+    //   id: 5,
+    //   show: true,
+    //   name: '历史净值',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_05.vue'))),
+    //   desc: ''
+    // },
     {
       id: 6,
       show: true,
-      name: '标准基金维护',
-      permissions: 'admin',// 管理员才能有的
+      name: '地址导航',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_06.vue'))),
       desc: ''
     },
+    // {
+    //   id: 7,
+    //   show: true,
+    //   name: '基金维护',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_07.vue'))),
+    //   desc: ''
+    // },
     {
-      id: 7,
+      id: 8,
+      show: true,
+      name: '标准基金维护',
+      permissions: 'admin',// 管理员才能有的
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_08.vue'))),
+      desc: ''
+    },
+    {
+      id: 9,
       show: true,
       name: '人员维护',
       permissions: 'admin',// 管理员才能有的
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_07.vue'))),
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_09.vue'))),
       desc: ''
     },
   ],

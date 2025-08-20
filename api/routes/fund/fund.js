@@ -138,7 +138,35 @@ router.post('/fund_add_user_info', (req, res) => {
 
 // 修改某个用户信息
 router.post('/fund_update_user_info', (req, res) => {
-  console.log('req.body', req.body);
+  const { form = {} } = req.body;
+  let USER_JSON = getUserJson() || {};
+
+  const userData = USER_JSON.data || [];
+  const dIndex = userData.findIndex((item) => item.email === form.email);
+  if (dIndex === -1) {
+    res.send({
+      code: 400,
+      msg: '用户不存在',
+      data: [],
+    });
+  } else {
+    userData[dIndex] = form;
+    const result = updateUserJson(USER_JSON);
+    console.log('result', result);
+    if (result) {
+      res.send({
+        code: 200,
+        msg: '操作成功',
+        data: [],
+      });
+    } else {
+      res.send({
+        code: 400,
+        msg: '操作失败',
+        data: [],
+      });
+    }
+  }
 });
 
 // 删除某个用户
