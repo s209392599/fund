@@ -16,6 +16,11 @@ export async function server_fund_login(data) {
 export async function server_fund_get_all_user_info(data) {
   return request.post('/fund_get_all_user_info', data);
 }
+// 新增用户
+export async function server_fund_add_user_info(data) {
+  console.log('-data', data);
+  return request.post('/fund_add_user_info', data);
+}
 // 删除某个用户
 export async function server_fund_del_user_info(data) {
   return request.post('/fund_del_user_info', data);

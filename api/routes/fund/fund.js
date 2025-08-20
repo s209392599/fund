@@ -83,11 +83,6 @@ router.post('/fund_login', (req, res) => {
   });
 });
 
-// 注册
-router.post('/fund_register', (req, res) => {
-  console.log('req.body', req.body);
-});
-
 // 获取公共的基金数据
 router.get('/fund_public_fund', (req, res) => {
   const userData = getUserJson() || [];
@@ -106,6 +101,39 @@ router.post('/fund_get_all_user_info', (req, res) => {
     msg: '获取所用用户成功',
     data: userData,
   });
+});
+
+// 新增用户
+router.post('/fund_add_user_info', (req, res) => {
+  const { form = {} } = req.body;
+  let USER_JSON = getUserJson() || {};
+
+  const userData = USER_JSON.data || [];
+  const user = userData.find((item) => item.email === form.email);
+  if (!user) {
+    USER_JSON.data.push(form);
+    const result = updateUserJson(USER_JSON);
+    console.log('result', result);
+    if (result) {
+      res.send({
+        code: 200,
+        msg: '新增成功',
+        data: [],
+      });
+    } else {
+      res.send({
+        code: 400,
+        msg: '新增失败',
+        data: [],
+      });
+    }
+  } else {
+    res.send({
+      code: 400,
+      msg: '用户已存在',
+      data: [],
+    });
+  }
 });
 
 // 修改某个用户信息
