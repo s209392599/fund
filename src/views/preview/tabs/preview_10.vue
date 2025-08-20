@@ -1,5 +1,5 @@
 <script setup>
-console.log('src/views/preview/tabs/preview_06.vue');
+console.log('src/views/preview/tabs/preview_10.vue');
 
 const info = reactive({
   showBtn: false,
@@ -34,21 +34,12 @@ const info = reactive({
     },
   ]
 });
-if (localStorage.getItem('email') === '209392599@qq.com') {
-  info.showBtn = true;
-}
 
-// 新增地址
-const addUser = () => {
-  console.log('sdfsf');
-}
 </script>
 
 <template>
   <div class="page_wrapper">
-    <div class="flex pb-5" v-if="info.showBtn">
-      <el-button type="primary" size="small" @click="addUser()">新增地址</el-button>
-    </div>
+
 
     <div v-for="(item, index) in info.list" :key="index" class="nav_item">
       <a :href="item.adress" target="_blank">{{ item.name }}</a>
@@ -59,17 +50,5 @@ const addUser = () => {
 <style scoped lang="scss">
 .page_wrapper {
   padding: 10px;
-}
-
-.nav_item {
-  font-size: 14px;
-  height: 34px;
-  line-height: 34px;
-  border-bottom: 1px dashed #ccc;
-
-  a {
-    // color: #000;
-    text-decoration: none;
-  }
 }
 </style>

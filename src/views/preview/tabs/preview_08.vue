@@ -1,4 +1,6 @@
 <script setup>
+console.log('src/views/preview/tabs/preview_08.vue');
+
 const diaForm = ref(null);
 const info = reactive({
   tableData: [],

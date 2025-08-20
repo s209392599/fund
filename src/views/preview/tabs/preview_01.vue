@@ -1,4 +1,5 @@
 <script setup>
+console.log('src/views/preview/tabs/preview_01.vue');
 
 </script>
 

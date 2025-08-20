@@ -5,20 +5,7 @@ import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
 
 const router = useRouter();
 
-import preview_01 from './tabs/preview_01.vue';
-import preview_02 from './tabs/preview_02.vue';
-import preview_03 from './tabs/preview_03.vue';
-import preview_04 from './tabs/preview_04.vue';
-import preview_05 from './tabs/preview_05.vue';
-import preview_06 from './tabs/preview_06.vue';
-import preview_07 from './tabs/preview_07.vue';
-import preview_08 from './tabs/preview_08.vue';
-import preview_09 from './tabs/preview_09.vue';
-import preview_10 from './tabs/preview_10.vue';
-import preview_11 from './tabs/preview_11.vue';
-
 const info = reactive({
-  currentTabComponent: '',
   // 顶部的tab页
   list_default: [
     // {
@@ -126,12 +113,10 @@ if ([null, '', undefined].includes(email)) {
   } else {
     info.active_tab = info.list_tabs[0]?.id || null;
   }
-  info.currentTabComponent = info.list_tabs.find(tab => tab.id == info.active_tab)?.component;
 }
 
 const handleClick = (tab) => {
   const tabId = tab.props.name;
-  info.currentTabComponent = info.list_tabs.find(tab => tab.id == tabId)?.component;
   localStorage.setItem('preview_active_tab', tabId);
 }
 </script>
@@ -140,10 +125,18 @@ const handleClick = (tab) => {
   <div class="wrapper">
     <el-tabs v-model="info.active_tab" @tab-click="handleClick" class="page-tabs">
       <el-tab-pane v-for="item in info.list_tabs" :key="item.id" :label="item.name" :name="item.id">
+        <div class="tabs-content">
+          <Suspense>
+            <template #default>
+              <component :is="item.component" />
+            </template>
+            <template #fallback>
+              <div>Loading...</div>
+            </template>
+          </Suspense>
+        </div>
       </el-tab-pane>
     </el-tabs>
-
-    <component :is="info.currentTabComponent" v-if="info.currentTabComponent" />
   </div>
 </template>
 
