@@ -5,17 +5,17 @@ import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
 
 const router = useRouter();
 
-import preview_01 from './tabs/preview_01.vue';
-import preview_02 from './tabs/preview_02.vue';
-import preview_03 from './tabs/preview_03.vue';
-import preview_04 from './tabs/preview_04.vue';
-import preview_05 from './tabs/preview_05.vue';
-import preview_06 from './tabs/preview_06.vue';
-import preview_07 from './tabs/preview_07.vue';
-import preview_08 from './tabs/preview_08.vue';
-import preview_09 from './tabs/preview_09.vue';
-import preview_10 from './tabs/preview_10.vue';
-import preview_11 from './tabs/preview_11.vue';
+// import preview_01 from './tabs/preview_01.vue';
+// import preview_02 from './tabs/preview_02.vue';
+// import preview_03 from './tabs/preview_03.vue';
+// import preview_04 from './tabs/preview_04.vue';
+// import preview_05 from './tabs/preview_05.vue';
+// import preview_06 from './tabs/preview_06.vue';
+// import preview_07 from './tabs/preview_07.vue';
+// import preview_08 from './tabs/preview_08.vue';
+// import preview_09 from './tabs/preview_09.vue';
+// import preview_10 from './tabs/preview_10.vue';
+// import preview_11 from './tabs/preview_11.vue';
 
 const info = reactive({
   currentTabComponent: '',
@@ -143,7 +143,9 @@ const handleClick = (tab) => {
       </el-tab-pane>
     </el-tabs>
 
-    <component :is="info.currentTabComponent" v-if="info.currentTabComponent" />
+    <div class="main">
+      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" />
+    </div>
   </div>
 </template>
 
@@ -155,27 +157,31 @@ const handleClick = (tab) => {
   flex-direction: column;
 }
 
-:deep(.el-tabs) {
+.main {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  overflow: auto;
+}
+
+:deep(.el-tabs) {
+  // flex: 1;
+  // display: flex;
+  // flex-direction: column;
+  // overflow: hidden;
 
   .el-tabs__header {
-    /* 左右间距10px */
     flex-shrink: 0;
     margin: 0;
   }
 
-  .el-tabs__content {
-    flex: 1;
-    overflow: auto;
-  }
+  // .el-tabs__content {
+  //   flex: 1;
+  //   overflow: auto;
+  // }
 
-  .tabs-content {
-    height: 100%;
-    overflow: auto;
-  }
+  // .tabs-content {
+  //   height: 100%;
+  //   overflow: auto;
+  // }
 
   .el-tabs__item {
     padding: 0 6px;
