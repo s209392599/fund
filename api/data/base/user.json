@@ -122,6 +122,28 @@
       "type": "量化"
     },
     {
+      "code": "002112",
+      "name": "德邦鑫星价值灵活配置混合C",
+      "short_name": "",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "023350",
+      "name": "诺安多策略混合C",
+      "short_name": "",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
       "code": "023521",
       "name": "博时上证科创板人工智能ETF发起式联接C",
       "short_name": "",
@@ -142,6 +164,17 @@
       "desc": "",
       "fixed": 50,
       "type": "机器人"
+    },
+    {
+      "code": "012322",
+      "name": "东财云计算增强C",
+      "short_name": "",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "云计算"
     },
     {
       "code": "017437",

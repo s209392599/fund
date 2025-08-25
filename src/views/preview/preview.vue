@@ -100,6 +100,13 @@ const info = reactive({
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_09.vue'))),
       desc: ''
     },
+    // {
+    //   id: 12,
+    //   show: true,
+    //   name: '基金搜搜',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
+    //   desc: ''
+    // },
   ],
   list_tabs: [],
   active_tab: null, // 初始为null，等数据准备好再设置

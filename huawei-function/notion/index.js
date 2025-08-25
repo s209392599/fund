@@ -2,10 +2,11 @@
 const nodemailer = require('nodemailer');
 var mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新增定投 易方达机器人ETF联接C(020973)`; // 右键主题
 mail_title = `量化可再手动买入一点；其它先坚持定投`;
+mail_title = `新增两个量化推荐: 德邦鑫星价值灵活配置混合C(002112) 中航机遇领航混合发起C(018957)`;
 
 var marilArr = [
-  'xuebinghui@bmrb.com.cn', // 薛炳辉
   '209392599@qq.com', // 郭坤
+  'xuebinghui@bmrb.com.cn', // 薛炳辉
   'cdk1025@foxmail.com', // 前端帮帮群-Aiden
   'liucuimin1234@163.com', // 刘翠敏
   '2774710531@qq.com', // 基金-王亚娟
@@ -54,37 +55,16 @@ var marilArr = [
 ];
 
 var html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>涨幅速览</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    #imgbox {
-      display: flex;
-      /* justify-content: center; */
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    img {
-      display: block;
-      border: 1px solid #ddd !important;
-      margin: 2px;
-      height: 160px;
-      width: calc(50% - 4px);
-    }
+  <title>涨幅速览</title><style>
+    * {margin: 0;padding: 0;box-sizing: border-box;}
+    #imgbox {display: flex;align-items: center;flex-wrap: wrap;}
+    img {display: block;border: 1px solid #ddd !important;margin: 2px;height: 160px;width: calc(50% - 4px);}
   </style>
 </head>
-
 <body>
+  <div>${mail_title}</div>
   <div id="imgbox">
     <img src="https://j4.dfcfw.com/charts/pic6/007467.png" alt="华泰柏瑞中证红利低波ETF联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/019260.png" alt="富国恒生红利ETF联接A">
@@ -92,44 +72,14 @@ var html = `
     <img src="https://j4.dfcfw.com/charts/pic6/023918.png" alt="华夏国证自由现金流ETF发起式联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/023521.png" alt="博时上证科创板人工智能ETF发起式联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/020973.png" alt="易方达机器人ETF联接C">
+    <img src="https://j4.dfcfw.com/charts/pic6/012322.png" alt="东财云计算增强C">
 
     <img src="https://j4.dfcfw.com/charts/pic6/008087.png" alt="华夏中证5G通信主题ETF联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/021030.png" alt="汇添富国证港股通创新药ETF发起式联接A">
   </div>
 </body>
-
 </html>
 `;
-
-/*
-    https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&cb=jQuery351018138707342421845_1751948554116&fields=f58%2Cf734%2Cf107%2Cf57%2Cf43%2Cf59%2Cf169%2Cf170%2Cf152%2Cf46%2Cf60%2Cf44%2Cf45%2Cf47%2Cf48%2Cf19%2Cf17%2Cf531%2Cf15%2Cf13%2Cf11%2Cf20%2Cf18%2Cf16%2Cf14%2Cf12%2Cf39%2Cf37%2Cf35%2Cf33%2Cf31%2Cf40%2Cf38%2Cf36%2Cf34%2Cf32%2Cf211%2Cf212%2Cf213%2Cf214%2Cf215%2Cf210%2Cf209%2Cf208%2Cf207%2Cf206%2Cf161%2Cf49%2Cf171%2Cf50%2Cf86%2Cf168%2Cf108%2Cf167%2Cf71%2Cf292%2Cf51%2Cf52%2Cf191%2Cf192%2Cf452%2Cf177&secid=1.515450&ut=fa5fd1943c7b386f172d6893dbfba10b&wbp2u=%7C0%7C0%7C0%7Cweb&dect=1&_=1751948554117
-
-    https://push2.eastmoney.com/api/qt/stock/get?invt=2&fltt=1&fields=f58,f734,f107,f57,f43,f59,f169,f170,f152,f46,f60,f44,f45,f47,f48,f19,f17,f531,f15,f13,f11,f20,f18,f16,f14,f12,f39,f37,f35,f33,f31,f40,f38,f36,f34,f32,f211,f212,f213,f214,f215,f210,f209,f208,f207,f206,f161,f49,f171,f50,f86,f168,f108,f167,f71,f292,f51,f52,f191,f192,f452,f177&secid=1.515450
-
-    https://push2.eastmoney.com/api/qt/stock/get?fields=f58,f57,f43,f60,f169,f170&secid=1.515450
-    "data":{"f43":1494,"f57":"515450","f58":"红利低波50ETF","f60":1496,"f169":-2,"f170":-13}
-
-    https://push2.eastmoney.com/api/qt/stock/get?fields=f58,f57,f43,f60,f169,f170&secid=1.000001
-    "data":{"f43":349316,"f57":"000001","f58":"上证指数","f60":347313,"f169":2003,"f170":58}
-
-    f58: 指数代号
-    f57: 指数名称
-    f43: 当前值
-    f60: 昨收
-    f169: 差值
-    f170: 涨幅百分比
-
-    涨幅
-    https://fundgz.1234567.com.cn/js/007467.js
-    jsonpgz({"fundcode":"007467","name":"华泰柏瑞中证红利低波ETF联接C","jzrq":"2025-07-07",
-    "dwjz":"1.7074",// 单位净值
-    "gsz":"1.7030",// 估算净值
-    "gszzl":"-0.26",// 估算净值涨跌
-    "gztime":"2025-07-08 11:30"// 估值时间
-
-    下降值 44也要展示一下
-    });
-    */
 
 // 创建传输器
 const transporter = nodemailer.createTransport({
