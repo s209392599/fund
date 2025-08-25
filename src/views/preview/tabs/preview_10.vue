@@ -10,226 +10,19 @@ const info = reactive({
   active: 2,
   dayArr: [1, 5, 10, 20, 40, 60, 120, 244],// 488, 732
   list: [
-    {
-      "code": "018561",
-      "name": "中信保诚多策略混合(LOF)C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 100,
-      "type": "量化",
-      his_data: [
-        {
-          "date": "2025-07-16",
-          "netValue": "1.6969",
-          "dailyProfit": "-0.32",
-          "totalNetValue": "1.9669"
-        },
-        {
-          "date": "2025-07-17",
-          "netValue": "1.6940",
-          "dailyProfit": "-0.17",
-          "totalNetValue": "1.9640"
-        },
-        {
-          "date": "2025-07-18",
-          "netValue": "1.7015",
-          "dailyProfit": "0.44",
-          "totalNetValue": "1.9715"
-        },
-        {
-          "date": "2025-07-21",
-          "netValue": "1.7013",
-          "dailyProfit": "-0.01",
-          "totalNetValue": "1.9713"
-        },
-        {
-          "date": "2025-07-22",
-          "netValue": "1.7041",
-          "dailyProfit": "0.16",
-          "totalNetValue": "1.9741"
-        },
-        {
-          "date": "2025-07-23",
-          "netValue": "1.7061",
-          "dailyProfit": "0.12",
-          "totalNetValue": "1.9761"
-        },
-        {
-          "date": "2025-07-24",
-          "netValue": "1.6937",
-          "dailyProfit": "-0.73",
-          "totalNetValue": "1.9637"
-        },
-        {
-          "date": "2025-07-25",
-          "netValue": "1.6828",
-          "dailyProfit": "-0.64",
-          "totalNetValue": "1.9528"
-        },
-        {
-          "date": "2025-07-28",
-          "netValue": "1.6773",
-          "dailyProfit": "-0.33",
-          "totalNetValue": "1.9473"
-        },
-        {
-          "date": "2025-07-29",
-          "netValue": "1.6682",
-          "dailyProfit": "-0.54",
-          "totalNetValue": "1.9382"
-        },
-        {
-          "date": "2025-07-30",
-          "netValue": "1.6749",
-          "dailyProfit": "0.40",
-          "totalNetValue": "1.9449"
-        },
-        {
-          "date": "2025-07-31",
-          "netValue": "1.6560",
-          "dailyProfit": "-1.13",
-          "totalNetValue": "1.9260"
-        },
-        {
-          "date": "2025-08-01",
-          "netValue": "1.6555",
-          "dailyProfit": "-0.03",
-          "totalNetValue": "1.9255"
-        },
-        {
-          "date": "2025-08-04",
-          "netValue": "1.6647",
-          "dailyProfit": "0.56",
-          "totalNetValue": "1.9347"
-        },
-        {
-          "date": "2025-08-05",
-          "netValue": "1.6841",
-          "dailyProfit": "1.17",
-          "totalNetValue": "1.9541"
-        },
-        {
-          "date": "2025-08-06",
-          "netValue": "1.6857",
-          "dailyProfit": "0.10",
-          "totalNetValue": "1.9557"
-        }
-      ],
-    },
-    {
-      "code": "020726",
-      "name": "建信灵活配置混合C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 100,
-      "type": "量化",
-      his_data: [
-        {
-          "date": "2025-07-16",
-          "netValue": "1.6969",
-          "dailyProfit": "-0.32",
-          "totalNetValue": "1.9669"
-        },
-        {
-          "date": "2025-07-17",
-          "netValue": "1.6940",
-          "dailyProfit": "-0.17",
-          "totalNetValue": "1.9640"
-        },
-        {
-          "date": "2025-07-18",
-          "netValue": "1.7015",
-          "dailyProfit": "0.44",
-          "totalNetValue": "1.9715"
-        },
-        {
-          "date": "2025-07-21",
-          "netValue": "1.7013",
-          "dailyProfit": "-0.01",
-          "totalNetValue": "1.9713"
-        },
-        {
-          "date": "2025-07-22",
-          "netValue": "1.7041",
-          "dailyProfit": "0.16",
-          "totalNetValue": "1.9741"
-        },
-        {
-          "date": "2025-07-23",
-          "netValue": "1.7061",
-          "dailyProfit": "0.12",
-          "totalNetValue": "1.9761"
-        },
-        {
-          "date": "2025-07-24",
-          "netValue": "1.6937",
-          "dailyProfit": "-0.73",
-          "totalNetValue": "1.9637"
-        },
-        {
-          "date": "2025-07-25",
-          "netValue": "1.6828",
-          "dailyProfit": "-0.64",
-          "totalNetValue": "1.9528"
-        },
-        {
-          "date": "2025-07-28",
-          "netValue": "1.6773",
-          "dailyProfit": "-0.33",
-          "totalNetValue": "1.9473"
-        },
-        {
-          "date": "2025-07-29",
-          "netValue": "1.6682",
-          "dailyProfit": "-0.54",
-          "totalNetValue": "1.9382"
-        },
-        {
-          "date": "2025-07-30",
-          "netValue": "1.6749",
-          "dailyProfit": "0.40",
-          "totalNetValue": "1.9449"
-        },
-        {
-          "date": "2025-07-31",
-          "netValue": "1.6560",
-          "dailyProfit": "-1.13",
-          "totalNetValue": "1.9260"
-        },
-        {
-          "date": "2025-08-01",
-          "netValue": "1.6555",
-          "dailyProfit": "-0.03",
-          "totalNetValue": "1.9255"
-        },
-        {
-          "date": "2025-08-04",
-          "netValue": "1.6647",
-          "dailyProfit": "0.56",
-          "totalNetValue": "1.9347"
-        },
-        {
-          "date": "2025-08-05",
-          "netValue": "1.6841",
-          "dailyProfit": "1.17",
-          "totalNetValue": "1.9541"
-        },
-        {
-          "date": "2025-08-06",
-          "netValue": "1.6857",
-          "dailyProfit": "0.10",
-          "totalNetValue": "1.9557"
-        }
-      ],
-    },
+
   ]
 });
+// 额外的对象来处理网页数据
+// const baseObj = {
+//   find: [
+//     {
+//       "code": "018561",
+//       "name": "中信保诚多策略混合(LOF)C",
+//       his_data: []
+//     }
+//   ]
+// };
 
 const getShowName = (item) => {
   let str = `${item.code}-${item.name}`;
@@ -244,6 +37,13 @@ const getHisData = (fundcode) => {
     pageSize: info.dayArr[info.dayArr.length - 1]
   }).then(res => {
     console.log('res', res);
+    for (let i = 0; i < info.list.length; i++) {
+      if (info.list[i].code === fundcode) {
+        info.list[i].his_data = res.data || [];
+        render_chart_fn();// 渲染图形
+        break;
+      }
+    }
   })
 }
 
@@ -355,12 +155,50 @@ const viewDayFn = (num, active) => {
   console.log('num', num, active);
 }
 
+// 获取用户数据
+const getUserInfo = () => {
+  setTimeout(() => {
+    info.list = [
+      {
+        "code": "018561",
+        "name": "中信保诚多策略混合(LOF)C",
+        "short_name": "",
+        "zhang_url": "服务器监听",
+        "point_line_top": null,
+        "point_line_down": null,
+        "desc": "",
+        "fixed": 100,
+        "type": "量化",
+        his_data: [],
+      },
+      {
+        "code": "020726",
+        "name": "建信灵活配置混合C",
+        "short_name": "",
+        "zhang_url": "服务器监听",
+        "point_line_top": null,
+        "point_line_down": null,
+        "desc": "",
+        "fixed": 100,
+        "type": "量化",
+        his_data: [],
+      }
+    ];
+    for (let i = 0; i < info.list.length; i++) {
+      setTimeout(() => {
+        getHisData(info.list[i].code);//请求历史数据
+      }, i * 100)
+    }
+  }, 300)
+}
+
 // 在组件挂载时初始化图表
 onMounted(() => {
   if (chart.value && echartsInstance) {
     myChart = echartsInstance.init(chart.value);
-    render_chart_fn();// 渲染图标
+    render_chart_fn();// 渲染图形
   }
+  getUserInfo();// 获取用户数据
 });
 
 // 在组件卸载时销毁图表
