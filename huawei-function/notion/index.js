@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 var mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新增定投 易方达机器人ETF联接C(020973)`; // 右键主题
 mail_title = `量化可再手动买入一点；其它先坚持定投`;
 mail_title = `新增两个量化推荐: 德邦鑫星价值灵活配置混合C(002112) 中航机遇领航混合发起C(018957)`;
+mail_title = `恒生科技转东财或者中航机遇一点；其它先坚持定投`;
 
 var marilArr = [
   '209392599@qq.com', // 郭坤
