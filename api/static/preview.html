@@ -76,14 +76,14 @@
 <body>
   <div id="imgbox"></div>
 
-  <div style="padding: 0px 10px 0px 10px;">下面表格注：“今日”这一列是预测涨幅，非当前实际涨幅；后续列是各个历史阶段的涨幅;手机端可滑动查看</div>
+  <div style="padding: 0px 10px 0px 10px;">注：“今日”这一列是预测涨幅，非当前实际涨幅；后续列是各个历史阶段的涨幅;手机端可滑动查看</div>
   <div id="app" style="padding: 4px 10px 15px 10px;"></div>
 
   <div id="table_wrapper_1" style="display: none;">
     <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
       <el-table-column fixed prop="code" align="center" label="基金号" width="70"></el-table-column>
-      <el-table-column prop="name" label="Name" min-width="210" show-overflow-tooltip></el-table-column>
+      <el-table-column prop="name" label="Name" width="210" show-overflow-tooltip></el-table-column>
 
       <el-table-column align="right" label="今日" width="56">
         <template v-slot="{ row }">
@@ -91,55 +91,55 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近一周">
+      <el-table-column align="right" label="近一周" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,0)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近1月">
+      <el-table-column align="right" label="近1月" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,1)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近3月">
+      <el-table-column align="right" label="近3月" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,2)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近6月">
+      <el-table-column align="right" label="近6月" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,3)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近1年">
+      <el-table-column align="right" label="近1年" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,4)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近3年">
+      <el-table-column align="right" label="近3年" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,5)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近5年">
+      <el-table-column align="right" label="近5年" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,6)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="今年">
+      <el-table-column align="right" label="今年" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,7)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="成立">
+      <el-table-column align="right" label="成立" width="64">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,8)"></span>
         </template>
