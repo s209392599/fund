@@ -75,15 +75,17 @@
 
 <body>
   <div id="imgbox"></div>
-  <div id="app" style="padding: 10px 15px;"></div>
+
+  <div style="padding: 0px 10px 0px 10px;">下面表格注：“今日”这一列是预测涨幅，非当前实际涨幅；后续列是各个历史阶段的涨幅;手机端可滑动查看</div>
+  <div id="app" style="padding: 4px 10px 15px 10px;"></div>
 
   <div id="table_wrapper_1" style="display: none;">
     <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
-      <el-table-column fixed type="index" align="center" label="序" width="40"></el-table-column>
-      <el-table-column fixed prop="code" align="center" label="基金号" width="80"></el-table-column>
-      <el-table-column prop="name" label="Name" min-width="220" show-overflow-tooltip></el-table-column>
+      <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
+      <el-table-column fixed prop="code" align="center" label="基金号" width="70"></el-table-column>
+      <el-table-column prop="name" label="Name" min-width="210" show-overflow-tooltip></el-table-column>
 
-      <el-table-column align="right" label="今日">
+      <el-table-column align="right" label="今日" width="56">
         <template v-slot="{ row }">
           <span v-html="getToday(row)"></span>
         </template>
@@ -165,20 +167,20 @@
           };
         },
         mounted() {
-          // 在组件挂载完成后调用render_2函数，但添加判断防止重复调用
           if (!info.isRendered) {
+            console.log('info.arr_1',info.arr_1);
             render_2(info.arr_1);
-            info.isRendered = true; // 设置标志为已渲染
+            info.isRendered = true;
           }
         },
         methods: {
           getHisdata(row, index) {
             let obj = row.zhang_his[index] || {};
             if (obj.hasOwnProperty('avg')) {
-              if (Number(obj.avg) >= 0) {
-                return `<span class="color-red">${obj.avg}</span>`
+              if (Number(obj.rate) >= 0) {
+                return `<span class="color-red">${obj.rate}</span>`
               } else {
-                return `<span class="color-green">${obj.avg}</span>`
+                return `<span class="color-green">${obj.rate}</span>`
               }
             } else {
               return '-';
@@ -223,9 +225,9 @@
         }
 
       });
-      info.arr_1 = arr_1;
-      info.arr_2 = arr_2;
-      info.arr_3 = arr_3;
+      info.arr_1 = [...arr_1];
+      info.arr_2 = [...arr_2];
+      info.arr_3 = [...arr_3];
 
       render_1(info.arr_2);// 常规的
       initVue3();// 初始化表格
@@ -259,7 +261,7 @@
           document.body.appendChild(script);
 
           getHistoryPerformance(item.code);// 获取历史表现数据
-        }, (index + 1) * 100)
+        }, (index + 1) * 66)
       })
     }
 
@@ -278,8 +280,9 @@
           console.log(280, fundcode, res.data);
         }
         if (res.code === 200) {
-          info.arr_1.forEach(item => {
+          info.arr_1.forEach((item,index) => {
             if (item.code === fundcode && (!item.zhang_his || item.zhang_his.length === 0)) {
+              console.log('getHistoryPerformance - fundcode',fundcode,index,res.data);
               item.zhang_his = res.data || [];
             }
           })
