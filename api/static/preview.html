@@ -7,6 +7,10 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>涨幅速览</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.11.1/dist/index.css">
+  <script src="https://unpkg.com/vue@3.5.20/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/element-plus@2.11.1/dist/index.full.js"></script>
+  <script src="https://unpkg.com/@element-plus/icons-vue@2.3.2/dist/index.iife.min.js"></script>
   <style>
     * {
       margin: 0;
@@ -40,10 +44,10 @@
       }
     }
 
-    @media (min-width: 1920px) {
+    @media (min-width: 1677px) {
       .type_1 {
         width: calc(25% - 4px);
-        height: 160px;
+        height: 140px;
       }
     }
 
@@ -58,33 +62,172 @@
     .color-green {
       color: #090;
     }
+
+    .el-table .cell {
+      padding: 0 5px !important;
+    }
+
+    .el-table .el-table__cell {
+      padding: 2px 0;
+    }
   </style>
 </head>
 
 <body>
   <div id="imgbox"></div>
+  <div id="app" style="padding: 10px 15px;"></div>
+
+  <div id="table_wrapper_1" style="display: none;">
+    <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
+      <el-table-column fixed type="index" align="center" label="序" width="40"></el-table-column>
+      <el-table-column fixed prop="code" align="center" label="基金号" width="80"></el-table-column>
+      <el-table-column prop="name" label="Name" min-width="220" show-overflow-tooltip></el-table-column>
+
+      <el-table-column align="right" label="今日">
+        <template v-slot="{ row }">
+          <span v-html="getToday(row)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="近一周">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,0)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="近1月">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,1)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="近3月">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,2)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="近6月">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,3)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="近1年">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,4)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="近3年">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,5)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="近5年">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,6)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="今年">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,7)"></span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" label="成立">
+        <template v-slot="{ row }">
+          <span v-html="getHisdata(row,8)"></span>
+        </template>
+      </el-table-column>
+    </el-table>
+  </div>
 
   <!-- 量化 -->
   <div id="lianghua_box" style="padding: 10px 10px 20px 10px;"></div>
 
   <script>
+    const { createApp, reactive } = Vue;
+    const info = reactive({
+      arr_1: [],// 综合的
+      arr_2: [],// 常规的
+      arr_3: [],// 需要服务器监听的
+    });
+
+    function initVue3() {
+      const app = createApp({
+        data() {
+          return {
+            tableData: info.arr_1 || []
+          };
+        },
+        methods: {
+          getHisdata(row, index) {
+            let obj = row.zhang_his[index] || {};
+            if (obj.hasOwnProperty('avg')) {
+              if (Number(obj.avg) >= 0) {
+                return `<span class="color-red">${obj.avg}</span>`
+              } else {
+                return `<span class="color-green">${obj.avg}</span>`
+              }
+            } else {
+              return '-';
+            }
+          },
+          getToday(row) {
+            if (row.zhang_today !== '-') {
+              if (Number(row.zhang_today) >= 0) {
+                return `<span class="color-red">${row.zhang_today}</span>`
+              } else {
+                return `<span class="color-green">${row.zhang_today}</span>`
+              }
+            } else {
+              return '-';
+            }
+          },
+        },
+        template: document.getElementById('table_wrapper_1').innerHTML
+      });
+
+      app.use(ElementPlus);
+      for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component);// 循环注册图标
+      }
+      app.mount('#app');
+    }
+
     fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
       console.log('res', res);
       let arr_1 = res.data || [];
-      let arr_2 = [];// 常规的
-      let arr_3 = [];// 需要服务器监听的
+      let arr_2 = [];
+      let arr_3 = [];
 
       arr_1.forEach(item => {
+        item.zhang_today = '-';// 浸提涨幅
+        item.zhang_his = [];// 历史涨幅
+
         if (item.zhang_url === '服务器监听') {
           arr_3.push(item)
         } else if (!['不提供'].includes(item.zhang_url)) {
           arr_2.push(item)
         }
-      })
+      });
+      console.log('arr_2', arr_2);
+      console.log('arr_3', arr_3);
 
-      render_1(arr_2);
-      render_2(arr_3);
-      render_2(arr_2, { split: true });
+      info.arr_1 = arr_1;
+      info.arr_2 = arr_2;
+      info.arr_3 = arr_3;
+
+      render_1(info.arr_2);// 常规的
+      render_2(info.arr_1);//
+
+      console.log('info-193', info);
+
+
+      initVue3();
     }).catch(err => {
       console.log('err', err);
     })
@@ -113,12 +256,6 @@
         document.getElementById('lianghua_box').appendChild(tempDiv); '';
       }
       arr.forEach((item, index) => {
-        let htmlString = `<div>${item.name}(${item.code})</div><div id="id_${item.code}_1"></div>`;
-        let tempDiv = document.createElement('div');
-        tempDiv.className = 'lianghua_line';
-        tempDiv.innerHTML = htmlString;
-        document.getElementById('lianghua_box').appendChild(tempDiv);
-
         setTimeout(() => {
           const script = document.createElement('script');
           script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js`;
@@ -129,10 +266,6 @@
 
     // 获取历史数据
     function getHistoryPerformance(fundcode) {
-      if (fundcode == '023350') {
-        console.log('getHistoryPerformance', fundcode);
-      }
-
       fetch('http://150.158.175.108:9999/fund_history_performance', {
         method: 'POST',
         headers: {
@@ -143,39 +276,16 @@
         })
       }).then(res => res.json()).then(res => {
         if (res.code === 200) {
-          let html = '';
-
-          for (let i = 0; i < res.data.length; i++) {
-            let item = res.data[i];
-            if ([null, undefined, ''].includes(item.rate)) {
-              continue;
+          info.arr_2.forEach(item => {
+            if (item.code === fundcode) {
+              item.zhang_his = res.data || [];
             }
-
-            let zhang_class = '';
-            if (Number(item.rate) >= 0) zhang_class = 'color-red';
-            if (Number(item.rate) < 0) zhang_class = 'color-green';
-
-            if (i === 0) {
-              html += ' ' + `周(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 1) {
-              html += ' ' + `月(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 2) {
-              html += ' ' + `3月(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 3) {
-              html += ' ' + `6月(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 4) {
-              html += ' ' + `1年(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 5) {
-              html += ' ' + `3年(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 6) {
-              html += ' ' + `5年(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 7) {
-              html += ' ' + `今年(<span class="${zhang_class}">${item.rate}</span>)`;
-            } else if (i === 8) {
-              html += ' ' + `成立(<span class="${zhang_class}">${item.rate}</span>)`;
+          })
+          info.arr_3.forEach(item => {
+            if (item.code === fundcode) {
+              item.zhang_his = res.data || [];
             }
-          }
-          document.getElementById('his_' + fundcode).innerHTML = html;
+          })
         }
 
       }).catch(err => {
@@ -195,21 +305,26 @@
           "gztime": "2025-08-13 15:00"
         }
       */
-      let zhang_class = '';
-      if (Number(data.gszzl) >= 0) zhang_class = 'color-red';
-      if (Number(data.gszzl) < 0) zhang_class = 'color-green';
-      let timeArr = (data.gztime || '').split('-');
-      let curTime = timeArr[1] + '-' + timeArr[2];
 
-      let html = '';
-      html += data.dwjz;// 前一日净值
-      html += ' ' + curTime;// 最新净值更新时间
-      html += ' ' + `今日(<span class="${zhang_class}">${data.gszzl}</span>)`;// 最新净值涨幅 正数是红色，负数是绿色
-      html += ' ' + `<span id="his_${data.fundcode}"></span>`;// 历史表现留的插槽
 
-      document.getElementById('id_' + data.fundcode + '_1').innerHTML = html;
+      if (!data) {
+        return false;
+      }
+      console.log('jsonpgz - data', data);
+      info.arr_2.forEach(item => {
+        if (item.code === data.fundcode) {
+          item.zhang_today = data.gszzl || '-';
+        }
+      })
+      info.arr_3.forEach(item => {
+        if (item.code === data.fundcode) {
+          item.zhang_today = data.gszzl || '-';
+        }
+      })
       getHistoryPerformance(data.fundcode);// 获取历史表现数据
     }
+
+
   </script>
 </body>
 

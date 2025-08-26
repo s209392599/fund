@@ -103,7 +103,7 @@ const info = reactive({
     // {
     //   id: 12,
     //   show: true,
-    //   name: '基金搜搜',
+    //   name: '基金搜索',
     //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
     //   desc: ''
     // },
