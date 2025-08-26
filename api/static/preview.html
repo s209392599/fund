@@ -154,6 +154,7 @@
       arr_1: [],// 综合的
       arr_2: [],// 常规的
       arr_3: [],// 需要服务器监听的
+      isRendered: false // 添加标志，用于防止重复渲染
     });
 
     function initVue3() {
@@ -162,6 +163,13 @@
           return {
             tableData: info.arr_1 || []
           };
+        },
+        mounted() {
+          // 在组件挂载完成后调用render_2函数，但添加判断防止重复调用
+          if (!info.isRendered) {
+            render_2(info.arr_1);
+            info.isRendered = true; // 设置标志为已渲染
+          }
         },
         methods: {
           getHisdata(row, index) {
@@ -213,21 +221,14 @@
         } else if (!['不提供'].includes(item.zhang_url)) {
           arr_2.push(item)
         }
-      });
-      console.log('arr_2', arr_2);
-      console.log('arr_3', arr_3);
 
+      });
       info.arr_1 = arr_1;
       info.arr_2 = arr_2;
       info.arr_3 = arr_3;
 
       render_1(info.arr_2);// 常规的
-      render_2(info.arr_1);//
-
-      console.log('info-193', info);
-
-
-      initVue3();
+      initVue3();// 初始化表格
     }).catch(err => {
       console.log('err', err);
     })
@@ -250,17 +251,15 @@
     }
 
     // 需要服务器监听的
-    function render_2(arr, options) {
-      if (!!(options || {}).split) {
-        let tempDiv = document.createElement('hr');
-        document.getElementById('lianghua_box').appendChild(tempDiv); '';
-      }
+    function render_2(arr) {
       arr.forEach((item, index) => {
         setTimeout(() => {
           const script = document.createElement('script');
           script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js`;
           document.body.appendChild(script);
-        }, index * 10)
+
+          getHistoryPerformance(item.code);// 获取历史表现数据
+        }, (index + 1) * 100)
       })
     }
 
@@ -275,14 +274,12 @@
           fundcode: fundcode,
         })
       }).then(res => res.json()).then(res => {
+        if (['017437', '016452'].includes(fundcode)) {
+          console.log(280, fundcode, res.data);
+        }
         if (res.code === 200) {
-          info.arr_2.forEach(item => {
-            if (item.code === fundcode) {
-              item.zhang_his = res.data || [];
-            }
-          })
-          info.arr_3.forEach(item => {
-            if (item.code === fundcode) {
+          info.arr_1.forEach(item => {
+            if (item.code === fundcode && (!item.zhang_his || item.zhang_his.length === 0)) {
               item.zhang_his = res.data || [];
             }
           })
@@ -305,23 +302,14 @@
           "gztime": "2025-08-13 15:00"
         }
       */
-
-
       if (!data) {
         return false;
       }
-      console.log('jsonpgz - data', data);
-      info.arr_2.forEach(item => {
+      info.arr_1.forEach(item => {
         if (item.code === data.fundcode) {
           item.zhang_today = data.gszzl || '-';
         }
       })
-      info.arr_3.forEach(item => {
-        if (item.code === data.fundcode) {
-          item.zhang_today = data.gszzl || '-';
-        }
-      })
-      getHistoryPerformance(data.fundcode);// 获取历史表现数据
     }
 
 
