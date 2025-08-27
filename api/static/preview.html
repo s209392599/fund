@@ -70,6 +70,12 @@
     .el-table .el-table__cell {
       padding: 2px 0;
     }
+
+    .el-table .caret-wrapper {
+      width: 15px;
+      position: relative;
+      left: -6px;
+    }
   </style>
 </head>
 
@@ -80,66 +86,67 @@
   <div id="app" style="padding: 4px 10px 15px 10px;"></div>
 
   <div id="table_wrapper_1" style="display: none;">
+    <!-- 修改第42行，移除default-sort属性 -->
     <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
       <el-table-column fixed prop="code" align="center" label="基金号" width="70"></el-table-column>
-      <el-table-column prop="name" label="Name" width="210" show-overflow-tooltip></el-table-column>
+      <el-table-column prop="name" label="Name" width="210" show-overflow-tooltip sortable></el-table-column>
 
-      <el-table-column align="right" label="今日" width="56">
+      <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday">
         <template v-slot="{ row }">
           <span v-html="getToday(row)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近一周" width="64">
+      <el-table-column align="right" label="近1周" width="66" sortable :sort-method="sortHisData0">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,0)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近1月" width="64">
+      <el-table-column align="right" label="近1月" width="66" sortable :sort-method="sortHisData1">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,1)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近3月" width="64">
+      <el-table-column align="right" label="近3月" width="66" sortable :sort-method="sortHisData2">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,2)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近6月" width="64">
+      <el-table-column align="right" label="近6月" width="66" sortable :sort-method="sortHisData3">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,3)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近1年" width="64">
+      <el-table-column align="right" label="近1年" width="66" sortable :sort-method="sortHisData4">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,4)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近3年" width="64">
+      <el-table-column align="right" label="近3年" width="66" sortable :sort-method="sortHisData5">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,5)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="近5年" width="64">
+      <el-table-column align="right" label="近5年" width="66" sortable :sort-method="sortHisData6">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,6)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="今年" width="64">
+      <el-table-column align="right" label="今年" width="66" sortable :sort-method="sortHisData7">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,7)"></span>
         </template>
       </el-table-column>
 
-      <el-table-column align="right" label="成立" width="64">
+      <el-table-column align="right" label="成立" width="66" sortable :sort-method="sortHisData8">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,8)"></span>
         </template>
@@ -168,11 +175,12 @@
         },
         mounted() {
           if (!info.isRendered) {
-            console.log('info.arr_1',info.arr_1);
+            console.log('info.arr_1', info.arr_1);
             render_2(info.arr_1);
             info.isRendered = true;
           }
         },
+        // 在methods中添加自定义排序方法
         methods: {
           getHisdata(row, index) {
             let obj = row.zhang_his[index] || {};
@@ -197,6 +205,49 @@
               return '-';
             }
           },
+
+          // 自定义排序方法
+          sortToday(a, b) {
+            const valA = parseFloat(a.zhang_today) || 0;
+            const valB = parseFloat(b.zhang_today) || 0;
+            return valA - valB;
+          },
+
+          sortHisData0(a, b) {
+            return this.sortHistoricalData(a, b, 0);
+          },
+          sortHisData1(a, b) {
+            return this.sortHistoricalData(a, b, 1);
+          },
+          sortHisData2(a, b) {
+            return this.sortHistoricalData(a, b, 2);
+          },
+          sortHisData3(a, b) {
+            return this.sortHistoricalData(a, b, 3);
+          },
+          sortHisData4(a, b) {
+            return this.sortHistoricalData(a, b, 4);
+          },
+          sortHisData5(a, b) {
+            return this.sortHistoricalData(a, b, 5);
+          },
+          sortHisData6(a, b) {
+            return this.sortHistoricalData(a, b, 6);
+          },
+          sortHisData7(a, b) {
+            return this.sortHistoricalData(a, b, 7);
+          },
+          sortHisData8(a, b) {
+            return this.sortHistoricalData(a, b, 8);
+          },
+
+          sortHistoricalData(a, b, index) {
+            const objA = a.zhang_his[index] || {};
+            const objB = b.zhang_his[index] || {};
+            const valA = parseFloat(objA.rate) || 0;
+            const valB = parseFloat(objB.rate) || 0;
+            return valA - valB;
+          }
         },
         template: document.getElementById('table_wrapper_1').innerHTML
       });
@@ -280,9 +331,9 @@
           console.log(280, fundcode, res.data);
         }
         if (res.code === 200) {
-          info.arr_1.forEach((item,index) => {
+          info.arr_1.forEach((item, index) => {
             if (item.code === fundcode && (!item.zhang_his || item.zhang_his.length === 0)) {
-              console.log('getHistoryPerformance - fundcode',fundcode,index,res.data);
+              console.log('getHistoryPerformance - fundcode', fundcode, index, res.data);
               item.zhang_his = res.data || [];
             }
           })
