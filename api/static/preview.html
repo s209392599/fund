@@ -76,6 +76,12 @@
       position: relative;
       left: -6px;
     }
+    .fund_type {
+      position: absolute;
+      right: 6px;
+      background-color: red;
+      color:#090;
+    }
   </style>
 </head>
 
@@ -90,9 +96,16 @@
     <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
       <el-table-column fixed prop="code" align="center" label="基金号" width="70"></el-table-column>
-      <el-table-column prop="name" label="Name" width="210" show-overflow-tooltip sortable></el-table-column>
+      <!-- show-overflow-tooltip -->
+      <el-table-column prop="name" label="Name" width="210"  sortable>
+        <template v-slot="{ row }">
+          <span style="position: relative;z-index: 2;width: 100%;">
+            <span class="fund_type">{{row.type}}</span><span class="">{{row.name}}</span>
+          </span>
+        </template>
+      </el-table-column>
 
-      <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday">
+      <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday" :cell-class-name="'fund_type_box'">
         <template v-slot="{ row }">
           <span v-html="getToday(row)"></span>
         </template>

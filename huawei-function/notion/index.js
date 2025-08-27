@@ -55,7 +55,7 @@ var marilArr = [
   'lliuch321@qq.com', // 刘铖浩
   '459947847@qq.com', // 王一行
   '1834651803@qq.com', // 杜望
-  '786260489@qq.com', // 杜望
+  '786260489@qq.com', // 基金-王凯华
 ];
 
 var html = `

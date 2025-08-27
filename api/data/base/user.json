@@ -152,7 +152,7 @@
       "point_line_down": null,
       "desc": "",
       "fixed": 50,
-      "type": "机器人"
+      "type": "人工智能"
     },
     {
       "code": "020973",
@@ -702,12 +702,12 @@
     },
     {
       "email": "786260489@qq.com",
-      "name": "基金-王凯华(树敏朋友)",
+      "name": "基金-王凯华",
       "update_time": "2025年08月27日14:26:56",
       "password": "123456",
       "fund": [],
       "active": "",
-      "desc": ""
+      "desc": "树敏朋友"
     },
     {
       "email": "test@qq.com",
