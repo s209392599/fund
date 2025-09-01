@@ -18,6 +18,39 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use((req, res, next) => {
+  const whitelist = ['150.158.175.108:9999', 'localhost:9000'];
+  const requestHost = req.get('Host');
+  const machineSecretToken = req.get('X-Machine-Secret'); // 用于验证您特定Mac的自定义请求头
+  const machineSecret = 'C02CN1R4MD6Q';// mac电脑的序列号
+  // wmic csproduct get uuid  在windows上获取uuid
+  console.log('-------------------------------------');
+  console.log('requestHost => ',requestHost);
+  console.log('machineSecretToken => ',machineSecretToken);
+
+  // 检查是否是OPTIONS预检请求，直接通过
+  if (req.method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Origin', requestOrigin);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, X-Machine-Secret');
+    return res.sendStatus(204);
+  }
+
+  if (whitelist.includes(requestHost)) {
+    // res.header('Access-Control-Allow-Origin', requestOrigin);
+    return next();// 允许白名单
+  }
+
+  // 条件2：允许包含正确“秘密令牌”的请求 (例如来自您Mac上的Postman或脚本)
+  if (machineSecretToken === machineSecret) {
+    return next();// 允许自己的mac电脑请求
+  }
+
+  // 如果以上条件都不满足，则拒绝访问
+  console.warn(`Forbidden request from origin: ${requestOrigin}`);
+  return res.status(403).send('Access Denied');
+});
+
 // 路由模块所在的目录
 const routesDirectory = path.join(__dirname, 'routes');
 

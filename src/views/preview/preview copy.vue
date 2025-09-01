@@ -1,4 +1,7 @@
 <script setup>
+/*
+可以看看 Suspense 的使用
+*/
 import { ref, reactive, markRaw, defineAsyncComponent, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
