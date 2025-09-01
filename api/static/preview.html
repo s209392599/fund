@@ -286,31 +286,35 @@
       app.mount('#app');
     }
 
-    fetch('http://localhost:9999/fund_public_fund').then(res => res.json()).then(res => {
-      console.log('res', res);
-      let arr_1 = res.data || [];
-      let arr_2 = [];
-      let arr_3 = [];
+    fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
+      if (res.code === 200) {
+        let arr_1 = res.data || [];
+        let arr_2 = [];
+        let arr_3 = [];
 
-      arr_1.forEach(item => {
-        item.zhang_today = '-';// 浸提涨幅
-        item.zhang_his = [];// 历史涨幅
+        arr_1.forEach(item => {
+          item.zhang_today = '-';// 浸提涨幅
+          item.zhang_his = [];// 历史涨幅
 
-        if (item.zhang_url === '服务器监听') {
-          arr_3.push(item)
-        } else if (!['不提供'].includes(item.zhang_url)) {
-          arr_2.push(item)
-        }
+          if (item.zhang_url === '服务器监听') {
+            arr_3.push(item)
+          } else if (!['不提供'].includes(item.zhang_url)) {
+            arr_2.push(item)
+          }
 
-      });
-      info.arr_1 = [...arr_1];
-      info.arr_2 = [...arr_2];
-      info.arr_3 = [...arr_3];
+        });
+        info.arr_1 = [...arr_1];
+        info.arr_2 = [...arr_2];
+        info.arr_3 = [...arr_3];
 
-      render_1(info.arr_2);// 常规的
-      initVue3();// 初始化表格
+        render_1(info.arr_2);// 常规的
+        initVue3();// 初始化表格
+      } else {
+        ElementPlus.ElMessage.error(res.msg || res.message || '数据出错')
+      }
+
     }).catch(err => {
-      console.log('err', err);
+      ElementPlus.ElMessage.error(err.msg || err.message || '程序报错')
     })
 
     // 常规的
@@ -345,7 +349,7 @@
 
     // 获取历史数据
     function getHistoryPerformance(fundcode) {
-      fetch('http://localhost:9999/fund_history_performance', {
+      fetch('http://150.158.175.108:9999/fund_history_performance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -354,9 +358,6 @@
           fundcode: fundcode,
         })
       }).then(res => res.json()).then(res => {
-        if (['017437', '016452'].includes(fundcode)) {
-          console.log(280, fundcode, res.data);
-        }
         if (res.code === 200) {
           info.arr_1.forEach((item, index) => {
             if (item.code === fundcode && (!item.zhang_his || item.zhang_his.length === 0)) {
@@ -364,10 +365,11 @@
               item.zhang_his = res.data || [];
             }
           })
+        } else {
+          ElementPlus.ElMessage.error(res.msg || res.message || '数据出错')
         }
-
       }).catch(err => {
-        console.log('err', err);
+        ElementPlus.ElMessage.error(err.msg || err.message || '程序报错')
       })
     }
 
@@ -392,8 +394,6 @@
         }
       })
     }
-
-
   </script>
 </body>
 
