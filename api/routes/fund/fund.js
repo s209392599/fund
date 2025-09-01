@@ -34,6 +34,39 @@ router.get('/testget', (req, res) => {
   });
 });
 
+router.get('/get_req_params', (req, res) => {
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: {
+      headers: req.headers.host,
+      url: req.url,
+      ip: req.ip,
+    },
+  });
+});
+/*
+req.headers：一个包含请求头的对象。
+
+req.method：请求方法，如 GET、POST 等。
+
+req.url：请求的URL路径部分（不包括查询字符串）。
+
+req.query：一个包含查询字符串参数的对象。
+
+req.params：一个包含路由参数的对象（当使用路由参数时）。
+
+req.body：请求体，通常包含POST请求的数据。要解析请求体，您可能需要使用中间件如 express.json() 或 express.urlencoded()。
+
+req.cookies：一个包含请求中的Cookie的对象（需要使用 cookie-parser 中间件）。
+
+req.signedCookies：一个包含已签名Cookie的对象（同样需要使用 cookie-parser 中间件）。
+
+req.ip：请求者的IP地址。
+
+req.protocol：请求使用的协议，如 http 或 https。
+*/
+
 // 定义一个POST示例请求
 router.post('/testpost', (req, res) => {
   console.log('req.body', req.body);

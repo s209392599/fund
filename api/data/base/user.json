@@ -42,7 +42,7 @@
       "point_line_down": null,
       "desc": "",
       "fixed": 30,
-      "type": "红利"
+      "type": "恒生科技"
     },
     {
       "code": "023918",
@@ -53,7 +53,18 @@
       "point_line_down": null,
       "desc": "",
       "fixed": 30,
-      "type": "红利"
+      "type": "现金流"
+    },
+    {
+      "code": "022365",
+      "name": "永赢科技智选混合发起C",
+      "short_name": "",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 100,
+      "type": "量化"
     },
     {
       "code": "018561",
@@ -177,19 +188,30 @@
       "type": "云计算"
     },
     {
-      "code": "017437",
-      "name": "华宝纳斯达克精选股票发起式",
+      "code": "009180",
+      "name": "嘉实中证主要消费ETF发起联接C",
       "short_name": "",
-      "zhang_url": "不提供",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "预计9.20号左右卖出",
+      "fixed": 50,
+      "type": "消费ETF"
+    },
+    {
+      "code": "008087",
+      "name": "华夏中证5G通信主题ETF联接C",
+      "short_name": "",
+      "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "",
       "fixed": 50,
-      "type": "美股"
+      "type": "通信"
     },
     {
-      "code": "016452",
-      "name": "南方纳斯达克100指数发起",
+      "code": "017437",
+      "name": "华宝纳斯达克精选股票发起式",
       "short_name": "",
       "zhang_url": "不提供",
       "point_line_top": null,
@@ -703,6 +725,15 @@
     {
       "email": "786260489@qq.com",
       "name": "基金-王凯华",
+      "update_time": "2025年08月27日14:26:56",
+      "password": "123456",
+      "fund": [],
+      "active": "",
+      "desc": "树敏朋友"
+    },
+    {
+      "email": "1050210750@qq.com",
+      "name": "彭贝贝",
       "update_time": "2025年08月27日14:26:56",
       "password": "123456",
       "fund": [],

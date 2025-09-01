@@ -6,6 +6,8 @@ mail_title = `新增两个量化推荐: 德邦鑫星价值灵活配置混合C(00
 mail_title = `恒生科技转东财或者中航机遇一点；其它先坚持定投`;
 mail_title = `今天先坚持定投`;
 mail_title = `两个红利、华夏现金流加点仓位；量化类的坚持定投；`;
+mail_title = `机器人、人工智能、华泰红利加仓，其它先坚持定投`;
+mail_title = `预览涨幅数据已更新，增加一个消费，移除了 南方纳斯达克100指数发起(QDII)A(016452) 推荐`;
 
 var marilArr = [
   '209392599@qq.com', // 郭坤
@@ -56,6 +58,7 @@ var marilArr = [
   '459947847@qq.com', // 王一行
   '1834651803@qq.com', // 杜望
   '786260489@qq.com', // 基金-王凯华
+  '1050210750@qq.com', // 彭贝贝
 ];
 
 var html = `
@@ -69,6 +72,12 @@ var html = `
 </head>
 <body>
   <div>${mail_title}</div>
+
+  <div>
+    <a href="http://150.158.175.108:9999/preview.html" rel="noopener" target="_blank">涨幅预览地址</a>
+    <a href="https://mli8rlv6cu.feishu.cn/docx/BcJhdXYMqoXS47xb0xdcuBo2nGh" rel="noopener" target="_blank">基金相关知识及网站介绍</a>
+  </div>
+
   <div id="imgbox">
     <img src="https://j4.dfcfw.com/charts/pic6/007467.png" alt="华泰柏瑞中证红利低波ETF联接C">
     <img src="https://j4.dfcfw.com/charts/pic6/019260.png" alt="富国恒生红利ETF联接A">

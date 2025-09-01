@@ -180,6 +180,8 @@
   <div id="lianghua_box" style="padding: 10px 10px 20px 10px;"></div>
 
   <script>
+    var base_api = 'http://150.158.175.108:9999';
+
     const { createApp, reactive } = Vue;
     const info = reactive({
       arr_1: [],// 综合的
@@ -286,7 +288,7 @@
       app.mount('#app');
     }
 
-    fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
+    fetch(base_api + '/fund_public_fund').then(res => res.json()).then(res => {
       if (res.code === 200) {
         let arr_1 = res.data || [];
         let arr_2 = [];
@@ -349,7 +351,7 @@
 
     // 获取历史数据
     function getHistoryPerformance(fundcode) {
-      fetch('http://150.158.175.108:9999/fund_history_performance', {
+      fetch(base_api + '/fund_history_performance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
