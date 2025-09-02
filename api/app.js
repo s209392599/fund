@@ -24,8 +24,9 @@ app.use((req, res, next) => {
   const machineSecretToken = req.get('X-Machine-Secret'); // 用于验证您特定Mac的自定义请求头
   const machineSecret = 'C02CN1R4MD6Q'; // mac电脑的序列号
   // wmic csproduct get uuid  在windows上获取uuid
-  // console.log('-------------------------------------');
-  // console.log('request_origin => ', request_origin);
+  console.log('-------------------------------------');
+  console.log('request_origin => ', request_origin);
+  console.log('request_referer => ', request_referer);
 
   // 检查是否是OPTIONS预检请求，直接通过
   if (req.method === 'OPTIONS') {
@@ -43,8 +44,9 @@ app.use((req, res, next) => {
 
   const whiteAdree = [
     'http://150.158.175.108:9999',
-    'http://localhost:9999',
-    'http://127.0.0.1:5502',
+    'http://localhost:9000',// Vue项目
+    'http://localhost:9999',// 本地测试
+    'http://127.0.0.1:5502',// live server插件
   ];
 
   if (request_origin) {
