@@ -83,16 +83,6 @@ router.post('/fund_login', (req, res) => {
   });
 });
 
-// 获取公共的基金数据
-router.get('/fund_public_fund', (req, res) => {
-  const userData = getUserJson() || [];
-  res.send({
-    code: 200,
-    msg: '成功',
-    data: userData.public_fund || [],
-  });
-});
-
 // 获取所有用户
 router.post('/fund_get_all_user_info', (req, res) => {
   const userData = (getUserJson() || {}).data || [];
@@ -326,6 +316,91 @@ router.post('/fund_today_rate_by_timer', (req, res) => {
         });
       }
     });
+  });
+});
+
+// 查询-公共的基金数据
+router.post('/fund_public_fund_query', (req, res) => {
+  const userData = getUserJson() || {};
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: userData.public_fund || [],
+  });
+});
+// 新增-公共的基金数据
+router.post('/fund_public_fund_add', (req, res) => {
+  const { form = {} } = req.body;
+  const userData = getUserJson() || {};
+  const public_fund = userData.public_fund || [];
+  public_fund.push(form);
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: [],
+  });
+});
+// 修改-公共的基金数据
+router.post('/fund_public_fund_update', (req, res) => {
+  const { form = {} } = req.body;
+  const userData = getUserJson() || {};
+  const public_fund = userData.public_fund || [];
+
+  const dIndex = public_fund.findIndex((item) => item.code === form.code);
+  if (dIndex === -1) {
+    res.send({
+      code: 400,
+      msg: '修改的基金不存在',
+      data: [],
+    });
+  } else {
+    public_fund[dIndex] = form;
+
+    const result = updateUserJson(USER_JSON);
+    console.log('result', result);
+
+    if (result) {
+      res.send({
+        code: 200,
+        msg: '操作成功',
+        data: [],
+      });
+    } else {
+      res.send({
+        code: 400,
+        msg: '操作失败',
+        data: [],
+      });
+    }
+  }
+
+  // const userData = getUserJson() || {};
+  // console.log('userData.public_fund',userData.public_fund.length);
+  // res.send({
+  //   code: 200,
+  //   msg: '成功',
+  //   data: userData.public_fund || [],
+  // });
+
+  /*
+  const filePath = path.join(__dirname, '../../data/base/user.json');
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.log('err', err);
+    return false;
+  }
+  */
+});
+// 删除-公共的基金数据
+router.post('/fund_public_fund_delete', (req, res) => {
+  const userData = getUserJson() || {};
+  console.log('userData.public_fund', userData.public_fund.length);
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: userData.public_fund || [],
   });
 });
 

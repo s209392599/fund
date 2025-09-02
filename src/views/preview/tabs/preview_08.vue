@@ -8,51 +8,42 @@ const info = reactive({
   update_flag: 'add',// 修改还是编辑
   dialogFormVisible: false,
   form: {
-    "email": "test@qq.com",
-    "name": "1231",
-    "update_time": "",
-    "password": "1231312",
-    "fund": [],
-    "active": '',
-    "desc": 'ceshi',
+    "code": "",
+    "name": "",
+    "type": "",
+    "zhang_url": "",
+    "fixed": "",
+    "point_line_down": "",
+    "point_line_top": "",
+    "desc": "",
   }
 })
 const rules = {
-  email: [
-    { required: true, message: '请输入邮箱地址', trigger: 'blur' },
-    { type: 'email', message: '请输入有效的邮箱地址', trigger: ['blur', 'change'] }
+  code: [
+    { required: true, message: '请输入基金代码', trigger: 'blur' },
+    { min: 6, message: '至少输入6位', trigger: 'blur' }
   ],
   name: [
-    { required: true, message: '请输入备注', trigger: 'blur' },
-    { min: 1, message: '至少输入1位', trigger: 'blur' }
+    { required: true, message: '请输入基金名称', trigger: 'blur' },
   ],
-  password: [
-    { required: true, message: '请输入密码', trigger: 'blur' },
-    { min: 4, message: '密码长度至少为4位', trigger: 'blur' }
-  ]
+  type: [
+    { required: true, message: '请输入基金类型', trigger: 'blur' },
+  ],
 };
 
-// 获取所有用户
-const getAllUser = () => {
-  server_fund_get_all_user_info({}).then(res => {
+// 获取-列表数据
+const query_list = () => {
+  server_fund_public_fund_query({}).then(res => {
     info.tableData = res.data;
   })
 }
-getAllUser();
+query_list();
 
-// 添加class
-const tableRowClassName = ({ row, rowIndex }) => {
-  return rowIndex % 2 === 1 ? 'warning-row' : 'success-row';
-}
 // 编辑
 const btn_edit = (row, $index) => {
   info.form = Object.assign({}, info.form, row);
   info.update_flag = 'edit';// 标识编辑
   info.dialogFormVisible = true;// 打开弹窗
-}
-// 停用
-const btn_stop = (row, $index) => {
-  console.log("停用");
 }
 // 删除
 const btn_del = (row, $index) => {
@@ -67,11 +58,11 @@ const btn_del = (row, $index) => {
     }
   )
     .then(() => {
-      server_fund_del_user_info({ email: row.email }).then(res => {
+      server_fund_public_fund_delete({ code: row.code }).then(res => {
         console.log('res', res);
         if (res.code === 200) {
           ElMessage.success('删除成功');
-          getAllUser();
+          query_list();
         } else {
           ElMessage.error('删除失败，请重试！');
         }
@@ -94,10 +85,9 @@ const onSubmit = () => {
   diaForm.value.validate((valid) => {
     if (valid) {
       console.log('form', info.form);
-      info.form.update_time = CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss");
 
       if (info.update_flag === 'add') {
-        server_fund_add_user_info({
+        server_fund_public_fund_add({
           form: info.form
         }).then(res => {
           console.log('新增', res);
@@ -105,13 +95,13 @@ const onSubmit = () => {
             ElMessage.success('新增成功');
             info.dialogFormVisible = false;
             resetForm();
-            getAllUser();
+            query_list();
           } else {
             ElMessage.error('新增失败！')
           }
         })
       } else {
-        server_fund_update_user_info({
+        server_fund_public_fund_update({
           form: info.form
         }).then(res => {
           console.log('更新', res);
@@ -119,15 +109,12 @@ const onSubmit = () => {
             ElMessage.success('更新成功');
             info.dialogFormVisible = false;
             resetForm();
-            getAllUser();
+            query_list();
           } else {
             ElMessage.error('更新失败！')
           }
         })
-
       }
-
-
     } else {
       console.log('error submit!!');
       return false;
@@ -137,21 +124,25 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <div class="page-wrapper">
+  <div class="page-wrapper pd-10">
     <div class="flex pb-5">
-      <el-button type="primary" size="small" @click="addUser()">新增用户</el-button>
+      <el-button type="primary" size="small" @click="addUser()">新增基金</el-button>
     </div>
 
-    <el-table :data="info.tableData" border :row-class-name="tableRowClassName" style="width: 100%" height="500">
+    <el-table :data="info.tableData" border style="width: 100%" height="500">
       <el-table-column fixed label="序" type="index" width="50" />
-      <el-table-column prop="email" label="邮箱" width="300" />
-      <el-table-column prop="name" label="名称" width="150" />
-      <el-table-column prop="password" label="密码" width="200" />
-      <el-table-column prop="desc" label="备注" width="200" />
+      <el-table-column prop="code" label="基金代码" width="80" />
+      <el-table-column prop="name" label="名称" width="250" />
+      <el-table-column prop="type" label="类型" width="150" />
+      <el-table-column prop="zhang_url" label="涨幅的URL" width="200" />
+      <el-table-column prop="fixed" label="定投金额" width="100" />
+      <el-table-column prop="point_line_down" label="低点" width="100" />
+      <el-table-column prop="point_line_top" label="高点" width="100" />
+      <el-table-column prop="desc" label="备注" width="300" />
+
       <el-table-column label="Operations" min-width="120">
         <template #default="{ row, $index }">
           <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
-          <el-button link type="primary" size="small" @click="btn_stop(row, $index)">停用</el-button>
           <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
         </template>
       </el-table-column>
@@ -159,26 +150,35 @@ const onSubmit = () => {
 
     <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500">
       <el-form :model="info.form" :rules="rules" ref="diaForm">
-        <el-form-item label="邮箱" prop="email" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.email" autocomplete="off" />
+        <el-form-item label="基金代码" prop="code" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.code" autocomplete="off" />
         </el-form-item>
 
         <el-form-item label="名称" prop="name" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.name" autocomplete="off" />
         </el-form-item>
 
-        <el-form-item label="密码" prop="password" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.password" autocomplete="off" />
+        <el-form-item label="类型" prop="type" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.type" autocomplete="off" />
         </el-form-item>
 
-        <el-form-item label="激活状态" :label-width="info.formLabelWidth">
-          <el-select v-model="info.form.active" placeholder="请选择状态">
-            <el-option label="在用" value="" />
-            <el-option label="停用" value="停用" />
-          </el-select>
+        <el-form-item label="涨幅的URL" prop="zhang_url" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.zhang_url" autocomplete="off" />
         </el-form-item>
 
-        <el-form-item label="备注" :label-width="info.formLabelWidth">
+        <el-form-item label="定投金额" prop="fixed" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.fixed" autocomplete="off" />
+        </el-form-item>
+
+        <el-form-item label="净值提示-低点" prop="point_line_down" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.point_line_down" autocomplete="off" />
+        </el-form-item>
+
+        <el-form-item label="净值提示-高点" prop="point_line_top" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.point_line_top" autocomplete="off" />
+        </el-form-item>
+
+        <el-form-item label="备注" prop="desc" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.desc" autocomplete="off" />
         </el-form-item>
       </el-form>
@@ -192,18 +192,4 @@ const onSubmit = () => {
   </div>
 </template>
 
-<style scoped lang="scss">
-.page-wrapper {
-  padding: 10px;
-}
-</style>
-
-<style>
-.el-table .warning-row {
-  --el-table-tr-bg-color: var(--el-color-warning-light-9);
-}
-
-.el-table .success-row {
-  --el-table-tr-bg-color: var(--el-color-success-light-9);
-}
-</style>
+<style scoped lang="scss"></style>

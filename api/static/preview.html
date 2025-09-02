@@ -109,7 +109,7 @@
     <!-- 修改第42行，移除default-sort属性 -->
     <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
-      <el-table-column fixed prop="code" align="center" label="基金号" width="60"></el-table-column>
+      <el-table-column fixed prop="code" align="center" label="基金号" width="64"></el-table-column>
       <el-table-column prop="name" label="Name" :width="width_name" sortable show-overflow-tooltip></el-table-column>
       <el-table-column prop="type" label="类型" width="70" align="center" sortable
         show-overflow-tooltip></el-table-column>
@@ -173,6 +173,8 @@
           <span v-html="getHisdata(row,8)"></span>
         </template>
       </el-table-column>
+
+      <el-table-column prop="desc" label="备注" width="300" show-overflow-tooltip></el-table-column>
     </el-table>
   </div>
 
@@ -180,8 +182,6 @@
   <div id="lianghua_box" style="padding: 10px 10px 20px 10px;"></div>
 
   <script>
-    var base_api = 'http://150.158.175.108:9999';
-
     const { createApp, reactive } = Vue;
     const info = reactive({
       arr_1: [],// 综合的
@@ -288,7 +288,7 @@
       app.mount('#app');
     }
 
-    fetch(base_api + '/fund_public_fund').then(res => res.json()).then(res => {
+    fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
       if (res.code === 200) {
         let arr_1 = res.data || [];
         let arr_2 = [];
@@ -351,7 +351,7 @@
 
     // 获取历史数据
     function getHistoryPerformance(fundcode) {
-      fetch(base_api + '/fund_history_performance', {
+      fetch('http://150.158.175.108:9999/fund_history_performance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
