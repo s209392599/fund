@@ -81,46 +81,6 @@
       "type": "量化"
     },
     {
-      "code": "002834",
-      "name": "华夏新锦绣混合C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "10月4号卖出 2025年09月02日14:26:29",
-      "fixed": 100,
-      "type": "量化"
-    },
-    {
-      "code": "016858",
-      "name": "国金量化多因子股票C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "9月底卖出 2025年08月25日15:23:19",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
-      "code": "018729",
-      "name": "华夏智胜新锐股票C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "9月底卖出 2025年08月25日15:23:16",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
-      "code": "023350",
-      "name": "诺安多策略混合C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "10月4号卖出 2025年09月02日14:26:29",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
       "code": "002112",
       "name": "德邦鑫星价值灵活配置混合C",
       "zhang_url": "服务器监听",
@@ -209,6 +169,46 @@
       "desc": "",
       "fixed": 50,
       "type": "美股"
+    },
+    {
+      "code": "016858",
+      "name": "国金量化多因子股票C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "9月29日卖出 2025年08月25日15:23:19",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "018729",
+      "name": "华夏智胜新锐股票C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "9月29日卖出 2025年08月25日15:23:16",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "002834",
+      "name": "华夏新锦绣混合C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "10月9日卖出 2025年09月02日14:26:29",
+      "fixed": 100,
+      "type": "量化"
+    },
+    {
+      "code": "023350",
+      "name": "诺安多策略混合C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "10月9日卖出 2025年09月02日14:26:29",
+      "fixed": 50,
+      "type": "量化"
     }
   ],
   "data_字段说明": {
