@@ -16,7 +16,7 @@
       "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
-      "desc": "",
+      "desc": "流动仓",
       "fixed": 30,
       "type": "红利"
     },
@@ -26,7 +26,7 @@
       "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
-      "desc": "",
+      "desc": "流动仓",
       "fixed": 30,
       "type": "红利"
     },
@@ -36,7 +36,7 @@
       "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
-      "desc": "",
+      "desc": "流动仓",
       "fixed": 30,
       "type": "恒生科技"
     },
@@ -46,7 +46,7 @@
       "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
-      "desc": "",
+      "desc": "流动仓",
       "fixed": 30,
       "type": "现金流"
     },
@@ -163,7 +163,7 @@
     {
       "code": "019103",
       "name": "景顺长城恒生消费ETF联接",
-      "zhang_url": "服务器监听",
+      "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "",
@@ -173,7 +173,7 @@
     {
       "code": "009180",
       "name": "嘉实中证主要消费ETF发起联接C",
-      "zhang_url": "服务器监听",
+      "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "",
