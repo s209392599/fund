@@ -161,6 +161,26 @@
       "type": "科技成长"
     },
     {
+      "code": "019103",
+      "name": "景顺长城恒生消费ETF联接",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "消费"
+    },
+    {
+      "code": "009180",
+      "name": "嘉实中证主要消费ETF发起联接C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "消费"
+    },
+    {
       "code": "017437",
       "name": "华宝纳斯达克精选股票发起式",
       "zhang_url": "不提供",

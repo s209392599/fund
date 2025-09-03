@@ -66,7 +66,7 @@ public class TabPageManager
         }
     }
 
-    private TabPage FindTabByName(string tabName)
+    public TabPage FindTabByName(string tabName)
     {
         return _tabControl.TabPages.Cast<TabPage>()
                     .FirstOrDefault(t => t.Name == tabName);
@@ -89,4 +89,42 @@ public class TabPageManager
             ShowTab(tabKey);
         }
     }
+
+    /// <summary>
+    /// 真正删除一个TabPage（无论隐藏或未隐藏）
+    /// </summary>
+    public void RemoveTab(string tabName)
+    {
+        // 先从隐藏列表删除
+        if (_hiddenTabs.TryGetValue(tabName, out TabPage hiddenTab))
+        {
+            _hiddenTabs.Remove(tabName);
+            _originalPositions.Remove(tabName);
+            hiddenTab.Dispose();
+            return;
+        }
+        // 再从可见TabPages删除
+        TabPage tab = FindTabByName(tabName);
+        if (tab != null)
+        {
+            _tabControl.TabPages.Remove(tab);
+            _originalPositions.Remove(tabName);
+            tab.Dispose();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有TabPage（包括隐藏和未隐藏）
+    /// </summary>
+    public List<TabPage> GetAllTabs()
+    {
+        var allTabs = new List<TabPage>();
+        // 先加可见的
+        allTabs.AddRange(_tabControl.TabPages.Cast<TabPage>());
+        // 再加隐藏的
+        allTabs.AddRange(_hiddenTabs.Values);
+        return allTabs;
+    }
 }
+
+    
