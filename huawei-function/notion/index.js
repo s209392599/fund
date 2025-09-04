@@ -3,7 +3,8 @@ const nodemailer = require('nodemailer');
 var mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新增定投 易方达机器人ETF联接C(020973)`; // 右键主题
 mail_title = `量化可再手动买入一点；其它先坚持定投`;
 
-mail_title = ``;
+mail_title = `华泰红利和消费(2选1)加仓，其它不动`;
+mail_title = `附加一个操作：中信、建信 转 德邦或者中航 一部分`;
 
 
 var marilArr = [
