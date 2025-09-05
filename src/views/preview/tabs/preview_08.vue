@@ -58,7 +58,7 @@ const btn_del = (row, $index) => {
     }
   )
     .then(() => {
-      server_fund_public_fund_delete({ code: row.code }).then(res => {
+      server_fund_public_fund_delete({ fundcode: row.code }).then(res => {
         console.log('res', res);
         if (res.code === 200) {
           ElMessage.success('删除成功');
@@ -69,6 +69,30 @@ const btn_del = (row, $index) => {
       })
     })
     .catch(() => { })
+}
+// 插入到
+const btn_cha = (row, $index) => {
+  console.log('$index', $index);
+  const userInput = prompt('请输入第几行(正整数)');
+  if (userInput) {
+    let index = parseFloat(userInput) || 0;
+    index = Math.min(index, info.tableData.length) - 1;
+    if (index > -1 && index !== $index) {
+      console.log('index', index, $index);
+      server_fund_public_fund_sort({
+        index_new: index,
+        index_old: $index
+      }).then(res => {
+        console.log('res', res);
+        if (res.code === 200) {
+          ElMessage.success('操作成功');
+          query_list();
+        } else {
+          ElMessage.error('操作失败，请重试！');
+        }
+      })
+    }
+  }
 }
 // 新增
 const addUser = () => {
@@ -121,6 +145,7 @@ const onSubmit = () => {
     }
   });
 };
+
 </script>
 
 <template>
@@ -144,6 +169,7 @@ const onSubmit = () => {
         <template #default="{ row, $index }">
           <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
           <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
+          <el-button link type="primary" size="small" @click="btn_cha(row, $index)">插入到</el-button>
         </template>
       </el-table-column>
     </el-table>

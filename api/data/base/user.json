@@ -32,7 +32,7 @@
     },
     {
       "code": "023918",
-      "name": "华夏国证自由现金流ETF发起式联接C",
+      "name": "华夏国证自由现金流ETF联接C",
       "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
@@ -82,7 +82,7 @@
     },
     {
       "code": "023521",
-      "name": "博时上证科创板人工智能ETF发起式联接C",
+      "name": "博时上证科创板人工智能ETF联接C",
       "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
@@ -131,26 +131,6 @@
       "type": "科技成长"
     },
     {
-      "code": "019103",
-      "name": "景顺长城恒生消费ETF联接",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "消费"
-    },
-    {
-      "code": "022425",
-      "name": "广发中证A500ETF联接C",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "大盘"
-    },
-    {
       "code": "017437",
       "name": "华宝纳斯达克精选股票发起式",
       "zhang_url": "不提供",
@@ -159,6 +139,26 @@
       "desc": "",
       "fixed": 50,
       "type": "美股"
+    },
+    {
+      "code": "012863",
+      "name": "汇添富中证电池主题ETF发起式联接C",
+      "type": "电池",
+      "zhang_url": "",
+      "fixed": "50",
+      "point_line_down": "0.6",
+      "point_line_top": "0.9",
+      "desc": "09-05：开启两周的小定投，11月份出货"
+    },
+    {
+      "code": "019103",
+      "name": "景顺长城恒生消费ETF联接",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "9-19卖出",
+      "fixed": 50,
+      "type": "消费"
     },
     {
       "code": "016858",
