@@ -53,3 +53,7 @@ export async function server_fund_public_fund_update(data) {
 export async function server_fund_public_fund_delete(data) {
   return request.post('/fund_public_fund_delete', data);
 }
+// 获取天天基金的搜索结果
+export async function server_fund_search_bytiantian(data) {
+  return request.post('/fund_search_bytiantian', data);
+}

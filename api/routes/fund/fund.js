@@ -4,6 +4,8 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const CustomFn = require('../../CustomFn.js');
+const noText = require('../../utils/noText.js'); // 排除的关键词
+const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 
 // 获取用户的json数据
 const getUserJson = () => {
@@ -438,6 +440,55 @@ router.post('/fund_history_performance', (req, res) => {
     res.send({
       code: 400,
       msg: `${fundcode}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
+/* 获取天天基金的搜索结果 */
+router.post('/fund_search_bytiantian', (req, res) => {
+  const { text = '' } = req.body;
+
+  if (!text) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到搜索关键词',
+      data: [],
+    });
+    return;
+  }
+  try {
+    console.log('text',text)
+    const keyStr= encodeURIComponent(text);
+    let url = `https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx?`;
+    let params = `?m=1&key=${keyStr}&pageindex=0&pagesize=1000&t=` + Date.now();
+
+    let u = `${url}${params}`;
+    fetch(u, {
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        Referer: 'https://fund.eastmoney.com/',
+        Accept: 'application/json',
+      },
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        console.log('data', data);
+        // let datas = data.data.Datas || [];
+        let datas = [];
+        datas = datas.filter((item) => !noText.includes(item.CODE));// 排除的关键词
+        datas = datas.filter((item) => !noFundCode.includes(item.CODE));// 排除的基金代码
+        res.send({
+          code: 200,
+          msg: '成功',
+          data: datas,
+        });
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${text} 搜索失败`,
       data: [],
     });
   }

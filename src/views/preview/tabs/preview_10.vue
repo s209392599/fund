@@ -1,8 +1,4 @@
 <script setup>
-import { reactive } from 'vue';
-
-console.log('src/views/preview/tabs/preview_10.vue');
-
 const echartsInstance = inject('echarts');
 
 const chart = ref(null);
