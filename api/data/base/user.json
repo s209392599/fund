@@ -31,16 +31,6 @@
       "type": "红利"
     },
     {
-      "code": "020989",
-      "name": "南方恒生科技指数发起(QDII)C",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "流动仓",
-      "fixed": 30,
-      "type": "恒生科技"
-    },
-    {
       "code": "023918",
       "name": "华夏国证自由现金流ETF发起式联接C",
       "zhang_url": "",
@@ -63,16 +53,6 @@
     {
       "code": "018561",
       "name": "中信保诚多策略混合(LOF)C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 100,
-      "type": "量化"
-    },
-    {
-      "code": "020726",
-      "name": "建信灵活配置混合C",
       "zhang_url": "服务器监听",
       "point_line_top": null,
       "point_line_down": null,
@@ -131,16 +111,6 @@
       "type": "云计算"
     },
     {
-      "code": "008327",
-      "name": "东财通信C",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "通信"
-    },
-    {
       "code": "022691",
       "name": "华安医药生物股票发起式C",
       "zhang_url": "服务器监听",
@@ -171,14 +141,14 @@
       "type": "消费"
     },
     {
-      "code": "009180",
-      "name": "嘉实中证主要消费ETF发起联接C",
+      "code": "022425",
+      "name": "广发中证A500ETF联接C",
       "zhang_url": "",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "",
       "fixed": 50,
-      "type": "消费"
+      "type": "大盘"
     },
     {
       "code": "017437",
@@ -228,6 +198,16 @@
       "point_line_down": null,
       "desc": "10月9日卖出 2025年09月02日14:26:29",
       "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "020726",
+      "name": "建信灵活配置混合C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "10月9日卖出 2025年09月04日15:03:33",
+      "fixed": 100,
       "type": "量化"
     }
   ],

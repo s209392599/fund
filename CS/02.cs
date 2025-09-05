@@ -125,6 +125,19 @@ public class TabPageManager
         allTabs.AddRange(_hiddenTabs.Values);
         return allTabs;
     }
+
+        /// <summary>
+        /// 判断某个tabName是否存在于所有TabPage（包括隐藏和未隐藏）
+        /// </summary>
+        public bool ContainsTab(string tabName)
+        {
+            // 检查可见TabPages
+            if (FindTabByName(tabName) != null)
+                return true;
+            // 检查隐藏TabPages
+            return _hiddenTabs.ContainsKey(tabName);
+        }
 }
 
+    
     
