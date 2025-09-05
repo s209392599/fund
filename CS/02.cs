@@ -66,10 +66,20 @@ public class TabPageManager
         }
     }
 
+    /// <summary>
+    /// 查找指定名称的TabPage（包括可见和隐藏的）
+    /// </summary>
     public TabPage FindTabByName(string tabName)
     {
-        return _tabControl.TabPages.Cast<TabPage>()
+        // 先查找可见TabPages
+        var tab = _tabControl.TabPages.Cast<TabPage>()
                     .FirstOrDefault(t => t.Name == tabName);
+        if (tab != null)
+            return tab;
+        // 再查找隐藏TabPages
+        if (_hiddenTabs.TryGetValue(tabName, out TabPage hiddenTab))
+            return hiddenTab;
+        return null;
     }
 
     public bool IsTabVisible(string tabName)
