@@ -38,3 +38,15 @@ fetch("https://fund.eastmoney.com/data/fundtradenewapi.aspx?ft=hh&sc=z&st=desc&p
   "mode": "cors",
   "credentials": "include"
 });
+
+
+
+/*
+布林带+均线+KDJ+macd
+历史推荐管理
+
+firewall-cmd --reload  刷新防火墙
+
+
+*/
+

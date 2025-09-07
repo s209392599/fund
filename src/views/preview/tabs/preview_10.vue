@@ -90,7 +90,8 @@ const render_chart_fn = () => {
 
         // 循环排序后的数据
         sortedData.forEach(item => {
-          str += `${item.marker} ${item.name}：${item.data}<br/>`;
+          console.log(93,item)
+          str += `${item.marker} ${page.list[item.originalIndex].code}-${item.name}：${item.data}<br/>`;
         });
         return str;
       },

@@ -235,6 +235,42 @@ router.post('/fund_history_data', (req, res) => {
   }
 });
 
+// 
+router.post('/fund_detailPageInfoWithNoPin', (req, res) => {
+  const { fundcode = '', pageSize = 10 } = req.body;
+
+  if (!fundcode) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?reqData={"fundCode":"${fundcode}","itemId":"","clientVersion":"","channel":"9"}`;
+    fetch(u, {})
+      .then((data) => data.json())
+      .then((data) => {
+        let resultData = data.resultData || {};
+        let datas = resultData.datas || {};
+        let netValueList = datas.netValueList || [];
+        // '{"date":"2024-03-26","netValue":"1.3149","dailyProfit":"-0.02","totalNetValue":"1.5429"}'
+        res.send({
+          code: 200,
+          msg: '成功',
+          data: netValueList.reverse(),
+        });
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fundcode}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
 // 获取timer基金当天涨幅
 router.post('/fund_today_rate_by_timer', (req, res) => {
   const fundcode = req.body.fundcode || '';
@@ -460,7 +496,7 @@ router.post('/fund_search_bytiantian', (req, res) => {
   try {
     console.log('text',text)
     const keyStr= encodeURIComponent(text);
-    let url = `https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx?`;
+    let url = `https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx`;
     let params = `?m=1&key=${keyStr}&pageindex=0&pagesize=1000&t=` + Date.now();
 
     let u = `${url}${params}`;
@@ -475,14 +511,21 @@ router.post('/fund_search_bytiantian', (req, res) => {
       .then((data) => data.json())
       .then((data) => {
         console.log('data', data);
-        // let datas = data.data.Datas || [];
-        let datas = [];
+        let datas = data.Datas || [];
         datas = datas.filter((item) => !noText.includes(item.CODE));// 排除的关键词
         datas = datas.filter((item) => !noFundCode.includes(item.CODE));// 排除的基金代码
+
+        const turn_data = datas.map((item) => {
+          return {  
+            code: item.CODE,
+            name: item.NAME,
+          };
+        });
+
         res.send({
           code: 200,
           msg: '成功',
-          data: datas,
+          data: turn_data,
         });
       });
   } catch (err) {

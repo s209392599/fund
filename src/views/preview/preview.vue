@@ -5,18 +5,6 @@ import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
 
 const router = useRouter();
 
-// import preview_01 from './tabs/preview_01.vue';
-// import preview_02 from './tabs/preview_02.vue';
-// import preview_03 from './tabs/preview_03.vue';
-// import preview_04 from './tabs/preview_04.vue';
-// import preview_05 from './tabs/preview_05.vue';
-// import preview_06 from './tabs/preview_06.vue';
-// import preview_07 from './tabs/preview_07.vue';
-// import preview_08 from './tabs/preview_08.vue';
-// import preview_09 from './tabs/preview_09.vue';
-// import preview_10 from './tabs/preview_10.vue';
-// import preview_11 from './tabs/preview_11.vue';
-
 const info = reactive({
   currentTabComponent: '',
   // 顶部的tab页
@@ -105,6 +93,13 @@ const info = reactive({
       show: true,
       name: '基金搜索',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
+      desc: ''
+    },
+    {
+      id: 13,
+      show: true,
+      name: '持仓对比',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
       desc: ''
     },
   ],
