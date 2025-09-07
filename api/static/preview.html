@@ -120,6 +120,8 @@
         </template>
       </el-table-column>
 
+      <el-table-column prop="desc" label="备注" width="300" show-overflow-tooltip></el-table-column>
+
       <el-table-column align="right" label="近1周" width="66" sortable :sort-method="sortHisData0">
         <template v-slot="{ row }">
           <span v-html="getHisdata(row,0)"></span>
@@ -174,7 +176,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="desc" label="备注" width="300" show-overflow-tooltip></el-table-column>
+
     </el-table>
   </div>
 

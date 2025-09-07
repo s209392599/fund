@@ -98,7 +98,7 @@ const info = reactive({
     {
       id: 13,
       show: true,
-      name: '持仓对比',
+      name: '基金持仓',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
       desc: ''
     },

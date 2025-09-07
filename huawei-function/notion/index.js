@@ -4,8 +4,24 @@ var mail_title = `量化继续定投; 红利类卖出3天的定投份额; 可新
 mail_title = `量化可再手动买入一点；其它先坚持定投`;
 
 mail_title = `华泰红利和消费(2选1)加仓，其它不动`;
-mail_title = `附加一个操作：中信、建信 转 德邦或者中航 一部分`;
+mail_title = `看详情`;
+//  看下a500 里面哪一个最好，顺便把搜索给做了
+//
 
+/*
+南方恒生科技指数(020989) 完全卖出进行清仓
+
+汇添富中证电池主题ETF发起式联接C(012863) 开启两周的小定投，11月份出货
+
+取消 景顺长城恒生消费ETF联接 的定投
+
+其它的先持续定投，如果没有钱了可以先卖出一部分(15 ~ 20位的基金)
+
+*/
+
+/*
+移除 广发中证A500ETF联接C 推荐，昨天已经买入的7天后可以卖掉 后6位的持仓
+*/
 
 var marilArr = [
   '209392599@qq.com', // 郭坤
@@ -69,10 +85,31 @@ var html = `
   </style>
 </head>
 <body>
-  <div>${mail_title}</div>
+  <div>南方恒生科技指数(020989) 完全卖出进行清仓</div>
+
+
+  <div>汇添富中证电池主题ETF发起式联接C(012863) 开启两周的小定投，11月份出货</div>
+
+
+  <div>取消 景顺长城恒生消费ETF联接 的定投</div>
+
+
+  <div>其它的先持续定投，如果没有钱了可以先卖出一部分(15 ~ 20位的基金)</div>
+
+
+
+
+
+
+
+
+
+
+
 
   <div>
     <a href="http://150.158.175.108:9999/preview.html" rel="noopener" target="_blank">涨幅预览地址</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a href="https://mli8rlv6cu.feishu.cn/docx/BcJhdXYMqoXS47xb0xdcuBo2nGh" rel="noopener" target="_blank">基金相关知识及网站介绍</a>
   </div>
 

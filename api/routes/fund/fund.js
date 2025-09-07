@@ -372,11 +372,45 @@ router.post('/fund_public_fund_add', (req, res) => {
   const userData = getUserJson() || {};
   const public_fund = userData.public_fund || [];
   public_fund.push(form);
-  res.send({
-    code: 200,
-    msg: '成功',
-    data: [],
-  });
+
+  const result = updateUserJson(userData);
+  if (result) {
+    res.send({
+      code: 200,
+      msg: '操作成功',
+      data: [],
+    });
+  } else {
+    res.send({
+      code: 400,
+      msg: '操作失败',
+      data: [],
+    });
+  }
+});
+// 排序-公共的基金数据
+router.post('/fund_public_fund_sort', (req, res) => {
+  const { index_new,index_old } = req.body;
+  const userData = getUserJson() || {};
+  const public_fund = userData.public_fund || [];
+
+  const [item] = public_fund.splice(index_old, 1);
+  public_fund.splice(index_new, 0, item);
+
+  const result = updateUserJson(userData);
+  if (result) {
+    res.send({
+      code: 200,
+      msg: '操作成功',
+      data: [],
+    });
+  } else {
+    res.send({
+      code: 400,
+      msg: '操作失败',
+      data: [],
+    });
+  }
 });
 // 修改-公共的基金数据
 router.post('/fund_public_fund_update', (req, res) => {
@@ -411,30 +445,30 @@ router.post('/fund_public_fund_update', (req, res) => {
       });
     }
   }
-
-  // const userData = getUserJson() || {};
-  // console.log('userData.public_fund',userData.public_fund.length);
-  // res.send({
-  //   code: 200,
-  //   msg: '成功',
-  //   data: userData.public_fund || [],
-  // });
-
-  /*
-  const filePath = path.join(__dirname, '../../data/base/user.json');
-  try {
-    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
-    return true;
-  } catch (err) {
-    console.log('err', err);
-    return false;
-  }
-  */
 });
+
 // 删除-公共的基金数据
 router.post('/fund_public_fund_delete', (req, res) => {
+  const { fundcode = '', pageSize = 10 } = req.body;
   const userData = getUserJson() || {};
-  console.log('userData.public_fund', userData.public_fund.length);
+  let public_fund = userData.public_fund || [];
+  userData.public_fund = public_fund.filter(v => v.code !== fundcode);
+
+  const result = updateUserJson(userData);
+  if (result) {
+    res.send({
+      code: 200,
+      msg: '操作成功',
+      data: [],
+    });
+  } else {
+    res.send({
+      code: 400,
+      msg: '操作失败',
+      data: [],
+    });
+  }
+
   res.send({
     code: 200,
     msg: '成功',
