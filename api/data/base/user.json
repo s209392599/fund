@@ -41,14 +41,34 @@
       "type": "现金流"
     },
     {
-      "code": "022365",
-      "name": "永赢科技智选混合发起C",
+      "code": "023521",
+      "name": "博时上证科创板人工智能ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "人工智能"
+    },
+    {
+      "code": "020973",
+      "name": "易方达机器人ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "机器人"
+    },
+    {
+      "code": "022691",
+      "name": "华安医药生物股票发起式C",
       "zhang_url": "服务器监听",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "",
-      "fixed": 100,
-      "type": "量化"
+      "fixed": 50,
+      "type": "医药"
     },
     {
       "code": "018561",
@@ -81,46 +101,6 @@
       "type": "量化"
     },
     {
-      "code": "023521",
-      "name": "博时上证科创板人工智能ETF联接C",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "人工智能"
-    },
-    {
-      "code": "020973",
-      "name": "易方达机器人ETF联接C",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "机器人"
-    },
-    {
-      "code": "012322",
-      "name": "东财云计算增强C",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "云计算"
-    },
-    {
-      "code": "022691",
-      "name": "华安医药生物股票发起式C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "医药"
-    },
-    {
       "code": "016371",
       "name": "信澳业绩驱动混合C",
       "zhang_url": "服务器监听",
@@ -149,6 +129,16 @@
       "point_line_down": "0.6",
       "point_line_top": "0.9",
       "desc": "09-05：开启两周的小定投，11月份出货"
+    },
+    {
+      "code": "012322",
+      "name": "东财云计算增强C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "9月16日卖出",
+      "fixed": 50,
+      "type": "云计算"
     },
     {
       "code": "019103",

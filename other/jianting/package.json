@@ -1,0 +1,17 @@
+{
+  "name": "aafilter",
+  "version": "1.0.0",
+  "main": "a.js",
+  "scripts": {
+    "clean_data_guimo": "cd build && node emptyDirectory.js ../data_guimo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "2.6.1"
+  }
+}

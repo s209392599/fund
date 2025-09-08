@@ -1,0 +1,3706 @@
+[
+  {
+    "code": "018561",
+    "name": "中信保诚多策略混合(LOF)C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 100,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "专用设备",
+        "themeCode": "886038",
+        "themeType": 2,
+        "relevance": 88.13,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886038"
+        }
+      },
+      {
+        "themeName": "乡村振兴",
+        "themeCode": "880004",
+        "themeType": 1,
+        "relevance": 90.79,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880004"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "文化传媒",
+        "code": "301231",
+        "rate": "1.16%",
+        "name": "荣信文化",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "25.29",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301231%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301231",
+          "t": "gos"
+        },
+        "ratio": "0.96%"
+      },
+      {
+        "industryName": "塑料制品",
+        "code": "300218",
+        "rate": "1.30%",
+        "name": "安利股份",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "21.79",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300218%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300218",
+          "t": "gos"
+        },
+        "ratio": "0.87%"
+      },
+      {
+        "industryName": "光伏设备",
+        "code": "000159",
+        "rate": "1.58%",
+        "name": "国际实业",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "5.80",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000159%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000159",
+          "t": "gos"
+        },
+        "ratio": "0.87%"
+      },
+      {
+        "industryName": "食品加工制造",
+        "isUpChange": false,
+        "code": "605567",
+        "rate": "2.91%",
+        "name": "春雪食品",
+        "holdingSharesChange": "0.17%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "10.60",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-605567%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-605567",
+          "t": "gos"
+        },
+        "ratio": "0.86%"
+      },
+      {
+        "industryName": "建筑装饰",
+        "code": "603860",
+        "rate": "1.55%",
+        "name": "中公高科",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "31.44",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-603860%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-603860",
+          "t": "gos"
+        },
+        "ratio": "0.86%"
+      },
+      {
+        "industryName": "专用设备",
+        "code": "300549",
+        "rate": "3.57%",
+        "name": "优德精密",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "20.04",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300549%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300549",
+          "t": "gos"
+        },
+        "ratio": "0.85%"
+      },
+      {
+        "industryName": "种植业与林业",
+        "code": "300970",
+        "rate": "2.02%",
+        "name": "华绿生物",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "14.65",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300970%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300970",
+          "t": "gos"
+        },
+        "ratio": "0.85%"
+      },
+      {
+        "industryName": "综合",
+        "code": "600051",
+        "rate": "1.93%",
+        "name": "宁波联合",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "7.39",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600051%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600051",
+          "t": "gos"
+        },
+        "ratio": "0.84%"
+      },
+      {
+        "industryName": "专用设备",
+        "isUpChange": false,
+        "code": "603029",
+        "rate": "1.45%",
+        "name": "天鹅股份",
+        "holdingSharesChange": "0.21%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "18.88",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-603029%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-603029",
+          "t": "gos"
+        },
+        "ratio": "0.84%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "301577",
+        "rate": "2.04%",
+        "name": "美信科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "60.03",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301577%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301577",
+          "t": "gos"
+        },
+        "ratio": "0.83%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "32.03"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "5.35"
+      },
+      {
+        "name": "文化、体育和娱乐业",
+        "value": "3.30"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "3.23"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "2.95"
+      },
+      {
+        "name": "农、林、牧、渔业",
+        "value": "2.73"
+      },
+      {
+        "name": "建筑业",
+        "value": "2.68"
+      },
+      {
+        "name": "水利、环境和公共设施管理业",
+        "value": "2.03"
+      },
+      {
+        "name": "租赁和商务服务业",
+        "value": "1.55"
+      },
+      {
+        "name": "电力、热力、燃气及水生产和供应业",
+        "value": "1.39"
+      },
+      {
+        "name": "教育",
+        "value": "0.85"
+      },
+      {
+        "name": "采矿业",
+        "value": "0.31"
+      },
+      {
+        "name": "房地产业",
+        "value": "0.19"
+      },
+      {
+        "name": "交通运输、仓储和邮政业",
+        "value": "0.05"
+      }
+    ]
+  },
+  {
+    "code": "002112",
+    "name": "德邦鑫星价值灵活配置混合C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 50,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "通信设备",
+        "themeCode": "886091",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886091"
+        },
+        "themeType": 2,
+        "relevance": 93.15
+      },
+      {
+        "themeName": "共封装光学(CPO)",
+        "themeCode": "879853",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879853"
+        },
+        "themeType": 1,
+        "relevance": 98.67
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "元件",
+        "isUpChange": true,
+        "code": "300476",
+        "rate": "-7.57%",
+        "name": "胜宏科技",
+        "holdingSharesChange": "3.69%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "273.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300476%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300476",
+          "t": "gos"
+        },
+        "ratio": "9.36%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "300548",
+        "rate": "-4.16%",
+        "name": "长芯博创",
+        "holdingSharesChange": "3.41%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "118.85",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300548%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300548",
+          "t": "gos"
+        },
+        "ratio": "9.30%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "300570",
+        "rate": "-5.20%",
+        "name": "太辰光",
+        "holdingSharesChange": "1.58%",
+        "positionQuarters": "重仓5个季度",
+        "newestPrize": "106.20",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300570%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300570",
+          "t": "gos"
+        },
+        "ratio": "8.91%"
+      },
+      {
+        "industryName": "元件",
+        "code": "002463",
+        "rate": "-5.88%",
+        "name": "沪电股份",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "60.37",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002463%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002463",
+          "t": "gos"
+        },
+        "ratio": "7.86%"
+      },
+      {
+        "industryName": "元件",
+        "code": "688183",
+        "rate": "-5.67%",
+        "name": "生益电子",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "80.75",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688183%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688183",
+          "t": "gos"
+        },
+        "ratio": "6.28%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": false,
+        "code": "300502",
+        "rate": "-9.95%",
+        "name": "新易盛",
+        "holdingSharesChange": "1.33%",
+        "positionQuarters": "重仓6个季度",
+        "newestPrize": "314.50",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300502%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300502",
+          "t": "gos"
+        },
+        "ratio": "5.59%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "688205",
+        "rate": "-7.96%",
+        "name": "德科立",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "97.93",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688205%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688205",
+          "t": "gos"
+        },
+        "ratio": "4.82%"
+      },
+      {
+        "industryName": "半导体",
+        "code": "688498",
+        "rate": "-13.22%",
+        "name": "源杰科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "324.00",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688498%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688498",
+          "t": "gos"
+        },
+        "ratio": "4.78%"
+      },
+      {
+        "industryName": "自动化设备",
+        "code": "000988",
+        "rate": "-1.11%",
+        "name": "华工科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "66.79",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000988%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000988",
+          "t": "gos"
+        },
+        "ratio": "4.45%"
+      },
+      {
+        "industryName": "光学光电子",
+        "code": "688195",
+        "rate": "-4.82%",
+        "name": "腾景科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "88.30",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688195%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688195",
+          "t": "gos"
+        },
+        "ratio": "4.23%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "93.96"
+      }
+    ]
+  },
+  {
+    "code": "018957",
+    "name": "中航机遇领航混合发起C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 50,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "通信设备",
+        "themeCode": "886091",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886091"
+        },
+        "themeType": 2,
+        "relevance": 96.76
+      },
+      {
+        "themeName": "共封装光学(CPO)",
+        "themeCode": "879853",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879853"
+        },
+        "themeType": 1,
+        "relevance": 97.53
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "300308",
+        "rate": "-9.09%",
+        "name": "中际旭创",
+        "holdingSharesChange": "0.08%",
+        "positionQuarters": "重仓8个季度",
+        "newestPrize": "369.99",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300308%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300308",
+          "t": "gos"
+        },
+        "ratio": "9.78%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": false,
+        "code": "300502",
+        "rate": "-9.95%",
+        "name": "新易盛",
+        "holdingSharesChange": "0.09%",
+        "positionQuarters": "重仓8个季度",
+        "newestPrize": "314.50",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300502%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300502",
+          "t": "gos"
+        },
+        "ratio": "9.74%"
+      },
+      {
+        "industryName": "专用设备",
+        "isUpChange": true,
+        "code": "002837",
+        "rate": "-2.73%",
+        "name": "英维克",
+        "holdingSharesChange": "1.36%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "69.13",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002837%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002837",
+          "t": "gos"
+        },
+        "ratio": "9.73%"
+      },
+      {
+        "industryName": "元件",
+        "isUpChange": false,
+        "code": "300476",
+        "rate": "-7.57%",
+        "name": "胜宏科技",
+        "holdingSharesChange": "0.58%",
+        "positionQuarters": "重仓4个季度",
+        "newestPrize": "273.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300476%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300476",
+          "t": "gos"
+        },
+        "ratio": "8.95%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "300548",
+        "rate": "-4.16%",
+        "name": "长芯博创",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "118.85",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300548%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300548",
+          "t": "gos"
+        },
+        "ratio": "8.91%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": false,
+        "code": "300394",
+        "rate": "-7.36%",
+        "name": "天孚通信",
+        "holdingSharesChange": "0.91%",
+        "positionQuarters": "重仓8个季度",
+        "newestPrize": "173.05",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300394%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300394",
+          "t": "gos"
+        },
+        "ratio": "8.21%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "688205",
+        "rate": "-7.96%",
+        "name": "德科立",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "97.93",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688205%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688205",
+          "t": "gos"
+        },
+        "ratio": "8.09%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "688313",
+        "rate": "-3.42%",
+        "name": "仕佳光子",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "73.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688313%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688313",
+          "t": "gos"
+        },
+        "ratio": "8.07%"
+      },
+      {
+        "industryName": "元件",
+        "isUpChange": false,
+        "code": "600601",
+        "rate": "-3.73%",
+        "name": "方正科技",
+        "holdingSharesChange": "2.83%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "9.28",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600601%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600601",
+          "t": "gos"
+        },
+        "ratio": "5.47%"
+      },
+      {
+        "industryName": "元件",
+        "code": "002463",
+        "rate": "-5.88%",
+        "name": "沪电股份",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "60.37",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002463%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002463",
+          "t": "gos"
+        },
+        "ratio": "5.19%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "90.45"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "0.01"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "0.00"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "0.00"
+      }
+    ]
+  },
+  {
+    "code": "016371",
+    "name": "信澳业绩驱动混合C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 50,
+    "type": "科技成长",
+    "themeNameList": [
+      {
+        "themeName": "通信设备",
+        "themeCode": "886091",
+        "themeType": 2,
+        "relevance": 94.76,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886091"
+        }
+      },
+      {
+        "themeName": "英伟达概念",
+        "themeCode": "879838",
+        "themeType": 1,
+        "relevance": 98.75,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879838"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "300502",
+        "rate": "-9.95%",
+        "name": "新易盛",
+        "holdingSharesChange": "3.49%",
+        "positionQuarters": "重仓7个季度",
+        "newestPrize": "314.50",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300502%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300502",
+          "t": "gos"
+        },
+        "ratio": "9.87%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "300308",
+        "rate": "-9.09%",
+        "name": "中际旭创",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "369.99",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300308%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300308",
+          "t": "gos"
+        },
+        "ratio": "9.81%"
+      },
+      {
+        "industryName": "其他电源设备",
+        "isUpChange": false,
+        "code": "002851",
+        "rate": "-3.46%",
+        "name": "麦格米特",
+        "holdingSharesChange": "0.56%",
+        "positionQuarters": "重仓4个季度",
+        "newestPrize": "73.35",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002851%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002851",
+          "t": "gos"
+        },
+        "ratio": "9.23%"
+      },
+      {
+        "industryName": "专用设备",
+        "isUpChange": false,
+        "code": "002837",
+        "rate": "-2.73%",
+        "name": "英维克",
+        "holdingSharesChange": "0.61%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "69.13",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002837%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002837",
+          "t": "gos"
+        },
+        "ratio": "8.69%"
+      },
+      {
+        "industryName": "元件",
+        "isUpChange": false,
+        "code": "300476",
+        "rate": "-7.57%",
+        "name": "胜宏科技",
+        "holdingSharesChange": "0.37%",
+        "positionQuarters": "重仓5个季度",
+        "newestPrize": "273.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300476%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300476",
+          "t": "gos"
+        },
+        "ratio": "8.43%"
+      },
+      {
+        "industryName": "元件",
+        "code": "002463",
+        "rate": "-5.88%",
+        "name": "沪电股份",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "60.37",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002463%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002463",
+          "t": "gos"
+        },
+        "ratio": "7.89%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "300394",
+        "rate": "-7.36%",
+        "name": "天孚通信",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "173.05",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300394%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300394",
+          "t": "gos"
+        },
+        "ratio": "7.71%"
+      },
+      {
+        "industryName": "元件",
+        "isUpChange": true,
+        "code": "688183",
+        "rate": "-5.67%",
+        "name": "生益电子",
+        "holdingSharesChange": "2.09%",
+        "positionQuarters": "重仓5个季度",
+        "newestPrize": "80.75",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688183%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688183",
+          "t": "gos"
+        },
+        "ratio": "7.47%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "688205",
+        "rate": "-7.96%",
+        "name": "德科立",
+        "holdingSharesChange": "2.27%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "97.93",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688205%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688205",
+          "t": "gos"
+        },
+        "ratio": "7.45%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "300548",
+        "rate": "-4.16%",
+        "name": "长芯博创",
+        "holdingSharesChange": "1.16%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "118.85",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300548%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300548",
+          "t": "gos"
+        },
+        "ratio": "7.06%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "94.38"
+      }
+    ]
+  },
+  {
+    "code": "016858",
+    "name": "国金量化多因子股票C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "9月29日卖出 2025年08月25日15:23:19",
+    "fixed": 50,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "元件",
+        "themeCode": "886017",
+        "themeType": 2,
+        "relevance": 90.16,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886017"
+        }
+      },
+      {
+        "themeName": "长三角一体化",
+        "themeCode": "880344",
+        "themeType": 1,
+        "relevance": 94.26,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880344"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "元件",
+        "code": "300476",
+        "rate": "-7.57%",
+        "name": "胜宏科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "273.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300476%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300476",
+          "t": "gos"
+        },
+        "ratio": "2.34%"
+      },
+      {
+        "industryName": "证券",
+        "code": "601162",
+        "rate": "-0.36%",
+        "name": "天风证券",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "5.49",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601162%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601162",
+          "t": "gos"
+        },
+        "ratio": "1.56%"
+      },
+      {
+        "industryName": "元件",
+        "code": "002384",
+        "rate": "2.52%",
+        "name": "东山精密",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "65.61",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002384%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002384",
+          "t": "gos"
+        },
+        "ratio": "1.50%"
+      },
+      {
+        "industryName": "软件开发",
+        "code": "300033",
+        "rate": "-4.95%",
+        "name": "同花顺",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "343.60",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300033%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300033",
+          "t": "gos"
+        },
+        "ratio": "1.50%"
+      },
+      {
+        "industryName": "通信设备",
+        "code": "300548",
+        "rate": "-4.16%",
+        "name": "长芯博创",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "118.85",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300548%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300548",
+          "t": "gos"
+        },
+        "ratio": "1.44%"
+      },
+      {
+        "industryName": "保险",
+        "code": "601336",
+        "rate": "-0.95%",
+        "name": "新华保险",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "62.73",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601336%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601336",
+          "t": "gos"
+        },
+        "ratio": "1.38%"
+      },
+      {
+        "industryName": "白色家电",
+        "isUpChange": false,
+        "code": "000651",
+        "rate": "0.15%",
+        "name": "格力电器",
+        "holdingSharesChange": "0.29%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "41.42",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000651%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000651",
+          "t": "gos"
+        },
+        "ratio": "1.36%"
+      },
+      {
+        "industryName": "半导体",
+        "code": "688008",
+        "rate": "0.85%",
+        "name": "澜起科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "109.33",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688008%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688008",
+          "t": "gos"
+        },
+        "ratio": "1.36%"
+      },
+      {
+        "industryName": "光伏设备",
+        "code": "300274",
+        "rate": "1.21%",
+        "name": "阳光电源",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "136.98",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300274%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300274",
+          "t": "gos"
+        },
+        "ratio": "1.36%"
+      },
+      {
+        "industryName": "游戏",
+        "code": "300418",
+        "rate": "-1.71%",
+        "name": "昆仑万维",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "40.35",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300418%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300418",
+          "t": "gos"
+        },
+        "ratio": "1.35%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "49.40"
+      },
+      {
+        "name": "金融业",
+        "value": "10.55"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "9.39"
+      },
+      {
+        "name": "电力、热力、燃气及水生产和供应业",
+        "value": "3.84"
+      },
+      {
+        "name": "建筑业",
+        "value": "3.03"
+      },
+      {
+        "name": "采矿业",
+        "value": "2.93"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "2.39"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "2.31"
+      },
+      {
+        "name": "交通运输、仓储和邮政业",
+        "value": "2.17"
+      },
+      {
+        "name": "房地产业",
+        "value": "1.33"
+      },
+      {
+        "name": "水利、环境和公共设施管理业",
+        "value": "1.01"
+      },
+      {
+        "name": "租赁和商务服务业",
+        "value": "0.92"
+      },
+      {
+        "name": "农、林、牧、渔业",
+        "value": "0.77"
+      },
+      {
+        "name": "文化、体育和娱乐业",
+        "value": "0.40"
+      },
+      {
+        "name": "住宿和餐饮业",
+        "value": "0.16"
+      },
+      {
+        "name": "卫生和社会工作",
+        "value": "0.08"
+      },
+      {
+        "name": "居民服务、修理和其他服务业",
+        "value": "0.03"
+      },
+      {
+        "name": "综合",
+        "value": "0.03"
+      },
+      {
+        "name": "教育",
+        "value": "0.01"
+      }
+    ]
+  },
+  {
+    "code": "018729",
+    "name": "华夏智胜新锐股票C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "9月29日卖出 2025年08月25日15:23:16",
+    "fixed": 50,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "塑料制品",
+        "themeCode": "886151",
+        "themeType": 2,
+        "relevance": 92.61,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886151"
+        }
+      },
+      {
+        "themeName": "国企改革",
+        "themeCode": "880149",
+        "themeType": 1,
+        "relevance": 94.65,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880149"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "计算机设备",
+        "code": "688208",
+        "rate": "-4.15%",
+        "name": "道通科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "36.96",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688208%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688208",
+          "t": "gos"
+        },
+        "ratio": "0.86%"
+      },
+      {
+        "industryName": "机场航运",
+        "code": "000089",
+        "rate": "0.70%",
+        "name": "深圳机场",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "7.21",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000089%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000089",
+          "t": "gos"
+        },
+        "ratio": "0.75%"
+      },
+      {
+        "industryName": "塑料制品",
+        "code": "301090",
+        "rate": "1.88%",
+        "name": "华润材料",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "8.15",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301090%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301090",
+          "t": "gos"
+        },
+        "ratio": "0.72%"
+      },
+      {
+        "industryName": "公路铁路运输",
+        "code": "600020",
+        "rate": "0.46%",
+        "name": "中原高速",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "4.41",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600020%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600020",
+          "t": "gos"
+        },
+        "ratio": "0.72%"
+      },
+      {
+        "industryName": "家居用品",
+        "code": "301061",
+        "rate": "-1.90%",
+        "name": "匠心家居",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "98.68",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301061%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301061",
+          "t": "gos"
+        },
+        "ratio": "0.70%"
+      },
+      {
+        "industryName": "医疗器械",
+        "code": "300030",
+        "rate": "2.86%",
+        "name": "阳普医疗",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "8.28",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300030%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300030",
+          "t": "gos"
+        },
+        "ratio": "0.69%"
+      },
+      {
+        "industryName": "医疗服务",
+        "code": "002524",
+        "rate": "2.55%",
+        "name": "光正眼科",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "4.42",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002524%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002524",
+          "t": "gos"
+        },
+        "ratio": "0.64%"
+      },
+      {
+        "industryName": "通信服务",
+        "code": "601728",
+        "rate": "0.14%",
+        "name": "中国电信",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "7.27",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601728%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601728",
+          "t": "gos"
+        },
+        "ratio": "0.63%"
+      },
+      {
+        "industryName": "电网设备",
+        "code": "301295",
+        "rate": "-1.03%",
+        "name": "美硕科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "31.56",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301295%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301295",
+          "t": "gos"
+        },
+        "ratio": "0.62%"
+      },
+      {
+        "industryName": "美容护理",
+        "code": "301059",
+        "rate": "2.76%",
+        "name": "金三江",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "11.93",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301059%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301059",
+          "t": "gos"
+        },
+        "ratio": "0.61%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "61.77"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "10.31"
+      },
+      {
+        "name": "金融业",
+        "value": "3.95"
+      },
+      {
+        "name": "交通运输、仓储和邮政业",
+        "value": "3.15"
+      },
+      {
+        "name": "租赁和商务服务业",
+        "value": "1.95"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "1.94"
+      },
+      {
+        "name": "房地产业",
+        "value": "1.87"
+      },
+      {
+        "name": "电力、热力、燃气及水生产和供应业",
+        "value": "1.86"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "1.61"
+      },
+      {
+        "name": "采矿业",
+        "value": "1.44"
+      },
+      {
+        "name": "建筑业",
+        "value": "1.25"
+      },
+      {
+        "name": "水利、环境和公共设施管理业",
+        "value": "1.08"
+      },
+      {
+        "name": "文化、体育和娱乐业",
+        "value": "1.05"
+      },
+      {
+        "name": "卫生和社会工作",
+        "value": "0.64"
+      },
+      {
+        "name": "农、林、牧、渔业",
+        "value": "0.35"
+      },
+      {
+        "name": "居民服务、修理和其他服务业",
+        "value": "0.05"
+      },
+      {
+        "name": "教育",
+        "value": "0.01"
+      }
+    ]
+  },
+  {
+    "code": "002834",
+    "name": "华夏新锦绣混合C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "10月9日卖出 2025年09月02日14:26:29",
+    "fixed": 100,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "消费电子",
+        "themeCode": "886092",
+        "themeType": 2,
+        "relevance": 84.33,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886092"
+        }
+      },
+      {
+        "themeName": "国企改革",
+        "themeCode": "880149",
+        "themeType": 1,
+        "relevance": 93.96,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880149"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "软件开发",
+        "isUpChange": true,
+        "code": "688111",
+        "rate": "1.02%",
+        "name": "金山办公",
+        "holdingSharesChange": "0.30%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "301.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688111%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688111",
+          "t": "gos"
+        },
+        "ratio": "1.87%"
+      },
+      {
+        "industryName": "消费电子",
+        "isUpChange": false,
+        "code": "601138",
+        "rate": "-7.93%",
+        "name": "工业富联",
+        "holdingSharesChange": "0.17%",
+        "positionQuarters": "重仓6个季度",
+        "newestPrize": "51.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601138%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601138",
+          "t": "gos"
+        },
+        "ratio": "1.83%"
+      },
+      {
+        "industryName": "钢铁",
+        "isUpChange": true,
+        "code": "600019",
+        "rate": "0.72%",
+        "name": "宝钢股份",
+        "holdingSharesChange": "0.35%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "7.02",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600019%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600019",
+          "t": "gos"
+        },
+        "ratio": "1.72%"
+      },
+      {
+        "industryName": "通信服务",
+        "isUpChange": true,
+        "code": "601728",
+        "rate": "0.14%",
+        "name": "中国电信",
+        "holdingSharesChange": "0.30%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "7.27",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601728%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601728",
+          "t": "gos"
+        },
+        "ratio": "1.72%"
+      },
+      {
+        "industryName": "零售",
+        "isUpChange": true,
+        "code": "600415",
+        "rate": "-1.63%",
+        "name": "小商品城",
+        "holdingSharesChange": "0.21%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "19.87",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600415%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600415",
+          "t": "gos"
+        },
+        "ratio": "1.68%"
+      },
+      {
+        "industryName": "电池",
+        "isUpChange": true,
+        "code": "300750",
+        "rate": "0.08%",
+        "name": "宁德时代",
+        "holdingSharesChange": "0.15%",
+        "positionQuarters": "重仓10个季度",
+        "newestPrize": "325.37",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300750%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300750",
+          "t": "gos"
+        },
+        "ratio": "1.65%"
+      },
+      {
+        "industryName": "工业金属",
+        "isUpChange": true,
+        "code": "601899",
+        "rate": "-2.49%",
+        "name": "紫金矿业",
+        "holdingSharesChange": "0.15%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "24.64",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601899%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601899",
+          "t": "gos"
+        },
+        "ratio": "1.64%"
+      },
+      {
+        "industryName": "文化传媒",
+        "isUpChange": true,
+        "code": "002027",
+        "rate": "1.08%",
+        "name": "分众传媒",
+        "holdingSharesChange": "0.15%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "8.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002027%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002027",
+          "t": "gos"
+        },
+        "ratio": "1.57%"
+      },
+      {
+        "industryName": "白酒",
+        "isUpChange": false,
+        "code": "600519",
+        "rate": "1.23%",
+        "name": "贵州茅台",
+        "holdingSharesChange": "0.15%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "1501.23",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600519%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600519",
+          "t": "gos"
+        },
+        "ratio": "1.52%"
+      },
+      {
+        "industryName": "汽车整车",
+        "isUpChange": false,
+        "code": "002594",
+        "rate": "-0.94%",
+        "name": "比亚迪",
+        "holdingSharesChange": "0.48%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "106.25",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002594%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002594",
+          "t": "gos"
+        },
+        "ratio": "1.51%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "58.38"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "4.85"
+      },
+      {
+        "name": "水利、环境和公共设施管理业",
+        "value": "4.41"
+      },
+      {
+        "name": "租赁和商务服务业",
+        "value": "4.09"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "3.54"
+      },
+      {
+        "name": "采矿业",
+        "value": "2.98"
+      },
+      {
+        "name": "文化、体育和娱乐业",
+        "value": "2.15"
+      },
+      {
+        "name": "农、林、牧、渔业",
+        "value": "1.91"
+      },
+      {
+        "name": "建筑业",
+        "value": "1.82"
+      },
+      {
+        "name": "房地产业",
+        "value": "1.44"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "1.19"
+      },
+      {
+        "name": "教育",
+        "value": "1.08"
+      },
+      {
+        "name": "金融业",
+        "value": "0.93"
+      },
+      {
+        "name": "交通运输、仓储和邮政业",
+        "value": "0.84"
+      },
+      {
+        "name": "电力、热力、燃气及水生产和供应业",
+        "value": "0.80"
+      }
+    ]
+  },
+  {
+    "code": "023350",
+    "name": "诺安多策略混合C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "10月9日卖出 2025年09月02日14:26:29",
+    "fixed": 50,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "专用设备",
+        "themeCode": "886038",
+        "themeType": 2,
+        "relevance": 91.42,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886038"
+        }
+      },
+      {
+        "themeName": "雄安新区",
+        "themeCode": "880054",
+        "themeType": 1,
+        "relevance": 87.93,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880054"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "家居用品",
+        "code": "002798",
+        "rate": "1.08%",
+        "name": "帝欧家居",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "6.57",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002798%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002798",
+          "t": "gos"
+        },
+        "ratio": "0.46%"
+      },
+      {
+        "industryName": "纺织制造",
+        "code": "605180",
+        "rate": "1.95%",
+        "name": "华生科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "16.18",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-605180%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-605180",
+          "t": "gos"
+        },
+        "ratio": "0.45%"
+      },
+      {
+        "industryName": "专用设备",
+        "code": "688022",
+        "rate": "2.54%",
+        "name": "瀚川智能",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "16.54",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688022%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688022",
+          "t": "gos"
+        },
+        "ratio": "0.45%"
+      },
+      {
+        "industryName": "电池",
+        "code": "600847",
+        "rate": "0.00%",
+        "name": "万里股份",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "11.42",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600847%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600847",
+          "t": "gos"
+        },
+        "ratio": "0.44%"
+      },
+      {
+        "industryName": "专用设备",
+        "isUpChange": false,
+        "code": "300813",
+        "rate": "7.94%",
+        "name": "泰林生物",
+        "holdingSharesChange": "0.11%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "33.46",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300813%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300813",
+          "t": "gos"
+        },
+        "ratio": "0.44%"
+      },
+      {
+        "industryName": "服装家纺",
+        "isUpChange": false,
+        "code": "002494",
+        "rate": "1.82%",
+        "name": "华斯股份",
+        "holdingSharesChange": "0.11%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "5.04",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002494%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002494",
+          "t": "gos"
+        },
+        "ratio": "0.44%"
+      },
+      {
+        "industryName": "环境治理",
+        "code": "688565",
+        "rate": "1.76%",
+        "name": "力源科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "10.43",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688565%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688565",
+          "t": "gos"
+        },
+        "ratio": "0.44%"
+      },
+      {
+        "industryName": "化学制品",
+        "code": "300665",
+        "rate": "1.27%",
+        "name": "飞鹿股份",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "9.59",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300665%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300665",
+          "t": "gos"
+        },
+        "ratio": "0.43%"
+      },
+      {
+        "industryName": "汽车零部件",
+        "code": "688737",
+        "rate": "2.26%",
+        "name": "中自科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "23.10",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688737%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688737",
+          "t": "gos"
+        },
+        "ratio": "0.43%"
+      },
+      {
+        "industryName": "通用设备",
+        "code": "301448",
+        "rate": "16.26%",
+        "name": "开创电气",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "55.13",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301448%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301448",
+          "t": "gos"
+        },
+        "ratio": "0.43%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "69.98"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "5.64"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "5.05"
+      },
+      {
+        "name": "水利、环境和公共设施管理业",
+        "value": "3.45"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "2.68"
+      },
+      {
+        "name": "建筑业",
+        "value": "2.16"
+      },
+      {
+        "name": "农、林、牧、渔业",
+        "value": "1.64"
+      },
+      {
+        "name": "房地产业",
+        "value": "1.23"
+      },
+      {
+        "name": "租赁和商务服务业",
+        "value": "0.75"
+      },
+      {
+        "name": "电力、热力、燃气及水生产和供应业",
+        "value": "0.54"
+      },
+      {
+        "name": "卫生和社会工作",
+        "value": "0.42"
+      },
+      {
+        "name": "文化、体育和娱乐业",
+        "value": "0.39"
+      }
+    ]
+  },
+  {
+    "code": "020726",
+    "name": "建信灵活配置混合C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "10月9日卖出 2025年09月04日15:03:33",
+    "fixed": 100,
+    "type": "量化",
+    "themeNameList": [
+      {
+        "themeName": "造纸",
+        "themeCode": "886072",
+        "themeType": 2,
+        "relevance": 99.94,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886072"
+        }
+      },
+      {
+        "themeName": "长三角一体化",
+        "themeCode": "880344",
+        "themeType": 1,
+        "relevance": 89.45,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880344"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "医疗器械",
+        "code": "688314",
+        "rate": "3.51%",
+        "name": "康拓医疗",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "38.90",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688314%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688314",
+          "t": "gos"
+        },
+        "ratio": "1.18%"
+      },
+      {
+        "industryName": "美容护理",
+        "code": "301059",
+        "rate": "2.76%",
+        "name": "金三江",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "11.93",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-301059%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-301059",
+          "t": "gos"
+        },
+        "ratio": "1.16%"
+      },
+      {
+        "industryName": "通用设备",
+        "code": "688056",
+        "rate": "1.54%",
+        "name": "莱伯泰科",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "36.28",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688056%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688056",
+          "t": "gos"
+        },
+        "ratio": "1.16%"
+      },
+      {
+        "industryName": "软件开发",
+        "code": "688479",
+        "rate": "-0.05%",
+        "name": "友车科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "19.57",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688479%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688479",
+          "t": "gos"
+        },
+        "ratio": "1.15%"
+      },
+      {
+        "industryName": "通用设备",
+        "code": "300838",
+        "rate": "1.96%",
+        "name": "浙江力诺",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "14.58",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300838%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300838",
+          "t": "gos"
+        },
+        "ratio": "1.15%"
+      },
+      {
+        "industryName": "医药商业",
+        "code": "603122",
+        "rate": "0.90%",
+        "name": "合富中国",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "6.72",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-603122%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-603122",
+          "t": "gos"
+        },
+        "ratio": "1.15%"
+      },
+      {
+        "industryName": "塑料制品",
+        "code": "688323",
+        "rate": "3.31%",
+        "name": "瑞华泰",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "15.91",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688323%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688323",
+          "t": "gos"
+        },
+        "ratio": "1.15%"
+      },
+      {
+        "industryName": "造纸",
+        "code": "600356",
+        "rate": "2.05%",
+        "name": "恒丰纸业",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "10.43",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600356%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600356",
+          "t": "gos"
+        },
+        "ratio": "1.15%"
+      },
+      {
+        "industryName": "通用设备",
+        "code": "688355",
+        "rate": "2.22%",
+        "name": "明志科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "19.81",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688355%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688355",
+          "t": "gos"
+        },
+        "ratio": "1.14%"
+      },
+      {
+        "industryName": "橡胶制品",
+        "code": "002381",
+        "rate": "1.18%",
+        "name": "双箭股份",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "6.88",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002381%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002381",
+          "t": "gos"
+        },
+        "ratio": "1.14%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "61.30"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "9.52"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "2.62"
+      },
+      {
+        "name": "房地产业",
+        "value": "2.09"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "1.97"
+      },
+      {
+        "name": "水利、环境和公共设施管理业",
+        "value": "1.88"
+      },
+      {
+        "name": "文化、体育和娱乐业",
+        "value": "1.03"
+      },
+      {
+        "name": "租赁和商务服务业",
+        "value": "0.71"
+      },
+      {
+        "name": "交通运输、仓储和邮政业",
+        "value": "0.50"
+      },
+      {
+        "name": "金融业",
+        "value": "0.49"
+      },
+      {
+        "name": "农、林、牧、渔业",
+        "value": "0.41"
+      },
+      {
+        "name": "电力、热力、燃气及水生产和供应业",
+        "value": "0.23"
+      }
+    ]
+  },
+  {
+    "code": "007467",
+    "name": "华泰柏瑞中证红利低波ETF联接C",
+    "zhang_url": "",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "流动仓-长期存在",
+    "fixed": 30,
+    "type": "红利",
+    "themeNameList": [],
+    "stock": [],
+    "stockDistribution": []
+  },
+  {
+    "code": "019260",
+    "name": "富国恒生红利ETF联接A",
+    "zhang_url": "",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "流动仓",
+    "fixed": 30,
+    "type": "红利",
+    "themeNameList": [],
+    "stock": [],
+    "stockDistribution": []
+  },
+  {
+    "code": "023918",
+    "name": "华夏国证自由现金流ETF联接C",
+    "zhang_url": "",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "流动仓",
+    "fixed": 30,
+    "type": "现金流",
+    "themeNameList": [
+      {
+        "themeName": "贸易",
+        "themeCode": "886028",
+        "themeType": 2,
+        "relevance": 95.81,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886028"
+        }
+      },
+      {
+        "themeName": "参股保险",
+        "themeCode": "880191",
+        "themeType": 1,
+        "relevance": 88.87,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880191"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "汽车整车",
+        "code": "600104",
+        "rate": "-0.37%",
+        "name": "上汽集团",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "18.95",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600104%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600104",
+          "t": "gos"
+        },
+        "ratio": "0.25%"
+      },
+      {
+        "industryName": "油气开采及服务",
+        "code": "600938",
+        "rate": "1.59%",
+        "name": "中国海油",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "26.15",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600938%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600938",
+          "t": "gos"
+        },
+        "ratio": "0.24%"
+      },
+      {
+        "industryName": "白色家电",
+        "code": "000333",
+        "rate": "1.06%",
+        "name": "美的集团",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "77.03",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000333%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000333",
+          "t": "gos"
+        },
+        "ratio": "0.23%"
+      },
+      {
+        "industryName": "白色家电",
+        "code": "000651",
+        "rate": "0.15%",
+        "name": "格力电器",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "41.42",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000651%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000651",
+          "t": "gos"
+        },
+        "ratio": "0.18%"
+      },
+      {
+        "industryName": "工业金属",
+        "code": "603993",
+        "rate": "-2.71%",
+        "name": "洛阳钼业",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "12.55",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-603993%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-603993",
+          "t": "gos"
+        },
+        "ratio": "0.12%"
+      },
+      {
+        "industryName": "工业金属",
+        "code": "601600",
+        "rate": "-1.04%",
+        "name": "中国铝业",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "7.62",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601600%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601600",
+          "t": "gos"
+        },
+        "ratio": "0.11%"
+      },
+      {
+        "industryName": "电网设备",
+        "code": "601877",
+        "rate": "-1.90%",
+        "name": "正泰电器",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "28.43",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601877%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601877",
+          "t": "gos"
+        },
+        "ratio": "0.07%"
+      },
+      {
+        "industryName": "物流",
+        "code": "600755",
+        "rate": "0.82%",
+        "name": "厦门国贸",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "6.15",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600755%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600755",
+          "t": "gos"
+        },
+        "ratio": "0.07%"
+      },
+      {
+        "industryName": "其他电源设备",
+        "code": "601727",
+        "rate": "-0.61%",
+        "name": "上海电气",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "8.17",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-601727%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-601727",
+          "t": "gos"
+        },
+        "ratio": "0.07%"
+      },
+      {
+        "industryName": "其他电源设备",
+        "code": "600482",
+        "rate": "-0.36%",
+        "name": "中国动力",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "22.22",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600482%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600482",
+          "t": "gos"
+        },
+        "ratio": "0.06%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "1.59"
+      },
+      {
+        "name": "采矿业",
+        "value": "0.42"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "0.12"
+      },
+      {
+        "name": "租赁和商务服务业",
+        "value": "0.11"
+      },
+      {
+        "name": "建筑业",
+        "value": "0.08"
+      },
+      {
+        "name": "交通运输、仓储和邮政业",
+        "value": "0.06"
+      },
+      {
+        "name": "住宿和餐饮业",
+        "value": "0.01"
+      },
+      {
+        "name": "文化、体育和娱乐业",
+        "value": "0.01"
+      },
+      {
+        "name": "电力、热力、燃气及水生产和供应业",
+        "value": "0.01"
+      },
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "0.00"
+      }
+    ]
+  },
+  {
+    "code": "023521",
+    "name": "博时上证科创板人工智能ETF联接C",
+    "zhang_url": "",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 50,
+    "type": "人工智能",
+    "themeNameList": [
+      {
+        "themeName": "半导体",
+        "themeCode": "886120",
+        "themeType": 2,
+        "relevance": 87.19,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886120"
+        }
+      },
+      {
+        "themeName": "英伟达概念",
+        "themeCode": "879838",
+        "themeType": 1,
+        "relevance": 90.12,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879838"
+        }
+      }
+    ],
+    "stock": [],
+    "stockDistribution": []
+  },
+  {
+    "code": "020973",
+    "name": "易方达机器人ETF联接C",
+    "zhang_url": "",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 50,
+    "type": "机器人",
+    "themeNameList": [
+      {
+        "themeName": "电机",
+        "themeCode": "886099",
+        "themeType": 2,
+        "relevance": 99.85,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886099"
+        }
+      },
+      {
+        "themeName": "机器视觉",
+        "themeCode": "879884",
+        "themeType": 1,
+        "relevance": 94.08,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879884"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "通用设备",
+        "code": "002896",
+        "rate": "4.40%",
+        "name": "中大力德",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "94.66",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002896%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002896",
+          "t": "gos"
+        },
+        "ratio": "0.00%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "0.00"
+      }
+    ]
+  },
+  {
+    "code": "022691",
+    "name": "华安医药生物股票发起式C",
+    "zhang_url": "服务器监听",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 50,
+    "type": "医药",
+    "themeNameList": [
+      {
+        "themeName": "化学制药",
+        "themeCode": "886000",
+        "themeType": 2,
+        "relevance": 89.92,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886000"
+        }
+      },
+      {
+        "themeName": "创新药",
+        "themeCode": "879870",
+        "themeType": 1,
+        "relevance": 89.4,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879870"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "isUpChange": true,
+        "code": "01801",
+        "rate": "-3.54%",
+        "name": "信达生物",
+        "holdingSharesChange": "2.01%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "99.45",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22HK-01801%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "HK-01801",
+          "t": "gos"
+        },
+        "ratio": "8.70%"
+      },
+      {
+        "code": "01093",
+        "rate": "1.52%",
+        "name": "石药集团",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "11.36",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22HK-01093%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "HK-01093",
+          "t": "gos"
+        },
+        "ratio": "6.72%"
+      },
+      {
+        "isUpChange": true,
+        "code": "09926",
+        "rate": "-8.14%",
+        "name": "康方生物",
+        "holdingSharesChange": "1.20%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "142.10",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22HK-09926%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "HK-09926",
+          "t": "gos"
+        },
+        "ratio": "6.60%"
+      },
+      {
+        "isUpChange": false,
+        "code": "01530",
+        "rate": "-2.80%",
+        "name": "三生制药",
+        "holdingSharesChange": "3.15%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "34.66",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22HK-01530%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "HK-01530",
+          "t": "gos"
+        },
+        "ratio": "6.38%"
+      },
+      {
+        "industryName": "化学制药",
+        "isUpChange": false,
+        "code": "688266",
+        "rate": "-2.48%",
+        "name": "泽璟制药",
+        "holdingSharesChange": "1.18%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "117.84",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688266%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688266",
+          "t": "gos"
+        },
+        "ratio": "5.69%"
+      },
+      {
+        "code": "06160",
+        "rate": "1.98%",
+        "name": "百济神州",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "206.00",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22HK-06160%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "HK-06160",
+          "t": "gos"
+        },
+        "ratio": "5.25%"
+      },
+      {
+        "code": "01952",
+        "rate": "1.24%",
+        "name": "云顶新耀",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "61.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22HK-01952%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "HK-01952",
+          "t": "gos"
+        },
+        "ratio": "4.76%"
+      },
+      {
+        "industryName": "化学制药",
+        "code": "002294",
+        "rate": "0.21%",
+        "name": "信立泰",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "58.46",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002294%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002294",
+          "t": "gos"
+        },
+        "ratio": "4.17%"
+      },
+      {
+        "industryName": "生物制品",
+        "code": "688331",
+        "rate": "0.90%",
+        "name": "荣昌生物",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "93.00",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688331%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688331",
+          "t": "gos"
+        },
+        "ratio": "3.62%"
+      },
+      {
+        "isUpChange": false,
+        "code": "09995",
+        "rate": "4.11%",
+        "name": "荣昌生物",
+        "holdingSharesChange": "0.35%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "96.25",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22HK-09995%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "HK-09995",
+          "t": "gos"
+        },
+        "ratio": "3.29%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "制造业",
+        "value": "47.76"
+      }
+    ]
+  },
+  {
+    "code": "017437",
+    "name": "华宝纳斯达克精选股票发起式",
+    "zhang_url": "不提供",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "",
+    "fixed": 50,
+    "type": "美股",
+    "themeNameList": [
+      {
+        "themeName": "美国"
+      }
+    ],
+    "stock": [
+      {
+        "isUpChange": true,
+        "code": "NVDA",
+        "rate": "-2.70%",
+        "name": "英伟达",
+        "holdingSharesChange": "0.20%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "167.02",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-NVDA%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-NVDA",
+          "t": "gos"
+        },
+        "ratio": "9.82%"
+      },
+      {
+        "isUpChange": true,
+        "code": "MSFT",
+        "rate": "-2.55%",
+        "name": "微软",
+        "holdingSharesChange": "0.81%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "495.00",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-MSFT%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-MSFT",
+          "t": "gos"
+        },
+        "ratio": "8.91%"
+      },
+      {
+        "isUpChange": true,
+        "code": "AVGO",
+        "rate": "9.41%",
+        "name": "博通",
+        "holdingSharesChange": "0.92%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "334.89",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-AVGO%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-AVGO",
+          "t": "gos"
+        },
+        "ratio": "8.37%"
+      },
+      {
+        "isUpChange": false,
+        "code": "TSLA",
+        "rate": "3.64%",
+        "name": "特斯拉",
+        "holdingSharesChange": "0.88%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "350.84",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-TSLA%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-TSLA",
+          "t": "gos"
+        },
+        "ratio": "7.68%"
+      },
+      {
+        "isUpChange": false,
+        "code": "AAPL",
+        "rate": "-0.04%",
+        "name": "苹果",
+        "holdingSharesChange": "2.07%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "239.69",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-AAPL%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-AAPL",
+          "t": "gos"
+        },
+        "ratio": "7.44%"
+      },
+      {
+        "isUpChange": true,
+        "code": "NFLX",
+        "rate": "-1.09%",
+        "name": "奈飞",
+        "holdingSharesChange": "0.88%",
+        "positionQuarters": "重仓7个季度",
+        "newestPrize": "1243.82",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-NFLX%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-NFLX",
+          "t": "gos"
+        },
+        "ratio": "7.33%"
+      },
+      {
+        "isUpChange": true,
+        "code": "META",
+        "rate": "0.51%",
+        "name": "Meta Platforms Inc Class A",
+        "holdingSharesChange": "0.24%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "752.45",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-META%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-META",
+          "t": "gos"
+        },
+        "ratio": "6.19%"
+      },
+      {
+        "isUpChange": false,
+        "code": "AMZN",
+        "rate": "-1.42%",
+        "name": "亚马逊",
+        "holdingSharesChange": "0.19%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "232.33",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-AMZN%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-AMZN",
+          "t": "gos"
+        },
+        "ratio": "5.87%"
+      },
+      {
+        "isUpChange": true,
+        "code": "GOOG",
+        "rate": "1.08%",
+        "name": "谷歌-C",
+        "holdingSharesChange": "0.61%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "235.17",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-GOOG%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-GOOG",
+          "t": "gos"
+        },
+        "ratio": "5.50%"
+      },
+      {
+        "isUpChange": true,
+        "code": "MRVL",
+        "rate": "-1.20%",
+        "name": "迈威尔科技",
+        "holdingSharesChange": "0.63%",
+        "positionQuarters": "重仓4个季度",
+        "newestPrize": "63.33",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22NASDAQ-MRVL%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "NASDAQ-MRVL",
+          "t": "gos"
+        },
+        "ratio": "5.41%"
+      }
+    ],
+    "stockDistribution": []
+  },
+  {
+    "code": "012863",
+    "name": "汇添富中证电池主题ETF发起式联接C",
+    "type": "电池",
+    "zhang_url": "",
+    "fixed": "50",
+    "point_line_down": "0.6",
+    "point_line_top": "0.9",
+    "desc": "09-05：开启两周的小定投，11月份出货",
+    "themeNameList": [
+      {
+        "themeName": "电池",
+        "themeCode": "886155",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886155"
+        },
+        "themeType": 2,
+        "relevance": 99.84
+      },
+      {
+        "themeName": "钠离子电池",
+        "themeCode": "879956",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879956"
+        },
+        "themeType": 1,
+        "relevance": 99.21
+      }
+    ],
+    "stock": [],
+    "stockDistribution": []
+  },
+  {
+    "code": "012322",
+    "name": "东财云计算增强C",
+    "zhang_url": "",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "9月16日卖出",
+    "fixed": 50,
+    "type": "云计算",
+    "themeNameList": [
+      {
+        "themeName": "IT服务",
+        "themeCode": "886164",
+        "themeType": 2,
+        "relevance": 85.81,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886164"
+        }
+      },
+      {
+        "themeName": "东数西算(算力)",
+        "themeCode": "879927",
+        "themeType": 1,
+        "relevance": 96.34,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879927"
+        }
+      }
+    ],
+    "stock": [
+      {
+        "industryName": "软件开发",
+        "isUpChange": true,
+        "code": "002230",
+        "rate": "5.63%",
+        "name": "科大讯飞",
+        "holdingSharesChange": "1.85%",
+        "positionQuarters": "重仓11个季度",
+        "newestPrize": "52.70",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002230%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-002230",
+          "t": "gos"
+        },
+        "ratio": "8.46%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "300502",
+        "rate": "-9.95%",
+        "name": "新易盛",
+        "holdingSharesChange": "1.90%",
+        "positionQuarters": "重仓7个季度",
+        "newestPrize": "314.50",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300502%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300502",
+          "t": "gos"
+        },
+        "ratio": "6.61%"
+      },
+      {
+        "industryName": "通信设备",
+        "isUpChange": true,
+        "code": "300308",
+        "rate": "-9.09%",
+        "name": "中际旭创",
+        "holdingSharesChange": "3.31%",
+        "positionQuarters": "重仓10个季度",
+        "newestPrize": "369.99",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300308%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300308",
+          "t": "gos"
+        },
+        "ratio": "6.32%"
+      },
+      {
+        "industryName": "软件开发",
+        "isUpChange": false,
+        "code": "688111",
+        "rate": "1.02%",
+        "name": "金山办公",
+        "holdingSharesChange": "1.23%",
+        "positionQuarters": "重仓13个季度",
+        "newestPrize": "301.40",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688111%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-688111",
+          "t": "gos"
+        },
+        "ratio": "5.09%"
+      },
+      {
+        "industryName": "计算机设备",
+        "isUpChange": true,
+        "code": "603019",
+        "rate": "1.88%",
+        "name": "中科曙光",
+        "holdingSharesChange": "1.41%",
+        "positionQuarters": "重仓9个季度",
+        "newestPrize": "83.99",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-603019%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-603019",
+          "t": "gos"
+        },
+        "ratio": "4.85%"
+      },
+      {
+        "industryName": "IT服务",
+        "isUpChange": true,
+        "code": "000938",
+        "rate": "-1.17%",
+        "name": "紫光股份",
+        "holdingSharesChange": "0.24%",
+        "positionQuarters": "重仓10个季度",
+        "newestPrize": "27.80",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000938%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000938",
+          "t": "gos"
+        },
+        "ratio": "4.56%"
+      },
+      {
+        "industryName": "计算机设备",
+        "isUpChange": true,
+        "code": "000977",
+        "rate": "-0.68%",
+        "name": "浪潮信息",
+        "holdingSharesChange": "0.15%",
+        "positionQuarters": "重仓6个季度",
+        "newestPrize": "59.79",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000977%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-000977",
+          "t": "gos"
+        },
+        "ratio": "4.50%"
+      },
+      {
+        "industryName": "软件开发",
+        "isUpChange": true,
+        "code": "600570",
+        "rate": "1.91%",
+        "name": "恒生电子",
+        "holdingSharesChange": "0.44%",
+        "positionQuarters": "重仓3个季度",
+        "newestPrize": "35.20",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600570%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SH-600570",
+          "t": "gos"
+        },
+        "ratio": "3.55%"
+      },
+      {
+        "industryName": "IT服务",
+        "isUpChange": true,
+        "code": "300339",
+        "rate": "1.13%",
+        "name": "润和软件",
+        "holdingSharesChange": "0.38%",
+        "positionQuarters": "重仓2个季度",
+        "newestPrize": "59.08",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300339%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300339",
+          "t": "gos"
+        },
+        "ratio": "3.29%"
+      },
+      {
+        "industryName": "通信服务",
+        "code": "300442",
+        "rate": "-0.54%",
+        "name": "润泽科技",
+        "holdingSharesChange": "新增",
+        "positionQuarters": "",
+        "newestPrize": "53.14",
+        "jrJumpData": {
+          "jumpType": "",
+          "productId": "",
+          "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300442%5C%22%7D%22%7D",
+          "jumpUrl": ""
+        },
+        "stockJumpData": {
+          "p": "SZ-300442",
+          "t": "gos"
+        },
+        "ratio": "2.97%"
+      }
+    ],
+    "stockDistribution": [
+      {
+        "name": "信息传输、软件和信息技术服务业",
+        "value": "63.43"
+      },
+      {
+        "name": "制造业",
+        "value": "32.11"
+      },
+      {
+        "name": "金融业",
+        "value": "0.59"
+      },
+      {
+        "name": "科学研究和技术服务业",
+        "value": "0.00"
+      },
+      {
+        "name": "批发和零售业",
+        "value": "0.00"
+      }
+    ]
+  },
+  {
+    "code": "019103",
+    "name": "景顺长城恒生消费ETF联接",
+    "zhang_url": "",
+    "point_line_top": null,
+    "point_line_down": null,
+    "desc": "9-19卖出",
+    "fixed": 50,
+    "type": "消费",
+    "themeNameList": [
+      {
+        "themeName": "全球"
+      }
+    ],
+    "stock": [],
+    "stockDistribution": []
+  }
+]
