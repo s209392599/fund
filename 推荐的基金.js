@@ -1,3 +1,64 @@
+
+
+
+
+
+
+
+
+/* 独立涨幅表（推荐）
+-- 主表（基金基本信息）
+CREATE TABLE fund_basic (
+    fund_id          VARCHAR(20) PRIMARY KEY,  -- 基金代码
+    fund_name        VARCHAR(100),
+    create_date      DATE,
+    other_static_info TEXT
+);
+
+-- 涨幅表（动态指标）
+CREATE TABLE fund_growth (
+    id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+    fund_id     VARCHAR(20) NOT NULL,          -- 关联基金
+    period_type ENUM('1周','1月','3月','6月','1年','3年','5年','今年','成立') NOT NULL,
+    avg_value   DECIMAL(10,2),                 -- 同类平均涨幅
+    rate        DECIMAL(10,2),                 -- 本基金涨幅
+    rank        VARCHAR(20),                   -- 排名（如"230/2152"）
+    level       TINYINT,                       -- 等级（1=优秀,2=良好...）
+    update_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY uk_fund_period (fund_id, period_type),  -- 防止重复插入
+    FOREIGN KEY (fund_id) REFERENCES fund_basic(fund_id)
+);
+
+-- 查询某基金近1年表现
+SELECT * FROM fund_growth
+WHERE fund_id = '018561' AND period_type = '1年';
+
+-- 统计所有基金"近1月"平均涨幅
+SELECT AVG(rate) FROM fund_growth
+WHERE period_type = '1月' AND level = 1;  -- 仅优秀基金
+
+*/
+
+
+/*  宽表（主表包含所有涨幅字段）
+CREATE TABLE fund_wide (
+    fund_id          VARCHAR(20) PRIMARY KEY,
+    fund_name        VARCHAR(100),
+    -- 涨幅字段
+    week_avg         DECIMAL(10,2),
+    week_rate        DECIMAL(10,2),
+    week_rank        VARCHAR(20),
+    week_level       TINYINT,
+    month_avg        DECIMAL(10,2),
+    month_rate       DECIMAL(10,2),
+    month_rank       VARCHAR(20),
+    month_level      TINYINT,
+    -- ...其他周期字段
+    update_time      DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+*/
+
+
 /*
 广发中证A500ETF联接C(022425)
 
@@ -178,7 +239,7 @@ https://saithink.top/guide/demo.html 模板网站
   electron的学习
   uniapp-开发鸿蒙开发
   还有专门的鸿蒙开发
-  wasm开发
+  wasm开发  WebAssembly
   vue源码学习
   开发模式的学习
   开始刷算法
@@ -201,6 +262,7 @@ https://saithink.top/guide/demo.html 模板网站
   grid布局
   n8n 自动工作流
   微应用
+  WebContainer
 
   next
   nuxt
