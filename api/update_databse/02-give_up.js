@@ -1,6 +1,8 @@
 /*
 放弃一些基金：
-  定期开放
+  名称里面包含 定期(3个月等)
+  货币型-
+
 */
 const mysql = require('mysql2/promise');
 const fetch = require('node-fetch');
