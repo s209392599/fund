@@ -24,7 +24,10 @@ const dbConfig = {
   connectionLimit: 10,
   queueLimit: 0,
   connectTimeout: 10000, // 连接超时时间（毫秒）
-  acquireTimeout: 10000, // 获取连接超时时间（毫秒）
+  pool: {
+    acquireTimeout: 10000, // 控制在指定时间内从连接池获取连接
+  },
+  idleTimeout: 60000,    // 连接空闲超时后自动关闭
 };
 
 // 创建连接池
