@@ -7,8 +7,6 @@ const mysql = require('mysql2/promise');
 const noText = require('../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../utils/noFundCode.js'); // 排除的基金代码
 
-console.log('noText', noText);
-
 const {
   database_host,
   database_user,
