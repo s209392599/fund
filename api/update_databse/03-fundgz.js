@@ -53,7 +53,7 @@ async function queryDatabase() {
         if(res.length < 11 || res.length > 300){
           console.log(`${index} ------------不正常  ${item.fund_code} -- ${item.fund_name} -- ${res.length}`);
 
-          const updateQuery = 'UPDATE fund SET no_sale = ? WHERE fund_code = ?';
+          const updateQuery = 'UPDATE fund SET no_fundgz = ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery, ['y', results[index].fund_code]);
             console.log(`成功更新: ${results[index].fund_code} - ${results[index].fund_name}`);
