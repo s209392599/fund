@@ -41,6 +41,16 @@
       "type": "现金流"
     },
     {
+      "code": "020989",
+      "name": "南方恒生科技指数C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "流动仓",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
       "code": "023521",
       "name": "博时上证科创板人工智能ETF联接C",
       "zhang_url": "",
@@ -139,6 +149,16 @@
       "desc": "9月16日卖出",
       "fixed": 50,
       "type": "云计算"
+    },
+    {
+      "code": "160424",
+      "name": "华安创业板50ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "创业板"
     },
     {
       "code": "019103",
