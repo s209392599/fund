@@ -13,9 +13,10 @@ const noText = [
   '120天持有',
   '180天持有',
   '一年',
-  '1年A',
-  '1年C',
   '两年',
+  '三年',
+  '五年',
+  '1年',
   '套利',
   '后端',
   '房地产',
@@ -30,33 +31,3 @@ const noText = [
 ];
 
 module.exports = noText;
-
-/*
-depts = [
-  {
-    name: '科技成长',
-    value: '000001',
-    childlist: [
-      {
-        name: '科技成长2',
-        value: '0000013',
-      }
-    ]
-  }
-]
-freemarker script中 遍历depts成js中的数组depts
-var arr = [];
-<#list depts as dept>
-  var childlist = [];
-  <#assign safeChildlist = dept.childlist![]>
-  <#if safeChildlist?size == 0>
-      <#assign safeChildlist = []>
-  </#if>
-  arr.push({
-    name: dept.name,
-    value: dept.value,
-    childlist: ${safeChildlist?json_string},
-  })
-</#list>
-
-*/

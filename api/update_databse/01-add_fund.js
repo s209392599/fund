@@ -1,3 +1,8 @@
+/*
+数据库中插入基金数据：
+  1. 从天天基金网获取基金数据
+  2. 与数据库中数据对比，插入新的基金数据
+*/
 const mysql = require('mysql2/promise');
 const fetch = require('node-fetch');
 const {
@@ -21,7 +26,10 @@ const dbConfig = {
   connectionLimit: 10,
   queueLimit: 0,
   connectTimeout: 10000, // 连接超时时间（毫秒）
-  acquireTimeout: 10000, // 获取连接超时时间（毫秒）
+  pool: {
+    acquireTimeout: 10000, // 控制在指定时间内从连接池获取连接
+  },
+  idleTimeout: 60000,    // 连接空闲超时后自动关闭
 };
 
 // 创建连接池

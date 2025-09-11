@@ -1,6 +1,4 @@
-// 安装mysql2包：npm install mysql2
-const mysql = require('mysql2/promise');
-
+// 测试连接服务器
 const { exec } = require('child_process');
 exec('ping 150.158.175.108', (error, stdout, stderr) => {
   if (error) {
@@ -10,109 +8,134 @@ exec('ping 150.158.175.108', (error, stdout, stderr) => {
   console.log('服务器已连接');
 });
 
-// 测试连接
-async function testConnection() {
-  const pool = mysql.createPool({
-  host: '150.158.175.108',
-  user: 'boxue',
-  password: 'qaz123..',
-  database: 'fund',
-  port: 3306,
-  connectTimeout: 20000, // 增加到20秒
-  acquireTimeout: 20000, // 增加到20秒
-  queueLimit: 10 // 限制排队连接数
-});
-
-
-  try {
-    const conn = await pool.getConnection();
-    console.log('数据库连接成功');
-    conn.release();
-  } catch (err) {
-    // console.error('连接失败:', err.message);
-     console.error('连接失败:', err);
-  console.error('错误详情:');
-  console.error('- 错误码:', err.code);
-  console.error('- 错误号:', err.errno);
-  console.error('- SQL状态:', err.sqlState);
-  console.error('- 错误信息:', err.message);
-  } finally {
-    await pool.end();
-  }
-}
-testConnection();
-
-
-
 /*
-mysql -u root -p  登录数据库
-SHOW DATABASES;   查看有哪些数据库
-mysqlshow -u root -p fund  查看fund数据库有哪些表
-CREATE DATABASE fund;  创建数据库
-USE fund;  使用数据库
-SHOW TABLES;  查看有哪些表
-CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), email VARCHAR(255));  创建表
-DESCRIBE users;  查看表结构
-INSERT INTO users (name, email) VALUES ('John', '<EMAIL>'), ('Jane', '<EMAIL>');  插入数据
-SELECT * FROM users;  查询数据
-UPDATE users SET email = '<EMAIL>' WHERE id = 1;  更新数据
-DELETE FROM users WHERE id = 2;  删除数据
-DROP TABLE users;  删除表
-DROP DATABASE fund;  删除数据库
 
- 
+查询fund表有多少条记录
+
+SELECT COUNT(*) FROM fund;
+
+---------------------------------------------------------------------------------------
+
+fund_code fund_name 任意一个为NULL的总个数
+
+SELECT COUNT(*) AS count
+FROM fund 
+WHERE fund_code IS NULL OR fund_name IS NULL
+
+---------------------------------------------------------------------------------------
+
+查询fund表中include_no_keyword字段为 'y' 的记录数量
+
+SELECT COUNT(*) AS count FROM fund WHERE include_no_keyword = 'y'
+
+
+---------------------------------------------------------------------------------------
+
+查询fund表中include_no_keyword字段不是 'y' 的记录数量，注意null会被过滤掉
+
+SELECT COUNT(*) AS count
+FROM fund
+WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL;
+
+
+---------------------------------------------------------------------------------------
+
+查询fund表中include_no_keyword字段不是NULL的记录数量
+
+SELECT COUNT(*) AS count FROM fund WHERE include_no_keyword IS NOT NULL
+
+---------------------------------------------------------------------------------------
+
+同时查看这些记录的fund_code
+
+SELECT COUNT(*) AS count, GROUP_CONCAT(fund_code) AS fund_codes 
+FROM fund 
+WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL;
+
+
+---------------------------------------------------------------------------------------
+
+include_no_keyword  no_sale  这两个字段都 任意一个不为y的总个数
+
+方法一：
+SELECT COUNT(*) AS count
+FROM fund 
+WHERE 
+    (include_no_keyword IS NULL OR include_no_keyword != 'y') 
+    AND 
+    (no_sale IS NULL OR no_sale != 'y');
+
+方法二：    
+SELECT COUNT(*) AS count 
+FROM fund 
+WHERE 
+    COALESCE(include_no_keyword, '') != 'y' 
+    AND 
+    COALESCE(no_sale, '') != 'y';
+
+---------------------------------------------------------------------------------------
+
+include_no_keyword  no_sale  这两个字段 任意一个为y
+
+SELECT COUNT(*) AS count, GROUP_CONCAT(fund_code) AS fund_codes 
+FROM fund 
+WHERE include_no_keyword != 'y' AND no_sale != 'y' OR include_no_keyword IS NOT NULL OR no_sale IS NOT NULL
+
+
+---------------------------------------------------------------------------------------
+
+统计include_no_keyword  no_sale  这两字段组合情况
+
+方法一：
+SELECT include_no_keyword, no_sale, COUNT(*) 
+FROM fund 
+GROUP BY include_no_keyword, no_sale
+
+方法二：
+SELECT 
+  include_no_keyword,
+  no_sale,
+  COUNT(*) AS count
+FROM fund
+GROUP BY include_no_keyword, no_sale
+ORDER BY include_no_keyword, no_sale;
+
+---------------------------------------------------------------------------------------
+
+-- 第一页，每页100条
+SELECT 
+    fund_code,
+    fund_name,
+    include_no_keyword,
+    no_sale
+FROM fund 
+WHERE 
+    (include_no_keyword IS NULL OR include_no_keyword != 'y') 
+    AND 
+    (no_sale IS NULL OR no_sale != 'y')
+LIMIT 100 OFFSET 0;
+
+
+---------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------
 */
-
-
-
-// 数据库配置
-const dbConfig = {
-  host: '150.158.175.108',
-  user: 'root',
-  password: 'qaz123..',
-  database: 'fund',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
-};
-
-
-// 创建连接池
-const pool = mysql.createPool(dbConfig);
-
-// 查询示例
-async function queryExample() {
-  let connection;
-  try {
-    connection = await pool.getConnection();
-    const [rows] = await connection.query('SELECT * FROM users WHERE id = ?', [1]);
-    console.log(rows);
-  } catch (err) {
-    console.error('Database error:', err);
-  } finally {
-    if (connection) connection.release();
-  }
-}
-
-// 事务处理示例
-async function transactionExample() {
-  const conn = await pool.getConnection();
-  try {
-    await conn.beginTransaction();
-    
-    await conn.query('UPDATE accounts SET balance = balance - ? WHERE id = ?', [100, 1]);
-    await conn.query('UPDATE accounts SET balance = balance + ? WHERE id = ?', [100, 2]);
-    
-    await conn.commit();
-    console.log('Transaction completed');
-  } catch (err) {
-    await conn.rollback();
-    console.error('Transaction failed:', err);
-  } finally {
-    conn.release();
-  }
-}
-
-// 使用示例
-// queryExample();
-// transactionExample();
