@@ -89,7 +89,27 @@ async function queryDatabase() {
 
         var isForSale = datas.isForSale || false; // 是否可买
         console.log('isForSale', `${item.fund_code} - ${item.fund_name} - ${isForSale}`);
-        
+
+        var investmentDistributionNewOfItem = datas.investmentDistributionNewOfItem || {};
+        var investmentDistribution = investmentDistributionNewOfItem.investmentDistribution || {};
+        var proportionList = investmentDistribution.proportionList || [];
+
+        /*
+          {
+            "avg": "0.19",
+            "rate": "-0.08",
+            "name": "近1周",
+            "jumpData": {
+              "level": "3",
+              "text": "一般"
+            },
+            "rank": "2564/4305"
+          }
+        */
+        var performanceOfItem = datas.performanceOfItem || {};
+        var historyPerformanceMap = performanceOfItem.historyPerformanceMap || {};
+        var historyPerformanceList = historyPerformanceMap.historyPerformanceList || [];
+
         // // 获取投资方向
         // let headerOfItem = datas.headerOfItem || {};
         // let themeNameList = headerOfItem.themeNameList || []; // 投资方向
