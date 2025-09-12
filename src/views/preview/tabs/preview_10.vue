@@ -28,7 +28,6 @@ const getHisData = (fundcode, list_index) => {
     fundcode: fundcode,
     pageSize: info.dayArr[info.dayArr.length - 1],
   }).then((res) => {
-    console.log(`${page.list[list_index].name} =>`, res);
     if (res.code === 200) {
       page.list[list_index].his_data = res.data || [];
       render_chart_fn(); // 渲染图形
@@ -90,7 +89,6 @@ const render_chart_fn = () => {
 
         // 循环排序后的数据
         sortedData.forEach(item => {
-          console.log(93,item)
           str += `${item.marker} ${page.list[item.originalIndex].code}-${item.name}：${item.data}<br/>`;
         });
         return str;
@@ -183,7 +181,6 @@ const viewDayFn = (num, active) => {
 // 获取用户数据
 const getUserInfo = () => {
   server_fund_public_fund_query().then((res) => {
-    console.log('res11', res);
     if (res.code === 200) {
       page.list = (res.data || []).map((v) => {
         v.his_data = []; // 添加一个历史数据的字段
@@ -199,6 +196,56 @@ const getUserInfo = () => {
     }
   });
 };
+
+// 反选
+const turnSelect = () => {
+  const currentOption = myChart.getOption();
+  const currentSelected = currentOption.legend[0].selected || {};
+  const newSelectedState = {};
+
+  // 遍历所有图例，对每个图例的选中状态取反
+  currentOption.legend[0].data.forEach(name => {
+    // 如果当前图例是选中状态，则反选后为未选中；如果未选中，则反选后为选中
+    // 如果 selected 中不存在该图例的状态，默认视为选中（因为图例默认就是选中的）
+    newSelectedState[name] = !(currentSelected[name] !== false);
+  });
+
+  myChart.setOption({
+    legend: [{
+      selected: newSelectedState
+    }]
+  });
+}
+
+// 全选
+const CheckAll = () => {
+  const currentOption = myChart.getOption();
+  const newSelectedState = {};
+  currentOption.legend[0].data.forEach(name => {
+    newSelectedState[name] = true;
+  });
+  myChart.setOption({
+    legend: [{
+      selected: newSelectedState
+    }]
+  });
+}
+// 全不选
+const UnSelectAll = () => {
+  // 获取当前的 option
+  const currentOption = myChart.getOption();
+  // 构建一个所有图例名称对应 false 的对象
+  const newSelectedState = {};
+  currentOption.legend[0].data.forEach(name => {
+    newSelectedState[name] = false;
+  });
+  // 使用 setOption 更新 selected 状态
+  myChart.setOption({
+    legend: [{
+      selected: newSelectedState
+    }]
+  });
+}
 
 // 在组件挂载时初始化图表
 onMounted(() => {
@@ -223,48 +270,17 @@ onUnmounted(() => {
 <template>
   <div class="page_wrapper">
     <div class="flex pb-5">
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 0 }"
-        @click="viewDayFn(5, 0)"
-        >近一周</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 1 }"
-        @click="viewDayFn(10, 1)"
-        >近两周</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 2 }"
-        @click="viewDayFn(20, 2)"
-        >近一个月</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 3 }"
-        @click="viewDayFn(40, 3)"
-        >近两个月</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 4 }"
-        @click="viewDayFn(60, 4)"
-        >近三个月</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 5 }"
-        @click="viewDayFn(120, 5)"
-        >近半年</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 6 }"
-        @click="viewDayFn(244, 6)"
-        >近一年</el-button
-      >
+      <el-button type="primary" :class="{ active: info.active === 0 }" @click="viewDayFn(5, 0)">近一周</el-button>
+      <el-button type="primary" :class="{ active: info.active === 1 }" @click="viewDayFn(10, 1)">近两周</el-button>
+      <el-button type="primary" :class="{ active: info.active === 2 }" @click="viewDayFn(20, 2)">近一个月</el-button>
+      <el-button type="primary" :class="{ active: info.active === 3 }" @click="viewDayFn(40, 3)">近两个月</el-button>
+      <el-button type="primary" :class="{ active: info.active === 4 }" @click="viewDayFn(60, 4)">近三个月</el-button>
+      <el-button type="primary" :class="{ active: info.active === 5 }" @click="viewDayFn(120, 5)">近半年</el-button>
+      <el-button type="primary" :class="{ active: info.active === 6 }" @click="viewDayFn(244, 6)">近一年</el-button>
+
+      <el-button type="primary" @click="turnSelect()">反选</el-button>
+      <el-button type="primary" @click="CheckAll()">全选</el-button>
+      <el-button type="primary" @click="UnSelectAll()">全不选</el-button>
     </div>
 
     <div class="chart_box">
