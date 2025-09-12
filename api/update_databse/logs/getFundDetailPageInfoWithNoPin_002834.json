@@ -1,98 +1,368 @@
 {
   "isForSale": true,
-  "sharesAndIndexOfItem": {},
-  "purchaseProcessOfItem": {
-    "purcheseDescribeList": [],
-    "processList": [
-      {
-        "title": "买入",
-        "info": "09-12 15:00前"
+  "performanceOfItem": {
+    "historyNvOrProfitMap": {
+      "disclosureType": 1,
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=002834&disclosureType=1&activeIndex=4"
       },
-      {
-        "title": "确认份额",
-        "info": "09-15"
-      },
-      {
-        "title": "查看盈亏",
-        "info": "09-15净值更新后"
+      "historyNvOrProfitList": [
+        {
+          "date": "2025-09-12",
+          "netValue": "2.8590",
+          "dailyProfit": "-0.55",
+          "totalNetValue": "2.8590"
+        },
+        {
+          "date": "2025-09-11",
+          "netValue": "2.8749",
+          "dailyProfit": "1.46",
+          "totalNetValue": "2.8749"
+        },
+        {
+          "date": "2025-09-10",
+          "netValue": "2.8334",
+          "dailyProfit": "0.47",
+          "totalNetValue": "2.8334"
+        },
+        {
+          "date": "2025-09-09",
+          "netValue": "2.8201",
+          "dailyProfit": "-0.86",
+          "totalNetValue": "2.8201"
+        },
+        {
+          "date": "2025-09-08",
+          "netValue": "2.8447",
+          "dailyProfit": "0.92",
+          "totalNetValue": "2.8447"
+        },
+        {
+          "date": "2025-09-05",
+          "netValue": "2.8187",
+          "dailyProfit": "1.82",
+          "totalNetValue": "2.8187"
+        },
+        {
+          "date": "2025-09-04",
+          "netValue": "2.7682",
+          "dailyProfit": "-0.65",
+          "totalNetValue": "2.7682"
+        },
+        {
+          "date": "2025-09-03",
+          "netValue": "2.7864",
+          "dailyProfit": "-1.26",
+          "totalNetValue": "2.7864"
+        },
+        {
+          "date": "2025-09-02",
+          "netValue": "2.8219",
+          "dailyProfit": "-0.80",
+          "totalNetValue": "2.8219"
+        },
+        {
+          "date": "2025-09-01",
+          "netValue": "2.8447",
+          "dailyProfit": "0.74",
+          "totalNetValue": "2.8447"
+        },
+        {
+          "date": "2025-08-29",
+          "netValue": "2.8238",
+          "dailyProfit": "0.56",
+          "totalNetValue": "2.8238"
+        },
+        {
+          "date": "2025-08-28",
+          "netValue": "2.8082",
+          "dailyProfit": "0.21",
+          "totalNetValue": "2.8082"
+        },
+        {
+          "date": "2025-08-27",
+          "netValue": "2.8023",
+          "dailyProfit": "-2.22",
+          "totalNetValue": "2.8023"
+        },
+        {
+          "date": "2025-08-26",
+          "netValue": "2.8659",
+          "dailyProfit": "0.15",
+          "totalNetValue": "2.8659"
+        },
+        {
+          "date": "2025-08-25",
+          "netValue": "2.8615",
+          "dailyProfit": "1.16",
+          "totalNetValue": "2.8615"
+        },
+        {
+          "date": "2025-08-22",
+          "netValue": "2.8287",
+          "dailyProfit": "0.66",
+          "totalNetValue": "2.8287"
+        },
+        {
+          "date": "2025-08-21",
+          "netValue": "2.8102",
+          "dailyProfit": "0.36",
+          "totalNetValue": "2.8102"
+        },
+        {
+          "date": "2025-08-20",
+          "netValue": "2.8002",
+          "dailyProfit": "0.49",
+          "totalNetValue": "2.8002"
+        },
+        {
+          "date": "2025-08-19",
+          "netValue": "2.7865",
+          "dailyProfit": "0.85",
+          "totalNetValue": "2.7865"
+        },
+        {
+          "date": "2025-08-18",
+          "netValue": "2.7630",
+          "dailyProfit": "0.71",
+          "totalNetValue": "2.7630"
+        }
+      ],
+      "titleMap": {
+        "netValueRowName": "单位净值",
+        "totalNetValueRowName": "累计净值",
+        "dateRowName": "日期",
+        "dailyRateRowRate": "日涨跌幅"
       }
-    ],
-    "jumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=002834"
+    },
+    "secondCategoryCode": "1202",
+    "aipPerformanceMap": {
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://prodev.m.jd.com/jdjr/active/1VWJwowHKkyjNfDzseo4EkG5mYQ/index.html"
+      },
+      "moreButton": "了解定投",
+      "countJumpData": {
+        "jumpType": 8,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundcast/castCounter/?fundCode=002834"
+      },
+      "existPerformanceData": true,
+      "aipPerformanceList": [
+        {
+          "zhRate": "--",
+          "name": "近1年",
+          "ptRate": "31.23"
+        },
+        {
+          "zhRate": "--",
+          "name": "近2年",
+          "ptRate": "56.50"
+        },
+        {
+          "zhRate": "--",
+          "name": "近3年",
+          "ptRate": "--"
+        },
+        {
+          "zhRate": "--",
+          "name": "近5年",
+          "ptRate": "--"
+        }
+      ],
+      "titleMap": {
+        "ptAip": "普通定投",
+        "nameRowName": "周期"
+      },
+      "moreDesc": "按照每月1号定投进行计算"
+    },
+    "yearPerformanceMap": {
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=002834&disclosureType=1&activeIndex=1"
+      },
+      "titleMap": {
+        "avgRowName": "同类均值",
+        "rankRowName": "同类排名",
+        "yearRowName": "年度",
+        "rateRowName": "回报率",
+        "rankRowMsg": "平台采用最新的同类排行，在原有一级分类基础上按照资产维度向下细分，用更加科学的方法在同一维度进行对比。如：混合型-偏股、混合型-偏债。"
+      },
+      "yearPerformanceList": [
+        {
+          "year": "2024年",
+          "rate": "8.03"
+        },
+        {
+          "avg": "-9.17",
+          "year": "2023年",
+          "rank": "--/1"
+        },
+        {
+          "year": "2018年",
+          "rate": "2.59"
+        },
+        {
+          "year": "2017年",
+          "rate": "9.50"
+        }
+      ]
+    },
+    "historyPerformanceMap": {
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=002834&disclosureType=1&activeIndex=0"
+      },
+      "historyPerformanceList": [
+        {
+          "avg": "4.53",
+          "rate": "1.43",
+          "name": "近1周",
+          "jumpData": {
+            "textColour": "#586DF9",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=-2&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "3",
+            "text": "一般"
+          },
+          "rank": "1177/2152"
+        },
+        {
+          "avg": "9.14",
+          "rate": "3.60",
+          "name": "近1月",
+          "jumpData": {
+            "textColour": "#586DF9",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=1&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "3",
+            "text": "一般"
+          },
+          "rank": "1394/2148"
+        },
+        {
+          "avg": "18.82",
+          "rate": "15.95",
+          "name": "近3月",
+          "jumpData": {
+            "textColour": "#D17A36",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=3&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "2",
+            "text": "良好"
+          },
+          "rank": "993/2137"
+        },
+        {
+          "avg": "16.82",
+          "rate": "28.34",
+          "name": "近6月",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=6&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "301/2124"
+        },
+        {
+          "avg": "43.85",
+          "rate": "104.54",
+          "name": "近1年",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=12&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "96/2079"
+        },
+        {
+          "avg": "22.77",
+          "rate": "46.96",
+          "name": "今年以来",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=0&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "217/2152"
+        },
+        {
+          "avg": "8.24",
+          "rate": "155.75",
+          "name": "近3年",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=36&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "10/1901"
+        },
+        {
+          "avg": "146.11",
+          "rate": "185.90",
+          "name": "成立以来",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=-1&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "184/770"
+        }
+      ],
+      "titleMap": {
+        "avgRowName": "同类均值",
+        "rankRowName": "同类排名",
+        "nameRowName": "日期",
+        "rateRowName": "涨跌幅",
+        "rankRowMsg": "平台采用最新的同类排行，在原有一级分类基础上按照资产维度向下细分，用更加科学的方法在同一维度进行对比。如：混合型-偏股、混合型-偏债。"
+      }
     }
   },
-  "fundManagerOfItem": {
-    "moreJumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=2&fundCode=002834&itemId=1002834"
-    },
-    "managerInfoList": [
-      {
-        "yearPerformance": "8.59",
-        "employPerformance": "157.17",
-        "managerDetailJumpData": {
-          "jumpType": 2,
-          "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101004491"
-        },
-        "managerPicUrl": "https://s3.jdpay.com/fundmanagerphoto/3/2022/01/05/694707983880.JPG",
-        "employmentDate": "8年260天",
-        "accessionDateDesc": "2021.02.22-至今",
-        "managerName": "张城源",
-        "accessionDate": "4年202天",
-        "manageScale": "46.87亿元"
-      }
-    ]
-  },
-  "commonAttributeNoPin": {
-    "isBrokerage": false,
-    "isNewFund": false
-  },
-  "question": {
-    "topData": {
-      "rightSub": {
-        "jumpData": {
-          "jumpType": 8,
-          "jumpUrl": "https://jtk.jd.com/hindex.htm?entrance=732"
-        },
-        "title": "客服咨询"
-      },
-      "title": "常见问题"
-    },
-    "elementList": [
-      {
-        "sortNo": 6,
-        "subTitle": "基金赎回金额需要结合赎回交易日的最新基金净值计算，并且基金可能有赎回费用，部分基金赎回时除赎回费用外还会收取附加管理费，附加管理费收费标准请参照购买基金的产品合同或招募说明书。",
-        "title": "为什么基金在卖出时和持仓金额不一致？"
-      },
-      {
-        "sortNo": 7,
-        "subTitle": "因不同基金赎回到账时间不同，具体请以页面显示的赎回到账时间为准。具体查看路径：京东金融App，点击【总资产-基金-交易记录】",
-        "title": "基金赎回到账时间？"
-      },
-      {
-        "sortNo": 8,
-        "subTitle": "您可以通过基金持仓页中交易明细，然后选择您要申请撤单的基金交易，进入订单详情页面，如果页面有【撤单】的选项，点击【撤单】，根据页面提示操作。",
-        "title": "基金如何进行撤单？"
-      },
-      {
-        "sortNo": 9,
-        "subTitle": "根据公募基金相关规定，基金持有不满7天，卖出将收取不低于1.5%的赎回费，具体以基金公司反馈结果为准，一般是按照申购确认日到赎回确认日的前一自然日这个周期来计算的。",
-        "title": "基金卖出手续费怎么计算？"
-      },
-      {
-        "sortNo": 10,
-        "subTitle": "您购买基金时是按金额购买，赎回时是以份额进行赎回，赎回份额X净值才是您最终赎回的金额，如果无法点击赎回按钮，可能由于产品处于封闭期或还未进行确认。",
-        "title": "基金怎么赎回（卖出）？"
-      },
-      {
-        "sortNo": 11,
-        "subTitle": "确认由基金公司进行，您在买入后耐心等待即可。一般情况下T日15:00前申请买入的基金，会在T+1日24点前进行确认（部分产品也可能是T+2日确认，具体以对应基金交易规则为准）。",
-        "title": "基金买入后何时进行确认？"
-      }
-    ]
-  },
   "fundDiagnosisOfItem": {
+    "codeDesc": "近3年",
+    "code": 5,
+    "jumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/fund/funddiagnosis/index/?itemId=1002834"
+    },
+    "dataCycleList": [
+      {
+        "dataCycle": "12",
+        "default": false,
+        "dataCycleMess": "近1年"
+      },
+      {
+        "dataCycle": "36",
+        "default": true,
+        "dataCycleMess": "近3年"
+      }
+    ],
     "fundDiagnosisData": {
       "tab3": {
         "valueMsg": "较弱",
@@ -128,70 +398,9 @@
         "value": "1.19",
         "overSameTypePercent": 99
       }
-    },
-    "jumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/fund/funddiagnosis/index/?itemId=1002834"
-    },
-    "code": 5,
-    "codeDesc": "近3年",
-    "dataCycleList": [
-      {
-        "dataCycle": "12",
-        "default": false,
-        "dataCycleMess": "近1年"
-      },
-      {
-        "dataCycle": "36",
-        "default": true,
-        "dataCycleMess": "近3年"
-      }
-    ]
-  },
-  "fundProfileOfItem": {
-    "establishedDate": "2016-08-24",
-    "companyManageScale": "21305.83亿",
-    "instPurchaseRatio": 2.14,
-    "establishedDateByCn": "2016年08月24日",
-    "fundScaleText": "基金规模1.8亿",
-    "totalShares": "总份额0.72亿",
-    "fundScaleChange": "较上季度增加0.65亿",
-    "moreJumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=0&itemId=1002834&fundCode=002834"
-    },
-    "fundScaleJumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=1&itemId=1002834&fundCode=002834"
-    },
-    "purchaseRatio": 97.86,
-    "company_name": "华夏基金管理有限公司",
-    "fundScale": "1.80亿元",
-    "manageNumber": 479,
-    "fundScaleList": [
-      "1.43",
-      "1.03",
-      "1.15",
-      "1.8"
-    ],
-    "establishedDateText": "已成立9年19天"
-  },
-  "noticeList": [
-    {
-      "noteDate": "2025-09-10",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/10/810898699724.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/10/810898700222.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "华夏基金产品适当性风险等级划分一览表20250910"
-    },
-    {
-      "noteDate": "2025-09-04",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/04/810289211654.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/04/810289211646.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "华夏基金管理有限公司关于旗下证券投资基金估值调整情况的公告"
     }
-  ],
+  },
+  "noticeOfItem": {},
   "bottomButtonOfItem": {
     "aipButton": {
       "disable": false,
@@ -270,7 +479,6 @@
       "text": "买入"
     }
   },
-  "noticeOfItem": {},
   "investmentDistributionNewOfItem": {
     "investmentDistribution": {
       "quarterlyReportUrl": "https://mse.jd.com/business/financialReport/home/?fundCode=002834&reportDate=2025&type=2",
@@ -360,11 +568,11 @@
           "industryName": "软件开发",
           "isUpChange": true,
           "code": "688111",
-          "rate": "3.14%",
+          "rate": "-0.49%",
           "name": "金山办公",
           "holdingSharesChange": "0.30%",
           "positionQuarters": "重仓2个季度",
-          "newestPrize": "307.86",
+          "newestPrize": "306.36",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -381,11 +589,11 @@
           "industryName": "消费电子",
           "isUpChange": false,
           "code": "601138",
-          "rate": "10.01%",
+          "rate": "4.84%",
           "name": "工业富联",
           "holdingSharesChange": "0.17%",
           "positionQuarters": "重仓6个季度",
-          "newestPrize": "59.04",
+          "newestPrize": "61.90",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -402,11 +610,11 @@
           "industryName": "钢铁",
           "isUpChange": true,
           "code": "600019",
-          "rate": "1.73%",
+          "rate": "-0.42%",
           "name": "宝钢股份",
           "holdingSharesChange": "0.35%",
           "positionQuarters": "重仓3个季度",
-          "newestPrize": "7.06",
+          "newestPrize": "7.03",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -423,11 +631,11 @@
           "industryName": "通信服务",
           "isUpChange": true,
           "code": "601728",
-          "rate": "0.55%",
+          "rate": "-1.36%",
           "name": "中国电信",
           "holdingSharesChange": "0.30%",
           "positionQuarters": "重仓3个季度",
-          "newestPrize": "7.33",
+          "newestPrize": "7.23",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -444,11 +652,11 @@
           "industryName": "零售",
           "isUpChange": true,
           "code": "600415",
-          "rate": "3.92%",
+          "rate": "-1.98%",
           "name": "小商品城",
           "holdingSharesChange": "0.21%",
           "positionQuarters": "重仓3个季度",
-          "newestPrize": "20.16",
+          "newestPrize": "19.76",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -465,11 +673,11 @@
           "industryName": "电池",
           "isUpChange": true,
           "code": "300750",
-          "rate": "2.06%",
+          "rate": "0.76%",
           "name": "宁德时代",
           "holdingSharesChange": "0.15%",
           "positionQuarters": "重仓10个季度",
-          "newestPrize": "322.55",
+          "newestPrize": "325.00",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -486,11 +694,11 @@
           "industryName": "工业金属",
           "isUpChange": true,
           "code": "601899",
-          "rate": "2.10%",
+          "rate": "-0.23%",
           "name": "紫金矿业",
           "holdingSharesChange": "0.15%",
           "positionQuarters": "重仓2个季度",
-          "newestPrize": "25.71",
+          "newestPrize": "25.65",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -507,11 +715,11 @@
           "industryName": "文化传媒",
           "isUpChange": true,
           "code": "002027",
-          "rate": "0.00%",
+          "rate": "-1.45%",
           "name": "分众传媒",
           "holdingSharesChange": "0.15%",
           "positionQuarters": "重仓2个季度",
-          "newestPrize": "8.28",
+          "newestPrize": "8.16",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -528,11 +736,11 @@
           "industryName": "白酒",
           "isUpChange": false,
           "code": "600519",
-          "rate": "0.10%",
+          "rate": "-0.49%",
           "name": "贵州茅台",
           "holdingSharesChange": "0.15%",
           "positionQuarters": "重仓2个季度",
-          "newestPrize": "1523.50",
+          "newestPrize": "1516.00",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -549,11 +757,11 @@
           "industryName": "汽车整车",
           "isUpChange": false,
           "code": "002594",
-          "rate": "1.32%",
+          "rate": "-0.64%",
           "name": "比亚迪",
           "holdingSharesChange": "0.48%",
           "positionQuarters": "重仓2个季度",
-          "newestPrize": "106.59",
+          "newestPrize": "105.91",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -672,7 +880,7 @@
     "disclosureType": 1,
     "riskLevel": 3,
     "lockOrCloseTipsMap": {},
-    "navDate": "2025-09-11",
+    "navDate": "2025-09-12",
     "wealthRankJumpData": {
       "jumpType": 2,
       "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&selectIndex=1&channel=bd_rank_dingtou2"
@@ -681,26 +889,26 @@
       {
         "themeName": "消费电子",
         "themeCode": "886092",
-        "themeType": 2,
-        "relevance": 84.98,
         "jumpData": {
           "jumpType": 2,
           "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886092"
-        }
+        },
+        "themeType": 2,
+        "relevance": 84.98
       },
       {
         "themeName": "国企改革",
         "themeCode": "880149",
-        "themeType": 1,
-        "relevance": 93.55,
         "jumpData": {
           "jumpType": 2,
           "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=880149"
-        }
+        },
+        "themeType": 1,
+        "relevance": 93.55
       }
     ],
     "morningstarRating": "",
-    "currentDatetime": 1757636216536,
+    "currentDatetime": 1757677690861,
     "fundType": 203,
     "itemId": "1002834",
     "wealthRank": "定投热基榜 · 第4名",
@@ -748,363 +956,95 @@
       {
         "name": "近1年涨跌幅",
         "type": "singleYearRate",
-        "value": "104.95"
+        "value": "104.54"
       },
       {
         "name": "日涨跌幅",
         "type": "dailyRate",
-        "value": "1.46"
+        "value": "-0.55"
       },
       {
-        "name": "净值(09-11)",
+        "name": "净值(09-12)",
         "type": "nav",
-        "value": "2.8749"
+        "value": "2.8590"
       }
     ],
     "starSelectedFlag": false
   },
-  "performanceOfItem": {
-    "historyNvOrProfitMap": {
-      "disclosureType": 1,
-      "moreJumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=002834&disclosureType=1&activeIndex=4"
-      },
-      "historyNvOrProfitList": [
-        {
-          "date": "2025-09-11",
-          "netValue": "2.8749",
-          "dailyProfit": "1.46",
-          "totalNetValue": "2.8749"
+  "commonAttributeNoPin": {
+    "isBrokerage": false,
+    "isNewFund": false
+  },
+  "fundManagerOfItem": {
+    "moreJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=2&fundCode=002834&itemId=1002834"
+    },
+    "managerInfoList": [
+      {
+        "yearPerformance": "8.78",
+        "employPerformance": "155.75",
+        "managerDetailJumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101004491"
         },
-        {
-          "date": "2025-09-10",
-          "netValue": "2.8334",
-          "dailyProfit": "0.47",
-          "totalNetValue": "2.8334"
-        },
-        {
-          "date": "2025-09-09",
-          "netValue": "2.8201",
-          "dailyProfit": "-0.86",
-          "totalNetValue": "2.8201"
-        },
-        {
-          "date": "2025-09-08",
-          "netValue": "2.8447",
-          "dailyProfit": "0.92",
-          "totalNetValue": "2.8447"
-        },
-        {
-          "date": "2025-09-05",
-          "netValue": "2.8187",
-          "dailyProfit": "1.82",
-          "totalNetValue": "2.8187"
-        },
-        {
-          "date": "2025-09-04",
-          "netValue": "2.7682",
-          "dailyProfit": "-0.65",
-          "totalNetValue": "2.7682"
-        },
-        {
-          "date": "2025-09-03",
-          "netValue": "2.7864",
-          "dailyProfit": "-1.26",
-          "totalNetValue": "2.7864"
-        },
-        {
-          "date": "2025-09-02",
-          "netValue": "2.8219",
-          "dailyProfit": "-0.80",
-          "totalNetValue": "2.8219"
-        },
-        {
-          "date": "2025-09-01",
-          "netValue": "2.8447",
-          "dailyProfit": "0.74",
-          "totalNetValue": "2.8447"
-        },
-        {
-          "date": "2025-08-29",
-          "netValue": "2.8238",
-          "dailyProfit": "0.56",
-          "totalNetValue": "2.8238"
-        },
-        {
-          "date": "2025-08-28",
-          "netValue": "2.8082",
-          "dailyProfit": "0.21",
-          "totalNetValue": "2.8082"
-        },
-        {
-          "date": "2025-08-27",
-          "netValue": "2.8023",
-          "dailyProfit": "-2.22",
-          "totalNetValue": "2.8023"
-        },
-        {
-          "date": "2025-08-26",
-          "netValue": "2.8659",
-          "dailyProfit": "0.15",
-          "totalNetValue": "2.8659"
-        },
-        {
-          "date": "2025-08-25",
-          "netValue": "2.8615",
-          "dailyProfit": "1.16",
-          "totalNetValue": "2.8615"
-        },
-        {
-          "date": "2025-08-22",
-          "netValue": "2.8287",
-          "dailyProfit": "0.66",
-          "totalNetValue": "2.8287"
-        },
-        {
-          "date": "2025-08-21",
-          "netValue": "2.8102",
-          "dailyProfit": "0.36",
-          "totalNetValue": "2.8102"
-        },
-        {
-          "date": "2025-08-20",
-          "netValue": "2.8002",
-          "dailyProfit": "0.49",
-          "totalNetValue": "2.8002"
-        },
-        {
-          "date": "2025-08-19",
-          "netValue": "2.7865",
-          "dailyProfit": "0.85",
-          "totalNetValue": "2.7865"
-        },
-        {
-          "date": "2025-08-18",
-          "netValue": "2.7630",
-          "dailyProfit": "0.71",
-          "totalNetValue": "2.7630"
-        },
-        {
-          "date": "2025-08-15",
-          "netValue": "2.7436",
-          "dailyProfit": "1.09",
-          "totalNetValue": "2.7436"
-        }
-      ],
-      "titleMap": {
-        "netValueRowName": "单位净值",
-        "totalNetValueRowName": "累计净值",
-        "dateRowName": "日期",
-        "dailyRateRowRate": "日涨跌幅"
+        "managerPicUrl": "https://s3.jdpay.com/fundmanagerphoto/3/2022/01/05/694707983880.JPG",
+        "employmentDate": "8年260天",
+        "accessionDateDesc": "2021.02.22-至今",
+        "managerName": "张城源",
+        "accessionDate": "4年202天",
+        "manageScale": "46.87亿元"
       }
+    ]
+  },
+  "fundProfileOfItem": {
+    "establishedDate": "2016-08-24",
+    "companyManageScale": "21305.83亿",
+    "instPurchaseRatio": 2.14,
+    "establishedDateByCn": "2016年08月24日",
+    "fundScaleText": "基金规模1.8亿",
+    "totalShares": "总份额0.72亿",
+    "fundScaleChange": "较上季度增加0.65亿",
+    "moreJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=0&itemId=1002834&fundCode=002834"
     },
-    "secondCategoryCode": "1202",
-    "aipPerformanceMap": {
-      "moreJumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://prodev.m.jd.com/jdjr/active/1VWJwowHKkyjNfDzseo4EkG5mYQ/index.html"
-      },
-      "moreButton": "了解定投",
-      "countJumpData": {
-        "jumpType": 8,
-        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundcast/castCounter/?fundCode=002834"
-      },
-      "existPerformanceData": true,
-      "aipPerformanceList": [
-        {
-          "zhRate": "--",
-          "name": "近1年",
-          "ptRate": "31.96"
-        },
-        {
-          "zhRate": "--",
-          "name": "近2年",
-          "ptRate": "57.37"
-        },
-        {
-          "zhRate": "--",
-          "name": "近3年",
-          "ptRate": "--"
-        },
-        {
-          "zhRate": "--",
-          "name": "近5年",
-          "ptRate": "--"
-        }
-      ],
-      "titleMap": {
-        "ptAip": "普通定投",
-        "nameRowName": "周期"
-      },
-      "moreDesc": "按照每月1号定投进行计算"
+    "fundScaleJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=1&itemId=1002834&fundCode=002834"
     },
-    "yearPerformanceMap": {
-      "moreJumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=002834&disclosureType=1&activeIndex=1"
+    "purchaseRatio": 97.86,
+    "company_name": "华夏基金管理有限公司",
+    "fundScale": "1.80亿元",
+    "manageNumber": 479,
+    "fundScaleList": [
+      "1.43",
+      "1.03",
+      "1.15",
+      "1.8"
+    ],
+    "establishedDateText": "已成立9年19天"
+  },
+  "purchaseProcessOfItem": {
+    "purcheseDescribeList": [],
+    "processList": [
+      {
+        "title": "买入",
+        "info": "09-15 15:00前"
       },
-      "titleMap": {
-        "avgRowName": "同类均值",
-        "rankRowName": "同类排名",
-        "yearRowName": "年度",
-        "rateRowName": "回报率",
-        "rankRowMsg": "平台采用最新的同类排行，在原有一级分类基础上按照资产维度向下细分，用更加科学的方法在同一维度进行对比。如：混合型-偏股、混合型-偏债。"
+      {
+        "title": "确认份额",
+        "info": "09-16"
       },
-      "yearPerformanceList": [
-        {
-          "year": "2024年",
-          "rate": "8.03"
-        },
-        {
-          "avg": "-9.17",
-          "year": "2023年",
-          "rank": "--/1"
-        },
-        {
-          "year": "2018年",
-          "rate": "2.59"
-        },
-        {
-          "year": "2017年",
-          "rate": "9.50"
-        }
-      ]
-    },
-    "historyPerformanceMap": {
-      "moreJumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=002834&disclosureType=1&activeIndex=0"
-      },
-      "historyPerformanceList": [
-        {
-          "avg": "4.53",
-          "rate": "3.85",
-          "name": "近1周",
-          "jumpData": {
-            "textColour": "#586DF9",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=-2&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "3",
-            "text": "一般"
-          },
-          "rank": "1177/2152"
-        },
-        {
-          "avg": "9.14",
-          "rate": "4.04",
-          "name": "近1月",
-          "jumpData": {
-            "textColour": "#586DF9",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=1&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "3",
-            "text": "一般"
-          },
-          "rank": "1394/2148"
-        },
-        {
-          "avg": "18.82",
-          "rate": "16.74",
-          "name": "近3月",
-          "jumpData": {
-            "textColour": "#D17A36",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=3&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "2",
-            "text": "良好"
-          },
-          "rank": "993/2137"
-        },
-        {
-          "avg": "16.82",
-          "rate": "29.86",
-          "name": "近6月",
-          "jumpData": {
-            "textColour": "#FF4144",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=6&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "1",
-            "text": "优秀"
-          },
-          "rank": "301/2124"
-        },
-        {
-          "avg": "43.85",
-          "rate": "104.95",
-          "name": "近1年",
-          "jumpData": {
-            "textColour": "#FF4144",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=12&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "1",
-            "text": "优秀"
-          },
-          "rank": "96/2079"
-        },
-        {
-          "avg": "22.77",
-          "rate": "47.78",
-          "name": "今年以来",
-          "jumpData": {
-            "textColour": "#FF4144",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=0&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "1",
-            "text": "优秀"
-          },
-          "rank": "217/2152"
-        },
-        {
-          "avg": "8.24",
-          "rate": "157.17",
-          "name": "近3年",
-          "jumpData": {
-            "textColour": "#FF4144",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=36&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "1",
-            "text": "优秀"
-          },
-          "rank": "10/1901"
-        },
-        {
-          "avg": "146.11",
-          "rate": "187.49",
-          "name": "成立以来",
-          "jumpData": {
-            "textColour": "#FF4144",
-            "rankJump": {
-              "jumpType": 2,
-              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=002834&itemId=-1&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%2212%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221202%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
-            },
-            "level": "1",
-            "text": "优秀"
-          },
-          "rank": "184/770"
-        }
-      ],
-      "titleMap": {
-        "avgRowName": "同类均值",
-        "rankRowName": "同类排名",
-        "nameRowName": "日期",
-        "rateRowName": "涨跌幅",
-        "rankRowMsg": "平台采用最新的同类排行，在原有一级分类基础上按照资产维度向下细分，用更加科学的方法在同一维度进行对比。如：混合型-偏股、混合型-偏债。"
+      {
+        "title": "查看盈亏",
+        "info": "09-16净值更新后"
       }
+    ],
+    "jumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=002834"
     }
-  }
+  },
+  "sharesAndIndexOfItem": {}
 }

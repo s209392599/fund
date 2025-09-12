@@ -1,65 +1,5 @@
 {
   "isForSale": true,
-  "noticeList": [
-    {
-      "noteDate": "2025-09-03",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/03/810228704721.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/03/810228704472.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "易方达基金管理有限公司关于网上直销平台系统维护的通知"
-    },
-    {
-      "noteDate": "2025-08-30",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/08/30/809835883542.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/08/30/809835774485.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "易方达国证机器人产业交易型开放式指数证券投资基金发起式联接基金2025年中期报告"
-    }
-  ],
-  "question": {
-    "topData": {
-      "rightSub": {
-        "jumpData": {
-          "jumpType": 8,
-          "jumpUrl": "https://jtk.jd.com/hindex.htm?entrance=732"
-        },
-        "title": "客服咨询"
-      },
-      "title": "常见问题"
-    },
-    "elementList": [
-      {
-        "sortNo": 6,
-        "subTitle": "基金赎回金额需要结合赎回交易日的最新基金净值计算，并且基金可能有赎回费用，部分基金赎回时除赎回费用外还会收取附加管理费，附加管理费收费标准请参照购买基金的产品合同或招募说明书。",
-        "title": "为什么基金在卖出时和持仓金额不一致？"
-      },
-      {
-        "sortNo": 7,
-        "subTitle": "因不同基金赎回到账时间不同，具体请以页面显示的赎回到账时间为准。具体查看路径：京东金融App，点击【总资产-基金-交易记录】",
-        "title": "基金赎回到账时间？"
-      },
-      {
-        "sortNo": 8,
-        "subTitle": "您可以通过基金持仓页中交易明细，然后选择您要申请撤单的基金交易，进入订单详情页面，如果页面有【撤单】的选项，点击【撤单】，根据页面提示操作。",
-        "title": "基金如何进行撤单？"
-      },
-      {
-        "sortNo": 9,
-        "subTitle": "根据公募基金相关规定，基金持有不满7天，卖出将收取不低于1.5%的赎回费，具体以基金公司反馈结果为准，一般是按照申购确认日到赎回确认日的前一自然日这个周期来计算的。",
-        "title": "基金卖出手续费怎么计算？"
-      },
-      {
-        "sortNo": 10,
-        "subTitle": "您购买基金时是按金额购买，赎回时是以份额进行赎回，赎回份额X净值才是您最终赎回的金额，如果无法点击赎回按钮，可能由于产品处于封闭期或还未进行确认。",
-        "title": "基金怎么赎回（卖出）？"
-      },
-      {
-        "sortNo": 11,
-        "subTitle": "确认由基金公司进行，您在买入后耐心等待即可。一般情况下T日15:00前申请买入的基金，会在T+1日24点前进行确认（部分产品也可能是T+2日确认，具体以对应基金交易规则为准）。",
-        "title": "基金买入后何时进行确认？"
-      }
-    ]
-  },
   "performanceOfItem": {
     "historyNvOrProfitMap": {
       "disclosureType": 1,
@@ -68,6 +8,12 @@
         "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=020973&disclosureType=1&activeIndex=4"
       },
       "historyNvOrProfitList": [
+        {
+          "date": "2025-09-12",
+          "netValue": "1.5279",
+          "dailyProfit": "-0.81",
+          "totalNetValue": "1.5279"
+        },
         {
           "date": "2025-09-11",
           "netValue": "1.5404",
@@ -181,12 +127,6 @@
           "netValue": "1.4563",
           "dailyProfit": "1.82",
           "totalNetValue": "1.4563"
-        },
-        {
-          "date": "2025-08-15",
-          "netValue": "1.4302",
-          "dailyProfit": "2.23",
-          "totalNetValue": "1.4302"
         }
       ],
       "titleMap": {
@@ -212,7 +152,7 @@
         {
           "zhRate": "--",
           "name": "近1年",
-          "ptRate": "24.62"
+          "ptRate": "23.61"
         },
         {
           "zhRate": "--",
@@ -257,7 +197,7 @@
       "historyPerformanceList": [
         {
           "avg": "5.16",
-          "rate": "9.30",
+          "rate": "4.67",
           "name": "近1周",
           "jumpData": {
             "textColour": "#FF4144",
@@ -272,7 +212,7 @@
         },
         {
           "avg": "11.38",
-          "rate": "9.70",
+          "rate": "9.36",
           "name": "近1月",
           "jumpData": {
             "textColour": "#D17A36",
@@ -287,7 +227,7 @@
         },
         {
           "avg": "22.12",
-          "rate": "25.79",
+          "rate": "24.71",
           "name": "近3月",
           "jumpData": {
             "textColour": "#FF4144",
@@ -302,7 +242,7 @@
         },
         {
           "avg": "19.16",
-          "rate": "8.26",
+          "rate": "7.92",
           "name": "近6月",
           "jumpData": {
             "textColour": "#999999",
@@ -317,7 +257,7 @@
         },
         {
           "avg": "59.80",
-          "rate": "85.32",
+          "rate": "84.77",
           "name": "近1年",
           "jumpData": {
             "textColour": "#FF4144",
@@ -332,7 +272,7 @@
         },
         {
           "avg": "24.25",
-          "rate": "33.85",
+          "rate": "32.77",
           "name": "今年以来",
           "jumpData": {
             "textColour": "#FF4144",
@@ -350,7 +290,7 @@
         },
         {
           "avg": "39.81",
-          "rate": "54.04",
+          "rate": "52.79",
           "name": "成立以来",
           "jumpData": {
             "textColour": "#FF4144",
@@ -599,13 +539,13 @@
           "holdingSharesChange": "0.26%",
           "positionQuarters": "重仓4个季度",
           "holdingVolume": "0.00",
-          "newestPrize": "1.60",
+          "newestPrize": "1.58",
           "stockJumpData": {
             "p": "SZ-159530",
             "t": "gos"
           },
           "fundCode": "020973",
-          "rate": "2.90%",
+          "rate": "-0.94%",
           "holdingFundName": "易方达国证机器人产业ETF",
           "jrJumpData": {
             "jumpType": "",
@@ -622,11 +562,11 @@
         {
           "industryName": "通用设备",
           "code": "002896",
-          "rate": "2.80%",
+          "rate": "0.05%",
           "name": "中大力德",
           "holdingSharesChange": "新增",
           "positionQuarters": "",
-          "newestPrize": "93.60",
+          "newestPrize": "93.65",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -664,7 +604,7 @@
     "disclosureType": 1,
     "riskLevel": 4,
     "lockOrCloseTipsMap": {},
-    "navDate": "2025-09-11",
+    "navDate": "2025-09-12",
     "themeNameList": [
       {
         "themeName": "电机",
@@ -688,7 +628,7 @@
       }
     ],
     "morningstarRating": "",
-    "currentDatetime": 1757636175645,
+    "currentDatetime": 1757677687210,
     "fundType": 207,
     "itemId": "1020973",
     "highlights": {
@@ -709,22 +649,23 @@
       {
         "name": "近1年涨跌幅",
         "type": "singleYearRate",
-        "value": "85.32"
+        "value": "84.77"
       },
       {
         "name": "日涨跌幅",
         "type": "dailyRate",
-        "value": "2.69"
+        "value": "-0.81"
       },
       {
-        "name": "净值(09-11)",
+        "name": "净值(09-12)",
         "type": "nav",
-        "value": "1.5404"
+        "value": "1.5279"
       }
     ],
     "starSelectedFlag": false
   },
   "commonAttributeNoPin": {
+    "realtimeValuationOfItem": "-0.68",
     "isBrokerage": false,
     "isNewFund": false
   },
@@ -735,8 +676,8 @@
     },
     "managerInfoList": [
       {
-        "yearPerformance": "18.17",
-        "employPerformance": "54.04",
+        "yearPerformance": "19.84",
+        "employPerformance": "52.79",
         "managerDetailJumpData": {
           "jumpType": 2,
           "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101018967"
@@ -783,15 +724,15 @@
     "processList": [
       {
         "title": "买入",
-        "info": "09-12 15:00前"
+        "info": "09-15 15:00前"
       },
       {
         "title": "确认份额",
-        "info": "09-15"
+        "info": "09-16"
       },
       {
         "title": "查看盈亏",
-        "info": "09-15净值更新后"
+        "info": "09-16净值更新后"
       }
     ],
     "jumpData": {

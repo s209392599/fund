@@ -1,64 +1,616 @@
 {
   "isForSale": true,
-  "noticeList": [
-    {
-      "noteDate": "昨天",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/11/810892258347.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/11/810892258419.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "西藏东财基金管理有限公司关于旗下基金参与浙商银行股份有限公司认购、申购（含定期定额投资）费率优惠活动的公告"
-    },
-    {
-      "noteDate": "昨天",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/11/810892258423.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/11/810892258483.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "西藏东财基金管理有限公司关于旗下基金参与华安证券股份有限公司认购、申购（含定期定额投资）费率优惠活动的公告"
+  "purchaseProcessOfItem": {
+    "purcheseDescribeList": [],
+    "processList": [
+      {
+        "title": "买入",
+        "info": "09-15 15:00前"
+      },
+      {
+        "title": "确认份额",
+        "info": "09-16"
+      },
+      {
+        "title": "查看盈亏",
+        "info": "09-16净值更新后"
+      }
+    ],
+    "jumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=012322"
     }
-  ],
-  "question": {
-    "topData": {
-      "rightSub": {
-        "jumpData": {
-          "jumpType": 8,
-          "jumpUrl": "https://jtk.jd.com/hindex.htm?entrance=732"
-        },
-        "title": "客服咨询"
+  },
+  "fundDiagnosisOfItem": {
+    "fundDiagnosisData": {
+      "tab3": {
+        "valueMsg": "弱",
+        "subTitle": "最大回撤",
+        "iMsg": "最大回撤代表特定时间内基金从净值最高点到最低点的幅度，用于描述投资者在一段时间内的最大亏损，数值越小越好",
+        "title": "抗下跌能力",
+        "value": "47.61",
+        "overSameTypePercent": 13
       },
-      "title": "常见问题"
+      "tab4": {
+        "valueMsg": "弱",
+        "subTitle": "波动率",
+        "iMsg": "统计所选区间内，基金收益的波动情况，数值越小越好",
+        "title": "抗波动能力",
+        "value": "35.57",
+        "overSameTypePercent": 2
+      },
+      "tab1": {
+        "valueMsg": "较低",
+        "subTitle": "持有1年超跟踪指数收益率",
+        "iMsg": "统计所选区间内，任意时点买入该基金并持有1年，获得超越跟踪指数的平均收益率",
+        "type": "2",
+        "title": "超额收益能力",
+        "value": "0.15",
+        "overSameTypePercent": 27
+      },
+      "tab2": {
+        "valueMsg": "低",
+        "subTitle": "信息比率",
+        "iMsg": "统计所选区间内，指数基金每承受一单位跟踪误差，可获得的超额收益，数值越大越好",
+        "type": "2",
+        "title": "跟踪误差性价比",
+        "value": "-0.26",
+        "overSameTypePercent": 18
+      }
     },
-    "elementList": [
+    "jumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/fund/funddiagnosis/index/?itemId=1012322"
+    },
+    "code": 5,
+    "codeDesc": "近3年",
+    "dataCycleList": [
       {
-        "sortNo": 6,
-        "subTitle": "基金赎回金额需要结合赎回交易日的最新基金净值计算，并且基金可能有赎回费用，部分基金赎回时除赎回费用外还会收取附加管理费，附加管理费收费标准请参照购买基金的产品合同或招募说明书。",
-        "title": "为什么基金在卖出时和持仓金额不一致？"
+        "dataCycle": "12",
+        "default": false,
+        "dataCycleMess": "近1年"
       },
       {
-        "sortNo": 7,
-        "subTitle": "因不同基金赎回到账时间不同，具体请以页面显示的赎回到账时间为准。具体查看路径：京东金融App，点击【总资产-基金-交易记录】",
-        "title": "基金赎回到账时间？"
-      },
-      {
-        "sortNo": 8,
-        "subTitle": "您可以通过基金持仓页中交易明细，然后选择您要申请撤单的基金交易，进入订单详情页面，如果页面有【撤单】的选项，点击【撤单】，根据页面提示操作。",
-        "title": "基金如何进行撤单？"
-      },
-      {
-        "sortNo": 9,
-        "subTitle": "根据公募基金相关规定，基金持有不满7天，卖出将收取不低于1.5%的赎回费，具体以基金公司反馈结果为准，一般是按照申购确认日到赎回确认日的前一自然日这个周期来计算的。",
-        "title": "基金卖出手续费怎么计算？"
-      },
-      {
-        "sortNo": 10,
-        "subTitle": "您购买基金时是按金额购买，赎回时是以份额进行赎回，赎回份额X净值才是您最终赎回的金额，如果无法点击赎回按钮，可能由于产品处于封闭期或还未进行确认。",
-        "title": "基金怎么赎回（卖出）？"
-      },
-      {
-        "sortNo": 11,
-        "subTitle": "确认由基金公司进行，您在买入后耐心等待即可。一般情况下T日15:00前申请买入的基金，会在T+1日24点前进行确认（部分产品也可能是T+2日确认，具体以对应基金交易规则为准）。",
-        "title": "基金买入后何时进行确认？"
+        "dataCycle": "36",
+        "default": true,
+        "dataCycleMess": "近3年"
       }
     ]
+  },
+  "fundManagerOfItem": {
+    "moreJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=2&fundCode=012322&itemId=1012322"
+    },
+    "managerInfoList": [
+      {
+        "yearPerformance": "3.75",
+        "employPerformance": "50.41",
+        "managerDetailJumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101016503"
+        },
+        "managerPicUrl": "https://s3.jdpay.com/fundmanagerphoto/3/2022/01/20/696013143382.JPG",
+        "employmentDate": "4年180天",
+        "accessionDateDesc": "2021.08.11-至今",
+        "managerName": "杨路炜",
+        "accessionDate": "4年32天",
+        "manageScale": "18.61亿元"
+      }
+    ]
+  },
+  "sharesAndIndexOfItem": {},
+  "fundProfileOfItem": {
+    "establishedDate": "2021-08-11",
+    "companyManageScale": "387.12亿",
+    "instPurchaseRatio": 0,
+    "establishedDateByCn": "2021年08月11日",
+    "fundScaleText": "基金规模4.72亿",
+    "totalShares": "总份额4.33亿",
+    "fundScaleChange": "较上季度减少0.45亿",
+    "moreJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=0&itemId=1012322&fundCode=012322"
+    },
+    "fundScaleJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=1&itemId=1012322&fundCode=012322"
+    },
+    "purchaseRatio": 100,
+    "company_name": "西藏东财基金管理有限公司",
+    "fundScale": "4.72亿元",
+    "manageNumber": 53,
+    "fundScaleList": [
+      "2.81",
+      "3.23",
+      "5.17",
+      "4.72"
+    ],
+    "establishedDateText": "已成立4年32天"
+  },
+  "commonAttributeNoPin": {
+    "realtimeValuationOfItem": "-0.61",
+    "isBrokerage": false,
+    "isNewFund": false
+  },
+  "investmentDistributionNewOfItem": {
+    "investmentDistribution": {
+      "quarterlyReportUrl": "https://mse.jd.com/business/financialReport/home/?fundCode=012322&reportDate=2025&type=2",
+      "totalAsset": 659819178.62,
+      "proportionList": [
+        {
+          "fundValue": "96.14",
+          "name": "股票",
+          "similarFundValue": "82.17"
+        },
+        {
+          "fundValue": "8.35",
+          "name": "现金",
+          "similarFundValue": "5.80"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "债券",
+          "similarFundValue": "2.26"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "基金",
+          "similarFundValue": "93.73"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "其他",
+          "similarFundValue": "0.25"
+        }
+      ],
+      "investDate": "2025-06-30",
+      "ratioChangeList": [
+        {
+          "fundValue": "1.09",
+          "name": "股票",
+          "similarFundValue": "0.75"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "债券",
+          "similarFundValue": "0.24"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "基金",
+          "similarFundValue": "0.04"
+        },
+        {
+          "fundValue": "2.27",
+          "name": "现金",
+          "similarFundValue": "0.82"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "其他",
+          "similarFundValue": "0.09"
+        }
+      ],
+      "invest": [
+        {
+          "name": "股票",
+          "value": "96.14"
+        },
+        {
+          "name": "现金",
+          "value": "8.35"
+        },
+        {
+          "name": "其他",
+          "value": "0.00"
+        }
+      ],
+      "investTitle": "净资产",
+      "assetMsg": "如果出现各资产总和占净资产比例超过100%的现象，一般是由于基金在运作过程中存在负债，如存在应付账款或债券质押杠杆交易等情况",
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=3&itemId=1012322&fundCode=012322"
+      },
+      "isETF": false,
+      "stockNavRatio": "前10大占比50.20%",
+      "stockDistributionDate": "2025-06-30",
+      "indexShowInvest": "stock",
+      "reportQuarter": "第二季度",
+      "stock": [
+        {
+          "industryName": "软件开发",
+          "isUpChange": true,
+          "code": "002230",
+          "rate": "-0.04%",
+          "name": "科大讯飞",
+          "holdingSharesChange": "1.85%",
+          "positionQuarters": "重仓11个季度",
+          "newestPrize": "51.47",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002230%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SZ-002230",
+            "t": "gos"
+          },
+          "ratio": "8.46%"
+        },
+        {
+          "industryName": "通信设备",
+          "isUpChange": true,
+          "code": "300502",
+          "rate": "-5.77%",
+          "name": "新易盛",
+          "holdingSharesChange": "1.90%",
+          "positionQuarters": "重仓7个季度",
+          "newestPrize": "357.98",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300502%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SZ-300502",
+            "t": "gos"
+          },
+          "ratio": "6.61%"
+        },
+        {
+          "industryName": "通信设备",
+          "isUpChange": true,
+          "code": "300308",
+          "rate": "-4.06%",
+          "name": "中际旭创",
+          "holdingSharesChange": "3.31%",
+          "positionQuarters": "重仓10个季度",
+          "newestPrize": "422.09",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300308%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SZ-300308",
+            "t": "gos"
+          },
+          "ratio": "6.32%"
+        },
+        {
+          "industryName": "软件开发",
+          "isUpChange": false,
+          "code": "688111",
+          "rate": "-0.49%",
+          "name": "金山办公",
+          "holdingSharesChange": "1.23%",
+          "positionQuarters": "重仓13个季度",
+          "newestPrize": "306.36",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688111%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SH-688111",
+            "t": "gos"
+          },
+          "ratio": "5.09%"
+        },
+        {
+          "industryName": "计算机设备",
+          "isUpChange": true,
+          "code": "603019",
+          "rate": "6.39%",
+          "name": "中科曙光",
+          "holdingSharesChange": "1.41%",
+          "positionQuarters": "重仓9个季度",
+          "newestPrize": "97.97",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-603019%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SH-603019",
+            "t": "gos"
+          },
+          "ratio": "4.85%"
+        },
+        {
+          "industryName": "IT服务",
+          "isUpChange": true,
+          "code": "000938",
+          "rate": "2.13%",
+          "name": "紫光股份",
+          "holdingSharesChange": "0.24%",
+          "positionQuarters": "重仓10个季度",
+          "newestPrize": "29.28",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000938%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SZ-000938",
+            "t": "gos"
+          },
+          "ratio": "4.56%"
+        },
+        {
+          "industryName": "计算机设备",
+          "isUpChange": true,
+          "code": "000977",
+          "rate": "0.14%",
+          "name": "浪潮信息",
+          "holdingSharesChange": "0.15%",
+          "positionQuarters": "重仓6个季度",
+          "newestPrize": "64.08",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000977%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SZ-000977",
+            "t": "gos"
+          },
+          "ratio": "4.50%"
+        },
+        {
+          "industryName": "软件开发",
+          "isUpChange": true,
+          "code": "600570",
+          "rate": "-0.91%",
+          "name": "恒生电子",
+          "holdingSharesChange": "0.44%",
+          "positionQuarters": "重仓3个季度",
+          "newestPrize": "35.00",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600570%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SH-600570",
+            "t": "gos"
+          },
+          "ratio": "3.55%"
+        },
+        {
+          "industryName": "IT服务",
+          "isUpChange": true,
+          "code": "300339",
+          "rate": "-0.68%",
+          "name": "润和软件",
+          "holdingSharesChange": "0.38%",
+          "positionQuarters": "重仓2个季度",
+          "newestPrize": "59.92",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300339%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SZ-300339",
+            "t": "gos"
+          },
+          "ratio": "3.29%"
+        },
+        {
+          "industryName": "通信服务",
+          "code": "300442",
+          "rate": "2.46%",
+          "name": "润泽科技",
+          "holdingSharesChange": "新增",
+          "positionQuarters": "",
+          "newestPrize": "54.46",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300442%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          },
+          "stockJumpData": {
+            "p": "SZ-300442",
+            "t": "gos"
+          },
+          "ratio": "2.97%"
+        }
+      ],
+      "stockDistribution": [
+        {
+          "name": "信息传输、软件和信息技术服务业",
+          "value": "63.43"
+        },
+        {
+          "name": "制造业",
+          "value": "32.11"
+        },
+        {
+          "name": "金融业",
+          "value": "0.59"
+        },
+        {
+          "name": "科学研究和技术服务业",
+          "value": "0.00"
+        },
+        {
+          "name": "批发和零售业",
+          "value": "0.00"
+        }
+      ],
+      "reportDateList": [
+        "2025#2",
+        "2025#1",
+        "2024#4",
+        "2024#3",
+        "2024#2",
+        "2024#1",
+        "2023#4",
+        "2023#3",
+        "2023#2",
+        "2023#1",
+        "2022#4",
+        "2022#3",
+        "2022#2",
+        "2022#1",
+        "2021#4"
+      ]
+    }
+  },
+  "noticeOfItem": {},
+  "bottomButtonOfItem": {
+    "aipButton": {
+      "disable": false,
+      "jumpData": {
+        "jumpType": 8,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundcast/index/?skuId=1012322"
+      },
+      "text": "定投"
+    },
+    "fundPurchaseType": "1",
+    "customerButton": {
+      "pictureUrl": "https://img11.360buyimg.com/img/jfs/t1/282927/22/28586/2812/681b4eeeFb1c96853/bce00d2e6eb6c55f.png",
+      "jumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://sbq.jd.com/digitalhuman/flow?&fundCode=012322"
+      },
+      "text": "AI小贝"
+    },
+    "buttonTips": {
+      "rightDescJumpData": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=012322",
+      "hasAdditionCharge": "0",
+      "leftDescHoldCard": "买入费率 <span>0%</span>",
+      "leftDescNew": "买入费率 <span>0.00%</span>",
+      "rightDescNew": "购买起点：1.00元"
+    },
+    "bottomButtonList": [
+      {
+        "pictureUrl": "https://img11.360buyimg.com/img/jfs/t1/282927/22/28586/2812/681b4eeeFb1c96853/bce00d2e6eb6c55f.png",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://sbq.jd.com/digitalhuman/flow?&fundCode=012322"
+        },
+        "text": "AI小贝"
+      },
+      {
+        "showTip": false,
+        "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/318930/14/22336/428/68934d5cF64d7f1a9/a97a1d3c336883bf.png",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://content.jr.jd.com/jrq/#/group?id=2700311"
+        },
+        "text": "圈子"
+      },
+      {
+        "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/323895/38/892/1063/68907371F4af80ebe/edc46b897c36c716.png",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://mse.jd.com/fund/fund-compare/pick?defaultFund=012322"
+        },
+        "text": "对比"
+      }
+    ],
+    "pkButton": {
+      "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/323895/38/892/1063/68907371F4af80ebe/edc46b897c36c716.png",
+      "jumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://mse.jd.com/fund/fund-compare/pick?defaultFund=012322"
+      },
+      "text": "对比"
+    },
+    "bbsButton": {
+      "showTip": false,
+      "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/318930/14/22336/428/68934d5cF64d7f1a9/a97a1d3c336883bf.png",
+      "jumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://content.jr.jd.com/jrq/#/group?id=2700311"
+      },
+      "text": "圈子"
+    },
+    "purchaseButton": {
+      "disable": false,
+      "jumpData": {
+        "jumpType": 8,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundtrade/index/?source=app&itemId=1012322&version=3"
+      },
+      "text": "买入"
+    }
+  },
+  "headerOfItem": {
+    "disclosureType": 1,
+    "riskLevel": 4,
+    "lockOrCloseTipsMap": {},
+    "navDate": "2025-09-12",
+    "themeNameList": [
+      {
+        "themeName": "IT服务",
+        "themeCode": "886164",
+        "themeType": 2,
+        "relevance": 84.39,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886164"
+        }
+      },
+      {
+        "themeName": "东数西算(算力)",
+        "themeCode": "879927",
+        "themeType": 1,
+        "relevance": 96.05,
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879927"
+        }
+      }
+    ],
+    "morningstarRating": "4",
+    "currentDatetime": 1757677748506,
+    "fundType": 207,
+    "itemId": "1012322",
+    "highlights": {
+      "tagList": [
+        "长期绩优",
+        "连续3年跑赢赛道",
+        "屡创新高",
+        "投资性价比高",
+        "收益回撤比高"
+      ],
+      "morningstarRating": "4"
+    },
+    "fundCode": "012322",
+    "fundTypeName": "指数增强-股票",
+    "userFocus": [],
+    "fundName": "东财云计算指数增强C",
+    "quotationsMap": [
+      {
+        "name": "近1年涨跌幅",
+        "type": "singleYearRate",
+        "value": "117.41"
+      },
+      {
+        "name": "日涨跌幅",
+        "type": "dailyRate",
+        "value": "-0.61"
+      },
+      {
+        "name": "净值(09-12)",
+        "type": "nav",
+        "value": "1.4949"
+      }
+    ],
+    "starSelectedFlag": false
   },
   "performanceOfItem": {
     "historyNvOrProfitMap": {
@@ -68,6 +620,12 @@
         "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=012322&disclosureType=1&activeIndex=4"
       },
       "historyNvOrProfitList": [
+        {
+          "date": "2025-09-12",
+          "netValue": "1.4949",
+          "dailyProfit": "-0.61",
+          "totalNetValue": "1.4949"
+        },
         {
           "date": "2025-09-11",
           "netValue": "1.5041",
@@ -181,12 +739,6 @@
           "netValue": "1.3239",
           "dailyProfit": "4.15",
           "totalNetValue": "1.3239"
-        },
-        {
-          "date": "2025-08-15",
-          "netValue": "1.2711",
-          "dailyProfit": "1.25",
-          "totalNetValue": "1.2711"
         }
       ],
       "titleMap": {
@@ -298,7 +850,7 @@
       "historyPerformanceList": [
         {
           "avg": "5.16",
-          "rate": "9.11",
+          "rate": "4.33",
           "name": "近1周",
           "jumpData": {
             "textColour": "#FF4144",
@@ -313,7 +865,7 @@
         },
         {
           "avg": "11.38",
-          "rate": "24.29",
+          "rate": "21.82",
           "name": "近1月",
           "jumpData": {
             "textColour": "#FF4144",
@@ -328,7 +880,7 @@
         },
         {
           "avg": "22.12",
-          "rate": "45.83",
+          "rate": "44.67",
           "name": "近3月",
           "jumpData": {
             "textColour": "#FF4144",
@@ -343,7 +895,7 @@
         },
         {
           "avg": "19.16",
-          "rate": "25.53",
+          "rate": "24.41",
           "name": "近6月",
           "jumpData": {
             "textColour": "#FF4144",
@@ -358,7 +910,7 @@
         },
         {
           "avg": "59.80",
-          "rate": "118.43",
+          "rate": "117.41",
           "name": "近1年",
           "jumpData": {
             "textColour": "#FF4144",
@@ -373,7 +925,7 @@
         },
         {
           "avg": "24.25",
-          "rate": "48.74",
+          "rate": "47.83",
           "name": "今年以来",
           "jumpData": {
             "textColour": "#FF4144",
@@ -388,7 +940,7 @@
         },
         {
           "avg": "20.40",
-          "rate": "110.75",
+          "rate": "109.46",
           "name": "近3年",
           "jumpData": {
             "textColour": "#FF4144",
@@ -403,7 +955,7 @@
         },
         {
           "avg": "54.69",
-          "rate": "50.41",
+          "rate": "49.49",
           "name": "成立以来",
           "jumpData": {
             "textColour": "#D17A36",
@@ -425,616 +977,5 @@
         "rankRowMsg": "平台采用最新的同类排行，在原有一级分类基础上按照资产维度向下细分，用更加科学的方法在同一维度进行对比。如：混合型-偏股、混合型-偏债。"
       }
     }
-  },
-  "fundDiagnosisOfItem": {
-    "codeDesc": "近3年",
-    "code": 5,
-    "jumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/fund/funddiagnosis/index/?itemId=1012322"
-    },
-    "dataCycleList": [
-      {
-        "dataCycle": "12",
-        "default": false,
-        "dataCycleMess": "近1年"
-      },
-      {
-        "dataCycle": "36",
-        "default": true,
-        "dataCycleMess": "近3年"
-      }
-    ],
-    "fundDiagnosisData": {
-      "tab3": {
-        "valueMsg": "弱",
-        "subTitle": "最大回撤",
-        "iMsg": "最大回撤代表特定时间内基金从净值最高点到最低点的幅度，用于描述投资者在一段时间内的最大亏损，数值越小越好",
-        "title": "抗下跌能力",
-        "value": "47.61",
-        "overSameTypePercent": 13
-      },
-      "tab4": {
-        "valueMsg": "弱",
-        "subTitle": "波动率",
-        "iMsg": "统计所选区间内，基金收益的波动情况，数值越小越好",
-        "title": "抗波动能力",
-        "value": "35.57",
-        "overSameTypePercent": 2
-      },
-      "tab1": {
-        "valueMsg": "较低",
-        "subTitle": "持有1年超跟踪指数收益率",
-        "iMsg": "统计所选区间内，任意时点买入该基金并持有1年，获得超越跟踪指数的平均收益率",
-        "type": "2",
-        "title": "超额收益能力",
-        "value": "0.15",
-        "overSameTypePercent": 27
-      },
-      "tab2": {
-        "valueMsg": "低",
-        "subTitle": "信息比率",
-        "iMsg": "统计所选区间内，指数基金每承受一单位跟踪误差，可获得的超额收益，数值越大越好",
-        "type": "2",
-        "title": "跟踪误差性价比",
-        "value": "-0.26",
-        "overSameTypePercent": 18
-      }
-    }
-  },
-  "noticeOfItem": {},
-  "bottomButtonOfItem": {
-    "aipButton": {
-      "disable": false,
-      "jumpData": {
-        "jumpType": 8,
-        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundcast/index/?skuId=1012322"
-      },
-      "text": "定投"
-    },
-    "fundPurchaseType": "1",
-    "customerButton": {
-      "pictureUrl": "https://img11.360buyimg.com/img/jfs/t1/282927/22/28586/2812/681b4eeeFb1c96853/bce00d2e6eb6c55f.png",
-      "jumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://sbq.jd.com/digitalhuman/flow?&fundCode=012322"
-      },
-      "text": "AI小贝"
-    },
-    "buttonTips": {
-      "rightDescJumpData": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=012322",
-      "hasAdditionCharge": "0",
-      "leftDescHoldCard": "买入费率 <span>0%</span>",
-      "leftDescNew": "买入费率 <span>0.00%</span>",
-      "rightDescNew": "购买起点：1.00元"
-    },
-    "bottomButtonList": [
-      {
-        "pictureUrl": "https://img11.360buyimg.com/img/jfs/t1/282927/22/28586/2812/681b4eeeFb1c96853/bce00d2e6eb6c55f.png",
-        "jumpData": {
-          "jumpType": 2,
-          "jumpUrl": "https://sbq.jd.com/digitalhuman/flow?&fundCode=012322"
-        },
-        "text": "AI小贝"
-      },
-      {
-        "showTip": false,
-        "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/318930/14/22336/428/68934d5cF64d7f1a9/a97a1d3c336883bf.png",
-        "jumpData": {
-          "jumpType": 2,
-          "jumpUrl": "https://content.jr.jd.com/jrq/#/group?id=2700311"
-        },
-        "text": "圈子"
-      },
-      {
-        "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/323895/38/892/1063/68907371F4af80ebe/edc46b897c36c716.png",
-        "jumpData": {
-          "jumpType": 2,
-          "jumpUrl": "https://mse.jd.com/fund/fund-compare/pick?defaultFund=012322"
-        },
-        "text": "对比"
-      }
-    ],
-    "pkButton": {
-      "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/323895/38/892/1063/68907371F4af80ebe/edc46b897c36c716.png",
-      "jumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://mse.jd.com/fund/fund-compare/pick?defaultFund=012322"
-      },
-      "text": "对比"
-    },
-    "bbsButton": {
-      "showTip": false,
-      "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/318930/14/22336/428/68934d5cF64d7f1a9/a97a1d3c336883bf.png",
-      "jumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://content.jr.jd.com/jrq/#/group?id=2700311"
-      },
-      "text": "圈子"
-    },
-    "purchaseButton": {
-      "disable": false,
-      "jumpData": {
-        "jumpType": 8,
-        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundtrade/index/?source=app&itemId=1012322&version=3"
-      },
-      "text": "买入"
-    }
-  },
-  "investmentDistributionNewOfItem": {
-    "investmentDistribution": {
-      "quarterlyReportUrl": "https://mse.jd.com/business/financialReport/home/?fundCode=012322&reportDate=2025&type=2",
-      "totalAsset": 659819178.62,
-      "proportionList": [
-        {
-          "fundValue": "96.14",
-          "name": "股票",
-          "similarFundValue": "82.17"
-        },
-        {
-          "fundValue": "8.35",
-          "name": "现金",
-          "similarFundValue": "5.80"
-        },
-        {
-          "fundValue": "0.00",
-          "name": "债券",
-          "similarFundValue": "2.26"
-        },
-        {
-          "fundValue": "0.00",
-          "name": "基金",
-          "similarFundValue": "93.73"
-        },
-        {
-          "fundValue": "0.00",
-          "name": "其他",
-          "similarFundValue": "0.25"
-        }
-      ],
-      "investDate": "2025-06-30",
-      "ratioChangeList": [
-        {
-          "fundValue": "1.09",
-          "name": "股票",
-          "similarFundValue": "0.75"
-        },
-        {
-          "fundValue": "0.00",
-          "name": "债券",
-          "similarFundValue": "0.24"
-        },
-        {
-          "fundValue": "0.00",
-          "name": "基金",
-          "similarFundValue": "0.04"
-        },
-        {
-          "fundValue": "2.27",
-          "name": "现金",
-          "similarFundValue": "0.82"
-        },
-        {
-          "fundValue": "0.00",
-          "name": "其他",
-          "similarFundValue": "0.09"
-        }
-      ],
-      "invest": [
-        {
-          "name": "股票",
-          "value": "96.14"
-        },
-        {
-          "name": "现金",
-          "value": "8.35"
-        },
-        {
-          "name": "其他",
-          "value": "0.00"
-        }
-      ],
-      "investTitle": "净资产",
-      "assetMsg": "如果出现各资产总和占净资产比例超过100%的现象，一般是由于基金在运作过程中存在负债，如存在应付账款或债券质押杠杆交易等情况",
-      "moreJumpData": {
-        "jumpType": 2,
-        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=3&itemId=1012322&fundCode=012322"
-      },
-      "isETF": false,
-      "stockNavRatio": "前10大占比50.20%",
-      "stockDistributionDate": "2025-06-30",
-      "indexShowInvest": "stock",
-      "reportQuarter": "第二季度",
-      "stock": [
-        {
-          "industryName": "软件开发",
-          "isUpChange": true,
-          "code": "002230",
-          "rate": "2.63%",
-          "name": "科大讯飞",
-          "holdingSharesChange": "1.85%",
-          "positionQuarters": "重仓11个季度",
-          "newestPrize": "51.49",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-002230%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SZ-002230",
-            "t": "gos"
-          },
-          "ratio": "8.46%"
-        },
-        {
-          "industryName": "通信设备",
-          "isUpChange": true,
-          "code": "300502",
-          "rate": "13.42%",
-          "name": "新易盛",
-          "holdingSharesChange": "1.90%",
-          "positionQuarters": "重仓7个季度",
-          "newestPrize": "379.90",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300502%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SZ-300502",
-            "t": "gos"
-          },
-          "ratio": "6.61%"
-        },
-        {
-          "industryName": "通信设备",
-          "isUpChange": true,
-          "code": "300308",
-          "rate": "14.28%",
-          "name": "中际旭创",
-          "holdingSharesChange": "3.31%",
-          "positionQuarters": "重仓10个季度",
-          "newestPrize": "439.97",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300308%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SZ-300308",
-            "t": "gos"
-          },
-          "ratio": "6.32%"
-        },
-        {
-          "industryName": "软件开发",
-          "isUpChange": false,
-          "code": "688111",
-          "rate": "3.14%",
-          "name": "金山办公",
-          "holdingSharesChange": "1.23%",
-          "positionQuarters": "重仓13个季度",
-          "newestPrize": "307.86",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-688111%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SH-688111",
-            "t": "gos"
-          },
-          "ratio": "5.09%"
-        },
-        {
-          "industryName": "计算机设备",
-          "isUpChange": true,
-          "code": "603019",
-          "rate": "10.00%",
-          "name": "中科曙光",
-          "holdingSharesChange": "1.41%",
-          "positionQuarters": "重仓9个季度",
-          "newestPrize": "92.09",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-603019%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SH-603019",
-            "t": "gos"
-          },
-          "ratio": "4.85%"
-        },
-        {
-          "industryName": "IT服务",
-          "isUpChange": true,
-          "code": "000938",
-          "rate": "8.15%",
-          "name": "紫光股份",
-          "holdingSharesChange": "0.24%",
-          "positionQuarters": "重仓10个季度",
-          "newestPrize": "28.67",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000938%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SZ-000938",
-            "t": "gos"
-          },
-          "ratio": "4.56%"
-        },
-        {
-          "industryName": "计算机设备",
-          "isUpChange": true,
-          "code": "000977",
-          "rate": "7.11%",
-          "name": "浪潮信息",
-          "holdingSharesChange": "0.15%",
-          "positionQuarters": "重仓6个季度",
-          "newestPrize": "63.99",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-000977%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SZ-000977",
-            "t": "gos"
-          },
-          "ratio": "4.50%"
-        },
-        {
-          "industryName": "软件开发",
-          "isUpChange": true,
-          "code": "600570",
-          "rate": "2.50%",
-          "name": "恒生电子",
-          "holdingSharesChange": "0.44%",
-          "positionQuarters": "重仓3个季度",
-          "newestPrize": "35.32",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-600570%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SH-600570",
-            "t": "gos"
-          },
-          "ratio": "3.55%"
-        },
-        {
-          "industryName": "IT服务",
-          "isUpChange": true,
-          "code": "300339",
-          "rate": "4.41%",
-          "name": "润和软件",
-          "holdingSharesChange": "0.38%",
-          "positionQuarters": "重仓2个季度",
-          "newestPrize": "60.33",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300339%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SZ-300339",
-            "t": "gos"
-          },
-          "ratio": "3.29%"
-        },
-        {
-          "industryName": "通信服务",
-          "code": "300442",
-          "rate": "2.37%",
-          "name": "润泽科技",
-          "holdingSharesChange": "新增",
-          "positionQuarters": "",
-          "newestPrize": "53.15",
-          "jrJumpData": {
-            "jumpType": "",
-            "productId": "",
-            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SZ-300442%5C%22%7D%22%7D",
-            "jumpUrl": ""
-          },
-          "stockJumpData": {
-            "p": "SZ-300442",
-            "t": "gos"
-          },
-          "ratio": "2.97%"
-        }
-      ],
-      "stockDistribution": [
-        {
-          "name": "信息传输、软件和信息技术服务业",
-          "value": "63.43"
-        },
-        {
-          "name": "制造业",
-          "value": "32.11"
-        },
-        {
-          "name": "金融业",
-          "value": "0.59"
-        },
-        {
-          "name": "科学研究和技术服务业",
-          "value": "0.00"
-        },
-        {
-          "name": "批发和零售业",
-          "value": "0.00"
-        }
-      ],
-      "reportDateList": [
-        "2025#2",
-        "2025#1",
-        "2024#4",
-        "2024#3",
-        "2024#2",
-        "2024#1",
-        "2023#4",
-        "2023#3",
-        "2023#2",
-        "2023#1",
-        "2022#4",
-        "2022#3",
-        "2022#2",
-        "2022#1",
-        "2021#4"
-      ]
-    }
-  },
-  "headerOfItem": {
-    "disclosureType": 1,
-    "riskLevel": 4,
-    "lockOrCloseTipsMap": {},
-    "navDate": "2025-09-11",
-    "themeNameList": [
-      {
-        "themeName": "IT服务",
-        "themeCode": "886164",
-        "jumpData": {
-          "jumpType": 2,
-          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=886164"
-        },
-        "themeType": 2,
-        "relevance": 84.39
-      },
-      {
-        "themeName": "东数西算(算力)",
-        "themeCode": "879927",
-        "jumpData": {
-          "jumpType": 2,
-          "jumpUrl": "https://lca.jd.com/activity/fundmarket/fundtheme/index/?themeCode=879927"
-        },
-        "themeType": 1,
-        "relevance": 96.05
-      }
-    ],
-    "morningstarRating": "4",
-    "currentDatetime": 1757636179624,
-    "fundType": 207,
-    "itemId": "1012322",
-    "highlights": {
-      "tagList": [
-        "长期绩优",
-        "连续3年跑赢赛道",
-        "屡创新高",
-        "投资性价比高",
-        "收益回撤比高"
-      ],
-      "morningstarRating": "4"
-    },
-    "fundCode": "012322",
-    "fundTypeName": "指数增强-股票",
-    "userFocus": [],
-    "fundName": "东财云计算指数增强C",
-    "quotationsMap": [
-      {
-        "name": "近1年涨跌幅",
-        "type": "singleYearRate",
-        "value": "118.43"
-      },
-      {
-        "name": "日涨跌幅",
-        "type": "dailyRate",
-        "value": "6.89"
-      },
-      {
-        "name": "净值(09-11)",
-        "type": "nav",
-        "value": "1.5041"
-      }
-    ],
-    "starSelectedFlag": false
-  },
-  "commonAttributeNoPin": {
-    "isBrokerage": false,
-    "isNewFund": false
-  },
-  "fundManagerOfItem": {
-    "moreJumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=2&fundCode=012322&itemId=1012322"
-    },
-    "managerInfoList": [
-      {
-        "yearPerformance": "3.01",
-        "employPerformance": "50.41",
-        "managerDetailJumpData": {
-          "jumpType": 2,
-          "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101016503"
-        },
-        "managerPicUrl": "https://s3.jdpay.com/fundmanagerphoto/3/2022/01/20/696013143382.JPG",
-        "employmentDate": "4年180天",
-        "accessionDateDesc": "2021.08.11-至今",
-        "managerName": "杨路炜",
-        "accessionDate": "4年32天",
-        "manageScale": "18.61亿元"
-      }
-    ]
-  },
-  "fundProfileOfItem": {
-    "establishedDate": "2021-08-11",
-    "companyManageScale": "387.12亿",
-    "instPurchaseRatio": 0,
-    "establishedDateByCn": "2021年08月11日",
-    "fundScaleText": "基金规模4.72亿",
-    "totalShares": "总份额4.33亿",
-    "fundScaleChange": "较上季度减少0.45亿",
-    "moreJumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=0&itemId=1012322&fundCode=012322"
-    },
-    "fundScaleJumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=1&itemId=1012322&fundCode=012322"
-    },
-    "purchaseRatio": 100,
-    "company_name": "西藏东财基金管理有限公司",
-    "fundScale": "4.72亿元",
-    "manageNumber": 53,
-    "fundScaleList": [
-      "2.81",
-      "3.23",
-      "5.17",
-      "4.72"
-    ],
-    "establishedDateText": "已成立4年32天"
-  },
-  "purchaseProcessOfItem": {
-    "purcheseDescribeList": [],
-    "processList": [
-      {
-        "title": "买入",
-        "info": "09-12 15:00前"
-      },
-      {
-        "title": "确认份额",
-        "info": "09-15"
-      },
-      {
-        "title": "查看盈亏",
-        "info": "09-15净值更新后"
-      }
-    ],
-    "jumpData": {
-      "jumpType": 2,
-      "jumpUrl": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=012322"
-    }
-  },
-  "sharesAndIndexOfItem": {}
+  }
 }

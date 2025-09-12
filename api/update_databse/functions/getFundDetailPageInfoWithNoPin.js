@@ -26,6 +26,8 @@ const getFundInfo = async (fundCode) => {
 }
 async function getBaseInfo(fundCode) {
   let res = await getFundInfo(fundCode); // 获取基金详情
+  delete res.noticeList;
+  delete res.question;
   fs.writeFileSync(`../logs/getFundDetailPageInfoWithNoPin_${fundCode}.json`, JSON.stringify(res, null, 2));
 
   if (res.fundProfileOfItem) {
@@ -51,7 +53,7 @@ let arr = [
   '012322',// 东财云计算增强C
   '160424',// 华安创业板50ETF联接
   '002834',// 华夏新锦绣混合C
-  // '',// 
+  '022691',// 华安医药生物股票发起式C
   // '',// 
   // '',// 
 ]

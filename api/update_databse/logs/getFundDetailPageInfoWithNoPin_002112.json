@@ -1,65 +1,5 @@
 {
   "isForSale": true,
-  "noticeList": [
-    {
-      "noteDate": "2025-09-04",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/04/810289211312.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/04/810289211295.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "德邦基金管理有限公司关于旗下证券投资基金估值调整情况的公告"
-    },
-    {
-      "noteDate": "2025-08-29",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/08/29/809782850631.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/08/29/809778697829.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "德邦基金管理有限公司旗下基金2025年中期报告提示性公告"
-    }
-  ],
-  "question": {
-    "topData": {
-      "rightSub": {
-        "jumpData": {
-          "jumpType": 8,
-          "jumpUrl": "https://jtk.jd.com/hindex.htm?entrance=732"
-        },
-        "title": "客服咨询"
-      },
-      "title": "常见问题"
-    },
-    "elementList": [
-      {
-        "sortNo": 6,
-        "subTitle": "基金赎回金额需要结合赎回交易日的最新基金净值计算，并且基金可能有赎回费用，部分基金赎回时除赎回费用外还会收取附加管理费，附加管理费收费标准请参照购买基金的产品合同或招募说明书。",
-        "title": "为什么基金在卖出时和持仓金额不一致？"
-      },
-      {
-        "sortNo": 7,
-        "subTitle": "因不同基金赎回到账时间不同，具体请以页面显示的赎回到账时间为准。具体查看路径：京东金融App，点击【总资产-基金-交易记录】",
-        "title": "基金赎回到账时间？"
-      },
-      {
-        "sortNo": 8,
-        "subTitle": "您可以通过基金持仓页中交易明细，然后选择您要申请撤单的基金交易，进入订单详情页面，如果页面有【撤单】的选项，点击【撤单】，根据页面提示操作。",
-        "title": "基金如何进行撤单？"
-      },
-      {
-        "sortNo": 9,
-        "subTitle": "根据公募基金相关规定，基金持有不满7天，卖出将收取不低于1.5%的赎回费，具体以基金公司反馈结果为准，一般是按照申购确认日到赎回确认日的前一自然日这个周期来计算的。",
-        "title": "基金卖出手续费怎么计算？"
-      },
-      {
-        "sortNo": 10,
-        "subTitle": "您购买基金时是按金额购买，赎回时是以份额进行赎回，赎回份额X净值才是您最终赎回的金额，如果无法点击赎回按钮，可能由于产品处于封闭期或还未进行确认。",
-        "title": "基金怎么赎回（卖出）？"
-      },
-      {
-        "sortNo": 11,
-        "subTitle": "确认由基金公司进行，您在买入后耐心等待即可。一般情况下T日15:00前申请买入的基金，会在T+1日24点前进行确认（部分产品也可能是T+2日确认，具体以对应基金交易规则为准）。",
-        "title": "基金买入后何时进行确认？"
-      }
-    ]
-  },
   "performanceOfItem": {
     "historyNvOrProfitMap": {
       "disclosureType": 1,
@@ -68,6 +8,12 @@
         "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=002112&disclosureType=1&activeIndex=4"
       },
       "historyNvOrProfitList": [
+        {
+          "date": "2025-09-12",
+          "netValue": "3.2556",
+          "dailyProfit": "-0.85",
+          "totalNetValue": "3.4036"
+        },
         {
           "date": "2025-09-11",
           "netValue": "3.2835",
@@ -181,12 +127,6 @@
           "netValue": "2.5193",
           "dailyProfit": "5.44",
           "totalNetValue": "2.6673"
-        },
-        {
-          "date": "2025-08-15",
-          "netValue": "2.3894",
-          "dailyProfit": "2.15",
-          "totalNetValue": "2.5374"
         }
       ],
       "titleMap": {
@@ -212,22 +152,22 @@
         {
           "zhRate": "--",
           "name": "近1年",
-          "ptRate": "106.93"
+          "ptRate": "105.17"
         },
         {
           "zhRate": "--",
           "name": "近2年",
-          "ptRate": "154.48"
+          "ptRate": "152.32"
         },
         {
           "zhRate": "--",
           "name": "近3年",
-          "ptRate": "164.87"
+          "ptRate": "162.62"
         },
         {
           "zhRate": "--",
           "name": "近5年",
-          "ptRate": "161.77"
+          "ptRate": "159.55"
         }
       ],
       "titleMap": {
@@ -355,7 +295,7 @@
       "historyPerformanceList": [
         {
           "avg": "4.53",
-          "rate": "18.58",
+          "rate": "7.82",
           "name": "近1周",
           "jumpData": {
             "textColour": "#FF4144",
@@ -370,7 +310,7 @@
         },
         {
           "avg": "9.14",
-          "rate": "50.21",
+          "rate": "44.74",
           "name": "近1月",
           "jumpData": {
             "textColour": "#FF4144",
@@ -385,7 +325,7 @@
         },
         {
           "avg": "18.82",
-          "rate": "119.25",
+          "rate": "111.42",
           "name": "近3月",
           "jumpData": {
             "textColour": "#FF4144",
@@ -400,7 +340,7 @@
         },
         {
           "avg": "16.82",
-          "rate": "98.16",
+          "rate": "96.82",
           "name": "近6月",
           "jumpData": {
             "textColour": "#FF4144",
@@ -415,7 +355,7 @@
         },
         {
           "avg": "43.85",
-          "rate": "262.34",
+          "rate": "259.93",
           "name": "近1年",
           "jumpData": {
             "textColour": "#FF4144",
@@ -430,7 +370,7 @@
         },
         {
           "avg": "22.77",
-          "rate": "104.40",
+          "rate": "102.66",
           "name": "今年以来",
           "jumpData": {
             "textColour": "#FF4144",
@@ -445,7 +385,7 @@
         },
         {
           "avg": "8.24",
-          "rate": "171.09",
+          "rate": "168.79",
           "name": "近3年",
           "jumpData": {
             "textColour": "#FF4144",
@@ -460,7 +400,7 @@
         },
         {
           "avg": "169.17",
-          "rate": "282.57",
+          "rate": "279.32",
           "name": "成立以来",
           "jumpData": {
             "textColour": "#FF4144",
@@ -707,11 +647,11 @@
           "industryName": "元件",
           "isUpChange": true,
           "code": "300476",
-          "rate": "16.28%",
+          "rate": "0.47%",
           "name": "胜宏科技",
           "holdingSharesChange": "3.69%",
           "positionQuarters": "重仓2个季度",
-          "newestPrize": "338.00",
+          "newestPrize": "339.58",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -728,11 +668,11 @@
           "industryName": "通信设备",
           "isUpChange": true,
           "code": "300548",
-          "rate": "8.14%",
+          "rate": "-6.42%",
           "name": "长芯博创",
           "holdingSharesChange": "3.41%",
           "positionQuarters": "重仓3个季度",
-          "newestPrize": "127.48",
+          "newestPrize": "119.29",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -749,11 +689,11 @@
           "industryName": "通信设备",
           "isUpChange": true,
           "code": "300570",
-          "rate": "11.97%",
+          "rate": "-4.37%",
           "name": "太辰光",
           "holdingSharesChange": "1.58%",
           "positionQuarters": "重仓5个季度",
-          "newestPrize": "122.35",
+          "newestPrize": "117.00",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -769,11 +709,11 @@
         {
           "industryName": "元件",
           "code": "002463",
-          "rate": "10.00%",
+          "rate": "2.96%",
           "name": "沪电股份",
           "holdingSharesChange": "新增",
           "positionQuarters": "",
-          "newestPrize": "69.83",
+          "newestPrize": "71.90",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -789,11 +729,11 @@
         {
           "industryName": "元件",
           "code": "688183",
-          "rate": "13.80%",
+          "rate": "6.56%",
           "name": "生益电子",
           "holdingSharesChange": "新增",
           "positionQuarters": "",
-          "newestPrize": "89.07",
+          "newestPrize": "94.91",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -810,11 +750,11 @@
           "industryName": "通信设备",
           "isUpChange": false,
           "code": "300502",
-          "rate": "13.42%",
+          "rate": "-5.77%",
           "name": "新易盛",
           "holdingSharesChange": "1.33%",
           "positionQuarters": "重仓6个季度",
-          "newestPrize": "379.90",
+          "newestPrize": "357.98",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -830,11 +770,11 @@
         {
           "industryName": "通信设备",
           "code": "688205",
-          "rate": "3.22%",
+          "rate": "-4.02%",
           "name": "德科立",
           "holdingSharesChange": "新增",
           "positionQuarters": "",
-          "newestPrize": "100.85",
+          "newestPrize": "96.80",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -850,11 +790,11 @@
         {
           "industryName": "半导体",
           "code": "688498",
-          "rate": "15.65%",
+          "rate": "-3.43%",
           "name": "源杰科技",
           "holdingSharesChange": "新增",
           "positionQuarters": "",
-          "newestPrize": "387.00",
+          "newestPrize": "373.71",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -870,11 +810,11 @@
         {
           "industryName": "自动化设备",
           "code": "000988",
-          "rate": "10.00%",
+          "rate": "6.67%",
           "name": "华工科技",
           "holdingSharesChange": "新增",
           "positionQuarters": "",
-          "newestPrize": "72.27",
+          "newestPrize": "77.09",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -890,11 +830,11 @@
         {
           "industryName": "光学光电子",
           "code": "688195",
-          "rate": "20.00%",
+          "rate": "1.53%",
           "name": "腾景科技",
           "holdingSharesChange": "新增",
           "positionQuarters": "",
-          "newestPrize": "101.44",
+          "newestPrize": "102.99",
           "jrJumpData": {
             "jumpType": "",
             "productId": "",
@@ -961,7 +901,7 @@
     "disclosureType": 1,
     "riskLevel": 4,
     "lockOrCloseTipsMap": {},
-    "navDate": "2025-09-11",
+    "navDate": "2025-09-12",
     "aiUnscrambleUrl": "https://show.jd.com/m/5NZA/?pageKey=5NZA&jrhalfwebH=1500&fundCode=002112",
     "wealthRankJumpData": {
       "jumpType": 2,
@@ -990,7 +930,7 @@
       }
     ],
     "morningstarRating": "",
-    "currentDatetime": 1757636159147,
+    "currentDatetime": 1757677716888,
     "fundType": 203,
     "itemId": "105109",
     "wealthRank": "领涨先锋 · 第1名",
@@ -1039,17 +979,17 @@
       {
         "name": "近1年涨跌幅",
         "type": "singleYearRate",
-        "value": "262.34"
+        "value": "259.93"
       },
       {
         "name": "日涨跌幅",
         "type": "dailyRate",
-        "value": "11.37"
+        "value": "-0.85"
       },
       {
-        "name": "净值(09-11)",
+        "name": "净值(09-12)",
         "type": "nav",
-        "value": "3.2835"
+        "value": "3.2556"
       }
     ],
     "starSelectedFlag": false
@@ -1065,8 +1005,8 @@
     },
     "managerInfoList": [
       {
-        "yearPerformance": "2.00",
-        "employPerformance": "243.97",
+        "yearPerformance": "3.93",
+        "employPerformance": "241.04",
         "managerDetailJumpData": {
           "jumpType": 2,
           "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101017997"
@@ -1079,8 +1019,8 @@
         "manageScale": "36.89亿元"
       },
       {
-        "yearPerformance": "29.04",
-        "employPerformance": "243.97",
+        "yearPerformance": "32.97",
+        "employPerformance": "241.04",
         "managerDetailJumpData": {
           "jumpType": 2,
           "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101019327"
@@ -1127,15 +1067,15 @@
     "processList": [
       {
         "title": "买入",
-        "info": "09-12 15:00前"
+        "info": "09-15 15:00前"
       },
       {
         "title": "确认份额",
-        "info": "09-15"
+        "info": "09-16"
       },
       {
         "title": "查看盈亏",
-        "info": "09-15净值更新后"
+        "info": "09-16净值更新后"
       }
     ],
     "jumpData": {

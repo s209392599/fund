@@ -1,65 +1,5 @@
 {
   "isForSale": true,
-  "noticeList": [
-    {
-      "noteDate": "2025-09-10",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/10/810827352846.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/10/810827352453.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "华泰柏瑞基金管理有限公司关于中国银行快捷支付系统维护的通知"
-    },
-    {
-      "noteDate": "2025-09-09",
-      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/09/810738983971.HTML",
-      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/09/810738981428.PDF",
-      "noticeTypeCode": 0,
-      "noticeTitle": "华泰柏瑞基金产品风险等级表20250909"
-    }
-  ],
-  "question": {
-    "topData": {
-      "rightSub": {
-        "jumpData": {
-          "jumpType": 8,
-          "jumpUrl": "https://jtk.jd.com/hindex.htm?entrance=732"
-        },
-        "title": "客服咨询"
-      },
-      "title": "常见问题"
-    },
-    "elementList": [
-      {
-        "sortNo": 6,
-        "subTitle": "基金赎回金额需要结合赎回交易日的最新基金净值计算，并且基金可能有赎回费用，部分基金赎回时除赎回费用外还会收取附加管理费，附加管理费收费标准请参照购买基金的产品合同或招募说明书。",
-        "title": "为什么基金在卖出时和持仓金额不一致？"
-      },
-      {
-        "sortNo": 7,
-        "subTitle": "因不同基金赎回到账时间不同，具体请以页面显示的赎回到账时间为准。具体查看路径：京东金融App，点击【总资产-基金-交易记录】",
-        "title": "基金赎回到账时间？"
-      },
-      {
-        "sortNo": 8,
-        "subTitle": "您可以通过基金持仓页中交易明细，然后选择您要申请撤单的基金交易，进入订单详情页面，如果页面有【撤单】的选项，点击【撤单】，根据页面提示操作。",
-        "title": "基金如何进行撤单？"
-      },
-      {
-        "sortNo": 9,
-        "subTitle": "根据公募基金相关规定，基金持有不满7天，卖出将收取不低于1.5%的赎回费，具体以基金公司反馈结果为准，一般是按照申购确认日到赎回确认日的前一自然日这个周期来计算的。",
-        "title": "基金卖出手续费怎么计算？"
-      },
-      {
-        "sortNo": 10,
-        "subTitle": "您购买基金时是按金额购买，赎回时是以份额进行赎回，赎回份额X净值才是您最终赎回的金额，如果无法点击赎回按钮，可能由于产品处于封闭期或还未进行确认。",
-        "title": "基金怎么赎回（卖出）？"
-      },
-      {
-        "sortNo": 11,
-        "subTitle": "确认由基金公司进行，您在买入后耐心等待即可。一般情况下T日15:00前申请买入的基金，会在T+1日24点前进行确认（部分产品也可能是T+2日确认，具体以对应基金交易规则为准）。",
-        "title": "基金买入后何时进行确认？"
-      }
-    ]
-  },
   "performanceOfItem": {
     "historyNvOrProfitMap": {
       "disclosureType": 1,
@@ -681,13 +621,13 @@
           "holdingSharesChange": "3.21%",
           "positionQuarters": "重仓24个季度",
           "holdingVolume": "0.00",
-          "newestPrize": "1.19",
+          "newestPrize": "1.18",
           "stockJumpData": {
             "p": "SH-512890",
             "t": "gos"
           },
           "fundCode": "007467",
-          "rate": "0.34%",
+          "rate": "-0.67%",
           "holdingFundName": "红利低波",
           "jrJumpData": {
             "jumpType": "",
@@ -740,7 +680,17 @@
     "navDate": "2025-09-11",
     "themeNameList": [],
     "morningstarRating": "5",
-    "currentDatetime": 1757636172663,
+    "currentDatetime": 1757677716878,
+    "liveVideo": {
+      "liveJumpUrl": "https://content.jr.jd.com/video/appointment/index.html?contentId=995214843760216064&channelLv=cms_index&hasLiveEntry=1",
+      "searchProductList": "1-004011,1-004010,1-015310,1-015311,1-000186,1-004475,1-014597,1-019524,1-019525,1-015863,1-007467,1-007466,1-018388,1-018387",
+      "contentId": "995214843760216064",
+      "liveTitle": "透视创业板，当前的投资价值如何？",
+      "liveTime": 1757663833000,
+      "contentType": 6,
+      "productList": "[{\"productId\":\"004011\",\"productType\":1},{\"productId\":\"004010\",\"productType\":1},{\"productId\":\"015310\",\"productType\":1},{\"productId\":\"015311\",\"productType\":1},{\"productId\":\"000186\",\"productType\":1},{\"productId\":\"004475\",\"productType\":1},{\"productId\":\"014597\",\"productType\":1},{\"productId\":\"019524\",\"productType\":1},{\"productId\":\"019525\",\"productType\":1},{\"productId\":\"015863\",\"productType\":1},{\"productId\":\"007467\",\"productType\":1},{\"productId\":\"007466\",\"productType\":1},{\"productId\":\"018388\",\"productType\":1},{\"productId\":\"018387\",\"productType\":1}]",
+      "liveStatus": 6
+    },
     "fundType": 207,
     "itemId": "111934",
     "highlights": {
@@ -799,6 +749,7 @@
     "starSelectedFlag": false
   },
   "commonAttributeNoPin": {
+    "realtimeValuationOfItem": "-0.72",
     "isBrokerage": false,
     "isNewFund": false
   },
@@ -809,7 +760,7 @@
     },
     "managerInfoList": [
       {
-        "yearPerformance": "4.68",
+        "yearPerformance": "4.81",
         "employPerformance": "98.45",
         "managerDetailJumpData": {
           "jumpType": 2,
@@ -1146,15 +1097,15 @@
     "processList": [
       {
         "title": "买入",
-        "info": "09-12 15:00前"
+        "info": "09-15 15:00前"
       },
       {
         "title": "确认份额",
-        "info": "09-15"
+        "info": "09-16"
       },
       {
         "title": "查看盈亏",
-        "info": "09-15净值更新后"
+        "info": "09-16净值更新后"
       }
     ],
     "jumpData": {
