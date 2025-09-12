@@ -141,6 +141,16 @@
       "desc": "09-05：开启两周的小定投，11月份出货"
     },
     {
+      "code": "022425",
+      "name": "广发中证A500ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "宽基"
+    },
+    {
       "code": "012322",
       "name": "东财云计算增强C",
       "zhang_url": "",
