@@ -90,6 +90,40 @@ async function queryDatabase() {
         var isForSale = datas.isForSale || false; // 是否可买
         console.log('isForSale', `${item.fund_code} - ${item.fund_name} - ${isForSale}`);
 
+        /** 
+         * 回撤修复
+         * 回撤、修复
+         */
+        // -- 回撤修复
+        //
+
+        // 历史业绩
+        // 近一周 涨跌幅 同类均值 同类排名
+        // 近一月
+        // 近三月
+        // 近六月
+        // 近一年
+        // 近三年
+        // 近5年
+        // 今年以来
+        // 成立以来
+
+
+        // 基金综合诊断  也可以直接点进去看详细的数据
+        var fundDiagnosisOfItem = datas.fundDiagnosisOfItem || {};
+        var fundDiagnosisData = fundDiagnosisOfItem.fundDiagnosisData || {};
+        // 收益能力
+        // 投资性价比
+        // 抗下跌能力
+        // 抗波动能力
+
+        // --基金持仓
+        // 重仓股票
+        // 基金规模
+        // 机构占比
+
+        // 交易规则  买卖规则
+
         var investmentDistributionNewOfItem = datas.investmentDistributionNewOfItem || {};
         var investmentDistribution = investmentDistributionNewOfItem.investmentDistribution || {};
         var proportionList = investmentDistribution.proportionList || [];

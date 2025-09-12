@@ -1,0 +1,1166 @@
+{
+  "isForSale": true,
+  "noticeList": [
+    {
+      "noteDate": "2025-09-10",
+      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/10/810827352846.HTML",
+      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/10/810827352453.PDF",
+      "noticeTypeCode": 0,
+      "noticeTitle": "华泰柏瑞基金管理有限公司关于中国银行快捷支付系统维护的通知"
+    },
+    {
+      "noteDate": "2025-09-09",
+      "noticeHtmlUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/09/810738983971.HTML",
+      "noticeUrl": "https://storage.360buyimg.com/fundannouncement/3/2025/09/09/810738981428.PDF",
+      "noticeTypeCode": 0,
+      "noticeTitle": "华泰柏瑞基金产品风险等级表20250909"
+    }
+  ],
+  "question": {
+    "topData": {
+      "rightSub": {
+        "jumpData": {
+          "jumpType": 8,
+          "jumpUrl": "https://jtk.jd.com/hindex.htm?entrance=732"
+        },
+        "title": "客服咨询"
+      },
+      "title": "常见问题"
+    },
+    "elementList": [
+      {
+        "sortNo": 6,
+        "subTitle": "基金赎回金额需要结合赎回交易日的最新基金净值计算，并且基金可能有赎回费用，部分基金赎回时除赎回费用外还会收取附加管理费，附加管理费收费标准请参照购买基金的产品合同或招募说明书。",
+        "title": "为什么基金在卖出时和持仓金额不一致？"
+      },
+      {
+        "sortNo": 7,
+        "subTitle": "因不同基金赎回到账时间不同，具体请以页面显示的赎回到账时间为准。具体查看路径：京东金融App，点击【总资产-基金-交易记录】",
+        "title": "基金赎回到账时间？"
+      },
+      {
+        "sortNo": 8,
+        "subTitle": "您可以通过基金持仓页中交易明细，然后选择您要申请撤单的基金交易，进入订单详情页面，如果页面有【撤单】的选项，点击【撤单】，根据页面提示操作。",
+        "title": "基金如何进行撤单？"
+      },
+      {
+        "sortNo": 9,
+        "subTitle": "根据公募基金相关规定，基金持有不满7天，卖出将收取不低于1.5%的赎回费，具体以基金公司反馈结果为准，一般是按照申购确认日到赎回确认日的前一自然日这个周期来计算的。",
+        "title": "基金卖出手续费怎么计算？"
+      },
+      {
+        "sortNo": 10,
+        "subTitle": "您购买基金时是按金额购买，赎回时是以份额进行赎回，赎回份额X净值才是您最终赎回的金额，如果无法点击赎回按钮，可能由于产品处于封闭期或还未进行确认。",
+        "title": "基金怎么赎回（卖出）？"
+      },
+      {
+        "sortNo": 11,
+        "subTitle": "确认由基金公司进行，您在买入后耐心等待即可。一般情况下T日15:00前申请买入的基金，会在T+1日24点前进行确认（部分产品也可能是T+2日确认，具体以对应基金交易规则为准）。",
+        "title": "基金买入后何时进行确认？"
+      }
+    ]
+  },
+  "performanceOfItem": {
+    "historyNvOrProfitMap": {
+      "disclosureType": 1,
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=4"
+      },
+      "historyNvOrProfitList": [
+        {
+          "date": "2025-09-11",
+          "netValue": "1.6630",
+          "dailyProfit": "0.31",
+          "totalNetValue": "1.9430"
+        },
+        {
+          "date": "2025-09-10",
+          "netValue": "1.6579",
+          "dailyProfit": "-0.16",
+          "totalNetValue": "1.9379"
+        },
+        {
+          "date": "2025-09-09",
+          "netValue": "1.6606",
+          "dailyProfit": "0.41",
+          "totalNetValue": "1.9406"
+        },
+        {
+          "date": "2025-09-08",
+          "netValue": "1.6538",
+          "dailyProfit": "0.10",
+          "totalNetValue": "1.9338"
+        },
+        {
+          "date": "2025-09-05",
+          "netValue": "1.6522",
+          "dailyProfit": "-0.45",
+          "totalNetValue": "1.9322"
+        },
+        {
+          "date": "2025-09-04",
+          "netValue": "1.6597",
+          "dailyProfit": "0.22",
+          "totalNetValue": "1.9397"
+        },
+        {
+          "date": "2025-09-03",
+          "netValue": "1.6610",
+          "dailyProfit": "-1.05",
+          "totalNetValue": "1.9360"
+        },
+        {
+          "date": "2025-09-02",
+          "netValue": "1.6786",
+          "dailyProfit": "0.81",
+          "totalNetValue": "1.9536"
+        },
+        {
+          "date": "2025-09-01",
+          "netValue": "1.6651",
+          "dailyProfit": "-0.14",
+          "totalNetValue": "1.9401"
+        },
+        {
+          "date": "2025-08-29",
+          "netValue": "1.6674",
+          "dailyProfit": "-0.42",
+          "totalNetValue": "1.9424"
+        },
+        {
+          "date": "2025-08-28",
+          "netValue": "1.6745",
+          "dailyProfit": "0.16",
+          "totalNetValue": "1.9495"
+        },
+        {
+          "date": "2025-08-27",
+          "netValue": "1.6718",
+          "dailyProfit": "-1.68",
+          "totalNetValue": "1.9468"
+        },
+        {
+          "date": "2025-08-26",
+          "netValue": "1.7003",
+          "dailyProfit": "-0.21",
+          "totalNetValue": "1.9753"
+        },
+        {
+          "date": "2025-08-25",
+          "netValue": "1.7038",
+          "dailyProfit": "0.81",
+          "totalNetValue": "1.9788"
+        },
+        {
+          "date": "2025-08-22",
+          "netValue": "1.6901",
+          "dailyProfit": "-0.31",
+          "totalNetValue": "1.9651"
+        },
+        {
+          "date": "2025-08-21",
+          "netValue": "1.6953",
+          "dailyProfit": "0.49",
+          "totalNetValue": "1.9703"
+        },
+        {
+          "date": "2025-08-20",
+          "netValue": "1.6871",
+          "dailyProfit": "0.72",
+          "totalNetValue": "1.9621"
+        },
+        {
+          "date": "2025-08-19",
+          "netValue": "1.6750",
+          "dailyProfit": "0.05",
+          "totalNetValue": "1.9500"
+        },
+        {
+          "date": "2025-08-18",
+          "netValue": "1.6742",
+          "dailyProfit": "0.26",
+          "totalNetValue": "1.9492"
+        },
+        {
+          "date": "2025-08-15",
+          "netValue": "1.6698",
+          "dailyProfit": "-0.28",
+          "totalNetValue": "1.9448"
+        }
+      ],
+      "titleMap": {
+        "netValueRowName": "单位净值",
+        "totalNetValueRowName": "累计净值",
+        "dateRowName": "日期",
+        "dailyRateRowRate": "日涨跌幅"
+      }
+    },
+    "secondCategoryCode": "1102",
+    "aipPerformanceMap": {
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://prodev.m.jd.com/jdjr/active/1VWJwowHKkyjNfDzseo4EkG5mYQ/index.html"
+      },
+      "moreButton": "了解定投",
+      "countJumpData": {
+        "jumpType": 8,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundcast/castCounter/?fundCode=007467"
+      },
+      "existPerformanceData": true,
+      "aipPerformanceList": [
+        {
+          "zhRate": "--",
+          "name": "近1年",
+          "ptRate": "5.28"
+        },
+        {
+          "zhRate": "--",
+          "name": "近2年",
+          "ptRate": "11.75"
+        },
+        {
+          "zhRate": "--",
+          "name": "近3年",
+          "ptRate": "18.06"
+        },
+        {
+          "zhRate": "--",
+          "name": "近5年",
+          "ptRate": "31.00"
+        }
+      ],
+      "titleMap": {
+        "ptAip": "普通定投",
+        "nameRowName": "周期"
+      },
+      "moreDesc": "按照每月1号定投进行计算"
+    },
+    "yearPerformanceMap": {
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=1"
+      },
+      "titleMap": {
+        "avgRowName": "同类均值",
+        "rankRowName": "同类排名",
+        "yearRowName": "年度",
+        "rateRowName": "回报率",
+        "rankRowMsg": "平台采用最新的同类排行，在原有一级分类基础上按照资产维度向下细分，用更加科学的方法在同一维度进行对比。如：混合型-偏股、混合型-偏债。"
+      },
+      "yearPerformanceList": [
+        {
+          "year": "2024年",
+          "rate": "20.76"
+        },
+        {
+          "avg": "-8.09",
+          "year": "2023年",
+          "rate": "10.44",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/peerFund/?fundCode=007467&secondCategoryCode=1102"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "104/2654"
+        },
+        {
+          "avg": "-17.16",
+          "year": "2022年",
+          "rate": "2.47",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/peerFund/?fundCode=007467&secondCategoryCode=1102"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "69/2208"
+        },
+        {
+          "avg": "5.22",
+          "year": "2021年",
+          "rate": "17.80",
+          "jumpData": {
+            "textColour": "#FF4144",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/peerFund/?fundCode=007467&secondCategoryCode=1102"
+            },
+            "level": "1",
+            "text": "优秀"
+          },
+          "rank": "285/1825"
+        },
+        {
+          "avg": "31.23",
+          "year": "2020年",
+          "rate": "8.87",
+          "jumpData": {
+            "textColour": "#999999",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/peerFund/?fundCode=007467&secondCategoryCode=1102"
+            },
+            "level": "4",
+            "text": "靠后"
+          },
+          "rank": "1050/1330"
+        },
+        {
+          "avg": "30.02",
+          "year": "2019年",
+          "rank": "--/905"
+        }
+      ]
+    },
+    "historyPerformanceMap": {
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=0"
+      },
+      "historyPerformanceList": [
+        {
+          "avg": "5.16",
+          "rate": "0.20",
+          "name": "近1周",
+          "jumpData": {
+            "textColour": "#999999",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=-2&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "4",
+            "text": "靠后"
+          },
+          "rank": "4219/4311"
+        },
+        {
+          "avg": "11.38",
+          "rate": "-0.55",
+          "name": "近1月",
+          "jumpData": {
+            "textColour": "#999999",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=1&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "4",
+            "text": "靠后"
+          },
+          "rank": "4054/4241"
+        },
+        {
+          "avg": "22.12",
+          "rate": "1.41",
+          "name": "近3月",
+          "jumpData": {
+            "textColour": "#999999",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=3&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "4",
+            "text": "靠后"
+          },
+          "rank": "3923/3992"
+        },
+        {
+          "avg": "19.16",
+          "rate": "8.59",
+          "name": "近6月",
+          "jumpData": {
+            "textColour": "#999999",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=6&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "4",
+            "text": "靠后"
+          },
+          "rank": "3072/3604"
+        },
+        {
+          "avg": "59.80",
+          "rate": "23.73",
+          "name": "近1年",
+          "jumpData": {
+            "textColour": "#999999",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=12&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "4",
+            "text": "靠后"
+          },
+          "rank": "2832/3009"
+        },
+        {
+          "avg": "24.25",
+          "rate": "5.49",
+          "name": "今年以来",
+          "jumpData": {
+            "textColour": "#999999",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=0&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "4",
+            "text": "靠后"
+          },
+          "rank": "3873/4311"
+        },
+        {
+          "avg": "20.40",
+          "rate": "29.00",
+          "name": "近3年",
+          "jumpData": {
+            "textColour": "#D17A36",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=36&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "2",
+            "text": "良好"
+          },
+          "rank": "569/1862"
+        },
+        {
+          "avg": "87.32",
+          "rate": "98.45",
+          "name": "成立以来",
+          "jumpData": {
+            "textColour": "#D17A36",
+            "rankJump": {
+              "jumpType": 2,
+              "jumpUrl": "https://roma.jd.com/fund/product/list?jrcontainer=h5&romaFileName=pageFundList&jrlogin=false&fundCode=007467&itemId=-1&paramMap=%7B%22filterBlocks%22%3A%5B%7B%22filterId%22%3A%22second_category_code%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221113%22%2C%22filterItems%22%3A%5B%7B%22filterId%22%3A%221102%22%7D%5D%7D%5D%2C%22filterType%22%3A%221%22%7D%5D%7D"
+            },
+            "level": "2",
+            "text": "良好"
+          },
+          "rank": "196/606"
+        }
+      ],
+      "titleMap": {
+        "avgRowName": "同类均值",
+        "rankRowName": "同类排名",
+        "nameRowName": "日期",
+        "rateRowName": "涨跌幅",
+        "rankRowMsg": "平台采用最新的同类排行，在原有一级分类基础上按照资产维度向下细分，用更加科学的方法在同一维度进行对比。如：混合型-偏股、混合型-偏债。"
+      }
+    }
+  },
+  "fundDiagnosisOfItem": {
+    "codeDesc": "近3年",
+    "code": 5,
+    "jumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/fund/funddiagnosis/index/?itemId=111934"
+    },
+    "dataCycleList": [
+      {
+        "dataCycle": "12",
+        "default": false,
+        "dataCycleMess": "近1年"
+      },
+      {
+        "dataCycle": "36",
+        "default": true,
+        "dataCycleMess": "近3年"
+      }
+    ],
+    "fundDiagnosisData": {
+      "tab3": {
+        "valueMsg": "强",
+        "subTitle": "最大回撤",
+        "iMsg": "最大回撤代表特定时间内基金从净值最高点到最低点的幅度，用于描述投资者在一段时间内的最大亏损，数值越小越好",
+        "title": "抗下跌能力",
+        "value": "12.89",
+        "overSameTypePercent": 98
+      },
+      "tab4": {
+        "valueMsg": "强",
+        "subTitle": "波动率",
+        "iMsg": "统计所选区间内，基金收益的波动情况，数值越小越好",
+        "title": "抗波动能力",
+        "value": "14.33",
+        "overSameTypePercent": 98
+      },
+      "tab1": {
+        "valueMsg": "高",
+        "subTitle": "持有1年超跟踪指数收益率",
+        "iMsg": "统计所选区间内，任意时点买入该基金并持有1年，获得超越跟踪指数的平均收益率",
+        "type": "2",
+        "title": "超额收益能力",
+        "value": "3.58",
+        "overSameTypePercent": 85
+      },
+      "tab2": {
+        "valueMsg": "较高",
+        "subTitle": "信息比率",
+        "iMsg": "统计所选区间内，指数基金每承受一单位跟踪误差，可获得的超额收益，数值越大越好",
+        "type": "2",
+        "title": "跟踪误差性价比",
+        "value": "1.72",
+        "overSameTypePercent": 73
+      }
+    }
+  },
+  "noticeOfItem": {},
+  "bottomButtonOfItem": {
+    "aipButton": {
+      "disable": false,
+      "jumpData": {
+        "jumpType": 8,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundcast/index/?skuId=111934"
+      },
+      "text": "定投"
+    },
+    "fundPurchaseType": "1",
+    "customerButton": {
+      "pictureUrl": "https://img11.360buyimg.com/img/jfs/t1/282927/22/28586/2812/681b4eeeFb1c96853/bce00d2e6eb6c55f.png",
+      "jumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://sbq.jd.com/digitalhuman/flow?&fundCode=007467"
+      },
+      "text": "AI小贝"
+    },
+    "buttonTips": {
+      "rightDescJumpData": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=007467",
+      "hasAdditionCharge": "0",
+      "leftDescHoldCard": "买入费率 <span>0%</span>",
+      "leftDescNew": "买入费率 <span>0.00%</span>",
+      "rightDescNew": "购买起点：1.00元"
+    },
+    "bottomButtonList": [
+      {
+        "pictureUrl": "https://img11.360buyimg.com/img/jfs/t1/282927/22/28586/2812/681b4eeeFb1c96853/bce00d2e6eb6c55f.png",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://sbq.jd.com/digitalhuman/flow?&fundCode=007467"
+        },
+        "text": "AI小贝"
+      },
+      {
+        "showTip": false,
+        "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/318930/14/22336/428/68934d5cF64d7f1a9/a97a1d3c336883bf.png",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://content.jr.jd.com/jrq/#/group?id=2671421"
+        },
+        "text": "圈子"
+      },
+      {
+        "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/323895/38/892/1063/68907371F4af80ebe/edc46b897c36c716.png",
+        "jumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://mse.jd.com/fund/fund-compare/pick?defaultFund=007467"
+        },
+        "text": "对比"
+      }
+    ],
+    "pkButton": {
+      "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/323895/38/892/1063/68907371F4af80ebe/edc46b897c36c716.png",
+      "jumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://mse.jd.com/fund/fund-compare/pick?defaultFund=007467"
+      },
+      "text": "对比"
+    },
+    "bbsButton": {
+      "showTip": false,
+      "pictureUrl": "https://img13.360buyimg.com/img/jfs/t1/318930/14/22336/428/68934d5cF64d7f1a9/a97a1d3c336883bf.png",
+      "jumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://content.jr.jd.com/jrq/#/group?id=2671421"
+      },
+      "text": "圈子"
+    },
+    "purchaseButton": {
+      "disable": false,
+      "jumpData": {
+        "jumpType": 8,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/fundtrade/index/?source=app&itemId=111934&version=3"
+      },
+      "text": "买入"
+    }
+  },
+  "investmentDistributionNewOfItem": {
+    "investmentDistribution": {
+      "quarterlyReportUrl": "https://mse.jd.com/business/financialReport/home/?fundCode=007467&reportDate=2025&type=2",
+      "totalAsset": 9330980341.02,
+      "proportionList": [
+        {
+          "fundValue": "90.65",
+          "name": "基金",
+          "similarFundValue": "93.73"
+        },
+        {
+          "fundValue": "9.28",
+          "name": "现金",
+          "similarFundValue": "5.80"
+        },
+        {
+          "fundValue": "0.07",
+          "name": "其他",
+          "similarFundValue": "0.25"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "股票",
+          "similarFundValue": "82.17"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "债券",
+          "similarFundValue": "2.26"
+        }
+      ],
+      "investDate": "2025-06-30",
+      "ratioChangeList": [
+        {
+          "fundValue": "0.00",
+          "name": "股票",
+          "similarFundValue": "0.75"
+        },
+        {
+          "fundValue": "0.00",
+          "name": "债券",
+          "similarFundValue": "0.24"
+        },
+        {
+          "fundValue": "-3.21",
+          "name": "基金",
+          "similarFundValue": "0.04"
+        },
+        {
+          "fundValue": "2.88",
+          "name": "现金",
+          "similarFundValue": "0.82"
+        },
+        {
+          "fundValue": "0.07",
+          "name": "其他",
+          "similarFundValue": "0.09"
+        }
+      ],
+      "invest": [
+        {
+          "name": "基金",
+          "value": "90.65"
+        },
+        {
+          "name": "现金",
+          "value": "9.28"
+        },
+        {
+          "name": "其他",
+          "value": "0.07"
+        }
+      ],
+      "investTitle": "净资产",
+      "moreJumpData": {
+        "jumpType": 2,
+        "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=3&itemId=111934&fundCode=007467"
+      },
+      "isETF": true,
+      "fundNavRatio": "前1大占比90.65%",
+      "fund": [
+        {
+          "navRatio": "90.65",
+          "isUpChange": false,
+          "frontendProductName": "权益型",
+          "marketValue": 8458625202.69,
+          "holdingFundCode": "512890",
+          "holdingSharesChange": "3.21%",
+          "positionQuarters": "重仓24个季度",
+          "holdingVolume": "0.00",
+          "newestPrize": "1.19",
+          "stockJumpData": {
+            "p": "SH-512890",
+            "t": "gos"
+          },
+          "fundCode": "007467",
+          "rate": "0.34%",
+          "holdingFundName": "红利低波",
+          "jrJumpData": {
+            "jumpType": "",
+            "productId": "",
+            "schemeUrl": "openjdjrapp://com.jd.jrapp/stock/jump?jrlogin=false&jrcontainer=native&jrparam=%7B%22extJson%22%3A%22%7B%5C%22t%5C%22%3A%5C%22gos%5C%22%2C%5C%22p%5C%22%3A%5C%22SH-512890%5C%22%7D%22%7D",
+            "jumpUrl": ""
+          }
+        }
+      ],
+      "indexShowInvest": "fund",
+      "reportQuarter": "第二季度",
+      "fundDistribution": [
+        {
+          "name": "权益型",
+          "value": "90.65"
+        }
+      ],
+      "reportDateList": [
+        "2025#2",
+        "2025#1",
+        "2024#4",
+        "2024#3",
+        "2024#2",
+        "2024#1",
+        "2023#4",
+        "2023#3",
+        "2023#2",
+        "2023#1",
+        "2022#4",
+        "2022#3",
+        "2022#2",
+        "2022#1",
+        "2021#4",
+        "2021#3",
+        "2021#2",
+        "2021#1",
+        "2020#4",
+        "2020#3",
+        "2020#2",
+        "2020#1",
+        "2019#4",
+        "2019#3"
+      ]
+    }
+  },
+  "headerOfItem": {
+    "disclosureType": 1,
+    "riskLevel": 3,
+    "lockOrCloseTipsMap": {},
+    "navDate": "2025-09-11",
+    "themeNameList": [],
+    "morningstarRating": "5",
+    "currentDatetime": 1757636172663,
+    "fundType": 207,
+    "itemId": "111934",
+    "highlights": {
+      "tagList": [
+        "连续3年跑赢大盘",
+        "业绩稳定低波动",
+        "连续3年跑赢赛道",
+        "屡创新高",
+        "正收益概率高",
+        "抗下跌能力强",
+        "净值修复速度快",
+        "投资性价比高",
+        "收益回撤比高",
+        "长期绩优",
+        "基金规模大"
+      ],
+      "morningstarRating": "5"
+    },
+    "fundCode": "007467",
+    "fundTypeName": "指数型-股票",
+    "userFocus": [
+      {
+        "title": "超1万人自选"
+      },
+      {
+        "title": "本周超1千人购买"
+      },
+      {
+        "title": "本月超2千人购买"
+      },
+      {
+        "title": "本周超3千人浏览"
+      },
+      {
+        "title": "本月超7千人浏览"
+      }
+    ],
+    "fundName": "华泰柏瑞中证红利低波ETF联接C",
+    "quotationsMap": [
+      {
+        "name": "近1年涨跌幅",
+        "type": "singleYearRate",
+        "value": "23.73"
+      },
+      {
+        "name": "日涨跌幅",
+        "type": "dailyRate",
+        "value": "0.31"
+      },
+      {
+        "name": "净值(09-11)",
+        "type": "nav",
+        "value": "1.6630"
+      }
+    ],
+    "starSelectedFlag": false
+  },
+  "commonAttributeNoPin": {
+    "isBrokerage": false,
+    "isNewFund": false
+  },
+  "fundManagerOfItem": {
+    "moreJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=2&fundCode=007467&itemId=111934"
+    },
+    "managerInfoList": [
+      {
+        "yearPerformance": "4.68",
+        "employPerformance": "98.45",
+        "managerDetailJumpData": {
+          "jumpType": 2,
+          "jumpUrl": "https://lc.jr.jd.com/finance/fund/funddetail/newmanager-detail/?managerId=3101001204"
+        },
+        "managerPicUrl": "https://s3.jdpay.com/fundmanagerphoto/3/2025/01/20/711653552174.JPG",
+        "employmentDate": "16年100天",
+        "accessionDateDesc": "2019.07.15-至今",
+        "managerName": "柳军",
+        "accessionDate": "6年59天",
+        "manageScale": "4669.84亿元",
+        "awardBackgroundUrl": "https://img30.360buyimg.com/jr_image/jfs/t1/180358/3/2549/38207/60935d87E1faf6981/6195098ba4427579.png",
+        "awardList": [
+          {
+            "awardDetailInfoList": [
+              {
+                "fundCode": "510880",
+                "fundAwardList": [
+                  {
+                    "appraisalOrg": "中国证券报",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2009",
+                        "awardName": "开放式指数型金牛基金"
+                      }
+                    ],
+                    "awardTypeName": "金牛奖"
+                  },
+                  {
+                    "appraisalOrg": "上海证券报社",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2011",
+                        "awardName": "指数型基金一年期奖"
+                      },
+                      {
+                        "awardYear": "2011",
+                        "awardName": "金基金·指数基金奖"
+                      },
+                      {
+                        "awardYear": "2010",
+                        "awardName": "指数型基金一年期奖"
+                      },
+                      {
+                        "awardYear": "2009",
+                        "awardName": "指数型基金一年期奖"
+                      }
+                    ],
+                    "awardTypeName": "金基金奖"
+                  }
+                ],
+                "fundName": "上证红利ETF"
+              },
+              {
+                "fundCode": "510300",
+                "fundAwardList": [
+                  {
+                    "appraisalOrg": "中国证券报",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2022",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2021",
+                        "awardName": "三年期开放式指数型持续优胜金牛基金"
+                      },
+                      {
+                        "awardYear": "2020",
+                        "awardName": "三年期开放式指数型持续优胜金牛基金"
+                      },
+                      {
+                        "awardYear": "2019",
+                        "awardName": "三年期开放式指数型持续优胜金牛基金"
+                      },
+                      {
+                        "awardYear": "2018",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2017",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2016",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2015",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2013",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2013",
+                        "awardName": "2013年度指数型金牛基金"
+                      }
+                    ],
+                    "awardTypeName": "金牛奖"
+                  },
+                  {
+                    "appraisalOrg": "上海证券报社",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2022",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2021",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2019",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2018",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2017",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2016",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2015",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2014",
+                        "awardName": "指数型基金一年期奖"
+                      },
+                      {
+                        "awardYear": "2014",
+                        "awardName": "一年期指数型金基金奖"
+                      },
+                      {
+                        "awardYear": "2013",
+                        "awardName": "指数型基金一年期奖"
+                      }
+                    ],
+                    "awardTypeName": "金基金奖"
+                  }
+                ],
+                "fundName": "华泰柏瑞沪深300交易型开放式指数证券投资基金"
+              }
+            ],
+            "awardTypeName": "金牛奖",
+            "awardTotalNum": 11,
+            "awardPhotoUrl": "https://img30.360buyimg.com/jr_image/jfs/t1/181925/15/2482/95029/60935ccdEed2998c2/23aa0d37d2a4ac73.png"
+          },
+          {
+            "awardDetailInfoList": [
+              {
+                "fundCode": "510880",
+                "fundAwardList": [
+                  {
+                    "appraisalOrg": "中国证券报",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2009",
+                        "awardName": "开放式指数型金牛基金"
+                      }
+                    ],
+                    "awardTypeName": "金牛奖"
+                  },
+                  {
+                    "appraisalOrg": "上海证券报社",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2011",
+                        "awardName": "指数型基金一年期奖"
+                      },
+                      {
+                        "awardYear": "2011",
+                        "awardName": "金基金·指数基金奖"
+                      },
+                      {
+                        "awardYear": "2010",
+                        "awardName": "指数型基金一年期奖"
+                      },
+                      {
+                        "awardYear": "2009",
+                        "awardName": "指数型基金一年期奖"
+                      }
+                    ],
+                    "awardTypeName": "金基金奖"
+                  }
+                ],
+                "fundName": "上证红利ETF"
+              },
+              {
+                "fundCode": "510300",
+                "fundAwardList": [
+                  {
+                    "appraisalOrg": "中国证券报",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2022",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2021",
+                        "awardName": "三年期开放式指数型持续优胜金牛基金"
+                      },
+                      {
+                        "awardYear": "2020",
+                        "awardName": "三年期开放式指数型持续优胜金牛基金"
+                      },
+                      {
+                        "awardYear": "2019",
+                        "awardName": "三年期开放式指数型持续优胜金牛基金"
+                      },
+                      {
+                        "awardYear": "2018",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2017",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2016",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2015",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2013",
+                        "awardName": "开放式指数型金牛基金"
+                      },
+                      {
+                        "awardYear": "2013",
+                        "awardName": "2013年度指数型金牛基金"
+                      }
+                    ],
+                    "awardTypeName": "金牛奖"
+                  },
+                  {
+                    "appraisalOrg": "上海证券报社",
+                    "yearAwardList": [
+                      {
+                        "awardYear": "2022",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2021",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2019",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2018",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2017",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2016",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2015",
+                        "awardName": "指数型基金三年期奖"
+                      },
+                      {
+                        "awardYear": "2014",
+                        "awardName": "指数型基金一年期奖"
+                      },
+                      {
+                        "awardYear": "2014",
+                        "awardName": "一年期指数型金基金奖"
+                      },
+                      {
+                        "awardYear": "2013",
+                        "awardName": "指数型基金一年期奖"
+                      }
+                    ],
+                    "awardTypeName": "金基金奖"
+                  }
+                ],
+                "fundName": "华泰柏瑞沪深300交易型开放式指数证券投资基金"
+              }
+            ],
+            "awardTypeName": "金基金奖",
+            "awardTotalNum": 14,
+            "awardPhotoUrl": "https://img30.360buyimg.com/jr_image/jfs/t1/182316/30/2465/89511/60935cfcE4513b055/82180dbf3bb0cb85.png"
+          }
+        ]
+      }
+    ]
+  },
+  "fundProfileOfItem": {
+    "establishedDate": "2019-07-15",
+    "companyManageScale": "7096.35亿",
+    "instPurchaseRatio": 9.88,
+    "establishedDateByCn": "2019年07月15日",
+    "fundScaleText": "基金规模56.89亿",
+    "totalShares": "总份额34.05亿",
+    "fundScaleChange": "较上季度增加25.99亿",
+    "moreJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=0&itemId=111934&fundCode=007467"
+    },
+    "fundScaleJumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/fund/latestdetail/fundArchives/?activeIndex=1&itemId=111934&fundCode=007467"
+    },
+    "purchaseRatio": 90.12,
+    "company_name": "华泰柏瑞基金管理有限公司",
+    "fundScale": "56.89亿元",
+    "manageNumber": 179,
+    "fundScaleList": [
+      "19.75",
+      "24.68",
+      "30.9",
+      "56.89"
+    ],
+    "establishedDateText": "已成立6年59天"
+  },
+  "purchaseProcessOfItem": {
+    "purcheseDescribeList": [],
+    "processList": [
+      {
+        "title": "买入",
+        "info": "09-12 15:00前"
+      },
+      {
+        "title": "确认份额",
+        "info": "09-15"
+      },
+      {
+        "title": "查看盈亏",
+        "info": "09-15净值更新后"
+      }
+    ],
+    "jumpData": {
+      "jumpType": 2,
+      "jumpUrl": "https://lc.jr.jd.com/finance/funddetail/rules/?fundCode=007467"
+    }
+  },
+  "sharesAndIndexOfItem": {}
+}
