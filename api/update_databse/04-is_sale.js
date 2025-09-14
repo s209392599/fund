@@ -88,7 +88,198 @@ async function queryDatabase() {
         let datas = resultData.datas || {};
 
         var isForSale = datas.isForSale || false; // 是否可买
-        console.log('isForSale', `${item.fund_code} - ${item.fund_name} - ${isForSale}`);
+
+
+        if(isForSale){
+          /**
+           * 头部标签区
+           */
+          var header_highlights = '';// 特色亮点   注意007467的晨星5星评级  headerOfItem.highlights.tagList  highlights.morningstarRating
+          var header_userFocus = '';// 用户关注  headerOfItem.tagList
+          var header_themeNameList = '';// 投资方向  headerOfItem.
+          // 下面的注意下 rankList 这个字段，难道还有多个的？
+          var header_wealthRank = '';// 榜单  headerOfItem.wealthRank  参考基金002112--领涨先锋 · 第1名 008327--领涨先锋 · 第10名
+
+          var headerOfItem = datas.headerOfItem || {};
+          var highlights = headerOfItem.highlights || {};
+          var tagList = highlights.tagList || [];
+
+
+          // 设想：下面的合并为一个字段，京东返回啥就写啥，然后在前端自己解析？ 坏处就是传输的时候量大了一些
+
+          /**
+           * 更新历史业绩
+           */
+          var zhang_zhou = '';// 周涨幅
+          var zhang_yue_1 = '';// 月涨幅
+          var zhang_yue_3 = '';// 3月涨幅
+          var zhang_yue_6 = '';// 6月涨幅
+          var zhang_nian_1 = '';// 1年涨幅
+          var zhang_nian_3 = '';// 3年涨幅
+          // var zhang_nian_5 = '';// 5年涨幅
+          var zhang_jin_nian = '';// 今年以来
+          var zhang_cheng_li = '';// 成立以来
+
+          var tong_zhou = '';// 同类-周排名
+          var tong_yue_1 = '';// 同类-月排名
+          var tong_yue_3 = '';// 同类-3月排名
+          var tong_yue_6 = '';// 同类-6月排名
+          var tong_nian_1 = '';// 同类-1年排名
+          var tong_nian_3 = '';// 同类-3年排名
+          // var tong_nian_5 = '';// 同类-5年排名
+          var tong_jin_nian = '';// 同类-今年以来
+          var tong_cheng_li = '';// 同类-成立以来
+
+          var rank_zhou = '';// 周排名
+          var rank_yue_1 = '';// 月排名
+          var rank_yue_3 = '';// 3月排名
+          var rank_yue_6 = '';// 6月排名
+          var rank_nian_1 = '';// 1年排名
+          var rank_nian_3 = '';// 3年排名
+          // var rank_nian_5 = '';// 5年排名
+          var rank_jin_nian = '';// 今年以来
+          var rank_cheng_li = '';// 成立以来
+
+          var performanceOfItem = datas.performanceOfItem || {};
+          var historyPerformanceMap = performanceOfItem.historyPerformanceMap || {};
+          var historyPerformanceList = historyPerformanceMap.historyPerformanceList || [];
+          historyPerformanceList.forEach((item,index) => {
+            if(item.name === '近1周'){
+              zhang_zhou = item.rate || '';
+              tong_zhou = item.avg || '';
+              rank_zhou = item.rank_zhou || '';
+            }else if(item.name === '近1月'){
+              zhang_yue_1 = item.rate || '';
+              tong_yue_1 = item.avg || '';
+              rank_yue_1 = item.rank_zhou || '';
+            }else if(item.name === '近3月'){
+              zhang_yue_3 = item.rate || '';
+              tong_yue_3 = item.avg || '';
+              rank_yue_3 = item.rank_zhou || '';
+            }else if(item.name === '近6月'){
+              zhang_yue_6 = item.rate || '';
+              tong_yue_6 = item.avg || '';
+              rank_yue_6 = item.rank_zhou || '';
+            }else if(item.name === '近1年'){
+              zhang_nian_1 = item.rate || '';
+              tong_nian_1 = item.avg || '';
+              rank_nian_1 = item.rank_zhou || '';
+            }else if(item.name === '今年以来'){
+              zhang_jin_nian = item.rate || '';
+              tong_jin_nian = item.avg || '';
+              rank_jin_nian = item.rank_zhou || '';
+            }else if(item.name === '近3年'){
+              zhang_nian_3 = item.rate || '';
+              tong_nian_3 = item.avg || '';
+              rank_nian_3 = item.rank_zhou || '';
+            }else if(item.name === '成立以来'){
+              zhang_cheng_li = item.rate || '';
+              tong_cheng_li = item.avg || '';
+              rank_cheng_li = item.rank_zhou || '';
+            }
+          })
+
+
+          /**
+           * 基金综合诊断
+           */
+          var fundDiagnosisOfItem = datas.fundDiagnosisOfItem || {};
+          var fundDiagnosisData = fundDiagnosisOfItem.fundDiagnosisData || {};
+          var diagnosis_tab1 = fundDiagnosisData.tab1 || {};
+          var diagnosis_tab2 = fundDiagnosisData.tab2 || {};
+          var diagnosis_tab3 = fundDiagnosisData.tab3 || {};
+          var diagnosis_tab4 = fundDiagnosisData.tab4 || {};
+
+          var diagnosis_num_1 = '' + diagnosis_tab1.overSameTypePercent || '';// 收益能力
+          var diagnosis_num_2 = '' + diagnosis_tab2.overSameTypePercent || '';// 投资性价比
+          var diagnosis_num_3 = '' + diagnosis_tab3.overSameTypePercent || '';// 抗下跌能力
+          var diagnosis_num_4 = '' + diagnosis_tab4.overSameTypePercent || '';// 抗波动能力
+          
+
+          /**
+           * 基金持仓
+           */
+          var investmentDistributionNewOfItem = datas.investmentDistributionNewOfItem || {};
+          var investmentDistribution = investmentDistributionNewOfItem.investmentDistribution || {};
+          var proportionList = investmentDistribution.proportionList || [];
+          var obj_2 = {
+            '股票':'-',
+            '债券':'-',
+            '现金':'-',
+            '基金':'-',
+            '其他':'-',
+          };
+          for(let i = 0;i < proportionList.length;i++){
+            let item = proportionList[i];
+            if(item.name === '股票'){
+              obj_2['股票'] = item.fundValue || '-';
+            }else if(item.name === '债券'){
+              obj_2['债券'] = item.fundValue || '-';
+            }else if(item.name === '现金'){
+              obj_2['现金'] = item.fundValue || '-';
+            }else if(item.name === '基金'){
+              obj_2['基金'] = item.fundValue || '-';
+            }else if(item.name === '其他'){
+              obj_2['其他'] = item.fundValue || '-';
+            }
+          }
+          var proportion = `${obj_2['股票']}|${obj_2['债券']}|${obj_2['现金']}|${obj_2['基金']}|${obj_2['其他']}`;// 持仓比例
+          var totalAsset = '' + investmentDistribution.totalAsset || '-';
+
+          var chi_stock = '';// 股票(018561中信)
+          var chi_bond = '';// 债券(007540华子)
+          var chi_fund = '';// 对应ETF等(比如007467)
+          if(investmentDistribution.hasOwnProperty('stock')){
+            var stock_list = investmentDistribution.stock || [];
+          }
+          if(investmentDistribution.hasOwnProperty('bond')){
+
+          }
+          if(investmentDistribution.hasOwnProperty('fund')){
+
+          }
+
+
+          /**
+           * 基金档案
+           */
+          // 持仓规模 持有人结构 
+
+          /**
+           * 基金经理
+           */
+
+          /**
+           * 基金公司
+           */
+
+          /**
+           * 交易规则
+           */
+
+
+          // 锁定期限 锁定原因  有些基金，不需要更新那么多；或者某一类的；
+          // 数据更新日期也要写上
+          // 获取中金公司的
+
+          /*
+          release_date 解锁日期
+          reason_lockout 锁定原因 
+      
+          */
+
+          
+          // fundDiagnosisOfItem.fundDiagnosisData  收益能力 夏普比率 最大回撤 波动率
+        }else{
+          // 京东金融上不可买
+          const updateQuery = 'UPDATE fund SET no_sale = ? WHERE fund_code = ?';
+          try {
+            await connection.query(updateQuery, ['y', item.fund_code]);
+            console.log(`成功更新: ${item.fund_code} - ${item.fund_name}`);
+          } catch (error) {
+            console.error(`更新失败: ${item.fund_code}, 原因:`, error.message);
+          }
+        }
 
         /** 
          * 回撤修复

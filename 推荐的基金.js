@@ -17,6 +17,9 @@ https://fund.eastmoney.com/008327.html
 
 管理后台的直接换个项目来做，单独去部署，包括公共基金维护
 接口的数据统计，哪个邮箱 什么ip，访问的什么接口，什么请求参数
+
+下面的特色榜单之类的，要不要每天做个邮件通知？ 还是群通知？
+https://channel.jr.jd.com/data-ranking/home/?jrcontainer=h5&jrlogin=false&channel=bd_rank_rebound_leader 
 */
 
 
