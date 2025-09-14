@@ -37,7 +37,7 @@ async function queryDatabase() {
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
-        setTimeout(() => reject(new Error('数据库查询超时')), 10000)
+        setTimeout(() => reject(new Error('数据库查询超时')), 30 * 1000)
       ), // 查询超时时间（毫秒）
     ]);
 
@@ -80,7 +80,8 @@ async function queryDatabase() {
     while (index < len) {
       let item = results[index];
       if (item.include_no_keyword !== 'y') {
-        console.log(`正在更新${item.fund_code}的${index + 1}/${len}个基金`);
+        console.log('----------------------------');
+        console.log(`正在更新 ${index + 1} /${len} 个基金`);
         
         let u = `reqData={"itemId":"","fundCode":"${item.fund_code}","clientVersion":"","channel":"9"}`;
         let response = await fetch(str_1 + u);
@@ -268,7 +269,7 @@ async function queryDatabase() {
             jd_fund_archive: jd_fund_archive,// 基金档案
             jd_managerInfo: jd_managerInfo,// 基金经理
           };
-          const updateQuery_1 = 'UPDATE fund SET no_fundgz = ? WHERE fund_code = ?';
+          const updateQuery_1 = 'UPDATE fund SET no_sale = ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery_1, [null, item.fund_code]);
             
@@ -302,7 +303,7 @@ async function queryDatabase() {
           // fundDiagnosisOfItem.fundDiagnosisData  收益能力 夏普比率 最大回撤 波动率
         } else {
           // 京东金融上不可买，把这些字段置为 NULL
-          const updateQuery_1 = 'UPDATE fund SET no_fundgz = ? WHERE fund_code = ?';
+          const updateQuery_1 = 'UPDATE fund SET no_sale = ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery_1, ['y', item.fund_code]);
             console.log(`成功更新: ${results[index].fund_code} - ${results[index].fund_name}`);
