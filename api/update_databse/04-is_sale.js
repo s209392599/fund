@@ -33,11 +33,12 @@ async function queryDatabase() {
     connection = await pool.getConnection();
     console.log('数据库连接成功！');
 
-    const query = 'SELECT * FROM fund';
+    var query = `SELECT * FROM fund`;
+    var query = `SELECT * FROM fund WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL;`;
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
-        setTimeout(() => reject(new Error('数据库查询超时')), 30 * 1000)
+        setTimeout(() => reject(new Error('数据库查询超时')), 15 * 1000)
       ), // 查询超时时间（毫秒）
     ]);
 
@@ -74,7 +75,7 @@ async function queryDatabase() {
     });
     console.log(`一共有${arr.length}个基金需要更新`);
 
-    let index = 0;
+    let index = 11417;
     let len = results.length;
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
     while (index < len) {

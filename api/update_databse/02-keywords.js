@@ -45,21 +45,27 @@ async function queryDatabase() {
 
     console.log(`数据库中一共有${results.length}个基金`);
 
-    var arr = [];
+    var arr_1 = [];// 包含关键词的基金
+    var arr_2 = [];// 不包含关键词的基金
     results.forEach((item_1, index_1) => {
       let flag_1 = noText.some((item_2) => item_1.fund_name.includes(item_2));
       let flag_2 = noFundCode.some((item_2) => item_1.fund_code === item_2);
       let flag = flag_1 || flag_2;
       if (flag) {
-        arr.push({
+        arr_1.push({
+          fund_code: item_1.fund_code,
+          fund_name: item_1.fund_name,
+        });
+      } else {
+        arr_2.push({
           fund_code: item_1.fund_code,
           fund_name: item_1.fund_name,
         });
       }
     });
-    console.log(`一共有${arr.length}个基金需要更新`);
-    if(arr.length){
-      await updateFundData(connection, arr);
+    console.log(`一共有${arr_1.length}个基金需要更新`);
+    if (arr_1.length) {
+      await updateFundData(connection, arr_1,arr_2);
     }
   } catch (error) {
     console.error('数据库操作失败:', error.message);
@@ -72,20 +78,33 @@ async function queryDatabase() {
 queryDatabase();
 
 // 更新数据库的函数
-async function updateFundData(connection, data) {
+async function updateFundData(connection, arr_1,arr_2) {
   console.log('开始更新服务器数据~~~');
   const updateQuery = 'UPDATE fund SET include_no_keyword = ? WHERE fund_code = ?';
   const failedItems = [];
 
-  for (const item of data) {
+  for (const item of arr_1) {
     try {
       await connection.query(updateQuery, ['y', item.fund_code]);
       console.log(`成功更新: ${item.fund_code} - ${item.fund_name}`);
     } catch (error) {
       console.error(`更新失败: ${item.fund_code}, 原因:`, error.message);
-      failedItems.push({ 
+      failedItems.push({
         fund_code: item.fund_code,
-        error: error.message 
+        error: error.message
+      });
+    }
+  }
+
+  for (const item of arr_2) {
+    try {
+      await connection.query(updateQuery, ['n', item.fund_code]);
+      console.log(`成功更新: ${item.fund_code} - ${item.fund_name}`);
+    } catch (error) {
+      console.error(`更新失败: ${item.fund_code}, 原因:`, error.message);
+      failedItems.push({
+        fund_code: item.fund_code,
+        error: error.message
       });
     }
   }
