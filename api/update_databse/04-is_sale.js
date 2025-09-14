@@ -21,6 +21,7 @@ const dbConfig = {
   connectionLimit: 10,
   queueLimit: 0,
   connectTimeout: 10000, // 连接超时时间（毫秒）
+  // debug: true // 开启调试模式
 };
 
 // 创建连接池
@@ -34,7 +35,8 @@ async function queryDatabase() {
     console.log('数据库连接成功！');
 
     var query = `SELECT * FROM fund`;
-    var query = `SELECT * FROM fund WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL;`;
+    var query = `SELECT * FROM fund WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL`;
+    
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
