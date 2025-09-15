@@ -6,6 +6,91 @@ const info = reactive({
   tableData: [],// 列表数据
 });
 
+// 转换服务器上的数据为table使用的
+const turnSearchData = (data) => {
+
+}
+/*
+jd_header_tag: jd_header_tag,// 头部标签
+{"rankList":[],"highlights":{"tagList":["基金规模大"],"morningstarRating":"4"},"userFocus":[],"themeNameList":["半导体","机器视觉"]}
+{"rankList":["连续5年跑赢同类 · 第9名"],"highlights":{"tagList":[],"morningstarRating":"2"},"userFocus":[],"themeNameList":["农产品加工","免税店"]}
+
+
+jd_historyPerformance,// 历史业绩
+[{"avg":"2.36","rate":"2.12","name":"近1周","rank":"2495/4881"},
+{"avg":"11.12","rate":"11.20","name":"近1月","rank":"2032/4859"},
+{"avg":"23.08","rate":"28.29","name":"近3月","rank":"1210/4719"},
+{"avg":"22.01","rate":"26.57","name":"近6月","rank":"1236/4609"},
+{"avg":"57.35","rate":"55.06","name":"近1年","rank":"1913/4416"},
+{"avg":"30.09","rate":"29.99","name":"今年以来","rank":"2013/4881"},
+{"avg":"7.60","rate":"-17.99","name":"近3年","rank":"2772/3171"},
+{"avg":"649.70","rate":"145.30","name":"成立以来","rank":"135/162"}]
+
+
+jd_fundDiagnosis,// 综合诊断
+99|29|11|51
+
+
+jd_proportion,// 持仓分类占比
+18.58|83.99|2.99|0.00|0.00
+
+
+jd_totalAsset,// 资产
+35940533.08
+
+
+jd_chi_cang,// 持仓详情(股票占比)
+{
+  "stock":[
+    {"name":"宁德时代","industryName":"电池","ratio":"1.26%"},
+    {"name":"路维光电","industryName":"半导体","ratio":"1.16%"},
+    {"name":"比亚迪","industryName":"汽车整车","ratio":"1.11%"},
+    {"name":"科伦药业","industryName":"化学制药","ratio":"1.10%"},
+    {"name":"中航沈飞","industryName":"军工装备","ratio":"1.06%"},
+    {"name":"永兴材料","industryName":"能源金属","ratio":"0.93%"},
+    {"name":"恺英网络","industryName":"游戏","ratio":"0.92%"},
+    {"name":"潮宏基","industryName":"服装家纺","ratio":"0.81%"},
+    {"name":"芯原股份","industryName":"半导体","ratio":"0.81%"},
+    {"name":"中金黄金","industryName":"贵金属","ratio":"0.81%"}
+  ],
+  "bond":[
+    {"name":"国债2420","industryName":"国债","ratio":"10.82%"},
+    {"name":"19西咸02","industryName":"企业债","ratio":"5.76%"},
+    {"name":"25国债01","industryName":"国债","ratio":"5.03%"},
+    {"name":"兴业转债","industryName":"可转债","ratio":"4.85%"},
+    {"name":"20国债04","industryName":"国债","ratio":"4.15%"}
+  ],
+  "fund":[]
+}
+
+jd_fund_archive,// 基金档案
+{
+  "establishedDateByCn":"2013年04月24日",
+  "company_name":"华富基金管理有限公司",
+  "fundScaleList":["0.37","0.31","0.32","0.33"],
+  "instPurchaseRatio":"29.77",
+  "purchaseRatio":"70.23",
+  "companyManageScale":"978.06亿",
+  "manageNumber":"72"
+}
+
+jd_managerInfo,// 基金经理
+[
+  {
+    "yearPerformance":"3.40",
+    "employPerformance":"13.99",
+    "employmentDate":"2年357天",
+    "accessionDateDesc":"2022.09.23-至今",
+    "managerName":"戴弘毅",
+    "accessionDate":"2年357天",
+    "manageScale":"5.03亿元"
+  }
+]
+
+
+*/
+
+
 const getList = () => {
   if (info.text.trim() === '') {
     info.tableData = [];
@@ -14,6 +99,7 @@ const getList = () => {
   server_fund_mysql_query_keywords({ text: info.text.trim() }).then(res => {
     console.log('关键词搜索', 'res', res);
     if (res.code === 200) {
+      info.tableData = [...res.data.data];
       // // 不以ETF结尾的基金
       // info.tableData = [...res.data].filter(item => !item.name.endsWith('ETF'));
       // info.tableData.push({
@@ -35,6 +121,9 @@ const getList = () => {
     ElMessage.error('获取列表失败');
   });
 };
+
+
+
 const resetForm = () => {
   info.search = '';
   getList();
@@ -42,7 +131,7 @@ const resetForm = () => {
 // 去除A类
 const removeA = () => {
   console.log('去除name最后一个字符是A');
-  info.tableData = info.tableData.filter(item => item.name[item.name.length - 1] !== 'A');
+  info.tableData = info.tableData.filter(item => item.fund_name[item.fund_name.length - 1] !== 'A');
 };
 
 const addFn = () => {
@@ -94,11 +183,16 @@ const getNormalFundAll = () => {
       </el-form>
     </div>
 
+    <div>
+      <span class="">总数量：{{ info.tableData.length }}个</span>
+    </div>
+
     <div class="main_box">
       <el-table :data="info.tableData" border style="width: 100%" height="500">
         <el-table-column fixed label="序" type="index" width="50" />
-        <el-table-column prop="code" label="代码" width="80" />
-        <el-table-column prop="name" label="名称" width="240" show-overflow-tooltip />
+        <el-table-column prop="fund_code" label="基金号" width="80" />
+        <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
+        <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
 
         <el-table-column label="Operations" min-width="120">
           <template #default="{ row, $index }">

@@ -68,10 +68,10 @@ WHERE
 `;
 /*
 AND (no_keyword IS NULL OR no_keyword = 'n')
-    AND (is_sale IS NULL OR is_sale != 'y')
+AND (is_sale IS NULL OR is_sale != 'y')
 */
     const [results] = await Promise.race([
-      connection.query(query, [`%${text}%`]),
+      connection.query(query, [`%${text}%`]),// 使用参数化查询防止SQL注入
       new Promise((_, reject) =>
         setTimeout(() => reject(new Error('数据库查询超时')), 15 * 1000)
       ), // 查询超时时间（毫秒）

@@ -25,7 +25,7 @@ async function queryDatabase() {
     while (index < len) {
       let item = results[index];
       const updateFields = {
-        no_keyword: item.no_keyword === 'y' ? 'n' : 'y',
+        // no_keyword: item.no_keyword === 'y' ? 'n' : 'y',
         // is_fundgz: item.is_fundgz === 'y' ? 'n' : 'y',
         // is_sale: item.is_sale === 'y' ? 'n' : 'y',
       };
@@ -53,7 +53,7 @@ async function queryDatabase() {
       fen = Math.floor(time_diff / 1000 / 60);
       miao = Math.floor((time_diff - fen * 60 * 1000) / 1000);
     }
-    console.log(`操作完毕，退出程序, 耗时 ${fen}分 ${秒}秒`);
+    console.log(`操作完毕，退出程序, 耗时 ${fen}分 ${miao}秒`);
     if (connection) connection.release(); // 确保连接被释放
   }
 }
