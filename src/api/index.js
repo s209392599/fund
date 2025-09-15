@@ -61,3 +61,14 @@ export async function server_fund_search_bytiantian(data) {
 export async function server_fund_public_fund_sort(data) {
   return request.post('/fund_public_fund_sort', data);
 }
+
+// --------------------------------------------------------------  下面是数据库操作
+
+// 获取所有正常监听的基金(排除关键词、不可买)
+export async function server_fund_mysql_normal_all(data) {
+  return request.post('/fund_mysql_normal_all', data);
+}
+// 根据关键词返回基金
+export async function server_fund_mysql_query_keywords(data) {
+  return request.post('/fund_mysql_query_keywords', data);
+}

@@ -2,30 +2,104 @@
 console.log('src/views/preview/tabs/preview_12.vue');
 
 const info = reactive({
-  text: '中证A500',
+  text: '易方达沪深300',
   tableData: [],// 列表数据
 });
+
+window.jsonpgz = (data) => {
+  console.log('data', data);
+  // if (!data) {
+  //   info.tableData = info.tableData.filter(item => item.code !== data.fundcode);
+  // }
+};
+window.aaa = (code) => {
+  console.log('aaa -- code', code);
+};
+
+// 封装为Promise版本
+const fetchFundData = (code) => {
+  return new Promise((resolve, reject) => {
+    const callbackName = `jsonpgz_${code}_${Date.now()}`;
+
+    window[callbackName] = (data) => {
+      try {
+        if (!data || !data.fundcode) {
+          console.warn('Empty response for:', code);
+          resolve({ code, success: false, data: null });
+        } else {
+          resolve({ code, success: true, data });
+        }
+      } catch (error) {
+        reject(error);
+      } finally {
+        // 清理
+        delete window[callbackName];
+        const script = document.querySelector(`script[src*="${code}.js"]`);
+        if (script) script.remove();
+      }
+    };
+
+    const script = document.createElement('script');
+    script.src = `https://fundgz.1234567.com.cn/js/${code}.js?callback=${callbackName}`;
+    script.onerror = () => reject(new Error(`Failed to load ${code}`));
+    document.body.appendChild(script);
+  });
+};
+
+// 批量处理（推荐）
+const getFundGZ = async (codes) => {
+  const promises = codes.map(code => fetchFundData(code));
+  const results = await Promise.allSettled(promises);
+
+  // 处理结果
+  results.forEach(result => {
+    if (result.status === 'fulfilled') {
+      const { code, success, data } = result.value;
+      console.log('code', code, 'success', success, 'data', data);
+
+      if (!success) {
+        // info.tableData = info.tableData.filter(item => item.code !== code);
+      } else {
+        // 更新数据
+        // ...你的业务逻辑
+      }
+    }
+  });
+};
+
+
+// 查看是否可以读取到当日的涨幅
+// const getFundGZ = (code) => {
+//   info.tableData.forEach((item,index) => {
+//     console.log('item.code', item.code);
+//     setTimeout(() => {
+//       const script = document.createElement('script');
+//       script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js?callback=aaa(${item.code})`;
+//       document.body.appendChild(script);
+//     }, (index + 1) * 10)
+//   })
+// };
 
 const getList = () => {
   if (info.text.trim() === '') {
     info.tableData = [];
     return;
   }
-  server_fund_mysql_query_keywords({ text: info.text.trim() }).then(res => {
-    console.log('关键词搜索', 'res', res);
+  server_fund_search_bytiantian({ text: info.text.trim() }).then(res => {
+    console.log('res', res);
     if (res.code === 200) {
-      // // 不以ETF结尾的基金
-      // info.tableData = [...res.data].filter(item => !item.name.endsWith('ETF'));
-      // info.tableData.push({
-      //   code: '008164',
-      //   name: 'aaaaaa',
-      // })
-      // info.tableData.push({
-      //   code: '008087',
-      //   name: 'bbb',
-      // })
-      // // getFundGZ();// 查看是否可以读取到当日的涨幅
-      // getFundGZ(info.tableData.map(item => item.code));
+      // 不以ETF结尾的基金
+      info.tableData = [...res.data].filter(item => !item.name.endsWith('ETF'));
+      info.tableData.push({
+        code: '008164',
+        name: 'aaaaaa',
+      })
+      info.tableData.push({
+        code: '008087',
+        name: 'bbb',
+      })
+      // getFundGZ();// 查看是否可以读取到当日的涨幅
+      getFundGZ(info.tableData.map(item => item.code));
     } else {
       info.tableData = [];
       ElMessage.error(res.msg || '获取列表失败');
@@ -72,9 +146,9 @@ const getNormalFundAll = () => {
     ElMessage.error('获取列表失败');
   });
 };
-// getNormalFundAll();
+getNormalFundAll();
 
-//
+// server_fund_mysql_query_keywords
 </script>
 
 <template>

@@ -1,28 +1,7 @@
 /*
 更新某些字段的值
 */
-const mysql = require('mysql2/promise');
-
-const {
-  database_host,
-  database_user,
-  database_password,
-} = require('../setting/database.js');
-
-// 数据库配置
-const dbConfig = {
-  host: database_host,
-  user: database_user,
-  password: database_password,
-  database: 'fund',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-  connectTimeout: 10000, // 连接超时时间（毫秒）
-};
-
-// 创建连接池
-const pool = mysql.createPool(dbConfig);
+const { pool } = require('../setting/pool.js');// 引入mysql连接池
 
 // 获取数据库连接并执行查询的异步函数
 async function queryDatabase() {
@@ -33,7 +12,7 @@ async function queryDatabase() {
     console.log('数据库连接成功！');
 
     var query =
-      'SELECT fund_code, include_keyword, is_fundgz, is_sale FROM fund'; // 只查询这几个字段
+      'SELECT fund_code, no_keyword, is_fundgz, is_sale FROM fund'; // 只查询这几个字段
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
@@ -46,7 +25,7 @@ async function queryDatabase() {
     while (index < len) {
       let item = results[index];
       const updateFields = {
-        include_keyword: item.include_keyword === 'y' ? 'n' : 'y',
+        no_keyword: item.no_keyword === 'y' ? 'n' : 'y',
         // is_fundgz: item.is_fundgz === 'y' ? 'n' : 'y',
         // is_sale: item.is_sale === 'y' ? 'n' : 'y',
       };

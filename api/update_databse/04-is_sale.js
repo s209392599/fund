@@ -1,31 +1,9 @@
 /*
 是否可买，以及更新其它信息
 */
-const mysql = require('mysql2/promise');
 const noText = require('../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../utils/noFundCode.js'); // 排除的基金代码
-
-const {
-  database_host,
-  database_user,
-  database_password,
-} = require('../setting/database.js');
-
-// 数据库配置
-const dbConfig = {
-  host: database_host,
-  user: database_user,
-  password: database_password,
-  database: 'fund',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-  connectTimeout: 10000, // 连接超时时间（毫秒）
-  // debug: true // 开启调试模式
-};
-
-// 创建连接池
-const pool = mysql.createPool(dbConfig);
+const { pool } = require('../setting/pool.js');// 引入mysql连接池
 
 // 获取数据库连接并执行查询的异步函数
 async function queryDatabase() {
@@ -34,10 +12,10 @@ async function queryDatabase() {
     connection = await pool.getConnection();
     console.log('数据库连接成功！');
 
-    var query = `SELECT * FROM fund`;
-    var query = `SELECT * FROM fund WHERE include_keyword != 'y' OR include_keyword IS NULL`;
-    // fund_code fund_name fund_type_name include_keyword is_fundgz is_sale
-    var query = 'SELECT fund_code, fund_name, include_keyword FROM fund';// 只查询这几个字段
+    // var query = `SELECT * FROM fund`;
+    // var query = `SELECT * FROM fund WHERE no_keyword != 'y' OR no_keyword IS NULL`;
+    // fund_code fund_name fund_type_name no_keyword is_fundgz is_sale
+    var query = 'SELECT fund_code, fund_name, no_keyword FROM fund';// 只查询这几个字段
 
     const [results] = await Promise.race([
       connection.query(query),
@@ -53,7 +31,7 @@ async function queryDatabase() {
       fund_code: '000055',
       fund_name: '广发纳斯达克100ETF联接美元(QDII)A',
       fund_type_name: '指数型-海外股票',
-      include_keyword: null,
+      no_keyword: null,
       is_fundgz: 'y',
       is_sale: null,
       stock: null,
@@ -67,7 +45,7 @@ async function queryDatabase() {
 
     var arr = [];
     results.forEach((item_1, index_1) => {
-      let flag_1 = item_1.include_keyword === 'y';
+      let flag_1 = item_1.no_keyword === 'y';
       let flag_2 = item_1.is_fundgz === 'y';
       let flag = flag_1 || flag_2;
       if (!flag) {
@@ -84,7 +62,7 @@ async function queryDatabase() {
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
     while (index < len) {
       let item = results[index];
-      if (item.include_keyword !== 'y') {
+      if (item.no_keyword !== 'y') {
         console.log('----------------------------');
         console.log(`正在更新 ${index + 1} /${len} 个基金`);
 
@@ -343,7 +321,7 @@ queryDatabase();
 // 更新数据库的函数
 async function updateFundData(connection, data) {
   console.log('开始更新服务器数据~~~');
-  const updateQuery = 'UPDATE fund SET include_keyword = ? WHERE fund_code = ?';
+  const updateQuery = 'UPDATE fund SET no_keyword = ? WHERE fund_code = ?';
   const failedItems = [];
 
   for (const item of data) {

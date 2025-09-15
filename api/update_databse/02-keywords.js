@@ -80,7 +80,7 @@ queryDatabase();
 // 更新数据库的函数
 async function updateFundData(connection, arr_1,arr_2) {
   console.log('开始更新服务器数据~~~');
-  const updateQuery = 'UPDATE fund SET include_keyword = ? WHERE fund_code = ?';
+  const updateQuery = 'UPDATE fund SET no_keyword = ? WHERE fund_code = ?';
   const failedItems = [];
 
   for (const item of arr_1) {

@@ -3,6 +3,18 @@ const fs = require('fs');
 const express = require('express');
 const cors = require('cors');
 
+/* 应用IP速率限制
+const rateLimit = require('express-rate-limit'); // 引入速率限
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15分钟
+  max: 200, // 每个IP在窗口期内最多200个请求
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: '请求过于频繁，请稍后再试。'
+});
+app.use(limiter);
+*/
+
 const app = express();
 const PORT = process.env.PORT || 9999;
 

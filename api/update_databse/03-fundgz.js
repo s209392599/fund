@@ -46,7 +46,7 @@ async function queryDatabase() {
     let len = results.length;
     while(index < len){
       let item = results[index];
-      if(item.include_keyword !== 'y'){
+      if(item.no_keyword !== 'y'){
         let u = `https://fundgz.1234567.com.cn/js/${item.fund_code}.js`;
         let response = await fetch(u);
         const res = (await response.text()) || {};
