@@ -1,4 +1,6 @@
 /*
+/www/wwwroot/fund_api/update_databse
+
 var zhang_zhou = '';// 周涨幅
 var zhang_yue_1 = '';// 月涨幅
 var zhang_yue_3 = '';// 3月涨幅

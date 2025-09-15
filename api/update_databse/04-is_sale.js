@@ -36,6 +36,8 @@ async function queryDatabase() {
 
     var query = `SELECT * FROM fund`;
     var query = `SELECT * FROM fund WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL`;
+    // fund_code fund_name fund_type_name include_no_keyword no_fundgz no_sale
+    var query = 'SELECT fund_code, fund_name, include_no_keyword FROM fund';// 只查询这几个字段
     
     const [results] = await Promise.race([
       connection.query(query),

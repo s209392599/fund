@@ -28,11 +28,12 @@ async function queryDatabaseWithRetry(retries = 3) {
       connection = await pool.getConnection();
       console.log('数据库连接成功！');
 
-      const query = 'SELECT * FROM fund';
+      // fund_code fund_name fund_type_name include_no_keyword no_fundgz no_sale
+      var query = 'SELECT fund_code, include_no_keyword FROM fund';// 只查询这几个字段
       const [results] = await Promise.race([
         connection.query(query),
         new Promise((_, reject) =>
-          setTimeout(() => reject(new Error('数据库查询超时')), 20 * 1000) // 增加查询超时时间
+          setTimeout(() => reject(new Error('数据库查询超时')), 30 * 1000) // 增加查询超时时间
         ),
       ]);
 
