@@ -35,9 +35,9 @@ async function queryDatabase() {
     console.log('数据库连接成功！');
 
     var query = `SELECT * FROM fund`;
-    var query = `SELECT * FROM fund WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL`;
-    // fund_code fund_name fund_type_name include_no_keyword no_fundgz no_sale
-    var query = 'SELECT fund_code, fund_name, include_no_keyword FROM fund';// 只查询这几个字段
+    var query = `SELECT * FROM fund WHERE include_keyword != 'y' OR include_keyword IS NULL`;
+    // fund_code fund_name fund_type_name include_keyword is_fundgz is_sale
+    var query = 'SELECT fund_code, fund_name, include_keyword FROM fund';// 只查询这几个字段
 
     const [results] = await Promise.race([
       connection.query(query),
@@ -53,9 +53,9 @@ async function queryDatabase() {
       fund_code: '000055',
       fund_name: '广发纳斯达克100ETF联接美元(QDII)A',
       fund_type_name: '指数型-海外股票',
-      include_no_keyword: null,
-      no_fundgz: 'y',
-      no_sale: null,
+      include_keyword: null,
+      is_fundgz: 'y',
+      is_sale: null,
       stock: null,
       stock_distribution: null,
       user_focus: null,
@@ -67,8 +67,8 @@ async function queryDatabase() {
 
     var arr = [];
     results.forEach((item_1, index_1) => {
-      let flag_1 = item_1.include_no_keyword === 'y';
-      let flag_2 = item_1.no_fundgz === 'y';
+      let flag_1 = item_1.include_keyword === 'y';
+      let flag_2 = item_1.is_fundgz === 'y';
       let flag = flag_1 || flag_2;
       if (!flag) {
         arr.push({
@@ -84,7 +84,7 @@ async function queryDatabase() {
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
     while (index < len) {
       let item = results[index];
-      if (item.include_no_keyword !== 'y') {
+      if (item.include_keyword !== 'y') {
         console.log('----------------------------');
         console.log(`正在更新 ${index + 1} /${len} 个基金`);
 
@@ -275,7 +275,7 @@ async function queryDatabase() {
             jd_fund_archive: jd_fund_archive,// 基金档案
             jd_managerInfo: jd_managerInfo,// 基金经理
           };
-          const updateQuery_1 = 'UPDATE fund SET no_sale = ? WHERE fund_code = ?';
+          const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery_1, [null, item.fund_code]);
 
@@ -309,7 +309,7 @@ async function queryDatabase() {
           // fundDiagnosisOfItem.fundDiagnosisData  收益能力 夏普比率 最大回撤 波动率
         } else {
           // 京东金融上不可买，把这些字段置为 NULL
-          const updateQuery_1 = 'UPDATE fund SET no_sale = ? WHERE fund_code = ?';
+          const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery_1, ['y', item.fund_code]);
             console.log(`成功更新: ${results[index].fund_code} - ${results[index].fund_name}`);
@@ -343,7 +343,7 @@ queryDatabase();
 // 更新数据库的函数
 async function updateFundData(connection, data) {
   console.log('开始更新服务器数据~~~');
-  const updateQuery = 'UPDATE fund SET include_no_keyword = ? WHERE fund_code = ?';
+  const updateQuery = 'UPDATE fund SET include_keyword = ? WHERE fund_code = ?';
   const failedItems = [];
 
   for (const item of data) {

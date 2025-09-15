@@ -28,8 +28,8 @@ async function queryDatabaseWithRetry(retries = 3) {
       connection = await pool.getConnection();
       console.log('数据库连接成功！');
 
-      // fund_code fund_name fund_type_name include_no_keyword no_fundgz no_sale
-      var query = 'SELECT fund_code, include_no_keyword FROM fund';// 只查询这几个字段
+      // fund_code fund_name fund_type_name include_keyword is_fundgz is_sale
+      var query = 'SELECT fund_code, include_keyword FROM fund';// 只查询这几个字段
       const [results] = await Promise.race([
         connection.query(query),
         new Promise((_, reject) =>
@@ -38,11 +38,11 @@ async function queryDatabaseWithRetry(retries = 3) {
       ]);
 
       console.log(`数据库中一共有${results.length}个基金`);
-      
+
       const arr = [];
       results.forEach((item_1, index_1) => {
-        const flag_1 = item_1.include_no_keyword === 'y';
-        const flag_2 = item_1.no_fundgz === 'y';
+        const flag_1 = item_1.include_keyword === 'y';
+        const flag_2 = item_1.is_fundgz === 'y';
         const flag = flag_1 || flag_2;
         if (!flag) {
           arr.push({
