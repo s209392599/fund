@@ -101,26 +101,6 @@
       "type": "量化"
     },
     {
-      "code": "018957",
-      "name": "中航机遇领航混合发起C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
-      "code": "016371",
-      "name": "信澳业绩驱动混合C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "取消定投，10月11号 合并中航",
-      "fixed": 50,
-      "type": "科技成长"
-    },
-    {
       "code": "017437",
       "name": "华宝纳斯达克精选股票发起式",
       "zhang_url": "不提供",
@@ -171,32 +151,12 @@
       "type": "创业板"
     },
     {
-      "code": "019103",
-      "name": "景顺长城恒生消费ETF联接",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "9-19卖出",
-      "fixed": 50,
-      "type": "消费"
-    },
-    {
       "code": "016858",
       "name": "国金量化多因子股票C",
       "zhang_url": "服务器监听",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "9月29日卖出 2025年08月25日15:23:19",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
-      "code": "018729",
-      "name": "华夏智胜新锐股票C",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "9月29日卖出 2025年08月25日15:23:16",
       "fixed": 50,
       "type": "量化"
     },
@@ -209,6 +169,48 @@
       "desc": "10月9日卖出 2025年09月02日14:26:29",
       "fixed": 100,
       "type": "量化"
+    }
+  ],
+  "histroy": [
+    {
+      "code": "018957",
+      "name": "中航机遇领航混合发起C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "016371",
+      "name": "信澳业绩驱动混合C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "取消定投，10月11号 合并中航",
+      "fixed": 50,
+      "type": "科技成长"
+    },
+    {
+      "code": "018729",
+      "name": "华夏智胜新锐股票C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "9月29日卖出 2025年08月25日15:23:16",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "019103",
+      "name": "景顺长城恒生消费ETF联接",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "9-19卖出",
+      "fixed": 50,
+      "type": "消费"
     },
     {
       "code": "023350",

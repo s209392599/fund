@@ -1,7 +1,8 @@
 
 /*
-群公告：
-基金经理的订阅可以直接订阅支付宝  京东金融是否可以？  给曾楠说下
+
+https://fund.eastmoney.com/trade/xf.html 新发基金
+苏新上证科创综指增强C(023938)  类似的科创综指数找一找，抖音博主推荐收益类型的
 
 富国恒生红利要不要迁移？
 夏普比率 这个要不要收集数据？
@@ -19,7 +20,7 @@ https://fund.eastmoney.com/008327.html
 接口的数据统计，哪个邮箱 什么ip，访问的什么接口，什么请求参数
 
 下面的特色榜单之类的，要不要每天做个邮件通知？ 还是群通知？
-https://channel.jr.jd.com/data-ranking/home/?jrcontainer=h5&jrlogin=false&channel=bd_rank_rebound_leader 
+https://channel.jr.jd.com/data-ranking/home/?jrcontainer=h5&jrlogin=false&channel=bd_rank_rebound_leader
 */
 
 

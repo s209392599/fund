@@ -38,7 +38,7 @@ async function queryDatabase() {
     var query = `SELECT * FROM fund WHERE include_no_keyword != 'y' OR include_no_keyword IS NULL`;
     // fund_code fund_name fund_type_name include_no_keyword no_fundgz no_sale
     var query = 'SELECT fund_code, fund_name, include_no_keyword FROM fund';// 只查询这几个字段
-    
+
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
@@ -87,7 +87,7 @@ async function queryDatabase() {
       if (item.include_no_keyword !== 'y') {
         console.log('----------------------------');
         console.log(`正在更新 ${index + 1} /${len} 个基金`);
-        
+
         let u = `reqData={"itemId":"","fundCode":"${item.fund_code}","clientVersion":"","channel":"9"}`;
         let response = await fetch(str_1 + u);
         const res = (await response.json()) || {};
@@ -261,6 +261,7 @@ async function queryDatabase() {
 
             delete item.managerDetailJumpData;
             delete item.managerPicUrl;
+            delete item.awardBackgroundUrl;
           })
           var jd_managerInfo = JSON.stringify(managerInfoList);
 
@@ -277,7 +278,7 @@ async function queryDatabase() {
           const updateQuery_1 = 'UPDATE fund SET no_sale = ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery_1, [null, item.fund_code]);
-            
+
             console.log(`成功更新: ${results[index].fund_code} - ${results[index].fund_name}`);
           } catch (error) {
             console.error(`更新失败: ${results[index].fund_code}, 原因:`, error.message);
@@ -295,14 +296,14 @@ async function queryDatabase() {
           /**
            * 交易规则
            */
-          
+
           // 回撤修复
           // 锁定期限 锁定原因  有些基金，不需要更新那么多；或者某一类的；
           // 数据更新日期也要写上
           // 获取中金公司的
           /*
             release_date 解锁日期
-            reason_lockout 锁定原因 
+            reason_lockout 锁定原因
           */
 
           // fundDiagnosisOfItem.fundDiagnosisData  收益能力 夏普比率 最大回撤 波动率

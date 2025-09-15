@@ -20,7 +20,7 @@ window.aaa = (code) => {
 const fetchFundData = (code) => {
   return new Promise((resolve, reject) => {
     const callbackName = `jsonpgz_${code}_${Date.now()}`;
-    
+
     window[callbackName] = (data) => {
       try {
         if (!data || !data.fundcode) {
@@ -38,7 +38,7 @@ const fetchFundData = (code) => {
         if (script) script.remove();
       }
     };
-    
+
     const script = document.createElement('script');
     script.src = `https://fundgz.1234567.com.cn/js/${code}.js?callback=${callbackName}`;
     script.onerror = () => reject(new Error(`Failed to load ${code}`));
@@ -50,13 +50,13 @@ const fetchFundData = (code) => {
 const getFundGZ = async (codes) => {
   const promises = codes.map(code => fetchFundData(code));
   const results = await Promise.allSettled(promises);
-  
+
   // 处理结果
   results.forEach(result => {
     if (result.status === 'fulfilled') {
       const { code, success, data } = result.value;
       console.log('code', code, 'success', success, 'data', data);
-      
+
       if (!success) {
         // info.tableData = info.tableData.filter(item => item.code !== code);
       } else {
@@ -114,7 +114,7 @@ const resetForm = () => {
   getList();
 };
 // 去除A类
-const removeA = () => { 
+const removeA = () => {
   console.log('去除name最后一个字符是A');
   info.tableData = info.tableData.filter(item => item.name[item.name.length - 1] !== 'A');
 };
@@ -162,6 +162,24 @@ const btn_del = (row, $index) => {
           </template>
         </el-table-column>
       </el-table>
+
+      <!--
+      基金经理的返回值
+      {
+        "yearPerformance":"6.06",
+        "employPerformance":"105.86",
+        "employmentDate":"14年217天",
+        "accessionDateDesc":"2013.03.29-至今",
+        "managerName":"何秀红",
+        "accessionDate":"12年170天",
+        "manageScale":"81.94亿元",
+        "awardList":[
+          {"awardTypeName":"金牛奖"},
+          {"awardTypeName":"金基金奖"},
+          {"awardTypeName":"明星基金奖"}
+        ]
+      },
+      -->
     </div>
   </div>
 </template>
