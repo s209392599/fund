@@ -12,70 +12,31 @@ async function queryDatabase() {
     connection = await pool.getConnection();
     console.log('数据库连接成功！');
 
-    // var query = `SELECT * FROM fund`;
-    // var query = `SELECT * FROM fund WHERE no_keyword != 'y' OR no_keyword IS NULL`;
-    // fund_code fund_name fund_type_name no_keyword is_fundgz is_sale
-    var query = 'SELECT fund_code, fund_name, no_keyword FROM fund';// 只查询这几个字段
-
+    var query = 'SELECT fund_code, fund_name, no_keyword, is_fundgz FROM fund';// 只查询这几个字段
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
         setTimeout(() => reject(new Error('数据库查询超时')), 15 * 1000)
       ), // 查询超时时间（毫秒）
     ]);
-
     console.log(`数据库中一共有${results.length}个基金`);
 
-    /*
-    {
-      fund_code: '000055',
-      fund_name: '广发纳斯达克100ETF联接美元(QDII)A',
-      fund_type_name: '指数型-海外股票',
-      no_keyword: null,
-      is_fundgz: 'y',
-      is_sale: null,
-      stock: null,
-      stock_distribution: null,
-      user_focus: null,
-      highlights: null,
-      his_weak_own: null,
-      tag_list: null
-    }
-    */
-
-    var arr = [];
-    results.forEach((item_1, index_1) => {
-      let flag_1 = item_1.no_keyword === 'y';
-      let flag_2 = item_1.is_fundgz === 'y';
-      let flag = flag_1 || flag_2;
-      if (!flag) {
-        arr.push({
-          fund_code: item_1.fund_code,
-          fund_name: item_1.fund_name,
-        });
-      }
-    });
-    console.log(`一共有${arr.length}个基金需要更新`);
-
-    let index = 11417;
+    let index = 0;
     let len = results.length;
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
     while (index < len) {
       let item = results[index];
-      if (item.no_keyword !== 'y') {
-        console.log('----------------------------');
-        console.log(`正在更新 ${index + 1} /${len} 个基金`);
-
+      var isForSale = false; // 是否可买
+      console.log('----------------------------');
+      console.log(`正在更新 ${index + 1} /${len} --- ${results[index].fund_code} - ${results[index].fund_name}`);
+      if (item.no_keyword === 'y' && item.is_fundgz === 'y') {
         let u = `reqData={"itemId":"","fundCode":"${item.fund_code}","clientVersion":"","channel":"9"}`;
         let response = await fetch(str_1 + u);
         const res = (await response.json()) || {};
 
         let resultData = res.resultData || {};
         let datas = resultData.datas || {};
-
-        var isForSale = datas.isForSale || false; // 是否可买
-
-
+        isForSale = datas.isForSale || false; // 是否可买
         if (isForSale) {
           /**
            * 头部标签区
@@ -229,7 +190,7 @@ async function queryDatabase() {
           var fundManagerOfItem = datas.fundManagerOfItem || {};
           var managerInfoList = fundManagerOfItem.managerInfoList || [];
           managerInfoList.forEach(item => {
-            if(item.hasOwnProperty('awardList')) {
+            if (item.hasOwnProperty('awardList')) {
               item.awardList = (item.awardList || []).map(v => {
                 return {
                   awardTypeName: v.awardTypeName,
@@ -255,21 +216,20 @@ async function queryDatabase() {
           };
           const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
           try {
-            await connection.query(updateQuery_1, [null, item.fund_code]);
+            await connection.query(updateQuery_1, ['y', item.fund_code]);
 
-            console.log(`成功更新: ${results[index].fund_code} - ${results[index].fund_name}`);
-          } catch (error) {
-            console.error(`更新失败: ${results[index].fund_code}, 原因:`, error.message);
+            console.log(`[成功]--[可买]: is_sale`);
+          } catch (error) {// error.message
+            console.error(`[！！！！失败]--[可买] -- is_sale`, );
           }
 
           const updateQuery = 'UPDATE fund SET ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery, [updateFields, item.fund_code]);
-            console.log(`成功更新可买数据: ${item.fund_code} - ${item.fund_name}`);
+            console.log(`[成功]--[可买] 成功更新: jd_header_tag等`);
           } catch (error) {
-            console.error(`更新失败: ${item.fund_code}, 原因:`, error.message);
+            console.error(`[！！！！失败]--[可买] -- jd_header_tag等`, );
           }
-
 
           /**
            * 交易规则
@@ -285,27 +245,28 @@ async function queryDatabase() {
           */
 
           // fundDiagnosisOfItem.fundDiagnosisData  收益能力 夏普比率 最大回撤 波动率
-        } else {
-          // 京东金融上不可买，把这些字段置为 NULL
-          const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
-          try {
-            await connection.query(updateQuery_1, ['y', item.fund_code]);
-            console.log(`成功更新: ${results[index].fund_code} - ${results[index].fund_name}`);
-          } catch (error) {
-            console.error(`更新失败: ${results[index].fund_code}, 原因:`, error.message);
-          }
-
-          const updateQuery =
-            'UPDATE fund SET jd_header_tag = NULL, jd_historyPerformance = NULL, jd_fundDiagnosis = NULL, jd_proportion = NULL, jd_totalAsset = NULL, jd_chi_cang = NULL, jd_fund_archive = NULL, jd_managerInfo = NULL WHERE fund_code = ?';
-          try {
-            await connection.query(updateQuery, [item.fund_code]);
-            console.log(`[不可买] --- 成功更新: ${item.fund_code} - ${item.fund_name}`);
-          } catch (error) {
-            console.error(`更新失败: ${item.fund_code}, 原因:`, error.message);
-          }
+        }
+      }
+      if (!isForSale) {
+        // 京东金融上不可买，把这些字段置为 NULL
+        const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
+        try {
+          await connection.query(updateQuery_1, ['n', item.fund_code]);
+          console.log(`[成功]--[不可买] -- is_sale 字段`);
+        } catch (error) {
+          console.error(`[！！！！失败][不可买] -- is_sale 字段`);
         }
 
+        const updateQuery =
+          'UPDATE fund SET jd_header_tag = NULL, jd_historyPerformance = NULL, jd_fundDiagnosis = NULL, jd_proportion = NULL, jd_totalAsset = NULL, jd_chi_cang = NULL, jd_fund_archive = NULL, jd_managerInfo = NULL WHERE fund_code = ?';
+        try {
+          await connection.query(updateQuery, [item.fund_code]);
+          console.log(`[成功]--[不可买] --- jd_header_tag 等字段`);
+        } catch (error) {
+          console.error(`[！！！！失败][不可买] -- jd_header_tag 等字段,`);
+        }
       }
+
       index++;
     }
   } catch (error) {
