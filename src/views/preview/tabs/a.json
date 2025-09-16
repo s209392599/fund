@@ -1,0 +1,16 @@
+{
+  "fund_code": "019511",
+  "fund_name": "华宝中证A500ETF联接C",
+  "fund_type_name": "指数型-股票",
+  "no_keyword": "y",
+  "is_fundgz": "y",
+  "is_sale": "y",
+  "jd_header_tag": "{\"rankList\":[],\"highlights\":{\"tagList\":[]},\"userFocus\":[],\"themeNameList\":[\"工业金属\",\"免税店\"]}",
+  "jd_historyPerformance": "[{\"avg\":\"1.68\",\"rate\":\"1.57\",\"name\":\"近1周\",\"rank\":\"1824/4322\"},{\"avg\":\"8.67\",\"rate\":\"8.65\",\"name\":\"近1月\",\"rank\":\"1603/4259\"},{\"avg\":\"23.06\",\"rate\":\"19.75\",\"name\":\"近3月\",\"rank\":\"2046/3993\"},{\"avg\":\"18.20\",\"rate\":\"15.07\",\"name\":\"近6月\",\"rank\":\"1964/3621\"},{\"name\":\"近1年\"},{\"avg\":\"24.27\",\"rate\":\"21.91\",\"name\":\"今年以来\",\"rank\":\"2097/4322\"},{\"name\":\"近3年\"},{\"avg\":\"38.47\",\"rate\":\"21.91\",\"name\":\"成立以来\",\"rank\":\"2019/3430\"}]",
+  "jd_fundDiagnosis": "undefined|undefined|undefined|undefined",
+  "jd_proportion": "0.00|0.00|7.00|94.50|0.00",
+  "jd_totalAsset": "404303891.67",
+  "jd_chi_cang": "{\"stock\":[],\"bond\":[],\"fund\":[{\"name\":\"华宝中证A500ETF\",\"industryName\":\"563500\",\"ratio\":\"94.50\"}]}",
+  "jd_fund_archive": "{\"establishedDateByCn\":\"2025年01月09日\",\"company_name\":\"华宝基金管理有限公司\",\"fundScaleList\":[\"8.09\",\"3.45\",\"2.38\"],\"instPurchaseRatio\":\"0\",\"purchaseRatio\":\"100\",\"companyManageScale\":\"3593.11亿\",\"manageNumber\":\"153\"}",
+  "jd_managerInfo": "[{\"yearPerformance\":\"-2.36\",\"employPerformance\":\"21.91\",\"employmentDate\":\"5年61天\",\"accessionDateDesc\":\"2025.01.09-至今\",\"managerName\":\"蒋俊阳\",\"accessionDate\":\"250天\",\"manageScale\":\"50.25亿元\"}]"
+}

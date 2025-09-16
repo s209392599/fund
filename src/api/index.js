@@ -72,3 +72,7 @@ export async function server_fund_mysql_normal_all(data) {
 export async function server_fund_mysql_query_keywords(data) {
   return request.post('/fund_mysql_query_keywords', data);
 }
+// 根据 基金号获取基金数据
+export async function server_fund_mysql_fundinfo_byfunds(data) {
+  return request.post('/fund_mysql_fundinfo_byfunds', data);
+}

@@ -163,7 +163,50 @@ const getNormalFundAll = () => {
 };
 // getNormalFundAll();
 
-//
+const getAllInfo = () => {
+  const funds = info.tableData.map(v => v.fund_code);
+  if (funds === 0) {
+    ElMessage.info('请先选择基金数据');
+    return;
+  }
+  server_fund_mysql_fundinfo_byfunds({
+    funds: funds
+  }).then(res => {
+    console.log('关键词搜索', 'res', res);
+    if (res.code === 200) {
+      let arr_1 = res.data.data;
+      let arr_2 = arr_1.map(item => {
+        return {
+          ...item,
+          // jd_header_tag: item.jd_header_tag ? JSON.parse(item.jd_header_tag) : null,
+          // jd_historyPerformance: item.jd_historyPerformance ? JSON.parse(item.jd_historyPerformance) : null,
+          // jd_fundDiagnosis: item.jd_fundDiagnosis,
+          // jd_proportion: item.jd_proportion,
+          jd_totalAsset: item.jd_totalAsset,
+          jd_chi_cang: item.jd_chi_cang ? JSON.parse(item.jd_chi_cang) : null,
+          jd_fund_archive: item.jd_fund_archive ? JSON.parse(item.jd_fund_archive) : null,
+          jd_managerInfo: item.jd_managerInfo ? JSON.parse(item.jd_managerInfo) : null,
+        }
+      })
+      info.tableData = [...arr_2];
+    } else {
+      // info.tableData = [];
+      ElMessage.error(res.msg || '获');
+    }
+  }).catch((err) => {
+    info.tableData = [];
+    console.log(err.message);
+
+    // ElMessage.error('chu');
+  });
+}
+// 资产转换
+const turnAssetFn = (str) => {
+  if (!str || str.length === 0) return 0;
+  var num_1 = parseFloat(str);
+  return num_1;
+}
+
 </script>
 
 <template>
@@ -178,6 +221,7 @@ const getNormalFundAll = () => {
           <el-button type="primary" @click="getList">搜索</el-button>
           <el-button @click="resetForm">重置</el-button>
           <el-button type="success" @click="removeA">去除A类</el-button>
+          <el-button type="success" @click="getAllInfo">详细信息disabled=""</el-button>
           <el-button type="success" @click="addFn">新增</el-button>
         </el-form-item>
       </el-form>
@@ -193,6 +237,12 @@ const getNormalFundAll = () => {
         <el-table-column prop="fund_code" label="基金号" width="80" />
         <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
         <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
+
+        <el-table-column label="总资产" width="120" align="right">
+          <template #default="{ row, $index }">
+            <span>{{ turnAssetFn(row.jd_totalAsset) }}</span>
+          </template>
+        </el-table-column>
 
         <el-table-column label="Operations" min-width="120">
           <template #default="{ row, $index }">

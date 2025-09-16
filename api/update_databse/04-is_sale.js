@@ -87,10 +87,10 @@ async function queryDatabase() {
           var diagnosis_tab3 = fundDiagnosisData.tab3 || {};
           var diagnosis_tab4 = fundDiagnosisData.tab4 || {};
 
-          var diagnosis_num_1 = '' + diagnosis_tab1.overSameTypePercent || '';// 收益能力
-          var diagnosis_num_2 = '' + diagnosis_tab2.overSameTypePercent || '';// 投资性价比
-          var diagnosis_num_3 = '' + diagnosis_tab3.overSameTypePercent || '';// 抗下跌能力
-          var diagnosis_num_4 = '' + diagnosis_tab4.overSameTypePercent || '';// 抗波动能力
+          var diagnosis_num_1 = '' + (diagnosis_tab1.overSameTypePercent || '');// 收益能力
+          var diagnosis_num_2 = '' + (diagnosis_tab2.overSameTypePercent || '');// 投资性价比
+          var diagnosis_num_3 = '' + (diagnosis_tab3.overSameTypePercent || '');// 抗下跌能力
+          var diagnosis_num_4 = '' + (diagnosis_tab4.overSameTypePercent || '');// 抗波动能力
           var jd_fundDiagnosis = `${diagnosis_num_1}|${diagnosis_num_2}|${diagnosis_num_3}|${diagnosis_num_4}`;
 
 
@@ -122,7 +122,7 @@ async function queryDatabase() {
             }
           }
           var jd_proportion = `${obj_2['股票']}|${obj_2['债券']}|${obj_2['现金']}|${obj_2['基金']}|${obj_2['其他']}`;// 持仓比例
-          var jd_totalAsset = '' + investmentDistribution.totalAsset || '-';
+          var jd_totalAsset = '' + (investmentDistribution.totalAsset || '');
 
           var obj_3 = {
             stock: [],
