@@ -2,7 +2,8 @@
 console.log('src/views/preview/tabs/preview_12.vue');
 
 const info = reactive({
-  text: '中证A500',
+  text: '通信',
+  step: 1,
   tableData: [],// 列表数据
 });
 
@@ -13,7 +14,10 @@ const turnSearchData = (data) => {
 /*
 jd_header_tag: jd_header_tag,// 头部标签
 {"rankList":[],"highlights":{"tagList":["基金规模大"],"morningstarRating":"4"},"userFocus":[],"themeNameList":["半导体","机器视觉"]}
-{"rankList":["连续5年跑赢同类 · 第9名"],"highlights":{"tagList":[],"morningstarRating":"2"},"userFocus":[],"themeNameList":["农产品加工","免税店"]}
+{
+"rankList":["连续5年跑赢同类 · 第9名"],
+"highlights":{"tagList":[],"morningstarRating":"2"},
+"userFocus":[],"themeNameList":["农产品加工","免税店"]}
 
 
 jd_historyPerformance,// 历史业绩
@@ -119,7 +123,9 @@ const getList = () => {
   }).catch(() => {
     info.tableData = [];
     ElMessage.error('获取列表失败');
-  });
+  }).finally(() => {
+    info.step = info.tableData.length ? 2 : 1;
+  })
 };
 
 
@@ -132,6 +138,7 @@ const resetForm = () => {
 const removeA = () => {
   console.log('去除name最后一个字符是A');
   info.tableData = info.tableData.filter(item => item.fund_name[item.fund_name.length - 1] !== 'A');
+  info.step = info.tableData.length ? 3 : 1;
 };
 
 const addFn = () => {
@@ -178,10 +185,10 @@ const getAllInfo = () => {
       let arr_2 = arr_1.map(item => {
         return {
           ...item,
-          // jd_header_tag: item.jd_header_tag ? JSON.parse(item.jd_header_tag) : null,
-          // jd_historyPerformance: item.jd_historyPerformance ? JSON.parse(item.jd_historyPerformance) : null,
-          // jd_fundDiagnosis: item.jd_fundDiagnosis,
-          // jd_proportion: item.jd_proportion,
+          jd_header_tag: item.jd_header_tag ? JSON.parse(item.jd_header_tag) : null,
+          jd_historyPerformance: item.jd_historyPerformance ? JSON.parse(item.jd_historyPerformance) : null,
+          jd_fundDiagnosis: item.jd_fundDiagnosis,
+          jd_proportion: item.jd_proportion,
           jd_totalAsset: item.jd_totalAsset,
           jd_chi_cang: item.jd_chi_cang ? JSON.parse(item.jd_chi_cang) : null,
           jd_fund_archive: item.jd_fund_archive ? JSON.parse(item.jd_fund_archive) : null,
@@ -196,17 +203,130 @@ const getAllInfo = () => {
   }).catch((err) => {
     info.tableData = [];
     console.log(err.message);
-
-    // ElMessage.error('chu');
-  });
+  }).finally(() => {
+    if(info.tableData.length){
+      info.step = 4;
+    }
+  })
 }
 // 资产转换
 const turnAssetFn = (str) => {
   if (!str || str.length === 0) return 0;
+  if (['0', '', 'undefined'].includes(str)) return 0;
   var num_1 = parseFloat(str);
   return num_1;
 }
+// 去除小于1亿
+const removeFn_1 = () => {
+  var arr_1 = [];
+  info.tableData.forEach(item => {
+    if (!['0', '', 'undefined'].includes(item.jd_totalAsset)) {
+      if (item.jd_totalAsset && parseFloat(item.jd_totalAsset) > 1 * 10000 * 10000) {
+        arr_1.push(item)
+      }
+    }
+  });
+  info.tableData = [...arr_1];
+  // info.step = info.tableData.length ? 5 : 1;
+}
+// 涨幅转换
+const zhangFn = (arr_1, num) => {
+  console.log('arr_1-------------', arr_1, num);
 
+  if (!Array.isArray(arr_1) || arr_1.length === 0) {
+    return '';
+  }
+
+  console.log('通过转换', num);
+
+  // 定义时间段的映射对象
+  let obj = {
+    1: '近1周',
+    2: '近1月',
+    3: '近3月',
+    4: '近6月',
+    5: '近1年',
+    6: '今年以来',
+    7: '近3年',
+    8: '成立以来'
+  };
+
+  // 使用 hasOwnProperty 检查 num 是否在映射对象 obj 中
+  if (!obj.hasOwnProperty(num)) {
+    return '';
+  }
+
+  // 获取对应时间段的字符串
+  let period = obj[num];
+
+  // 过滤 arr_1 数组以找到对应时间段的对象
+  let arr_2 = arr_1.filter(item => item.name === period);
+
+  // 如果找到了对应时间段的对象
+  if (arr_2.length > 0) {
+    let selectedObj = arr_2[0];
+    // 检查对象是否有 avg 属性
+    if (selectedObj.hasOwnProperty('avg')) {
+      return parseFloat(selectedObj.rate);
+    } else {
+      return '';
+    }
+  } else {
+    return '';
+  }
+};
+const sortByYearRate = (a, b, order) => {
+  // 提取 a 和 b 的 "近1年" 涨幅值
+  const getValue = (item) => {
+    const arr_1 = item.jd_historyPerformance;
+    if (!Array.isArray(arr_1) || arr_1.length === 0) return NaN;
+
+    const period = '近1年';
+    const match = arr_1.find(i => i.name === period);
+    if (match && match.rate !== undefined) {
+      return parseFloat(match.rate);
+    }
+    return NaN;
+  };
+
+  const valA = getValue(a);
+  const valB = getValue(b);
+
+  // 处理 NaN 情况：让空值排在最后
+  if (isNaN(valA)) return order === 'ascending' ? 1 : -1;
+  if (isNaN(valB)) return order === 'ascending' ? -1 : 1;
+
+  // 正常数值比较
+  return order === 'ascending' ? valA - valB : valB - valA;
+};
+
+// 转换标签
+const turn_rankList = (row = {}) => {
+  const jd_header_tag = row.jd_header_tag || {};
+  const rankList = jd_header_tag.rankList || [];
+  return rankList.join('；');
+}
+const turn_tagList = (row = {}) => {
+  const jd_header_tag = row.jd_header_tag || {};
+  const highlights = jd_header_tag.highlights || {};
+  const tagList = highlights.tagList || [];
+  var str = '';
+  if(highlights.hasOwnProperty('morningstarRating')){
+    str += `晨星${highlights.morningstarRating}星；`;
+  }
+
+  return str + tagList.join('；');
+}
+const turn_userFocus = (row = {}) => {
+  const jd_header_tag = row.jd_header_tag || {};
+  const userFocus = jd_header_tag.userFocus || [];
+  return userFocus.join('；');
+}
+const turn_themeNameList = (row = {}) => {
+  const jd_header_tag = row.jd_header_tag || {};
+  const themeNameList = jd_header_tag.themeNameList || [];
+  return themeNameList.join('；');
+}
 </script>
 
 <template>
@@ -218,11 +338,12 @@ const turnAssetFn = (str) => {
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="getList">搜索</el-button>
+          <el-button type="primary" @click="getList" data-num="2">搜索</el-button>
           <el-button @click="resetForm">重置</el-button>
-          <el-button type="success" @click="removeA">去除A类</el-button>
-          <el-button type="success" @click="getAllInfo">详细信息disabled=""</el-button>
-          <el-button type="success" @click="addFn">新增</el-button>
+          <el-button type="success" @click="removeA" :disabled="info.step < 2" data-num="3">去除A类</el-button>
+          <el-button type="success" @click="getAllInfo" :disabled="info.step < 3" data-num="4">详细信息</el-button>
+          <el-button type="success" @click="removeFn_1" :disabled="info.step < 4" data-num="5">去除小于1亿</el-button>
+          <!-- <el-button type="success" @click="addFn">新增</el-button> -->
         </el-form-item>
       </el-form>
     </div>
@@ -232,17 +353,92 @@ const turnAssetFn = (str) => {
     </div>
 
     <div class="main_box">
-      <el-table :data="info.tableData" border style="width: 100%" height="500">
+      <el-table :data="info.tableData" border style="width: 100%" height="800">
         <el-table-column fixed label="序" type="index" width="50" />
         <el-table-column prop="fund_code" label="基金号" width="80" />
         <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
         <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
 
-        <el-table-column label="总资产" width="120" align="right">
+        <el-table-column label="总资产" width="120" align="right" sortable>
           <template #default="{ row, $index }">
             <span>{{ turnAssetFn(row.jd_totalAsset) }}</span>
           </template>
         </el-table-column>
+
+        <el-table-column label="近1周" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,1) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="近1月" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,2) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="近3月" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,3) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="近6月" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,4) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="近1年" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,5) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="今年以来" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,6) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="近3年" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,7) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="成立以来" width="100" align="right" sortable :sort-method="sortByYearRate">
+          <template #default="{ row, $index }">
+            <span>{{ zhangFn(row.jd_historyPerformance,8) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="榜单" width="150" align="right" sortable>
+          <template #default="{ row, $index }">
+            <span>{{ turn_rankList(row) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="特色亮点" width="250" align="right" sortable>
+          <template #default="{ row, $index }">
+            <span>{{ turn_tagList(row) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="用户关注" width="250" align="right" sortable>
+          <template #default="{ row, $index }">
+            <span>{{ turn_userFocus(row) }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column label="投资方向" width="250" align="right" sortable>
+          <template #default="{ row, $index }">
+            <span>{{ turn_themeNameList(row) }}</span>
+          </template>
+        </el-table-column>
+
+
+        
 
         <el-table-column label="Operations" min-width="120">
           <template #default="{ row, $index }">

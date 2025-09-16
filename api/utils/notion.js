@@ -114,8 +114,10 @@ var marilArr = [
   '1834651803@qq.com', // 杜望
   '786260489@qq.com', // 基金-王凯华
   '1050210750@qq.com', // 彭贝贝
+  '936106274@qq.com',// 张晗 2025年9月16日20:20:12
 ];
-// marilArr = [marilArr[0]]
+// marilArr = [marilArr[0]];// 只开放自己
+// marilArr = [marilArr[0],marilArr[marilArr.length - 1]];// 开放测试人员
 
 var msg_arr = mail_title.replaceAll('；',';').split(';');
 var msg_str = '';

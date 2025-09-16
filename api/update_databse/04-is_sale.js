@@ -21,9 +21,11 @@ async function queryDatabase() {
     ]);
     console.log(`数据库中一共有${results.length}个基金`);
 
-    let index = 23205;
+    let index = 15962;
     let len = results.length;
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
+    len = index + 1;//
+    // 019511
     while (index < len) {
       let item = results[index];
       var isForSale = false; // 是否可买
@@ -215,23 +217,23 @@ async function queryDatabase() {
             jd_managerInfo: jd_managerInfo,// 基金经理
           };
           const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
-          try {
-            await connection.query(updateQuery_1, ['y', item.fund_code]);
+          // try {
+          //   await connection.query(updateQuery_1, ['y', item.fund_code]);
 
-            console.log(`[成功]--[可买]: is_sale`);
-          } catch (error) {// error.message
-            console.error(`[！！！！失败]--[可买] -- is_sale`, );
-            process.exit(1);// 0表示正常退出，1表示异常退出
-          }
+          //   console.log(`[成功]--[可买]: is_sale`);
+          // } catch (error) {// error.message
+          //   console.error(`[！！！！失败]--[可买] -- is_sale`, );
+          //   process.exit(1);// 0表示正常退出，1表示异常退出
+          // }
 
-          const updateQuery = 'UPDATE fund SET ? WHERE fund_code = ?';
-          try {
-            await connection.query(updateQuery, [updateFields, item.fund_code]);
-            console.log(`[成功]--[可买] 成功更新: jd_header_tag等`);
-          } catch (error) {
-            console.error(`[！！！！失败]--[可买] -- jd_header_tag等`, );
-            process.exit(1);// 0表示正常退出，1表示异常退出
-          }
+          // const updateQuery = 'UPDATE fund SET ? WHERE fund_code = ?';
+          // try {
+          //   await connection.query(updateQuery, [updateFields, item.fund_code]);
+          //   console.log(`[成功]--[可买] 成功更新: jd_header_tag等`);
+          // } catch (error) {
+          //   console.error(`[！！！！失败]--[可买] -- jd_header_tag等`, );
+          //   process.exit(1);// 0表示正常退出，1表示异常退出
+          // }
 
           /**
            * 交易规则
