@@ -19,6 +19,16 @@ mail_title = `中航、德邦、信澳 留一个即可，剩下的清仓，我�
 清仓 023350-诺安多策略混合C；
 清仓 018729-华夏智胜新锐股票C；
 注意 华泰柏瑞中证红利低波ETF联接C 仓位要降低；`;
+// 2025年09月16日14:08:30
+mail_title = `
+机器人 卖出5%，先锁定前期利润；
+人工智能 卖出5% 先锁定前期利润；
+东财云计算增强C 卖出20%(避免手续费部分)；
+纳斯达克 卖出5%(注意最近7天刚开买的不要动)；
+华安医药生物股票发起式C 微加仓；
+华夏国证自由现金流 微加仓；
+有余钱的红利继续买入哈
+`;
 
 /*
 清仓 012322-东财云计算增强C
@@ -30,7 +40,7 @@ https://fund.eastmoney.com/ztjj/#!syl/D/dt/syl/zjlr/FLOW/c/0/curr/BK000174-%E9%8
 
 */
 
-// mail_title = ``;
+
 // mail_title = ``;
 // mail_title = ``;
 // mail_title = ``;
@@ -100,6 +110,7 @@ var marilArr = [
   '786260489@qq.com', // 基金-王凯华
   '1050210750@qq.com', // 彭贝贝
 ];
+// marilArr = [marilArr[0]]
 
 var msg_arr = mail_title.replaceAll('；',';').split(';');
 var msg_str = '';

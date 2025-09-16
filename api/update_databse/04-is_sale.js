@@ -21,7 +21,7 @@ async function queryDatabase() {
     ]);
     console.log(`数据库中一共有${results.length}个基金`);
 
-    let index = 0;
+    let index = 23205;
     let len = results.length;
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
     while (index < len) {
@@ -221,6 +221,7 @@ async function queryDatabase() {
             console.log(`[成功]--[可买]: is_sale`);
           } catch (error) {// error.message
             console.error(`[！！！！失败]--[可买] -- is_sale`, );
+            process.exit(1);// 0表示正常退出，1表示异常退出
           }
 
           const updateQuery = 'UPDATE fund SET ? WHERE fund_code = ?';
@@ -229,6 +230,7 @@ async function queryDatabase() {
             console.log(`[成功]--[可买] 成功更新: jd_header_tag等`);
           } catch (error) {
             console.error(`[！！！！失败]--[可买] -- jd_header_tag等`, );
+            process.exit(1);// 0表示正常退出，1表示异常退出
           }
 
           /**
@@ -255,6 +257,7 @@ async function queryDatabase() {
           console.log(`[成功]--[不可买] -- is_sale 字段`);
         } catch (error) {
           console.error(`[！！！！失败][不可买] -- is_sale 字段`);
+          process.exit(1);// 0表示正常退出，1表示异常退出
         }
 
         const updateQuery =
@@ -264,6 +267,7 @@ async function queryDatabase() {
           console.log(`[成功]--[不可买] --- jd_header_tag 等字段`);
         } catch (error) {
           console.error(`[！！！！失败][不可买] -- jd_header_tag 等字段,`);
+          process.exit(1);// 0表示正常退出，1表示异常退出
         }
       }
 
