@@ -4,6 +4,7 @@
 const noText = require('../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../utils/noFundCode.js'); // 排除的基金代码
 const { pool } = require('../setting/pool.js');// 引入mysql连接池
+const {CustomDateFtt} = require('../CustomFn.js');
 
 // 获取数据库连接并执行查询的异步函数
 async function queryDatabase() {
@@ -21,11 +22,10 @@ async function queryDatabase() {
     ]);
     console.log(`数据库中一共有${results.length}个基金`);
 
-    let index = 15962;
+    let index = 0;
     let len = results.length;
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
-    len = index + 1;//
-    // 019511
+    // len = index + 2;// 只更新某几个
     while (index < len) {
       let item = results[index];
       var isForSale = false; // 是否可买
@@ -215,25 +215,26 @@ async function queryDatabase() {
             jd_chi_cang: jd_chi_cang,// 持仓详情(股票占比)
             jd_fund_archive: jd_fund_archive,// 基金档案
             jd_managerInfo: jd_managerInfo,// 基金经理
+            update_time: CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"),
           };
           const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
-          // try {
-          //   await connection.query(updateQuery_1, ['y', item.fund_code]);
+          try {
+            await connection.query(updateQuery_1, ['y', item.fund_code]);
 
-          //   console.log(`[成功]--[可买]: is_sale`);
-          // } catch (error) {// error.message
-          //   console.error(`[！！！！失败]--[可买] -- is_sale`, );
-          //   process.exit(1);// 0表示正常退出，1表示异常退出
-          // }
+            console.log(`[成功]--[可买]: is_sale`);
+          } catch (error) {// error.message
+            console.error(`[！！！！失败]--[可买] -- is_sale`,);
+            process.exit(1);// 0表示正常退出，1表示异常退出
+          }
 
-          // const updateQuery = 'UPDATE fund SET ? WHERE fund_code = ?';
-          // try {
-          //   await connection.query(updateQuery, [updateFields, item.fund_code]);
-          //   console.log(`[成功]--[可买] 成功更新: jd_header_tag等`);
-          // } catch (error) {
-          //   console.error(`[！！！！失败]--[可买] -- jd_header_tag等`, );
-          //   process.exit(1);// 0表示正常退出，1表示异常退出
-          // }
+          const updateQuery = 'UPDATE fund SET ? WHERE fund_code = ?';
+          try {
+            await connection.query(updateQuery, [updateFields, item.fund_code]);
+            console.log(`[成功]--[可买] 成功更新: jd_header_tag等`);
+          } catch (error) {
+            console.error(`[！！！！失败]--[可买] -- jd_header_tag等`,);
+            process.exit(1);// 0表示正常退出，1表示异常退出
+          }
 
           /**
            * 交易规则
@@ -253,13 +254,16 @@ async function queryDatabase() {
       }
       if (!isForSale) {
         // 京东金融上不可买，把这些字段置为 NULL
-        const updateQuery_1 = 'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
+
+        // 定义更新语句，包括 is_sale 和 update_time 字段
+        const updateQuery_1 = 'UPDATE fund SET is_sale = ?, update_time = ? WHERE fund_code = ?';
+        const currentTime = CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss");
         try {
-          await connection.query(updateQuery_1, ['n', item.fund_code]);
-          console.log(`[成功]--[不可买] -- is_sale 字段`);
+          await connection.query(updateQuery_1, ['n', currentTime, item.fund_code]);
+          console.log(`[成功]--[不可买] -- 更新 is_sale 和 update_time 字段`);
         } catch (error) {
-          console.error(`[！！！！失败][不可买] -- is_sale 字段`);
-          process.exit(1);// 0表示正常退出，1表示异常退出
+          console.error(`[！！！！失败][不可买] -- 更新 is_sale 和 update_time 字段`, error);
+          process.exit(1); // 异常退出
         }
 
         const updateQuery =
