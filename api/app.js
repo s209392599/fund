@@ -56,6 +56,8 @@ app.use((req, res, next) => {
 
   const whiteAdree = [
     'http://150.158.175.108:9999',
+    'http://150.158.175.108:9000',// 基金网站的使用
+    'http://150.158.175.108:9005',// 后台管理接口
     'http://localhost:9000',// Vue项目-主项目
     'http://localhost:9001',// Vue项目-后台
     'http://localhost:9999',// 本地测试
