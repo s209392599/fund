@@ -1,5 +1,4 @@
 <script setup>
-import { ref, reactive, markRaw, defineAsyncComponent, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
 
@@ -12,94 +11,17 @@ const info = reactive({
     {
       id: 1,
       show: true,
-      name: '涨幅预览',
+      name: '标准基金维护',
+      permissions: 'admin',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_01.vue'))),
       desc: ''
     },
     {
       id: 2,
       show: true,
-      name: '均线预览',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
-      desc: ''
-    },
-    {
-      id: 3,
-      show: true,
-      name: '今日收益',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
-      desc: ''
-    },
-    {
-      id: 4,
-      show: true,
-      name: '业绩表现',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
-      desc: ''
-    },
-    {
-      id: 10,
-      show: true,
-      name: '近来对比',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_10.vue'))),
-      desc: '标准基金的对比 和 手动挑选一些基金进行对比'
-    },
-    {
-      id: 11,
-      show: true,
-      name: '涨幅对比',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_11.vue'))),
-      desc: '手动挑选一些基金进行对比'
-    },
-    {
-      id: 5,
-      show: true,
-      name: '历史净值',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_05.vue'))),
-      desc: ''
-    },
-    {
-      id: 6,
-      show: true,
-      name: '地址导航',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_06.vue'))),
-      desc: ''
-    },
-    {
-      id: 7,
-      show: true,
-      name: '基金维护',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_07.vue'))),
-      desc: ''
-    },
-    {
-      id: 8,
-      show: true,
-      name: '标准基金维护',
-      permissions: 'admin',// 管理员才能有的
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_08.vue'))),
-      desc: ''
-    },
-    {
-      id: 9,
-      show: true,
       name: '人员维护',
-      permissions: 'admin',// 管理员才能有的
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_09.vue'))),
-      desc: ''
-    },
-    {
-      id: 12,
-      show: true,
-      name: '基金搜索',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
-      desc: ''
-    },
-    {
-      id: 13,
-      show: true,
-      name: '基金持仓',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
+      permissions: 'admin',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
       desc: ''
     },
   ],
