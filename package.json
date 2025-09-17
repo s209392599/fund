@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "cd amain && vite",
+    "houtai": "cd ahoutai && vite",
     "api": "cd api && yarn dev",
     "api/": "cd api && yarn dev",
     "build": "vite build",

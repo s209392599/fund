@@ -1,5 +1,10 @@
 
 /*
+http://150.158.175.108:9005/index.html  后台管理界面
+http://150.158.175.108:9000 基金前台页面
+
+
+
 预览界面 添加过往基金、华夏5G、中航等
 
 
@@ -290,6 +295,8 @@ https://saithink.top/guide/demo.html 模板网站
   WebContainer
   curl 的用法整理
   浏览器指纹
+  MQTT协议
+  OTA  longcat上搜索一下
 
   next
   nuxt

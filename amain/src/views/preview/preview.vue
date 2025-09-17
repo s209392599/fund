@@ -16,26 +16,33 @@ const info = reactive({
       desc: ''
     },
     {
+      id: 14,
+      show: true,
+      name: '标准基金',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_14.vue'))),
+      desc: ''
+    },
+    {
       id: 7,
       show: true,
       name: '基金维护',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_07.vue'))),
       desc: ''
     },
-    {
-      id: 2,
-      show: true,
-      name: '均线预览',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
-      desc: ''
-    },
-    {
-      id: 4,
-      show: true,
-      name: '业绩表现',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
-      desc: ''
-    },
+    // {
+    //   id: 2,
+    //   show: true,
+    //   name: '均线预览',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
+    //   desc: ''
+    // },
+    // {
+    //   id: 4,
+    //   show: true,
+    //   name: '业绩表现',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
+    //   desc: ''
+    // },
     {
       id: 10,
       show: true,
@@ -43,13 +50,13 @@ const info = reactive({
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_10.vue'))),
       desc: '标准基金的对比 和 手动挑选一些基金进行对比'
     },
-    {
-      id: 11,
-      show: true,
-      name: '涨幅对比',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_11.vue'))),
-      desc: '手动挑选一些基金进行对比'
-    },
+    // {
+    //   id: 11,
+    //   show: true,
+    //   name: '涨幅对比',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_11.vue'))),
+    //   desc: '手动挑选一些基金进行对比'
+    // },
     {
       id: 5,
       show: true,
@@ -71,13 +78,13 @@ const info = reactive({
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
       desc: ''
     },
-    {
-      id: 13,
-      show: true,
-      name: '基金持仓',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
-      desc: ''
-    },
+    // {
+    //   id: 13,
+    //   show: true,
+    //   name: '基金持仓',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
+    //   desc: ''
+    // },
   ],
   list_tabs: [],
   active_tab: null, // 初始为null，等数据准备好再设置
