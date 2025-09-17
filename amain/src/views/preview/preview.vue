@@ -1,5 +1,4 @@
 <script setup>
-import { ref, reactive, markRaw, defineAsyncComponent, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
 
@@ -17,17 +16,17 @@ const info = reactive({
       desc: ''
     },
     {
+      id: 7,
+      show: true,
+      name: '基金维护',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_07.vue'))),
+      desc: ''
+    },
+    {
       id: 2,
       show: true,
       name: '均线预览',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
-      desc: ''
-    },
-    {
-      id: 3,
-      show: true,
-      name: '今日收益',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
       desc: ''
     },
     {
@@ -63,29 +62,6 @@ const info = reactive({
       show: true,
       name: '地址导航',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_06.vue'))),
-      desc: ''
-    },
-    {
-      id: 7,
-      show: true,
-      name: '基金维护',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_07.vue'))),
-      desc: ''
-    },
-    {
-      id: 8,
-      show: true,
-      name: '标准基金维护',
-      permissions: 'admin',// 管理员才能有的
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_08.vue'))),
-      desc: ''
-    },
-    {
-      id: 9,
-      show: true,
-      name: '人员维护',
-      permissions: 'admin',// 管理员才能有的
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_09.vue'))),
       desc: ''
     },
     {

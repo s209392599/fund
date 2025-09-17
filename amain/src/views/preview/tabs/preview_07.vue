@@ -34,9 +34,9 @@ const rules = {
 
 // 获取所有用户
 const getAllUser = () => {
-  server_fund_get_all_user_info({}).then(res => {
-    info.tableData = res.data;
-  })
+  // server_fund_get_all_user_info({}).then(res => {
+  //   info.tableData = res.data;
+  // })
 }
 getAllUser();
 
@@ -80,7 +80,7 @@ const btn_del = (row, $index) => {
     .catch(() => { })
 }
 // 新增
-const addUser = () => {
+const AddFn = () => {
   console.log("新增");
   info.update_flag = 'add';// 标识新增
   info.dialogFormVisible = true;// 打开弹窗
@@ -139,7 +139,7 @@ const onSubmit = () => {
 <template>
   <div class="page-wrapper">
     <div class="flex pb-5">
-      <el-button type="primary" size="small" @click="addUser()">新增用户</el-button>
+      <el-button type="primary" size="small" @click="AddFn()">新增基金</el-button>
     </div>
 
     <el-table :data="info.tableData" border :row-class-name="tableRowClassName" style="width: 100%" height="500">
