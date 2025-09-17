@@ -10,19 +10,23 @@ const info = reactive({
   list_default: [
     {
       id: 1,
-      show: true,
       name: '标准基金维护',
-      permissions: 'admin',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_01.vue'))),
-      desc: ''
     },
     {
       id: 2,
-      show: true,
       name: '人员维护',
-      permissions: 'admin',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
-      desc: ''
+    },
+    {
+      id: 3,
+      name: '邮件公告-操作',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
+    },
+    {
+      id: 4,
+      name: '邮件公告-其它',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
     },
   ],
   list_tabs: [],
@@ -36,12 +40,6 @@ if ([null, '', undefined].includes(email)) {
   router.push('/');
 } else {
   console.log('账号为：', email);
-
-  if (['209392599@qq.com'].includes(email)) {
-    info.list_tabs = info.list_default.filter(item => item.show);
-  } else {
-    info.list_tabs = info.list_default.filter(item => item.show && !item.permissions);
-  }
 
   // 从本地存储获取active_tab，确保它在可用选项中
   const savedTab = localStorage.getItem('preview_active_tab');
