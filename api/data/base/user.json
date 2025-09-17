@@ -169,13 +169,11 @@
       "desc": "10月9日卖出 2025年09月02日14:26:29",
       "fixed": 100,
       "type": "量化"
-    }
-  ],
-  "histroy": [
+    },
     {
       "code": "018957",
       "name": "中航机遇领航混合发起C",
-      "zhang_url": "服务器监听",
+      "zhang_url": "history-服务器监听",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "",
@@ -185,7 +183,7 @@
     {
       "code": "016371",
       "name": "信澳业绩驱动混合C",
-      "zhang_url": "服务器监听",
+      "zhang_url": "history-服务器监听",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "取消定投，10月11号 合并中航",
@@ -195,7 +193,7 @@
     {
       "code": "018729",
       "name": "华夏智胜新锐股票C",
-      "zhang_url": "服务器监听",
+      "zhang_url": "history-服务器监听",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "9月29日卖出 2025年08月25日15:23:16",
@@ -205,7 +203,7 @@
     {
       "code": "019103",
       "name": "景顺长城恒生消费ETF联接",
-      "zhang_url": "",
+      "zhang_url": "history",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "9-19卖出",
@@ -215,7 +213,7 @@
     {
       "code": "023350",
       "name": "诺安多策略混合C",
-      "zhang_url": "服务器监听",
+      "zhang_url": "history-服务器监听",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "10月9日卖出 2025年09月02日14:26:29",
@@ -225,14 +223,25 @@
     {
       "code": "020726",
       "name": "建信灵活配置混合C",
-      "zhang_url": "服务器监听",
+      "zhang_url": "history-服务器监听",
       "point_line_top": null,
       "point_line_down": null,
       "desc": "10月9日卖出 2025年09月04日15:03:33",
       "fixed": 100,
       "type": "量化"
+    },
+    {
+      "code": "008327",
+      "name": "东财通信C",
+      "zhang_url": "history",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 100,
+      "type": "通信"
     }
   ],
+  "histroy": [],
   "data_字段说明": {
     "email": "邮箱；用于登录时的用户名",
     "name": "姓名；用于备注",

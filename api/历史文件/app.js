@@ -3,23 +3,11 @@ const fs = require('fs');
 const express = require('express');
 const cors = require('cors');
 
-/* 应用IP速率限制
-const rateLimit = require('express-rate-limit'); // 引入速率限
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15分钟
-  max: 200, // 每个IP在窗口期内最多200个请求
-  standardHeaders: true,
-  legacyHeaders: false,
-  message: '请求过于频繁，请稍后再试。'
-});
-app.use(limiter);
-*/
-
 const app = express();
 const PORT = process.env.PORT || 9999;
 
 // 允许任何域访问
-app.use(cors());
+// app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'static')));
 
@@ -36,9 +24,8 @@ app.use((req, res, next) => {
   const machineSecretToken = req.get('X-Machine-Secret'); // 用于验证您特定Mac的自定义请求头
   const machineSecret = 'C02CN1R4MD6Q'; // mac电脑的序列号
   // wmic csproduct get uuid  在windows上获取uuid
-  console.log('-------------------------------------');
-  console.log('request_origin => ', request_origin);
-  console.log('request_referer => ', request_referer);
+  // console.log('-------------------------------------');
+  // console.log('request_origin => ', request_origin);
 
   // 检查是否是OPTIONS预检请求，直接通过
   if (req.method === 'OPTIONS') {
@@ -54,16 +41,10 @@ app.use((req, res, next) => {
     return res.sendStatus(204);
   }
 
-  const whiteAdree = [
-    'http://150.158.175.108:9999',
-    'http://localhost:9000',// Vue项目
-    'http://localhost:9999',// 本地测试
-    'http://127.0.0.1:9001',// live server插件
-  ];
-
-  if (request_origin) {
+  if(request_origin) {
+    const list_2 = ['http://150.158.175.108:9999', 'http://localhost:9999'];
     let flag_2 = false;
-    whiteAdree.forEach((item) => {
+    list_2.forEach((item) => {
       if (request_origin.startsWith(item)) {
         flag_2 = true;
       }
@@ -72,9 +53,10 @@ app.use((req, res, next) => {
       return next(); // 允许白名单
     }
   }
-  if (request_referer) {
+  if(request_referer){
+    const list_3 = ['http://150.158.175.108:9999', 'http://localhost:9999'];
     let flag_3 = false;
-    whiteAdree.forEach((item) => {
+    list_3.forEach((item) => {
       if (request_referer.startsWith(item)) {
         flag_3 = true;
       }
@@ -89,9 +71,7 @@ app.use((req, res, next) => {
   }
 
   return res.status(403).send({
-    code: '403',
-    data: [],
-    msg: '拒绝非正规途径访问！',
+    code:'403',data:[],msg: '拒绝非正规途径访问！'
   });
 });
 

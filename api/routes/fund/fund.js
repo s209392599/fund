@@ -235,7 +235,7 @@ router.post('/fund_history_data', (req, res) => {
   }
 });
 
-// 
+//
 router.post('/fund_detailPageInfoWithNoPin', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
 
@@ -360,10 +360,12 @@ router.post('/fund_today_rate_by_timer', (req, res) => {
 // 查询-公共的基金数据
 router.post('/fund_public_fund_query', (req, res) => {
   const userData = getUserJson() || {};
+  console.log('进入到了公共基金',userData.public_fund.length)
   res.send({
     code: 200,
     msg: '成功',
     data: userData.public_fund || [],
+    histroy: userData.histroy || [],
   });
 });
 // 新增-公共的基金数据
@@ -550,7 +552,7 @@ router.post('/fund_search_bytiantian', (req, res) => {
         datas = datas.filter((item) => !noFundCode.includes(item.CODE));// 排除的基金代码
 
         const turn_data = datas.map((item) => {
-          return {  
+          return {
             code: item.CODE,
             name: item.NAME,
           };

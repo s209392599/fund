@@ -174,7 +174,12 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="desc" label="备注" width="300" show-overflow-tooltip></el-table-column>
+      <el-table-column prop="desc" label="备注" width="300" show-overflow-tooltip>
+        <template v-slot="{ row }">
+          <span v-if="row.zhang_url.startsWith('history')" style="color:#876ad2;font-weight: 700;">历史数据</span>
+          <span v-else>{{row.desc}}</span>
+        </template>
+      </el-table-column>
 
     </el-table>
   </div>
@@ -289,36 +294,41 @@
       app.mount('#app');
     }
 
-    fetch('http://150.158.175.108:9999/fund_public_fund').then(res => res.json()).then(res => {
-      if (res.code === 200) {
-        let arr_1 = res.data || [];
-        let arr_2 = [];
-        let arr_3 = [];
+    fetch('http://150.158.175.108:9999/fund_public_fund_query', { method: 'post' })
+      .then(res => res.json())
+      .then(res => {
+        if (res.code === 200) {
+          let arr_1 = res.data || [];
+          let arr_2 = [];// 常规要展示图形的
+          let arr_3 = [];// 需要服务器监听涨幅 或者读取不到的
 
-        arr_1.forEach(item => {
-          item.zhang_today = '-';// 浸提涨幅
-          item.zhang_his = [];// 历史涨幅
+          arr_1.forEach(item => {
+            item.zhang_today = '-';// 浸提涨幅
+            item.zhang_his = [];// 历史涨幅
 
-          if (item.zhang_url === '服务器监听') {
-            arr_3.push(item)
-          } else if (!['不提供'].includes(item.zhang_url)) {
-            arr_2.push(item)
-          }
+            // ['服务器监听', 'histroy'].includes(item.zhang_url)
+            if (item.zhang_url === '服务器监听' || item.zhang_url.startsWith('history')) {
+              arr_3.push(item)
+            } else if (!['不提供'].includes(item.zhang_url)) {
+              arr_2.push(item)
+            }
 
-        });
-        info.arr_1 = [...arr_1];
-        info.arr_2 = [...arr_2];
-        info.arr_3 = [...arr_3];
+          });
+          console.log('arr_2', arr_2);
 
-        render_1(info.arr_2);// 常规的
-        initVue3();// 初始化表格
-      } else {
-        ElementPlus.ElMessage.error(res.msg || res.message || '数据出错')
-      }
+          info.arr_1 = [...arr_1];
+          info.arr_2 = [...arr_2];
+          info.arr_3 = [...arr_3];
 
-    }).catch(err => {
-      ElementPlus.ElMessage.error(err.msg || err.message || '程序报错')
-    })
+          render_1(info.arr_2);// 常规的
+          initVue3();// 初始化表格
+        } else {
+          ElementPlus.ElMessage.error(res.msg || res.message || '数据出错')
+        }
+
+      }).catch(err => {
+        ElementPlus.ElMessage.error(err.msg || err.message || '程序报错')
+      })
 
     // 常规的
     function render_1(arr) {
