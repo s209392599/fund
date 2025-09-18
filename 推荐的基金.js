@@ -5,6 +5,29 @@ http://150.158.175.108:9000 基金前台页面
 
 加入操作历史的查询；只保留最近的50条；
 
+https://lc.jr.jd.com/finance/funddetail/home/?fundCode=000844  不可买
+
+
+SELECT * 
+FROM fund 
+WHERE is_fundgz = 'y' 
+  AND is_fundgz IS NOT NULL
+  AND no_keyword = 'y' 
+  AND no_keyword IS NOT NULL
+  AND is_sale = 'y' 
+  AND is_sale IS NOT NULL
+  AND RIGHT(fund_name, 1) != 'A';
+  
+SELECT * 
+FROM fund 
+WHERE is_fundgz = 'y' 
+  AND no_keyword = 'y' 
+  AND is_sale = 'y' 
+  AND RIGHT(fund_name, 1) != 'A'
+  AND UPPER(fund_type_name) NOT LIKE '%债%';
+
+
+
 
 预览界面 添加过往基金、华夏5G、中航等
 

@@ -25,10 +25,10 @@ async function queryDatabase() {
     let index = 0;
     let len = results.length;
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
-    // len = index + 2;// 只更新某几个
+    // len = index + 3;// 只更新某几个
     while (index < len) {
       let item = results[index];
-      var isForSale = false; // 是否可买
+      var is_sale = false; // 是否可买
       console.log('----------------------------');
       console.log(`正在更新 ${index + 1} /${len} --- ${results[index].fund_code} - ${results[index].fund_name}`);
       if (item.no_keyword === 'y' && item.is_fundgz === 'y') {
@@ -38,8 +38,13 @@ async function queryDatabase() {
 
         let resultData = res.resultData || {};
         let datas = resultData.datas || {};
-        isForSale = datas.isForSale || false; // 是否可买
-        if (isForSale) {
+
+        var bottomButtonOfItem = datas.bottomButtonOfItem ||{};
+        var purchaseButton = bottomButtonOfItem.purchaseButton || {};
+        console.log('purchaseButton',purchaseButton.disable,!!!purchaseButton.disable);
+        
+        is_sale = !!!purchaseButton.disable; // 是否可买
+        if (is_sale) {
           /**
            * 头部标签区
            */
@@ -252,7 +257,7 @@ async function queryDatabase() {
           // fundDiagnosisOfItem.fundDiagnosisData  收益能力 夏普比率 最大回撤 波动率
         }
       }
-      if (!isForSale) {
+      if (!is_sale) {
         // 京东金融上不可买，把这些字段置为 NULL
 
         // 定义更新语句，包括 is_sale 和 update_time 字段
