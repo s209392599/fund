@@ -35,6 +35,13 @@ mail_title = `
 易方达机器人ETF联接C 卖出5%；
 加仓 博时上证科创板人工智能；
 `;
+// 2025年09月18日
+mail_title = `
+机器人、人工智能 继续出5%；
+东财云计算增强C 卖出5%；
+富国红利、电池 加仓；
+永赢科技智选混合发起C(022365) 不要底仓，开启小量日定投；
+`;
 
 /*
 清仓 012322-东财云计算增强C
@@ -47,7 +54,8 @@ https://fund.eastmoney.com/ztjj/#!syl/D/dt/syl/zjlr/FLOW/c/0/curr/BK000174-%E9%8
 */
 
 
-// mail_title = ``;
+
+
 // mail_title = ``;
 // mail_title = ``;
 // mail_title = ``;
@@ -121,7 +129,7 @@ var marilArr = [
 // marilArr = [marilArr[0]];// 只开放自己
 // marilArr = [marilArr[0],marilArr[marilArr.length - 1]];// 开放测试人员
 
-var msg_arr = mail_title.replaceAll('；',';').split(';');
+var msg_arr = mail_title.trim().replaceAll('；',';').split(';');
 var msg_str = '';
 msg_arr.forEach(v => msg_str +=`<div>${v}<div>`)
 
