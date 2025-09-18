@@ -26,6 +26,25 @@ const updateUserJson = (newJsonData) => {
   }
 };
 
+// 获取 标准基金 数据
+const getPublicFundJson = () => {
+  const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const jsonData = JSON.parse(fileContent);
+  return jsonData;
+};
+// 更新 标准基金 数据
+const updatePublicFundJson = (newJsonData) => {
+  const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.log('err', err);
+    return false;
+  }
+};
+
 // 定义一个GET示例请求
 router.get('/testget', (req, res) => {
   const content = req.query.content || '';
@@ -359,19 +378,17 @@ router.post('/fund_today_rate_by_timer', (req, res) => {
 
 // 查询-公共的基金数据
 router.post('/fund_public_fund_query', (req, res) => {
-  const userData = getUserJson() || {};
-  console.log('进入到了公共基金',userData.public_fund.length)
+  const userData = getPublicFundJson() || {};
   res.send({
     code: 200,
     msg: '成功',
     data: userData.public_fund || [],
-    histroy: userData.histroy || [],
   });
 });
 // 新增-公共的基金数据
 router.post('/fund_public_fund_add', (req, res) => {
   const { form = {} } = req.body;
-  const userData = getUserJson() || {};
+  const userData = getPublicFundJson() || {};
   const public_fund = userData.public_fund || [];
   public_fund.push(form);
 
@@ -393,7 +410,7 @@ router.post('/fund_public_fund_add', (req, res) => {
 // 排序-公共的基金数据
 router.post('/fund_public_fund_sort', (req, res) => {
   const { index_new,index_old } = req.body;
-  const userData = getUserJson() || {};
+  const userData = getPublicFundJson() || {};
   const public_fund = userData.public_fund || [];
 
   const [item] = public_fund.splice(index_old, 1);
@@ -417,7 +434,7 @@ router.post('/fund_public_fund_sort', (req, res) => {
 // 修改-公共的基金数据
 router.post('/fund_public_fund_update', (req, res) => {
   const { form = {} } = req.body;
-  const userData = getUserJson() || {};
+  const userData = getPublicFundJson() || {};
   const public_fund = userData.public_fund || [];
 
   const dIndex = public_fund.findIndex((item) => item.code === form.code);
@@ -430,7 +447,7 @@ router.post('/fund_public_fund_update', (req, res) => {
   } else {
     public_fund[dIndex] = form;
 
-    const result = updateUserJson(USER_JSON);
+    const result = updatePublicFundJson(USER_JSON);
     console.log('result', result);
 
     if (result) {
@@ -452,11 +469,11 @@ router.post('/fund_public_fund_update', (req, res) => {
 // 删除-公共的基金数据
 router.post('/fund_public_fund_delete', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
-  const userData = getUserJson() || {};
+  const userData = getPublicFundJson() || {};
   let public_fund = userData.public_fund || [];
   userData.public_fund = public_fund.filter(v => v.code !== fundcode);
 
-  const result = updateUserJson(userData);
+  const result = updatePublicFundJson(userData);
   if (result) {
     res.send({
       code: 200,

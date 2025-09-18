@@ -64,6 +64,6 @@ const onSubmit = () => {
 <style scoped>
 .login-form {
   width: 300px;
-  margin: 100px auto;
+  margin: 100px auto 0;
 }
 </style>
