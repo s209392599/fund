@@ -43,7 +43,7 @@ async function queryDatabase() {
         var purchaseButton = bottomButtonOfItem.purchaseButton || {};
         console.log('purchaseButton',purchaseButton.disable,!!!purchaseButton.disable);
         
-        is_sale = !!!purchaseButton.disable; // 是否可买
+        is_sale = purchaseButton.text === "买入"; // 是否可买
         if (is_sale) {
           /**
            * 头部标签区
