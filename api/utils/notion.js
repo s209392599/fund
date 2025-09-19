@@ -42,7 +42,17 @@ mail_title = `
 富国红利、电池 加仓；
 永赢科技智选混合发起C(022365) 不要底仓，开启小量日定投；
 `;
+// 2025年09月19日13:38:07
+mail_title = `
+华安医药生物股票发起式C 今天加仓15-30%，后续不再定投，10月中旬出货；
+易方达上证科创板综合增强C(023999) 买入10天底仓，开启定投；
+易方达机器人ETF联接C 加仓10%；
+人工智能 加仓5%；
+汇添富中证电池主题 加仓10%；
 
+建议：红利排名更正为 富国洪流、自由现金流、恒指科技指数、华泰红利；
+建议：取消沪深300、中证500等其它泛指的，修改为科创综指；
+`;
 /*
 清仓 012322-东财云计算增强C
 
@@ -56,7 +66,7 @@ https://fund.eastmoney.com/ztjj/#!syl/D/dt/syl/zjlr/FLOW/c/0/curr/BK000174-%E9%8
 
 
 
-// mail_title = ``;
+
 // mail_title = ``;
 // mail_title = ``;
 
@@ -126,7 +136,7 @@ var marilArr = [
   '936106274@qq.com',// 张晗 2025年9月16日20:20:12
   '2992059190@qq.com',// 张盈 2025年09月17日11:28:49
 ];
-// marilArr = [marilArr[0]];// 只开放自己
+marilArr = [marilArr[0]];// 只开放自己
 // marilArr = [marilArr[0],marilArr[marilArr.length - 1]];// 开放测试人员
 
 var msg_arr = mail_title.trim().replaceAll('；',';').split(';');
@@ -196,10 +206,32 @@ const mailOptions = {
   // ],
 };
 
+function getFormattedDate() {
+    var date = new Date();
+
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1; // getMonth() 返回 0-11，所以需要加1
+    var day = date.getDate();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    // 使用三元运算符确保月、日、小时、分钟和秒都是两位数
+    month = month < 10 ? '0' + month : month;
+    day = day < 10 ? '0' + day : day;
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    // 拼接成 YYYY-MM-DD HH:MM:SS 格式
+    return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+}
+
 // 发送邮件
 transporter.sendMail(mailOptions, (error, info) => {
   if (error) {
     return console.log('发送失败:', error);
   }
-  console.log('邮件已发送: %s', info.messageId);
+  // console.log('邮件已发送: %s', info.messageId, getFormattedDate());
+  console.log('邮件已发送: %s', getFormattedDate());
 });

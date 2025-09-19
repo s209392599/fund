@@ -1,28 +1,36 @@
 
 /*
+搜索 和 每天更新数据的时候，直接略过 类型中包含债的、A类的
+然后
+
+
 http://150.158.175.108:9005/index.html  后台管理界面
 http://150.158.175.108:9000 基金前台页面
+
+https://github.com/kubero-dev/ladder  开源的网页抓取查看工具。用户输入网址，它会自动将网页抓取展示出来。
+
+如果长时间不操作出现屏保 或者 出现登录界面保护隐私，可好？
 
 加入操作历史的查询；只保留最近的50条；
 
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=000844  不可买
 
 
-SELECT * 
-FROM fund 
-WHERE is_fundgz = 'y' 
+SELECT *
+FROM fund
+WHERE is_fundgz = 'y'
   AND is_fundgz IS NOT NULL
-  AND no_keyword = 'y' 
+  AND no_keyword = 'y'
   AND no_keyword IS NOT NULL
-  AND is_sale = 'y' 
+  AND is_sale = 'y'
   AND is_sale IS NOT NULL
   AND RIGHT(fund_name, 1) != 'A';
-  
-SELECT * 
-FROM fund 
-WHERE is_fundgz = 'y' 
-  AND no_keyword = 'y' 
-  AND is_sale = 'y' 
+
+SELECT *
+FROM fund
+WHERE is_fundgz = 'y'
+  AND no_keyword = 'y'
+  AND is_sale = 'y'
   AND RIGHT(fund_name, 1) != 'A'
   AND UPPER(fund_type_name) NOT LIKE '%债%';
 
