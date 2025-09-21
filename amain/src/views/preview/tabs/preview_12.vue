@@ -2,7 +2,7 @@
 console.log('src/views/preview/tabs/preview_12.vue');
 
 const info = reactive({
-  text: '通信',
+  text: '科创板综合',
   step: 1,
   tableData: [],// 列表数据
 });
@@ -204,7 +204,7 @@ const getAllInfo = () => {
     info.tableData = [];
     console.log(err.message);
   }).finally(() => {
-    if(info.tableData.length){
+    if (info.tableData.length) {
       info.step = 4;
     }
   })
@@ -311,7 +311,7 @@ const turn_tagList = (row = {}) => {
   const highlights = jd_header_tag.highlights || {};
   const tagList = highlights.tagList || [];
   var str = '';
-  if(highlights.hasOwnProperty('morningstarRating')){
+  if (highlights.hasOwnProperty('morningstarRating')) {
     str += `晨星${highlights.morningstarRating}星；`;
   }
 
@@ -367,49 +367,49 @@ const turn_themeNameList = (row = {}) => {
 
         <el-table-column label="近1周" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,1) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 1) }}</span>
           </template>
         </el-table-column>
 
         <el-table-column label="近1月" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,2) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 2) }}</span>
           </template>
         </el-table-column>
 
         <el-table-column label="近3月" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,3) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 3) }}</span>
           </template>
         </el-table-column>
 
         <el-table-column label="近6月" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,4) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 4) }}</span>
           </template>
         </el-table-column>
 
         <el-table-column label="近1年" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,5) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 5) }}</span>
           </template>
         </el-table-column>
 
         <el-table-column label="今年以来" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,6) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 6) }}</span>
           </template>
         </el-table-column>
 
         <el-table-column label="近3年" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,7) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 7) }}</span>
           </template>
         </el-table-column>
 
         <el-table-column label="成立以来" width="100" align="right" sortable :sort-method="sortByYearRate">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance,8) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 8) }}</span>
           </template>
         </el-table-column>
 
@@ -438,7 +438,7 @@ const turn_themeNameList = (row = {}) => {
         </el-table-column>
 
 
-        
+
 
         <el-table-column label="Operations" min-width="120">
           <template #default="{ row, $index }">

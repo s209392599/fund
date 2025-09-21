@@ -6,6 +6,10 @@
 http://150.158.175.108:9005/index.html  后台管理界面
 http://150.158.175.108:9000 基金前台页面
 
+https://github.com/kubero-dev/ladder  开源的网页抓取查看工具。用户输入网址，它会自动将网页抓取展示出来。
+
+如果长时间不操作出现屏保 或者 出现登录界面保护隐私，可好？
+
 加入操作历史的查询；只保留最近的50条；
 
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=000844  不可买
