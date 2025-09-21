@@ -104,6 +104,24 @@ router.post('/fund_login', (req, res) => {
   });
 });
 
+// 后台登录
+router.post('/fund_admin_login', (req, res) => {
+  const { email = '', password = '' } = req.body;
+  if(email === '2@qq.com' && password === 'qaz123..'){
+    res.send({
+    code: 200,
+    msg: '登录成功',
+    data: [],
+  });
+  }else{
+    res.send({
+      code: 400,
+      msg: '邮箱或密码格式不对',
+      data: [],
+    });
+  }
+});
+
 // 获取所有用户
 router.post('/fund_get_all_user_info', (req, res) => {
   const userData = (getUserJson() || {}).data || [];
@@ -447,7 +465,7 @@ router.post('/fund_public_fund_update', (req, res) => {
   } else {
     public_fund[dIndex] = form;
 
-    const result = updatePublicFundJson(USER_JSON);
+    const result = updatePublicFundJson(userData);
     console.log('result', result);
 
     if (result) {

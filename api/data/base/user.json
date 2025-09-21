@@ -1,549 +1,265 @@
 {
-  "data_字段说明": {
-    "email": "邮箱；用于登录时的用户名",
-    "name": "姓名；用于备注",
-    "update_time": "更新时间；",
-    "telphone": "电话；",
-    "sub_mail": "子邮箱；后面看是否可以给亲属绑定一个",
-    "password": "密码；",
-    "fund": "自己私有的基金"
+  "file_desc": "标准基金配置文件",
+  "public_fund_字段说明": {
+    "code": "007467",
+    "name": "华泰柏瑞中证红利低波ETF联接C",
+    "zhang_url": "涨幅预览的url,空为默认的基金官网图",
+    "point_line_top": "设置的上限提醒值",
+    "point_line_down": "设置的下限提醒值",
+    "desc": "自己的额外备注",
+    "fixed": "定投金额；0为不定投",
+    "type": "基金的类型"
   },
-  "data": [
+  "public_fund": [
     {
-      "email": "209392599@qq.com",
-      "name": "郭坤",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "qaz123..",
-      "fund": [
-        {
-          "code": "019736",
-          "name": "宝盈纳斯达克100指数发起",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "fixed": 50,
-          "type": "美股"
-        },
-        {
-          "code": "024158",
-          "name": "鹏华沪深300指数量化增强I",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "fixed": 50,
-          "type": "量化"
-        },
-        {
-          "code": "018178",
-          "name": "华夏科创50指数增强C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "fixed": 50,
-          "type": "指数"
-        },
-        {
-          "code": "021030",
-          "name": "汇添富国证港股通创新药ETF发起式联接A",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "fixed": 50,
-          "type": "创新药"
-        },
-        {
-          "code": "008164",
-          "name": "南方红利低波50ETF联接C",
-          "short_name": "",
-          "zhang_url": "https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&nid=1.515450",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "2025年08月07日10:33:14 已合并到007467，后续不再买入",
-          "fixed": 30,
-          "type": "红利"
-        }
-      ],
-      "active": "",
+      "code": "019260",
+      "name": "富国恒生红利ETF联接A",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "流动仓-长期存在",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "023918",
+      "name": "华夏国证自由现金流ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "流动仓",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "020989",
+      "name": "南方恒生科技指数C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "流动仓",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "007467",
+      "name": "华泰柏瑞中证红利低波ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "流动仓",
+      "fixed": 30,
+      "type": "红利"
+    },
+    {
+      "code": "020973",
+      "name": "易方达机器人ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "机器人"
+    },
+    {
+      "code": "023521",
+      "name": "博时上证科创板人工智能ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "人工智能"
+    },
+    {
+      "code": "018561",
+      "name": "中信保诚多策略混合(LOF)C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 100,
+      "type": "量化"
+    },
+    {
+      "code": "002112",
+      "name": "德邦鑫星价值灵活配置混合C",
+      "type": "量化",
+      "zhang_url": "服务器监听",
+      "fixed": 50,
+      "point_line_down": null,
+      "point_line_top": null,
+      "desc": "德邦、中航、信澳 三选一"
+    },
+    {
+      "code": "012863",
+      "name": "汇添富中证电池主题ETF发起式联接C",
+      "type": "电池",
+      "zhang_url": "",
+      "fixed": "50",
+      "point_line_down": "0.6",
+      "point_line_top": "0.9",
+      "desc": "09-05：开启两周的小定投，11月份出货"
+    },
+    {
+      "code": "022425",
+      "name": "广发中证A500ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "指数"
+    },
+    {
+      "code": "023999",
+      "name": "易方达上证科创板综合增强C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "指数"
+    },
+    {
+      "code": "160424",
+      "name": "华安创业板50ETF联接C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "指数"
+    },
+    {
+      "code": "016858",
+      "name": "国金量化多因子股票C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "9月29日卖出 2025年08月25日15:23:19",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "017437",
+      "name": "华宝纳斯达克精选股票发起式",
+      "zhang_url": "不提供",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "",
+      "fixed": 50,
+      "type": "美股"
+    },
+    {
+      "code": "022691",
+      "name": "华安医药生物股票发起式C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "停止买入，10月11日之后择机卖出",
+      "fixed": 50,
+      "type": "医药"
+    },
+    {
+      "code": "012322",
+      "name": "东财云计算增强C",
+      "zhang_url": "",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "10月10日卖出",
+      "fixed": 50,
+      "type": "云计算"
+    },
+    {
+      "code": "002834",
+      "name": "华夏新锦绣混合C",
+      "zhang_url": "服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "10月9日卖出 2025年09月02日14:26:29",
+      "fixed": 100,
+      "type": "量化"
+    },
+    {
+      "code": "018957",
+      "name": "中航机遇领航混合发起C",
+      "type": "量化",
+      "zhang_url": "history-服务器监听",
+      "fixed": 50,
+      "point_line_down": null,
+      "point_line_top": null,
+      "desc": "德邦、中航、信澳 三选一"
+    },
+    {
+      "code": "016371",
+      "name": "信澳业绩驱动混合C",
+      "type": "科技成长",
+      "zhang_url": "history-服务器监听",
+      "fixed": 50,
+      "point_line_down": null,
+      "point_line_top": null,
+      "desc": "德邦、中航、信澳 三选一"
+    },
+    {
+      "code": "018729",
+      "name": "华夏智胜新锐股票C",
+      "type": "量化",
+      "zhang_url": "history-服务器监听",
+      "fixed": 50,
+      "point_line_down": null,
+      "point_line_top": null,
+      "desc": "9-29 卖出 2025年08月25日15:23:16"
+    },
+    {
+      "code": "019103",
+      "name": "景顺长城恒生消费ETF联接",
+      "type": "消费",
+      "zhang_url": "history",
+      "fixed": 50,
+      "point_line_down": null,
+      "point_line_top": null,
+      "desc": "9-19卖出"
+    },
+    {
+      "code": "023350",
+      "name": "诺安多策略混合C",
+      "zhang_url": "history-服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "10月9日卖出 2025年09月02日14:26:29",
+      "fixed": 50,
+      "type": "量化"
+    },
+    {
+      "code": "020726",
+      "name": "建信灵活配置混合C",
+      "zhang_url": "history-服务器监听",
+      "point_line_top": null,
+      "point_line_down": null,
+      "desc": "10月9日卖出 2025年09月04日15:03:33",
+      "fixed": 100,
+      "type": "量化"
+    },
+    {
+      "code": "008327",
+      "name": "东财通信C",
+      "type": "通信",
+      "zhang_url": "history",
+      "fixed": 100,
+      "point_line_down": null,
+      "point_line_top": null,
+      "desc": "008087-中证华夏5G"
+    },
+    {
+      "code": "008087",
+      "name": "华夏中证5G通信主题ETF联接C",
+      "type": "通信",
+      "zhang_url": "",
+      "fixed": "20",
+      "point_line_down": "1.8",
+      "point_line_top": "2.02",
       "desc": ""
-    },
-    {
-      "email": "xuebinghui@bmrb.com.cn",
-      "name": "薛炳辉",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "bJR8",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "cdk1025@foxmail.com",
-      "name": "Aiden",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "f7Um",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "liucuimin1234@163.com",
-      "name": "刘翠敏",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "pI1k",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "2774710531@qq.com",
-      "name": "王亚娟",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "kw0L",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "245813892@qq.com",
-      "name": "邱欣妍",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "mtZ5",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "876844823@qq.com",
-      "name": "于豆豆",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "1LEx",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1315678738@qq.com",
-      "name": "Nickii",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "hGR2",
-      "fund": [
-        {
-          "code": "008348",
-          "name": "中信建投甄选混合C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "股票型"
-        },
-        {
-          "code": "013331",
-          "name": "富国中证1000指数增强(LOF)C",
-          "short_name": "",
-          "zhang_url": "",
-          "point_line_top": null,
-          "point_line_down": null,
-          "desc": "",
-          "type": "指数"
-        }
-      ],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1437170263@qq.com",
-      "name": "王旭豪",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "jSZ5",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "690002524@qq.com",
-      "name": "袁梦",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "o5mW",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "309372591@qq.com",
-      "name": "万万",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "lE2A",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "hgzc_0703@qq.com",
-      "name": "侯沛源",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "JNy9",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "532323146@qq.com",
-      "name": "林杏",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "la7K",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1985160325@qq.com",
-      "name": "赵万隆",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "nsY8",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "2294816863@qq.com",
-      "name": "杜亚谦",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "6Gmj",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "564749573@qq.com",
-      "name": "谢孟初",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "gB6y",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "724803869@qq.com",
-      "name": "吴昊",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "1oEG",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "505643270@qq.com",
-      "name": "汪尚",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "RwT9",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "512220559@qq.com",
-      "name": "王梦琳",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "cqG1",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "491719804@qq.com",
-      "name": "吴美燕",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "tD2B",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "944148863@qq.com",
-      "name": "王文泉",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "Q6m6",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1023447847@qq.com",
-      "name": "曾楠",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "3waV",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "397275461@qq.com",
-      "name": "鲍辰路",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "lFt6",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "858627452@qq.com",
-      "name": "张恒星",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "s6S0",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "893261449@qq.com",
-      "name": "杨国宇",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "cY7b",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1257995147@qq.com",
-      "name": "饶东禹",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "oWe7",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "381851897@qq.com",
-      "name": "张洪亮",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "4iBs",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "2216200137@qq.com",
-      "name": "刘成阁",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "uHw4",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "992131703@qq.com",
-      "name": "王梦娜",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "J9yE",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1162602300@qq.com",
-      "name": "吴坤",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "7oUQ",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "2247621549@qq.com",
-      "name": "邓米",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "xFo4",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "napp0112@163.com",
-      "name": "刘成刚",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "Jbc5",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1978097296@qq.com",
-      "name": "高晓波",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "G1kU",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1147349343@qq.com",
-      "name": "陈卓",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "J5xs",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "15592191450@163.com",
-      "name": "王冠涵",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "cSj5",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "169226991@qq.com",
-      "name": "小陈",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "40cU",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "Lud2017@163.com",
-      "name": "陆东",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "96Hn",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "3985713874@qq.com",
-      "name": "向阳而生",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "9kF1",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "2505512921@qq.com",
-      "name": "刘虎",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "9Wf2",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "352237248@qq.com",
-      "name": "壹陆不是16",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "imS3",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "3281770@qq.com ",
-      "name": "俞梨",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "36vG",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "837166305@qq.com",
-      "name": "芥末",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "LjG0",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "875457031@qq.com",
-      "name": "孙锦琪",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "k3cZ",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "lliuch321@qq.com",
-      "name": "刘铖浩",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "Vs0R",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "459947847@qq.com",
-      "name": "王一行",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "a5AU",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "1834651803@qq.com",
-      "name": "杜望",
-      "update_time": "2025-08-20 14:08:10",
-      "password": "123456",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "786260489@qq.com",
-      "name": "基金-王凯华",
-      "update_time": "2025年08月27日14:26:56",
-      "password": "123456",
-      "fund": [],
-      "active": "",
-      "desc": "树敏朋友"
-    },
-    {
-      "email": "1050210750@qq.com",
-      "name": "彭贝贝",
-      "update_time": "2025-09-02 10:59:59",
-      "password": "123456",
-      "fund": [],
-      "active": "",
-      "desc": "李志超媳妇"
-    },
-    {
-      "email": "936106274@qq.com",
-      "name": "张晗",
-      "update_time": "2025-09-02 10:59:59",
-      "password": "zhang666",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "2992059190@qq.com",
-      "name": "张盈",
-      "update_time": "2025-09-02 10:59:59",
-      "password": "zhang666",
-      "fund": [],
-      "active": "",
-      "desc": ""
-    },
-    {
-      "email": "test@qq.com",
-      "name": "测试账号",
-      "update_time": "2025-08-20 15:54:50",
-      "password": "1234",
-      "fund": [],
-      "active": "",
-      "desc": "ceshi1232"
     }
   ]
 }

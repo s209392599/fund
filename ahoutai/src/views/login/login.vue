@@ -36,7 +36,7 @@ const loginForm = ref(null);
 const onSubmit = () => {
   loginForm.value.validate((valid) => {
     if (valid) {
-      server_fund_login(form).then(res => {
+      server_fund_admin_login(form).then(res => {
         console.log('登录', res);
         if (res.code === 200) {
           // 登录成功

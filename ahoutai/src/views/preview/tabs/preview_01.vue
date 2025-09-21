@@ -33,9 +33,16 @@ const rules = {
 
 // 获取-列表数据
 const query_list = () => {
-  server_fund_public_fund_query({}).then(res => {
-    info.tableData = res.data;
-  })
+  setTimeout(() => {
+    server_fund_public_fund_query().then(res => {
+      console.log('res', res);
+      if (res.code === 200) {
+        info.tableData = res.data || [];
+      } else {
+        ElMessage.error('获取列表失败，请重试！');
+      }
+    })
+  }, 1000);
 }
 query_list();
 
@@ -97,12 +104,24 @@ const btn_cha = (row, $index) => {
 // 新增
 const addUser = () => {
   console.log("新增");
+  resetForm();
   info.update_flag = 'add';// 标识新增
   info.dialogFormVisible = true;// 打开弹窗
 }
 // 清空表单
 const resetForm = () => {
+  info.form = {
+    "code": "",
+    "name": "",
+    "type": "",
+    "zhang_url": "",
+    "fixed": "",
+    "point_line_down": "",
+    "point_line_top": "",
+    "desc": "",
+  }
   diaForm.value.resetFields();
+
 }
 // 弹窗提交
 const onSubmit = () => {
@@ -154,7 +173,7 @@ const onSubmit = () => {
       <el-button type="primary" size="small" @click="addUser()">新增基金</el-button>
     </div>
 
-    <el-table :data="info.tableData" border style="width: 100%" height="500">
+    <el-table :data="info.tableData" border style="width: 100%" height="800">
       <el-table-column fixed label="序" type="index" width="50" />
       <el-table-column prop="code" label="基金代码" width="80" />
       <el-table-column prop="name" label="名称" width="250" />

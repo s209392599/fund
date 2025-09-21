@@ -3,7 +3,6 @@ import { useRouter } from 'vue-router';
 import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
 
 const router = useRouter();
-
 const info = reactive({
   currentTabComponent: '',
   // 顶部的tab页
@@ -40,6 +39,8 @@ if ([null, '', undefined].includes(email)) {
   router.push('/');
 } else {
   console.log('账号为：', email);
+
+  info.list_tabs = [...info.list_default];// 可以附加其它过滤条件
 
   // 从本地存储获取active_tab，确保它在可用选项中
   const savedTab = localStorage.getItem('preview_active_tab');
