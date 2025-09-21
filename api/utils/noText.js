@@ -28,6 +28,8 @@ const noText = [
   '货币',
   '(后端)',
   '人民币',
+  '绝对收益',
+  'A/B',
 ];
 
 module.exports = noText;

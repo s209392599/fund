@@ -13,7 +13,7 @@ async function queryDatabase() {
     connection = await pool.getConnection();
     console.log('数据库连接成功！');
 
-    var query = 'SELECT fund_code, fund_name, no_keyword, is_fundgz FROM fund';// 只查询这几个字段
+    var query = 'SELECT fund_code, fund_name, fund_type_name, no_keyword, is_fundgz FROM fund';// 只查询这几个字段
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
@@ -22,14 +22,22 @@ async function queryDatabase() {
     ]);
     console.log(`数据库中一共有${results.length}个基金`);
 
-    let index = 0;
+    let index = 19771;
     let len = results.length;
     let str_1 = 'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
     // len = index + 3;// 只更新某几个
     while (index < len) {
-      let item = results[index];
-      var is_sale = false; // 是否可买
       console.log('----------------------------');
+      let item = results[index];
+      let flag_1 = item.fund_type_name.includes('债');
+      let flag_2 = item.no_keyword === 'n';
+      let flag_3 = item.is_fundgz === 'n';
+      if(flag_1 ||flag_2 || flag_3) {
+        console.log(`跳过${item.fund_code} - ${item.fund_name}，${item.fund_type_name} ${item.no_keyword} ${item.is_fundgz}`);
+        index++;
+        continue;
+      }
+      var is_sale = false; // 是否可买
       console.log(`正在更新 ${index + 1} /${len} --- ${results[index].fund_code} - ${results[index].fund_name}`);
       if (item.no_keyword === 'y' && item.is_fundgz === 'y') {
         let u = `reqData={"itemId":"","fundCode":"${item.fund_code}","clientVersion":"","channel":"9"}`;

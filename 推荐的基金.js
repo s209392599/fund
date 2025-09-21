@@ -1,5 +1,8 @@
 
 /*
+周 月 季 6个月 交叉涨幅靠前的
+
+
 http://150.158.175.108:9005/index.html  后台管理界面
 http://150.158.175.108:9000 基金前台页面
 
@@ -7,22 +10,36 @@ http://150.158.175.108:9000 基金前台页面
 
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=000844  不可买
 
+SELECT fund_code, fund_name, fund_type_name, no_keyword, is_fundgz, is_sale,is_allow,no_allow_reason,jd_totalAsset
+FROM fund
+WHERE (no_keyword = 'y' OR no_keyword IS NULL)
+  AND (is_fundgz = 'y' OR is_fundgz IS NULL)
+  AND (is_sale = 'y' OR is_sale IS NULL)
+  AND (is_allow = 'y' OR is_allow IS NULL)
+  AND (fund_type_name NOT LIKE '%债%' OR fund_type_name IS NULL)
+  AND (fund_type_name NOT LIKE '%固收%' OR fund_type_name IS NULL)
+  AND (fund_type_name NOT LIKE '%货币%' OR fund_type_name IS NULL)
+  AND RIGHT(fund_name, 1) != 'A'
+  AND (jd_totalAsset IS NULL OR CAST(jd_totalAsset AS DECIMAL(18, 2)) >= 100000000);
 
-SELECT * 
-FROM fund 
-WHERE is_fundgz = 'y' 
+
+
+
+SELECT *
+FROM fund
+WHERE is_fundgz = 'y'
   AND is_fundgz IS NOT NULL
-  AND no_keyword = 'y' 
+  AND no_keyword = 'y'
   AND no_keyword IS NOT NULL
-  AND is_sale = 'y' 
+  AND is_sale = 'y'
   AND is_sale IS NOT NULL
   AND RIGHT(fund_name, 1) != 'A';
-  
-SELECT * 
-FROM fund 
-WHERE is_fundgz = 'y' 
-  AND no_keyword = 'y' 
-  AND is_sale = 'y' 
+
+SELECT *
+FROM fund
+WHERE is_fundgz = 'y'
+  AND no_keyword = 'y'
+  AND is_sale = 'y'
   AND RIGHT(fund_name, 1) != 'A'
   AND UPPER(fund_type_name) NOT LIKE '%债%';
 
