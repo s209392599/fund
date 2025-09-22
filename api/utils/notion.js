@@ -134,8 +134,12 @@ var marilArr = [
   '1050210750@qq.com', // 彭贝贝
   '936106274@qq.com',// 张晗 2025年9月16日20:20:12
   '2992059190@qq.com',// 张盈 2025年09月17日11:28:49
+  '897953871@qq.com',// 基金-Avery(阿鹏) 2025年09月22日14:22:37
+  '173560567@qq.com',// 基金-刘一凡 2025年09月22日14:24:06
+  '859377899@qq.com',// 基金-H 2025年09月22日14:24:54
+
 ];
-marilArr = [marilArr[0]];// 只开放自己
+// marilArr = [marilArr[0]];// 只开放自己
 // marilArr = [marilArr[0],marilArr[marilArr.length - 1]];// 开放测试人员
 
 var msg_arr = mail_title.trim().replaceAll('；',';').split(';');
