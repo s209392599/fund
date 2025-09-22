@@ -137,7 +137,7 @@ var marilArr = [
   '897953871@qq.com',// 基金-Avery(阿鹏) 2025年09月22日14:22:37
   '173560567@qq.com',// 基金-刘一凡 2025年09月22日14:24:06
   '859377899@qq.com',// 基金-H 2025年09月22日14:24:54
-
+  'li_sunflowers@163.com',// 李鑫-聚言朋友 2025年09月22日15:49:51
 ];
 // marilArr = [marilArr[0]];// 只开放自己
 // marilArr = [marilArr[0],marilArr[marilArr.length - 1]];// 开放测试人员
