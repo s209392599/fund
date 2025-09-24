@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const CustomFn = require('../../CustomFn.js');
+const {DatabasePostQuery} = require('../../utils/DatabasePostQuery.js'); // post请求数据库查询封装
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { pool } = require('../../setting/pool.js'); // 引入mysql连接池
@@ -169,6 +170,16 @@ router.post('/fund_public_fund_sort', (req, res) => {
 
 // 查询-公共的基金数据
 router.post('/fund_public_fund_query', async (req, res) => {
+  return DatabasePostQuery.apply({ res }, [{
+    query: 'SELECT * FROM fund_public ORDER BY sort_order ASC',
+    format: (results) => ({
+      length: results.length,
+      data: results,
+    })
+  }]);
+});
+
+router.post('/fund_public_fund_query111', async (req, res) => {
   let connection;
   try {
     connection = await pool.getConnection();
@@ -201,6 +212,7 @@ router.post('/fund_public_fund_query', async (req, res) => {
     }
   }
 });
+
 // 新增-公共的基金数据
 router.post('/fund_public_fund_add', (req, res) => {
   const { form = {} } = req.body;
