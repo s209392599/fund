@@ -102,7 +102,7 @@
 <body>
   <div id="imgbox"></div>
 
-  <div style="padding: 0px 10px 0px 10px;">注：“今日”这一列是预测涨幅，非当日实际涨幅；后续列是各个历史阶段的涨幅;手机端可滑动查看</div>
+  <div style="padding: 0px 10px 0px 10px;">注：“今日”这一列是预测涨幅，非当日实际涨幅；后续列是各个历史阶段的涨幅；高亮为历史数据；手机端可滑动查看</div>
   <div id="app" style="padding: 4px 10px 15px 10px;"></div>
 
   <div id="table_wrapper_1" style="display: none;">
@@ -110,17 +110,26 @@
     <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
-      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64"></el-table-column>
+      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
+        <template v-slot="{ row }">
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_code}}</span>
+          <span v-else>{{row.fund_code}}</span>
+        </template>
+      </el-table-column>
 
-      <el-table-column prop="" label="Name" :width="width_name" sortable show-overflow-tooltip>
+      <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
         <template v-slot="{ row }">
           <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_name}}</span>
           <span v-else>{{row.fund_name}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column prop="type" label="类型" width="70" align="center" sortable
-        show-overflow-tooltip></el-table-column>
+      <el-table-column prop="type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
+        <template v-slot="{ row }">
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.type}}</span>
+          <span v-else>{{row.type}}</span>
+        </template>
+      </el-table-column>
 
       <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday">
         <template v-slot="{ row }">

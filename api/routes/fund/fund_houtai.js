@@ -8,6 +8,8 @@ const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { pool } = require('../../setting/pool.js'); // 引入mysql连接池
 
+let time_cancel = 0; // 用于服务自动断开
+
 // 后台登录
 router.post('/fund_admin_login', (req, res) => {
   const { email = '', password = '' } = req.body;
@@ -170,13 +172,13 @@ router.post('/fund_public_fund_query', async (req, res) => {
   let connection;
   try {
     connection = await pool.getConnection();
-    var query = 'SELECT * FROM fund_public ORDER BY sort_order ASC'; // 只查询这几个字段
+    const query = 'SELECT * FROM fund_public ORDER BY sort_order ASC';
 
     const [results] = await Promise.race([
       connection.query(query),
       new Promise((_, reject) =>
         setTimeout(() => reject(new Error('数据库查询超时')), 15 * 1000)
-      ), // 查询超时时间（毫秒）
+      ),
     ]);
 
     return res.send({
@@ -193,6 +195,10 @@ router.post('/fund_public_fund_query', async (req, res) => {
       code: 500,
       msg: '数据库查询出错',
     });
+  } finally {
+    if (connection) {
+      connection.release(); // 确保连接被释放回连接池
+    }
   }
 });
 // 新增-公共的基金数据
