@@ -3,6 +3,16 @@ const fs = require('fs');
 const express = require('express');
 const cors = require('cors');
 
+const whiteAdree = [
+  'http://150.158.175.108:9999',
+  'http://150.158.175.108:9000', // 基金网站的使用
+  'http://150.158.175.108:9005', // 后台管理接口
+  'http://localhost:9000', // Vue项目-主项目
+  'http://localhost:9001', // Vue项目-后台
+  'http://localhost:9999', // 本地测试
+  'http://127.0.0.1:9002', // live server插件
+];
+
 /* 应用IP速率限制
 const rateLimit = require('express-rate-limit'); // 引入速率限
 const limiter = rateLimit({
@@ -53,16 +63,6 @@ app.use((req, res, next) => {
     );
     return res.sendStatus(204);
   }
-
-  const whiteAdree = [
-    'http://150.158.175.108:9999',
-    'http://150.158.175.108:9000',// 基金网站的使用
-    'http://150.158.175.108:9005',// 后台管理接口
-    'http://localhost:9000',// Vue项目-主项目
-    'http://localhost:9001',// Vue项目-后台
-    'http://localhost:9999',// 本地测试
-    'http://127.0.0.1:9001',// live server插件
-  ];
 
   if (request_origin) {
     let flag_2 = false;

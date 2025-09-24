@@ -6,6 +6,9 @@
     <el-form-item label="密码" prop="password">
       <el-input v-model="form.password"></el-input>
     </el-form-item>
+    <el-form-item label="二级密码" prop="password">
+      <el-input v-model="form.erji_password"></el-input>
+    </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="onSubmit" style="width: 100%;">登录</el-button>
     </el-form-item>
@@ -18,6 +21,7 @@ const router = useRouter();
 const form = reactive({
   email: localStorage.getItem('email') || '',
   password: localStorage.getItem('password') || '',
+  erji_password: localStorage.getItem('erji_password') || '',
 });
 
 const rules = {

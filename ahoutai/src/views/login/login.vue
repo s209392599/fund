@@ -6,6 +6,9 @@
     <el-form-item label="密码" prop="password">
       <el-input v-model="form.password"></el-input>
     </el-form-item>
+    <el-form-item label="二级密码" prop="erji_password">
+      <el-input v-model="form.erji_password"></el-input>
+    </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="onSubmit" style="width: 100%;">登录</el-button>
     </el-form-item>
@@ -18,6 +21,7 @@ const router = useRouter();
 const form = reactive({
   email: localStorage.getItem('email') || '',
   password: localStorage.getItem('password') || '',
+  erji_password: localStorage.getItem('erji_password') || '',
 });
 
 const rules = {
@@ -42,6 +46,7 @@ const onSubmit = () => {
           // 登录成功
           localStorage.setItem('email', form.email);
           localStorage.setItem('password', form.password);
+          localStorage.setItem('erji_password', form.erji_password);
           // 存储基金信息
           localStorage.setItem('fund', JSON.stringify(res.data.fund || []));
           localStorage.setItem('loginTime', CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"));

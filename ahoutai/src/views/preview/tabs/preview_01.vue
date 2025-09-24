@@ -37,7 +37,7 @@ const query_list = () => {
     server_fund_public_fund_query().then(res => {
       console.log('res', res);
       if (res.code === 200) {
-        info.tableData = res.data || [];
+        info.tableData = res.data.data || [];
       } else {
         ElMessage.error('获取列表失败，请重试！');
       }
@@ -175,8 +175,8 @@ const onSubmit = () => {
 
     <el-table :data="info.tableData" border style="width: 100%" height="800">
       <el-table-column fixed label="序" type="index" width="50" />
-      <el-table-column prop="code" label="基金代码" width="80" />
-      <el-table-column prop="name" label="名称" width="250" />
+      <el-table-column prop="fund_code" label="基金代码" width="80" />
+      <el-table-column prop="fund_name" label="名称" width="250" />
       <el-table-column prop="type" label="类型" width="150" />
       <el-table-column prop="zhang_url" label="涨幅的URL" width="200" />
       <el-table-column prop="fixed" label="定投金额" width="100" />

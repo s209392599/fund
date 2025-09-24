@@ -109,8 +109,16 @@
     <!-- 修改第42行，移除default-sort属性 -->
     <el-table :data="tableData" style="width: 100%" border stripe max-height="520">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
-      <el-table-column fixed prop="code" align="center" label="基金号" width="64"></el-table-column>
-      <el-table-column prop="name" label="Name" :width="width_name" sortable show-overflow-tooltip></el-table-column>
+
+      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64"></el-table-column>
+
+      <el-table-column prop="" label="Name" :width="width_name" sortable show-overflow-tooltip>
+        <template v-slot="{ row }">
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_name}}</span>
+          <span v-else>{{row.fund_name}}</span>
+        </template>
+      </el-table-column>
+
       <el-table-column prop="type" label="类型" width="70" align="center" sortable
         show-overflow-tooltip></el-table-column>
 
@@ -176,7 +184,7 @@
 
       <el-table-column prop="desc" label="备注" width="300" show-overflow-tooltip>
         <template v-slot="{ row }">
-          <span v-if="row.zhang_url.startsWith('history')" style="color:#876ad2;font-weight: 700;">历史数据</span>
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">历史数据</span>
           <span v-else>{{row.desc}}</span>
         </template>
       </el-table-column>
@@ -298,7 +306,7 @@
       .then(res => res.json())
       .then(res => {
         if (res.code === 200) {
-          let arr_1 = res.data || [];
+          let arr_1 = res.data.data || [];
           let arr_2 = [];// 常规要展示图形的
           let arr_3 = [];// 需要服务器监听涨幅 或者读取不到的
 
@@ -332,18 +340,19 @@
 
     // 常规的
     function render_1(arr) {
-      let html = arr
-        .map(
-          (item) => {
-            let altstr = item.name || item.code;
-            if (!item.zhang_url) {
-              return `<a class="type_1" href="https://fund.eastmoney.com/${item.code}.html" target="_blank"><img src="https://j4.dfcfw.com/charts/pic6/${item.code}.png" alt="${altstr}" /></a>`
-            } else {
-              return `<a class="type_1" href="https://fund.eastmoney.com/${item.code}.html" target="_blank"><img src="${item.zhang_url}" alt="${altstr}"></a>`
-            }
-          }
-        )
-        .join('');
+      let html = '';
+      arr.forEach(item => {
+        let altstr = item.fund_name || item.fund_code;
+        if (item.zhang_url.startsWith('http')) {
+          html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="${item.zhang_url}" alt="${altstr}"></a>`;
+        }
+        // if (!item.zhang_url) {
+        //   html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="https://j4.dfcfw.com/charts/pic6/${item.fund_code}.png" alt="${altstr}" /></a>`;
+        // } else {
+        //   html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="${item.zhang_url}" alt="${altstr}"></a>`;
+        // }
+      })
+
       document.getElementById('imgbox').innerHTML = html;
     }
 
@@ -352,10 +361,10 @@
       arr.forEach((item, index) => {
         setTimeout(() => {
           const script = document.createElement('script');
-          script.src = `https://fundgz.1234567.com.cn/js/${item.code}.js`;
+          script.src = `https://fundgz.1234567.com.cn/js/${item.fund_code}.js`;
           document.body.appendChild(script);
 
-          getHistoryPerformance(item.code);// 获取历史表现数据
+          getHistoryPerformance(item.fund_code);// 获取历史表现数据
         }, (index + 1) * 66)
       })
     }
@@ -373,7 +382,7 @@
       }).then(res => res.json()).then(res => {
         if (res.code === 200) {
           info.arr_1.forEach((item, index) => {
-            if (item.code === fundcode && (!item.zhang_his || item.zhang_his.length === 0)) {
+            if (item.fund_code === fundcode && (!item.zhang_his || item.zhang_his.length === 0)) {
               console.log('getHistoryPerformance - fundcode', fundcode, index, res.data);
               item.zhang_his = res.data || [];
             }
@@ -402,7 +411,7 @@
         return false;
       }
       info.arr_1.forEach(item => {
-        if (item.code === data.fundcode) {
+        if (item.fund_code === data.fundcode) {
           item.zhang_today = data.gszzl || '-';
         }
       })
