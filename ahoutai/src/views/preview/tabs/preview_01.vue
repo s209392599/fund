@@ -1,6 +1,10 @@
 <script setup>
 console.log('src/views/preview/tabs/preview_08.vue');
 
+// 判断是否为手机端
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+const width_name = isMobile ? '146' : '240';
+
 const diaForm = ref(null);
 const info = reactive({
   tableData: [],
@@ -120,7 +124,7 @@ const resetForm = () => {
     "point_top": "",
     "fund_desc": "",
   }
-  diaForm.value.resetFields();
+  diaForm?.value?.resetFields();
 
 }
 // 弹窗提交
@@ -174,23 +178,44 @@ const onSubmit = () => {
     </div>
 
     <el-table :data="info.tableData" border style="width: 100%" height="800">
-      <el-table-column fixed label="序" type="index" width="50" />
-      <el-table-column prop="fund_code" label="基金代码" width="80" align="center" />
-      <el-table-column prop="fund_name" label="名称" width="250" />
-      <el-table-column prop="type" label="类型" width="120" align="center" />
-      <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
-      <el-table-column prop="fixed" label="定投金额" width="70" align="right" />
-      <el-table-column prop="point_down" label="低点" width="100" align="right" />
-      <el-table-column prop="point_top" label="高点" width="100" align="right" />
-      <el-table-column prop="fund_desc" label="备注" width="300" />
+      <el-table-column fixed label="序" type="index" width="50" align="right" />
 
-      <el-table-column label="Operations" min-width="120">
+      <el-table-column label="Operations" width="140">
         <template #default="{ row, $index }">
           <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
           <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
           <el-button link type="primary" size="small" @click="btn_cha(row, $index)">插入到</el-button>
         </template>
       </el-table-column>
+
+      <el-table-column prop="fund_code" align="center" label="基金号" width="64">
+        <template v-slot="{ row }">
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span>
+          <span v-else>{{ row.fund_code }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
+        <template v-slot="{ row }">
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span>
+          <span v-else>{{ row.fund_name }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
+        <template v-slot="{ row }">
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.type }}</span>
+          <span v-else>{{ row.type }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
+      <el-table-column prop="fixed" label="定投金额" width="70" align="right" />
+      <el-table-column prop="point_down" label="低点" width="100" align="right" />
+      <el-table-column prop="point_top" label="高点" width="100" align="right" />
+      <el-table-column prop="fund_desc" label="备注" width="300" />
+
+
     </el-table>
 
     <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500">
