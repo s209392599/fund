@@ -209,7 +209,6 @@
     const info = reactive({
       arr_1: [],// 综合的
       arr_2: [],// 常规的
-      arr_3: [],// 需要服务器监听的
       isRendered: false // 添加标志，用于防止重复渲染
     });
 
@@ -317,25 +316,19 @@
         if (res.code === 200) {
           let arr_1 = res.data.data || [];
           let arr_2 = [];// 常规要展示图形的
-          let arr_3 = [];// 需要服务器监听涨幅 或者读取不到的
 
           arr_1.forEach(item => {
             item.zhang_today = '-';// 浸提涨幅
             item.zhang_his = [];// 历史涨幅
 
-            // ['服务器监听', 'histroy'].includes(item.zhang_url)
-            if (item.zhang_url === '服务器监听' || item.zhang_url.startsWith('history')) {
-              arr_3.push(item)
-            } else if (!['不提供'].includes(item.zhang_url)) {
-              arr_2.push(item)
+            if (item.sign === '正常' && item.zhang_url.startsWith('http')) {
+              arr_2.push(item);
             }
 
           });
-          console.log('arr_2', arr_2);
 
           info.arr_1 = [...arr_1];
           info.arr_2 = [...arr_2];
-          info.arr_3 = [...arr_3];
 
           render_1(info.arr_2);// 常规的
           initVue3();// 初始化表格
@@ -352,14 +345,7 @@
       let html = '';
       arr.forEach(item => {
         let altstr = item.fund_name || item.fund_code;
-        if (item.zhang_url.startsWith('http')) {
-          html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="${item.zhang_url}" alt="${altstr}"></a>`;
-        }
-        // if (!item.zhang_url) {
-        //   html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="https://j4.dfcfw.com/charts/pic6/${item.fund_code}.png" alt="${altstr}" /></a>`;
-        // } else {
-        //   html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="${item.zhang_url}" alt="${altstr}"></a>`;
-        // }
+        html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="${item.zhang_url}" alt="${altstr}"></a>`;
       })
 
       document.getElementById('imgbox').innerHTML = html;

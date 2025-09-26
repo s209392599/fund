@@ -1,5 +1,5 @@
 <script setup>
-console.log('src/views/preview/tabs/preview_08.vue');
+console.log('ahoutai/src/views/preview/tabs/preview_01.vue');
 
 // 判断是否为手机端
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -20,6 +20,7 @@ const info = reactive({
     "point_down": "",
     "point_top": "",
     "fund_desc": "",
+    "sign": "当前",
   }
 })
 const rules = {
@@ -58,7 +59,6 @@ const btn_edit = (row, $index) => {
 }
 // 删除
 const btn_del = (row, $index) => {
-  console.log("删除", row.email);
   ElMessageBox.confirm(
     '确认删除吗?',
     '警告',
@@ -69,8 +69,7 @@ const btn_del = (row, $index) => {
     }
   )
     .then(() => {
-      server_fund_public_fund_delete({ fundcode: row.code }).then(res => {
-        console.log('res', res);
+      server_fund_public_fund_delete({ fundcode: row.fund_code }).then(res => {
         if (res.code === 200) {
           ElMessage.success('删除成功');
           query_list();
@@ -83,7 +82,6 @@ const btn_del = (row, $index) => {
 }
 // 插入到
 const btn_cha = (row, $index) => {
-  console.log('$index', $index);
   const userInput = prompt('请输入第几行(正整数)');
   if (userInput) {
     let index = parseFloat(userInput) || 0;
@@ -91,7 +89,8 @@ const btn_cha = (row, $index) => {
     if (index > -1 && index !== $index) {
       console.log('index', index, $index);
       server_fund_public_fund_sort({
-        index_new: index,
+        fund_code: row.fund_code,
+        index_new: index + 1,
         index_old: $index
       }).then(res => {
         console.log('res', res);
@@ -123,6 +122,7 @@ const resetForm = () => {
     "point_down": "",
     "point_top": "",
     "fund_desc": "",
+    "sign": "当前",
   }
   diaForm?.value?.resetFields();
 
@@ -250,6 +250,14 @@ const onSubmit = () => {
 
         <el-form-item label="备注" prop="fund_desc" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.fund_desc" autocomplete="off" />
+        </el-form-item>
+
+        <el-form-item label="状态" prop="sign" :label-width="info.formLabelWidth">
+          <el-radio-group v-model="info.form.sign">
+            <el-radio value="正常">正常</el-radio>
+            <el-radio value="历史">历史</el-radio>
+            <el-radio value="观察">观察</el-radio>
+          </el-radio-group>
         </el-form-item>
       </el-form>
       <template #footer>

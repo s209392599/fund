@@ -91,21 +91,21 @@ router.post('/fund_public_fund_add', (req, res) => {
   const query_str = `
     INSERT INTO fund_public (
         fund_code, fund_name, sort_order, type, sign, zhang_url,
-        point_top, point_down, fund_desc, fixed
-    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        point_top, point_down, fund_desc, fixed, sign
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
   const values = [
     form.fund_code,
     form.fund_name,
     form.sort_order || 1,
     form.type,
-    form.zhang_url,
-    form.fixed || 0,
-    form.point_down,
-    form.point_top,
-    form.fund_desc,
     form.sign,
-    form.fund_code,
+    form.zhang_url,
+    form.point_top,
+    form.point_down,
+    form.fund_desc,
+    form.fixed || 0,
+    form.sign,
   ];
 
   return DatabasePostQuery.apply({ res }, [
@@ -118,6 +118,58 @@ router.post('/fund_public_fund_add', (req, res) => {
       successMsg: '新增成功',
     },
   ]);
+});
+
+// 删除-公共的基金数据
+router.post('/fund_public_fund_delete', (req, res) => {
+  const { fundcode = '', pageSize = 10 } = req.body;
+  return DatabasePostQuery.apply({ res }, [
+    {
+      query: 'DELETE FROM fund_public WHERE fund_code = ' + fundcode,
+      format: (results) => ({
+        affectedRows: results.affectedRows, // 返回受影响的行数
+      }),
+    },
+  ]);
+});
+
+// 排序-公共的基金数据
+router.post('/fund_public_fund_sort', async (req, res) => {
+  const { fund_code,index_new, index_old } = req.body;
+  const queries = [
+    `UPDATE fund_public SET sort_order = 0 WHERE fund_code = '${fund_code}';`,
+    `UPDATE fund_public SET sort_order = sort_order + 1 WHERE sort_order >= ${index_new} AND sort_order < ${index_old} AND fund_code != '${fund_code}';`,
+    `UPDATE fund_public SET sort_order = sort_order - 1 WHERE sort_order <= ${index_new} AND sort_order > ${index_old} AND fund_code != '${fund_code}';`,
+    `UPDATE fund_public SET sort_order = ${index_new} WHERE fund_code = '${fund_code}';`
+  ];
+  try{
+    await DatabasePostQuery.apply({ res }, [
+    {
+      query: queries[0],
+      next:true
+    }]);
+
+    await DatabasePostQuery.apply({ res }, [
+    {
+      query: queries[1],
+      next:true
+    }]);
+
+    await DatabasePostQuery.apply({ res }, [
+    {
+      query: queries[2],
+      next:true
+    }]);
+
+    return DatabasePostQuery.apply({ res }, [
+    {
+      query: queries[3],
+      format: (results) => ({
+        affectedRows: results.affectedRows, // 返回受影响的行数
+      }),
+    }]);
+  }catch(err){
+  }
 });
 
 // -------------------------------------------------------------------------  下面的待改造
@@ -234,60 +286,6 @@ router.post('/fund_del_user_info', (req, res) => {
       });
     }
   }
-});
-
-// 排序-公共的基金数据
-router.post('/fund_public_fund_sort', (req, res) => {
-  const { index_new, index_old } = req.body;
-  const userData = getPublicFundJson() || {};
-  const public_fund = userData.public_fund || [];
-
-  const [item] = public_fund.splice(index_old, 1);
-  public_fund.splice(index_new, 0, item);
-
-  const result = updateUserJson(userData);
-  if (result) {
-    res.send({
-      code: 200,
-      msg: '操作成功',
-      data: [],
-    });
-  } else {
-    res.send({
-      code: 400,
-      msg: '操作失败',
-      data: [],
-    });
-  }
-});
-
-// 删除-公共的基金数据
-router.post('/fund_public_fund_delete', (req, res) => {
-  const { fundcode = '', pageSize = 10 } = req.body;
-  const userData = getPublicFundJson() || {};
-  let public_fund = userData.public_fund || [];
-  userData.public_fund = public_fund.filter((v) => v.code !== fundcode);
-
-  const result = updatePublicFundJson(userData);
-  if (result) {
-    res.send({
-      code: 200,
-      msg: '操作成功',
-      data: [],
-    });
-  } else {
-    res.send({
-      code: 400,
-      msg: '操作失败',
-      data: [],
-    });
-  }
-
-  res.send({
-    code: 200,
-    msg: '成功',
-    data: userData.public_fund || [],
-  });
 });
 
 module.exports = router;
