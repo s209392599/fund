@@ -68,11 +68,11 @@ async function getData(url, key) {
 async function init() {
   await getData(url_1, 'data_1');
   await getData(url_2, 'data_2');
-  await getData(url_3, 'data_3');
-  if (pageObj.data_1.length && pageObj.data_2.length && pageObj.data_3.length) {
+  // await getData(url_3, 'data_3');
+
+  if (pageObj.data_1.length && pageObj.data_2.length ) {
     console.log('data_1', pageObj.data_1.length);
     console.log('data_2', pageObj.data_2.length);
-    console.log('data_3', pageObj.data_3.length);
 
     const arr_1 = [];
 
@@ -87,11 +87,69 @@ async function init() {
     }
 
     // 调用
-    const sameItems = getIntersection(pageObj.data_1, pageObj.data_2, pageObj.data_3);
+    const sameItems = getIntersection(pageObj.data_1, pageObj.data_2);
     console.log(`交叉了${sameItems.length}个`);
     sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
 
     fs.writeFileSync('rankData.json', JSON.stringify(sameItems, null, 2), 'utf8');
   }
+
+
+  // if (pageObj.data_1.length && pageObj.data_2.length && pageObj.data_3.length) {
+  //   console.log('data_1', pageObj.data_1.length);
+  //   console.log('data_2', pageObj.data_2.length);
+  //   console.log('data_3', pageObj.data_3.length);
+
+  //   const arr_1 = [];
+
+  //   function getIntersection(...arrays) {
+  //     if (arrays.length === 0) return [];
+  //     let result = arrays[0];
+  //     for (let i = 1; i < arrays.length; i++) {
+  //       const codes = new Set(arrays[i].map((item) => item[0]));
+  //       result = result.filter((item) => codes.has(item[0]));
+  //     }
+  //     return result;
+  //   }
+
+  //   // 调用
+  //   const sameItems = getIntersection(pageObj.data_1, pageObj.data_2, pageObj.data_3);
+  //   console.log(`交叉了${sameItems.length}个`);
+  //   sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
+
+  //   fs.writeFileSync('rankData.json', JSON.stringify(sameItems, null, 2), 'utf8');
+  // }
 }
 init();
+
+
+/*
+.then((res) => {
+  // console.log('Response Text:', res);
+  // fs.writeFileSync(path.join(__dirname, 'a1.txt'), res);
+
+  const match = res.match(/var\s+rankData\s*=\s*(\{[\s\S]*?\});/);
+  if (match) {
+    const rankData = eval('(' + match[1] + ')');
+    let arr_1 = (rankData.datas || []).filter(item => {
+      const [code, name] = item.split(',');
+      if (name.endsWith('A')) return false;
+      if (noText.some(kw => name.includes(kw))) return false;
+      if (noFundCode.some(kw => code.includes(kw))) return false;
+      return true;
+    });
+    rankData.datas = arr_1;
+    fs.writeFileSync(
+      'rankData.json',
+      JSON.stringify(rankData, null, 2),
+      'utf8'
+    );
+  }
+
+  // const jsonString = res.substring(res.indexOf('{'), res.lastIndexOf('}') + 1);
+  // const jsonObject = JSON.parse(jsonString);
+})
+.catch((err) => {
+  console.error('Error fetching fund data:', err);
+});
+*/

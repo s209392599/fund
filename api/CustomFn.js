@@ -1,5 +1,9 @@
 // CustomDateFtt(1565059668200,"yyyy-MM-dd hh:mm:ss");// '2019-08-06 10:47:48'
 // CustomDateFtt(1565059668200,"yyyy-MM-dd");// '2019-08-06'
+
+// const CustomFn = require('./CustomFn.js');
+// let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
+
 var CustomDateFtt = (date, fmt) => {
   if (date != null && date != '' && date != undefined) {
     if (typeof date == 'string') {
