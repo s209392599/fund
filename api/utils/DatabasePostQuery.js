@@ -37,16 +37,16 @@ function sendResponse(res, code, msg, data = null) {
   });
 }
 
-async function DatabasePostQuery({ query, values = [], format, timeout = 15000, successMsg = '获取成功',next=false }) {
+async function DatabasePostQuery({ res,query, values = [], format, timeout = 15000, successMsg = '获取成功',next=false }) {
   try {
     const results = await executeQuery(query, values, timeout); // 传递 values
-    const formattedData = format ? format(results) : results;
     if(!next){
-      sendResponse(this.res, 200, successMsg, formattedData);
+      const formattedData = format ? format(results) : results;
+      sendResponse(res, 200, successMsg, formattedData);
     }
   } catch (error) {
     console.error('Database update failed:', error.message);
-    sendResponse(this.res, 500, '数据库更新出错');
+    sendResponse(res, 500, '数据库更新出错');
   }
 }
 

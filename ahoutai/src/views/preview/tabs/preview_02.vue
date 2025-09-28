@@ -7,6 +7,7 @@ const info = reactive({
   formLabelWidth: '140px',
   update_flag: 'add',// 修改还是编辑
   dialogFormVisible: false,
+  search_name: '',
   form: {
     "email": "test@qq.com",
     "name": "1231",
@@ -35,10 +36,28 @@ const rules = {
 // 获取所有用户
 const getAllUser = () => {
   server_fund_get_all_user_info({}).then(res => {
+    console.log(38, res);
     info.tableData = res.data;
   })
 }
 getAllUser();
+
+const queryBtn = () => {
+  if (!info.search_name) {
+    ElMessage.error('请输入账号或名称');
+    return;
+  }
+  server_fund_get_all_user_info({
+    search_name: info.search_name
+  }).then(res => {
+    info.tableData = res.data;
+  })
+}
+// 重置
+const resetFn = () => {
+  info.search_name = '';
+  getAllUser();
+}
 
 // 添加class
 const tableRowClassName = ({ row, rowIndex }) => {
@@ -140,21 +159,41 @@ const onSubmit = () => {
   <div class="page-wrapper">
     <div class="flex pb-5">
       <el-button type="primary" size="small" @click="addUser()">新增用户</el-button>
+
+      <el-input v-model="info.search_name" style="width: 240px" placeholder="Please input" />
+      <el-button type="primary" size="small" @click="queryBtn()">搜索</el-button>
+      <el-button type="primary" size="small" @click="resetFn()">重置</el-button>
     </div>
 
+    <!--
+    {
+  "id": 1,
+  "user_name": "209392599@qq.com",
+  "zh_name": "郭坤",
+  "user_password": "1234",
+  "fund_count": 100,
+  "desc": null,
+  "expiration_time": "2098-12-31T16:00:00.000Z",
+  "create_time": "2025-09-23T04:24:38.000Z",
+  "update_time": "2025-09-23T05:01:25.000Z",
+  "user_token": null
+}
+    -->
     <el-table :data="info.tableData" border :row-class-name="tableRowClassName" style="width: 100%" height="500">
       <el-table-column fixed label="序" type="index" width="50" />
-      <el-table-column prop="email" label="邮箱" width="300" />
-      <el-table-column prop="name" label="名称" width="150" />
-      <el-table-column prop="password" label="密码" width="200" />
-      <el-table-column prop="desc" label="备注" width="200" />
-      <el-table-column label="Operations" min-width="120">
+      <el-table-column fixed label="操作" width="140">
         <template #default="{ row, $index }">
           <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
           <el-button link type="primary" size="small" @click="btn_stop(row, $index)">停用</el-button>
           <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
         </template>
       </el-table-column>
+
+      <el-table-column prop="user_name" label="账号" width="300" />
+      <el-table-column prop="zh_name" label="名称" width="260" />
+      <el-table-column prop="user_password" label="密码" width="200" />
+      <el-table-column prop="remark" label="备注" width="200" />
+
     </el-table>
 
     <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500">
@@ -199,11 +238,11 @@ const onSubmit = () => {
 </style>
 
 <style>
-.el-table .warning-row {
+/* .el-table .warning-row {
   --el-table-tr-bg-color: var(--el-color-warning-light-9);
 }
 
 .el-table .success-row {
   --el-table-tr-bg-color: var(--el-color-success-light-9);
-}
+} */
 </style>

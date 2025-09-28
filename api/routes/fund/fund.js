@@ -104,16 +104,6 @@ router.post('/fund_login', (req, res) => {
   });
 });
 
-// 获取所有用户
-router.post('/fund_get_all_user_info', (req, res) => {
-  const userData = (getUserJson() || {}).data || [];
-  return res.send({
-    code: 200,
-    msg: '获取所用用户成功',
-    data: userData,
-  });
-});
-
 // 获取基金历史数据
 router.post('/fund_history_data', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
