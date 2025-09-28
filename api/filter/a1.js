@@ -1,103 +1,97 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
+const noText = require('../utils/noText.js'); // 排除的关键词
+const noFundCode = require('../utils/noFundCode.js'); // 排除的基金代码
+console.log('noText', noText);
+console.log('noFundCode', noFundCode);
+/*
+https://fund.eastmoney.com/data/fundranking.html
+pn: 请求多少条数据，应该是page number
+pi: 页码
+sd: start date  后面的自定义搜索
+ed: end date
 
-// fetch(
-//   'https://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=1nzf&st=desc&sd=2024-09-27&ed=2025-09-27&qdii=&tabSubtype=,,,,,&pi=1&pn=700&dx=1&v=0.9987856911043557',
-//   {
-//     headers: {
-//       accept: '*/*',
-//       'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-//       'sec-ch-ua':
-//         '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
-//       'sec-ch-ua-mobile': '?0',
-//       'sec-ch-ua-platform': '"Windows"',
-//       'sec-fetch-dest': 'script',
-//       'sec-fetch-mode': 'no-cors',
-//       'sec-fetch-site': 'same-origin',
-//       referer: 'https://fund.eastmoney.com/data/fundranking.html',
-//     },
-//     body: null,
-//     method: 'GET',
-//     mode: 'cors',
-//     credentials: 'include',
-//   }
-// )
-//   .then((res) => res.text())
-//   .then((res) => {
-//     // console.log('Response Text:', text);
-//     // fs.writeFileSync(path.join(__dirname, 'a1.txt'), text);
-//     console.log(res.indexOf('{'));
-//     console.log(res.lastIndexOf('}'));
-//     const jsonString = res.substring(res.indexOf('{'), res.lastIndexOf('}') + 1);
-//     const jsonObject = JSON.parse(jsonString);
-//     fs.writeFileSync(
-//       'rankData.json',
-//       JSON.stringify(jsonObject, null, 2),
-//       'utf8'
-//     );
-//   })
-//   .catch((err) => {
-//     console.error('Error fetching fund data:', err);
-//   });
+*/
 
+const pn = 1000;
+// 日增长率
+const url_1 = `https://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=rzdf&st=desc&sd=2024-09-28&ed=2025-09-28&qdii=&tabSubtype=,,,,,&pi=1&pn=${pn}&dx=1&v=0.1487653330314005`;
+// 周
+const url_2 = `https://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=zzf&st=desc&sd=2024-07-28&ed=2025-09-28&qdii=&tabSubtype=,,,,,&pi=1&pn=${pn}&dx=1&v=0.905523524272557`;
+// 月
+const url_3 = `https://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=1yzf&st=desc&sd=2024-07-28&ed=2025-09-28&qdii=&tabSubtype=,,,,,&pi=1&pn=${pn}&dx=1&v=0.8641197374389376`;
 
+const pageObj = {
+  data_1: [], // 日增长率
+  data_2: [], // 周增长率
+  data_3: [], // 月数据
+};
 
+async function getData(url, key) {
+  try {
+    const res = await fetch(url, {
+      headers: {
+        'sec-fetch-mode': 'no-cors',
+        'sec-fetch-site': 'same-origin',
+        referer: 'https://fund.eastmoney.com/data/fundranking.html',
+      },
+      body: null,
+      method: 'GET',
+      mode: 'cors',
+      credentials: 'include',
+    });
+    const cur_text = await res.text();
+    const match = cur_text.match(/var\s+rankData\s*=\s*(\{[\s\S]*?\});/);
+    if (match) {
+      const rankData = eval('(' + match[1] + ')');
+      let arr_1 = (rankData.datas || []).filter((item) => {
+        const [code, name] = item.split(',');
+        if (name.endsWith('A')) return false;
+        if (noText.some((kw) => name.includes(kw))) return false;
+        if (noFundCode.some((kw) => code.includes(kw))) return false;
+        return true;
+      });
+      pageObj[key] = arr_1.map((item) => {
+        const [code, name] = item.split(',');
+        return [code, name];
+        // return [item[0], item[1]];
+      });
 
-//
-
-
-// HTTP/1.1
-// Host:
-// isAllowRecommend: 1
-// Accept: */*
-// X-MLAAS-AT: wl=0&id=3276392949078479027&src=sgm-mobile
-// Sgm-Context: 3276392949078479027;3276392949078479027;false;9HwAEg@vlKkp7SqT8dSSBaj
-// Accept-Encoding: gzip, deflate, br
-// Accept-Language: zh-CN,zh-Hans;q=0.9
-// Content-Length: 1732
-// User-Agent: JDJRMobile/618 CFNetwork/1329 Darwin/21.3.0
-// Connection: keep-alive
-//
-// Cookie: qid_evord=2613; qid_sid=5e8c6183-831c-47b3-8216-0b9f0676206d-12; 3AB9D23F7A4B3C9B=2PH2NTSK3H3P6RIG3ZORMTFUS6RMEFFZFCDJBD7XYIR7TPKESHIYHHLZI4MG6SCKG7XK2IWE3QXZRDPYUGDPA6FXY4; 3AB9D23F7A4B3CSS=jdd032PH2NTSK3H3P6RIG3ZORMTFUS6RMEFFZFCDJBD7XYIR7TPKESHIYHHLZI4MG6SCKG7XK2IWE3QXZRDPYUGDPA6FXY4AAAAMZRMNXJ6AAAAAADVOSKDHWDKBNNEX; pt_key=app_openAAJo18cGADAM_ZnT74ey7SCE3WmWTSSoJ6C3FHnC7aPagw1V90musAVWfirGj6g6lJv5vrX99-g; pt_pin=%E5%8D%9A%E5%AD%A6%E5%89%8D%E9%94%8B; pwdt_id=%E5%8D%9A%E5%AD%A6%E5%89%8D%E9%94%8B; sid=521f49b99b977b4104c85eb422da3e6w; qid_ls=1758971658530; qid_ts=1758974517061; qid_vis=12; qid_fs=1758383314517; qid_uid=5e8c6183-831c-47b3-8216-0b9f0676206d
-
-fetch(
-  'https://ms.jr.jd.com/gw/generic/aladdin/newna/m/getPageMutilDataNotLogin?pagetype=3154',
-  {
-    headers: {
-      accept: '*/*',
-      'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-      'sec-ch-ua':
-        '"Chromium";v="140", "Not=A?Brand";v="24", "Google Chrome";v="140"',
-      'sec-ch-ua-mobile': '?0',
-      'sec-ch-ua-platform': '"Windows"',
-      'sec-fetch-dest': 'script',
-      'sec-fetch-mode': 'no-cors',
-      'sec-fetch-site': 'same-origin',
-      referer: 'https://ms.jr.jd.com',
-      "content-type": "application/json; charset=UTF-8"
-    },
-    body: `jdgs: {"b1":"bb0eb1e7-979d-4072-94ae-e36f5f305ef0","b2":"2.2.2_1","b3":"2.1","b4":"YK0CE1Ln49C6QUpdoHOEJrKa2nP7S3pZwU6phueOcgMWCTgrlVQcplZMGSWYN1eB/2le9o+R99/kWa18WDbOxbZhNPi6TUAOThcqexgq+xPYaADE7Av5tGP3ZWVQI8VAd7fyeGKvrrWBujTy4bObBoj1xZW22YBR6sFfDSaxM5srNtbl1POz+GnhMcVAMmKRNjKIr/7qVlde1W0DIWjETg8dV1Ze2CgjViII7p8/tXw3quPt3tGT9Hc+2vnLz9zt83dn39s+iEhXP/endWUd8JpckJOQSbitRAhYE2qphm75lKTy4RGMwASaik5PYd8=","b5":"d8609e56e5899112cfcc5fb8e8b19150d71d8828","b7":"1758976284467","b6":"4421019b906b3a864ec1152b164f57aeb4033c16"}`,
-    method: 'post',
-    mode: 'cors',
-    credentials: 'include',
+      rankData.datas = arr_1;
+    }
+  } catch (err) {
+    console.log('err', err);
   }
-)
-  .then((res) => res.text())
-  .then((res) => {
-    console.log('Response Text:', res);
-    // fs.writeFileSync(path.join(__dirname, 'a1.txt'), res);
-    // console.log(res.indexOf('{'));
-    // console.log(res.lastIndexOf('}'));
-    // const jsonString = res.substring(res.indexOf('{'), res.lastIndexOf('}') + 1);
-    // const jsonObject = JSON.parse(jsonString);
-    // fs.writeFileSync(
-    //   'rankData.json',
-    //   JSON.stringify(jsonObject, null, 2),
-    //   'utf8'
-    // );
-  })
-  .catch((err) => {
-    console.error('Error fetching fund data:', err);
-  });
+}
 
+async function init() {
+  await getData(url_1, 'data_1');
+  await getData(url_2, 'data_2');
+  await getData(url_3, 'data_3');
+  if (pageObj.data_1.length && pageObj.data_2.length && pageObj.data_3.length) {
+    console.log('data_1', pageObj.data_1.length);
+    console.log('data_2', pageObj.data_2.length);
+    console.log('data_3', pageObj.data_3.length);
+
+    const arr_1 = [];
+
+    function getIntersection(...arrays) {
+      if (arrays.length === 0) return [];
+      let result = arrays[0];
+      for (let i = 1; i < arrays.length; i++) {
+        const codes = new Set(arrays[i].map((item) => item[0]));
+        result = result.filter((item) => codes.has(item[0]));
+      }
+      return result;
+    }
+
+    // 调用
+    const sameItems = getIntersection(pageObj.data_1, pageObj.data_2, pageObj.data_3);
+    console.log(`交叉了${sameItems.length}个`);
+    sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
+
+    fs.writeFileSync('rankData.json', JSON.stringify(sameItems, null, 2), 'utf8');
+  }
+}
+init();
