@@ -85,26 +85,33 @@ router.post('/fund_public_fund_update', (req, res) => {
 });
 
 // 新增-公共的基金数据
-router.post('/fund_public_fund_add', (req, res) => {
+router.post('/fund_public_fund_add', async (req, res) => {
   const { form = {} } = req.body;
+
+  const total_str = 'SELECT COUNT(*) AS total FROM fund_public';
+  const total_num = await DatabasePostQuery({
+    query: total_str,
+    next:true,
+  });
+  const cur_sort = total_num[0].total + 1;
+
   const query_str = `
     INSERT INTO fund_public (
         fund_code, fund_name, sort_order, type, sign, zhang_url,
-        point_top, point_down, fund_desc, fixed, sign
+        point_top, point_down, fund_desc, fixed
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
   const values = [
     form.fund_code,
     form.fund_name,
-    form.sort_order || 1,
+    cur_sort,
     form.type,
     form.sign,
     form.zhang_url,
-    form.point_top,
-    form.point_down,
-    form.fund_desc,
-    form.fixed || 0,
-    form.sign,
+    form.point_top || '',
+    form.point_down || '',
+    form.fund_desc || '',
+    parseFloat(form.fixed || 0)
   ];
 
   DatabasePostQuery({
@@ -133,33 +140,41 @@ router.post('/fund_public_fund_delete', (req, res) => {
 // 排序-公共的基金数据
 router.post('/fund_public_fund_sort', async (req, res) => {
   const { fund_code, index_new, index_old } = req.body;
+
+  // 确保 index_new 和 index_old 是数字
+  const newIndex = parseInt(index_new, 10);
+  const oldIndex = parseInt(index_old, 10);
+
+  // 构造 SQL 查询
   const queries = [
     `UPDATE fund_public SET sort_order = 0 WHERE fund_code = '${fund_code}';`,
-    `UPDATE fund_public SET sort_order = sort_order + 1 WHERE sort_order >= ${index_new} AND sort_order < ${index_old} AND fund_code != '${fund_code}';`,
-    `UPDATE fund_public SET sort_order = sort_order - 1 WHERE sort_order <= ${index_new} AND sort_order > ${index_old} AND fund_code != '${fund_code}';`,
-    `UPDATE fund_public SET sort_order = ${index_new} WHERE fund_code = '${fund_code}';`,
+    newIndex > oldIndex
+      ? `UPDATE fund_public SET sort_order = sort_order - 1 WHERE sort_order <= ${newIndex} AND sort_order > ${oldIndex} AND fund_code != '${fund_code}';`
+      : `UPDATE fund_public SET sort_order = sort_order + 1 WHERE sort_order >= ${newIndex} AND sort_order < ${oldIndex} AND fund_code != '${fund_code}';`,
+    `UPDATE fund_public SET sort_order = ${newIndex} WHERE fund_code = '${fund_code}';`,
   ];
+
   try {
-    await DatabasePostQuery.apply({
-      query: queries[0],
-      next: true,
+    // 执行 SQL 查询
+    for (const query of queries) {
+      await DatabasePostQuery({
+        query,
+        next: true, // 如果 DatabasePostQuery 支持 next 参数
+      });
+    }
+
+    // 返回成功响应
+    res.send({
+      code: 200,
+      msg: '排序更新成功',
     });
-    await DatabasePostQuery.apply({
-      query: queries[1],
-      next: true,
+  } catch (err) {
+    console.error('排序更新失败:', err);
+    res.send({
+      code: 500,
+      msg: '排序更新失败',
     });
-    await DatabasePostQuery.apply({
-      query: queries[2],
-      next: true,
-    });
-    DatabasePostQuery({
-      res,
-      query: queries[3],
-      format: (results) => ({
-        affectedRows: results.affectedRows, // 返回受影响的行数
-      }),
-    });
-  } catch (err) {}
+  }
 });
 
 // -------------------------------------------------------------------------  下面的待改造
