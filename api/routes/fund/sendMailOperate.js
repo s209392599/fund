@@ -7,7 +7,7 @@ const path = require('path');
 // 使用 Express 内置中间件解析 JSON 请求体（仅对 POST 请求有用）
 router.use(express.json());
 
-const sendMailFn = async (cakkbak_res, content) => {
+const sendMailOperate = async (cakkbak_res, content) => {
   const mail_title = content; // 邮件主题
 
   const filePath = path.join(__dirname, '../../data/base/user.json');
@@ -78,29 +78,8 @@ const sendMailFn = async (cakkbak_res, content) => {
   });
 };
 
-// 处理 GET 请求
-router.get('/sendNotionMail', (req, res) => {
-  const content = req.query.content;
-  if (!content) {
-    return res.send({
-      code: 400,
-      msg: '未正确传参',
-      data: [],
-    });
-  }
-  try {
-    sendMailFn(res, content);
-  } catch (error) {
-    res.send({
-      code: 500,
-      msg: '服务器处理错误',
-      data: [],
-    });
-  }
-});
-
 // 处理 POST 请求
-router.post('/sendNotionMail', async (req, res) => {
+router.post('/sendMailOperate', async (req, res) => {
   const content = req.body.content;
   if (!content) {
     return res.send({
@@ -111,7 +90,7 @@ router.post('/sendNotionMail', async (req, res) => {
   }
 
   try {
-    sendMailFn(res, content);
+    sendMailOperate(res, content);
   } catch (error) {
     res.send({
       code: 500,

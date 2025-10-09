@@ -8,6 +8,7 @@ const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // po
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { pool } = require('../../setting/pool.js'); // 引入mysql连接池
+const { all } = require('axios');
 
 // 后台登录
 router.post('/fund_admin_login', (req, res) => {
@@ -165,10 +166,10 @@ router.post('/fund_public_fund_sort', async (req, res) => {
 
 // 获取所有用户
 router.post('/fund_get_all_user_info', async (req, res) => {
-  let query_str = 'SELECT * FROM fund_users LIMIT 500';
+  let query_str = 'SELECT * FROM fund_users LIMIT 1000';
   let values = [];
   if(req.body.search_name){
-    query_str = 'SELECT * FROM fund_users WHERE user_name LIKE ? OR zh_name LIKE ? LIMIT 500';
+    query_str = 'SELECT * FROM fund_users WHERE user_name LIKE ? OR zh_name LIKE ? LIMIT 1000';
     values.push(`%${req.body.search_name.trim()}%`,`%${req.body.search_name.trim()}%`);
   }
   return DatabasePostQuery({
@@ -281,6 +282,48 @@ router.post('/fund_del_user_info', (req, res) => {
       });
     }
   }
+});
+
+// 通过邮箱发送操作建议
+router.post('/fund_send_mail_operate', async (req, res) => {
+  const { msg = '' } = req.body;
+  console.log('msg',msg);
+  let all_user = [];
+
+  // let query_str = 'SELECT * FROM fund_users LIMIT 1000';
+  // let values = [];
+  // if(req.body.search_name){
+  //   query_str = 'SELECT * FROM fund_users WHERE user_name LIKE ? OR zh_name LIKE ? LIMIT 1000';
+  //   values.push(`%${req.body.search_name.trim()}%`,`%${req.body.search_name.trim()}%`);
+  // }
+  // all_user = await DatabasePostQuery({
+  //   res: res,
+  //   query: query_str,
+  //   values: values,
+  //   format: results => results,
+  //   next: true,
+  // });
+
+  // console.log('all_user',all_user);
+  /*
+  {
+    id: 53,
+    user_name: '786260489@qq.com',
+    zh_name: '基金-王凯华',
+    user_password: '8888',
+    fund_count: 30,
+    remark: null,
+    expiration_time: 2025-08-31T16:00:00.000Z,
+    create_time: 2025-09-23T04:52:43.000Z,
+    update_time: 2025-09-23T04:52:43.000Z,
+    user_token: null
+  },
+  */
+  res.send({
+    code:200,
+    data: all_user || [],
+    msg:'发送成功'
+  })
 });
 
 module.exports = router;
