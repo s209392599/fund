@@ -1,3 +1,6 @@
+/*
+过滤交叉排名重叠的部分
+*/
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
@@ -68,12 +71,9 @@ async function getData(url, key) {
 async function init() {
   await getData(url_1, 'data_1');
   await getData(url_2, 'data_2');
-  // await getData(url_3, 'data_3');
+  await getData(url_3, 'data_3');
 
-  if (pageObj.data_1.length && pageObj.data_2.length ) {
-    console.log('data_1', pageObj.data_1.length);
-    console.log('data_2', pageObj.data_2.length);
-
+  {
     const arr_1 = [];
 
     function getIntersection(...arrays) {
@@ -89,36 +89,34 @@ async function init() {
     // 调用
     const sameItems = getIntersection(pageObj.data_1, pageObj.data_2);
     console.log(`交叉了${sameItems.length}个`);
-    sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
+    // sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
 
-    fs.writeFileSync('rankData.json', JSON.stringify(sameItems, null, 2), 'utf8');
+    const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
+    fs.writeFileSync('rankData_2.txt', wx, 'utf8');
+    // fs.writeFileSync('rankData_2.json', JSON.stringify(wx, null, 2), 'utf8');
   }
 
+  {
+    const arr_1 = [];
 
-  // if (pageObj.data_1.length && pageObj.data_2.length && pageObj.data_3.length) {
-  //   console.log('data_1', pageObj.data_1.length);
-  //   console.log('data_2', pageObj.data_2.length);
-  //   console.log('data_3', pageObj.data_3.length);
+    function getIntersection(...arrays) {
+      if (arrays.length === 0) return [];
+      let result = arrays[0];
+      for (let i = 1; i < arrays.length; i++) {
+        const codes = new Set(arrays[i].map((item) => item[0]));
+        result = result.filter((item) => codes.has(item[0]));
+      }
+      return result;
+    }
 
-  //   const arr_1 = [];
-
-  //   function getIntersection(...arrays) {
-  //     if (arrays.length === 0) return [];
-  //     let result = arrays[0];
-  //     for (let i = 1; i < arrays.length; i++) {
-  //       const codes = new Set(arrays[i].map((item) => item[0]));
-  //       result = result.filter((item) => codes.has(item[0]));
-  //     }
-  //     return result;
-  //   }
-
-  //   // 调用
-  //   const sameItems = getIntersection(pageObj.data_1, pageObj.data_2, pageObj.data_3);
-  //   console.log(`交叉了${sameItems.length}个`);
-  //   sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
-
-  //   fs.writeFileSync('rankData.json', JSON.stringify(sameItems, null, 2), 'utf8');
-  // }
+    // 调用
+    const sameItems = getIntersection(pageObj.data_1, pageObj.data_2, pageObj.data_3);
+    console.log(`交叉了${sameItems.length}个`);
+    // sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
+    const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
+    fs.writeFileSync('rankData_3.txt', wx, 'utf8');
+    // fs.writeFileSync('rankData_3.txt', JSON.stringify(wx, null, 2), 'utf8');
+  }
 }
 init();
 
