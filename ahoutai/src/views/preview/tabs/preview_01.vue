@@ -69,7 +69,7 @@ const btn_del = (row, $index) => {
     }
   )
     .then(() => {
-      server_fund_public_fund_delete({ fundcode: row.fund_code }).then(res => {
+      server_fund_public_fund_delete({ id: row.id }).then(res => {
         if (res.code === 200) {
           ElMessage.success('删除成功');
           query_list();

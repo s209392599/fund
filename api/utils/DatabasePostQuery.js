@@ -40,7 +40,15 @@ function sendResponse(res, code, msg, data = null) {
 /*
 next: 是否需要下一步，当服务器需要多个操作时，设置为false
 */
-async function DatabasePostQuery({ res,query, values = [], format, timeout = 15000, successMsg = '获取成功',next=false }) {
+async function DatabasePostQuery({
+  res,
+  query,
+  values = [],
+  format,
+  timeout = 15000,
+  successMsg = '获取成功',
+  next = false
+}) {
   try {
     const results = await executeQuery(query, values, timeout); // 传递 values
     if(!next){

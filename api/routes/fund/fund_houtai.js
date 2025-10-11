@@ -65,7 +65,7 @@ router.post('/fund_public_fund_update', (req, res) => {
     form.fund_name,
     form.type,
     form.zhang_url,
-    form.fixed || 0,
+    parseFloat(form.fixed || 0),
     form.point_down,
     form.point_top,
     form.fund_desc,
@@ -91,7 +91,7 @@ router.post('/fund_public_fund_add', async (req, res) => {
   const total_str = 'SELECT COUNT(*) AS total FROM fund_public';
   const total_num = await DatabasePostQuery({
     query: total_str,
-    next:true,
+    next: true,
   });
   const cur_sort = total_num[0].total + 1;
 
@@ -127,14 +127,23 @@ router.post('/fund_public_fund_add', async (req, res) => {
 
 // 删除-公共的基金数据
 router.post('/fund_public_fund_delete', (req, res) => {
-  const { fundcode = '', pageSize = 10 } = req.body;
-  return DatabasePostQuery.apply({
-    res,
-    query: 'DELETE FROM fund_public WHERE fund_code = ' + fundcode,
-    format: (results) => ({
-      affectedRows: results.affectedRows, // 返回受影响的行数
-    }),
-  });
+  const { id = null, pageSize = 10 } = req.body;
+  console.log(id);
+  if (typeof id === 'number' && Number.isInteger(id) && id > 0) {
+    DatabasePostQuery({
+      res,
+      query: 'DELETE FROM fund_public WHERE id = ' + id,
+      format: (results) => ({
+        affectedRows: results.affectedRows, // 返回受影响的行数
+      }),
+    });
+  } else {
+    res.send({
+      code: 500,
+      msg: 'id必须是1开始的正整数',
+      data: []
+    });
+  }
 });
 
 // 排序-公共的基金数据
@@ -183,9 +192,9 @@ router.post('/fund_public_fund_sort', async (req, res) => {
 router.post('/fund_get_all_user_info', async (req, res) => {
   let query_str = 'SELECT * FROM fund_users LIMIT 1000';
   let values = [];
-  if(req.body.search_name){
+  if (req.body.search_name) {
     query_str = 'SELECT * FROM fund_users WHERE user_name LIKE ? OR zh_name LIKE ? LIMIT 1000';
-    values.push(`%${req.body.search_name.trim()}%`,`%${req.body.search_name.trim()}%`);
+    values.push(`%${req.body.search_name.trim()}%`, `%${req.body.search_name.trim()}%`);
   }
   return DatabasePostQuery({
     res: res,
@@ -302,7 +311,7 @@ router.post('/fund_del_user_info', (req, res) => {
 // 通过邮箱发送操作建议
 router.post('/fund_send_mail_operate', async (req, res) => {
   const { msg = '' } = req.body;
-  console.log('msg',msg);
+  console.log('msg', msg);
   let all_user = [];
 
   // let query_str = 'SELECT * FROM fund_users LIMIT 1000';
@@ -335,9 +344,9 @@ router.post('/fund_send_mail_operate', async (req, res) => {
   },
   */
   res.send({
-    code:200,
+    code: 200,
     data: all_user || [],
-    msg:'发送成功'
+    msg: '发送成功'
   })
 });
 
