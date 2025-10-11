@@ -1,0 +1,165 @@
+// 过滤基金
+const fetch = require('node-fetch');
+const fs = require('fs');
+
+let EligibleList = []; // 符合条件的基金列表
+
+/*
+条件一：年收益情况
+https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryPerformancePageInfo?reqData={"fundCode":"400030","channel":"9"}
+*/
+async function AnnualIncome(fundCode) {
+  let rate = '';
+  try {
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryPerformancePageInfo`;
+
+    let response = await fetch(u, {
+      headers: {
+        accept: 'application/json, text/plain, */*',
+        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      referrer: 'https://lc.jr.jd.com/',
+      referrerPolicy: 'strict-origin-when-cross-origin',
+      body: 'reqData={"fundCode":"' + fundCode + '","channel":"9"}',
+      method: 'POST',
+    });
+    const res = (await response.json()) || {};
+    performanceList = res?.resultData?.datas?.performanceList || [];
+    performanceList.forEach((item) => {
+      if (item.name === '近1年') {
+        rate = item.rate;
+      }
+    });
+  } catch (err) {
+    console.log(`年收益--{${fundCode}}--err => `);
+  }
+  console.log(`年收益--{${fundCode}}--${rate}`);
+  return rate;
+}
+
+/*
+条件二：累计净值：现在>120天>240天>360天，且两个阶段之间要>1%
+*/
+async function NetValue(fundCode) {
+  let netValueList = '';
+  try {
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo`;
+
+    let response = await fetch(u, {
+      headers: {
+        accept: 'application/json, text/plain, */*',
+        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      body:
+        'reqData={"fundCode":"' +
+        fundCode +
+        '","pageNum":1,"pageSize":380,"channel":"9"}',
+      method: 'POST',
+    });
+    const res = (await response.json()) || {};
+    netValueList = res?.resultData?.datas?.netValueList || [];
+  } catch (err) {
+    console.log(`累计净值--{${fundCode}}--err => `);
+  }
+  return netValueList;
+}
+
+// 是否满足综合条件
+async function isEligible(arr) {
+  if (!arr.length) {
+    return false;
+  }
+
+  for (let index = 0; index < arr.length; index++) {
+    console.log(
+      `正在处理第${index + 1}个基金--${arr[index].productCode
+      }--已完成的基金数--${EligibleList.length}`
+    );
+    if (EligibleList.length >= 80) {
+      break;
+    }
+    const productCode = arr[index].productCode;
+
+    // 等待计算年收益
+    const rate = await AnnualIncome(productCode);
+    console.log('rate', rate);
+    if (rate === '' || Number(rate) < 6) {
+      return false;
+    }
+
+    // 等待计算累计净值
+    const netValueList = await NetValue(productCode);
+    if (netValueList.length >= 300) {
+      const nowValue_000 = Number(netValueList[0].totalNetValue) || 0;
+      const nowValue_100 = Number(netValueList[99].totalNetValue) || 0;
+      const nowValue_200 = Number(netValueList[199].totalNetValue) || 0;
+      const nowValue_300 = Number(netValueList[299].totalNetValue) || 0;
+
+      const flag_1 =
+        nowValue_000 > nowValue_100 &&
+        (nowValue_000 - nowValue_100) / nowValue_100 > 0.015;
+      const flag_2 =
+        nowValue_100 > nowValue_200 &&
+        (nowValue_100 - nowValue_200) / nowValue_200 > 0.015;
+      const flag_3 =
+        nowValue_200 > nowValue_300 &&
+        (nowValue_200 - nowValue_300) / nowValue_300 > 0.015;
+      if (flag_1 && flag_2 && flag_3) {
+        EligibleList.push(arr[index]);
+
+        // 将 JSON 字符串写入文件
+        fs.writeFile(`./fundData/${arr[index].productCode}.json`, JSON.stringify(netValueList), (err) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          console.log('数据已存入本地');
+        });
+      }
+    }
+  }
+}
+
+// 开始任务
+async function startTask() {
+  // 先获取基金列表
+  let productList = await getPageMutilDataNotLogin();
+  if (!productList.length) {
+    console.log('未能正确获取到同类型基金数据');
+    return false;
+  }
+
+  console.log(productList.length);
+  // 初步过滤后的数组
+  filteredList = new Array(productList.length).fill({});
+  // 筛选:符合条件的基金列表
+  EligibleList = [];
+
+  await isEligible(productList);
+
+  var writeArr = EligibleList.map((item) => {
+    if (item?.rate?.value) {
+    } else {
+      console.log('获取失败', item);
+    }
+    return {
+      productCode: item.productCode,
+      productId: item.productId,
+      productName: item.productName,
+      rate: item?.rate?.value || 0,
+    };
+  });
+
+  let writeData = JSON.stringify(writeArr, null, 2);
+  let filePath = 'fund_filter.json';
+
+  try {
+    fs.writeFileSync(filePath, writeData);
+    console.log('数据成功写入文件');
+  } catch (err) {
+    console.error('写入文件时发生错误:', err);
+  }
+}
+startTask();
