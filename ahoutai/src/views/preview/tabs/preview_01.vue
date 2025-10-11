@@ -168,6 +168,24 @@ const onSubmit = () => {
     }
   });
 };
+const updateOrder = () => {
+  info.tableData = info.tableData.map((item, index) => {
+    item.sort_order = index + 1;
+  })
+  server_fund_public_fund_sort({
+    fund_code: info.form.fund_code,
+    index_new: info.form.index_new,
+    index_old: info.form.index_old
+  }).then(res => {
+    console.log('res', res);
+    if (res.code === 200) {
+      ElMessage.success('操作成功');
+      query_list();
+    } else {
+      ElMessage.error('操作失败，请重试！');
+    }
+  })
+}
 
 </script>
 
@@ -175,6 +193,7 @@ const onSubmit = () => {
   <div class="page-wrapper pd-10">
     <div class="flex pb-5">
       <el-button type="primary" size="small" @click="addUser()">新增基金</el-button>
+      <el-button type="primary" size="small" @click="updateOrder()">更新服务器排序</el-button>
     </div>
 
     <el-table :data="info.tableData" border style="width: 100%" height="800">
@@ -190,8 +209,10 @@ const onSubmit = () => {
 
       <el-table-column prop="fund_code" align="center" label="基金号" width="64">
         <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span>
-          <span v-else>{{ row.fund_code }}</span>
+          <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none;">
+            <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span>
+            <span v-else>{{ row.fund_code }}</span>
+          </a>
         </template>
       </el-table-column>
 

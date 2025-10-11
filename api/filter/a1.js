@@ -68,15 +68,7 @@ async function getData(url, key) {
   }
 }
 
-async function init() {
-  await getData(url_1, 'data_1');
-  await getData(url_2, 'data_2');
-  await getData(url_3, 'data_3');
-
-  {
-    const arr_1 = [];
-
-    function getIntersection(...arrays) {
+function getIntersection(...arrays) {
       if (arrays.length === 0) return [];
       let result = arrays[0];
       for (let i = 1; i < arrays.length; i++) {
@@ -86,36 +78,33 @@ async function init() {
       return result;
     }
 
-    // 调用
+async function init() {
+  await getData(url_1, 'data_1');// 日
+  await getData(url_2, 'data_2');// 周
+  await getData(url_3, 'data_3');// 月
+
+  {
     const sameItems = getIntersection(pageObj.data_1, pageObj.data_2);
-    console.log(`交叉了${sameItems.length}个`);
+    console.log(`日周 交叉了${sameItems.length}个`);
     // sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
 
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
-    fs.writeFileSync('rankData_2.txt', wx, 'utf8');
+    fs.writeFileSync('rankData_1.txt', wx, 'utf8');
     // fs.writeFileSync('rankData_2.json', JSON.stringify(wx, null, 2), 'utf8');
   }
 
   {
-    const arr_1 = [];
+    const sameItems = getIntersection(pageObj.data_2, pageObj.data_3);
+    console.log(`周月 交叉了${sameItems.length}个`);
+    const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
+    fs.writeFileSync('rankData_2.txt', wx, 'utf8');
+  }
 
-    function getIntersection(...arrays) {
-      if (arrays.length === 0) return [];
-      let result = arrays[0];
-      for (let i = 1; i < arrays.length; i++) {
-        const codes = new Set(arrays[i].map((item) => item[0]));
-        result = result.filter((item) => codes.has(item[0]));
-      }
-      return result;
-    }
-
-    // 调用
+  {
     const sameItems = getIntersection(pageObj.data_1, pageObj.data_2, pageObj.data_3);
-    console.log(`交叉了${sameItems.length}个`);
-    // sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
+    console.log(`日周月 交叉了${sameItems.length}个`);
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
     fs.writeFileSync('rankData_3.txt', wx, 'utf8');
-    // fs.writeFileSync('rankData_3.txt', JSON.stringify(wx, null, 2), 'utf8');
   }
 }
 init();

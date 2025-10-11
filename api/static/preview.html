@@ -102,7 +102,7 @@
 <body>
   <div id="imgbox"></div>
 
-  <div style="padding: 0px 10px 0px 10px;">注：“今日”这一列是预测涨幅，非当日实际涨幅；后续列是各个历史阶段的涨幅；高亮为历史数据；手机端可滑动查看</div>
+  <div style="padding: 0px 10px 0px 10px;">注：“今日”这一列是预测涨幅，非当日实际涨幅；手机端可滑动查看</div>
   <div id="app" style="padding: 4px 10px 15px 10px;"></div>
 
   <div id="table_wrapper_1" style="display: none;">
@@ -112,8 +112,10 @@
 
       <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
         <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_code}}</span>
-          <span v-else>{{row.fund_code}}</span>
+          <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none;">
+            <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_code}}</span>
+            <span v-else>{{row.fund_code}}</span>
+          </a>
         </template>
       </el-table-column>
 
@@ -191,10 +193,16 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="desc" label="备注" width="300" show-overflow-tooltip>
+      <el-table-column prop="fixed" label="定投金额" width="76" sortable show-overflow-tooltip>
+        <template v-slot="{ row }">
+          <span class="">{{row.fixed}}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="fund_desc" label="备注" width="300" show-overflow-tooltip>
         <template v-slot="{ row }">
           <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">历史数据</span>
-          <span v-else>{{row.desc}}</span>
+          <span v-else>{{row.fund_desc}}</span>
         </template>
       </el-table-column>
 
