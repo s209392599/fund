@@ -5,11 +5,16 @@ const headers = {
   'Authorization': 'Bearer ak_1C233H4cK6Cd5ND6UT6zC7h70Rb6J',
   'Content-Type': 'application/json'
 };
+const querystr = `
+“口衔天宪”出自哪部典籍？
+
+直接给出结果即可，不用过多讲解
+`;
 
 const data = {
   model: 'LongCat-Flash-Chat',
   messages: [
-    { role: 'user', content: 'A500前十大持仓' }
+    { role: 'user', content: '' }
   ],
   // max_tokens: 1000,
   // temperature: 0.7
