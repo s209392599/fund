@@ -6,6 +6,7 @@ const path = require('path');
 const CustomFn = require('../../CustomFn.js');
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
+const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // post请求数据库查询封装
 
 // 获取用户的json数据
 const getUserJson = () => {
@@ -67,13 +68,12 @@ router.post('/testpost', (req, res) => {
 });
 
 // 登录
-router.post('/fund_login', (req, res) => {
-  const { email = '', password = '' } = req.body;
+router.post('/fund_public_login', (req, res) => {
+  const { user_name = '', password = '' } = req.body;
   if (
-    !email ||
+    !user_name ||
     !password ||
-    password.length < 4 ||
-    !CustomFn.CustomValidateEmail(email)
+    password.length < 4
   ) {
     return res.send({
       code: 400,
@@ -81,26 +81,12 @@ router.post('/fund_login', (req, res) => {
       data: [],
     });
   }
-  const userData = (getUserJson() || {}).data || [];
-  const user = userData.find((item) => item.email === email);
-  if (!user) {
-    return res.send({
-      code: 400,
-      msg: '未获取到用户数据',
-      data: [],
-    });
-  }
-  if (user.password !== password) {
-    return res.send({
-      code: 400,
-      msg: '密码不对',
-      data: [],
-    });
-  }
-  return res.send({
-    code: 200,
-    msg: '登录成功',
-    data: user,
+  DatabasePostQuery({
+    res: res,
+    query: `SELECT * FROM fund_users WHERE user_name = '${user_name}' AND user_password = '${password}';`,
+    format: (results) => ({
+      affectedRows: results.affectedRows, // 返回受影响的行数
+    }),
   });
 });
 

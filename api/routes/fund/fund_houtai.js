@@ -8,7 +8,6 @@ const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // po
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { pool } = require('../../setting/pool.js'); // 引入mysql连接池
-const { all } = require('axios');
 
 // 后台登录
 router.post('/fund_admin_login', (req, res) => {

@@ -1,12 +1,12 @@
 <template>
   <el-form :model="form" :rules="rules" ref="loginForm" label-width="100px" class="login-form">
-    <el-form-item label="邮箱" prop="email">
-      <el-input v-model="form.email"></el-input>
+    <el-form-item label="账号" prop="user_name">
+      <el-input v-model="form.user_name"></el-input>
     </el-form-item>
     <el-form-item label="密码" prop="password">
       <el-input v-model="form.password"></el-input>
     </el-form-item>
-    <el-form-item label="二级密码" prop="password">
+    <el-form-item label="二级密码" prop="erji_password">
       <el-input v-model="form.erji_password"></el-input>
     </el-form-item>
     <el-form-item>
@@ -19,15 +19,14 @@
 const router = useRouter();
 
 const form = reactive({
-  email: localStorage.getItem('email') || '',
+  user_name: localStorage.getItem('user_name') || '',
   password: localStorage.getItem('password') || '',
   erji_password: localStorage.getItem('erji_password') || '',
 });
 
 const rules = {
-  email: [
-    { required: true, message: '请输入邮箱地址', trigger: 'blur' },
-    { type: 'email', message: '请输入有效的邮箱地址', trigger: ['blur', 'change'] }
+  user_name: [
+    { required: true, message: '请输入账号', trigger: 'blur' },
   ],
   password: [
     { required: true, message: '请输入密码', trigger: 'blur' },
@@ -40,11 +39,11 @@ const loginForm = ref(null);
 const onSubmit = () => {
   loginForm.value.validate((valid) => {
     if (valid) {
-      server_fund_login(form).then(res => {
+      server_fund_public_login(form).then(res => {
         console.log('登录', res);
         if (res.code === 200) {
           // 登录成功
-          localStorage.setItem('email', form.email);
+          localStorage.setItem('user_name', form.user_name);
           localStorage.setItem('password', form.password);
           // 存储基金信息
           localStorage.setItem('fund', JSON.stringify(res.data.fund || []));

@@ -9,8 +9,8 @@ export async function server_testpost(data) {
   return request.post('/testpost', data);
 }
 // 登录
-export async function server_fund_login(data) {
-  return request.post('/fund_login', data);
+export async function server_fund_public_login(data) {
+  return request.post('/fund_public_login', data);
 }
 // 获取所有用户
 export async function server_fund_get_all_user_info(data) {

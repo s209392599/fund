@@ -85,6 +85,20 @@ const info = reactive({
     //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
     //   desc: ''
     // },
+    {
+      id: 15,
+      show: true,
+      name: '大屏信息',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_15.vue'))),
+      desc: ''
+    },
+    {
+      id: 99,
+      show: true,
+      name: '我的',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_99.vue'))),
+      desc: ''
+    },
   ],
   list_tabs: [],
   active_tab: null, // 初始为null，等数据准备好再设置
