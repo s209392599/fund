@@ -39,7 +39,7 @@ const rules = {
 // 获取-列表数据
 const query_list = () => {
   setTimeout(() => {
-    server_fund_public_fund_query().then(res => {
+    server_fund_manage_fund_query().then(res => {
       console.log('res', res);
       if (res.code === 200) {
         info.tableData = res.data.data || [];
@@ -69,7 +69,7 @@ const btn_del = (row, $index) => {
     }
   )
     .then(() => {
-      server_fund_public_fund_delete({ id: row.id }).then(res => {
+      server_fund_manage_fund_delete({ id: row.id }).then(res => {
         if (res.code === 200) {
           ElMessage.success('删除成功');
           query_list();
@@ -88,7 +88,7 @@ const btn_cha = (row, $index) => {
     index = Math.min(index, info.tableData.length) - 1;
     if (index > -1 && index !== $index) {
       console.log('index', index, $index);
-      server_fund_public_fund_sort({
+      server_fund_manage_fund_sort({
         fund_code: row.fund_code,
         index_new: index + 1,
         index_old: $index
@@ -134,7 +134,7 @@ const onSubmit = () => {
       console.log('form', JSON.stringify(info.form));
 
       if (info.update_flag === 'add') {
-        server_fund_public_fund_add({
+        server_fund_manage_fund_add({
           form: info.form
         }).then(res => {
           console.log('新增', res);
@@ -148,7 +148,7 @@ const onSubmit = () => {
           }
         })
       } else {
-        server_fund_public_fund_update({
+        server_fund_manage_fund_update({
           form: info.form
         }).then(res => {
           console.log('更新', res);
@@ -172,7 +172,7 @@ const updateOrder = () => {
   info.tableData = info.tableData.map((item, index) => {
     item.sort_order = index + 1;
   })
-  server_fund_public_fund_sort({
+  server_fund_manage_fund_sort({
     fund_code: info.form.fund_code,
     index_new: info.form.index_new,
     index_old: info.form.index_old

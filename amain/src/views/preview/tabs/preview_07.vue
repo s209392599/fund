@@ -41,14 +41,14 @@ const rules = {
 // 获取-列表数据
 const query_list = () => {
   setTimeout(() => {
-    server_fund_public_fund_query().then(res => {
-      console.log('res', res);
-      if (res.code === 200) {
-        info.tableData = res.data.data || [];
-      } else {
-        ElMessage.error('获取列表失败，请重试！');
-      }
-    })
+    // fund_amain_fund_query_by_user().then(res => {
+    //   console.log('res', res);
+    //   if (res.code === 200) {
+    //     info.tableData = res.data.data || [];
+    //   } else {
+    //     ElMessage.error('获取列表失败，请重试！');
+    //   }
+    // })
   }, 1000);
 }
 query_list();
@@ -71,7 +71,7 @@ const btn_del = (row, $index) => {
     }
   )
     .then(() => {
-      server_fund_public_fund_delete({ id: row.id }).then(res => {
+      server_fund_manage_fund_delete({ id: row.id }).then(res => {
         if (res.code === 200) {
           ElMessage.success('删除成功');
           query_list();
@@ -90,7 +90,7 @@ const btn_cha = (row, $index) => {
     index = Math.min(index, info.tableData.length) - 1;
     if (index > -1 && index !== $index) {
       console.log('index', index, $index);
-      server_fund_public_fund_sort({
+      server_fund_manage_fund_sort({
         fund_code: row.fund_code,
         index_new: index + 1,
         index_old: $index
@@ -136,7 +136,7 @@ const onSubmit = () => {
       console.log('form', JSON.stringify(info.form));
 
       if (info.update_flag === 'add') {
-        server_fund_public_fund_add({
+        server_fund_manage_fund_add({
           form: info.form
         }).then(res => {
           console.log('新增', res);
@@ -150,7 +150,7 @@ const onSubmit = () => {
           }
         })
       } else {
-        server_fund_public_fund_update({
+        server_fund_manage_fund_update({
           form: info.form
         }).then(res => {
           console.log('更新', res);
@@ -174,7 +174,7 @@ const updateOrder = () => {
   info.tableData = info.tableData.map((item, index) => {
     item.sort_order = index + 1;
   })
-  server_fund_public_fund_sort({
+  server_fund_manage_fund_sort({
     fund_code: info.form.fund_code,
     index_new: info.form.index_new,
     index_old: info.form.index_old
@@ -220,8 +220,7 @@ function realTimeInformation(str) {
   return str;
 }
 
-async function getFund(code, index) {
-  console.log(`正在请求第 ${index + 1} 个基金数据 ~~~`);
+async function getFund(code) {
   // https://fundgz.1234567.com.cn/js/400030.js?rt=1711363239864
   let u = `https://fundgz.1234567.com.cn/js/${code}.js?rt=${+new Date()}`;
   return fetch(u, {})
@@ -229,6 +228,7 @@ async function getFund(code, index) {
     .then((res) => {
       let data = realTimeInformation(res);
       let obsData = JSON.parse(data);
+      console.log('obsData', obsData)
       // {"fundcode":"008087","name":"华夏中证5G通信主题ETF联接C","jzrq":"2024-03-22","dwjz":"0.9686","gsz":"0.9416","gszzl":"-2.78","gztime":"2024-03-25 15:00"}
       return {
         code,
@@ -242,10 +242,18 @@ async function getFund(code, index) {
 }
 
 const change_fund_code = (val) => {
-  if (val.length === 6) {
-    // https://fundgz.1234567.com.cn/js/019260.js
-    // 实时涨幅的js
+  var isSixDigitNumber = /^\d{6}$/.test(val);// 6位数字䣂类型
+  if (isSixDigitNumber) {
     info.form.zhang_url = `https://j4.dfcfw.com/charts/pic6/${info.form.fund_code}.png`;
+    server_fund_amain_getfundgz({
+      fundcode: val,
+    }).then(res => {
+      if (res.code === 200) {
+        info.form.fund_name = res.data.fund_name;
+      } else {
+        ElMessage.error('获取实时涨幅失败！')
+      }
+    })
   } else {
     info.form.zhang_url = '';
   }

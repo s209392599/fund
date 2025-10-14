@@ -1,3 +1,6 @@
+/* 
+
+*/
 const fetch = require('node-fetch');
 const fs = require('fs');
 const url = 'https://api.longcat.chat/openai/v1/chat/completions';
@@ -6,15 +9,19 @@ const headers = {
   'Content-Type': 'application/json'
 };
 const querystr = `
-“口衔天宪”出自哪部典籍？
+一团一黑
+往
+书
+漆
 
-直接给出结果即可，不用过多讲解
+上面第一行时或者前两行是问题，后面是结果，哪一个结果更正确？
+直接给出结果即可，不用过多讲解·
 `;
 
 const data = {
   model: 'LongCat-Flash-Chat',
   messages: [
-    { role: 'user', content: '' }
+    { role: 'user', content: querystr }
   ],
   // max_tokens: 1000,
   // temperature: 0.7

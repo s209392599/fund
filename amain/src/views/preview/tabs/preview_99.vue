@@ -1,23 +1,15 @@
 <script setup>
+// 我的页面
 console.log('amain/src/views/preview/tabs/preview_99.vue');
-// 基金大屏信息展示
-
-/*
-指数的涨跌信息
-资金的流入流出
-
-*/
+const router = useRouter();
 
 const info = reactive({
   text: '',
-  tableData: [
-
-  ],
 });
 
 // 退出
 const btn_fn_1 = () => {
-
+  router.push('/');
 };
 
 const addFn = () => {

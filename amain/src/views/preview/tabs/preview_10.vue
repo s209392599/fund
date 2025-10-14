@@ -180,7 +180,7 @@ const viewDayFn = (num, active) => {
 
 // 获取用户数据
 const getUserInfo = () => {
-  server_fund_public_fund_query().then((res) => {
+  server_fund_manage_fund_query().then((res) => {
     if (res.code === 200) {
       page.list = (res.data || []).map((v) => {
         v.his_data = []; // 添加一个历史数据的字段

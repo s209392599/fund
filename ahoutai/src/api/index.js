@@ -38,28 +38,28 @@ export async function server_fund_today_rate_by_timer(data) {
   return request.post('/fund_today_rate_by_timer', data);
 }
 // 获取公共的基金数据-查询
-export async function server_fund_public_fund_query(data) {
-  return request.post('/fund_public_fund_query', data);
+export async function server_fund_manage_fund_query(data) {
+  return request.post('/fund_manage_fund_query', data);
 }
 // 获取公共的基金数据-新增
-export async function server_fund_public_fund_add(data) {
-  return request.post('/fund_public_fund_add', data);
+export async function server_fund_manage_fund_add(data) {
+  return request.post('/fund_manage_fund_add', data);
 }
 // 获取公共的基金数据-修改
-export async function server_fund_public_fund_update(data) {
-  return request.post('/fund_public_fund_update', data);
+export async function server_fund_manage_fund_update(data) {
+  return request.post('/fund_manage_fund_update', data);
 }
 // 获取公共的基金数据-删除
-export async function server_fund_public_fund_delete(data) {
-  return request.post('/fund_public_fund_delete', data);
+export async function server_fund_manage_fund_delete(data) {
+  return request.post('/fund_manage_fund_delete', data);
 }
 // 获取天天基金的搜索结果
 export async function server_fund_search_bytiantian(data) {
   return request.post('/fund_search_bytiantian', data);
 }
 // 排序-公共的基金数据
-export async function server_fund_public_fund_sort(data) {
-  return request.post('/fund_public_fund_sort', data);
+export async function server_fund_manage_fund_sort(data) {
+  return request.post('/fund_manage_fund_sort', data);
 }
 
 // --------------------------------------------------------------  下面是数据库操作

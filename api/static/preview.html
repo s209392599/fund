@@ -318,7 +318,7 @@
       app.mount('#app');
     }
 
-    fetch('http://150.158.175.108:9999/fund_public_fund_query', { method: 'post' })
+    fetch('http://150.158.175.108:9999/fund_manage_fund_query', { method: 'post' })
       .then(res => res.json())
       .then(res => {
         if (res.code === 200) {

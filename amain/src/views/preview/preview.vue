@@ -105,14 +105,14 @@ const info = reactive({
   password: ''
 });
 
-const email = localStorage.getItem('email');
-if ([null, '', undefined].includes(email)) {
+const user_email = localStorage.getItem('user_email');
+if ([null, '', undefined].includes(user_email)) {
   ElMessage.error('登录失败！')
   router.push('/');
 } else {
-  console.log('账号为：', email);
+  console.log('账号为：', user_email);
 
-  if (['209392599@qq.com'].includes(email)) {
+  if (['209392599@qq.com'].includes(user_email)) {
     info.list_tabs = info.list_default.filter(item => item.show);
   } else {
     info.list_tabs = info.list_default.filter(item => item.show && !item.permissions);

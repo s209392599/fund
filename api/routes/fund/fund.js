@@ -8,73 +8,10 @@ const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // post请求数据库查询封装
 
-// 获取用户的json数据
-const getUserJson = () => {
-  const filePath = path.join(__dirname, '../../data/base/user.json');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  const jsonData = JSON.parse(fileContent);
-  return jsonData;
-};
-// 存储用户的json数据
-const updateUserJson = (newJsonData) => {
-  const filePath = path.join(__dirname, '../../data/base/user.json');
-  try {
-    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
-    return true;
-  } catch (err) {
-    console.log('err', err);
-    return false;
-  }
-};
-
-// 获取 标准基金 数据
-const getPublicFundJson = () => {
-  const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  const jsonData = JSON.parse(fileContent);
-  return jsonData;
-};
-// 更新 标准基金 数据
-const updatePublicFundJson = (newJsonData) => {
-  const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
-  try {
-    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
-    return true;
-  } catch (err) {
-    console.log('err', err);
-    return false;
-  }
-};
-
-// 定义一个GET示例请求
-router.get('/testget', (req, res) => {
-  const content = req.query.content || '';
-  res.send({
-    code: 200,
-    msg: '成功',
-    data: [content || '没有传递参数哦'],
-  });
-});
-
-// 定义一个POST示例请求
-router.post('/testpost', (req, res) => {
-  console.log('req.body', req.body);
-  const content = req.body.content || '';
-  res.send({
-    code: 200,
-    msg: '成功',
-    data: [content || '没有传递参数哦'],
-  });
-});
-
 // 登录
-router.post('/fund_public_login', (req, res) => {
+router.post('/fund_amain_login', (req, res) => {
   const { user_name = '', password = '' } = req.body;
-  if (
-    !user_name ||
-    !password ||
-    password.length < 4
-  ) {
+  if (!user_name || !password || password.length < 4) {
     return res.send({
       code: 400,
       msg: '邮箱或密码不对',
@@ -85,7 +22,86 @@ router.post('/fund_public_login', (req, res) => {
     res: res,
     query: `SELECT * FROM fund_users WHERE user_name = '${user_name}' AND user_password = '${password}';`,
     format: (results) => ({
-      affectedRows: results.affectedRows, // 返回受影响的行数
+      id: results[0]?.id,
+      user_email: results[0]?.user_email,
+      user_name: results[0]?.user_name,
+      // {
+      //   "id": 57,
+      //   "user_email": "203812677@qq.com",
+      //   "user_name": "boxue",
+      //   "zh_name": "自己的测试号",
+      //   "user_password": "qaz123..",
+      //   "fund_count": 30,
+      //   "remark": null,
+      //   "expiration_time": "2098-12-31T16:00:00.000Z",
+      //   "create_time": "2025-10-14T06:26:09.000Z",
+      //   "update_time": "2025-10-14T06:26:16.000Z",
+      //   "user_token": null
+      // }
+      // affectedRows: results.affectedRows, // 返回受影响的行数
+    }),
+  });
+});
+
+function realTimeInformation(str) {
+  if (str.startsWith('jsonpgz(')) {
+    str = str.slice(8);
+  }
+  if (str.endsWith(');')) {
+    str = str.substring(0, str.length - 2);
+  }
+  return str;
+}
+// 获取实时涨幅
+router.post('/fund_amain_getfundgz', (req, res) => {
+  const { fundcode = '', pageSize = 10 } = req.body;
+  var isSixDigitNumber = /^\d{6}$/.test(fundcode); // 6位数字䣂类型
+  if (!isSixDigitNumber) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `https://fundgz.1234567.com.cn/js/${fundcode}.js?rt=${+new Date()}`;
+    fetch(u, {})
+      .then((data) => data.text())
+      .then((data) => {
+        let str = realTimeInformation(data);
+        let obsData = JSON.parse(str || '{}');
+        res.send({
+          code: 200,
+          msg: '成功',
+          data: {
+            fund_code: fundcode,
+            fund_name: obsData.name || '',
+            gszzl: obsData.gszzl || '',
+            dwjz: obsData.dwjz || '',
+            gsz: obsData.gsz || '',
+            gztime: obsData.gztime || '',
+          },
+        });
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fundcode}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
+// 查询用户的基金
+router.post('/fund_amain_fund_query_by_user', async (req, res) => {
+  const { fund_user_id } = req.body;
+  DatabasePostQuery({
+    res: res,
+    query: `SELECT * FROM fund_user_collection WHERE fund_user_id = ${fund_user_id} ORDER BY sort_order ASC`,
+    format: (results) => ({
+      length: results.length,
+      data: results,
     }),
   });
 });
@@ -126,7 +142,6 @@ router.post('/fund_history_data', (req, res) => {
   }
 });
 
-//
 router.post('/fund_detailPageInfoWithNoPin', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
 
@@ -300,8 +315,8 @@ router.post('/fund_search_bytiantian', (req, res) => {
     return;
   }
   try {
-    console.log('text',text)
-    const keyStr= encodeURIComponent(text);
+    console.log('text', text);
+    const keyStr = encodeURIComponent(text);
     let url = `https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx`;
     let params = `?m=1&key=${keyStr}&pageindex=0&pagesize=1000&t=` + Date.now();
 
@@ -318,8 +333,8 @@ router.post('/fund_search_bytiantian', (req, res) => {
       .then((data) => {
         console.log('data', data);
         let datas = data.Datas || [];
-        datas = datas.filter((item) => !noText.includes(item.CODE));// 排除的关键词
-        datas = datas.filter((item) => !noFundCode.includes(item.CODE));// 排除的基金代码
+        datas = datas.filter((item) => !noText.includes(item.CODE)); // 排除的关键词
+        datas = datas.filter((item) => !noFundCode.includes(item.CODE)); // 排除的基金代码
 
         const turn_data = datas.map((item) => {
           return {

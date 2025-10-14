@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-const router = useRouter();
+const router = useGlobalRouter();
 
 const form = reactive({
   user_name: localStorage.getItem('user_name') || '',
@@ -39,21 +39,19 @@ const loginForm = ref(null);
 const onSubmit = () => {
   loginForm.value.validate((valid) => {
     if (valid) {
-      server_fund_public_login(form).then(res => {
+      server_fund_amain_login(form).then(res => {
         console.log('登录', res);
         if (res.code === 200) {
           // 登录成功
+          localStorage.setItem('user_id', res.data.id);
+          localStorage.setItem('user_email', res.data.user_email);
           localStorage.setItem('user_name', form.user_name);
           localStorage.setItem('password', form.password);
-          // 存储基金信息
-          localStorage.setItem('fund', JSON.stringify(res.data.fund || []));
           localStorage.setItem('loginTime', CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"));
-          console.log('res', res.data)
-          // 跳转到
           router.push('/preview');
         } else {
           // 登录失败
-          ElMessage.error('登录失败！')
+          ElMessage.error('登录失败22！')
         }
       })
     } else {

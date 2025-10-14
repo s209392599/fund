@@ -458,3 +458,66 @@ https://saithink.top/guide/demo.html 模板网站
     下降值 44也要展示一下
     });
     */
+/* 
+
+// 获取用户的json数据
+const getUserJson = () => {
+  const filePath = path.join(__dirname, '../../data/base/user.json');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const jsonData = JSON.parse(fileContent);
+  return jsonData;
+};
+// 存储用户的json数据
+const updateUserJson = (newJsonData) => {
+  const filePath = path.join(__dirname, '../../data/base/user.json');
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.log('err', err);
+    return false;
+  }
+};
+
+// 获取 标准基金 数据
+const getPublicFundJson = () => {
+  const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  const jsonData = JSON.parse(fileContent);
+  return jsonData;
+};
+// 更新 标准基金 数据
+const updatePublicFundJson = (newJsonData) => {
+  const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
+  try {
+    fs.writeFileSync(filePath, JSON.stringify(newJsonData, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.log('err', err);
+    return false;
+  }
+};
+
+// 定义一个GET示例请求
+router.get('/testget', (req, res) => {
+  const content = req.query.content || '';
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: [content || '没有传递参数哦'],
+  });
+});
+
+// 定义一个POST示例请求
+router.post('/testpost', (req, res) => {
+  console.log('req.body', req.body);
+  const content = req.body.content || '';
+  res.send({
+    code: 200,
+    msg: '成功',
+    data: [content || '没有传递参数哦'],
+  });
+});
+
+
+*/

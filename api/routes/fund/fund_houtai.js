@@ -32,7 +32,7 @@ router.post('/fund_admin_login', (req, res) => {
 });
 
 // 查询-公共的基金数据
-router.post('/fund_public_fund_query', async (req, res) => {
+router.post('/fund_manage_fund_query', async (req, res) => {
   DatabasePostQuery({
     res: res,
     query: 'SELECT * FROM fund_public ORDER BY sort_order ASC',
@@ -44,7 +44,7 @@ router.post('/fund_public_fund_query', async (req, res) => {
 });
 
 // 修改-公共的基金数据
-router.post('/fund_public_fund_update', (req, res) => {
+router.post('/fund_manage_fund_update', (req, res) => {
   const { form = {} } = req.body;
   const query_str = `
     UPDATE fund_public
@@ -84,7 +84,7 @@ router.post('/fund_public_fund_update', (req, res) => {
 });
 
 // 新增-公共的基金数据
-router.post('/fund_public_fund_add', async (req, res) => {
+router.post('/fund_manage_fund_add', async (req, res) => {
   const { form = {} } = req.body;
 
   const total_str = 'SELECT COUNT(*) AS total FROM fund_public';
@@ -125,7 +125,7 @@ router.post('/fund_public_fund_add', async (req, res) => {
 });
 
 // 删除-公共的基金数据
-router.post('/fund_public_fund_delete', (req, res) => {
+router.post('/fund_manage_fund_delete', (req, res) => {
   const { id = null, pageSize = 10 } = req.body;
   console.log(id);
   if (typeof id === 'number' && Number.isInteger(id) && id > 0) {
@@ -146,7 +146,7 @@ router.post('/fund_public_fund_delete', (req, res) => {
 });
 
 // 排序-公共的基金数据
-router.post('/fund_public_fund_sort', async (req, res) => {
+router.post('/fund_manage_fund_sort', async (req, res) => {
   const { fund_code, index_new, index_old } = req.body;
 
   // 确保 index_new 和 index_old 是数字

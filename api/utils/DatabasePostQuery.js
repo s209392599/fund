@@ -1,5 +1,5 @@
 /*
-router.post('/fund_public_fund_query', async (req, res) => {
+router.post('/fund_manage_fund_query', async (req, res) => {
   return DatabasePostQuery.apply({ res }, [{
     query: 'SELECT * FROM fund_public ORDER BY sort_order ASC',
     format: (results) => ({
