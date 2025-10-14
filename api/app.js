@@ -47,8 +47,8 @@ app.use((req, res, next) => {
   const machineSecret = 'C02CN1R4MD6Q'; // mac电脑的序列号
   // wmic csproduct get uuid  在windows上获取uuid
   console.log('-------------------------------------');
-  console.log('request_origin => ', request_origin);
-  console.log('request_referer => ', request_referer);
+  const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  console.log('fullUrl => ', fullUrl);
 
   // 检查是否是OPTIONS预检请求，直接通过
   if (req.method === 'OPTIONS') {

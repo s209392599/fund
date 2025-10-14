@@ -7,6 +7,7 @@ const CustomFn = require('../../CustomFn.js');
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // post请求数据库查询封装
+const { log } = require('console');
 
 // 登录
 router.post('/fund_amain_login', (req, res) => {
@@ -106,7 +107,7 @@ router.post('/fund_amain_fund_query_by_user', async (req, res) => {
   });
 });
 
-// 保存用户的基金数据 
+// 保存用户的基金数据
 router.post('/fund_amain_save_fund_data', async (req, res) => {
   const { fund_info = [],fund_user_id = null } = req.body;
   if(!fund_info.length){
@@ -115,7 +116,7 @@ router.post('/fund_amain_save_fund_data', async (req, res) => {
       msg: '未正确获取到基金数据',
       data: [],
     });
-  } 
+  }
   if(!fund_user_id){
     return res.send({
       code: 400,
@@ -133,6 +134,7 @@ router.post('/fund_amain_save_fund_data', async (req, res) => {
   });
   const arr_update = [];// 需要更新的
   const arr_add = [];// 需要新增的
+  const arr_delete = [];// 需要删除的
   oldData.forEach(item => {
     const fund_info_item = fund_info.find(fund => fund.fund_code === item.fund_code);
     if(fund_info_item){
@@ -141,30 +143,58 @@ router.post('/fund_amain_save_fund_data', async (req, res) => {
       arr_add.push(item);
     }
   })
-  if(arr_update.length){
-    arr_update.forEach(item => {
-      DatabasePostQuery({
-        res: res,
-        query: `UPDATE fund_user_collection SET fund_name = '${item.fund_name}', sort_order = ${item.sort_order}, fundgz = '${item.fundgz}', fund_type = '${item.fund_type}', fund_sign = '${item.fund_sign}', zhang_url = '${item.zhang_url}', point_top = '${item.point_top}', point_down = '${item.point_down}', fixed = '${item.fixed}', fund_desc = '${item.fund_desc}' WHERE id = ${item.id};`,
-        format: (results) => ({
-          affectedRows: results.affectedRows, // 返回受影响的行数
-        }),
-        next:true
-      });
-    })
-  }
-  if(arr_add.length){
-    arr_add.forEach(item => {
-      DatabasePostQuery({
-        res: res,
-        query: `INSERT INTO fund_user_collection (fund_user_id, fund_code, fund_name, sort_order, fundgz, fund_type, fund_sign, zhang_url, point_top, point_down, fixed, fund_desc) VALUES (${fund_user_id}, '${item.fund_code}', '${item.fund_name}', ${item.sort_order}, '${item.fundgz}', '${item.fund_type}', '${item.fund_sign}', '${item.zhang_url}', '${item.point_top}', '${item.point_down}', '${item.fixed}', '${item.fund_desc}');`,
-        format: (results) => ({
-          affectedRows: results.affectedRows, // 返回受影响的行数
-        }),
-        next:true
-      });
-    })
-  }
+  console.log('arr_update',arr_update.length);
+  console.log('arr_add',arr_add.length);
+  // if(arr_update.length){
+  //   arr_update.forEach(item => {
+  //     DatabasePostQuery({
+  //       res: res,
+  //       query: `UPDATE fund_user_collection SET
+  //         fund_code = '${item.fund_code}',
+  //         fund_name = '${item.fund_name}',
+  //         sort_order = ${item.sort_order},
+  //         fundgz = '${item.fundgz}',
+  //         fund_type = '${item.fund_type}',
+  //         fund_sign = '${item.fund_sign}',
+  //         zhang_url = '${item.zhang_url}',
+  //         point_top = '${item.point_top}',
+  //         point_down = '${item.point_down}',
+  //         fixed = '${item.fixed}',
+  //         fund_desc = '${item.fund_desc}' WHERE id = ${item.id};`,
+  //       format: (results) => ({
+  //         affectedRows: results.affectedRows, // 返回受影响的行数
+  //       }),
+  //       next:true
+  //     });
+  //   })
+  // }
+  // if(arr_add.length){
+  //   console.log('arr_add',arr_add);
+  //   arr_add.forEach(item => {
+  //     DatabasePostQuery({
+  //       res: res,
+  //       query: `INSERT INTO fund_user_collection
+  //         (fund_user_id, fund_code, fund_name, sort_order, fundgz, fund_type, fund_sign, zhang_url, point_top, point_down, fixed, fund_desc)
+  //         VALUES (
+  //         ${fund_user_id},
+  //         '${item.fund_code}',
+  //         '${item.fund_name}',
+  //         ${item.sort_order},
+  //         '${item.fundgz}',
+  //         '${item.fund_type}',
+  //         '${item.fund_sign}',
+  //         '${item.zhang_url}',
+  //         '${item.point_top}',
+  //         '${item.point_down}',
+  //         '${item.fixed}',
+  //         '${item.fund_desc}');`,
+  //       format: (results) => ({
+  //         affectedRows: results.affectedRows, // 返回受影响的行数
+  //       }),
+  //       next:true
+  //     });
+  //   })
+  // }
   res.send({
     code:200,
     data: [],

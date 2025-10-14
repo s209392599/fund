@@ -14,12 +14,14 @@ const info = reactive({
   formLabelWidth: '140px',
   update_flag: '新增',// 修改还是编辑
   dialogFormVisible: false,
+  edit_index:0,// 编辑行的index
   form: {
     "fund_code": "",
     "fund_name": "",
     "type": "",
     "zhang_url": "",
     "fixed": 100,
+    "fundgz": '2',// 1:天天基金有预测涨幅 2:没有
     "point_down": 1,
     "point_top": 1,
     "fund_desc": "",
@@ -38,7 +40,7 @@ const rules = {
     { required: true, message: '请输入基金类型', trigger: 'blur' },
   ],
 };
-/* 
+/*
 {"fund_code":"012345","fund_name":"嘉实领先优势混合C","type":"heihei ","zhang_url":"https://j4.dfcfw.com/charts/pic6/012345.png","fixed":100,"point_down":1,"point_top":1,"fund_desc":"","sign":"正常"}
 
 */
@@ -61,6 +63,7 @@ query_list();
 const btn_edit = (row, $index) => {
   info.form = Object.assign({}, info.form, row);
   info.update_flag = 'edit';// 标识编辑
+  info.edit_index = $index;
   info.dialogFormVisible = true;// 打开弹窗
 }
 // 删除
@@ -103,6 +106,7 @@ const resetForm = () => {
     "type": "",
     "zhang_url": "",
     "fixed": 100,
+    "fundgz": '2',
     "point_down": 1,
     "point_top": 1,
     "fund_desc": "",
@@ -115,6 +119,10 @@ const resetForm = () => {
 const onSubmit = () => {
   diaForm.value.validate((valid) => {
     if (valid) {
+      if(info.form.fundgz === '2'){
+        // 确认是否提交
+
+      }
       if (info.update_flag === '新增') {
         let flag = info.tableData.some(v => v.fund_code === info.form.fund_code);
         if (!flag) {
@@ -124,19 +132,36 @@ const onSubmit = () => {
           ElMessage.error('已存在当前基金号');
         }
       } else {
-        let index = info.tableData.findIndex(v => v.fund_code === info.form.fund_code);
-        if (index > -1) {
-          info.tableData[index] = Object.assign({}, info.tableData[index], info.form);
+        info.tableData[info.edit_index] = { ...info.tableData[info.edit_index], ...info.form };
           info.dialogFormVisible = false;
-        } else {
-          ElMessage.error('未找到当前基金号');
-        }
       }
 
     }
   });
 };
 const SaveData = () => {
+  // ElMessageBox.confirm(
+  //   '确认删除吗?',
+  //   '警告',
+  //   {
+  //     confirmButtonText: '确定',
+  //     cancelButtonText: '取消',
+  //     type: 'warning',
+  //   }
+  // )
+  //   .then(() => {
+  //     server_fund_manage_fund_delete({ id: row.id }).then(res => {
+  //       if (res.code === 200) {
+  //         ElMessage.success('删除成功');
+  //         query_list();
+  //       } else {
+  //         ElMessage.error('删除失败，请重试！');
+  //       }
+  //     })
+  //   })
+  //   .catch(() => { })
+
+
   const fund_info = info.tableData.map((item, index) => {
     item.sort_order = index + 1;
     return item;
@@ -186,6 +211,9 @@ const change_fund_code = (val) => {
     }).then(res => {
       if (res.code === 200) {
         info.form.fund_name = res.data.fund_name;
+        if(res.data.fund_name.length){
+          info.form.fundgz = '1';
+        }
       } else {
         ElMessage.error('获取实时涨幅失败！')
       }
