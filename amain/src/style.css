@@ -24,6 +24,9 @@ body {
 .el-table .el-table__cell{
   padding: 2px 0 !important;
 }
+.el-button+.el-button{
+  margin-left: 6px;
+}
 
 /* @media (prefers-color-scheme: light) {
   :root {

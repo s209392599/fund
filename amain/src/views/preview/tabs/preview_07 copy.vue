@@ -9,8 +9,7 @@ const width_name = isMobile ? '146' : '240';
 
 const diaForm = ref(null);
 const info = reactive({
-  add_line_sign: 0,// 哪一个位置插入
-  tableData: [{ "fund_code": "012345", "fund_name": "嘉实领先优势混合C", "type": "12", "zhang_url": "https://j4.dfcfw.com/charts/pic6/012345.png", "fixed": 100, "point_down": 1, "point_top": 1, "fund_desc": "", "sign": "正常" }],
+  tableData: [],
   formLabelWidth: '140px',
   update_flag: '新增',// 修改还是编辑
   dialogFormVisible: false,
@@ -38,10 +37,7 @@ const rules = {
     { required: true, message: '请输入基金类型', trigger: 'blur' },
   ],
 };
-/* 
-{"fund_code":"012345","fund_name":"嘉实领先优势混合C","type":"heihei ","zhang_url":"https://j4.dfcfw.com/charts/pic6/012345.png","fixed":100,"point_down":1,"point_top":1,"fund_desc":"","sign":"正常"}
 
-*/
 // 获取-列表数据
 const query_list = () => {
   setTimeout(() => {
@@ -64,7 +60,7 @@ const btn_edit = (row, $index) => {
   info.dialogFormVisible = true;// 打开弹窗
 }
 // 删除
-const btn_del_fn = (row, $index) => {
+const btn_del = (row, $index) => {
   ElMessageBox.confirm(
     '确认删除吗?',
     '警告',
@@ -75,23 +71,44 @@ const btn_del_fn = (row, $index) => {
     }
   )
     .then(() => {
-      info.tableData.splice($index, 1); // 删除对应索引的数据
-      ElMessage.success('删除成功');
+      server_fund_manage_fund_delete({ id: row.id }).then(res => {
+        if (res.code === 200) {
+          ElMessage.success('删除成功');
+          query_list();
+        } else {
+          ElMessage.error('删除失败，请重试！');
+        }
+      })
     })
     .catch(() => { })
 }
-// 前插
-const btn_pre = (row, $index) => {
-  info.add_line_sign = $index - 1;
-}
-// 后插
-const btn_ape = (row, $index) => {
-  info.add_line_sign = $index + 1;
+// 插入到
+const btn_cha = (row, $index) => {
+  const userInput = prompt('请输入第几行(正整数)');
+  if (userInput) {
+    let index = parseFloat(userInput) || 0;
+    index = Math.min(index, info.tableData.length) - 1;
+    if (index > -1 && index !== $index) {
+      console.log('index', index, $index);
+      server_fund_manage_fund_sort({
+        fund_code: row.fund_code,
+        index_new: index + 1,
+        index_old: $index
+      }).then(res => {
+        console.log('res', res);
+        if (res.code === 200) {
+          ElMessage.success('操作成功');
+          query_list();
+        } else {
+          ElMessage.error('操作失败，请重试！');
+        }
+      })
+    }
+  }
 }
 // 新增
-const addNewFund = () => {
+const addUser = () => {
   resetForm();
-  info.add_line_sign = info.tableData.length;// 最后一个位置插入
   info.update_flag = '新增';// 标识新增
   info.dialogFormVisible = true;// 打开弹窗
 }
@@ -115,39 +132,56 @@ const resetForm = () => {
 const onSubmit = () => {
   diaForm.value.validate((valid) => {
     if (valid) {
+      console.log('form', JSON.stringify(info.form));
+      info.form.fund_user_id = localStorage.getItem('user_id');
       if (info.update_flag === '新增') {
-        let flag = info.tableData.some(v => v.fund_code === info.form.fund_code);
-        if (!flag) {
-          info.tableData.push(info.form);
-          info.dialogFormVisible = false;
-        } else {
-          ElMessage.error('已存在当前基金号');
-        }
+        server_fund_manage_fund_add({
+          form: info.form
+        }).then(res => {
+          console.log('新增', res);
+          if (res.code === 200) {
+            ElMessage.success('新增成功');
+            info.dialogFormVisible = false;
+            resetForm();
+            query_list();
+          } else {
+            ElMessage.error('新增失败！')
+          }
+        })
       } else {
-        let index = info.tableData.findIndex(v => v.fund_code === info.form.fund_code);
-        if (index > -1) {
-          info.tableData[index] = Object.assign({}, info.tableData[index], info.form);
-          info.dialogFormVisible = false;
-        } else {
-          ElMessage.error('未找到当前基金号');
-        }
+        server_fund_manage_fund_update({
+          form: info.form
+        }).then(res => {
+          console.log('更新', res);
+          if (res.code === 200) {
+            ElMessage.success('更新成功');
+            info.dialogFormVisible = false;
+            resetForm();
+            query_list();
+          } else {
+            ElMessage.error('更新失败！')
+          }
+        })
       }
-
+    } else {
+      console.log('error submit!!');
+      return false;
     }
   });
 };
-const SaveData = () => {
-  const fund_info = info.tableData.map((item, index) => {
+const updateOrder = () => {
+  info.tableData = info.tableData.map((item, index) => {
     item.sort_order = index + 1;
-    return item;
   })
   server_fund_manage_fund_sort({
-    fund_info: fund_info,
+    fund_code: info.form.fund_code,
+    index_new: info.form.index_new,
+    index_old: info.form.index_old
   }).then(res => {
     console.log('res', res);
     if (res.code === 200) {
       ElMessage.success('操作成功');
-      // query_list();
+      query_list();
     } else {
       ElMessage.error('操作失败，请重试！');
     }
@@ -175,6 +209,36 @@ const btn_fn_3 = () => {
 const btn_fn_4 = () => {
   info.form.zhang_url = '无';
 }
+function realTimeInformation(str) {
+  if (str.startsWith('jsonpgz(')) {
+    str = str.slice(8);
+  }
+  if (str.endsWith(');')) {
+    str = str.substring(0, str.length - 2);
+  }
+  return str;
+}
+
+async function getFund(code) {
+  // https://fundgz.1234567.com.cn/js/400030.js?rt=1711363239864
+  let u = `https://fundgz.1234567.com.cn/js/${code}.js?rt=${+new Date()}`;
+  return fetch(u, {})
+    .then((res) => res.text())
+    .then((res) => {
+      let data = realTimeInformation(res);
+      let obsData = JSON.parse(data);
+      console.log('obsData', obsData)
+      // {"fundcode":"008087","name":"华夏中证5G通信主题ETF联接C","jzrq":"2024-03-22","dwjz":"0.9686","gsz":"0.9416","gszzl":"-2.78","gztime":"2024-03-25 15:00"}
+      return {
+        code,
+        name: obsData.name,
+        gszzl: obsData.gszzl,
+        dwjz: obsData.dwjz,
+        gsz: obsData.gsz,
+        gztime: obsData.gztime,
+      };
+    });
+}
 
 const change_fund_code = (val) => {
   var isSixDigitNumber = /^\d{6}$/.test(val);// 6位数字䣂类型
@@ -200,11 +264,11 @@ const change_fund_code = (val) => {
   <div class="page-wrapper pd-10">
     <div>注：基金数量有变化时一定要点<span style="color:red;">“保存数据”</span>按钮！</div>
     <div class="flex pb-5">
-      <el-button type="primary" size="small" @click="addNewFund()">新增基金</el-button>
-      <el-button type="primary" size="small" @click="SaveData()"
-        :disabled="info.tableData.length === 0">保存数据</el-button>
-      <el-button type="primary" size="small" @click="info.tableData = []"
-        :disabled="info.tableData.length === 0">全部删除</el-button>
+      <el-button type="primary" size="small" @click="addUser()">新增基金</el-button>
+      <el-button type="primary" size="small" @click="updateOrder()">保存数据</el-button>
+      <el-button type="primary" size="small" @click="addUser()">前面插入</el-button>
+      <el-button type="primary" size="small" @click="addUser()">后面插入</el-button>
+      <el-button type="primary" size="small" @click="addUser()">全部删除</el-button>
       <el-button type="primary" size="small" @click="addUser()">合并群主基金</el-button>
     </div>
 
@@ -213,12 +277,11 @@ const change_fund_code = (val) => {
       <el-table :data="info.tableData" border style="width: 100%" height="800">
         <el-table-column fixed label="序" type="index" width="50" align="right" />
 
-        <el-table-column label="Operations" width="150">
+        <el-table-column label="Operations" width="140">
           <template #default="{ row, $index }">
             <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
-            <el-button link type="primary" size="small" @click="btn_del_fn(row, $index)">删除</el-button>
-            <el-button link type="primary" size="small" @click="btn_pre(row, $index)">前插</el-button>
-            <el-button link type="primary" size="small" @click="btn_ape(row, $index)">后插</el-button>
+            <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
+            <el-button link type="primary" size="small" @click="btn_cha(row, $index)">插入到</el-button>
           </template>
         </el-table-column>
 
@@ -246,12 +309,11 @@ const change_fund_code = (val) => {
           </template>
         </el-table-column>
 
+        <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
         <el-table-column prop="fixed" label="定投金额" width="70" align="right" />
         <el-table-column prop="point_down" label="低点" width="100" align="right" />
         <el-table-column prop="point_top" label="高点" width="100" align="right" />
-        <el-table-column prop="sign" label="状态" width="50" align="center" />
         <el-table-column prop="fund_desc" label="备注" width="300" />
-        <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
       </el-table>
     </VueDraggable>
 

@@ -106,6 +106,23 @@ router.post('/fund_amain_fund_query_by_user', async (req, res) => {
   });
 });
 
+// 保存用户的基金数据 
+router.post('/fund_amain_save_fund_data', async (req, res) => {
+  const { fund_info = [] } = req.body;
+  DatabasePostQuery({
+    res: res,
+    query: `SELECT * FROM fund_user_collection WHERE fund_user_id = ${fund_user_id} ORDER BY sort_order ASC`,
+    format: (results) => ({
+      length: results.length,
+      data: results,
+    }),
+  });
+});
+
+/* 
+如果fund_user_collection fund_user_id为20303且fund_cod为012345则更新，否则新增一行数据
+*/
+
 // 获取基金历史数据
 router.post('/fund_history_data', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
