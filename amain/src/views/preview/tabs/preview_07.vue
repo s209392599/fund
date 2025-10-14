@@ -141,8 +141,9 @@ const SaveData = () => {
     item.sort_order = index + 1;
     return item;
   })
-  server_fund_manage_fund_sort({
+  server_fund_amain_save_fund_data({
     fund_info: fund_info,
+    fund_user_id: localStorage.getItem('user_id'),
   }).then(res => {
     console.log('res', res);
     if (res.code === 200) {
@@ -177,7 +178,7 @@ const btn_fn_4 = () => {
 }
 
 const change_fund_code = (val) => {
-  var isSixDigitNumber = /^\d{6}$/.test(val);// 6位数字䣂类型
+  var isSixDigitNumber = /^\d{6}$/.test(val);// 6位数字类型
   if (isSixDigitNumber) {
     info.form.zhang_url = `https://j4.dfcfw.com/charts/pic6/${info.form.fund_code}.png`;
     server_fund_amain_getfundgz({

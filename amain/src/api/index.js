@@ -12,18 +12,9 @@ import request from '@/utils/request';
 export async function server_fund_amain_login(data) {
   return request.post('/fund_amain_login', data);
 }
-// 获取所有用户
-export async function server_fund_get_all_user_info(data) {
-  return request.post('/fund_get_all_user_info', data);
-}
-// 新增用户
-export async function server_fund_add_user_info(data) {
-  console.log('-data', data);
-  return request.post('/fund_add_user_info', data);
-}
-// 删除某个用户
-export async function server_fund_del_user_info(data) {
-  return request.post('/fund_del_user_info', data);
+// 保存基金数据
+export async function server_fund_amain_save_fund_data(data) {
+  return request.post('/fund_amain_save_fund_data', data);
 }
 // 修改某个用户信息
 export async function server_fund_update_user_info(data) {
