@@ -12,7 +12,7 @@ const info = reactive({
   table_height: isMobile ? 500 : 800,
   add_line_sign: 0,// 哪一个位置插入
   tableData: [],
-  formLabelWidth: '140px',
+  formLabelWidth: '110px',
   update_flag: '新增',// 修改还是编辑
   dialogFormVisible: false,
   edit_index: 0,// 编辑行的index
@@ -49,6 +49,7 @@ const query_list = () => {
     }).then(res => {
       console.log('res', res);
       if (res.code === 200) {
+        ElMessage.success('已读取最新数据');
         info.tableData = res.data.data || [];
       } else {
         ElMessage.error('获取列表失败，请重试！');
@@ -84,11 +85,17 @@ const btn_del_fn = (row, $index) => {
 }
 // 前插
 const btn_pre = (row, $index) => {
+  resetForm();
   info.add_line_sign = $index - 1;
+  info.update_flag = '新增';// 标识新增
+  info.dialogFormVisible = true;// 打开弹窗
 }
 // 后插
 const btn_ape = (row, $index) => {
+  resetForm();
   info.add_line_sign = $index + 1;
+  info.update_flag = '新增';// 标识新增
+  info.dialogFormVisible = true;// 打开弹窗
 }
 // 新增
 const addNewFund = () => {
@@ -114,53 +121,51 @@ const resetForm = () => {
   diaForm?.value?.resetFields();
 
 }
+const tablechange = () => {
+  if (info.update_flag === '新增') {
+    let flag = info.tableData.some(v => v.fund_code === info.form.fund_code);
+    if (!flag) {
+      const maxIndex = info.tableData.length;
+      const insertIndex = Math.max(0, Math.min(Math.floor(info.add_line_sign), maxIndex));
+      let newObj = {
+        ...info.form
+      }
+      info.tableData.splice(insertIndex, 0, newObj);
+      info.dialogFormVisible = false;
+    } else {
+      ElMessage.error('已存在当前基金号');
+    }
+  } else {
+    info.tableData[info.edit_index] = { ...info.tableData[info.edit_index], ...info.form };
+    info.dialogFormVisible = false;
+  }
+}
 // 弹窗提交
 const onSubmit = () => {
   diaForm.value.validate((valid) => {
     if (valid) {
       if (info.form.fundgz === '2') {
-        // 确认是否提交
-
-      }
-      if (info.update_flag === '新增') {
-        let flag = info.tableData.some(v => v.fund_code === info.form.fund_code);
-        if (!flag) {
-          info.tableData.push(info.form);
-          info.dialogFormVisible = false;
-        } else {
-          ElMessage.error('已存在当前基金号');
-        }
+        ElMessageBox.confirm(
+          '可能读取不到实时涨幅，确认提交吗?',
+          '警告',
+          {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning',
+          }
+        )
+          .then(() => {
+            tablechange();
+          })
+          .catch(() => { })
       } else {
-        info.tableData[info.edit_index] = { ...info.tableData[info.edit_index], ...info.form };
-        info.dialogFormVisible = false;
+        tablechange();
       }
-
     }
   });
 };
+
 const SaveData = () => {
-  // ElMessageBox.confirm(
-  //   '确认删除吗?',
-  //   '警告',
-  //   {
-  //     confirmButtonText: '确定',
-  //     cancelButtonText: '取消',
-  //     type: 'warning',
-  //   }
-  // )
-  //   .then(() => {
-  //     server_fund_manage_fund_delete({ id: row.id }).then(res => {
-  //       if (res.code === 200) {
-  //         ElMessage.success('删除成功');
-  //         query_list();
-  //       } else {
-  //         ElMessage.error('删除失败，请重试！');
-  //       }
-  //     })
-  //   })
-  //   .catch(() => { })
-
-
   const fund_info = info.tableData.map((item, index) => {
     item.sort_order = index + 1;
     return item;
@@ -221,6 +226,25 @@ const change_fund_code = (val) => {
     info.form.zhang_url = '';
   }
 }
+// 合并群主基金
+const groupPublic = () => {
+  server_fund_amain_public_funds().then(res => {
+    console.log('res', res);
+    if (res.code === 200) {
+      const arr_1 = [...info.tableData];
+      const arr_2 = res.data || [];
+      arr_2.forEach(item => {
+        const flag = arr_1.some(fund => fund.fund_code === item.fund_code);
+        if (!flag) {
+          arr_1.push(item);
+        }
+      });
+      info.tableData = [...arr_1];
+    } else {
+      ElMessage.error('操作失败，请重试！');
+    }
+  })
+}
 
 </script>
 
@@ -233,7 +257,7 @@ const change_fund_code = (val) => {
         :disabled="info.tableData.length === 0">保存数据</el-button>
       <el-button type="primary" size="small" @click="info.tableData = []"
         :disabled="info.tableData.length === 0">全部删除</el-button>
-      <el-button type="primary" size="small" @click="addUser()">合并群主基金</el-button>
+      <el-button type="primary" size="small" @click="groupPublic()">合并群主基金</el-button>
       <el-button type="primary" size="small" @click="query_list()">刷新数据</el-button>
     </div>
 

@@ -69,20 +69,28 @@ router.post('/fund_amain_getfundgz', (req, res) => {
     fetch(u, {})
       .then((data) => data.text())
       .then((data) => {
-        let str = realTimeInformation(data);
-        let obsData = JSON.parse(str || '{}');
-        res.send({
-          code: 200,
-          msg: '成功',
-          data: {
-            fund_code: fundcode,
-            fund_name: obsData.name || '',
-            gszzl: obsData.gszzl || '',
-            dwjz: obsData.dwjz || '',
-            gsz: obsData.gsz || '',
-            gztime: obsData.gztime || '',
-          },
-        });
+        if (data.length > 250) {
+          res.send({
+            code: 400,
+            msg: '此基金号可能暂未开放，请确认',
+            data: [],
+          });
+        } else {
+          let str = realTimeInformation(data);
+          let obsData = JSON.parse(str || '{}');
+          res.send({
+            code: 200,
+            msg: '成功',
+            data: {
+              fund_code: fundcode,
+              fund_name: obsData.name || '',
+              gszzl: obsData.gszzl || '',
+              dwjz: obsData.dwjz || '',
+              gsz: obsData.gsz || '',
+              gztime: obsData.gztime || '',
+            },
+          });
+        }
       });
   } catch (err) {
     res.send({
@@ -115,40 +123,14 @@ router.post('/fund_amain_fund_query_by_user', async (req, res) => {
 
 // 保存用户的基金数据
 router.post('/fund_amain_save_fund_data', async (req, res) => {
-  // let { fund_info = [], fund_user_id = null } = req.body;
-  let fund_user_id = '57';
-  let fund_info = [
-    {
-      fund_user_id: 57,
-      fund_code: '012346',
-      fund_name: 'test111',
-      fund_type: 'test',
-      sort_order: 1,
-      fundgz: '2',
-      fund_type: 'type1',
-      fund_sign: '正常',
-      zhang_url: 'https',
-      point_top: 2,
-      point_down: 1,
-      fund_fixed: 200,
-      fund_desc: '备注',
-    },
-    {
-      fund_user_id: 57,
-      fund_code: '000001',
-      fund_name: '华夏成长混合1111',
-      fund_type: 'test',
-      zhang_url: 'https://j4.dfcfw.com/charts/pic6/000001.png',
-      fund_fixed: 200,
-      fundgz: '1',
-      point_down: 1.2344,
-      point_top: 1,
-      fund_desc: 'sdfsdf',
-      fund_sign: '正常',
-      sort_order: 2,
-    },
-  ];
-
+  let { fund_info = [], fund_user_id = null } = req.body;
+  if (!fund_user_id) {
+    return res.send({
+      code: 400,
+      msg: '未正确获取到用户id',
+      data: [],
+    });
+  }
   if (!CustomFn.isValidFundUserId(fund_user_id)) {
     return res.send({
       code: 400,
@@ -157,18 +139,10 @@ router.post('/fund_amain_save_fund_data', async (req, res) => {
     });
   }
   fund_user_id = parseFloat(fund_user_id);
-
   if (!fund_info.length) {
     return res.send({
       code: 400,
       msg: '未正确获取到基金数据',
-      data: [],
-    });
-  }
-  if (!fund_user_id) {
-    return res.send({
-      code: 400,
-      msg: '未正确获取到用户id',
       data: [],
     });
   }
@@ -234,7 +208,6 @@ router.post('/fund_amain_save_fund_data', async (req, res) => {
   }
 
   if (arr_add.length) {
-    console.log('arr_add', arr_add);
     arr_add.forEach((item) => {
       DatabasePostQuery({
         res: res,
@@ -265,6 +238,15 @@ router.post('/fund_amain_save_fund_data', async (req, res) => {
     code: 200,
     data: [],
     msg: '成功',
+  });
+});
+
+// 获取群主基金数据
+router.post('/fund_amain_public_funds', async (req, res) => {
+  DatabasePostQuery({
+    res: res,
+    query: `SELECT * FROM fund_public ORDER BY sort_order ASC;`,
+    format: (results) => results,
   });
 });
 
@@ -353,7 +335,7 @@ router.post('/fund_today_rate_by_timer', (req, res) => {
   const apiDir = path.join(__dirname, '../../'); // 回退到 /api 目录
   let fileDir = path.join(apiDir, 'data/preview/', fundcode);
 
-  console.log('fileDir', fileDir);
+  // console.log('fileDir', fileDir);
   // /Users/guokun/github/fund/api/routes/fund/data/preview/023350
   fs.readdir(fileDir, (err, files) => {
     if (err) {
@@ -477,7 +459,7 @@ router.post('/fund_search_bytiantian', (req, res) => {
     return;
   }
   try {
-    console.log('text', text);
+    // console.log('text', text);
     const keyStr = encodeURIComponent(text);
     let url = `https://fundsuggest.eastmoney.com/FundSearch/api/FundSearchPageAPI.ashx`;
     let params = `?m=1&key=${keyStr}&pageindex=0&pagesize=1000&t=` + Date.now();
@@ -493,7 +475,7 @@ router.post('/fund_search_bytiantian', (req, res) => {
     })
       .then((data) => data.json())
       .then((data) => {
-        console.log('data', data);
+        // console.log('data', data);
         let datas = data.Datas || [];
         datas = datas.filter((item) => !noText.includes(item.CODE)); // 排除的关键词
         datas = datas.filter((item) => !noFundCode.includes(item.CODE)); // 排除的基金代码

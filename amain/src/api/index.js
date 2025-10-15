@@ -24,6 +24,11 @@ export async function server_fund_amain_fund_query_by_user(data) {
 export async function server_fund_update_user_info(data) {
   return request.post('/fund_update_user_info', data);
 }
+// 获取群主公开基金
+export async function server_fund_amain_public_funds(data) {
+  return request.post('/fund_amain_public_funds', data);
+}
+
 // 获取基金历史数据
 export async function server_fund_history_data(data) {
   return request.post('/fund_history_data', data);
@@ -55,7 +60,7 @@ export async function server_fund_search_bytiantian(data) {
 // 排序-公共的基金数据
 export async function server_fund_manage_fund_sort(data) {
   return request.post('/fund_manage_fund_sort', data);
-} 
+}
 // fund_amain_getfundgz-获取实时涨幅
 export async function server_fund_amain_getfundgz(data) {
   return request.post('/fund_amain_getfundgz', data);
