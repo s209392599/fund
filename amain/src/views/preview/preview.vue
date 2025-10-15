@@ -15,13 +15,13 @@ const info = reactive({
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_01.vue'))),
       desc: ''
     },
-    {
-      id: 14,
-      show: true,
-      name: '标准基金',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_14.vue'))),
-      desc: ''
-    },
+    // {
+    //   id: 14,
+    //   show: true,
+    //   name: '标准基金',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_14.vue'))),
+    //   desc: ''
+    // },
     {
       id: 7,
       show: true,
@@ -43,13 +43,13 @@ const info = reactive({
     //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
     //   desc: ''
     // },
-    {
-      id: 10,
-      show: true,
-      name: '近来对比',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_10.vue'))),
-      desc: '标准基金的对比 和 手动挑选一些基金进行对比'
-    },
+    // {
+    //   id: 10,
+    //   show: true,
+    //   name: '近来对比',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_10.vue'))),
+    //   desc: '标准基金的对比 和 手动挑选一些基金进行对比'
+    // },
     // {
     //   id: 11,
     //   show: true,
@@ -71,13 +71,13 @@ const info = reactive({
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_06.vue'))),
       desc: ''
     },
-    {
-      id: 12,
-      show: true,
-      name: '基金搜索',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
-      desc: ''
-    },
+    // {
+    //   id: 12,
+    //   show: true,
+    //   name: '基金搜索',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
+    //   desc: ''
+    // },
     // {
     //   id: 13,
     //   show: true,
@@ -85,13 +85,13 @@ const info = reactive({
     //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
     //   desc: ''
     // },
-    {
-      id: 15,
-      show: true,
-      name: '大屏信息',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_15.vue'))),
-      desc: ''
-    },
+    // {
+    //   id: 15,
+    //   show: true,
+    //   name: '大屏信息',
+    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_15.vue'))),
+    //   desc: ''
+    // },
     {
       id: 99,
       show: true,

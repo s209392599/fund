@@ -1,193 +1,81 @@
 <script setup>
-console.log('src/views/preview/tabs/preview_05.vue');
+// 历史净值
+console.log('amain/src/views/preview/tabs/preview_05.vue');
 
 const info = reactive({
-  showBtn: false,
-  list: [
-    {
-      "code": "007467",
-      "name": "华泰柏瑞中证红利低波ETF联接C",
-      "short_name": "",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 30,
-      "type": "红利"
-    },
-    {
-      "code": "019260",
-      "name": "富国恒生红利ETF联接A",
-      "short_name": "",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 30,
-      "type": "红利"
-    },
-    {
-      "code": "020989",
-      "name": "南方恒生科技指数发起(QDII)C",
-      "short_name": "",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 30,
-      "type": "红利"
-    },
-    {
-      "code": "023918",
-      "name": "华夏国证自由现金流ETF发起式联接C",
-      "short_name": "",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 30,
-      "type": "红利"
-    },
-    {
-      "code": "018561",
-      "name": "中信保诚多策略混合(LOF)C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 100,
-      "type": "量化"
-    },
-    {
-      "code": "020726",
-      "name": "建信灵活配置混合C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 100,
-      "type": "量化"
-    },
-    {
-      "code": "002834",
-      "name": "华夏新锦绣混合C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 100,
-      "type": "量化"
-    },
-    {
-      "code": "016858",
-      "name": "国金量化多因子股票C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
-      "code": "018729",
-      "name": "华夏智胜新锐股票C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
-      "code": "023350",
-      "name": "诺安多策略混合C",
-      "short_name": "",
-      "zhang_url": "服务器监听",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "量化"
-    },
-    {
-      "code": "023521",
-      "name": "博时上证科创板人工智能ETF发起式联接C",
-      "short_name": "",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "机器人"
-    },
-    {
-      "code": "020973",
-      "name": "易方达机器人ETF联接C",
-      "short_name": "",
-      "zhang_url": "",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "机器人"
-    },
-    {
-      "code": "017437",
-      "name": "华宝纳斯达克精选股票发起式",
-      "short_name": "",
-      "zhang_url": "不提供",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "美股"
-    },
-    {
-      "code": "016452",
-      "name": "南方纳斯达克100指数发起",
-      "short_name": "",
-      "zhang_url": "不提供",
-      "point_line_top": null,
-      "point_line_down": null,
-      "desc": "",
-      "fixed": 50,
-      "type": "美股"
-    }
-  ]
+  tableData: []
 });
-if (localStorage.getItem('email') === '209392599@qq.com') {
-  info.showBtn = true;
+// 获取-列表数据
+const query_list = () => {
+  setTimeout(() => {
+    server_fund_amain_fund_query_by_user({
+      fund_user_id: localStorage.getItem('user_id')
+    }).then(res => {
+      console.log('res', res);
+      if (res.code === 200) {
+        info.tableData = res.data.data || [];
+      } else {
+        ElMessage.error('获取列表失败，请重试！');
+      }
+    })
+  }, 300);
 }
-
-// 新增地址
-const addUser = () => {
-  console.log('sdfsf');
-}
+query_list();
 </script>
 
 <template>
   <div class="page_wrapper">
-    <a v-for="(item, index) in info.list" :key="index" target="_blank"
-      :href="'http://fund.eastmoney.com/' + (item.code) + '.html?spm=aladin'" class="item">
-      <img class="fundImg" :src="`https://j3.dfcfw.com/images/JJJZ12/${item.code}.png`" />
-    </a>
+    <div class="imgbox">
+      <a v-for="(item, index) in info.tableData" :key="index" target="_blank"
+        :href="'http://fund.eastmoney.com/' + (item.fund_code) + '.html?spm=aladin'" class="type_1">
+        <img class="fundImg" :src="`https://j3.dfcfw.com/images/JJJZ12/${item.fund_code}.png`" />
+      </a>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.page_wrapper {
-  padding: 10px;
+// .page_wrapper {
+//   padding: 10px;
+// }
+
+// .item {
+//   display: inline-block;
+//   border: 1px solid #eee;
+//   margin: 5px;
+//   padding: 4px;
+// }
+
+.imgbox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.item {
-  display: inline-block;
-  border: 1px solid #eee;
-  margin: 5px;
-  padding: 4px;
+.type_1 {
+  display: block;
+  border: 1px solid #ddd;
+  margin: 2px;
+  height: 120px;
+  width: calc(50% - 4px);
+}
+
+.type_1 img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1440px) {
+  .type_1 {
+    width: calc(33.33% - 4px);
+    height: 140px;
+  }
+}
+
+@media (min-width: 1677px) {
+  .type_1 {
+    width: calc(25% - 4px);
+    height: 140px;
+  }
 }
 </style>

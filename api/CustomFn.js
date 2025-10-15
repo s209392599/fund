@@ -70,3 +70,26 @@ const CustomValidateEmail = (email) => {
   return emailRegex.test(email);
 };
 exports.CustomValidateEmail = CustomValidateEmail;
+
+// 浏览器本地存储的userid，必须是可以转成大于0的整数
+const isValidFundUserId = (str) => {
+  if (typeof str !== 'string' || str.length === 0) {
+    return false;// 1. 必须是非空字符串
+  }
+  if (/e/i.test(str)) {
+    return false;// 2. 不能包含 e/E（科学计数法）
+  }
+  if (str.length > 1 && str[0] === '0') {
+    return false;// 3. 不能以 0 开头（长度大于1时）
+  }
+  if (!/^\d+$/.test(str)) {
+    return false;// 4. 必须全为数字
+  }
+  const num = Number(str);
+  if (!Number.isInteger(num) || num <= 0) {
+    return false;// 5. 转换为整数并判断是否大于 0
+  }
+  // 6. 额外保险：转回字符串是否相等（防止 "0123" 转成 123 后又变 "123"）
+  return num.toString() === str;
+}
+exports.isValidFundUserId = isValidFundUserId;

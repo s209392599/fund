@@ -43,8 +43,12 @@ const onSubmit = () => {
         console.log('登录', res);
         if (res.code === 200) {
           // 登录成功
-          localStorage.setItem('user_id', res.data.id);
-          localStorage.setItem('user_email', res.data.user_email);
+          if (res.data.hasOwnProperty('id')) {
+            localStorage.setItem('user_id', res.data.id);
+          }
+          if (res.data.hasOwnProperty('user_email')) {
+            localStorage.setItem('user_email', res.data.user_email);
+          }
           localStorage.setItem('user_name', form.user_name);
           localStorage.setItem('password', form.password);
           localStorage.setItem('loginTime', CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"));
