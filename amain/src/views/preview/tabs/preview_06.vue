@@ -5,12 +5,16 @@ const info = reactive({
   showBtn: false,
   list: [
     {
-      name: '阿里云函数计算控制台',
-      adress: 'https://fc.console.aliyun.com/fc/service/cn-shanghai/fund/functions'
+      name: '大盘云图',
+      adress: 'https://summary.jrj.com.cn/dataCenter/dpyt/',
     },
     {
-      name: '腾讯云宝塔面板',
-      adress: 'https://150.158.175.108:60001/tencentcloud'
+      name: 'A500云图',
+      adress: 'https://52etf.site/',
+    },
+    {
+      name: '天天基金云图',
+      adress: 'https://quote.eastmoney.com/stockhotmap/',
     },
     {
       name: '天天基金可转债排行',
@@ -20,10 +24,7 @@ const info = reactive({
       name: '天天基金-基金对比',
       adress: 'http://fund.eastmoney.com/Compare/'
     },
-    {
-      name: '大盘云图',
-      adress: 'https://summary.jrj.com.cn/dataCenter/dpyt/',
-    },
+
     {
       name: '韭圈儿-基金对比',
       adress: 'https://www.funddb.cn/fund/fund_pk',
@@ -31,6 +32,14 @@ const info = reactive({
     {
       name: '新发基金',
       adress: 'http://fund.eastmoney.com/data/xinfund.html',
+    },
+    {
+      name: '阿里云函数计算控制台',
+      adress: 'https://fc.console.aliyun.com/fc/service/cn-shanghai/fund/functions'
+    },
+    {
+      name: '腾讯云宝塔面板',
+      adress: 'https://150.158.175.108:60001/tencentcloud'
     },
   ]
 });
