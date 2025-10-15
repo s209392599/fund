@@ -11,6 +11,7 @@ const whiteAdree = [
   'http://localhost:9001', // Vue项目-后台
   'http://localhost:9999', // 本地测试
   'http://127.0.0.1:9002', // live server插件
+  'http://127.0.0.1:9999', // live server插件
 ];
 
 /* 应用IP速率限制
