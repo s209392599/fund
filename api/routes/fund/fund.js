@@ -7,7 +7,6 @@ const CustomFn = require('../../CustomFn.js');
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // post请求数据库查询封装
-const { log } = require('console');
 
 // 登录
 router.post('/fund_amain_login', (req, res) => {
