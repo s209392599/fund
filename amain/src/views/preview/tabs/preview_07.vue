@@ -5,7 +5,7 @@ import { VueDraggable } from 'vue-draggable-plus';
 
 // 判断是否为手机端
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-const width_name = isMobile ? '146' : '240';
+const width_name = isMobile ? '240' : '240';
 
 const diaForm = ref(null);
 const info = reactive({
@@ -261,12 +261,35 @@ const groupPublic = () => {
       <el-button type="primary" size="small" @click="query_list()">刷新数据</el-button>
     </div>
 
+<!--
+handle=".drag-handle"  只允许通过手柄拖拽
+filter=".no-drag"     过滤不可拖拽元素
+-->
     <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
-      class="el-table">
+      class="el-table"
+      handle=".drag-handle"
+      filter=".no-drag"
+    >
       <el-table :data="info.tableData" border style="width: 100%" :height="info.table_height">
-        <el-table-column fixed label="序" type="index" width="40" align="right" />
+      <el-table-column
+          fixed
+          type="index"
+          align="center"
+          label="序"
+          width="36"
+        ></el-table-column>
 
-        <el-table-column label="操作" width="150">
+    <el-table-column fixed label="拽" type="index" width="40" align="center">
+      <template #default="{ $index }">
+        <div class="drag-handle" style="cursor: grab; color: #909399; display: flex; align-items: center;justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"/>
+          </svg>
+        </div>
+      </template>
+    </el-table-column>
+
+        <el-table-column label="操作" width="180" align="center">
           <template #default="{ row, $index }">
             <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
             <el-button link type="primary" size="small" @click="btn_del_fn(row, $index)">删除</el-button>
@@ -285,7 +308,7 @@ const groupPublic = () => {
           </template>
         </el-table-column>
 
-        <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
+        <el-table-column prop="fund_name" label="基金名称" :width="width_name" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
             <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span>
             <span v-else>{{ row.fund_name }}</span>

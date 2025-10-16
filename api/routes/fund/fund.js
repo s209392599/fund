@@ -28,11 +28,31 @@ router.post('/fund_amain_login', async (req, res) => {
     }),
     next: true,
   });
-  if (userData.length && userData[0].id) {
+  /*
+  {
+  "id": 57,
+  "user_email": "203812677@qq.com",
+  "user_name": "boxue",
+  "zh_name": "自己的测试号",
+  "user_password": "qaz123..",
+  "fund_count": 30,
+  "remark": null,
+  "expiration_time": "2098-12-31T16:00:00.000Z",
+  "create_time": "2025-10-14T06:26:09.000Z",
+  "update_time": "2025-10-14T06:26:16.000Z",
+  "user_token": null
+}
+  */
+  if (userData && userData.length && userData[0].id) {
     return res.send({
       code: 200,
       msg: '登录成功',
-      data: userData[0],
+      data: {
+        id: userData[0].id,
+        user_email: userData[0].user_email,
+        user_name: userData[0].user_name,
+        user_password: userData[0].user_password,
+      },
     });
   } else {
     return res.send({

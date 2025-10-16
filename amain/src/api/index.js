@@ -28,6 +28,10 @@ export async function server_fund_update_user_info(data) {
 export async function server_fund_amain_public_funds(data) {
   return request.post('/fund_amain_public_funds', data);
 }
+// 获取基金的历史业绩
+export async function server_fund_history_performance(data) {
+  return request.post('/fund_history_performance', data);
+}
 
 // 获取基金历史数据
 export async function server_fund_history_data(data) {

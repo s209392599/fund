@@ -35,17 +35,6 @@ query_list();
 </template>
 
 <style scoped lang="scss">
-// .page_wrapper {
-//   padding: 10px;
-// }
-
-// .item {
-//   display: inline-block;
-//   border: 1px solid #eee;
-//   margin: 5px;
-//   padding: 4px;
-// }
-
 .imgbox {
   display: flex;
   align-items: center;
