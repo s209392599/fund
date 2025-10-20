@@ -410,6 +410,9 @@ https://saithink.top/guide/demo.html 模板网站
   浏览器指纹
   MQTT协议
   OTA  longcat上搜索一下
+  https://mp.weixin.qq.com/s/_lN1Ml0E9jGdNyVtFVeRtw 尝试原生写法和库的写法，能不能自己封装？
+  cheerio
+
 
   next
   nuxt
@@ -458,7 +461,7 @@ https://saithink.top/guide/demo.html 模板网站
     下降值 44也要展示一下
     });
     */
-/* 
+/*
 
 // 获取用户的json数据
 const getUserJson = () => {
