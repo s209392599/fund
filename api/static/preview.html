@@ -25,11 +25,32 @@
     }
 
     .type_1 {
+      position: relative;
+      z-index: 2;
       display: block;
       border: 1px solid #ddd;
       margin: 2px;
       height: 120px;
       width: calc(50% - 4px);
+    }
+
+    .type_status {
+      position: absolute;
+      right: 3px;
+      bottom: 3px;
+      z-index: 4;
+      font-size: 24px;
+      color: #000;
+    }
+
+    .type_status.top {
+      font-size: 24px;
+      color: red;
+    }
+
+    .type_status.down {
+      color: #0e48ff;
+      font-size: 24px;
     }
 
     .type_1 img {
@@ -133,6 +154,16 @@
         </template>
       </el-table-column>
 
+      <el-table-column align="center" label="区间" width="40" :sort-method="sortToday">
+        <template v-slot="{ row }">
+          <span v-if="!['',null,undefined].includes(row.dwjz)">
+            <span v-if="Number(row.dwjz) > Number(row.point_top)" style="color:red;">过高</span>
+            <span v-else-if="Number(row.dwjz) > Number(row.point_down)" style="color:#0e48ff;">过低</span>
+            <span v-else>正常</span>
+          </span>
+        </template>
+      </el-table-column>
+
       <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday">
         <template v-slot="{ row }">
           <span v-html="getToday(row)"></span>
@@ -198,6 +229,10 @@
           <span class="">{{row.fund_fixed}}</span>
         </template>
       </el-table-column>
+
+      <el-table-column prop="point_top" label="高点" width="66"></el-table-column>
+      <el-table-column prop="point_down" label="低点" width="66"></el-table-column>
+      <el-table-column prop="dwjz" label="净值" width="66"></el-table-column>
 
       <el-table-column prop="fund_desc" label="备注" width="300" show-overflow-tooltip>
         <template v-slot="{ row }">
@@ -354,9 +389,12 @@
       let html = '';
       arr.forEach(item => {
         let altstr = item.fund_name || item.fund_code;
-        html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank"><img src="${item.zhang_url}" alt="${altstr}"></a>`;
+        html += `<a class="type_1" href="https://fund.eastmoney.com/${item.fund_code}.html" target="_blank">
+            <img src="${item.zhang_url}" alt="${altstr}">
+            <span class="type_status" data-code="${item.fund_code}" data-top="${item.point_top}" data-down="${item.point_down}"></span>
+          </a>
+        `;
       })
-
       document.getElementById('imgbox').innerHTML = html;
     }
 
@@ -416,6 +454,29 @@
       info.arr_1.forEach(item => {
         if (item.fund_code === data.fundcode) {
           item.zhang_today = data.gszzl || '-';
+          item.dwjz = ['', null, undefined].includes(data.dwjz) ? '' : data.dwjz;
+
+          const cur_el = document.querySelector(`.type_status[data-code="${data.fundcode}"]`);
+          if (cur_el) {
+            const data_top = Number(cur_el.getAttribute('data-top'));
+            const data_down = Number(cur_el.getAttribute('data-down'));
+            console.log('data_top', data_top, data_down);
+
+            if (data_top !== 0 && data_down !== 0) {
+              const dwjz = Number(data.dwjz || '');
+              if (dwjz) {
+                if (dwjz > data_top) {
+                  cur_el.innerHTML = `过高`;
+                  cur_el.classList += ' top';
+                } else if (dwjz < data_down) {
+                  cur_el.innerHTML = `过低`;
+                  cur_el.classList += ' down';
+                } else {
+                  cur_el.innerHTML = `正常`;
+                }
+              }
+            }
+          }
         }
       })
     }

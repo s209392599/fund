@@ -1,7 +1,5 @@
 <script setup>
 import { useRouter } from 'vue-router';
-import { ElMessage, ElTabs, ElTabPane } from 'element-plus';
-
 const router = useRouter();
 
 const info = reactive({

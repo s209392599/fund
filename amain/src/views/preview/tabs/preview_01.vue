@@ -43,7 +43,7 @@ const getHistoryPerformance = (fund_code) => {
     }
   });
 };
-window.jsonpgz = (data) =>{
+window.jsonpgz = (data) => {
   /*
     {
       "fundcode": "002834",
@@ -61,6 +61,7 @@ window.jsonpgz = (data) =>{
   info.tableData.forEach((item) => {
     if (item.fund_code === data.fundcode) {
       item.zhang_today = data.gszzl || '-';
+      item.dwjz = ['', null, undefined].includes(data.dwjz) ? '' : data.dwjz;
     }
   });
 }
@@ -89,7 +90,7 @@ const query_list = () => {
 query_list();
 
 const getHisdata = (row, index) => {
-  console.log('row.zhang_his',row);
+  console.log('row.zhang_his', row);
 
   const obj = row.zhang_his?.[index] || {};
   if (!obj.avg) return '-';
@@ -146,245 +147,133 @@ const sortHisData8 = (a, b) => sortHistoricalData(a, b, 8);
     <div class="img-box">
       <template v-for="item in info.tableData" :key="item.id">
         <!-- 推荐添加 :key -->
-        <template
-          v-if="item.fund_sign === '正常' && item.zhang_url?.startsWith('http')"
-        >
-          <a
-            class="type_1"
-            :href="`https://fund.eastmoney.com/${item.fundcode}.html`"
-            target="_blank"
-          >
+        <template v-if="item.fund_sign === '正常' && item.zhang_url?.startsWith('http')">
+          <a class="type_1" :href="`https://fund.eastmoney.com/${item.fundcode}.html`" target="_blank">
             <img :src="item.zhang_url" :alt="item.fund_name" />
+            <span class="" v-if="!['', null, undefined].includes(item.dwjz)">
+              <span v-if="Number(row.dwjz) > Number(row.point_top)" style="color:red;">过高</span>
+              <span v-else-if="Number(row.dwjz) > Number(row.point_down)" style="color:#0e48ff;">过低</span>
+              <span v-else>正常</span>
+            </span>
           </a>
         </template>
       </template>
     </div>
 
     <!-- 文字提示 -->
-    <div style="padding: 0px 10px 0px 10px"
-      >注：“今日”这一列是预测涨幅，非当日实际涨幅；手机端可滑动查看</div
-    >
+    <div style="padding: 0px 10px 0px 10px">注：“今日”这一列是预测涨幅，非当日实际涨幅；手机端可滑动查看</div>
 
     <!-- 表格展示区 -->
     <div class="table-box">
-      <el-table
-        :data="info.tableData"
-        style="width: 100%"
-        border
-        stripe
-        max-height="520"
-      >
-        <el-table-column
-          fixed
-          type="index"
-          align="center"
-          label="序"
-          width="36"
-        ></el-table-column>
+      <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
+        <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
-        <el-table-column
-          fixed
-          prop="fund_code"
-          align="center"
-          label="基金号"
-          width="64"
-        >
+        <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
           <template v-slot="{ row }">
-            <a
-              :href="`https://fund.eastmoney.com/${row.fund_code}.html`"
-              target="_blank"
-              style="text-decoration: none"
-            >
-              <span
-                v-if="row.sign === '历史'"
-                style="color: #876ad2; font-weight: 700"
-                >{{ row.fund_code }}</span
-              >
+            <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
+              <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
               <span v-else>{{ row.fund_code }}</span>
             </a>
           </template>
         </el-table-column>
 
-        <el-table-column
-          prop="fund_name"
-          label="基金名称"
-          :width="info.width_name"
-          sortable
-          show-overflow-tooltip
-        >
+        <el-table-column prop="fund_name" label="基金名称" :width="info.width_name" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
-            <span
-              v-if="row.sign === '历史'"
-              style="color: #876ad2; font-weight: 700"
-              >{{ row.fund_name }}</span
-            >
+            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_name }}</span>
             <span v-else>{{ row.fund_name }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          prop="fund_type"
-          label="类型"
-          width="70"
-          align="center"
-          sortable
-          show-overflow-tooltip
-        >
+        <el-table-column prop="fund_type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
-            <span
-              v-if="row.sign === '历史'"
-              style="color: #876ad2; font-weight: 700"
-              >{{ row.fund_type }}</span
-            >
+            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_type }}</span>
             <span v-else>{{ row.fund_type }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="今日"
-          width="56"
-          sortable
-          :sort-method="sortToday"
-        >
+        <el-table-column align="center" label="区间" width="40" :sort-method="sortToday">
+          <template v-slot="{ row }">
+            <span v-if="!['', null, undefined].includes(row.dwjz)">
+              <span v-if="Number(row.dwjz) > Number(row.point_top)" style="color:red;">过高</span>
+              <span v-else-if="Number(row.dwjz) > Number(row.point_down)" style="color:#0e48ff;">过低</span>
+              <span v-else>正常</span>
+            </span>
+          </template>
+        </el-table-column>
+
+        <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday">
           <template v-slot="{ row }">
             <span v-html="getToday(row)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="近1周"
-          width="66"
-          sortable
-          :sort-method="sortHisData0"
-        >
+        <el-table-column align="right" label="近1周" width="66" sortable :sort-method="sortHisData0">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 0)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="近1月"
-          width="66"
-          sortable
-          :sort-method="sortHisData1"
-        >
+        <el-table-column align="right" label="近1月" width="66" sortable :sort-method="sortHisData1">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 1)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="近3月"
-          width="66"
-          sortable
-          :sort-method="sortHisData2"
-        >
+        <el-table-column align="right" label="近3月" width="66" sortable :sort-method="sortHisData2">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 2)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="近6月"
-          width="66"
-          sortable
-          :sort-method="sortHisData3"
-        >
+        <el-table-column align="right" label="近6月" width="66" sortable :sort-method="sortHisData3">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 3)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="近1年"
-          width="66"
-          sortable
-          :sort-method="sortHisData4"
-        >
+        <el-table-column align="right" label="近1年" width="66" sortable :sort-method="sortHisData4">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 4)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="近3年"
-          width="66"
-          sortable
-          :sort-method="sortHisData5"
-        >
+        <el-table-column align="right" label="近3年" width="66" sortable :sort-method="sortHisData5">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 5)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="近5年"
-          width="66"
-          sortable
-          :sort-method="sortHisData6"
-        >
+        <el-table-column align="right" label="近5年" width="66" sortable :sort-method="sortHisData6">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 6)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="今年"
-          width="66"
-          sortable
-          :sort-method="sortHisData7"
-        >
+        <el-table-column align="right" label="今年" width="66" sortable :sort-method="sortHisData7">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 7)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          align="right"
-          label="成立"
-          width="66"
-          sortable
-          :sort-method="sortHisData8"
-        >
+        <el-table-column align="right" label="成立" width="66" sortable :sort-method="sortHisData8">
           <template v-slot="{ row }">
             <span v-html="getHisdata(row, 8)"></span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          prop="fund_fixed"
-          label="定投"
-          width="76"
-          align="right"
-          sortable
-          show-overflow-tooltip
-        >
+        <el-table-column prop="fund_fixed" label="定投" width="76" align="right" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
             <span class="">{{ row.fund_fixed }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          prop="fund_desc"
-          label="备注"
-          width="300"
-          show-overflow-tooltip
-        >
+        <el-table-column prop="point_top" label="高点" width="66"></el-table-column>
+        <el-table-column prop="point_down" label="低点" width="66"></el-table-column>
+        <el-table-column prop="dwjz" label="净值" width="66"></el-table-column>
+
+        <el-table-column prop="fund_desc" label="备注" width="300" show-overflow-tooltip>
           <template v-slot="{ row }">
-            <span
-              v-if="row.sign === '历史'"
-              style="color: #876ad2; font-weight: 700"
-              >历史数据</span
-            >
+            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">历史数据</span>
             <span v-else>{{ row.fund_desc }}</span>
           </template>
         </el-table-column>
@@ -447,9 +336,11 @@ const sortHisData8 = (a, b) => sortHistoricalData(a, b, 8);
   .cell {
     padding: 0 5px !important;
   }
+
   .el-table__cell {
     padding: 2px 0;
   }
+
   .caret-wrapper {
     width: 15px;
     position: relative;
@@ -483,5 +374,24 @@ const sortHisData8 = (a, b) => sortHistoricalData(a, b, 8);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.type_status {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  z-index: 4;
+  font-size: 24px;
+  color: #000;
+}
+
+.type_status.top {
+  font-size: 24px;
+  color: red;
+}
+
+.type_status.down {
+  color: #0e48ff;
+  font-size: 24px;
 }
 </style>
