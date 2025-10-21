@@ -128,12 +128,11 @@ const getList = () => {
   })
 };
 
-
-
 const resetForm = () => {
   info.search = '';
   getList();
 };
+
 // 去除A类
 const removeA = () => {
   console.log('去除name最后一个字符是A');
@@ -231,14 +230,9 @@ const removeFn_1 = () => {
 }
 // 涨幅转换
 const zhangFn = (arr_1, num) => {
-  console.log('arr_1-------------', arr_1, num);
-
   if (!Array.isArray(arr_1) || arr_1.length === 0) {
     return '';
   }
-
-  console.log('通过转换', num);
-
   // 定义时间段的映射对象
   let obj = {
     1: '近1周',
@@ -275,29 +269,40 @@ const zhangFn = (arr_1, num) => {
     return '';
   }
 };
-const sortByYearRate = (a, b, order) => {
+const sortByYearRate = (num) => {
+  let obj = {
+    1: '近1周',
+    2: '近1月',
+    3: '近3月',
+    4: '近6月',
+    5: '近1年',
+    6: '今年以来',
+    7: '近3年',
+    8: '成立以来'
+  };
   // 提取 a 和 b 的 "近1年" 涨幅值
   const getValue = (item) => {
     const arr_1 = item.jd_historyPerformance;
     if (!Array.isArray(arr_1) || arr_1.length === 0) return NaN;
 
-    const period = '近1年';
+    const period = obj[num];
     const match = arr_1.find(i => i.name === period);
     if (match && match.rate !== undefined) {
       return parseFloat(match.rate);
     }
     return NaN;
   };
+  return function (a, b, order) {
+    const valA = getValue(a);
+    const valB = getValue(b);
 
-  const valA = getValue(a);
-  const valB = getValue(b);
+    // 处理 NaN 情况：让空值排在最后
+    if (isNaN(valA)) return order === 'ascending' ? 1 : -1;
+    if (isNaN(valB)) return order === 'ascending' ? -1 : 1;
 
-  // 处理 NaN 情况：让空值排在最后
-  if (isNaN(valA)) return order === 'ascending' ? 1 : -1;
-  if (isNaN(valB)) return order === 'ascending' ? -1 : 1;
-
-  // 正常数值比较
-  return order === 'ascending' ? valA - valB : valB - valA;
+    // 正常数值比较
+    return order === 'ascending' ? valB - valA : valA - valB;
+  }
 };
 
 // 转换标签
@@ -365,49 +370,49 @@ const turn_themeNameList = (row = {}) => {
           </template>
         </el-table-column>
 
-        <el-table-column label="近1周" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="近1周" width="100" align="right" sortable :sort-method="sortByYearRate(1)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 1) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column label="近1月" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="近1月" width="100" align="right" sortable :sort-method="sortByYearRate(2)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 2) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column label="近3月" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="近3月" width="100" align="right" sortable :sort-method="sortByYearRate(3)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 3) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column label="近6月" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="近6月" width="100" align="right" sortable :sort-method="sortByYearRate(4)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 4) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column label="近1年" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="近1年" width="100" align="right" sortable :sort-method="sortByYearRate(5)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 5) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column label="今年以来" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="今年以来" width="100" align="right" sortable :sort-method="sortByYearRate(6)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 6) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column label="近3年" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="近3年" width="100" align="right" sortable :sort-method="sortByYearRate(7)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 7) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column label="成立以来" width="100" align="right" sortable :sort-method="sortByYearRate">
+        <el-table-column label="成立以来" width="100" align="right" sortable :sort-method="sortByYearRate(8)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 8) }}</span>
           </template>

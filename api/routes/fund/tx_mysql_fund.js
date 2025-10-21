@@ -10,7 +10,7 @@ router.post('/fund_mysql_normal_all', async (req, res) => {
     connection = await pool.getConnection();
     console.log('数据库连接成功！');
 
-    var query = 'SELECT fund_code, fund_name, no_keyword FROM fund'; // 只查询这几个字段
+    var query = 'SELECT fund_code, fund_name, no_keyword FROM fund_all'; // 只查询这几个字段
 
     const [results] = await Promise.race([
       connection.query(query),
@@ -60,7 +60,7 @@ SELECT
     fund_name,
     fund_type_name
 FROM
-    fund
+    fund_all
 WHERE
     fund_name LIKE ?
     AND no_keyword = 'y'
@@ -117,7 +117,7 @@ var query = `
 SELECT
     *
 FROM
-    fund
+    fund_all
 WHERE
     fund_code IN (?)
     AND no_keyword = 'y'

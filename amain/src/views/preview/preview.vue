@@ -69,20 +69,20 @@ const info = reactive({
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_06.vue'))),
       desc: ''
     },
-    // {
-    //   id: 12,
-    //   show: true,
-    //   name: '基金搜索',
-    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
-    //   desc: ''
-    // },
-    // {
-    //   id: 13,
-    //   show: true,
-    //   name: '基金持仓',
-    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
-    //   desc: ''
-    // },
+    {
+      id: 12,
+      show: true,
+      name: '基金搜索',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_12.vue'))),
+      desc: ''
+    },
+    {
+      id: 13,
+      show: true,
+      name: '基金持仓',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_13.vue'))),
+      desc: ''
+    },
     // {
     //   id: 15,
     //   show: true,
