@@ -91,6 +91,13 @@ const info = reactive({
     //   desc: ''
     // },
     {
+      id: 16,
+      show: true,
+      name: '红利',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_16.vue'))),
+      desc: ''
+    },
+    {
       id: 99,
       show: true,
       name: '我的',
