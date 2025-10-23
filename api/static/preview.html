@@ -154,7 +154,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="区间" width="40" :sort-method="sortToday">
+      <!-- <el-table-column align="center" label="区间" width="40" :sort-method="sortToday">
         <template v-slot="{ row }">
           <span v-if="!['',null,undefined].includes(row.dwjz)">
             <span v-if="Number(row.dwjz) > Number(row.point_top)" style="color:red;">过高</span>
@@ -162,7 +162,7 @@
             <span v-else>正常</span>
           </span>
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
       <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday">
         <template v-slot="{ row }">
@@ -230,8 +230,8 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="point_top" label="高点" width="66"></el-table-column>
-      <el-table-column prop="point_down" label="低点" width="66"></el-table-column>
+      <!-- <el-table-column prop="point_top" label="高点" width="66"></el-table-column>
+      <el-table-column prop="point_down" label="低点" width="66"></el-table-column> -->
       <el-table-column prop="dwjz" label="净值" width="66"></el-table-column>
 
       <el-table-column prop="fund_desc" label="备注" width="300" show-overflow-tooltip>
@@ -456,27 +456,27 @@
           item.zhang_today = data.gszzl || '-';
           item.dwjz = ['', null, undefined].includes(data.dwjz) ? '' : data.dwjz;
 
-          const cur_el = document.querySelector(`.type_status[data-code="${data.fundcode}"]`);
-          if (cur_el) {
-            const data_top = Number(cur_el.getAttribute('data-top'));
-            const data_down = Number(cur_el.getAttribute('data-down'));
-            console.log('data_top', data_top, data_down);
+          // const cur_el = document.querySelector(`.type_status[data-code="${data.fundcode}"]`);
+          // if (cur_el) {
+          //   const data_top = Number(cur_el.getAttribute('data-top'));
+          //   const data_down = Number(cur_el.getAttribute('data-down'));
+          //   console.log('data_top', data_top, data_down);
 
-            if (data_top !== 0 && data_down !== 0) {
-              const dwjz = Number(data.dwjz || '');
-              if (dwjz) {
-                if (dwjz > data_top) {
-                  cur_el.innerHTML = `过高`;
-                  cur_el.classList += ' top';
-                } else if (dwjz < data_down) {
-                  cur_el.innerHTML = `过低`;
-                  cur_el.classList += ' down';
-                } else {
-                  cur_el.innerHTML = `正常`;
-                }
-              }
-            }
-          }
+          //   if (data_top !== 0 && data_down !== 0) {
+          //     const dwjz = Number(data.dwjz || '');
+          //     if (dwjz) {
+          //       if (dwjz > data_top) {
+          //         cur_el.innerHTML = `过高`;
+          //         cur_el.classList += ' top';
+          //       } else if (dwjz < data_down) {
+          //         cur_el.innerHTML = `过低`;
+          //         cur_el.classList += ' down';
+          //       } else {
+          //         cur_el.innerHTML = `正常`;
+          //       }
+          //     }
+          //   }
+          // }
         }
       })
     }

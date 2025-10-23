@@ -120,7 +120,7 @@
             <img :src="`http://j3.dfcfw.com/images/JJJZ1/${item.fund_code}.png`" alt="" />
           </div>
 
-          <template v-if="item.fund_sign === '正常' && item.zhang_url.startsWith('http')">
+          <template v-if="item.zhang_url.startsWith('http')">
             <a class="type_1" :href="`https://fund.eastmoney.com/${item.fund_code}.html`" target="_blank">
               <img :src="item.zhang_url" :alt="item.fund_name || item.fund_code" />
             </a>
@@ -197,7 +197,7 @@
             item.zhang_today = '-';// 浸提涨幅
             item.zhang_his = [];// 历史涨幅
 
-            if (item.fund_sign === '正常' && item.zhang_url.startsWith('http')) {
+            if (item.zhang_url.startsWith('http')) {
               arr_2.push(item);
             }
 
