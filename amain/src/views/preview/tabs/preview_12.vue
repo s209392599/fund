@@ -136,8 +136,22 @@ const resetForm = () => {
 // 去除A类
 const removeA = () => {
   console.log('去除name最后一个字符是A');
-  info.tableData = info.tableData.filter(item => item.fund_name[item.fund_name.length - 1] !== 'A');
-  info.step = info.tableData.length ? 3 : 1;
+  ElMessageBox.confirm(
+    '确认去除吗?',
+    '警告',
+    {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      type: 'warning',
+    }
+  )
+    .then(() => {
+      info.tableData = info.tableData.filter(item => item.fund_name[item.fund_name.length - 1] !== 'A');
+    })
+    .catch(() => { })
+    .finally(() => {
+      info.step = info.tableData.length ? 3 : 1;
+    })
 };
 
 const addFn = () => {
