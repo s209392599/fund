@@ -106,6 +106,8 @@ mail_title = `
 还在纯依靠邮件不看微信群公告的微信告诉我下！
 `;
 
+new ResizeObserver(entries => myChart.resize()).observe(document.querySelector('#chart'));
+
 /*
 10.13 周一 停止日定投 工银中证稀有金属主题ETF-C
 10.13 周一 取消 中信保诚的日定投  11.15之前找机会就卖出一部分的份额

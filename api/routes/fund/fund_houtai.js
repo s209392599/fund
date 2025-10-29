@@ -36,10 +36,11 @@ router.post('/fund_manage_fund_query', async (req, res) => {
   DatabasePostQuery({
     res: res,
     query: 'SELECT * FROM fund_public ORDER BY sort_order ASC',
-    format: (results) => ({
-      length: results.length,
-      data: results,
-    }),
+    format: (results) => results
+    // format: (results) => ({
+    //   length: results.length,
+    //   data: results,
+    // }),
   });
 });
 

@@ -1,4 +1,7 @@
 /*
+
+
+
 https://www.bilibili.com/video/BV1JWtDeqE44/?vd_source=05a30f42f608d43de22f6db10d8c8d4d 软件讲解
 https://space.bilibili.com/381896465
 
@@ -13,8 +16,6 @@ https://lc.jr.jd.com/finance/funddetail/home/?fundCode=008327 京东金融详情
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=007467
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=007540
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=002112
-
-自由现金流 搜索对比一下
 
 红利过期ETF  4.5%
 万家中证ETF 4.2%
@@ -67,7 +68,10 @@ https://fund.eastmoney.com/data/fundsearch.html?spm=search&key=%E4%BA%9A%E5%A4%A
 https://fundgz.1234567.com.cn/js/007467.js
 
 
+jd_header_tag 榜单、特色亮点、用户关注、投资方向
 {"rankList":["连续5年跑赢同类 · 第9名"],"highlights":{"tagList":[],"morningstarRating":"2"},"userFocus":[],"themeNameList":["综合","免税店"]}
+
+jd_historyPerformance 历史业绩
 [
   {"avg":"0.13","rate":"-0.91","name":"近1周","rank":"3176/4354"},
   {"avg":"7.53","rate":"4.32","name":"近1月","rank":"2737/4279"},
@@ -78,8 +82,14 @@ https://fundgz.1234567.com.cn/js/007467.js
   {"avg":"26.69","rate":"21.93","name":"近3年","rank":"1061/1869"},
   {"avg":"155.06","rate":"194.57","name":"成立以来","rank":"25/123"}
 ]
+
+jd_fundDiagnosis 综合诊断
 87|57|93|84
+
+jd_proportion 持仓分类占比
 93.54|0.00|7.86|0.00|0.00
+
+jd_holdStock 持仓明细
 {
   "stock":[
     {"name":"洛阳钼业","industryName":"工业金属","ratio":"2.09%"},
@@ -96,6 +106,8 @@ https://fundgz.1234567.com.cn/js/007467.js
   "bond":[],
   "fund":[]
 }
+
+jd_fund_archive 基金档案
 {
   "establishedDateByCn":"2013年03月22日",
   "company_name":"财通基金管理有限公司",
@@ -105,6 +117,8 @@ https://fundgz.1234567.com.cn/js/007467.js
   "companyManageScale":"753.33亿",
   "manageNumber":"57"
 }
+
+jd_managerInfo 基金经理
 [
   {"yearPerformance":"-3.22",
   "employPerformance":"17.32",
@@ -114,6 +128,5 @@ https://fundgz.1234567.com.cn/js/007467.js
   "accessionDate":"2年247天",
   "manageScale":"8.97亿元"}
 ]
-39211615.71
 
 */

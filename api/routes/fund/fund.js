@@ -273,7 +273,7 @@ router.post('/fund_amain_public_funds', async (req, res) => {
 // 获取基金历史数据
 router.post('/fund_history_data', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
-
+console.log('fund_history_data',fundcode,pageSize)
   if (!fundcode) {
     res.send({
       code: 400,

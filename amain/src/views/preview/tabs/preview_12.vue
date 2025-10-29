@@ -2,7 +2,7 @@
 console.log('src/views/preview/tabs/preview_12.vue');
 
 const info = reactive({
-  text: '科创板综合',
+  text: '红利',
   step: 1,
   tableData: [],// 列表数据
 });
@@ -145,7 +145,14 @@ const addFn = () => {
 };
 const btn_del = (row, $index) => {
   console.log('删除', row);
-  info.tableData.splice($index, 1);
+  // info.tableData.splice($index, 1);
+
+  // 创建新数组而不是直接修改原数组
+  const newData = info.tableData.filter(item => item.fund_code !== row.fund_code)
+
+  // 使用markRaw减少响应式开销
+  info.tableData = markRaw(newData)
+
 };
 
 /*

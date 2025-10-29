@@ -41,13 +41,13 @@ const info = reactive({
     //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
     //   desc: ''
     // },
-    // {
-    //   id: 10,
-    //   show: true,
-    //   name: '近来对比',
-    //   component: markRaw(defineAsyncComponent(() => import('./tabs/preview_10.vue'))),
-    //   desc: '标准基金的对比 和 手动挑选一些基金进行对比'
-    // },
+    {
+      id: 10,
+      show: true,
+      name: '近来对比',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_10.vue'))),
+      desc: '标准基金的对比 和 手动挑选一些基金进行对比'
+    },
     // {
     //   id: 11,
     //   show: true,
