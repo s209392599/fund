@@ -51,25 +51,25 @@ router.post('/fund_manage_fund_update', (req, res) => {
     UPDATE fund_public
     SET
       fund_name = ?,
-      type = ?,
+      fund_type = ?,
       zhang_url = ?,
-      fixed = ?,
+      fund_fixed = ?,
       point_down = ?,
       point_top = ?,
       fund_desc = ?,
-      sign = ?
+      fund_sign = ?
     WHERE fund_code = ?;
   `;
 
   const values = [
     form.fund_name,
-    form.type,
+    form.fund_type,
     form.zhang_url,
-    parseFloat(form.fixed || 0),
+    parseFloat(form.fund_fixed || 0),
     form.point_down,
     form.point_top,
     form.fund_desc,
-    form.sign,
+    form.fund_sign,
     form.fund_code,
   ];
 
@@ -95,23 +95,54 @@ router.post('/fund_manage_fund_add', async (req, res) => {
   });
   const cur_sort = total_num[0].total + 1;
 
+//   {
+//   "fund_code": "012276",
+//   "fund_name": "富国中证沪港深500ETF联接C",
+//   "type": "红利",
+//   "zhang_url": "https://j4.dfcfw.com/charts/pic6/012276.png",
+//   "fixed": "100",
+//   "point_down": "1.2",
+//   "point_top": "1",
+//   "fund_desc": "",
+//   "sign": "正常"
+// }
+/*
+CREATE TABLE `fund_public` (
+  `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '唯一字段',
+  `fund_code` varchar(6) NOT NULL COMMENT '基金代号',
+  `fund_name` varchar(100) NOT NULL COMMENT '基金名称',
+  `sort_order` int(3) NOT NULL COMMENT '排序',
+  `fund_type` varchar(10) DEFAULT NULL COMMENT '分类',
+  `fund_sign` varchar(10) DEFAULT NULL COMMENT '正常、历史、观察、待卖',
+  `point_top` decimal(8,4) DEFAULT NULL COMMENT '提示_最高点',
+  `point_down` decimal(8,4) DEFAULT NULL COMMENT '提示_最低点',
+  `fund_desc` varchar(255) DEFAULT NULL COMMENT '描述',
+  `fund_fixed` decimal(5,0) DEFAULT NULL COMMENT '每日定投的量',
+  `zhang_url` varchar(150) DEFAULT NULL COMMENT '涨幅的url地址',
+  `fundgz` varchar(1) DEFAULT NULL COMMENT '预览涨幅',
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `index_sort_order` (`sort_order`),
+  KEY `index_id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
+*/
+
   const query_str = `
     INSERT INTO fund_public (
-        fund_code, fund_name, sort_order, type, sign, zhang_url,
-        point_top, point_down, fund_desc, fixed
+        fund_code, fund_name, sort_order, fund_type, fund_sign, zhang_url,
+        point_top, point_down, fund_desc, fund_fixed
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
   const values = [
     form.fund_code,
     form.fund_name,
     cur_sort,
-    form.type,
-    form.sign,
+    form.fund_type,
+    form.fund_sign,
     form.zhang_url,
     form.point_top || '',
     form.point_down || '',
     form.fund_desc || '',
-    parseFloat(form.fixed || 0)
+    parseFloat(form.fund_fixed || 0)
   ];
 
   DatabasePostQuery({

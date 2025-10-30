@@ -1,4 +1,4 @@
-[
+const arr = [
   {
     fund_code: '000279',
     fund_name: '华商红利优选混合',
@@ -9270,3 +9270,4 @@
     jd_totalAsset: '288599374.86',
   },
 ];
+export default arr;

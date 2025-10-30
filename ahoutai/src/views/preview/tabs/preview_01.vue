@@ -14,13 +14,13 @@ const info = reactive({
   form: {
     "fund_code": "",
     "fund_name": "",
-    "type": "",
+    "fund_type": "",
     "zhang_url": "",
-    "fixed": "",
+    "fund_fixed": "",
     "point_down": "",
     "point_top": "",
     "fund_desc": "",
-    "sign": "当前",
+    "fund_sign": "当前",
   }
 })
 const rules = {
@@ -31,7 +31,7 @@ const rules = {
   fund_name: [
     { required: true, message: '请输入基金名称', trigger: 'blur' },
   ],
-  type: [
+  fund_type: [
     { required: true, message: '请输入基金类型', trigger: 'blur' },
   ],
 };
@@ -42,7 +42,7 @@ const query_list = () => {
     server_fund_manage_fund_query().then(res => {
       console.log('res', res);
       if (res.code === 200) {
-        info.tableData = res.data.data || [];
+        info.tableData = res.data || [];
       } else {
         ElMessage.error('获取列表失败，请重试！');
       }
@@ -116,13 +116,13 @@ const resetForm = () => {
   info.form = {
     "fund_code": "",
     "fund_name": "",
-    "type": "",
+    "fund_type": "",
     "zhang_url": "",
-    "fixed": "",
+    "fund_fixed": "",
     "point_down": "",
     "point_top": "",
     "fund_desc": "",
-    "sign": "当前",
+    "fund_sign": "当前",
   }
   diaForm?.value?.resetFields();
 
@@ -225,8 +225,8 @@ const updateOrder = () => {
 
       <el-table-column prop="type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
         <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.type }}</span>
-          <span v-else>{{ row.type }}</span>
+          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_type }}</span>
+          <span v-else>{{ row.fund_type }}</span>
         </template>
       </el-table-column>
 
@@ -249,16 +249,16 @@ const updateOrder = () => {
           <el-input v-model="info.form.fund_name" autocomplete="off" />
         </el-form-item>
 
-        <el-form-item label="类型" prop="type" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.type" autocomplete="off" />
+        <el-form-item label="类型" prop="fund_type" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.fund_type" autocomplete="off" />
         </el-form-item>
 
         <el-form-item label="涨幅的URL" prop="zhang_url" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.zhang_url" autocomplete="off" />
         </el-form-item>
 
-        <el-form-item label="定投金额" prop="fixed" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.fixed" autocomplete="off" />
+        <el-form-item label="定投金额" prop="fund_fixed" :label-width="info.formLabelWidth">
+          <el-input v-model="info.form.fund_fixed" autocomplete="off" />
         </el-form-item>
 
         <el-form-item label="净值提示-低点" prop="point_down" :label-width="info.formLabelWidth">
@@ -273,8 +273,8 @@ const updateOrder = () => {
           <el-input v-model="info.form.fund_desc" autocomplete="off" />
         </el-form-item>
 
-        <el-form-item label="状态" prop="sign" :label-width="info.formLabelWidth">
-          <el-radio-group v-model="info.form.sign">
+        <el-form-item label="状态" prop="fund_sign" :label-width="info.formLabelWidth">
+          <el-radio-group v-model="info.form.fund_sign">
             <el-radio value="正常">正常</el-radio>
             <el-radio value="历史">历史</el-radio>
             <el-radio value="观察">观察</el-radio>

@@ -1,12 +1,30 @@
 /*
+易方达改革红利混合(001076)
+华安恒生港股通中国央企红利ETF发起式联接C(020867)  替换华泰柏瑞
+富国中证沪港深500ETF联接C(012276)  替换恒生科技
+https://j4.dfcfw.com/charts/pic6/012276.png
 
-中证沪港深500 搜索一下
-https://fund.eastmoney.com/data/fundsearch.html?spm=search&key=%E4%B8%AD%E8%AF%81%E6%B2%AA%E6%B8%AF%E6%B7%B1500#key%E4%B8%AD%E8%AF%81%E6%B2%AA%E6%B8%AF%E6%B7%B1500
 
+电池、机器人 卖出4天份额；
+纳斯达克卖出 2天份额；
 
-富国恒生红利ETF联接C(019261)
-还是
-恒生港股通高股息低波动指数
+020989-南方恒生科技指数C
+007467-华泰柏瑞中证红利低波E
+019261-富国恒生红利ETF联接C
+这三个转 012276-富国中证沪港深500ETF联接C
+
+023999-易方达上证科创板综合增强C
+160424-华安创业板50ETF联接C
+这两个
+一半儿给022425-广发中证A500ETF联接C
+一半给022365-永赢科技智选混合发起C
+
+023521-博时上证人工智能 转 012322-东财云计算
+
+018561-中信保诚多策略混合(LOF)C
+002834-华夏新锦绣混合C
+这两个转 	016858-国金量化多因子股票C
+
 
 
 
@@ -27,16 +45,8 @@ https://lc.jr.jd.com/finance/funddetail/home/?fundCode=007467
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=007540
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=002112
 
-红利过期ETF  4.5%
-万家中证ETF 4.2%
-红利港股ETF 5.86%
-现金流ETF  4.23%,年化收益率20%+
-
-港股通红利低波ETF（520890）
-港股通央企红利
 
 https://space.bilibili.com/381896465  他的视频可以看下
-
 
 
 基金排行---收集一下两个种类的不同，一个可以node-fetch
@@ -67,16 +77,7 @@ SELECT * FROM fund_users WHERE user_name = 'boxue' AND user_password = 'qaz123..
 
 SELECT * FROM fund_users WHERE user_name = 'boxue' AND user_password = 'qaz123..';
 
-广发全球精选股票(QDII)人民币A(270023)
-
-亚太精选
-https://fund.eastmoney.com/data/fundsearch.html?spm=search&key=%E4%BA%9A%E5%A4%AA%E7%B2%BE%E9%80%89#key%E4%BA%9A%E5%A4%AA%E7%B2%BE%E9%80%89
-
-
-
-
 https://fundgz.1234567.com.cn/js/007467.js
-
 
 jd_header_tag 榜单、特色亮点、用户关注、投资方向
 {"rankList":["连续5年跑赢同类 · 第9名"],"highlights":{"tagList":[],"morningstarRating":"2"},"userFocus":[],"themeNameList":["综合","免税店"]}

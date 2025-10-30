@@ -1,16 +1,45 @@
 <script setup>
 console.log('src/views/preview/tabs/preview_12.vue');
+import hongli from './hongli.js';
+
+const newArr = hongli.map(item => {
+  let defen = 0;
+  let obj = {
+    '近1周': 5,
+    '近1月': 10,
+    '近3月': 30,
+    '近6月': 35,
+    '近1年': 20,
+  };
+  let jd_historyPerformance = item.jd_historyPerformance || [];
+  jd_historyPerformance.forEach(v => {
+    if (v.name === '近1周') {
+      defen += v.rate * obj['近1周'] * 100;
+    } else if (v.name === '今年以来') {
+      defen += v.rate * obj['近1月'] * 100;
+    } else if (v.name === '今年以来') {
+      defen += v.rate * obj['近3月'] * 100;
+    } else if (v.name === '近6月') {
+      defen += v.rate * obj['近6月'] * 100;
+    } else if (v.name === '近1年') {
+      defen += v.rate * obj['近1年'] * 100;
+    }
+  })
+  item.defen = Number(defen.toFixed(2));
+  return item;
+})
 
 const info = reactive({
   text: '央企红利',
   step: 1,
-  tableData: [],// 列表数据
+  tableData: newArr || [],// 列表数据
+  tableHeight: 400,
 });
+// 计算网页高度 - 40
+info.tableHeight = document.documentElement.clientHeight - 150;
 
-// 转换服务器上的数据为table使用的
-const turnSearchData = (data) => {
 
-}
+
 /*
 jd_header_tag: jd_header_tag,// 头部标签
 {"rankList":[],"highlights":{"tagList":["基金规模大"],"morningstarRating":"4"},"userFocus":[],"themeNameList":["半导体","机器视觉"]}
@@ -203,12 +232,12 @@ const getAllInfo = () => {
     if (res.code === 200) {
       let arr_1 = res.data.data;
       let arr_2 = arr_1.map(item => {
-        let jd_historyPerformance = item.jd_historyPerformance ? JSON.parse(item.jd_historyPerformance) : null;
-        if(jd_historyPerformance){
+        let jd_historyPerformance = item.jd_historyPerformance ? JSON.parse(item.jd_historyPerformance) : [];
+        if (jd_historyPerformance) {
           jd_historyPerformance = jd_historyPerformance.map(i => {
             return {
               ...i,
-              avg: i.avg ? parseFloat(i.avg) : null,
+              avg: i.avg ? parseFloat(i.avg) : '',
               rate: i.rate ? parseFloat(i.rate) : '',
             }
           })
@@ -260,7 +289,7 @@ const removeFn_1 = () => {
   // info.step = info.tableData.length ? 5 : 1;
 }
 // 涨幅转换
-const zhangFn = (arr_1, num) => {
+const zhangFn = (arr_1, num, row) => {
   if (!Array.isArray(arr_1) || arr_1.length === 0) {
     return '';
   }
@@ -291,7 +320,7 @@ const zhangFn = (arr_1, num) => {
   if (arr_2.length > 0) {
     let selectedObj = arr_2[0];
     // 检查对象是否有 avg 属性
-    if (selectedObj.hasOwnProperty('avg')) {
+    if (selectedObj.hasOwnProperty('avg') && ![null, undefined].includes(selectedObj.avg)) {
       return parseFloat(selectedObj.rate);
     } else {
       return '';
@@ -390,7 +419,7 @@ const turn_themeNameList = (row = {}) => {
     </div>
 
     <div class="main_box">
-      <el-table :data="info.tableData" border style="width: 100%" height="800">
+      <el-table :data="info.tableData" border style="width: 100%" :height="info.tableHeight">
         <el-table-column fixed label="序" type="index" width="50" />
 
         <!-- <el-table-column prop="fund_code" label="基金号" width="80" /> -->
@@ -406,6 +435,7 @@ const turn_themeNameList = (row = {}) => {
 
         <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
         <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
+        <el-table-column prop="defen" label="得分" width="120" sortable show-overflow-tooltip />
 
         <el-table-column label="总资产" width="120" align="right" sortable>
           <template #default="{ row, $index }">
@@ -451,7 +481,7 @@ const turn_themeNameList = (row = {}) => {
 
         <el-table-column label="近3年" width="100" align="right" sortable :sort-method="sortByYearRate(7)">
           <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 7) }}</span>
+            <span>{{ zhangFn(row.jd_historyPerformance, 7, row) }}</span>
           </template>
         </el-table-column>
 
