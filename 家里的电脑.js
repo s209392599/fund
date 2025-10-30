@@ -1,8 +1,18 @@
 /*
 
+中证沪港深500 搜索一下
+https://fund.eastmoney.com/data/fundsearch.html?spm=search&key=%E4%B8%AD%E8%AF%81%E6%B2%AA%E6%B8%AF%E6%B7%B1500#key%E4%B8%AD%E8%AF%81%E6%B2%AA%E6%B8%AF%E6%B7%B1500
+
+
+富国恒生红利ETF联接C(019261)
+还是
+恒生港股通高股息低波动指数
+
 
 
 https://www.bilibili.com/video/BV1JWtDeqE44/?vd_source=05a30f42f608d43de22f6db10d8c8d4d 软件讲解
+
+
 https://space.bilibili.com/381896465
 
 https://xuangu.eastmoney.com/Result?type=fund&color=w&id=xc0d67218dd193006da8&a=edit_way  条件选股

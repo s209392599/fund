@@ -2,7 +2,7 @@
 console.log('src/views/preview/tabs/preview_12.vue');
 
 const info = reactive({
-  text: '红利',
+  text: '央企红利',
   step: 1,
   tableData: [],// 列表数据
 });
@@ -203,10 +203,20 @@ const getAllInfo = () => {
     if (res.code === 200) {
       let arr_1 = res.data.data;
       let arr_2 = arr_1.map(item => {
+        let jd_historyPerformance = item.jd_historyPerformance ? JSON.parse(item.jd_historyPerformance) : null;
+        if(jd_historyPerformance){
+          jd_historyPerformance = jd_historyPerformance.map(i => {
+            return {
+              ...i,
+              avg: i.avg ? parseFloat(i.avg) : null,
+              rate: i.rate ? parseFloat(i.rate) : '',
+            }
+          })
+        }
         return {
           ...item,
           jd_header_tag: item.jd_header_tag ? JSON.parse(item.jd_header_tag) : null,
-          jd_historyPerformance: item.jd_historyPerformance ? JSON.parse(item.jd_historyPerformance) : null,
+          jd_historyPerformance: jd_historyPerformance,
           jd_fundDiagnosis: item.jd_fundDiagnosis,
           jd_proportion: item.jd_proportion,
           jd_totalAsset: item.jd_totalAsset,
@@ -369,6 +379,7 @@ const turn_themeNameList = (row = {}) => {
           <el-button type="success" @click="removeA" :disabled="info.step < 2" data-num="3">去除A类</el-button>
           <el-button type="success" @click="getAllInfo" :disabled="info.step < 3" data-num="4">详细信息</el-button>
           <el-button type="success" @click="removeFn_1" :disabled="info.step < 4" data-num="5">去除小于1亿</el-button>
+          <el-button type="success" @click="console.log([...info.tableData])">打印数据</el-button>
           <!-- <el-button type="success" @click="addFn">新增</el-button> -->
         </el-form-item>
       </el-form>
@@ -381,7 +392,18 @@ const turn_themeNameList = (row = {}) => {
     <div class="main_box">
       <el-table :data="info.tableData" border style="width: 100%" height="800">
         <el-table-column fixed label="序" type="index" width="50" />
-        <el-table-column prop="fund_code" label="基金号" width="80" />
+
+        <!-- <el-table-column prop="fund_code" label="基金号" width="80" /> -->
+
+        <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
+          <template v-slot="{ row }">
+            <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
+              <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
+              <span v-else>{{ row.fund_code }}</span>
+            </a>
+          </template>
+        </el-table-column>
+
         <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
         <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
 

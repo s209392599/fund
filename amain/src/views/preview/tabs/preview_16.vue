@@ -2,7 +2,7 @@
 console.log('src/views/preview/tabs/preview_16.vue');
 
 const info = reactive({
-  text: '科创板综合',
+  text: '央企红利',
   step: 1,
   tableData: [],// 列表数据
 });
