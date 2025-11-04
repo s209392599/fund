@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fund Data Visualization</title>
-  <script src="../static/js/echarts.min.js"></script> <!-- Include ECharts -->
+  <script src="./static/echarts.min.js"></script> <!-- Include ECharts -->
   <style>
     * {
       margin: 0;
@@ -48,7 +48,7 @@
 
   <script>
     async function getFund(code, index) {
-      console.log(`正在请求第 ${index + 1} 个基金数据 ~~~`);
+      console.log(`正在请求第 ${index + 1} 个基金 ${code} 数据 ~~~`);
       let u = `./fundData/${code}.json`;
       return fetch(u)
         .then((res) => res.json())

@@ -106,6 +106,24 @@ mail_title = `
 还在纯依靠邮件不看微信群公告的微信告诉我下！
 `;
 
+// 2025年10月31日14:28:21
+mail_title = `
+现金流 +3；
+沪港深 +4；
+机器人、电池 -3；
+其它先坚持定投；
+`;
+
+// 2025年11月03日14:43:07
+mail_title = `
+电池、机器人 +3天；
+国金量化 +1天(没余钱的可先不动)；
+其它先坚持定投；
+
+注：
+这个月瞄准机器人和电池，有其它基金推荐的私聊我；
+`;
+
 new ResizeObserver(entries => myChart.resize()).observe(document.querySelector('#chart'));
 
 /*

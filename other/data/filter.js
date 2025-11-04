@@ -3,6 +3,9 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const { fangqi } = require('./data.js');
 
+const endNum = 200; // 筛选多少个后终止
+const minRate = 7; // 年收益最低要求
+
 let EligibleList = []; // 符合条件的基金列表
 
 /* 获取天天基金 近1年 收益排行榜前300个
@@ -141,7 +144,7 @@ async function isEligible(arr) {
       `正在处理第${index + 1}个基金--${arr[index].productCode
       }--已完成的基金数--${EligibleList.length}`
     );
-    if (EligibleList.length >= 80) {
+    if (EligibleList.length >= endNum) {
       break;
     }
     const productCode = arr[index].productCode;
@@ -149,7 +152,7 @@ async function isEligible(arr) {
     // 等待计算年收益
     const rate = await AnnualIncome(productCode);
     console.log('rate', rate);
-    if (rate === '' || Number(rate) < 6) {
+    if (rate === '' || Number(rate) < minRate) {
       return false;
     }
 

@@ -1,44 +1,14 @@
 <script setup>
 console.log('src/views/preview/tabs/preview_12.vue');
-import hongli from './hongli.js';
-
-const newArr = hongli.map(item => {
-  let defen = 0;
-  let obj = {
-    '近1周': 5,
-    '近1月': 10,
-    '近3月': 30,
-    '近6月': 35,
-    '近1年': 20,
-  };
-  let jd_historyPerformance = item.jd_historyPerformance || [];
-  jd_historyPerformance.forEach(v => {
-    if (v.name === '近1周') {
-      defen += v.rate * obj['近1周'] * 100;
-    } else if (v.name === '今年以来') {
-      defen += v.rate * obj['近1月'] * 100;
-    } else if (v.name === '今年以来') {
-      defen += v.rate * obj['近3月'] * 100;
-    } else if (v.name === '近6月') {
-      defen += v.rate * obj['近6月'] * 100;
-    } else if (v.name === '近1年') {
-      defen += v.rate * obj['近1年'] * 100;
-    }
-  })
-  item.defen = Number(defen.toFixed(2));
-  return item;
-})
 
 const info = reactive({
-  text: '央企红利',
+  text: '北证50',
   step: 1,
-  tableData: newArr || [],// 列表数据
+  tableData: [],// 列表数据
   tableHeight: 400,
 });
 // 计算网页高度 - 40
 info.tableHeight = document.documentElement.clientHeight - 150;
-
-
 
 /*
 jd_header_tag: jd_header_tag,// 头部标签
@@ -139,10 +109,6 @@ const getList = () => {
       //   code: '008164',
       //   name: 'aaaaaa',
       // })
-      // info.tableData.push({
-      //   code: '008087',
-      //   name: 'bbb',
-      // })
       // // getFundGZ();// 查看是否可以读取到当日的涨幅
       // getFundGZ(info.tableData.map(item => item.code));
     } else {
@@ -202,8 +168,6 @@ const btn_del = (row, $index) => {
 
 
 */
-
-
 const getNormalFundAll = () => {
   server_fund_mysql_normal_all().then(res => {
     console.log('res', res);
@@ -242,6 +206,7 @@ const getAllInfo = () => {
             }
           })
         }
+        item.score = defenFn(item);
         return {
           ...item,
           jd_header_tag: item.jd_header_tag ? JSON.parse(item.jd_header_tag) : null,
@@ -343,22 +308,22 @@ const sortByYearRate = (num) => {
   // 提取 a 和 b 的 "近1年" 涨幅值
   const getValue = (item) => {
     const arr_1 = item.jd_historyPerformance;
-    if (!Array.isArray(arr_1) || arr_1.length === 0) return NaN;
+    if (!Array.isArray(arr_1) || arr_1.length === 0) return '';
 
     const period = obj[num];
     const match = arr_1.find(i => i.name === period);
     if (match && match.rate !== undefined) {
       return parseFloat(match.rate);
     }
-    return NaN;
+    return '';
   };
   return function (a, b, order) {
     const valA = getValue(a);
     const valB = getValue(b);
 
     // 处理 NaN 情况：让空值排在最后
-    if (isNaN(valA)) return order === 'ascending' ? 1 : -1;
-    if (isNaN(valB)) return order === 'ascending' ? -1 : 1;
+    if (valA === '') return order === 'ascending' ? 1 : -1;
+    if (valB === '') return order === 'ascending' ? -1 : 1;
 
     // 正常数值比较
     return order === 'ascending' ? valB - valA : valA - valB;
@@ -392,6 +357,51 @@ const turn_themeNameList = (row = {}) => {
   const themeNameList = jd_header_tag.themeNameList || [];
   return themeNameList.join('；');
 }
+const defenFn = (row) => {
+  let defen = '';
+  let jd_historyPerformance = (row || {}).jd_historyPerformance || [];
+  if (jd_historyPerformance.length) {
+    let obj = {
+      '近1周': 5,
+      '近1月': 10,
+      '近3月': 30,
+      '近6月': 35,
+      '近1年': 20,
+    };
+    defen = 0;
+    jd_historyPerformance.forEach(v => {
+      if (v.name === '近1周') {
+        defen += v.rate * obj['近1周'] * 100;
+      } else if (v.name === '今年以来') {
+        defen += v.rate * obj['近1月'] * 100;
+      } else if (v.name === '今年以来') {
+        defen += v.rate * obj['近3月'] * 100;
+      } else if (v.name === '近6月') {
+        defen += v.rate * obj['近6月'] * 100;
+      } else if (v.name === '近1年') {
+        defen += v.rate * obj['近1年'] * 100;
+      }
+    })
+    defen = Number(defen.toFixed(2));
+  }
+
+  return defen;
+}
+const sortDefen = (a, b) => {
+  console.log(a, b)
+  const scoreA = defenFn(a);
+  const scoreB = defenFn(b);
+  return scoreA - scoreB;
+};
+
+watch(() => info.tableData, async (newVal) => {
+  await nextTick(); // 确保 DOM 更新完成
+  info.tablata = newVal.map(row => ({
+    ...row,
+    defen: defenFn(row)
+  }));
+}, { immediate: true });
+
 </script>
 
 <template>
@@ -435,7 +445,13 @@ const turn_themeNameList = (row = {}) => {
 
         <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
         <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
-        <el-table-column prop="defen" label="得分" width="120" sortable show-overflow-tooltip />
+
+        <!-- :sort-method="sortDefen" -->
+        <el-table-column prop="score" label="得分" width="120" align="right" sortable>
+          <template #default="{ row, $index }">
+            <span>{{ row.defen }}</span>
+          </template>
+        </el-table-column>
 
         <el-table-column label="总资产" width="120" align="right" sortable>
           <template #default="{ row, $index }">

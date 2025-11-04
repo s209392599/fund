@@ -1,4 +1,7 @@
 /*
+http://fund.eastmoney.com/allfund.html 按基金代码排序
+
+
 易方达改革红利混合(001076)
 华安恒生港股通中国央企红利ETF发起式联接C(020867)  替换华泰柏瑞
 富国中证沪港深500ETF联接C(012276)  替换恒生科技
@@ -25,7 +28,9 @@ https://j4.dfcfw.com/charts/pic6/012276.png
 002834-华夏新锦绣混合C
 这两个转 	016858-国金量化多因子股票C
 
-
+安信新价值混合C(003027)
+景顺长城稳健增益债券C(016870)
+跑跑好的资产，给万万和冰莹讲
 
 
 https://www.bilibili.com/video/BV1JWtDeqE44/?vd_source=05a30f42f608d43de22f6db10d8c8d4d 软件讲解
@@ -139,5 +144,36 @@ jd_managerInfo 基金经理
   "accessionDate":"2年247天",
   "manageScale":"8.97亿元"}
 ]
+
+
+other/mei_tuan/index.js 图片内容读取
+
+// import hongli from './hongli.js';
+// const newArr = hongli.map(item => {
+//   let defen = 0;
+//   let obj = {
+//     '近1周': 5,
+//     '近1月': 10,
+//     '近3月': 30,
+//     '近6月': 35,
+//     '近1年': 20,
+//   };
+//   let jd_historyPerformance = item.jd_historyPerformance || [];
+//   jd_historyPerformance.forEach(v => {
+//     if (v.name === '近1周') {
+//       defen += v.rate * obj['近1周'] * 100;
+//     } else if (v.name === '今年以来') {
+//       defen += v.rate * obj['近1月'] * 100;
+//     } else if (v.name === '今年以来') {
+//       defen += v.rate * obj['近3月'] * 100;
+//     } else if (v.name === '近6月') {
+//       defen += v.rate * obj['近6月'] * 100;
+//     } else if (v.name === '近1年') {
+//       defen += v.rate * obj['近1年'] * 100;
+//     }
+//   })
+//   item.defen = Number(defen.toFixed(2));
+//   return item;
+// })
 
 */
