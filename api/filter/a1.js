@@ -6,8 +6,8 @@ const fs = require('fs');
 const path = require('path');
 const noText = require('../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../utils/noFundCode.js'); // 排除的基金代码
-console.log('noText', noText);
-console.log('noFundCode', noFundCode);
+// console.log('noText', noText);
+// console.log('noFundCode', noFundCode);
 /*
 https://fund.eastmoney.com/data/fundranking.html
 pn: 请求多少条数据，应该是page number
@@ -17,7 +17,7 @@ ed: end date
 
 */
 
-const pn = 1000;
+const pn = 500;// 请求500条数据
 // 日增长率
 const url_1 = `https://fund.eastmoney.com/data/rankhandler.aspx?op=ph&dt=kf&ft=all&rs=&gs=0&sc=rzdf&st=desc&sd=2024-09-28&ed=2025-09-28&qdii=&tabSubtype=,,,,,&pi=1&pn=${pn}&dx=1&v=0.1487653330314005`;
 // 周
@@ -89,7 +89,7 @@ async function init() {
     // sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
 
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
-    fs.writeFileSync('rankData_1.txt', wx, 'utf8');
+    fs.writeFileSync('rankData_1.txt', '日周 交叉了' + sameItems.length + '个\n' + wx, 'utf8');
     // fs.writeFileSync('rankData_2.json', JSON.stringify(wx, null, 2), 'utf8');
   }
 
@@ -97,14 +97,14 @@ async function init() {
     const sameItems = getIntersection(pageObj.data_2, pageObj.data_3);
     console.log(`周月 交叉了${sameItems.length}个`);
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
-    fs.writeFileSync('rankData_2.txt', wx, 'utf8');
+    fs.writeFileSync('rankData_2.txt', '周月 交叉了' + sameItems.length + '个\n' + wx, 'utf8');
   }
 
   {
     const sameItems = getIntersection(pageObj.data_1, pageObj.data_2, pageObj.data_3);
     console.log(`日周月 交叉了${sameItems.length}个`);
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
-    fs.writeFileSync('rankData_3.txt', wx, 'utf8');
+    fs.writeFileSync('rankData_3.txt', '日周月 交叉了' + sameItems.length + '个\n' + wx, 'utf8');
   }
 }
 init();

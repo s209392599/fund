@@ -33,3 +33,7 @@ api/data/his_val/*.*
 
 amain/dist
 ahoutai/dist
+
+api/filter/rankData_1.txt
+api/filter/rankData_2.txt
+api/filter/rankData_3.txt
