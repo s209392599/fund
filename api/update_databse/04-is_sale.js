@@ -243,7 +243,7 @@ async function queryDatabase() {
             update_time: CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss'),
           };
           const updateQuery_1 =
-            'UPDATE fund SET is_sale = ? WHERE fund_code = ?';
+            'UPDATE fund_all SET is_sale = ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery_1, ['y', item.fund_code]);
 
@@ -254,7 +254,7 @@ async function queryDatabase() {
             process.exit(1); // 0表示正常退出，1表示异常退出
           }
 
-          const updateQuery = 'UPDATE fund SET ? WHERE fund_code = ?';
+          const updateQuery = 'UPDATE fund_all SET ? WHERE fund_code = ?';
           try {
             await connection.query(updateQuery, [updateFields, item.fund_code]);
             console.log(`[成功]--[可买] 成功更新: jd_header_tag等`);
@@ -284,7 +284,7 @@ async function queryDatabase() {
 
         // 定义更新语句，包括 is_sale 和 update_time 字段
         const updateQuery_1 =
-          'UPDATE fund SET is_sale = ?, update_time = ? WHERE fund_code = ?';
+          'UPDATE fund_all SET is_sale = ?, update_time = ? WHERE fund_code = ?';
         const currentTime = CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
         try {
           await connection.query(updateQuery_1, [
@@ -302,7 +302,7 @@ async function queryDatabase() {
         }
 
         const updateQuery =
-          'UPDATE fund SET jd_header_tag = NULL, jd_historyPerformance = NULL, jd_fundDiagnosis = NULL, jd_proportion = NULL, jd_totalAsset = NULL, jd_chi_cang = NULL, jd_fund_archive = NULL, jd_managerInfo = NULL WHERE fund_code = ?';
+          'UPDATE fund_all SET jd_header_tag = NULL, jd_historyPerformance = NULL, jd_fundDiagnosis = NULL, jd_proportion = NULL, jd_totalAsset = NULL, jd_chi_cang = NULL, jd_fund_archive = NULL, jd_managerInfo = NULL WHERE fund_code = ?';
         try {
           await connection.query(updateQuery, [item.fund_code]);
           console.log(`[成功]--[不可买] --- jd_header_tag 等字段`);
@@ -327,7 +327,7 @@ queryDatabase();
 // 更新数据库的函数
 async function updateFundData(connection, data) {
   console.log('开始更新服务器数据~~~');
-  const updateQuery = 'UPDATE fund SET no_keyword = ? WHERE fund_code = ?';
+  const updateQuery = 'UPDATE fund_all SET no_keyword = ? WHERE fund_code = ?';
   const failedItems = [];
 
   for (const item of data) {
