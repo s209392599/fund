@@ -41,6 +41,18 @@ app.use(function (req, res, next) {
   next();
 });
 
+// 获取当前时间 yyyy-mm-dd hh:mm:ss
+function getCurrentTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hour = String(now.getHours()).padStart(2, '0');
+  const minute = String(now.getMinutes()).padStart(2, '0');
+  const second = String(now.getSeconds()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+}
+
 app.use((req, res, next) => {
   const request_origin = req.get('origin');
   const request_referer = req.get('referer');
@@ -49,7 +61,8 @@ app.use((req, res, next) => {
   // wmic csproduct get uuid  在windows上获取uuid
   console.log('-------------------------------------');
   // const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-  console.log('req.originalUrl => ', req.originalUrl);
+
+  console.log('req.originalUrl => ', req.originalUrl, getCurrentTime());
 
   // 检查是否是OPTIONS预检请求，直接通过
   if (req.method === 'OPTIONS') {
