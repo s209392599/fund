@@ -6,6 +6,21 @@ const noFundCode = require('../utils/noFundCode.js'); // 排除的基金代码
 const { pool } = require('../setting/pool.js'); // 引入mysql连接池
 const { CustomDateFtt } = require('../CustomFn.js');
 
+// 获取当前时间 yyyy-mm-dd hh:mm:ss
+function getCurrentTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hour = String(now.getHours()).padStart(2, '0');
+  const minute = String(now.getMinutes()).padStart(2, '0');
+  const second = String(now.getSeconds()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+}
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 // 获取数据库连接并执行查询的异步函数
 async function queryDatabase() {
   let connection;
@@ -23,12 +38,40 @@ async function queryDatabase() {
     ]);
     console.log(`数据库中一共有${results.length}个基金`);
 
-    let index = 0;
+    // 4979 /24993 --- 007096 - 大成沪深300指数C
+    //正在更新 19101 /24993 --- 022800 - 西部利得中证A500指数增强A
+    // 19101 -- 19111
+    // 20288 /24993 --- 024063 - 汇添富创业板指数A --- 2025-11-13 07:43:31
+    // 20289 /24993 --- 024064 - 汇添富创业板指数C
+    // 20388 /24993 --- 024179 - 富国中证500ETF发起式联接
+    // 20389 /24993 --- 024180 - 富国中证500ETF发起式联接C
+    // 20422 /24993 --- 024220 - 汇安中证红利低波动100指数A
+    // 20423 /24993 --- 024221 - 汇安中证红利低波动100指数C
+    // 20427 /24993 --- 024227 - 东方红中证港股通高股息投资指数A
+    // 20428 /24993 --- 024228 - 东方红中证港股通高股息投资指数C
+    // 20428 /24993 --- 024228 - 东方红中证港股通高股息投资指数C
+    // 20463 /24993 --- 024266 - 融通中证诚通央企ESGETF联接A
+    // 20464 /24993 --- 024267 - 融通中证诚通央企ESGETF联接C
+    // 20506 /24993 --- 024315 - 南方中证全指家用电器指数发起A
+    // 20507 /24993 --- 024316 - 南方中证全指家用电器指数发起C
+    // 20573 /24993 --- 024396 - 东兴产业升级混合发起A
+    // 20574 /24993 --- 024397 - 东兴产业升级混合发起C
+    // 20584 /24993 --- 024409 - 鑫元科创AI指数发起式A
+    // 20585 /24993 --- 024410 - 鑫元科创AI指数发起式C
+    // 20594 /24993 --- 024419 - 华夏创业板新能源ETF发起式联接A
+    // 20595 /24993 --- 024420 - 华夏创业板新能源ETF发起式联接C
+    // 20650 /24993 --- 024478 - 鑫元创业AI指数发起式A
+    // 20651 /24993 --- 024479 - 鑫元创业AI指数发起式C
+    // 20669 /24993 --- 024501 - 招商科技智选混合发起式A
+    // 20670
+    //
+    let index = 20428;
     let len = results.length;
     let str_1 =
       'https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?';
     // len = index + 3;// 只更新某几个
     while (index < len) {
+      await sleep(500); // 暂停2秒
       console.log('----------------------------');
       let item = results[index];
       let flag_1 = item.fund_type_name.includes('债');
@@ -45,7 +88,7 @@ async function queryDatabase() {
       console.log(
         `正在更新 ${index + 1} /${len} --- ${results[index].fund_code} - ${
           results[index].fund_name
-        }`
+        } --- ${getCurrentTime()}`
       );
       if (item.no_keyword === 'y' && item.is_fundgz === 'y') {
         let u = `reqData={"itemId":"","fundCode":"${item.fund_code}","clientVersion":"","channel":"9"}`;
