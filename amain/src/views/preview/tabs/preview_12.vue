@@ -1,6 +1,19 @@
 <script setup>
 console.log('src/views/preview/tabs/preview_12.vue');
 
+/*
+
+jd_chi_cang
+jd_fundDiagnosis
+jd_fund_archive
+jd_header_tag
+jd_historyPerformance
+jd_managerInfo
+jd_proportion
+jd_totalAsset
+
+*/
+
 const info = reactive({
   text: '北证50',
   step: 1,
