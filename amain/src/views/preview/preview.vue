@@ -124,6 +124,15 @@ const info = reactive({
       desc: '',
     },
     {
+      id: 17,
+      show: true,
+      name: '指数中心',
+      component: markRaw(
+        defineAsyncComponent(() => import('./tabs/preview_17.vue'))
+      ),
+      desc: '',
+    },
+    {
       id: 99,
       show: true,
       name: '我的',

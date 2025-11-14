@@ -2,7 +2,6 @@
 console.log('src/views/preview/tabs/preview_13.vue');
 // 基金持仓，要支持再次的手动输入
 
-
 /*
 getFundDetailPageInfoWithNoPin
 
@@ -11,77 +10,137 @@ const info = reactive({
   text: '',
   tableData: [
     {
-      "code": "018561",
-      "name": "中信保诚多策略混合(LOF)C",
-      "themeNameList": [
-        "专用设备",
-        "乡村振兴"
+      code: '018561',
+      name: '中信保诚多策略混合(LOF)C',
+      themeNameList: ['专用设备', '乡村振兴'],
+      stock: [
+        {
+          name: '荣信文化',
+          industryName: '文化传媒',
+          ratio: '0.96%',
+        },
+        {
+          name: '安利股份',
+          industryName: '塑料制品',
+          ratio: '0.87%',
+        },
+        {
+          name: '国际实业',
+          industryName: '光伏设备',
+          ratio: '0.87%',
+        },
+        {
+          name: '春雪食品',
+          industryName: '食品加工制造',
+          ratio: '0.86%',
+        },
+        {
+          name: '中公高科',
+          industryName: '建筑装饰',
+          ratio: '0.86%',
+        },
+        {
+          name: '优德精密',
+          industryName: '专用设备',
+          ratio: '0.85%',
+        },
+        {
+          name: '华绿生物',
+          industryName: '种植业与林业',
+          ratio: '0.85%',
+        },
+        {
+          name: '宁波联合',
+          industryName: '综合',
+          ratio: '0.84%',
+        },
+        {
+          name: '天鹅股份',
+          industryName: '专用设备',
+          ratio: '0.84%',
+        },
+        {
+          name: '美信科技',
+          industryName: '通信设备',
+          ratio: '0.83%',
+        },
       ],
-      "stock": [
+      stockDistribution: [
         {
-          "name": "荣信文化",
-          "industryName": "文化传媒",
-          "ratio": "0.96%"
+          name: '制造业',
+          value: '32.03',
         },
-        {
-          "name": "安利股份",
-          "industryName": "塑料制品",
-          "ratio": "0.87%"
-        },
-        {
-          "name": "国际实业",
-          "industryName": "光伏设备",
-          "ratio": "0.87%"
-        },
-        {
-          "name": "春雪食品",
-          "industryName": "食品加工制造",
-          "ratio": "0.86%"
-        },
-        {
-          "name": "中公高科",
-          "industryName": "建筑装饰",
-          "ratio": "0.86%"
-        },
-        {
-          "name": "优德精密",
-          "industryName": "专用设备",
-          "ratio": "0.85%"
-        },
-        {
-          "name": "华绿生物",
-          "industryName": "种植业与林业",
-          "ratio": "0.85%"
-        },
-        {
-          "name": "宁波联合",
-          "industryName": "综合",
-          "ratio": "0.84%"
-        },
-        {
-          "name": "天鹅股份",
-          "industryName": "专用设备",
-          "ratio": "0.84%"
-        },
-        {
-          "name": "美信科技",
-          "industryName": "通信设备",
-          "ratio": "0.83%"
-        }
       ],
-      "stockDistribution": [
+    },
+    {
+      code: '018561',
+      name: '中信保诚多策略混合(LOF)C',
+      themeNameList: ['专用设备', '乡村振兴'],
+      stock: [
         {
-          "name": "制造业",
-          "value": "32.03"
-        }
-      ]
+          name: '荣信文化',
+          industryName: '文化传媒',
+          ratio: '0.96%',
+        },
+        {
+          name: '安利股份',
+          industryName: '塑料制品',
+          ratio: '0.87%',
+        },
+        {
+          name: '国际实业',
+          industryName: '光伏设备',
+          ratio: '0.87%',
+        },
+        {
+          name: '春雪食品',
+          industryName: '食品加工制造',
+          ratio: '0.86%',
+        },
+        {
+          name: '中公高科',
+          industryName: '建筑装饰',
+          ratio: '0.86%',
+        },
+        {
+          name: '优德精密',
+          industryName: '专用设备',
+          ratio: '0.85%',
+        },
+        {
+          name: '华绿生物',
+          industryName: '种植业与林业',
+          ratio: '0.85%',
+        },
+        {
+          name: '宁波联合',
+          industryName: '综合',
+          ratio: '0.84%',
+        },
+        {
+          name: '天鹅股份',
+          industryName: '专用设备',
+          ratio: '0.84%',
+        },
+        {
+          name: '美信科技',
+          industryName: '通信设备',
+          ratio: '0.83%',
+        },
+      ],
+      stockDistribution: [
+        {
+          name: '制造业',
+          value: '32.03',
+        },
+      ],
     },
   ], // 列表数据
   // 拖拽相关数据
   dragState: {
     draggingIndex: -1,
-    targetIndex: -1
-  }
+    targetIndex: -1,
+  },
 });
 
 // 拖拽开始
@@ -129,19 +188,14 @@ const handleDrop = (e, index) => {
 };
 
 //获取基金持仓
-const getList_1 = () => {
-
-};
+const getList_1 = () => {};
 
 //获取全部基金持仓
-const getList_2 = () => {
-
-};
+const getList_2 = () => {};
 
 const addFn = () => {
   console.log('新增');
 };
-
 </script>
 
 <template>
@@ -149,30 +203,49 @@ const addFn = () => {
     <div class="search_box">
       <el-form :inline="true">
         <el-form-item>
-          <el-button type="primary" @click="getList_1()">获取正常持仓</el-button>
-          <el-button type="primary" @click="getList_2()">包含历史基金持仓</el-button>
+          <el-button type="primary" @click="getList_1()"
+            >获取正常持仓</el-button
+          >
+          <el-button type="primary" @click="getList_2()"
+            >包含历史基金持仓</el-button
+          >
           <el-button type="success" @click="addFn">新增</el-button>
         </el-form-item>
       </el-form>
     </div>
 
     <div class="main_box">
-      <div v-for="(item, index) in info.tableData" :key="item.code + index" class="drag_item" draggable="true"
-        @dragstart="handleDragStart($event, index)" @dragover.prevent="handleDragOver($event, index)"
-        @drop="handleDrop($event, index)">
+      <div
+        v-for="(item, index) in info.tableData"
+        :key="item.code + index"
+        class="drag_item"
+        draggable="true"
+        @dragstart="handleDragStart($event, index)"
+        @dragover.prevent="handleDragOver($event, index)"
+        @drop="handleDrop($event, index)"
+      >
         <div class="drag_title">
           <!-- <span class="drag_icon">☰</span> -->
           <span class="drag_text">{{ item.code }}&nbsp;{{ item.name }}</span>
         </div>
         <div class="drag_main">
-          <div class="" style="border-bottom: 1px solid #fedddd;">
+          <div class="" style="border-bottom: 1px solid #fedddd">
             <span class="">投资方向：</span>
-            <span class="" v-for="(item_1, index_1) in item.themeNameList" :key="index_1">{{ item_1 }}、</span>
+            <span
+              class=""
+              v-for="(item_1, index_1) in item.themeNameList"
+              :key="index_1"
+              >{{ item_1 }}、</span
+            >
           </div>
 
-          <div class="" style="border-bottom: 1px solid #fedddd;">
+          <div class="" style="border-bottom: 1px solid #fedddd">
             <span class="">持仓首位：</span>
-            <span class="">{{ item.stockDistribution?.[0]?.name }}&nbsp;{{ item.stockDistribution?.[0]?.value }}%</span>
+            <span class=""
+              >{{ item.stockDistribution?.[0]?.name }}&nbsp;{{
+                item.stockDistribution?.[0]?.value
+              }}%</span
+            >
           </div>
 
           <div class="gupiao_box">
@@ -181,8 +254,14 @@ const addFn = () => {
               <span class="gupiao_rate">占比</span>
               <span class="gupiao_type">类别</span>
             </div>
-            <div class="gupiao_item" v-for="(item_2, index_2) in item.stock" :key="index_2">
-              <span class="gupiao_name" :title="item_2.name">{{ item_2.name }}</span>
+            <div
+              class="gupiao_item"
+              v-for="(item_2, index_2) in item.stock"
+              :key="index_2"
+            >
+              <span class="gupiao_name" :title="item_2.name">{{
+                item_2.name
+              }}</span>
               <span class="gupiao_rate">{{ item_2.ratio }}</span>
               <span class="gupiao_type">{{ item_2.industryName }}</span>
             </div>
@@ -190,7 +269,6 @@ const addFn = () => {
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
