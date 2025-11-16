@@ -1,0 +1,262 @@
+[
+  {
+    "fund_code": "000279",
+    "fund_name": "华商红利优选混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "001076",
+    "fund_name": "易方达改革红利混合",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "001188",
+    "fund_name": "鹏华改革红利股票",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "001951",
+    "fund_name": "金鹰改革红利混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "002011",
+    "fund_name": "华夏红利混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "003025",
+    "fund_name": "新华红利回报混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "005270",
+    "fund_name": "太平改革红利精选混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "005834",
+    "fund_name": "工银红利优享混合C",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "006260",
+    "fund_name": "汇添富红利增长混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "009103",
+    "fund_name": "鹏扬红利优选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "010841",
+    "fund_name": "华宝红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "012579",
+    "fund_name": "富国红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "012616",
+    "fund_name": "嘉实优化红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "014029",
+    "fund_name": "浦银安盛红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "014971",
+    "fund_name": "华安红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "016269",
+    "fund_name": "建信改革红利股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "016563",
+    "fund_name": "金鹰红利价值混合C",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "017536",
+    "fund_name": "东方红优享红利混合C",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "018382",
+    "fund_name": "安信红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "019125",
+    "fund_name": "博道红利智航股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "019273",
+    "fund_name": "长城改革红利混合C",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "019303",
+    "fund_name": "光大保德信红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "019992",
+    "fund_name": "中欧红利精选混合发起C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "020155",
+    "fund_name": "长盛量化红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "020494",
+    "fund_name": "富达悦享红利优选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "020800",
+    "fund_name": "天弘红利智选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "020802",
+    "fund_name": "易方达红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021047",
+    "fund_name": "平安港股通红利精选混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021188",
+    "fund_name": "摩根红利优选股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "021248",
+    "fund_name": "兴证全球红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021514",
+    "fund_name": "富国港股通红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021920",
+    "fund_name": "国泰海通红利量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021976",
+    "fund_name": "创金合信红利甄选量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021980",
+    "fund_name": "兴证全球红利量化选股股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "022154",
+    "fund_name": "华泰柏瑞红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022212",
+    "fund_name": "人保红利智享混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022489",
+    "fund_name": "浦银安盛红利量化混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022496",
+    "fund_name": "嘉实红利精选混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022520",
+    "fund_name": "泓德红利优选混合(LOF)C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022749",
+    "fund_name": "平安港股通红利优选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "023585",
+    "fund_name": "中欧红利智选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "023807",
+    "fund_name": "招商红利量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024399",
+    "fund_name": "浦银安盛港股通央企红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024915",
+    "fund_name": "华夏红利价值混合B",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024916",
+    "fund_name": "华夏红利价值混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024917",
+    "fund_name": "华夏红利价值混合D",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024918",
+    "fund_name": "华夏红利价值混合E",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "100029",
+    "fund_name": "富国天成红利混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "202009",
+    "fund_name": "南方盛元红利混合",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "481006",
+    "fund_name": "工银红利混合",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "540009",
+    "fund_name": "汇丰晋信消费红利股票",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "560002",
+    "fund_name": "益民红利成长混合",
+    "fund_type": "混合型-偏股"
+  }
+]

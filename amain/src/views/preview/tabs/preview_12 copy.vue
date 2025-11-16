@@ -255,8 +255,11 @@ const removeFn_1 = () => {
 }
 // 涨幅转换
 const zhangFn = (arr_1, num, row) => {
-  if (!Array.isArray(arr_1) || arr_1.length === 0) return '';
-  const obj = {
+  if (!Array.isArray(arr_1) || arr_1.length === 0) {
+    return '';
+  }
+  // 定义时间段的映射对象
+  let obj = {
     1: '近1周',
     2: '近1月',
     3: '近3月',
@@ -266,22 +269,30 @@ const zhangFn = (arr_1, num, row) => {
     7: '近3年',
     8: '成立以来'
   };
-  const period = obj[num];
-  if (!period) return '';
-  const match = arr_1.find(item => item && item.name === period);
-  if (!match) return '';
-  const raw = match.rate ?? match.avg ?? match.zhRate ?? match.ptRate;
-  if (raw === null || raw === undefined) return '';
-  let numVal;
-  if (typeof raw === 'number') {
-    numVal = raw;
-  } else {
-    const s = String(raw).trim();
-    if (s === '' || s === '--') return '';
-    const m = s.match(/-?\d+(\.\d+)?/);
-    numVal = m ? Number(m[0]) : NaN;
+
+  // 使用 hasOwnProperty 检查 num 是否在映射对象 obj 中
+  if (!obj.hasOwnProperty(num)) {
+    return '';
   }
-  return Number.isFinite(numVal) ? numVal : '';
+
+  // 获取对应时间段的字符串
+  let period = obj[num];
+
+  // 过滤 arr_1 数组以找到对应时间段的对象
+  let arr_2 = arr_1.filter(item => item.name === period);
+
+  // 如果找到了对应时间段的对象
+  if (arr_2.length > 0) {
+    let selectedObj = arr_2[0];
+    // 检查对象是否有 avg 属性
+    if (selectedObj.hasOwnProperty('avg') && ![null, undefined].includes(selectedObj.avg)) {
+      return parseFloat(selectedObj.rate);
+    } else {
+      return '';
+    }
+  } else {
+    return '';
+  }
 };
 const sortByYearRate = (num) => {
   let obj = {

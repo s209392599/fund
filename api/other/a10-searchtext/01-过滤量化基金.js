@@ -1,5 +1,9 @@
 const fetch = require('node-fetch');
-// 量化、策略、灵活、因子、增强、绝对收益、动量、成长、趋势、绩优、（永赢）智选、优选
+const fs = require('fs');
+const noText = require('../../utils/noText.js'); // 排除的关键词
+const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
+
+// 包含的关键词
 var keyword_arr = [
   '量化',
   '策略',
@@ -14,6 +18,11 @@ var keyword_arr = [
   '智选',
   '优选',
 ];
+// 不要的基金类型关键词
+var noFundType = ['债券', '货币', '指数'];
+// 不以什么结尾
+var noEndWith = ['A', 'ETF', '(后端)'];
+
 var keyword_len = keyword_arr.length;
 const info = {
   search_data: [],
@@ -28,31 +37,56 @@ async function queryResilienceInfo() {
     let response = await fetch(u);
     const res = (await response.text()) || {};
     const arrayStr = res.substring(res.indexOf('['), res.lastIndexOf(']') + 1);
-    // 将字符串转换为数组
     const fundArray = JSON.parse(arrayStr);
     info.search_data = fundArray;
     console.log(`一共有${fundArray.length}个基金`);
-    fenlei();
+    filter_fn();
   } catch (err) {
     console.log('err => ', err);
   }
 }
 queryResilienceInfo();
 
-function fenlei() {
+function filter_fn() {
   // ["000001","HXCZHH","华夏成长混合","混合型-灵活","HUAXIACHENGZHANGHUNHE"]
-  info.search_data.forEach((item) => {
-    let fund_name = item[2];
-    for (let i = 0; i < keyword_len; i++) {
-      let flag_1 = fund_name.indexOf(keyword_arr[i]) !== -1;// 基金名称中包含关键词
-      let flag_2 = !info.filter_code.includes(item[0]);// 基金代码不在过滤数组中
-      if (flag_1 && flag_2) {
-        info.filter_code.push(item[0]);
-        info.filter_data.push([item[0], item[2], item[2]]);
-        break;
-      }
+  let all_fund_len = info.search_data.length;
+  for (let i = 0; i < all_fund_len; i++) {
+    let item = info.search_data[i];
+    let fund_code = item[0]; // 基金代码
+    let fund_name = item[2]; // 基金名称
+    let fund_type = item[3]; // 基金类型
+    // 需要包含 量化、策略、灵活、因子、增强、绝对收益、动量、成长、趋势、绩优、智选、优选、精选
+    if (!keyword_arr.some((v) => fund_name.includes(v))) {
+      continue;
     }
-  });
+    // 基金类型中不能有货币、债券
+    if (noFundType.some((v) => fund_type.includes(v))) {
+      continue;
+    }
+    // 不能以 A、ETF、(后端) 结尾
+    if (noEndWith.some((v) => fund_name.endsWith(v))) {
+      continue;
+    }
+    // 不能包含 noText 中的关键词
+    if (noText.some((v) => fund_name.includes(v))) {
+      continue;
+    }
+    // 不能包含 noFundCode 中的基金代码
+    if (noFundCode.includes(fund_code)) {
+      continue;
+    }
+    info.filter_code.push(item[0]);
+    info.filter_data.push({
+      fund_code: item[0],
+      fund_name: item[2],
+      fund_type: item[3],
+    });
+  }
+  console.log(`过滤后一共有${info.filter_data.length}个基金`);
+  fs.writeFileSync(
+    './data/filter.json',
+    JSON.stringify(info.filter_data, null, 2)
+  );
 }
 
 /*

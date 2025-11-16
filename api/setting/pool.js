@@ -22,23 +22,9 @@ const dbConfig = {
   testOnBorrow: true,         // 从连接池获取连接时验证有效性
   queryFormat: function (query, values) {
     if (!values) return query;
-    if (Array.isArray(values)) {
-      let i = 0;
-      return query.replace(/\?/g, () => {
-        const v = values[i++];
-        if (Array.isArray(v)) {
-          return v.map((x) => this.escape(x)).join(',');
-        }
-        return this.escape(v);
-      });
-    }
     return query.replace(/\:(\w+)/g, function (match, key) {
-      if (Object.prototype.hasOwnProperty.call(values, key)) {
-        const v = values[key];
-        if (Array.isArray(v)) {
-          return v.map((x) => this.escape(x)).join(',');
-        }
-        return this.escape(v);
+      if (values.hasOwnProperty(key)) {
+        return this.escape(values[key]);
       }
       return match;
     }.bind(this));

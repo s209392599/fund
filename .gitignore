@@ -37,3 +37,6 @@ ahoutai/dist
 api/filter/rankData_1.txt
 api/filter/rankData_2.txt
 api/filter/rankData_3.txt
+
+api/other/a10-searchtext/HistoryNetValue/*.json
+api/other/a10-searchtext/FundDetailPageInfo/*.json
