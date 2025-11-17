@@ -189,7 +189,7 @@
       .then(res => res.json())
       .then(res => {
         if (res.code === 200) {
-          let arr_1 = res.data.data || [];
+          let arr_1 = res.data || [];
           let arr_2 = [];// 常规要展示图形的
 
           let html = '';
