@@ -75,7 +75,7 @@ function realTimeInformation(str) {
 // 获取实时涨幅
 router.post('/fund_amain_getfundgz', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
-  var isSixDigitNumber = /^\d{6}$/.test(fundcode); // 6位数字䣂类型
+  var isSixDigitNumber = /^\d{6}$/.test(fundcode); // 6位数字��类型
   if (!isSixDigitNumber) {
     res.send({
       code: 400,
@@ -522,6 +522,26 @@ router.post('/fund_search_bytiantian', (req, res) => {
   }
 });
 
+// 根据关键词返回基金
+router.post('/fund_mysql_query_keywords', async (req, res) => {
+  const { text = '' } = req.body;
+  if (text.length < 2) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到搜索关键词',
+      data: [],
+    });
+    return;
+  }
+  var query = `SELECT fund_code,fund_name,fund_type_name FROM fund_all WHERE fund_name LIKE ? AND no_keyword = 'y' AND is_sale = 'y'`;
+  DatabasePostQuery({
+    res: res,
+    query: query,
+    values: [`%${text}%`],
+    format: (results) => results,
+  });
+})
+
 // router.get('/users/:id', (req, res) => {
 //   const userId = req.params.id;
 //   res.send(`Get user with ID ${userId}`);
@@ -540,5 +560,4 @@ router.post('/fund_search_bytiantian', (req, res) => {
 //       res.status(503).json({ error: 'Service Unavailable', data: 'Default Data' });
 //     });
 // });
-
 module.exports = router;

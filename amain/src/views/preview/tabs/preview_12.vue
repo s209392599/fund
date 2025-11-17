@@ -115,7 +115,10 @@ const getList = () => {
     .then((res) => {
       console.log('关键词搜索', 'res', res);
       if (res.code === 200) {
-        info.tableData = [...res.data.data];
+        info.tableData = [...res.data];
+        if (!info.tableData.length) {
+          ElMessage.info('暂无数据');
+        }
         // // 不以ETF结尾的基金
         // info.tableData = [...res.data].filter(item => !item.name.endsWith('ETF'));
         // info.tableData.push({
@@ -156,7 +159,7 @@ const removeA = () => {
         (item) => item.fund_name[item.fund_name.length - 1] !== 'A'
       );
     })
-    .catch(() => {})
+    .catch(() => { })
     .finally(() => {
       info.step = info.tableData.length ? 3 : 1;
     });
@@ -225,7 +228,7 @@ const getAllInfo = () => {
     .then((res) => {
       console.log('关键词搜索', 'res', res);
       if (res.code === 200) {
-        let arr_1 = res.data.data;
+        let arr_1 = res.data || [];
         let arr_2 = arr_1.map((item) => {
           let jd_historyPerformance = item.jd_historyPerformance
             ? JSON.parse(item.jd_historyPerformance)
@@ -419,34 +422,12 @@ const turn_themeNameList = (row = {}) => {
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="getList" data-num="2"
-            >搜索</el-button
-          >
+          <el-button type="primary" @click="getList" data-num="2">搜索</el-button>
           <el-button @click="resetForm">重置</el-button>
-          <el-button
-            type="success"
-            @click="removeA"
-            :disabled="info.step < 2"
-            data-num="3"
-            >去除A类</el-button
-          >
-          <el-button
-            type="success"
-            @click="getAllInfo"
-            :disabled="info.step < 3"
-            data-num="4"
-            >详细信息</el-button
-          >
-          <el-button
-            type="success"
-            @click="removeFn_1"
-            :disabled="info.step < 4"
-            data-num="5"
-            >去除小于1亿</el-button
-          >
-          <el-button type="success" @click="console.log([...info.tableData])"
-            >打印数据</el-button
-          >
+          <el-button type="success" @click="removeA" :disabled="info.step < 2" data-num="3">去除A类</el-button>
+          <el-button type="success" @click="getAllInfo" :disabled="info.step < 3" data-num="4">详细信息</el-button>
+          <el-button type="success" @click="removeFn_1" :disabled="info.step < 4" data-num="5">去除小于1亿</el-button>
+          <el-button type="success" @click="console.log([...info.tableData])">打印数据</el-button>
           <!-- <el-button type="success" @click="addFn">新增</el-button> -->
         </el-form-item>
       </el-form>
@@ -457,59 +438,24 @@ const turn_themeNameList = (row = {}) => {
     </div>
 
     <div class="main_box">
-      <el-table
-        :data="info.tableData"
-        border
-        style="width: 100%"
-        :height="info.tableHeight"
-      >
+      <el-table :data="info.tableData" border style="width: 100%" :height="info.tableHeight">
         <el-table-column fixed label="序" type="index" width="50" />
 
         <!-- <el-table-column prop="fund_code" label="基金号" width="80" /> -->
 
-        <el-table-column
-          fixed
-          prop="fund_code"
-          align="center"
-          label="基金号"
-          width="64"
-        >
+        <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
           <template v-slot="{ row }">
-            <a
-              :href="`https://fund.eastmoney.com/${row.fund_code}.html`"
-              target="_blank"
-              style="text-decoration: none"
-            >
-              <span
-                v-if="row.sign === '历史'"
-                style="color: #876ad2; font-weight: 700"
-                >{{ row.fund_code }}</span
-              >
+            <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
+              <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
               <span v-else>{{ row.fund_code }}</span>
             </a>
           </template>
         </el-table-column>
 
-        <el-table-column
-          prop="fund_name"
-          label="基金名称"
-          width="240"
-          show-overflow-tooltip
-        />
-        <el-table-column
-          prop="fund_type_name"
-          label="基金类型"
-          width="110"
-          show-overflow-tooltip
-        />
+        <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
+        <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
 
-        <el-table-column
-          prop="score"
-          label="得分"
-          width="120"
-          align="right"
-          sortable
-        >
+        <el-table-column prop="score" label="得分" width="120" align="right" sortable>
           <template #default="{ row, $index }">
             <span>{{ row.score }}</span>
           </template>
@@ -521,97 +467,49 @@ const turn_themeNameList = (row = {}) => {
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="近1周"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(1)"
-        >
+        <el-table-column label="近1周" width="100" align="right" sortable :sort-method="sortByYearRate(1)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 1) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="近1月"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(2)"
-        >
+        <el-table-column label="近1月" width="100" align="right" sortable :sort-method="sortByYearRate(2)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 2) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="近3月"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(3)"
-        >
+        <el-table-column label="近3月" width="100" align="right" sortable :sort-method="sortByYearRate(3)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 3) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="近6月"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(4)"
-        >
+        <el-table-column label="近6月" width="100" align="right" sortable :sort-method="sortByYearRate(4)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 4) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="近1年"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(5)"
-        >
+        <el-table-column label="近1年" width="100" align="right" sortable :sort-method="sortByYearRate(5)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 5) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="今年以来"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(6)"
-        >
+        <el-table-column label="今年以来" width="100" align="right" sortable :sort-method="sortByYearRate(6)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 6) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="近3年"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(7)"
-        >
+        <el-table-column label="近3年" width="100" align="right" sortable :sort-method="sortByYearRate(7)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 7, row) }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column
-          label="成立以来"
-          width="100"
-          align="right"
-          sortable
-          :sort-method="sortByYearRate(8)"
-        >
+        <el-table-column label="成立以来" width="100" align="right" sortable :sort-method="sortByYearRate(8)">
           <template #default="{ row, $index }">
             <span>{{ zhangFn(row.jd_historyPerformance, 8) }}</span>
           </template>
@@ -643,13 +541,7 @@ const turn_themeNameList = (row = {}) => {
 
         <el-table-column label="Operations" min-width="120">
           <template #default="{ row, $index }">
-            <el-button
-              link
-              type="primary"
-              size="small"
-              @click="btn_del(row, $index)"
-              >删除</el-button
-            >
+            <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>

@@ -14,15 +14,15 @@ async function executeQuery(query, values = [], timeout = 15000) {
   let connection;
   try {
     connection = await pool.getConnection();
+    // 使用execute方法处理参数化查询，避免SQL语法错误
     const [results] = await Promise.race([
-      connection.query(query, values), // 使用预处理
+      connection.execute(query, values),
       new Promise((_, reject) =>
         setTimeout(() => reject(new Error('数据库查询超时')), timeout)
       ),
     ]);
     return results;
   } catch (error) {
-    console.error('Database query failed:', error.message);
     throw error;
   } finally {
     if (connection) connection.release();
