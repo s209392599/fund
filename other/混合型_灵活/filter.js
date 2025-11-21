@@ -1,75 +1,72 @@
 // 过滤基金
 const fetch = require('node-fetch');
 const fs = require('fs');
-const { fangqi } = require('./data.js');
+const { fangqi } = require('./fuzhu.js');
 
 const endNum = 400; // 筛选多少个后终止
 const minRate = 7; // 年收益最低要求
 
-let EligibleList = []; // 符合条件的基金列表
-
-/* 获取天天基金 近1年 收益排行榜前300个
-https://fund.eastmoney.com/trade/zq.html
-*/
-async function getPageMutilDataNotLogin() {
-  let productList = [];
-  try {
-    let u = `https://fund.eastmoney.com/data/fundtradenewapi.aspx?ft=zq&sc=1n&st=desc&pi=1&pn=300&cp=&ct=&cd=&ms=&fr=&plevel=&fst=&ftype=&fr1=&fl=0&isab=1`;
-
-    let response = await fetch(u, {
-      headers: {
-        accept: '*/*',
-        'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
-        'sec-ch-ua':
-          '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"macOS"',
-        'sec-fetch-dest': 'script',
-        'sec-fetch-mode': 'no-cors',
-        'sec-fetch-site': 'same-origin',
-      },
-      referrer: 'https://fund.eastmoney.com/trade/zq.html',
-      referrerPolicy: 'strict-origin-when-cross-origin',
-      body: null,
-      method: 'GET',
-      mode: 'cors',
-      credentials: 'include',
-    });
-    const str_1 = (await response.text()) || {};
-    const str_2 = str_1.slice(15);
-    const str_3 = str_2.slice(0, str_2.length - 1);
-
-    const formattedStr = str_3
-      .replace(/(\w+):/g, '"$1":') // 将键用双引号包裹
-      .replace(/'/g, '"') // 将单引号替换为双引号
-      .replace(/([a-zA-Z_]\w*)\s*:\s*\[/g, '"$1":[') // 确保数组键正确
-      .replace(/;/g, ','); // 替换分号为逗号（如果有的话）
-
-    // 解析为对象
-    let obj;
-    try {
-      obj = JSON.parse(formattedStr);
-    } catch (error) {
-      obj = { datas: [] };
-      console.error('JSON解析错误:', error);
+const JSON_DATA = require('./base.json');
+const noText = [
+  '个月',
+  '60天',
+  '90天',
+  '180天',
+  '封闭',
+  '定期',
+  '定开',
+  '年持有', // 1年持有期 三年持有 等
+  '60天持有',
+  '90天持有',
+  '120天持有',
+  '180天持有',
+  '一年',
+  '两年',
+  '三年',
+  '五年',
+  '1年',
+  '套利',
+  '后端',
+  '房地产',
+  '滚动',
+  '不动产',
+  '白银期货',
+  '养老',
+  'REIT',
+  '货币',
+  '(后端)',
+  '人民币',
+  '绝对收益',
+  'A/B',
+  'A',// 多增加一个，不要A类
+];
+const arr_1 = JSON_DATA.data || [];
+const arr_2 = [];
+arr_1.forEach(item => {
+  const fund_name = item[1] || '';
+  let flag = true;
+  noText.forEach(text => {
+    if (fund_name.includes(text)) {
+      flag = false;
     }
-    productList = obj.datas.map((v) => {
-      const itemArr = v.split('|');
-
-      return {
-        productCode: itemArr[0],
-        productName: itemArr[1],
-        rate: {
-          value: (itemArr[10] || 0) + '%',
-        },
-      };
+  });
+  if (flag) {
+    arr_2.push({
+      fund_code: item[0],
+      fund_name: item[1],
+      rate: 0
     });
-  } catch (err) {
-    console.log('err => ', err);
-  } finally {
-    return productList;
   }
-}
+});
+/*
+{
+    "fund_code": "006030",
+    "fund_name": "南方昌元可转债债券A",
+    "rate": "39.22%"
+  },
+*/
+
+let EligibleList = []; // 符合条件的基金列表
 
 /*
 条件一：年收益情况
@@ -99,7 +96,7 @@ async function AnnualIncome(fundCode) {
       }
     });
   } catch (err) {
-    console.log(`年收益--{${fundCode}}--err => `);
+    console.log(`年收益--{${fundCode}}--err =>`);
   }
   console.log(`年收益--{${fundCode}}--${rate}`);
   return rate;
@@ -140,24 +137,23 @@ async function isEligible(arr) {
   }
 
   for (let index = 0; index < arr.length; index++) {
-    console.log(
-      `正在处理第${index + 1}个基金--${arr[index].productCode
-      }--已完成的基金数--${EligibleList.length}`
-    );
-    if (EligibleList.length >= endNum) {
-      break;
-    }
-    const productCode = arr[index].productCode;
+    let con_str = `正在处理第${index + 1}个基金--${arr[index].fund_code}--已完成的基金数--${EligibleList.length}`;
+    console.log(con_str);
+    // if (EligibleList.length >= endNum) {
+    //   break;
+    // }
+    const fund_code = arr[index].fund_code;
 
     // 等待计算年收益
-    const rate = await AnnualIncome(productCode);
+    const rate = await AnnualIncome(fund_code);
     console.log('rate', rate);
+
     if (rate === '' || Number(rate) < minRate) {
-      return false;
+      continue;
     }
 
-    // 等待计算累计净值
-    const netValueList = await NetValue(productCode);
+    // 等待计算累计净值, 至少要300天
+    const netValueList = await NetValue(fund_code);
     if (netValueList.length >= 300) {
       const nowValue_000 = Number(netValueList[0].totalNetValue) || 0;
       const nowValue_100 = Number(netValueList[99].totalNetValue) || 0;
@@ -177,7 +173,7 @@ async function isEligible(arr) {
         EligibleList.push(arr[index]);
 
         // 将 JSON 字符串写入文件
-        fs.writeFile(`./fundData/${arr[index].productCode}.json`, JSON.stringify(netValueList), (err) => {
+        fs.writeFile(`./fundData/${arr[index].fund_code}.json`, JSON.stringify(netValueList), (err) => {
           if (err) {
             console.error(err);
             return;
@@ -192,7 +188,7 @@ async function isEligible(arr) {
 // 开始任务
 async function startTask() {
   // 先获取基金列表
-  let productList = await getPageMutilDataNotLogin();
+  let productList = [...arr_2];
   if (!productList.length) {
     console.log('未能正确获取到同类型基金数据');
     return false;
@@ -200,15 +196,15 @@ async function startTask() {
 
   // 放弃的基金
   productList = productList.filter((item) => {
-    return !fangqi.some((e) => e.productCode === item.productCode);
+    return !fangqi.some((e) => e.fund_code === item.fund_code);
   });
-  console.log(productList.length);
-  // 初步过滤后的数组
-  filteredList = new Array(productList.length).fill({});
+  // console.log(productList.length);
+
   // 筛选:符合条件的基金列表
   EligibleList = [];
 
   await isEligible(productList);
+  console.log('符合条件的基金数量', EligibleList.length);
 
   var writeArr = EligibleList.map((item) => {
     if (item?.rate?.value) {
@@ -216,9 +212,8 @@ async function startTask() {
       console.log('获取失败', item);
     }
     return {
-      productCode: item.productCode,
-      productId: item.productId,
-      productName: item.productName,
+      fund_code: item.fund_code,
+      fund_name: item.fund_name,
       rate: item?.rate?.value || 0,
     };
   });

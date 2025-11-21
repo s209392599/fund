@@ -1,0 +1,2712 @@
+[
+  {
+    "fund_code": "000196",
+    "fund_name": "工银成长收益混合B",
+    "rate": 0
+  },
+  {
+    "fund_code": "000214",
+    "fund_name": "广发成长优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000363",
+    "fund_name": "国泰聚信价值优势混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "000431",
+    "fund_name": "鹏华品牌传承混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000598",
+    "fund_name": "长盛生态环境混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000634",
+    "fund_name": "富国天盛灵活配置基金",
+    "rate": 0
+  },
+  {
+    "fund_code": "000654",
+    "fund_name": "华商新锐产业混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000698",
+    "fund_name": "宝盈科技30混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000763",
+    "fund_name": "工银新财富灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000788",
+    "fund_name": "前海开源中国成长混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000850",
+    "fund_name": "汇丰晋信双核策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "000877",
+    "fund_name": "华泰柏瑞量化优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000946",
+    "fund_name": "华夏医疗健康混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "000966",
+    "fund_name": "中邮核心科技创新灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "000969",
+    "fund_name": "前海开源大安全混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001007",
+    "fund_name": "国联安鑫安灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001018",
+    "fund_name": "易方达新经济混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001053",
+    "fund_name": "南方创新经济",
+    "rate": 0
+  },
+  {
+    "fund_code": "001056",
+    "fund_name": "北信瑞丰健康生活",
+    "rate": 0
+  },
+  {
+    "fund_code": "001069",
+    "fund_name": "华泰柏瑞消费成长混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001111",
+    "fund_name": "中欧瑾泉灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001112",
+    "fund_name": "东方红中国优势混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001121",
+    "fund_name": "东方睿鑫热点挖掘混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001143",
+    "fund_name": "华商量化进取混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001152",
+    "fund_name": "融通新区域新经济灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001154",
+    "fund_name": "北信瑞丰平安中国",
+    "rate": 0
+  },
+  {
+    "fund_code": "001174",
+    "fund_name": "中欧瑾和灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001181",
+    "fund_name": "南方改革机遇",
+    "rate": 0
+  },
+  {
+    "fund_code": "001217",
+    "fund_name": "易方达新收益混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001222",
+    "fund_name": "鹏华外延成长混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001226",
+    "fund_name": "中邮稳健添利灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001294",
+    "fund_name": "新华战略新兴产业灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001301",
+    "fund_name": "大成睿景灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001326",
+    "fund_name": "鹏华弘和混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001375",
+    "fund_name": "金元顺安优质精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001381",
+    "fund_name": "鹏华弘泽混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001437",
+    "fund_name": "易方达瑞享混合I",
+    "rate": 0
+  },
+  {
+    "fund_code": "001438",
+    "fund_name": "易方达瑞享混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "001446",
+    "fund_name": "招商丰泽混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001449",
+    "fund_name": "华商双驱优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001500",
+    "fund_name": "泓德远见回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001510",
+    "fund_name": "富国新动力灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001515",
+    "fund_name": "平安新鑫先锋C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001536",
+    "fund_name": "南方君选",
+    "rate": 0
+  },
+  {
+    "fund_code": "001660",
+    "fund_name": "富安达行业轮动混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001676",
+    "fund_name": "江信同福C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001682",
+    "fund_name": "新华鑫回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001695",
+    "fund_name": "泓德泓业混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001702",
+    "fund_name": "东方创新科技混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001724",
+    "fund_name": "申万菱信多策略灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001732",
+    "fund_name": "广发百发大数据价值混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "001735",
+    "fund_name": "广发百发大数据成长混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "001742",
+    "fund_name": "广发百发大数据精选混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "001744",
+    "fund_name": "诺安进取回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001758",
+    "fund_name": "嘉实研究增强混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001760",
+    "fund_name": "嘉实创新成长混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001762",
+    "fund_name": "广发安宏回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001770",
+    "fund_name": "前海开源嘉鑫混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001799",
+    "fund_name": "泰康新回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001802",
+    "fund_name": "易方达瑞财混合I",
+    "rate": 0
+  },
+  {
+    "fund_code": "001803",
+    "fund_name": "易方达瑞财混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "001829",
+    "fund_name": "北信瑞丰中国智造",
+    "rate": 0
+  },
+  {
+    "fund_code": "001834",
+    "fund_name": "长盛战略新兴产业混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001857",
+    "fund_name": "易方达现代服务业混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001887",
+    "fund_name": "中欧价值智选混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "001891",
+    "fund_name": "中欧成长优选混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "001892",
+    "fund_name": "长盛新兴成长混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001898",
+    "fund_name": "易方达大健康混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001904",
+    "fund_name": "光大欣鑫混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001908",
+    "fund_name": "国投瑞银境煊灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001924",
+    "fund_name": "华夏国企改革混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001940",
+    "fund_name": "农银现代农业加",
+    "rate": 0
+  },
+  {
+    "fund_code": "001966",
+    "fund_name": "圆信永丰兴源灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "001972",
+    "fund_name": "前海开源沪港深智慧生活混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001983",
+    "fund_name": "中邮低碳配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "001998",
+    "fund_name": "工银新焦点混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002011",
+    "fund_name": "华夏红利混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002020",
+    "fund_name": "国都创新驱动",
+    "rate": 0
+  },
+  {
+    "fund_code": "002036",
+    "fund_name": "安信优势增长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002052",
+    "fund_name": "诺安稳健回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002053",
+    "fund_name": "诺安优势行业混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002055",
+    "fund_name": "国泰兴益灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002056",
+    "fund_name": "中银新财富混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002059",
+    "fund_name": "国泰浓益灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002060",
+    "fund_name": "东方新策略灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002067",
+    "fund_name": "诺安精选回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002096",
+    "fund_name": "博时新收益C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002103",
+    "fund_name": "招商康泰灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002145",
+    "fund_name": "诺安景鑫灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002149",
+    "fund_name": "嘉实新优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002157",
+    "fund_name": "长盛盛世混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002158",
+    "fund_name": "汇添富安鑫智选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002163",
+    "fund_name": "东方惠新灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002164",
+    "fund_name": "汇添富新睿精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002165",
+    "fund_name": "汇添富达欣混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002172",
+    "fund_name": "海富通新内需混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002217",
+    "fund_name": "易方达量化策略C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002233",
+    "fund_name": "工银丰收回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002249",
+    "fund_name": "招商境远灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002259",
+    "fund_name": "鹏华健康环保混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002281",
+    "fund_name": "建信裕利灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002291",
+    "fund_name": "诺安安鑫灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002313",
+    "fund_name": "宏利新起点混合B",
+    "rate": 0
+  },
+  {
+    "fund_code": "002326",
+    "fund_name": "银华聚利灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002360",
+    "fund_name": "前海开源清洁能源混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002390",
+    "fund_name": "招商安德灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002407",
+    "fund_name": "前海开源恒远灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002416",
+    "fund_name": "招商丰利灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002417",
+    "fund_name": "招商丰盛稳定增长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002482",
+    "fund_name": "宝盈互联网沪港深混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002496",
+    "fund_name": "前海开源量化优选C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002536",
+    "fund_name": "中银鑫利混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002573",
+    "fund_name": "建信汇利灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002580",
+    "fund_name": "泰信鑫选灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002582",
+    "fund_name": "招商丰凯混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002605",
+    "fund_name": "融通新消费灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002615",
+    "fund_name": "中银颐利混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002620",
+    "fund_name": "中邮未来新蓝筹混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002649",
+    "fund_name": "民生智造2025灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002653",
+    "fund_name": "泰康沪港深精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002663",
+    "fund_name": "前海开源沪港深大消费混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002686",
+    "fund_name": "中欧丰泓沪港深混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002771",
+    "fund_name": "安信新回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002777",
+    "fund_name": "招商安荣混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002779",
+    "fund_name": "新疆前海联合新思路混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002801",
+    "fund_name": "泓德泓信混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002803",
+    "fund_name": "东方红沪港深混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002808",
+    "fund_name": "泓德优势领航混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002834",
+    "fund_name": "华夏新锦绣混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002935",
+    "fund_name": "泰康恒泰回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "002938",
+    "fund_name": "中银证券健康产业混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002943",
+    "fund_name": "广发多因子混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "002955",
+    "fund_name": "融通新趋势灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "003027",
+    "fund_name": "安信新价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003116",
+    "fund_name": "光大诚鑫混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003144",
+    "fund_name": "华宝新机遇混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003154",
+    "fund_name": "华宝新活力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003166",
+    "fund_name": "鹏华弘嘉混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003238",
+    "fund_name": "新华外延增长主题灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "003242",
+    "fund_name": "创金合信量化发现混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003305",
+    "fund_name": "前海开源沪港深核心资源混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003374",
+    "fund_name": "大成景禄灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003378",
+    "fund_name": "泰康策略优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "003550",
+    "fund_name": "宏利改革动力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003562",
+    "fund_name": "诺德成长精选C",
+    "rate": 0
+  },
+  {
+    "fund_code": "003580",
+    "fund_name": "泰康沪港深价值优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "003659",
+    "fund_name": "山证资管策略精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "003993",
+    "fund_name": "前海开源沪港深核心驱动混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004009",
+    "fund_name": "国联鑫思路混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004051",
+    "fund_name": "华夏新锦升混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004092",
+    "fund_name": "博时沪港深价值优选C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004099",
+    "fund_name": "前海开源沪港深景气行业精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004119",
+    "fund_name": "广发创新驱动灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004143",
+    "fund_name": "招商盛合灵活混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004205",
+    "fund_name": "东方支柱产业灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004234",
+    "fund_name": "中欧数据挖掘多因子混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004235",
+    "fund_name": "中欧价值智选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004263",
+    "fund_name": "华安沪港深机会灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004321",
+    "fund_name": "前海开源沪港深强国产业混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004335",
+    "fund_name": "华宝新飞跃灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004357",
+    "fund_name": "南方智慧混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004394",
+    "fund_name": "华泰柏瑞量化创优混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004497",
+    "fund_name": "前海开源多元策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004549",
+    "fund_name": "富安达消费主题混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004569",
+    "fund_name": "招商制造业混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004605",
+    "fund_name": "富国新活力灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004635",
+    "fund_name": "中信建投睿利C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004671",
+    "fund_name": "国联核心成长",
+    "rate": 0
+  },
+  {
+    "fund_code": "004675",
+    "fund_name": "富国新机遇灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004676",
+    "fund_name": "中信建投睿信灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004685",
+    "fund_name": "金元顺安元启灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004719",
+    "fund_name": "景顺长城睿成混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004815",
+    "fund_name": "中欧红利优享混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004819",
+    "fund_name": "国寿安保目标策略混合发起C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004837",
+    "fund_name": "国联鑫价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004895",
+    "fund_name": "华商鑫安灵活混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "004933",
+    "fund_name": "招商丰拓灵活混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "004934",
+    "fund_name": "圆信永丰消费升级",
+    "rate": 0
+  },
+  {
+    "fund_code": "004948",
+    "fund_name": "鑫元鑫趋势灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005028",
+    "fund_name": "鹏华研究精选灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005050",
+    "fund_name": "长安鑫旺价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005110",
+    "fund_name": "汇安多策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005118",
+    "fund_name": "金信价值精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005120",
+    "fund_name": "摩根量化多因子混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005143",
+    "fund_name": "国联沪港深大消费主题C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005187",
+    "fund_name": "长安鑫兴混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005198",
+    "fund_name": "工银沪港深精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005226",
+    "fund_name": "山证资管改革精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005245",
+    "fund_name": "国泰聚优价值灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005261",
+    "fund_name": "银华稳健增利灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005263",
+    "fund_name": "鑫元欣享灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005270",
+    "fund_name": "太平改革红利精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005276",
+    "fund_name": "中欧创新成长灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005293",
+    "fund_name": "诺德新旺",
+    "rate": 0
+  },
+  {
+    "fund_code": "005342",
+    "fund_name": "长安裕泰混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005357",
+    "fund_name": "富国国企改革灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005359",
+    "fund_name": "东方阿尔法精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005374",
+    "fund_name": "中加紫金灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005395",
+    "fund_name": "泓德臻远回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005421",
+    "fund_name": "中欧嘉泽灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005438",
+    "fund_name": "易方达易百智能量化策略C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005473",
+    "fund_name": "富国价值驱动灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005491",
+    "fund_name": "兴全合宜混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005492",
+    "fund_name": "农银汇理研究驱动混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005494",
+    "fund_name": "鑫元价值精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005518",
+    "fund_name": "富国新趋势灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005535",
+    "fund_name": "泰信竞争优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005538",
+    "fund_name": "中航新起航灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005542",
+    "fund_name": "前海开源盛鑫混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005551",
+    "fund_name": "汇安成长优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005553",
+    "fund_name": "国富新趋势混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005572",
+    "fund_name": "中银证券新能源混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005646",
+    "fund_name": "中海沪港深多策略灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005651",
+    "fund_name": "万家量化同顺多策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005681",
+    "fund_name": "财通资管价值成长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005711",
+    "fund_name": "永赢惠添利灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005742",
+    "fund_name": "南方成安优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005764",
+    "fund_name": "中欧潜力价值灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005815",
+    "fund_name": "农银汇理睿选灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "005834",
+    "fund_name": "工银红利优享混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005878",
+    "fund_name": "博时产业新动力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005935",
+    "fund_name": "前海联合润丰混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005948",
+    "fund_name": "德邦民裕进取量化混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005959",
+    "fund_name": "财通新视野灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "005997",
+    "fund_name": "天弘裕利灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006052",
+    "fund_name": "鹏扬核心价值灵活配置C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006104",
+    "fund_name": "华泰柏瑞量化智慧混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006253",
+    "fund_name": "永赢消费主题C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006268",
+    "fund_name": "诺德量化核心C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006402",
+    "fund_name": "先锋量化优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006433",
+    "fund_name": "平安鑫利混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006531",
+    "fund_name": "华泰柏瑞量化驱动混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006532",
+    "fund_name": "华泰柏瑞量化阿尔法C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006548",
+    "fund_name": "红塔红土盛弘混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006590",
+    "fund_name": "南方新优享灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "006696",
+    "fund_name": "汇添富研究优选灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "006753",
+    "fund_name": "天弘港股通精选C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007040",
+    "fund_name": "前海联合泳隆混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007043",
+    "fund_name": "前海联合泓鑫混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007074",
+    "fund_name": "国寿安保新蓝筹混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "007234",
+    "fund_name": "博时优势企业灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007244",
+    "fund_name": "安信核心竞争力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007356",
+    "fund_name": "汇添富科技创新混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007497",
+    "fund_name": "中庚价值灵动灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "007509",
+    "fund_name": "华商润丰灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007528",
+    "fund_name": "融通量化多策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007550",
+    "fund_name": "东兴未来价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007578",
+    "fund_name": "宝盈新锐混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007632",
+    "fund_name": "华润元大安鑫灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007663",
+    "fund_name": "平安安享灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007687",
+    "fund_name": "东方成长收益灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007808",
+    "fund_name": "北信瑞丰量化优选灵活配置",
+    "rate": 0
+  },
+  {
+    "fund_code": "007812",
+    "fund_name": "淳厚信泽混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007851",
+    "fund_name": "方正富邦天睿混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007863",
+    "fund_name": "长信利泰灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007939",
+    "fund_name": "华夏网购精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "007945",
+    "fund_name": "景顺长城改革机遇灵活配置C",
+    "rate": 0
+  },
+  {
+    "fund_code": "008071",
+    "fund_name": "长信利泰灵活配置混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "008182",
+    "fund_name": "方正富邦信泓混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "008208",
+    "fund_name": "博道嘉泰回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "008212",
+    "fund_name": "华夏新机遇混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "008419",
+    "fund_name": "惠升惠泽混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "008589",
+    "fund_name": "大成景润灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "008867",
+    "fund_name": "博时产业新趋势混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "008960",
+    "fund_name": "长信国防军工量化混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009115",
+    "fund_name": "鹏扬景泓回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009170",
+    "fund_name": "湘财长兴灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009258",
+    "fund_name": "西部利得景瑞灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009273",
+    "fund_name": "融通中国风1号灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009277",
+    "fund_name": "融通行业景气混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009527",
+    "fund_name": "浙商汇金新兴消费混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "009590",
+    "fund_name": "东方盛世灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009592",
+    "fund_name": "博时研究精选持有期混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009690",
+    "fund_name": "易方达瑞锦混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009709",
+    "fund_name": "民生加银策略精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009710",
+    "fund_name": "诺德新盛灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009858",
+    "fund_name": "博时价值臻选持有期混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009908",
+    "fund_name": "湘财长泽灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "009955",
+    "fund_name": "广发鑫裕混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010031",
+    "fund_name": "华泰柏瑞生物医药混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010052",
+    "fund_name": "长城久嘉创新成长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010093",
+    "fund_name": "西部利得港股通新机遇混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010150",
+    "fund_name": "南方君信混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010159",
+    "fund_name": "中银医疗保健混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010329",
+    "fund_name": "博时荣华灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010433",
+    "fund_name": "广发新兴产业混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010456",
+    "fund_name": "博时产业精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010484",
+    "fund_name": "中银量化精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010754",
+    "fund_name": "招商沪港深科技创新混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010821",
+    "fund_name": "东方红多元策略混合B",
+    "rate": 0
+  },
+  {
+    "fund_code": "010903",
+    "fund_name": "博时成长领航混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "010991",
+    "fund_name": "长盛同鑫行业配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011020",
+    "fund_name": "财通资管消费精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011082",
+    "fund_name": "国投瑞银医疗保健混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011114",
+    "fund_name": "富国沪港深行业精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011172",
+    "fund_name": "广发利鑫灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011324",
+    "fund_name": "国泰价值精选灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011325",
+    "fund_name": "国泰江源优势精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011391",
+    "fund_name": "民生加银新战略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011437",
+    "fund_name": "中泰开阳价值优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011530",
+    "fund_name": "泓德优质治理灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "011618",
+    "fund_name": "国投瑞银瑞泰多策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011712",
+    "fund_name": "大摩万众创新混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011757",
+    "fund_name": "博时产业优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011907",
+    "fund_name": "国泰量化收益灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "011928",
+    "fund_name": "博时汇誉回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012007",
+    "fund_name": "万家瑞富灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012194",
+    "fund_name": "泓德睿诚混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012251",
+    "fund_name": "安信平衡增利混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012427",
+    "fund_name": "南方价值臻选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012492",
+    "fund_name": "华商核心引力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012615",
+    "fund_name": "东吴国企改革主题灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012705",
+    "fund_name": "中银兴利稳健回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012716",
+    "fund_name": "长盛创新先锋混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012815",
+    "fund_name": "宝盈新兴产业混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012891",
+    "fund_name": "安信鑫发优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "012940",
+    "fund_name": "中泰星元灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013025",
+    "fund_name": "富国宏观策略灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013116",
+    "fund_name": "华安文体健康混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013142",
+    "fund_name": "华商乐享互联灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013153",
+    "fund_name": "长信电子信息量化灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013154",
+    "fund_name": "长信医疗保健混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013157",
+    "fund_name": "前海开源新经济混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013224",
+    "fund_name": "浦银安盛港股通量化混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013266",
+    "fund_name": "泰信智选成长灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013410",
+    "fund_name": "博时裕隆灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013484",
+    "fund_name": "长城行业轮动混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013532",
+    "fund_name": "广发安宏回报混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "013566",
+    "fund_name": "华夏军工安全混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013618",
+    "fund_name": "华安大安全主题混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013619",
+    "fund_name": "华安动态灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "013884",
+    "fund_name": "交银主题优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014042",
+    "fund_name": "银华心诚灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014043",
+    "fund_name": "银华心怡灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014048",
+    "fund_name": "银华鑫盛灵活配置混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014051",
+    "fund_name": "平安安盈灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014085",
+    "fund_name": "浙商聚潮新思维混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014113",
+    "fund_name": "上银未来生活灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014349",
+    "fund_name": "银华鑫锐灵活配置混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014521",
+    "fund_name": "诺安利鑫灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014597",
+    "fund_name": "华泰柏瑞富利混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014599",
+    "fund_name": "永赢合享混合发起C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014813",
+    "fund_name": "浙商大数据智选消费混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014875",
+    "fund_name": "惠升惠远回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014931",
+    "fund_name": "富国天源沪港深平衡混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014960",
+    "fund_name": "国泰融安多策略灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014972",
+    "fund_name": "华安沪港深外延增长灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "014998",
+    "fund_name": "国泰民福策略价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015065",
+    "fund_name": "华夏乐享健康混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015078",
+    "fund_name": "平安灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015121",
+    "fund_name": "汇添富医疗服务灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015122",
+    "fund_name": "汇添富医疗服务灵活配置混合D",
+    "rate": 0
+  },
+  {
+    "fund_code": "015147",
+    "fund_name": "华夏兴融混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015154",
+    "fund_name": "东吴安盈量化混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015208",
+    "fund_name": "信澳健康中国混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015271",
+    "fund_name": "财通多策略升级混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015309",
+    "fund_name": "国投瑞银境煊灵活配置混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "015356",
+    "fund_name": "西部利得新润混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015361",
+    "fund_name": "西部利得新盈混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015394",
+    "fund_name": "交银科技创新灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015450",
+    "fund_name": "华泰柏瑞多策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015459",
+    "fund_name": "天弘精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015460",
+    "fund_name": "天弘优质成长企业C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015462",
+    "fund_name": "天弘云端生活优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015526",
+    "fund_name": "大成动态量化配置策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015589",
+    "fund_name": "国泰金马稳健混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015638",
+    "fund_name": "摩根成长动力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015640",
+    "fund_name": "金鹰产业整合混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015709",
+    "fund_name": "摩根中国优势混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015772",
+    "fund_name": "银华互联网主题灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015779",
+    "fund_name": "景顺长城价值边际灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015946",
+    "fund_name": "兴业国企改革混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "015965",
+    "fund_name": "长城安心回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016048",
+    "fund_name": "华商新量化混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016051",
+    "fund_name": "华商万众创新混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016069",
+    "fund_name": "华商研究精选灵活配置C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016070",
+    "fund_name": "华商新常态混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016090",
+    "fund_name": "中泰玉衡价值优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016135",
+    "fund_name": "嘉实优势成长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016182",
+    "fund_name": "华安安进灵活配置混合发起式C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016183",
+    "fund_name": "华安安华灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016214",
+    "fund_name": "富安达长盈灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016246",
+    "fund_name": "天弘新价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016289",
+    "fund_name": "华安沪港深通精选灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016335",
+    "fund_name": "汇丰晋信动态策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016374",
+    "fund_name": "华泰柏瑞新金融地产混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016418",
+    "fund_name": "摩根创新商业模式混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016461",
+    "fund_name": "华宝核心优势混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016491",
+    "fund_name": "华安事件驱动量化混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016520",
+    "fund_name": "中银稳进策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016556",
+    "fund_name": "万家量化睿选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016563",
+    "fund_name": "金鹰红利价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016564",
+    "fund_name": "华安安顺灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016617",
+    "fund_name": "国泰价值优选灵活配置混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016677",
+    "fund_name": "南方君誉混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016924",
+    "fund_name": "广发百发大数据价值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "016950",
+    "fund_name": "鹏华睿投混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017176",
+    "fund_name": "摩根动态多因子混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017288",
+    "fund_name": "中欧瑾和灵活配置混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "017451",
+    "fund_name": "国富估值优势混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017461",
+    "fund_name": "长城久鑫混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017485",
+    "fund_name": "长盛高端装备混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017493",
+    "fund_name": "东方红新动力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017494",
+    "fund_name": "东方红多元策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017535",
+    "fund_name": "东方红京东大数据混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017536",
+    "fund_name": "东方红优享红利混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017874",
+    "fund_name": "国金量化多策略C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017885",
+    "fund_name": "长城久润混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017911",
+    "fund_name": "华泰柏瑞新经济沪港深混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017929",
+    "fund_name": "前海开源沪港深新机遇混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017966",
+    "fund_name": "华富竞争力优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017969",
+    "fund_name": "华富产业升级灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017979",
+    "fund_name": "交银国企改革灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "017999",
+    "fund_name": "中欧融恒平衡混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018007",
+    "fund_name": "招商瑞利灵活配置混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018075",
+    "fund_name": "长盛航天海工混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018082",
+    "fund_name": "光大产业新动力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018222",
+    "fund_name": "工银优质精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018237",
+    "fund_name": "长盛创新驱动混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018246",
+    "fund_name": "富国研究优选沪港深灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018389",
+    "fund_name": "国投瑞银新兴产业混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018449",
+    "fund_name": "中欧瑾通灵活配置混合E",
+    "rate": 0
+  },
+  {
+    "fund_code": "018470",
+    "fund_name": "国富策略回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018541",
+    "fund_name": "建信鑫安回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018544",
+    "fund_name": "国投瑞银美丽中国混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018545",
+    "fund_name": "国投瑞银瑞盛混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018546",
+    "fund_name": "国投瑞银瑞盈混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018556",
+    "fund_name": "中银新经济灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018561",
+    "fund_name": "中信保诚多策略混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018590",
+    "fund_name": "银华体育文化灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018658",
+    "fund_name": "兴银消费新趋势灵活配置C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018694",
+    "fund_name": "大成智惠量化多策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018710",
+    "fund_name": "鹏华沪深港新兴成长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018860",
+    "fund_name": "嘉实产业优选混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018934",
+    "fund_name": "长盛互联网+混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018946",
+    "fund_name": "招商安益灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018949",
+    "fund_name": "东方红睿华沪港深混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "018995",
+    "fund_name": "景顺长城中国回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019053",
+    "fund_name": "华商元亨混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019077",
+    "fund_name": "万家颐达灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019150",
+    "fund_name": "国联国企改革混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019151",
+    "fund_name": "东兴改革精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019166",
+    "fund_name": "东兴蓝海财富混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019180",
+    "fund_name": "光大保德信动态优选灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019183",
+    "fund_name": "大成精选增值混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019184",
+    "fund_name": "大成趋势回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019197",
+    "fund_name": "大成国企改革灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019199",
+    "fund_name": "华富国泰民安灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019201",
+    "fund_name": "大成盛世精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019208",
+    "fund_name": "大成创新成长混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019213",
+    "fund_name": "华富物联世界灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019215",
+    "fund_name": "景顺长城量化平衡混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019223",
+    "fund_name": "大成一带一路灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019274",
+    "fund_name": "长城核心优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019514",
+    "fund_name": "交银荣鑫灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019689",
+    "fund_name": "南方中国梦灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019776",
+    "fund_name": "鹏华产业精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019818",
+    "fund_name": "长城健康生活混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "019895",
+    "fund_name": "天弘新活力混合发起C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020009",
+    "fund_name": "国泰金鹏蓝筹混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "020106",
+    "fund_name": "兴业成长动力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020126",
+    "fund_name": "东方量化成长灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020132",
+    "fund_name": "中邮趋势精选灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020180",
+    "fund_name": "金信深圳成长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020282",
+    "fund_name": "益民优势安享混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020361",
+    "fund_name": "中海蓝筹混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020362",
+    "fund_name": "中海沪港深价值优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020384",
+    "fund_name": "金信转型创新成长混合发起式C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020433",
+    "fund_name": "金信核心竞争力混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020434",
+    "fund_name": "金信量化精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020435",
+    "fund_name": "金信智能中国2025混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020436",
+    "fund_name": "金信稳健策略混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020451",
+    "fund_name": "金信行业优选混合发起式C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020592",
+    "fund_name": "金信多策略精选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020726",
+    "fund_name": "建信灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "020970",
+    "fund_name": "益民品质升级混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021265",
+    "fund_name": "兴业聚利灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021478",
+    "fund_name": "东方周期优选灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021479",
+    "fund_name": "国联安稳健混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021543",
+    "fund_name": "国投瑞银招财混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021546",
+    "fund_name": "国投瑞银创新医疗混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021625",
+    "fund_name": "博时外延增长混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021649",
+    "fund_name": "富国臻选成长灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021710",
+    "fund_name": "华泰柏瑞港股通量化混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021741",
+    "fund_name": "嘉实新财富混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021902",
+    "fund_name": "广发主题领先混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "021953",
+    "fund_name": "西部利得新动向混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "050022",
+    "fund_name": "博时回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "070010",
+    "fund_name": "嘉实主题混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "080015",
+    "fund_name": "长盛中小盘精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "160105",
+    "fund_name": "南方积极配置混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "160142",
+    "fund_name": "南方优势产业(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "160421",
+    "fund_name": "华安智增精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "160518",
+    "fund_name": "博时睿远",
+    "rate": 0
+  },
+  {
+    "fund_code": "160528",
+    "fund_name": "博时研究优选混合(LOF)C",
+    "rate": 0
+  },
+  {
+    "fund_code": "160610",
+    "fund_name": "鹏华动力增长混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "160812",
+    "fund_name": "长盛同益成长回报(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "160813",
+    "fund_name": "长盛同盛成长优选(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "161224",
+    "fund_name": "国投瑞银新丝路混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "161727",
+    "fund_name": "招商增荣混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "161728",
+    "fund_name": "招商瑞智优选混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "163809",
+    "fund_name": "中银蓝筹混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "163823",
+    "fund_name": "中银稳健策略混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "166301",
+    "fund_name": "华商新趋势优选灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "167002",
+    "fund_name": "平安鼎越混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "168401",
+    "fund_name": "红土转型精选混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "180020",
+    "fund_name": "银华成长先锋混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "180028",
+    "fund_name": "银华永祥灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "202212",
+    "fund_name": "南方平衡配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "270006",
+    "fund_name": "广发策略优选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "270007",
+    "fund_name": "广发大盘成长混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "290002",
+    "fund_name": "泰信先行策略混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "393001",
+    "fund_name": "中海优势精选灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "400032",
+    "fund_name": "东方主题精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "501001",
+    "fund_name": "财通多策略精选混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "501076",
+    "fund_name": "鹏华创新动力混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "501078",
+    "fund_name": "广发科创主题灵活配置混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "501188",
+    "fund_name": "汇添富核心精选混合(LOF)",
+    "rate": 0
+  },
+  {
+    "fund_code": "510081",
+    "fund_name": "长盛动态精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "519007",
+    "fund_name": "海富通强化回报混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "519022",
+    "fund_name": "国泰金泰灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "519029",
+    "fund_name": "华夏稳增混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "519221",
+    "fund_name": "海富通欣益混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "519223",
+    "fund_name": "海富通欣荣混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "519771",
+    "fund_name": "交银优择回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "519779",
+    "fund_name": "交银沪港深价值精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "519956",
+    "fund_name": "长信睿进混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "519971",
+    "fund_name": "长信改革红利混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "560006",
+    "fund_name": "益民核心增长混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "630005",
+    "fund_name": "华商动态阿尔法混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "630008",
+    "fund_name": "华商策略精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "630015",
+    "fund_name": "华商大盘量化精选混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "630016",
+    "fund_name": "华商价值共享混合发起式",
+    "rate": 0
+  },
+  {
+    "fund_code": "673030",
+    "fund_name": "西部利得多策略优选混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "673083",
+    "fund_name": "西部利得祥运混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "673143",
+    "fund_name": "西部利得景程混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "690011",
+    "fund_name": "民生加银积极成长混合发起式",
+    "rate": 0
+  },
+  {
+    "fund_code": "870017",
+    "fund_name": "广发资管消费精选灵活配置混合",
+    "rate": 0
+  },
+  {
+    "fund_code": "920921",
+    "fund_name": "中金安心回报灵活配置混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "920928",
+    "fund_name": "中金进取回报混合C",
+    "rate": 0
+  },
+  {
+    "fund_code": "960003",
+    "fund_name": "汇丰晋信动态策略混合H",
+    "rate": 0
+  },
+  {
+    "fund_code": "960004",
+    "fund_name": "华夏兴华混合H",
+    "rate": 0
+  }
+]

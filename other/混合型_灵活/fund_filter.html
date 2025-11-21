@@ -19,7 +19,7 @@
       z-index: 2;
     }
 
-    .fundName {
+    .fund_name {
       position: absolute;
       left: 40px;
       top: 2px;
@@ -30,7 +30,7 @@
       font-weight: bold;
     }
 
-    .fundCode {
+    .fund_code {
       position: absolute;
       left: 40px;
       top: 16px;
@@ -61,9 +61,9 @@
       const chartDom = document.createElement('div');
       chartDom.className = 'item';
       chartDom.innerHTML = `
-        <div class="fundName">${obj.fundName}</div>
-        <div class="fundCode">${obj.fundCode} ${obj.fundRate}</div>
-        <div id="chart_${obj.fundCode}" style="width:300px;height:240px;"></div>
+        <div class="fund_name">${obj.fund_name}</div>
+        <div class="fund_code">${obj.fund_code} ${obj.fund_rate}</div>
+        <div id="chart_${obj.fund_code}" style="width:300px;height:240px;"></div>
       `;
       document.getElementById('boxue').appendChild(chartDom);
 
@@ -71,7 +71,7 @@
       const dates = obj.fundData.map(item => item.date);
       const netValues = obj.fundData.map(item => item.totalNetValue);
 
-      const myChart = echarts.init(document.getElementById(`chart_${obj.fundCode}`));
+      const myChart = echarts.init(document.getElementById(`chart_${obj.fund_code}`));
 
       // 获取totalNetValue的最大值和最小值
       const maxNetValue = Math.max(...netValues);
@@ -79,7 +79,7 @@
 
       const option = {
         // title: {
-        //   text: `${obj.fundName}`
+        //   text: `${obj.fund_name}`
         // },
         color: ['#e34641'],
         tooltip: {
@@ -131,63 +131,26 @@
       myChart.setOption(option);
     }
 
-
-    /* 需要去除掉带这些名字的基金 */
-    const noText = [
-      '个月',
-      '60天',
-      '90天',
-      '180天',
-      '封闭',
-      '定期',
-      '定开',
-      '年持有', // 1年持有期 三年持有 等
-      '60天持有',
-      '90天持有',
-      '120天持有',
-      '180天持有',
-      '一年',
-      '两年',
-      '三年',
-      '五年',
-      '1年',
-      '套利',
-      '后端',
-      '房地产',
-      '滚动',
-      '不动产',
-      '白银期货',
-      '养老',
-      'REIT',
-      '货币',
-      '(后端)',
-      '人民币',
-      '绝对收益',
-      'A/B',
-    ];
-
-
     async function fetchFunds() {
+      console.log(123132)
       const response = await fetch('./fund_filter.json');
-      console.log(`fund_filter.html 73 [response]`, response);
       const funds = await response.json();
+      // console.log('funds', funds);
 
       for (let index = 0; index < funds.length; index++) {
-        const fundCode = funds[index].productCode;
-        const fundName = funds[index].productName;
-        const fundRate = funds[index].rate;
+        const fund_code = funds[index].fund_code;
+        const fund_name = funds[index].fund_name;
+        const fund_rate = funds[index].rate;
 
-        if (noText.some(item => fundName.includes(item))) {
-          continue;
-        }
-        const fundData = await getFund(fundCode, index);
+        console.log('fund_code', fund_code)
+        const fundData = await getFund(fund_code, index);
 
         if (fundData.length > 0) {
           await renderchart({
             fundData,
-            fundName,
-            fundCode,
-            fundRate,
+            fund_name,
+            fund_code,
+            fund_rate,
           });
         }
       }
