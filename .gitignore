@@ -34,9 +34,12 @@ api/data/his_val/*.*
 amain/dist
 ahoutai/dist
 
-api/filter/rankData_1.txt
-api/filter/rankData_2.txt
-api/filter/rankData_3.txt
+api/other/a01-日周月排行交叉/rankData_1.txt
+api/other/a01-日周月排行交叉/rankData_2.txt
+api/other/a01-日周月排行交叉/rankData_3.txt
+api/other/a01-日周月排行交叉/jiaocha_1.json
+api/other/a01-日周月排行交叉/jiaocha_2.json
+api/other/a01-日周月排行交叉/jiaocha_3.json
 
 api/other/a10-searchtext/HistoryNetValue/*.json
 api/other/a10-searchtext/FundDetailPageInfo/*.json

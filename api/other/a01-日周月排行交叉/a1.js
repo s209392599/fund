@@ -4,8 +4,8 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const noText = require('../utils/noText.js'); // 排除的关键词
-const noFundCode = require('../utils/noFundCode.js'); // 排除的基金代码
+const noText = require('../../utils/noText.js'); // 排除的关键词
+const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 // console.log('noText', noText);
 // console.log('noFundCode', noFundCode);
 /*
@@ -88,9 +88,13 @@ async function init() {
     console.log(`日周 交叉了${sameItems.length}个`);
     // sameItems.forEach(item => console.log(`${item[0]}--${item[1]}`));
 
+    // 存储文本
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
     fs.writeFileSync('rankData_1.txt', '日周 交叉了' + sameItems.length + '个\n' + wx, 'utf8');
-    // fs.writeFileSync('rankData_2.json', JSON.stringify(wx, null, 2), 'utf8');
+
+    // 存储json
+    const json_data = sameItems.map(v => { return { fund_code: v[0], fund_name: v[1] } })
+    fs.writeFileSync('jiaocha_1.json', JSON.stringify(json_data, null, 2), 'utf8');
   }
 
   {
@@ -98,6 +102,9 @@ async function init() {
     console.log(`周月 交叉了${sameItems.length}个`);
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
     fs.writeFileSync('rankData_2.txt', '周月 交叉了' + sameItems.length + '个\n' + wx, 'utf8');
+
+    const json_data = sameItems.map(v => { return { fund_code: v[0], fund_name: v[1] } })
+    fs.writeFileSync('jiaocha_2.json', JSON.stringify(json_data, null, 2), 'utf8');
   }
 
   {
@@ -105,6 +112,9 @@ async function init() {
     console.log(`日周月 交叉了${sameItems.length}个`);
     const wx = sameItems.map(v => `${v[0]}--${v[1]}`).join('\n');
     fs.writeFileSync('rankData_3.txt', '日周月 交叉了' + sameItems.length + '个\n' + wx, 'utf8');
+
+    const json_data = sameItems.map(v => { return { fund_code: v[0], fund_name: v[1] } })
+    fs.writeFileSync('jiaocha_3.json', JSON.stringify(json_data, null, 2), 'utf8');
   }
 }
 init();
