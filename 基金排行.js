@@ -1,4 +1,13 @@
 /*
+020973-易方达机器人ETF联接C  存为历史
+019088-工银中证稀有金属主题ETF-C
+
+
+vue-draggable-plus
+import { VueDraggable } from 'vue-draggable-plus';
+
+
+
 获取前600的基金
 去除那些不要的基金(特殊字符、特定基金号)
 去除A类的

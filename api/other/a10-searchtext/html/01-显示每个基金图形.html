@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./atom.css">
   <style>
-    body{
+    body {
       padding: 10px;
     }
-    #id_chart_wrapper{
+
+    #id_chart_wrapper {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
+
     .chart_item {
       width: 400px;
       border: 1px solid #ccc;
       border-radius: 5px;
       overflow: hidden;
     }
-    .chart_title{
+
+    .chart_title {
       /* 溢出显式... */
       width: 100%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       font-size: 12px;
-      padding:1px 4px;
+      padding: 1px 4px;
       border-bottom: 1px solid #ccc;
     }
-    .chart_box{
+
+    .chart_box {
       width: 100%;
       height: 340px;
     }
   </style>
 </head>
+
 <body>
   <div id="id_chart_wrapper"></div>
 
@@ -49,7 +55,7 @@
       return fetch(u)
         .then((res) => res.json())
         .then((res) => {
-          return (res || []).reverse();
+          return res || [];
         });
     }
 
@@ -119,7 +125,7 @@
     }
 
     // https://fund.eastmoney.com/004335.html
-    $('#id_chart_wrapper').on('click', '.chart_box', function() {
+    $('#id_chart_wrapper').on('click', '.chart_box', function () {
       const fundCode = $(this).prev('.chart_title').text().split(' -- ')[0];
       window.open(`https://fund.eastmoney.com/${fundCode}.html`, '_blank');
     });
@@ -159,4 +165,5 @@
     fetchFunds();
   </script>
 </body>
+
 </html>

@@ -261,33 +261,25 @@ const groupPublic = () => {
       <el-button type="primary" size="small" @click="query_list()">刷新数据</el-button>
     </div>
 
-<!--
+    <!--
 handle=".drag-handle"  只允许通过手柄拖拽
 filter=".no-drag"     过滤不可拖拽元素
 -->
     <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
-      class="el-table"
-      handle=".drag-handle"
-      filter=".no-drag"
-    >
+      class="el-table" handle=".drag-handle" filter=".no-drag">
       <el-table :data="info.tableData" border style="width: 100%" :height="info.table_height">
-      <el-table-column
-          fixed
-          type="index"
-          align="center"
-          label="序"
-          width="36"
-        ></el-table-column>
+        <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
-    <el-table-column fixed label="拽" type="index" width="40" align="center">
-      <template #default="{ $index }">
-        <div class="drag-handle" style="cursor: grab; color: #909399; display: flex; align-items: center;justify-content:center;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"/>
-          </svg>
-        </div>
-      </template>
-    </el-table-column>
+        <el-table-column fixed label="拽" type="index" width="40" align="center">
+          <template #default="{ $index }">
+            <div class="drag-handle"
+              style="cursor: grab; color: #909399; display: flex; align-items: center;justify-content:center;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z" />
+              </svg>
+            </div>
+          </template>
+        </el-table-column>
 
         <el-table-column label="操作" width="180" align="center">
           <template #default="{ row, $index }">

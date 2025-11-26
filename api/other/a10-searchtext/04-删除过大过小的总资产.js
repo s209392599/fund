@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const filterJson = require('./data/filter.json');
 // 删除总资产小于1亿或大于150亿的基金
 const min_totalAsset = 1 * 10000 * 10000; // 1亿
-const max_totalAsset = 150 * 10000 * 10000; // 100亿
+const max_totalAsset = 500 * 10000 * 10000; // 500亿
 
 let len_filter = filterJson.length;
 const deleteList = [];

@@ -1,5 +1,6 @@
 <script setup>
 console.log('ahoutai/src/views/preview/tabs/preview_01.vue');
+import { VueDraggable } from 'vue-draggable-plus';
 
 // 判断是否为手机端
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -186,7 +187,9 @@ const updateOrder = () => {
     }
   })
 }
-
+const onDragEnd = (evt) => {
+  console.log('拖拽完成:', info.tableData.map(item => item.fund_code));
+};
 </script>
 
 <template>
@@ -196,48 +199,64 @@ const updateOrder = () => {
       <el-button type="primary" size="small" @click="updateOrder()">更新服务器排序</el-button>
     </div>
 
-    <el-table :data="info.tableData" border style="width: 100%" height="800">
-      <el-table-column fixed label="序" type="index" width="50" align="right" />
+    <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
+      class="el-table" handle=".drag-handle" filter=".no-drag">
 
-      <el-table-column label="Operations" width="140">
-        <template #default="{ row, $index }">
-          <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
-          <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
-          <el-button link type="primary" size="small" @click="btn_cha(row, $index)">插入到</el-button>
-        </template>
-      </el-table-column>
+      <el-table :data="info.tableData" border style="width: 100%" height="800">
+        <el-table-column fixed label="拽" type="index" width="40" align="center">
+          <template #default="{ $index }">
+            <div class="drag-handle"
+              style="cursor: grab; color: #909399; display: flex; align-items: center;justify-content:center;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z" />
+              </svg>
+            </div>
+          </template>
+        </el-table-column>
 
-      <el-table-column prop="fund_code" align="center" label="基金号" width="64">
-        <template v-slot="{ row }">
-          <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none;">
-            <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span>
-            <span v-else>{{ row.fund_code }}</span>
-          </a>
-        </template>
-      </el-table-column>
+        <el-table-column fixed label="序" type="index" width="50" align="right" />
 
-      <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
-        <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span>
-          <span v-else>{{ row.fund_name }}</span>
-        </template>
-      </el-table-column>
+        <el-table-column label="Operations" width="140">
+          <template #default="{ row, $index }">
+            <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
+            <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
+            <el-button link type="primary" size="small" @click="btn_cha(row, $index)">插入到</el-button>
+          </template>
+        </el-table-column>
 
-      <el-table-column prop="type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
-        <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_type }}</span>
-          <span v-else>{{ row.fund_type }}</span>
-        </template>
-      </el-table-column>
+        <el-table-column prop="fund_code" align="center" label="基金号" width="64">
+          <template v-slot="{ row }">
+            <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
+              style="text-decoration: none;">
+              <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span>
+              <span v-else>{{ row.fund_code }}</span>
+            </a>
+          </template>
+        </el-table-column>
 
-      <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
-      <el-table-column prop="fixed" label="定投金额" width="70" align="right" />
-      <el-table-column prop="point_down" label="低点" width="100" align="right" />
-      <el-table-column prop="point_top" label="高点" width="100" align="right" />
-      <el-table-column prop="fund_desc" label="备注" width="300" />
+        <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
+          <template v-slot="{ row }">
+            <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span>
+            <span v-else>{{ row.fund_name }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column prop="type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
+          <template v-slot="{ row }">
+            <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_type }}</span>
+            <span v-else>{{ row.fund_type }}</span>
+          </template>
+        </el-table-column>
+
+        <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
+        <el-table-column prop="fixed" label="定投金额" width="70" align="right" />
+        <el-table-column prop="point_down" label="低点" width="100" align="right" />
+        <el-table-column prop="point_top" label="高点" width="100" align="right" />
+        <el-table-column prop="fund_desc" label="备注" width="300" />
 
 
-    </el-table>
+      </el-table>
+    </VueDraggable>
 
     <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500">
       <el-form :model="info.form" :rules="rules" ref="diaForm">

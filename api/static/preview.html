@@ -135,6 +135,8 @@
         <template v-slot="{ row }">
           <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none;">
             <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_code}}</span>
+            <span v-else-if="row.fund_desc.includes('二级推荐')"
+              style="color:#343bd7;font-weight: 700;">{{row.fund_code}}</span>
             <span v-else>{{row.fund_code}}</span>
           </a>
         </template>
@@ -143,6 +145,8 @@
       <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
         <template v-slot="{ row }">
           <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_name}}</span>
+          <span v-else-if="row.fund_desc.includes('二级推荐')"
+            style="color:#343bd7;font-weight: 700;">{{row.fund_name}}</span>
           <span v-else>{{row.fund_name}}</span>
         </template>
       </el-table-column>
@@ -150,6 +154,8 @@
       <el-table-column prop="fund_type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
         <template v-slot="{ row }">
           <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_type}}</span>
+          <span v-else-if="row.fund_desc.includes('二级推荐')"
+            style="color:#343bd7;font-weight: 700;">{{row.fund_type}}</span>
           <span v-else>{{row.fund_type}}</span>
         </template>
       </el-table-column>
@@ -237,6 +243,8 @@
       <el-table-column prop="fund_desc" label="备注" width="300" show-overflow-tooltip>
         <template v-slot="{ row }">
           <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">历史数据</span>
+          <span v-else-if="row.fund_desc.includes('二级推荐')"
+            style="color:#343bd7;font-weight: 700;">{{row.fund_desc}}</span>
           <span v-else>{{row.fund_desc}}</span>
         </template>
       </el-table-column>
