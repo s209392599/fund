@@ -4,9 +4,12 @@ const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 
 // 包含的关键词
-var keyword_arr = ['红利'];
+var keyword_arr = [
+  '红利',
+];
 // 不要的基金类型关键词
-var noFundType = ['债券', '货币', '指数'];
+var noFundType = [];
+// var noFundType = ['债券', '货币', '指数'];
 // 不以什么结尾
 var noEndWith = ['A', 'ETF', '(后端)'];
 
@@ -42,7 +45,6 @@ function filter_fn() {
     let fund_code = item[0]; // 基金代码
     let fund_name = item[2]; // 基金名称
     let fund_type = item[3]; // 基金类型
-    // 需要包含 量化、策略、灵活、因子、增强、绝对收益、动量、成长、趋势、绩优、智选、优选、精选
     if (!keyword_arr.some((v) => fund_name.includes(v))) {
       continue;
     }
