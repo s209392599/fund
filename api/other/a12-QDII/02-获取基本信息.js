@@ -1,16 +1,16 @@
-// 获取分红信息
+/*
+ * 基金历史数据
+ */
 const fetch = require('node-fetch');
 const fs = require('fs');
 const filterJson = require('./data/filter.json');
+
 const len_filter = filterJson.length;
 let index_start = 0;
 
-const info = {
-  err_data: [], // 请求错误的基金号
-};
 // 获取时间 2025-11-16 15:32：00的函数
 function getTime() {
-  const date = new Date();
+  const date = new Date('2025-11-16 15:32:00');
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
@@ -20,9 +20,9 @@ function getTime() {
   return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
 }
 
-function getHisData(fundCode, fund_name) {
+function getHisData(fundCode) {
   try {
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDividendPageInfo?reqData={"fundCode":"${fundCode}","pageNum":1,"pageSize":20,"channel":"9"}`;
+    let u = `https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?reqData={"fundCode":"${fundCode}","itemId":"","clientVersion":"","channel":"9"}`;
     fetch(u, {})
       .then((data) => data.json())
       .then((data) => {
@@ -30,12 +30,23 @@ function getHisData(fundCode, fund_name) {
         let datas = resultData.datas || {};
         const fileName = `${fundCode}.json`;
         fs.writeFileSync(
-          `./FundFenhong/${fileName}`,
+          `./FundDetailPageInfo/${fileName}`,
           JSON.stringify(datas, null, 2)
         );
       });
   } catch (err) {
-    info.err_data.push(`${fundCode} -- ${fund_name}`);
+    console.log(err.message || err.msg);
+    const errorJson = JSON.parse(
+      fs.readFileSync('./data/error_detailpageinfo.json', 'utf8')
+    );
+    errorJson.push({
+      fundCode,
+      time: getTime(),
+    });
+    fs.writeFileSync(
+      './data/error_detailpageinfo.json',
+      JSON.stringify(errorJson, null, 2)
+    );
   }
 }
 
@@ -47,13 +58,11 @@ async function processInLoop() {
     const fund_code = item.fund_code;
     const fund_name = item.fund_name;
     console.log(
-      `${fund_code} -- ${fund_name} -- ${getTime()} -- 第${index_start + 1}个`
+      `${fund_code} -- ${fund_name} -- ${getTime()} -- 第${index_start}个`
     );
-    await getHisData(fund_code, fund_name);
+    await getHisData(fund_code);
     index_start++;
-  }
-  if (info.err_data.length > 0) {
-    console.log('错误数据：', info.err_data);
   }
 }
 processInLoop(); // 开始获取数据
+// getHisData('007467');// 测试一个

@@ -1,6 +1,8 @@
 /*
 020973-易方达机器人ETF联接C  存为历史
 019088-工银中证稀有金属主题ETF-C
+创金合信全球芯片产业股票发起(QDII)C(017654)
+摩根欧洲动力策略股票(QDII)C(019450)
 
 
 vue-draggable-plus
@@ -27,45 +29,49 @@ import { VueDraggable } from 'vue-draggable-plus';
 /*
 https://m.1234567.com.cn/index.html?page=jjph&tab=qb -- 全部基金排行
 */
-fetch("https://condition.tiantianfunds.com/condition/conditionFund/fundSelect", {
-  "headers": {
-    "accept": "application/json, text/javascript, */*; q=0.01",
-    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site"
-  },
-  "referrer": "https://m.1234567.com.cn/",
-  "body": "orderField=5_1_-1&pageIndex=1&pageNum=30&pageType=5&deviceid=Wap&plat=Wap&product=EFund&version=2.0.0&abnormal=3&rankSy=1",
-  "method": "POST",
-  "mode": "cors",
-  "credentials": "omit"
-});
-
+fetch(
+  'https://condition.tiantianfunds.com/condition/conditionFund/fundSelect',
+  {
+    headers: {
+      accept: 'application/json, text/javascript, */*; q=0.01',
+      'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+      'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      'sec-fetch-dest': 'empty',
+      'sec-fetch-mode': 'cors',
+      'sec-fetch-site': 'cross-site',
+    },
+    referrer: 'https://m.1234567.com.cn/',
+    body: 'orderField=5_1_-1&pageIndex=1&pageNum=30&pageType=5&deviceid=Wap&plat=Wap&product=EFund&version=2.0.0&abnormal=3&rankSy=1',
+    method: 'POST',
+    mode: 'cors',
+    credentials: 'omit',
+  }
+);
 
 /*
 https://fund.eastmoney.com/trade/hh.html#zwf_,sc_z,st_desc
 */
-fetch("https://fund.eastmoney.com/data/fundtradenewapi.aspx?ft=hh&sc=z&st=desc&pi=1&pn=150&cp=&ct=&cd=&ms=&fr=&plevel=&fst=&ftype=&fr1=&fl=0&isab=1", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"Windows\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin"
-  },
-  "referrer": "https://fund.eastmoney.com/trade/hh.html",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "include"
-});
-
-
+fetch(
+  'https://fund.eastmoney.com/data/fundtradenewapi.aspx?ft=hh&sc=z&st=desc&pi=1&pn=150&cp=&ct=&cd=&ms=&fr=&plevel=&fst=&ftype=&fr1=&fl=0&isab=1',
+  {
+    headers: {
+      accept: '*/*',
+      'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+      'sec-ch-ua':
+        '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"',
+      'sec-ch-ua-mobile': '?0',
+      'sec-ch-ua-platform': '"Windows"',
+      'sec-fetch-dest': 'empty',
+      'sec-fetch-mode': 'cors',
+      'sec-fetch-site': 'same-origin',
+    },
+    referrer: 'https://fund.eastmoney.com/trade/hh.html',
+    body: null,
+    method: 'GET',
+    mode: 'cors',
+    credentials: 'include',
+  }
+);
 
 /*
 布林带+均线+KDJ+macd
@@ -75,8 +81,6 @@ firewall-cmd --reload  刷新防火墙
 
 
 */
-
-
 
 // 根据关键词返回基金
 router.post('/fund_mysql_query_keywords', async (req, res) => {
@@ -89,7 +93,7 @@ router.post('/fund_mysql_query_keywords', async (req, res) => {
     });
     return;
   }
-console.log('查询text',text);
+  console.log('查询text', text);
   let connection;
   try {
     connection = await pool.getConnection();
@@ -107,13 +111,13 @@ WHERE
     AND no_keyword = 'y'
     AND is_sale = 'y'
 `;
-/*
+    /*
 AND (no_keyword IS NULL OR no_keyword = 'n')
 AND (is_sale IS NULL OR is_sale != 'y')
 */
     // 使用connection.execute而不是connection.query来确保参数化查询正确执行
     const [results] = await Promise.race([
-      connection.execute(query, [`%${text}%`]),// 使用参数化查询防止SQL注入
+      connection.execute(query, [`%${text}%`]), // 使用参数化查询防止SQL注入
       new Promise((_, reject) =>
         setTimeout(() => reject(new Error('数据库查询超时')), 15 * 1000)
       ), // 查询超时时间（毫秒）
@@ -139,3 +143,38 @@ AND (is_sale IS NULL OR is_sale != 'y')
     }
   }
 });
+
+/* 分红红利  2025年12月7日19:39:10
+023585
+022980
+022951
+022678
+022098
+022663
+021962
+021584
+021376
+020467
+019261
+016129
+018382 观察
+018388
+015558
+012762
+008115 观察
+008164
+007606
+007467
+003025 观察
+
+021735
+021551
+021458
+020603
+016514
+007829
+007760
+005125
+
+501029
+*/
