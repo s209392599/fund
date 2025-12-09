@@ -7,7 +7,8 @@ const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代�
 var keyword_arr = [
 ];
 // 不要的基金类型关键词
-var noFundType = ['指数型','QDII-','债券型-','货币型-'];
+// FOF-进取、FOF-均衡、FOF-稳健、QDII-FOF
+var noFundType = ['指数型','QDII-','债券型-','货币型-','FOF'];
 // 不以什么结尾
 var noEndWith = ['A', 'ETF', '(后端)'];
 
