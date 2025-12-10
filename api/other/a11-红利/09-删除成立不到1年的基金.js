@@ -1,8 +1,6 @@
 const fs = require('fs').promises;
 const filterJson = require('./data/filter.json');
-// 删除总资产小于1亿或大于150亿的基金
-const min_totalAsset = 1 * 10000 * 10000; // 1亿
-const max_totalAsset = 9  * 10000 * 10000; // 9000亿
+
 
 let len_filter = filterJson.length;
 const deleteList = [];
@@ -19,11 +17,11 @@ async function main() {
         'utf-8' // 明确指定编码
       );
       const fund_data = JSON.parse(fundDetailPageInfo);
-      const obj_1 = fund_data.investmentDistributionNewOfItem || {};
-      const obj_2 = obj_1.investmentDistribution || {};
-      const totalAsset = obj_2.totalAsset || 0;
-      // if (totalAsset < min_totalAsset || totalAsset > max_totalAsset) {
-      if (totalAsset < min_totalAsset) {
+      const obj_1 = fund_data.fundProfileOfItem || {};
+      const establishedDate = obj_1.establishedDate || '';// 2023-01-01
+
+      // 成立时间不到1年的添加到deleteList
+      if (new Date().getTime() - new Date(establishedDate).getTime() < 365 * 24 * 60 * 60 * 1000) {
         deleteList.push(fund_code);
       }
     } catch (error) {

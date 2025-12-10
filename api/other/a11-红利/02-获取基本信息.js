@@ -58,7 +58,7 @@ async function processInLoop() {
     const fund_code = item.fund_code;
     const fund_name = item.fund_name;
     console.log(
-      `${fund_code} -- ${fund_name} -- ${getTime()} -- 第${index_start}个`
+      `${fund_code} -- ${fund_name} -- ${getTime()} -- 第${index_start + 1}个`
     );
     await getHisData(fund_code);
     index_start++;

@@ -1,11 +1,10 @@
 const fs = require('fs').promises;
 const filterJson = require('./data/filter.json');
 
-var max_month_3 = 1; // 3个月内收益率 要大于1
-var max_month_6 = 3; // 近3月
-var max_year_1 = 6; // 近1年
-var max_year_3 = max_year_1 * 3; // 近3年
-var tong_ming = 0.5; // 同类型排名不能超过50%
+var max_month_3 = -10; // 3个月内收益率 要大于1
+var max_month_6 = -10; // 近3月
+var max_year_1 = 3; // 近1年
+var tong_ming = 0.5; // 同类型排名不能 一直是后50%
 
 let len_filter = filterJson.length;
 const deleteList = [];
@@ -73,9 +72,9 @@ async function main() {
         let [num_21, num_22] = (obj_3[3].rank || '0/0').split('/');
         let [num_31, num_32] = (obj_3[4].rank || '0/0').split('/');
 
-        let flag_1 = Number(num_11 || 0) / Number(num_12 || 1) >= tong_ming;
-        let flag_2 = Number(num_21 || 0) / Number(num_22 || 1) >= tong_ming;
-        let flag_3 = Number(num_31 || 0) / Number(num_32 || 1) >= tong_ming;
+        let flag_1 = Number(num_11 || 0) / Number(num_12 || 1) <= tong_ming;
+        let flag_2 = Number(num_21 || 0) / Number(num_22 || 1) <= tong_ming;
+        let flag_3 = Number(num_31 || 0) / Number(num_32 || 1) <= tong_ming;
         if (flag_1 && flag_2 && flag_3) {
           if (!deleteList.includes(fund_code)) {
             deleteList.push(fund_code);

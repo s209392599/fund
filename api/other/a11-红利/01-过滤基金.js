@@ -8,8 +8,7 @@ var keyword_arr = [
   '红利',
 ];
 // 不要的基金类型关键词
-var noFundType = [];
-// var noFundType = ['债券', '货币', '指数'];
+var noFundType = ['债券', '货币'];
 // 不以什么结尾
 var noEndWith = ['A', 'ETF', '(后端)'];
 
