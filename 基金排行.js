@@ -4,6 +4,12 @@
 创金合信全球芯片产业股票发起(QDII)C(017654)
 摩根欧洲动力策略股票(QDII)C(019450)
 
+017513	广发北证50成份
+017516	易方达北证50成
+018113	工银北证50成份
+
+CPO：
+022365-永赢科技智选混合发起C
 
 vue-draggable-plus
 import { VueDraggable } from 'vue-draggable-plus';
