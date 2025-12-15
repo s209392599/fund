@@ -7,7 +7,6 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>指数缩略图</title>
-  <script src="https://unpkg.com/vue@3.5.20/dist/vue.global.js"></script>
   <style>
     * {
       margin: 0;
@@ -26,111 +25,134 @@
     .list_item {
       border: 1px solid #b39c9c;
       border-radius: 4px;
-      padding: 8px;
+      padding: 4px;
       overflow: hidden;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+    }
 
-      .list_img {
-        width: 480px;
+    .list_img {
+      width: 480px;
+      max-width: 100%;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .list_item {
+        width: 490px;
         max-width: 100%;
+      }
+    }
+
+    @media (max-width: 490px) {
+      .list_item {
+        width: 100%;
+        min-width: 280px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div id="app" style="padding: 4px 0px 15px 0px;">
-    <div class="page_wrapper pd-10">
-      <div class="main_box">
-        <!-- 上证指数 -->
-        <div class="list_item flex flex-col items-center" v-for="item in list" :key="item.name">
-          <img class="list_img" :src="item.zhang_now" />
-          <img class="list_img" :src="item.zhang_history" />
-        </div>
+  <div id="app">
+    <div class="page_wrapper" style="padding: 10px 10px 15px 10px;">
+      <div class="main_box" id="mainBox">
+        <!-- 动态内容将通过JavaScript生成 -->
       </div>
     </div>
   </div>
 
   <script>
-    const { createApp, reactive } = Vue;
+    // 数据定义
     const pre_now = `https://webquotepic.eastmoney.com/GetPic.aspx?`;
     const pre_his = `https://webquoteklinepic.eastmoney.com/GetPic.aspx?`;
 
-    function initVue3() {
-      const app = createApp({
-        data() {
-          return {
-            list: [
-              {
-                name: '上证指数',
-                zhang_now: pre_now + 'imageType=r&nid=1.000001', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000001', // 历史涨幅
-              },
-              {
-                name: '深成指数',
-                zhang_now: pre_now + 'imageType=r&nid=0.399001', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=0.399001', // 历史涨幅
-              },
-              {
-                name: '恒生指数',
-                zhang_now: pre_now + 'imageType=r&nid=100.HSI', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=100.HSI', // 历史涨幅
-              },
-              {
-                name: '纳斯达克指数',
-                zhang_now: pre_now + 'imageType=r&nid=100.NDX', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=100.NDX', // 历史涨幅
-              },
-              {
-                name: '创业板指',
-                zhang_now: pre_now + 'imageType=r&nid=0.399006', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=0.399006', // 历史涨幅
-              },
-              {
-                name: '科创50',
-                zhang_now: pre_now + 'imageType=r&nid=1.000688', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000688', // 历史涨幅
-              },
-              {
-                name: '北证50',
-                zhang_now: pre_now + 'imageType=r&nid=0.899050', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=0.899050', // 历史涨幅
-              },
-              {
-                name: '中证A500',
-                zhang_now: pre_now + 'imageType=r&nid=1.000510', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000510', // 历史涨幅
-              },
-              {
-                name: '国企指数',
-                zhang_now: pre_now + 'imageType=r&nid=1.000012', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000012', // 历史涨幅
-              },
-              {
-                name: '黄金',
-                zhang_now: pre_now + 'imageType=r&nid=101.GC00Y', // 今日涨幅
-                zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=101.GC00Y', // 历史涨幅
-              },
-            ],
-          };
-        },
-        mounted() {
-          // if (!info.isRendered) {
-          //   render_2(info.arr_1);
-          //   info.isRendered = true;
-          // }
-        },
-        methods: {
-          getzhanghtml(data) {
+    const listData = [
+      {
+        name: '上证指数',
+        zhang_now: pre_now + 'imageType=r&nid=1.000001', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000001', // 历史涨幅
+      },
+      {
+        name: '深成指数',
+        zhang_now: pre_now + 'imageType=r&nid=0.399001', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=0.399001', // 历史涨幅
+      },
+      {
+        name: '恒生指数',
+        zhang_now: pre_now + 'imageType=r&nid=100.HSI', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=100.HSI', // 历史涨幅
+      },
+      {
+        name: '纳斯达克指数',
+        zhang_now: pre_now + 'imageType=r&nid=100.NDX', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=100.NDX', // 历史涨幅
+      },
+      {
+        name: '创业板指',
+        zhang_now: pre_now + 'imageType=r&nid=0.399006', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=0.399006', // 历史涨幅
+      },
+      {
+        name: '科创50',
+        zhang_now: pre_now + 'imageType=r&nid=1.000688', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000688', // 历史涨幅
+      },
+      {
+        name: '北证50',
+        zhang_now: pre_now + 'imageType=r&nid=0.899050', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=0.899050', // 历史涨幅
+      },
+      {
+        name: '中证A500',
+        zhang_now: pre_now + 'imageType=r&nid=1.000510', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000510', // 历史涨幅
+      },
+      {
+        name: '国企指数',
+        zhang_now: pre_now + 'imageType=r&nid=1.000012', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=1.000012', // 历史涨幅
+      },
+      {
+        name: '黄金',
+        zhang_now: pre_now + 'imageType=r&nid=101.GC00Y', // 今日涨幅
+        zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=101.GC00Y', // 历史涨幅
+      },
+    ];
 
-          }
-        },
+    // 动态生成列表项
+    function generateListItems() {
+      const mainBox = document.getElementById('mainBox');
+
+      listData.forEach(item => {
+        // 创建外层容器
+        const listItem = document.createElement('div');
+        listItem.className = 'list_item';
+
+        // 创建今日涨幅图片
+        const imgNow = document.createElement('img');
+        imgNow.className = 'list_img';
+        imgNow.src = item.zhang_now;
+        imgNow.alt = item.name + ' 今日涨幅';
+
+        // 创建历史涨幅图片
+        const imgHistory = document.createElement('img');
+        imgHistory.className = 'list_img';
+        imgHistory.src = item.zhang_history;
+        imgHistory.alt = item.name + ' 历史涨幅';
+
+        // 组装元素
+        listItem.appendChild(imgNow);
+        listItem.appendChild(imgHistory);
+        mainBox.appendChild(listItem);
       });
-      app.mount('#app');
     }
-    initVue3();
+
+    // 页面加载完成后执行
+    document.addEventListener('DOMContentLoaded', function () {
+      generateListItems();
+    });
   </script>
 </body>
 

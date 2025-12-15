@@ -15,7 +15,7 @@ jd_totalAsset
 */
 
 const info = reactive({
-  text: '北证50',
+  text: '红利',
   step: 1,
   tableData: [], // 列表数据
   tableHeight: 400,

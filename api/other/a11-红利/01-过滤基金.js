@@ -5,7 +5,7 @@ const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代�
 
 // 包含的关键词
 var keyword_arr = [
-  '红利',
+  '红利'
 ];
 // 不要的基金类型关键词
 var noFundType = ['债券', '货币'];

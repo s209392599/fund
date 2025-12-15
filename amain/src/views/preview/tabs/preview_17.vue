@@ -96,11 +96,7 @@ const info = reactive({
   <div class="page_wrapper pd-10">
     <div class="main_box">
       <!-- 上证指数 -->
-      <div
-        class="list_item flex flex-col items-center"
-        v-for="item in info.list"
-        :key="item.name"
-      >
+      <div class="list_item flex flex-col items-center" v-for="item in info.list" :key="item.name">
         <img class="list_img" :src="item.zhang_now" />
         <img class="list_img" :src="item.zhang_history" />
       </div>
@@ -115,13 +111,15 @@ const info = reactive({
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .list_item {
   border: 1px solid #b39c9c;
   border-radius: 4px;
   padding: 8px;
   overflow: hidden;
+
   .list_img {
-    width: 480px;
+    width: 320px;
     max-width: 100%;
   }
 }

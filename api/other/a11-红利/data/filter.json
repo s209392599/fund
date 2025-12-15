@@ -1,1 +1,687 @@
-[]
+[
+  {
+    "fund_code": "008115",
+    "fund_name": "天弘中证红利低波动100联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "016129",
+    "fund_name": "景顺长城中证红利低波动100ETF发起联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "019854",
+    "fund_name": "博时中证红利低波动100指数发起式C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "020157",
+    "fund_name": "交银中证红利低波动100指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "020250",
+    "fund_name": "中银中证央企红利50指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "020462",
+    "fund_name": "华安中证国有企业红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "020467",
+    "fund_name": "华泰柏瑞中证中央企业红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "020673",
+    "fund_name": "招商中证红利低波动100指数发起式C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "020802",
+    "fund_name": "易方达红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "020817",
+    "fund_name": "湘财红利量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "020867",
+    "fund_name": "华安恒生港股通中国央企红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021045",
+    "fund_name": "国泰香港国企红利ETF联接(QDII)C",
+    "fund_type": "指数型-海外股票"
+  },
+  {
+    "fund_code": "021047",
+    "fund_name": "平安港股通红利精选混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021056",
+    "fund_name": "南方标普中国A股大盘红利低波50ETF联接I",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021100",
+    "fund_name": "博时中证红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021143",
+    "fund_name": "华夏港股通央企红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021168",
+    "fund_name": "中泰红利量化选股股票发起C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "021188",
+    "fund_name": "摩根红利优选股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "021244",
+    "fund_name": "富国中证中央企业红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021248",
+    "fund_name": "兴全红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021376",
+    "fund_name": "中欧中证红利低波动100指数发起C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021389",
+    "fund_name": "银河中证红利低波动100指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021400",
+    "fund_name": "广发中证红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021418",
+    "fund_name": "泰康红利低波ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021456",
+    "fund_name": "农银红利甄选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021458",
+    "fund_name": "易方达恒生红利低波ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021483",
+    "fund_name": "华夏中证红利低波动ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021514",
+    "fund_name": "富国港股通红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021516",
+    "fund_name": "汇添富红利智选混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021551",
+    "fund_name": "博时中证红利低波动100ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021562",
+    "fund_name": "天弘中证央企红利50指数发起C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021571",
+    "fund_name": "华夏红利量化选股股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "021584",
+    "fund_name": "中欧中证港股通央企红利指数发起(QDII)C",
+    "fund_type": "指数型-海外股票"
+  },
+  {
+    "fund_code": "021630",
+    "fund_name": "华安红利机遇股票发起式C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "021651",
+    "fund_name": "东方红红利量化选股混合发起C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021702",
+    "fund_name": "国泰上证国企红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021708",
+    "fund_name": "富国中证红利低波动ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021735",
+    "fund_name": "景顺长城沪港深红利成长低波指数E",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021815",
+    "fund_name": "华泰柏瑞红利量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021860",
+    "fund_name": "浙商汇金红利精选混合型发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021866",
+    "fund_name": "嘉实沪深300红利低波动ETF联接I",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021882",
+    "fund_name": "鑫元华证沪深港红利50指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021920",
+    "fund_name": "国泰海通红利量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021932",
+    "fund_name": "兴业华证沪港深红利100指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021962",
+    "fund_name": "景顺长城中证国新港股通央企红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021972",
+    "fund_name": "南方中证国新港股通央企红利ETF发起联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021976",
+    "fund_name": "创金合信红利甄选量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "021980",
+    "fund_name": "兴全红利量化选股股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "021984",
+    "fund_name": "中信保诚红利领航量化股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "022001",
+    "fund_name": "浙商汇金红利机遇混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022098",
+    "fund_name": "长城中证红利低波100ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022152",
+    "fund_name": "国投瑞银中证港股通央企红利指数发起式C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022154",
+    "fund_name": "华泰柏瑞红利精选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022158",
+    "fund_name": "东兴红利优选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022169",
+    "fund_name": "大成中证红利指数E",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022212",
+    "fund_name": "人保红利智享混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022275",
+    "fund_name": "国泰港股红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022291",
+    "fund_name": "兴业中证红利指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022331",
+    "fund_name": "鑫元中证800红利低波动ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022343",
+    "fund_name": "长盛中证红利低波动100指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022345",
+    "fund_name": "景顺长城红利量化选股股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "022489",
+    "fund_name": "浦银安盛红利量化混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022496",
+    "fund_name": "嘉实红利精选混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022520",
+    "fund_name": "泓德红利优选混合(LOF)C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022598",
+    "fund_name": "富国红利质选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022663",
+    "fund_name": "华泰柏瑞港股通红利ETF联接基金I",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022678",
+    "fund_name": "华泰柏瑞中证红利低波ETF联接I",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022720",
+    "fund_name": "广发中证国新港股通央企红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022749",
+    "fund_name": "平安港股通红利优选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "022888",
+    "fund_name": "华宝标普港股通低波红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022897",
+    "fund_name": "嘉实沪深300红利低波动ETF联接Y",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022900",
+    "fund_name": "创金合信中证红利低波动指数Y",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022903",
+    "fund_name": "富国中证红利指数增强Y",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022925",
+    "fund_name": "易方达中证红利ETF联接发起式Y",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022927",
+    "fund_name": "大成中证红利指数Y",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022951",
+    "fund_name": "华泰柏瑞中证红利低波ETF联接Y",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022980",
+    "fund_name": "天弘中证红利低波动100联接Y",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023107",
+    "fund_name": "光大保德信红利量化混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "023163",
+    "fund_name": "银河上证国有企业红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023170",
+    "fund_name": "兴证资管国企红利优选混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "023183",
+    "fund_name": "太平中证红利指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023187",
+    "fund_name": "国联安红利慧选混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "023322",
+    "fund_name": "华宝中证800红利低波动ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023535",
+    "fund_name": "永赢中证港股通央企红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023573",
+    "fund_name": "万家中证港股通央企红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023585",
+    "fund_name": "中欧红利智选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "023614",
+    "fund_name": "中欧中证红利低波动指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023747",
+    "fund_name": "华富新华中诚信红利价值指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "023807",
+    "fund_name": "招商红利量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024173",
+    "fund_name": "信澳红利回报混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024219",
+    "fund_name": "融通中证诚通央企红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024221",
+    "fund_name": "汇安中证红利低波动100指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024253",
+    "fund_name": "申万菱信中证红利指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024256",
+    "fund_name": "宏利消费红利指数I",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024258",
+    "fund_name": "鑫元中证800红利低波动ETF联接I",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024263",
+    "fund_name": "华夏中证红利质量ETF发起式联接D",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024355",
+    "fund_name": "国泰红利智选混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024362",
+    "fund_name": "中欧红利慧选混合发起C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024372",
+    "fund_name": "天弘中证港股通央企红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024386",
+    "fund_name": "国金红利量化选股混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024399",
+    "fund_name": "浦银安盛港股通央企红利混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024497",
+    "fund_name": "鑫元华证沪深港红利50指数I",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024565",
+    "fund_name": "易方达中证红利价值ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024611",
+    "fund_name": "平安上证红利低波动指数E",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024631",
+    "fund_name": "兴银中证红利低波动指数发起C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024773",
+    "fund_name": "摩根标普港股通低波红利ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024787",
+    "fund_name": "汇添富港股通红利回报混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024873",
+    "fund_name": "农银中证红利低波动100指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024907",
+    "fund_name": "中加沪深300红利低波动指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "024915",
+    "fund_name": "华夏红利价值混合B",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024916",
+    "fund_name": "华夏红利价值混合C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024917",
+    "fund_name": "华夏红利价值混合D",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024918",
+    "fund_name": "华夏红利价值混合E",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "024919",
+    "fund_name": "易方达港股通红利混合C",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "024924",
+    "fund_name": "招商资管智达红利优选混合发起C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "025190",
+    "fund_name": "交银中证港股通央企红利指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "025201",
+    "fund_name": "景顺长城国证港股通红利低波动率ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "025389",
+    "fund_name": "万家中证800红利低波动指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "025393",
+    "fund_name": "建信红利严选混合发起C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "025412",
+    "fund_name": "安信红利量化选股股票C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "025433",
+    "fund_name": "东方中证红利低波动100指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "025458",
+    "fund_name": "申万菱信中证A500红利低波动指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "025518",
+    "fund_name": "东方红中证东方红红利低波动指数D",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "025571",
+    "fund_name": "鹏安中证红利指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "025662",
+    "fund_name": "汇添富标普港股通低波红利指数C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "100029",
+    "fund_name": "富国天成红利混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "202009",
+    "fund_name": "南方盛元红利混合",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "257040",
+    "fund_name": "国联安红利混合",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "481006",
+    "fund_name": "工银红利混合",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "501029",
+    "fund_name": "华宝标普中国A股红利机会ETF联接A(LOF)",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "501089",
+    "fund_name": "方正富邦消费红利指数增强(LOF)",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "501306",
+    "fund_name": "汇添富港股红利ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "519971",
+    "fund_name": "长信改革红利混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
+    "fund_code": "540009",
+    "fund_name": "汇丰晋信消费红利股票",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "560002",
+    "fund_name": "益民红利成长混合",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "563690",
+    "fund_name": "红利低波ETF永赢",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "690009",
+    "fund_name": "民生加银红利回报混合",
+    "fund_type": "混合型-灵活"
+  }
+]

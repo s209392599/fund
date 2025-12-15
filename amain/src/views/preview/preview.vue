@@ -135,7 +135,7 @@ const info = reactive({
     {
       id: 18,
       show: true,
-      name: '涨幅指数',
+      name: '指数涨幅',
       component: markRaw(
         defineAsyncComponent(() => import('./tabs/preview_18.vue'))
       ),
@@ -194,25 +194,13 @@ const handleClick = (tab) => {
 
 <template>
   <div class="wrapper">
-    <el-tabs
-      v-model="info.active_tab"
-      @tab-click="handleClick"
-      class="page-tabs"
-    >
-      <el-tab-pane
-        v-for="item in info.list_tabs"
-        :key="item.id"
-        :label="item.name"
-        :name="item.id"
-      >
+    <el-tabs v-model="info.active_tab" @tab-click="handleClick" class="page-tabs">
+      <el-tab-pane v-for="item in info.list_tabs" :key="item.id" :label="item.name" :name="item.id">
       </el-tab-pane>
     </el-tabs>
 
     <div class="main">
-      <component
-        :is="info.currentTabComponent"
-        v-if="info.currentTabComponent"
-      />
+      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" />
     </div>
   </div>
 </template>

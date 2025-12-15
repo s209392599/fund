@@ -72,6 +72,10 @@ const info = reactive({
       zhang_now: pre_now + 'imageType=RSINDEX&nid=2.932000', // 今日涨幅
     },
     {
+      name: '中证红利',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000922', // 今日涨幅
+    },
+    {
       name: '国债指数',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000012', // 今日涨幅
     },
@@ -91,11 +95,7 @@ const info = reactive({
   <div class="page_wrapper pd-10">
     <div class="main_box">
       <!-- 上证指数 -->
-      <div
-        class="list_item flex flex-col items-center"
-        v-for="item in info.list"
-        :key="item.name"
-      >
+      <div class="list_item flex flex-col items-center" v-for="item in info.list" :key="item.name">
         <img class="list_img" :src="item.zhang_now" />
       </div>
     </div>
@@ -109,13 +109,15 @@ const info = reactive({
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .list_item {
   border: 1px solid #b39c9c;
   border-radius: 4px;
   padding: 8px;
   overflow: hidden;
+
   .list_img {
-    width: 480px;
+    width: 190px;
     max-width: 100%;
   }
 }
