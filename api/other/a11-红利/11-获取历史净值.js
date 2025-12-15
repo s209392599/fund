@@ -4,7 +4,7 @@ const filterJson = require('./data/filter.json');
 
 const len_filter = filterJson.length;
 let index_start = 0;
-const his_day = 260; // 每次获取260天的净值
+const his_day = 245 * 5; // 每次获取260天的净值
 
 // 获取时间 2025-11-16 15:32：00的函数
 function getTime() {

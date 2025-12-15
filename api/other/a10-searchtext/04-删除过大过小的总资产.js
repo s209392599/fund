@@ -22,7 +22,7 @@ async function main() {
       const obj_1 = fund_data.investmentDistributionNewOfItem || {};
       const obj_2 = obj_1.investmentDistribution || {};
       const totalAsset = obj_2.totalAsset || 0;
-      if (totalAsset < min_totalAsset || totalAsset > max_totalAsset) {
+      if (!fundScale.includes('亿')) {
         deleteList.push(fund_code);
       }
     } catch (error) {
