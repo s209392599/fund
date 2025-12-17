@@ -29,8 +29,6 @@ https://webquotepic.eastmoney.com/GetPic.aspx?id=899001_TB&imageType=FFRS&type=F
 https://webquotepic.eastmoney.com/GetPic.aspx?imageType=RS4UI&nid=100.HSCEI  国企指数
 来源：https://quote.eastmoney.com/gb/zsHSI.html
 
-
-
 */
 
 const pre_now = `https://webquotepic.eastmoney.com/GetPic.aspx?`;
@@ -48,10 +46,15 @@ const info = reactive({
       zhang_now: pre_now + 'imageType=r&nid=0.399001', // 今日涨幅
       zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=0.399001', // 历史涨幅
     },
+    // {
+    //   name: '恒生指数',
+    //   zhang_now: pre_now + 'imageType=r&nid=100.HSI', // 今日涨幅
+    //   zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=100.HSI', // 历史涨幅
+    // },
     {
-      name: '恒生指数',
-      zhang_now: pre_now + 'imageType=r&nid=100.HSI', // 今日涨幅
-      zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=100.HSI', // 历史涨幅
+      name: '恒生科技指数',
+      zhang_now: pre_now + 'imageType=r&nid=124.HSTECH', // 今日涨幅
+      zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=124.HSTECH', // 历史涨幅
     },
     {
       name: '纳斯达克指数',
@@ -87,6 +90,11 @@ const info = reactive({
       name: '黄金',
       zhang_now: pre_now + 'imageType=r&nid=101.GC00Y', // 今日涨幅
       zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=101.GC00Y', // 历史涨幅
+    },
+    {
+      name: '日经225',
+      zhang_now: pre_now + 'imageType=r&nid=100.N225', // 今日涨幅
+      zhang_history: pre_his + 'imageType=KXL&formula=BOLL&nid=100.N225', // 历史涨幅
     },
   ],
 });

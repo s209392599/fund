@@ -16,15 +16,6 @@ const info = reactive({
       desc: '',
     },
     {
-      id: 14,
-      show: true,
-      name: '标准基金',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_14.vue'))
-      ),
-      desc: '',
-    },
-    {
       id: 7,
       show: true,
       name: '基金维护',
@@ -34,20 +25,11 @@ const info = reactive({
       desc: '',
     },
     {
-      id: 2,
+      id: 14,
       show: true,
-      name: '均线预览',
+      name: '标准基金',
       component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_02.vue'))
-      ),
-      desc: '',
-    },
-    {
-      id: 4,
-      show: true,
-      name: '业绩表现',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_04.vue'))
+        defineAsyncComponent(() => import('./tabs/preview_14.vue'))
       ),
       desc: '',
     },
@@ -59,15 +41,6 @@ const info = reactive({
         defineAsyncComponent(() => import('./tabs/preview_10.vue'))
       ),
       desc: '标准基金的对比 和 手动挑选一些基金进行对比',
-    },
-    {
-      id: 11,
-      show: true,
-      name: '涨幅对比',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_11.vue'))
-      ),
-      desc: '手动挑选一些基金进行对比',
     },
     {
       id: 5,
@@ -99,27 +72,9 @@ const info = reactive({
     {
       id: 13,
       show: true,
-      name: '基金持仓',
+      name: '基金对比',
       component: markRaw(
         defineAsyncComponent(() => import('./tabs/preview_13.vue'))
-      ),
-      desc: '',
-    },
-    {
-      id: 15,
-      show: true,
-      name: '大屏信息',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_15.vue'))
-      ),
-      desc: '',
-    },
-    {
-      id: 16,
-      show: true,
-      name: '红利',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_16.vue'))
       ),
       desc: '',
     },
@@ -163,7 +118,7 @@ if ([null, '', undefined].includes(user_email)) {
 } else {
   console.log('账号为：', user_email);
 
-  if (['209392599@qq.com'].includes(user_email)) {
+  if (['209392599@qq.com', '203812677@qq.com'].includes(user_email)) {
     info.list_tabs = info.list_default.filter((item) => item.show);
   } else {
     info.list_tabs = info.list_default.filter(

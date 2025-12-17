@@ -69,6 +69,10 @@ export async function server_fund_manage_fund_sort(data) {
 export async function server_fund_amain_getfundgz(data) {
   return request.post('/fund_amain_getfundgz', data);
 }
+// fund_jd_getFundTradeRulesPageInfo 获取京东基金交易规则
+export async function server_fund_jd_getFundTradeRulesPageInfo(data) {
+  return request.post('/fund_jd_getFundTradeRulesPageInfo', data);
+}
 
 // --------------------------------------------------------------  下面是数据库操作
 

@@ -36,8 +36,20 @@ const info = reactive({
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000300', // 今日涨幅
     },
     {
+      name: '港股通央企红利',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=2.931233', // 今日涨幅
+    },
+    {
+      name: '中证红利',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000922', // 今日涨幅
+    },
+    {
       name: '恒生指数',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=100.HSI', // 今日涨幅
+    },
+    {
+      name: '恒生科技指数',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=124.HSTECH', // 今日涨幅
     },
     {
       name: '纳斯达克',
@@ -72,10 +84,6 @@ const info = reactive({
       zhang_now: pre_now + 'imageType=RSINDEX&nid=2.932000', // 今日涨幅
     },
     {
-      name: '中证红利',
-      zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000922', // 今日涨幅
-    },
-    {
       name: '国债指数',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000012', // 今日涨幅
     },
@@ -86,6 +94,10 @@ const info = reactive({
     {
       name: '净流出',
       zhang_now: pre_now + 'id=899001_TB&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '日经225',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=100.N225', // 今日涨幅
     },
   ],
 });

@@ -1,0 +1,45 @@
+// 京东金融的一些接口
+const express = require('express');
+const router = express.Router();
+const fetch = require('node-fetch');
+const fs = require('fs');
+const path = require('path');
+const CustomFn = require('../../CustomFn.js');
+const noText = require('../../utils/noText.js'); // 排除的关键词
+const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
+
+
+router.post('/fund_jd_getFundTradeRulesPageInfo', (req, res) => {
+  const { fund_code = '', pageSize = 10 } = req.body;
+
+  if (!fund_code) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundTradeRulesPageInfo?reqData={"fundCode":"${fund_code}"}`;
+    fetch(u, {})
+      .then((data) => data.json())
+      .then((data) => {
+        let resultData = data.resultData || {};
+        let datas = resultData.datas || {};
+        res.send({
+          code: 200,
+          msg: '成功',
+          data: datas,
+        });
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fund_code}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
+module.exports = router;
