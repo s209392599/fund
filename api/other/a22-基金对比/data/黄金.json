@@ -1,0 +1,92 @@
+[
+  {
+    "fund_code": "000217",
+    "fund_name": "华安黄金ETF联接C",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "002611",
+    "fund_name": "博时黄金ETF联接C",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "002963",
+    "fund_name": "易方达黄金ETF联接C",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "004253",
+    "fund_name": "国泰黄金ETF联接C",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "008143",
+    "fund_name": "工银黄金ETF联接C",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "008702",
+    "fund_name": "华夏黄金ETF联接C",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "018543",
+    "fund_name": "汇添富黄金及贵金属(QDII-LOF-FOF)C",
+    "fund_type": "QDII-商品"
+  },
+  {
+    "fund_code": "020341",
+    "fund_name": "工银黄金ETF联接E",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "020412",
+    "fund_name": "永赢中证沪深港黄金产业股票ETF发起联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021075",
+    "fund_name": "华夏中证沪深港黄金产业股票ETF发起式联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021363",
+    "fund_name": "易方达中证沪深港黄金产业股票指数发起式C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021674",
+    "fund_name": "国泰黄金股ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "021740",
+    "fund_name": "前海开源黄金ETF联接C",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "021959",
+    "fund_name": "南方中证沪深港黄金产业股票指数发起C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "022502",
+    "fund_name": "国泰黄金ETF联接E",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "022653",
+    "fund_name": "华安黄金ETF联接I",
+    "fund_type": "指数型-其他"
+  },
+  {
+    "fund_code": "160719",
+    "fund_name": "嘉实黄金",
+    "fund_type": "QDII-商品"
+  },
+  {
+    "fund_code": "320013",
+    "fund_name": "诺安全球黄金",
+    "fund_type": "QDII-商品"
+  }
+]
