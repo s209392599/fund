@@ -1,6 +1,9 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_02.vue');
 import moniData from './moni.json';
+/*
+011496 多个基金经理
+*/
 
 const info = reactive({
   tableData: moniData,
@@ -55,8 +58,6 @@ const Turn_userFocus = (row) => {
 // 投资方向
 const TurnInvestDirection = (row) => {
   const themeNameList = row?.headerOfItem?.themeNameList || [];
-  console.log('themeNameList', themeNameList);
-
   return themeNameList.map((item) => item.themeName).join('；');
 };
 
@@ -70,6 +71,20 @@ const Turn_company_name = (row) => {
   });
   return company_name;
 };
+// 基金经理
+const Turn_managerInfoList = (row) => {
+  const managerInfoList = row?.fundManagerOfItem?.managerInfoList || [];
+  let html = '';
+  managerInfoList.forEach((item) => {
+    const awardList = item.awardList || [];
+    let str_award = awardList.map((v_1) => v_1.awardTypeName).join('、');// 金牛奖得主 等
+    html += `<div>${item.managerName} ${str_award ? `(${str_award})` : ''}
+        本基金:${item.accessionDate}(${item.employPerformance}%)
+        从业:${item.employmentDate}(${item.yearPerformance}%)
+      </div>`;
+  });
+  return html;
+};
 
 onMounted(() => {
   // getList();
@@ -78,51 +93,19 @@ onMounted(() => {
 
 <template>
   <div class="page_wrapper">
-    <el-table
-      :data="info.tableData"
-      style="width: 100%"
-      border
-      stripe
-      max-height="520"
-    >
-      <el-table-column
-        fixed
-        type="index"
-        align="center"
-        label="序"
-        width="36"
-      ></el-table-column>
+    <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
+      <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
       <el-table-column label="操作" width="60" fixed>
         <template #default="{ row, $index }">
-          <el-button
-            link
-            type="primary"
-            size="small"
-            @click="btn_line_1(row, $index)"
-            >删除</el-button
-          >
+          <el-button link type="primary" size="small" @click="btn_line_1(row, $index)">删除</el-button>
         </template>
       </el-table-column>
 
-      <el-table-column
-        fixed
-        prop="fund_code"
-        align="center"
-        label="基金号"
-        width="64"
-      >
+      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
         <template v-slot="{ row }">
-          <a
-            :href="`https://fund.eastmoney.com/${row.fund_code}.html`"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <span
-              v-if="row.sign === '历史'"
-              style="color: #876ad2; font-weight: 700"
-              >{{ row.fund_code }}</span
-            >
+          <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
+            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
             <span v-else>{{ row.fund_code }}</span>
           </a>
         </template>
@@ -192,6 +175,12 @@ onMounted(() => {
       <el-table-column prop="" label="用户关注" width="258">
         <template v-slot="{ row }">
           <div class="" v-html="Turn_userFocus(row)"></div>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="" label="基金经理" width="540">
+        <template v-slot="{ row }">
+          <div class="" v-html="Turn_managerInfoList(row)"></div>
         </template>
       </el-table-column>
 
