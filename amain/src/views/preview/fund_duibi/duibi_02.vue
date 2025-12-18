@@ -15,6 +15,18 @@ if (localStorage.getItem('fund_duibi_arr')) {
 }
 // console.log(info.tableData);
 
+// 存储基金信息
+const saveFundInfoToLocalstorage = () => {
+  let arr = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type,
+    };
+  });
+  localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
+};
+
 const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
     const item = info.tableData[i];
@@ -26,15 +38,19 @@ const getList = async () => {
       info.tableData[i] = {
         ...info.tableData[i],
         ...res.data,
+        fund_name: res.data?.headerOfItem?.fundName || '',
+        fund_type: res.data?.headerOfItem?.fundTypeName || '',
       };
+      saveFundInfoToLocalstorage();
     });
   }
 };
 
+
 // 删除
 const btn_line_1 = (row, index) => {
   info.tableData.splice(index, 1);
-  localStorage.setItem('fund_duibi_arr', JSON.stringify(info.tableData));
+  saveFundInfoToLocalstorage();
 };
 // 榜单
 const Turn_rankList = (row) => {
