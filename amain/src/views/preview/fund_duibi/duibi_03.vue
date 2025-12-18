@@ -26,7 +26,8 @@ const getList = async () => {
 
 // 删除
 const btn_line_1 = (row, index) => {
-  console.log(row, index);
+  info.tableData.splice(index, 1);
+  localStorage.setItem('fund_duibi_arr', JSON.stringify(info.tableData));
 };
 // 买入费率
 const purchaseFeeRatio = (row) => {
@@ -63,51 +64,19 @@ onMounted(() => {
 
 <template>
   <div class="page_wrapper">
-    <el-table
-      :data="info.tableData"
-      style="width: 100%"
-      border
-      stripe
-      max-height="520"
-    >
-      <el-table-column
-        fixed
-        type="index"
-        align="center"
-        label="序"
-        width="36"
-      ></el-table-column>
+    <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
+      <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
       <el-table-column label="操作" width="60" fixed>
         <template #default="{ row, $index }">
-          <el-button
-            link
-            type="primary"
-            size="small"
-            @click="btn_line_1(row, $index)"
-            >删除</el-button
-          >
+          <el-button link type="primary" size="small" @click="btn_line_1(row, $index)">删除</el-button>
         </template>
       </el-table-column>
 
-      <el-table-column
-        fixed
-        prop="fund_code"
-        align="center"
-        label="基金号"
-        width="64"
-      >
+      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
         <template v-slot="{ row }">
-          <a
-            :href="`https://fund.eastmoney.com/${row.fund_code}.html`"
-            target="_blank"
-            style="text-decoration: none"
-          >
-            <span
-              v-if="row.sign === '历史'"
-              style="color: #876ad2; font-weight: 700"
-              >{{ row.fund_code }}</span
-            >
+          <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
+            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
             <span v-else>{{ row.fund_code }}</span>
           </a>
         </template>
@@ -175,12 +144,7 @@ onMounted(() => {
         </template>
       </el-table-column>
 
-      <el-table-column
-        prop=""
-        label="买入费率"
-        width="258"
-        show-overflow-tooltip
-      >
+      <el-table-column prop="" label="买入费率" width="258" show-overflow-tooltip>
         <template v-slot="{ row }">
           <div class="" v-html="purchaseFeeRatio(row)"></div>
         </template>
@@ -204,23 +168,13 @@ onMounted(() => {
         </template>
       </el-table-column>
 
-      <el-table-column
-        prop=""
-        label="卖出到账"
-        width="150"
-        show-overflow-tooltip
-      >
+      <el-table-column prop="" label="卖出到账" width="150" show-overflow-tooltip>
         <template v-slot="{ row }">
           <div class="" v-html="redeemBankProcess(row)"></div>
         </template>
       </el-table-column>
 
-      <el-table-column
-        prop=""
-        label="卖出费率"
-        width="258"
-        show-overflow-tooltip
-      >
+      <el-table-column prop="" label="卖出费率" width="258" show-overflow-tooltip>
         <template v-slot="{ row }">
           <div class="" v-html="redeemFeeRatio(row)"></div>
         </template>

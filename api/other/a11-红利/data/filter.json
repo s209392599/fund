@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "fund_code": "008280",
+    "fund_name": "国泰中证煤炭ETF联接C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "013275",
+    "fund_name": "富国中证煤炭指数(LOF)C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "013596",
+    "fund_name": "招商中证煤炭等权指数(LOF)C",
+    "fund_type": "指数型-股票"
+  },
+  {
+    "fund_code": "016814",
+    "fund_name": "国联中证煤炭指数C",
+    "fund_type": "指数型-股票"
+  }
+]

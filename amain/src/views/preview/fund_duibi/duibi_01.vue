@@ -38,7 +38,8 @@ const btn_fn_02 = () => {
   console.log('删除所有基金');
 };
 const btn_line_1 = (row, index) => {
-  console.log('删除基金', row, index);
+  info.tableData.splice(index, 1);
+  localStorage.setItem('fund_duibi_arr', JSON.stringify(info.tableData));
 };
 const btn_line_2 = (row, index) => {
   console.log('插入到基金', row, index);

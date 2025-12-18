@@ -35,6 +35,7 @@ router.post('/fund_jd_detailPageInfoWithNoPin', (req, res) => {
         delete datas.noticeList;
         delete datas.purchaseProcessOfItem;
         delete datas.question;
+        delete datas.noticeOfItem;// 分红公告等
 
         res.send({
           code: 200,
