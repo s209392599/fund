@@ -73,6 +73,10 @@ export async function server_fund_amain_getfundgz(data) {
 export async function server_fund_jd_getFundTradeRulesPageInfo(data) {
   return request.post('/fund_jd_getFundTradeRulesPageInfo', data);
 }
+// fund_jd_detailPageInfoWithNoPin 获取基金的基本信息
+export async function server_fund_jd_detailPageInfoWithNoPin(data) {
+  return request.post('/fund_jd_detailPageInfoWithNoPin', data);
+}
 
 // --------------------------------------------------------------  下面是数据库操作
 

@@ -273,7 +273,7 @@ router.post('/fund_amain_public_funds', async (req, res) => {
 // 获取基金历史数据
 router.post('/fund_history_data', (req, res) => {
   const { fundcode = '', pageSize = 10 } = req.body;
-console.log('fund_history_data',fundcode,pageSize)
+  console.log('fund_history_data', fundcode, pageSize);
   if (!fundcode) {
     res.send({
       code: 400,
@@ -284,41 +284,6 @@ console.log('fund_history_data',fundcode,pageSize)
   }
   try {
     let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"${fundcode}","pageNum":1,"pageSize":${pageSize},"channel":"9"}`;
-    fetch(u, {})
-      .then((data) => data.json())
-      .then((data) => {
-        let resultData = data.resultData || {};
-        let datas = resultData.datas || {};
-        let netValueList = datas.netValueList || [];
-        // '{"date":"2024-03-26","netValue":"1.3149","dailyProfit":"-0.02","totalNetValue":"1.5429"}'
-        res.send({
-          code: 200,
-          msg: '成功',
-          data: netValueList.reverse(),
-        });
-      });
-  } catch (err) {
-    res.send({
-      code: 400,
-      msg: `${fundcode}未能正确获取到值`,
-      data: [],
-    });
-  }
-});
-
-router.post('/fund_detailPageInfoWithNoPin', (req, res) => {
-  const { fundcode = '', pageSize = 10 } = req.body;
-
-  if (!fundcode) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到基金代码',
-      data: [],
-    });
-    return;
-  }
-  try {
-    let u = `https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?reqData={"fundCode":"${fundcode}","itemId":"","clientVersion":"","channel":"9"}`;
     fetch(u, {})
       .then((data) => data.json())
       .then((data) => {
@@ -540,7 +505,7 @@ router.post('/fund_mysql_query_keywords', async (req, res) => {
     values: [`%${text}%`],
     format: (results) => results,
   });
-})
+});
 
 // router.get('/users/:id', (req, res) => {
 //   const userId = req.params.id;

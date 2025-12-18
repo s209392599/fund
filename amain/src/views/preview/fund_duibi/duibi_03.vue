@@ -3,21 +3,21 @@ console.log('amain/src/views/preview/fund_duibi/duibi_03.vue');
 
 const info = reactive({
   tableData: [],
-})
-// if (localStorage.getItem('fund_duibi_arr')) {
-//   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
-// } else {
-//   localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
-// }
+});
+if (localStorage.getItem('fund_duibi_arr')) {
+  info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
+} else {
+  localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
+}
 console.log(info.tableData);
-
 
 const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
     const item = info.tableData[i];
-    const fund_code = item.fund_code;
 
-    await server_fund_jd_getFundTradeRulesPageInfo({ fund_code: item.fund_code }).then(res => {
+    await server_fund_jd_getFundTradeRulesPageInfo({
+      fund_code: item.fund_code,
+    }).then((res) => {
       console.log(res);
       info.tableData[i].rules = res.data;
     });
@@ -31,45 +31,83 @@ const btn_line_1 = (row, index) => {
 // 买入费率
 const purchaseFeeRatio = (row) => {
   const arr = row?.rules?.purchaseRule?.purchaseFeeRatio || [];
-  return arr.map(item => {
-    return `<div>${item.divideIntervalDesc}  (${item.discountedRate})</div>`;
-  }).join('');
+  return arr
+    .map((item) => {
+      return `<div>${item.divideIntervalDesc}  (${item.discountedRate})</div>`;
+    })
+    .join('');
 };
 // 卖出费率
 const redeemFeeRatio = (row) => {
   const arr = row?.rules?.redeemRule?.redeemFeeRatio || [];
-  return arr.map(item => {
-    return `<div>${item.divideIntervalDesc}  (${item.rate})</div>`;
-  }).join('');
+  return arr
+    .map((item) => {
+      return `<div>${item.divideIntervalDesc}  (${item.rate})</div>`;
+    })
+    .join('');
 };
 // 卖出到账
 const redeemBankProcess = (row) => {
   const arr = row?.rules?.redeemRule?.redeemBankProcess || [];
-  return arr.map(item => {
-    return `<div>${item.title}  (${item.info})</div>`;
-  }).join('');
+  return arr
+    .map((item) => {
+      return `<div>${item.title}  (${item.info})</div>`;
+    })
+    .join('');
 };
 
 onMounted(() => {
-  // getList();
-})
+  getList();
+});
 </script>
 
 <template>
   <div class="page_wrapper">
-    <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
-      <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
+    <el-table
+      :data="info.tableData"
+      style="width: 100%"
+      border
+      stripe
+      max-height="520"
+    >
+      <el-table-column
+        fixed
+        type="index"
+        align="center"
+        label="序"
+        width="36"
+      ></el-table-column>
 
       <el-table-column label="操作" width="60" fixed>
         <template #default="{ row, $index }">
-          <el-button link type="primary" size="small" @click="btn_line_1(row, $index)">删除</el-button>
+          <el-button
+            link
+            type="primary"
+            size="small"
+            @click="btn_line_1(row, $index)"
+            >删除</el-button
+          >
         </template>
       </el-table-column>
 
-      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
+      <el-table-column
+        fixed
+        prop="fund_code"
+        align="center"
+        label="基金号"
+        width="64"
+      >
         <template v-slot="{ row }">
-          <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
-            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
+          <a
+            :href="`https://fund.eastmoney.com/${row.fund_code}.html`"
+            target="_blank"
+            style="text-decoration: none"
+          >
+            <span
+              v-if="row.sign === '历史'"
+              style="color: #876ad2; font-weight: 700"
+              >{{ row.fund_code }}</span
+            >
             <span v-else>{{ row.fund_code }}</span>
           </a>
         </template>
@@ -137,20 +175,22 @@ onMounted(() => {
         </template>
       </el-table-column>
 
-      <el-table-column prop="" label="买入费率" width="258" show-overflow-tooltip>
+      <el-table-column
+        prop=""
+        label="买入费率"
+        width="258"
+        show-overflow-tooltip
+      >
         <template v-slot="{ row }">
           <div class="" v-html="purchaseFeeRatio(row)"></div>
         </template>
       </el-table-column>
-
-
 
       <el-table-column prop="" label="卖出状态" width="70">
         <template v-slot="{ row }">
           <span>{{ row?.rules?.redeemRule?.redeemStatus || '' }}</span>
         </template>
       </el-table-column>
-
 
       <el-table-column prop="" label="最小赎回" width="70">
         <template v-slot="{ row }">
@@ -164,18 +204,27 @@ onMounted(() => {
         </template>
       </el-table-column>
 
-      <el-table-column prop="" label="卖出到账" width="150" show-overflow-tooltip>
+      <el-table-column
+        prop=""
+        label="卖出到账"
+        width="150"
+        show-overflow-tooltip
+      >
         <template v-slot="{ row }">
           <div class="" v-html="redeemBankProcess(row)"></div>
         </template>
       </el-table-column>
 
-      <el-table-column prop="" label="卖出费率" width="258" show-overflow-tooltip>
+      <el-table-column
+        prop=""
+        label="卖出费率"
+        width="258"
+        show-overflow-tooltip
+      >
         <template v-slot="{ row }">
           <div class="" v-html="redeemFeeRatio(row)"></div>
         </template>
       </el-table-column>
-
 
       <!-- <el-table-column prop="point_top" label="高点" width="66"></el-table-column>
 
