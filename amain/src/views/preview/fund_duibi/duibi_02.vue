@@ -169,6 +169,12 @@ onMounted(() => {
             <span>{{ row?.isForSale ? '可买' : '不可买' }}</span>
           </template>
         </el-table-column>
+
+        <el-table-column prop="" label="锁定" width="120">
+          <template v-slot="{ row }">
+            <span>{{ row?.headerOfItem?.lockOrCloseTipsMap?.tag || '' }}</span>
+          </template>
+        </el-table-column>
       </el-table-column>
 
       <!-- https://fundgz.1234567.com.cn/js/007467.js -->
