@@ -81,6 +81,10 @@ export async function server_fund_jd_detailPageInfoWithNoPin(data) {
 export async function server_fund_jd_getFundDividendPageInfo(data) {
   return request.post('/fund_jd_getFundDividendPageInfo', data);
 }
+// fund_jd_InvestmentDistributionPageInfo 获取基金持仓
+export async function server_fund_jd_InvestmentDistributionPageInfo(data) {
+  return request.post('/fund_jd_InvestmentDistributionPageInfo', data);
+}
 
 // --------------------------------------------------------------  下面是数据库操作
 

@@ -1,0 +1,7622 @@
+[
+  {
+    "fund_code": "007467",
+    "fund_name": "华泰柏瑞中证红利低波ETF联接C",
+    "fund_type": "指数型-股票",
+    "restoreDay": 42,
+    "establishmentCycleDesc": "6年157天",
+    "majorChartPointList": [
+      {
+        "yAxis": "0.00",
+        "xAxis": "2024-12-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "-0.89",
+        "xAxis": "2024-12-19",
+        "retracementValue": "-0.89"
+      },
+      {
+        "yAxis": "-1.53",
+        "xAxis": "2024-12-20",
+        "retracementValue": "-1.53"
+      },
+      {
+        "yAxis": "-1.24",
+        "xAxis": "2024-12-23",
+        "retracementValue": "-1.24"
+      },
+      {
+        "yAxis": "-0.32",
+        "xAxis": "2024-12-24",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "0.26",
+        "xAxis": "2024-12-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "-0.12",
+        "xAxis": "2024-12-26",
+        "retracementValue": "-0.38"
+      },
+      {
+        "yAxis": "0.09",
+        "xAxis": "2024-12-27",
+        "retracementValue": "-0.17"
+      },
+      {
+        "yAxis": "0.81",
+        "xAxis": "2024-12-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.10",
+        "xAxis": "2024-12-31",
+        "retracementValue": "-0.71"
+      },
+      {
+        "yAxis": "-1.89",
+        "xAxis": "2025-01-02",
+        "retracementValue": "-2.68"
+      },
+      {
+        "yAxis": "-2.89",
+        "xAxis": "2025-01-03",
+        "retracementValue": "-3.67"
+      },
+      {
+        "yAxis": "-2.66",
+        "xAxis": "2025-01-06",
+        "retracementValue": "-3.45"
+      },
+      {
+        "yAxis": "-2.47",
+        "xAxis": "2025-01-07",
+        "retracementValue": "-3.26"
+      },
+      {
+        "yAxis": "-2.04",
+        "xAxis": "2025-01-08",
+        "retracementValue": "-2.83"
+      },
+      {
+        "yAxis": "-3.16",
+        "xAxis": "2025-01-09",
+        "retracementValue": "-3.94"
+      },
+      {
+        "yAxis": "-4.09",
+        "xAxis": "2025-01-10",
+        "retracementValue": "-4.87"
+      },
+      {
+        "yAxis": "-4.96",
+        "xAxis": "2025-01-13",
+        "retracementValue": "-5.73"
+      },
+      {
+        "yAxis": "-3.72",
+        "xAxis": "2025-01-14",
+        "retracementValue": "-4.49"
+      },
+      {
+        "yAxis": "-3.59",
+        "xAxis": "2025-01-15",
+        "retracementValue": "-4.37"
+      },
+      {
+        "yAxis": "-2.80",
+        "xAxis": "2025-01-16",
+        "retracementValue": "-3.58"
+      },
+      {
+        "yAxis": "-2.93",
+        "xAxis": "2025-01-17",
+        "retracementValue": "-3.71"
+      },
+      {
+        "yAxis": "-2.96",
+        "xAxis": "2025-01-20",
+        "retracementValue": "-3.74"
+      },
+      {
+        "yAxis": "-3.57",
+        "xAxis": "2025-01-21",
+        "retracementValue": "-4.35"
+      },
+      {
+        "yAxis": "-4.87",
+        "xAxis": "2025-01-22",
+        "retracementValue": "-5.64"
+      },
+      {
+        "yAxis": "-3.48",
+        "xAxis": "2025-01-23",
+        "retracementValue": "-4.26"
+      },
+      {
+        "yAxis": "-3.17",
+        "xAxis": "2025-01-24",
+        "retracementValue": "-3.96"
+      },
+      {
+        "yAxis": "-1.90",
+        "xAxis": "2025-01-27",
+        "retracementValue": "-2.69"
+      },
+      {
+        "yAxis": "-3.55",
+        "xAxis": "2025-02-05",
+        "retracementValue": "-4.33"
+      },
+      {
+        "yAxis": "-3.51",
+        "xAxis": "2025-02-06",
+        "retracementValue": "-4.29"
+      },
+      {
+        "yAxis": "-3.43",
+        "xAxis": "2025-02-07",
+        "retracementValue": "-4.21"
+      },
+      {
+        "yAxis": "-3.54",
+        "xAxis": "2025-02-10",
+        "retracementValue": "-4.32"
+      },
+      {
+        "yAxis": "-2.61",
+        "xAxis": "2025-02-11",
+        "retracementValue": "-3.39"
+      },
+      {
+        "yAxis": "-2.36",
+        "xAxis": "2025-02-12",
+        "retracementValue": "-3.15"
+      },
+      {
+        "yAxis": "-2.26",
+        "xAxis": "2025-02-13",
+        "retracementValue": "-3.05"
+      },
+      {
+        "yAxis": "-2.16",
+        "xAxis": "2025-02-14",
+        "retracementValue": "-2.95"
+      },
+      {
+        "yAxis": "-2.26",
+        "xAxis": "2025-02-17",
+        "retracementValue": "-3.05"
+      },
+      {
+        "yAxis": "-2.26",
+        "xAxis": "2025-02-18",
+        "retracementValue": "-3.05"
+      },
+      {
+        "yAxis": "-2.27",
+        "xAxis": "2025-02-19",
+        "retracementValue": "-3.06"
+      },
+      {
+        "yAxis": "-2.44",
+        "xAxis": "2025-02-20",
+        "retracementValue": "-3.22"
+      },
+      {
+        "yAxis": "-3.26",
+        "xAxis": "2025-02-21",
+        "retracementValue": "-4.04"
+      },
+      {
+        "yAxis": "-3.34",
+        "xAxis": "2025-02-24",
+        "retracementValue": "-4.12"
+      },
+      {
+        "yAxis": "-4.12",
+        "xAxis": "2025-02-25",
+        "retracementValue": "-4.90"
+      },
+      {
+        "yAxis": "-3.49",
+        "xAxis": "2025-02-26",
+        "retracementValue": "-4.27"
+      },
+      {
+        "yAxis": "-2.72",
+        "xAxis": "2025-02-27",
+        "retracementValue": "-3.51"
+      },
+      {
+        "yAxis": "-3.16",
+        "xAxis": "2025-02-28",
+        "retracementValue": "-3.95"
+      },
+      {
+        "yAxis": "-3.07",
+        "xAxis": "2025-03-03",
+        "retracementValue": "-3.85"
+      },
+      {
+        "yAxis": "-3.08",
+        "xAxis": "2025-03-04",
+        "retracementValue": "-3.87"
+      },
+      {
+        "yAxis": "-2.31",
+        "xAxis": "2025-03-05",
+        "retracementValue": "-3.10"
+      },
+      {
+        "yAxis": "-2.76",
+        "xAxis": "2025-03-06",
+        "retracementValue": "-3.54"
+      },
+      {
+        "yAxis": "-2.90",
+        "xAxis": "2025-03-07",
+        "retracementValue": "-3.69"
+      },
+      {
+        "yAxis": "-3.36",
+        "xAxis": "2025-03-10",
+        "retracementValue": "-4.14"
+      },
+      {
+        "yAxis": "-2.76",
+        "xAxis": "2025-03-11",
+        "retracementValue": "-3.55"
+      },
+      {
+        "yAxis": "-2.90",
+        "xAxis": "2025-03-12",
+        "retracementValue": "-3.68"
+      },
+      {
+        "yAxis": "-2.43",
+        "xAxis": "2025-03-13",
+        "retracementValue": "-3.21"
+      },
+      {
+        "yAxis": "-1.65",
+        "xAxis": "2025-03-14",
+        "retracementValue": "-2.45"
+      },
+      {
+        "yAxis": "-1.37",
+        "xAxis": "2025-03-17",
+        "retracementValue": "-2.16"
+      },
+      {
+        "yAxis": "-1.46",
+        "xAxis": "2025-03-18",
+        "retracementValue": "-2.26"
+      },
+      {
+        "yAxis": "-0.86",
+        "xAxis": "2025-03-19",
+        "retracementValue": "-1.67"
+      },
+      {
+        "yAxis": "-1.29",
+        "xAxis": "2025-03-20",
+        "retracementValue": "-2.08"
+      },
+      {
+        "yAxis": "-1.58",
+        "xAxis": "2025-03-21",
+        "retracementValue": "-2.38"
+      },
+      {
+        "yAxis": "-0.98",
+        "xAxis": "2025-03-24",
+        "retracementValue": "-1.78"
+      },
+      {
+        "yAxis": "-0.36",
+        "xAxis": "2025-03-25",
+        "retracementValue": "-1.16"
+      },
+      {
+        "yAxis": "-0.65",
+        "xAxis": "2025-03-26",
+        "retracementValue": "-1.45"
+      },
+      {
+        "yAxis": "-0.45",
+        "xAxis": "2025-03-27",
+        "retracementValue": "-1.25"
+      },
+      {
+        "yAxis": "-0.73",
+        "xAxis": "2025-03-28",
+        "retracementValue": "-1.54"
+      },
+      {
+        "yAxis": "-0.68",
+        "xAxis": "2025-03-31",
+        "retracementValue": "-1.48"
+      },
+      {
+        "yAxis": "-0.46",
+        "xAxis": "2025-04-01",
+        "retracementValue": "-1.27"
+      },
+      {
+        "yAxis": "0.22",
+        "xAxis": "2025-04-02",
+        "retracementValue": "-0.59"
+      },
+      {
+        "yAxis": "0.43",
+        "xAxis": "2025-04-03",
+        "retracementValue": "-0.38"
+      },
+      {
+        "yAxis": "-4.51",
+        "xAxis": "2025-04-07",
+        "retracementValue": "-5.29"
+      },
+      {
+        "yAxis": "-2.61",
+        "xAxis": "2025-04-08",
+        "retracementValue": "-3.39"
+      },
+      {
+        "yAxis": "-2.83",
+        "xAxis": "2025-04-09",
+        "retracementValue": "-3.61"
+      },
+      {
+        "yAxis": "-2.33",
+        "xAxis": "2025-04-10",
+        "retracementValue": "-3.12"
+      },
+      {
+        "yAxis": "-2.76",
+        "xAxis": "2025-04-11",
+        "retracementValue": "-3.55"
+      },
+      {
+        "yAxis": "-2.06",
+        "xAxis": "2025-04-14",
+        "retracementValue": "-2.85"
+      },
+      {
+        "yAxis": "-1.06",
+        "xAxis": "2025-04-15",
+        "retracementValue": "-1.85"
+      },
+      {
+        "yAxis": "-0.27",
+        "xAxis": "2025-04-16",
+        "retracementValue": "-1.08"
+      },
+      {
+        "yAxis": "-0.18",
+        "xAxis": "2025-04-17",
+        "retracementValue": "-0.98"
+      },
+      {
+        "yAxis": "0.09",
+        "xAxis": "2025-04-18",
+        "retracementValue": "-0.72"
+      },
+      {
+        "yAxis": "-0.53",
+        "xAxis": "2025-04-21",
+        "retracementValue": "-1.33"
+      },
+      {
+        "yAxis": "-0.01",
+        "xAxis": "2025-04-22",
+        "retracementValue": "-0.82"
+      },
+      {
+        "yAxis": "-0.47",
+        "xAxis": "2025-04-23",
+        "retracementValue": "-1.27"
+      },
+      {
+        "yAxis": "0.44",
+        "xAxis": "2025-04-24",
+        "retracementValue": "-0.37"
+      },
+      {
+        "yAxis": "0.33",
+        "xAxis": "2025-04-25",
+        "retracementValue": "-0.48"
+      },
+      {
+        "yAxis": "0.78",
+        "xAxis": "2025-04-28",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.52",
+        "xAxis": "2025-04-29",
+        "retracementValue": "-0.30"
+      },
+      {
+        "yAxis": "-1.06",
+        "xAxis": "2025-04-30",
+        "retracementValue": "-1.85"
+      },
+      {
+        "yAxis": "-0.94",
+        "xAxis": "2025-05-06",
+        "retracementValue": "-1.74"
+      },
+      {
+        "yAxis": "-0.14",
+        "xAxis": "2025-05-07",
+        "retracementValue": "-0.95"
+      },
+      {
+        "yAxis": "0.33",
+        "xAxis": "2025-05-08",
+        "retracementValue": "-0.48"
+      },
+      {
+        "yAxis": "1.05",
+        "xAxis": "2025-05-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.08",
+        "xAxis": "2025-05-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.04",
+        "xAxis": "2025-05-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.58",
+        "xAxis": "2025-05-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.21",
+        "xAxis": "2025-05-15",
+        "retracementValue": "-0.37"
+      },
+      {
+        "yAxis": "1.61",
+        "xAxis": "2025-05-16",
+        "retracementValue": "-0.95"
+      },
+      {
+        "yAxis": "1.79",
+        "xAxis": "2025-05-19",
+        "retracementValue": "-0.78"
+      },
+      {
+        "yAxis": "2.12",
+        "xAxis": "2025-05-20",
+        "retracementValue": "-0.45"
+      },
+      {
+        "yAxis": "2.70",
+        "xAxis": "2025-05-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.14",
+        "xAxis": "2025-05-22",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.41",
+        "xAxis": "2025-05-23",
+        "retracementValue": "-0.71"
+      },
+      {
+        "yAxis": "2.05",
+        "xAxis": "2025-05-26",
+        "retracementValue": "-1.06"
+      },
+      {
+        "yAxis": "2.23",
+        "xAxis": "2025-05-27",
+        "retracementValue": "-0.89"
+      },
+      {
+        "yAxis": "2.68",
+        "xAxis": "2025-05-28",
+        "retracementValue": "-0.45"
+      },
+      {
+        "yAxis": "2.58",
+        "xAxis": "2025-05-29",
+        "retracementValue": "-0.55"
+      },
+      {
+        "yAxis": "2.89",
+        "xAxis": "2025-05-30",
+        "retracementValue": "-0.24"
+      },
+      {
+        "yAxis": "3.86",
+        "xAxis": "2025-06-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.28",
+        "xAxis": "2025-06-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.57",
+        "xAxis": "2025-06-05",
+        "retracementValue": "-0.69"
+      },
+      {
+        "yAxis": "3.78",
+        "xAxis": "2025-06-06",
+        "retracementValue": "-0.49"
+      },
+      {
+        "yAxis": "3.82",
+        "xAxis": "2025-06-09",
+        "retracementValue": "-0.44"
+      },
+      {
+        "yAxis": "3.96",
+        "xAxis": "2025-06-10",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "4.13",
+        "xAxis": "2025-06-11",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "4.47",
+        "xAxis": "2025-06-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.83",
+        "xAxis": "2025-06-13",
+        "retracementValue": "-0.61"
+      },
+      {
+        "yAxis": "4.33",
+        "xAxis": "2025-06-16",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "4.12",
+        "xAxis": "2025-06-17",
+        "retracementValue": "-0.34"
+      },
+      {
+        "yAxis": "4.66",
+        "xAxis": "2025-06-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.42",
+        "xAxis": "2025-06-19",
+        "retracementValue": "-0.23"
+      },
+      {
+        "yAxis": "4.90",
+        "xAxis": "2025-06-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.45",
+        "xAxis": "2025-06-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.66",
+        "xAxis": "2025-06-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.40",
+        "xAxis": "2025-06-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.84",
+        "xAxis": "2025-06-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.33",
+        "xAxis": "2025-06-27",
+        "retracementValue": "-1.41"
+      },
+      {
+        "yAxis": "5.16",
+        "xAxis": "2025-06-30",
+        "retracementValue": "-1.57"
+      },
+      {
+        "yAxis": "6.11",
+        "xAxis": "2025-07-01",
+        "retracementValue": "-0.68"
+      },
+      {
+        "yAxis": "6.31",
+        "xAxis": "2025-07-02",
+        "retracementValue": "-0.49"
+      },
+      {
+        "yAxis": "6.34",
+        "xAxis": "2025-07-03",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "7.27",
+        "xAxis": "2025-07-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.77",
+        "xAxis": "2025-07-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.55",
+        "xAxis": "2025-07-08",
+        "retracementValue": "-0.21"
+      },
+      {
+        "yAxis": "8.08",
+        "xAxis": "2025-07-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.58",
+        "xAxis": "2025-07-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.69",
+        "xAxis": "2025-07-11",
+        "retracementValue": "-0.83"
+      },
+      {
+        "yAxis": "8.35",
+        "xAxis": "2025-07-14",
+        "retracementValue": "-0.22"
+      },
+      {
+        "yAxis": "7.45",
+        "xAxis": "2025-07-15",
+        "retracementValue": "-1.04"
+      },
+      {
+        "yAxis": "7.11",
+        "xAxis": "2025-07-16",
+        "retracementValue": "-1.36"
+      },
+      {
+        "yAxis": "6.92",
+        "xAxis": "2025-07-17",
+        "retracementValue": "-1.53"
+      },
+      {
+        "yAxis": "7.40",
+        "xAxis": "2025-07-18",
+        "retracementValue": "-1.09"
+      },
+      {
+        "yAxis": "7.39",
+        "xAxis": "2025-07-21",
+        "retracementValue": "-1.10"
+      },
+      {
+        "yAxis": "7.56",
+        "xAxis": "2025-07-22",
+        "retracementValue": "-0.94"
+      },
+      {
+        "yAxis": "7.69",
+        "xAxis": "2025-07-23",
+        "retracementValue": "-0.83"
+      },
+      {
+        "yAxis": "6.91",
+        "xAxis": "2025-07-24",
+        "retracementValue": "-1.55"
+      },
+      {
+        "yAxis": "6.22",
+        "xAxis": "2025-07-25",
+        "retracementValue": "-2.18"
+      },
+      {
+        "yAxis": "5.87",
+        "xAxis": "2025-07-28",
+        "retracementValue": "-2.50"
+      },
+      {
+        "yAxis": "5.30",
+        "xAxis": "2025-07-29",
+        "retracementValue": "-3.03"
+      },
+      {
+        "yAxis": "5.72",
+        "xAxis": "2025-07-30",
+        "retracementValue": "-2.64"
+      },
+      {
+        "yAxis": "4.53",
+        "xAxis": "2025-07-31",
+        "retracementValue": "-3.74"
+      },
+      {
+        "yAxis": "4.49",
+        "xAxis": "2025-08-01",
+        "retracementValue": "-3.77"
+      },
+      {
+        "yAxis": "5.08",
+        "xAxis": "2025-08-04",
+        "retracementValue": "-3.23"
+      },
+      {
+        "yAxis": "6.30",
+        "xAxis": "2025-08-05",
+        "retracementValue": "-2.10"
+      },
+      {
+        "yAxis": "6.40",
+        "xAxis": "2025-08-06",
+        "retracementValue": "-2.01"
+      },
+      {
+        "yAxis": "6.72",
+        "xAxis": "2025-08-07",
+        "retracementValue": "-1.72"
+      },
+      {
+        "yAxis": "6.86",
+        "xAxis": "2025-08-08",
+        "retracementValue": "-1.59"
+      },
+      {
+        "yAxis": "6.18",
+        "xAxis": "2025-08-11",
+        "retracementValue": "-2.21"
+      },
+      {
+        "yAxis": "6.56",
+        "xAxis": "2025-08-12",
+        "retracementValue": "-1.87"
+      },
+      {
+        "yAxis": "6.03",
+        "xAxis": "2025-08-13",
+        "retracementValue": "-2.35"
+      },
+      {
+        "yAxis": "6.01",
+        "xAxis": "2025-08-14",
+        "retracementValue": "-2.37"
+      },
+      {
+        "yAxis": "5.71",
+        "xAxis": "2025-08-15",
+        "retracementValue": "-2.65"
+      },
+      {
+        "yAxis": "5.99",
+        "xAxis": "2025-08-18",
+        "retracementValue": "-2.39"
+      },
+      {
+        "yAxis": "6.04",
+        "xAxis": "2025-08-19",
+        "retracementValue": "-2.34"
+      },
+      {
+        "yAxis": "6.80",
+        "xAxis": "2025-08-20",
+        "retracementValue": "-1.64"
+      },
+      {
+        "yAxis": "7.32",
+        "xAxis": "2025-08-21",
+        "retracementValue": "-1.16"
+      },
+      {
+        "yAxis": "6.99",
+        "xAxis": "2025-08-22",
+        "retracementValue": "-1.46"
+      },
+      {
+        "yAxis": "7.86",
+        "xAxis": "2025-08-25",
+        "retracementValue": "-0.67"
+      },
+      {
+        "yAxis": "7.64",
+        "xAxis": "2025-08-26",
+        "retracementValue": "-0.87"
+      },
+      {
+        "yAxis": "5.84",
+        "xAxis": "2025-08-27",
+        "retracementValue": "-2.53"
+      },
+      {
+        "yAxis": "6.01",
+        "xAxis": "2025-08-28",
+        "retracementValue": "-2.37"
+      },
+      {
+        "yAxis": "5.56",
+        "xAxis": "2025-08-29",
+        "retracementValue": "-2.79"
+      },
+      {
+        "yAxis": "5.41",
+        "xAxis": "2025-09-01",
+        "retracementValue": "-2.92"
+      },
+      {
+        "yAxis": "6.27",
+        "xAxis": "2025-09-02",
+        "retracementValue": "-2.13"
+      },
+      {
+        "yAxis": "5.15",
+        "xAxis": "2025-09-03",
+        "retracementValue": "-3.16"
+      },
+      {
+        "yAxis": "5.39",
+        "xAxis": "2025-09-04",
+        "retracementValue": "-2.94"
+      },
+      {
+        "yAxis": "4.91",
+        "xAxis": "2025-09-05",
+        "retracementValue": "-3.38"
+      },
+      {
+        "yAxis": "5.01",
+        "xAxis": "2025-09-08",
+        "retracementValue": "-3.29"
+      },
+      {
+        "yAxis": "5.44",
+        "xAxis": "2025-09-09",
+        "retracementValue": "-2.89"
+      },
+      {
+        "yAxis": "5.27",
+        "xAxis": "2025-09-10",
+        "retracementValue": "-3.05"
+      },
+      {
+        "yAxis": "5.60",
+        "xAxis": "2025-09-11",
+        "retracementValue": "-2.75"
+      },
+      {
+        "yAxis": "4.87",
+        "xAxis": "2025-09-12",
+        "retracementValue": "-3.42"
+      },
+      {
+        "yAxis": "4.12",
+        "xAxis": "2025-09-15",
+        "retracementValue": "-4.11"
+      },
+      {
+        "yAxis": "3.75",
+        "xAxis": "2025-09-16",
+        "retracementValue": "-4.45"
+      },
+      {
+        "yAxis": "4.06",
+        "xAxis": "2025-09-17",
+        "retracementValue": "-4.17"
+      },
+      {
+        "yAxis": "2.11",
+        "xAxis": "2025-09-18",
+        "retracementValue": "-5.96"
+      },
+      {
+        "yAxis": "2.68",
+        "xAxis": "2025-09-19",
+        "retracementValue": "-5.44"
+      },
+      {
+        "yAxis": "1.96",
+        "xAxis": "2025-09-22",
+        "retracementValue": "-6.10"
+      },
+      {
+        "yAxis": "2.71",
+        "xAxis": "2025-09-23",
+        "retracementValue": "-5.41"
+      },
+      {
+        "yAxis": "2.61",
+        "xAxis": "2025-09-24",
+        "retracementValue": "-5.50"
+      },
+      {
+        "yAxis": "1.83",
+        "xAxis": "2025-09-25",
+        "retracementValue": "-6.22"
+      },
+      {
+        "yAxis": "1.88",
+        "xAxis": "2025-09-26",
+        "retracementValue": "-6.18"
+      },
+      {
+        "yAxis": "1.83",
+        "xAxis": "2025-09-29",
+        "retracementValue": "-6.22"
+      },
+      {
+        "yAxis": "1.07",
+        "xAxis": "2025-09-30",
+        "retracementValue": "-6.92"
+      },
+      {
+        "yAxis": "1.21",
+        "xAxis": "2025-10-09",
+        "retracementValue": "-6.79"
+      },
+      {
+        "yAxis": "1.91",
+        "xAxis": "2025-10-10",
+        "retracementValue": "-6.14"
+      },
+      {
+        "yAxis": "2.48",
+        "xAxis": "2025-10-13",
+        "retracementValue": "-5.62"
+      },
+      {
+        "yAxis": "4.23",
+        "xAxis": "2025-10-14",
+        "retracementValue": "-4.01"
+      },
+      {
+        "yAxis": "4.73",
+        "xAxis": "2025-10-15",
+        "retracementValue": "-3.55"
+      },
+      {
+        "yAxis": "5.32",
+        "xAxis": "2025-10-16",
+        "retracementValue": "-3.01"
+      },
+      {
+        "yAxis": "5.02",
+        "xAxis": "2025-10-17",
+        "retracementValue": "-3.28"
+      },
+      {
+        "yAxis": "5.05",
+        "xAxis": "2025-10-20",
+        "retracementValue": "-3.26"
+      },
+      {
+        "yAxis": "5.36",
+        "xAxis": "2025-10-21",
+        "retracementValue": "-2.97"
+      },
+      {
+        "yAxis": "5.98",
+        "xAxis": "2025-10-22",
+        "retracementValue": "-2.40"
+      },
+      {
+        "yAxis": "6.48",
+        "xAxis": "2025-10-23",
+        "retracementValue": "-1.94"
+      },
+      {
+        "yAxis": "5.94",
+        "xAxis": "2025-10-24",
+        "retracementValue": "-2.43"
+      },
+      {
+        "yAxis": "6.02",
+        "xAxis": "2025-10-27",
+        "retracementValue": "-2.36"
+      },
+      {
+        "yAxis": "5.89",
+        "xAxis": "2025-10-28",
+        "retracementValue": "-2.48"
+      },
+      {
+        "yAxis": "5.06",
+        "xAxis": "2025-10-29",
+        "retracementValue": "-3.24"
+      },
+      {
+        "yAxis": "5.18",
+        "xAxis": "2025-10-30",
+        "retracementValue": "-3.14"
+      },
+      {
+        "yAxis": "5.13",
+        "xAxis": "2025-10-31",
+        "retracementValue": "-3.19"
+      },
+      {
+        "yAxis": "6.44",
+        "xAxis": "2025-11-03",
+        "retracementValue": "-1.98"
+      },
+      {
+        "yAxis": "7.52",
+        "xAxis": "2025-11-04",
+        "retracementValue": "-0.98"
+      },
+      {
+        "yAxis": "7.52",
+        "xAxis": "2025-11-05",
+        "retracementValue": "-0.98"
+      },
+      {
+        "yAxis": "7.49",
+        "xAxis": "2025-11-06",
+        "retracementValue": "-1.01"
+      },
+      {
+        "yAxis": "7.51",
+        "xAxis": "2025-11-07",
+        "retracementValue": "-0.99"
+      },
+      {
+        "yAxis": "8.45",
+        "xAxis": "2025-11-10",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "8.73",
+        "xAxis": "2025-11-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "9.48",
+        "xAxis": "2025-11-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "9.33",
+        "xAxis": "2025-11-13",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "8.97",
+        "xAxis": "2025-11-14",
+        "retracementValue": "-0.46"
+      },
+      {
+        "yAxis": "8.17",
+        "xAxis": "2025-11-17",
+        "retracementValue": "-1.19"
+      },
+      {
+        "yAxis": "7.45",
+        "xAxis": "2025-11-18",
+        "retracementValue": "-1.85"
+      },
+      {
+        "yAxis": "7.69",
+        "xAxis": "2025-11-19",
+        "retracementValue": "-1.63"
+      },
+      {
+        "yAxis": "8.13",
+        "xAxis": "2025-11-20",
+        "retracementValue": "-1.23"
+      },
+      {
+        "yAxis": "6.95",
+        "xAxis": "2025-11-21",
+        "retracementValue": "-2.31"
+      },
+      {
+        "yAxis": "6.30",
+        "xAxis": "2025-11-24",
+        "retracementValue": "-2.90"
+      },
+      {
+        "yAxis": "6.92",
+        "xAxis": "2025-11-25",
+        "retracementValue": "-2.33"
+      },
+      {
+        "yAxis": "6.34",
+        "xAxis": "2025-11-26",
+        "retracementValue": "-2.87"
+      },
+      {
+        "yAxis": "6.54",
+        "xAxis": "2025-11-27",
+        "retracementValue": "-2.68"
+      },
+      {
+        "yAxis": "6.38",
+        "xAxis": "2025-11-28",
+        "retracementValue": "-2.83"
+      },
+      {
+        "yAxis": "7.06",
+        "xAxis": "2025-12-01",
+        "retracementValue": "-2.21"
+      },
+      {
+        "yAxis": "6.98",
+        "xAxis": "2025-12-02",
+        "retracementValue": "-2.28"
+      },
+      {
+        "yAxis": "6.48",
+        "xAxis": "2025-12-03",
+        "retracementValue": "-2.74"
+      },
+      {
+        "yAxis": "6.01",
+        "xAxis": "2025-12-04",
+        "retracementValue": "-3.16"
+      },
+      {
+        "yAxis": "5.47",
+        "xAxis": "2025-12-05",
+        "retracementValue": "-3.66"
+      },
+      {
+        "yAxis": "5.22",
+        "xAxis": "2025-12-08",
+        "retracementValue": "-3.89"
+      },
+      {
+        "yAxis": "4.69",
+        "xAxis": "2025-12-09",
+        "retracementValue": "-4.37"
+      },
+      {
+        "yAxis": "4.22",
+        "xAxis": "2025-12-10",
+        "retracementValue": "-4.80"
+      },
+      {
+        "yAxis": "4.05",
+        "xAxis": "2025-12-11",
+        "retracementValue": "-4.95"
+      },
+      {
+        "yAxis": "3.67",
+        "xAxis": "2025-12-12",
+        "retracementValue": "-5.30"
+      },
+      {
+        "yAxis": "4.03",
+        "xAxis": "2025-12-15",
+        "retracementValue": "-4.98"
+      },
+      {
+        "yAxis": "3.53",
+        "xAxis": "2025-12-16",
+        "retracementValue": "-5.43"
+      },
+      {
+        "yAxis": "3.60",
+        "xAxis": "2025-12-17",
+        "retracementValue": "-5.36"
+      },
+      {
+        "yAxis": "4.58",
+        "xAxis": "2025-12-18",
+        "retracementValue": "-4.47"
+      }
+    ],
+    "restorePoint": {
+      "yAxis": "8.73",
+      "xAxis": "2025-11-11"
+    },
+    "dataCycle": 4,
+    "chartName": "回撤修复",
+    "maxRetracementStartPoint": {
+      "yAxis": "8.58",
+      "xAxis": "2025-07-10"
+    },
+    "maxRetracementValue": -6.92,
+    "chartTitleList": [
+      {
+        "name": "最大回撤",
+        "value": -6.92
+      },
+      {
+        "name": "修复天数",
+        "value": "42天"
+      }
+    ],
+    "chartType": 7,
+    "maxRetracementEndPoint": {
+      "yAxis": "1.07",
+      "xAxis": "2025-09-30"
+    }
+  },
+  {
+    "fund_code": "020989",
+    "fund_name": "南方恒生科技ETF发起联接（QDII）C",
+    "fund_type": "QDII-指数",
+    "restoreDay": 163,
+    "establishmentCycleDesc": "1年212天",
+    "majorChartPointList": [
+      {
+        "yAxis": "0.00",
+        "xAxis": "2024-12-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "-0.62",
+        "xAxis": "2024-12-19",
+        "retracementValue": "-0.62"
+      },
+      {
+        "yAxis": "-0.52",
+        "xAxis": "2024-12-20",
+        "retracementValue": "-0.52"
+      },
+      {
+        "yAxis": "-0.32",
+        "xAxis": "2024-12-23",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "0.80",
+        "xAxis": "2024-12-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.82",
+        "xAxis": "2024-12-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.87",
+        "xAxis": "2024-12-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.50",
+        "xAxis": "2024-12-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.68",
+        "xAxis": "2024-12-30",
+        "retracementValue": "-0.80"
+      },
+      {
+        "yAxis": "0.01",
+        "xAxis": "2024-12-31",
+        "retracementValue": "-1.47"
+      },
+      {
+        "yAxis": "-2.52",
+        "xAxis": "2025-01-02",
+        "retracementValue": "-3.96"
+      },
+      {
+        "yAxis": "-1.64",
+        "xAxis": "2025-01-03",
+        "retracementValue": "-3.10"
+      },
+      {
+        "yAxis": "-1.83",
+        "xAxis": "2025-01-06",
+        "retracementValue": "-3.28"
+      },
+      {
+        "yAxis": "-2.62",
+        "xAxis": "2025-01-07",
+        "retracementValue": "-4.05"
+      },
+      {
+        "yAxis": "-3.58",
+        "xAxis": "2025-01-08",
+        "retracementValue": "-5.01"
+      },
+      {
+        "yAxis": "-3.56",
+        "xAxis": "2025-01-09",
+        "retracementValue": "-4.99"
+      },
+      {
+        "yAxis": "-4.68",
+        "xAxis": "2025-01-10",
+        "retracementValue": "-6.09"
+      },
+      {
+        "yAxis": "-5.59",
+        "xAxis": "2025-01-13",
+        "retracementValue": "-6.99"
+      },
+      {
+        "yAxis": "-2.83",
+        "xAxis": "2025-01-14",
+        "retracementValue": "-4.26"
+      },
+      {
+        "yAxis": "-2.61",
+        "xAxis": "2025-01-15",
+        "retracementValue": "-4.05"
+      },
+      {
+        "yAxis": "-1.46",
+        "xAxis": "2025-01-16",
+        "retracementValue": "-2.91"
+      },
+      {
+        "yAxis": "-0.17",
+        "xAxis": "2025-01-17",
+        "retracementValue": "-1.64"
+      },
+      {
+        "yAxis": "2.33",
+        "xAxis": "2025-01-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.32",
+        "xAxis": "2025-01-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.85",
+        "xAxis": "2025-01-22",
+        "retracementValue": "-2.36"
+      },
+      {
+        "yAxis": "0.51",
+        "xAxis": "2025-01-23",
+        "retracementValue": "-3.65"
+      },
+      {
+        "yAxis": "3.39",
+        "xAxis": "2025-01-24",
+        "retracementValue": "-0.89"
+      },
+      {
+        "yAxis": "4.04",
+        "xAxis": "2025-01-27",
+        "retracementValue": "-0.27"
+      },
+      {
+        "yAxis": "9.23",
+        "xAxis": "2025-02-05",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "12.07",
+        "xAxis": "2025-02-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "14.09",
+        "xAxis": "2025-02-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "17.41",
+        "xAxis": "2025-02-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "14.18",
+        "xAxis": "2025-02-11",
+        "retracementValue": "-2.75"
+      },
+      {
+        "yAxis": "16.95",
+        "xAxis": "2025-02-12",
+        "retracementValue": "-0.39"
+      },
+      {
+        "yAxis": "15.90",
+        "xAxis": "2025-02-13",
+        "retracementValue": "-1.29"
+      },
+      {
+        "yAxis": "22.19",
+        "xAxis": "2025-02-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "21.63",
+        "xAxis": "2025-02-17",
+        "retracementValue": "-0.46"
+      },
+      {
+        "yAxis": "24.47",
+        "xAxis": "2025-02-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "25.31",
+        "xAxis": "2025-02-19",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "21.84",
+        "xAxis": "2025-02-20",
+        "retracementValue": "-2.77"
+      },
+      {
+        "yAxis": "29.03",
+        "xAxis": "2025-02-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "27.70",
+        "xAxis": "2025-02-24",
+        "retracementValue": "-1.03"
+      },
+      {
+        "yAxis": "25.75",
+        "xAxis": "2025-02-25",
+        "retracementValue": "-2.54"
+      },
+      {
+        "yAxis": "31.03",
+        "xAxis": "2025-02-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "29.44",
+        "xAxis": "2025-02-27",
+        "retracementValue": "-1.21"
+      },
+      {
+        "yAxis": "23.38",
+        "xAxis": "2025-02-28",
+        "retracementValue": "-5.84"
+      },
+      {
+        "yAxis": "22.41",
+        "xAxis": "2025-03-03",
+        "retracementValue": "-6.58"
+      },
+      {
+        "yAxis": "22.26",
+        "xAxis": "2025-03-04",
+        "retracementValue": "-6.70"
+      },
+      {
+        "yAxis": "27.08",
+        "xAxis": "2025-03-05",
+        "retracementValue": "-3.01"
+      },
+      {
+        "yAxis": "33.60",
+        "xAxis": "2025-03-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "32.98",
+        "xAxis": "2025-03-07",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "29.82",
+        "xAxis": "2025-03-10",
+        "retracementValue": "-2.83"
+      },
+      {
+        "yAxis": "31.51",
+        "xAxis": "2025-03-11",
+        "retracementValue": "-1.57"
+      },
+      {
+        "yAxis": "28.79",
+        "xAxis": "2025-03-12",
+        "retracementValue": "-3.60"
+      },
+      {
+        "yAxis": "26.92",
+        "xAxis": "2025-03-13",
+        "retracementValue": "-5.00"
+      },
+      {
+        "yAxis": "29.54",
+        "xAxis": "2025-03-14",
+        "retracementValue": "-3.04"
+      },
+      {
+        "yAxis": "29.23",
+        "xAxis": "2025-03-17",
+        "retracementValue": "-3.27"
+      },
+      {
+        "yAxis": "34.11",
+        "xAxis": "2025-03-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "32.64",
+        "xAxis": "2025-03-19",
+        "retracementValue": "-1.10"
+      },
+      {
+        "yAxis": "28.54",
+        "xAxis": "2025-03-20",
+        "retracementValue": "-4.16"
+      },
+      {
+        "yAxis": "24.63",
+        "xAxis": "2025-03-21",
+        "retracementValue": "-7.07"
+      },
+      {
+        "yAxis": "26.64",
+        "xAxis": "2025-03-24",
+        "retracementValue": "-5.57"
+      },
+      {
+        "yAxis": "21.83",
+        "xAxis": "2025-03-25",
+        "retracementValue": "-9.15"
+      },
+      {
+        "yAxis": "22.88",
+        "xAxis": "2025-03-26",
+        "retracementValue": "-8.38"
+      },
+      {
+        "yAxis": "23.22",
+        "xAxis": "2025-03-27",
+        "retracementValue": "-8.12"
+      },
+      {
+        "yAxis": "21.44",
+        "xAxis": "2025-03-28",
+        "retracementValue": "-9.45"
+      },
+      {
+        "yAxis": "19.16",
+        "xAxis": "2025-03-31",
+        "retracementValue": "-11.15"
+      },
+      {
+        "yAxis": "19.35",
+        "xAxis": "2025-04-01",
+        "retracementValue": "-11.01"
+      },
+      {
+        "yAxis": "19.75",
+        "xAxis": "2025-04-02",
+        "retracementValue": "-10.71"
+      },
+      {
+        "yAxis": "17.48",
+        "xAxis": "2025-04-03",
+        "retracementValue": "-12.40"
+      },
+      {
+        "yAxis": "-0.90",
+        "xAxis": "2025-04-07",
+        "retracementValue": "-26.11"
+      },
+      {
+        "yAxis": "2.82",
+        "xAxis": "2025-04-08",
+        "retracementValue": "-23.33"
+      },
+      {
+        "yAxis": "5.44",
+        "xAxis": "2025-04-09",
+        "retracementValue": "-21.38"
+      },
+      {
+        "yAxis": "7.79",
+        "xAxis": "2025-04-10",
+        "retracementValue": "-19.62"
+      },
+      {
+        "yAxis": "9.60",
+        "xAxis": "2025-04-11",
+        "retracementValue": "-18.28"
+      },
+      {
+        "yAxis": "11.99",
+        "xAxis": "2025-04-14",
+        "retracementValue": "-16.50"
+      },
+      {
+        "yAxis": "11.28",
+        "xAxis": "2025-04-15",
+        "retracementValue": "-17.03"
+      },
+      {
+        "yAxis": "7.44",
+        "xAxis": "2025-04-16",
+        "retracementValue": "-19.89"
+      },
+      {
+        "yAxis": "9.10",
+        "xAxis": "2025-04-17",
+        "retracementValue": "-18.65"
+      },
+      {
+        "yAxis": "9.04",
+        "xAxis": "2025-04-18",
+        "retracementValue": "-18.70"
+      },
+      {
+        "yAxis": "9.06",
+        "xAxis": "2025-04-21",
+        "retracementValue": "-18.68"
+      },
+      {
+        "yAxis": "9.33",
+        "xAxis": "2025-04-22",
+        "retracementValue": "-18.48"
+      },
+      {
+        "yAxis": "12.58",
+        "xAxis": "2025-04-23",
+        "retracementValue": "-16.05"
+      },
+      {
+        "yAxis": "10.98",
+        "xAxis": "2025-04-24",
+        "retracementValue": "-17.25"
+      },
+      {
+        "yAxis": "11.02",
+        "xAxis": "2025-04-25",
+        "retracementValue": "-17.22"
+      },
+      {
+        "yAxis": "11.14",
+        "xAxis": "2025-04-28",
+        "retracementValue": "-17.13"
+      },
+      {
+        "yAxis": "11.75",
+        "xAxis": "2025-04-29",
+        "retracementValue": "-16.67"
+      },
+      {
+        "yAxis": "13.14",
+        "xAxis": "2025-04-30",
+        "retracementValue": "-15.64"
+      },
+      {
+        "yAxis": "16.40",
+        "xAxis": "2025-05-06",
+        "retracementValue": "-13.21"
+      },
+      {
+        "yAxis": "15.55",
+        "xAxis": "2025-05-07",
+        "retracementValue": "-13.84"
+      },
+      {
+        "yAxis": "16.15",
+        "xAxis": "2025-05-08",
+        "retracementValue": "-13.39"
+      },
+      {
+        "yAxis": "15.00",
+        "xAxis": "2025-05-09",
+        "retracementValue": "-14.25"
+      },
+      {
+        "yAxis": "20.42",
+        "xAxis": "2025-05-12",
+        "retracementValue": "-10.21"
+      },
+      {
+        "yAxis": "16.36",
+        "xAxis": "2025-05-13",
+        "retracementValue": "-13.24"
+      },
+      {
+        "yAxis": "18.53",
+        "xAxis": "2025-05-14",
+        "retracementValue": "-11.61"
+      },
+      {
+        "yAxis": "16.68",
+        "xAxis": "2025-05-15",
+        "retracementValue": "-13.00"
+      },
+      {
+        "yAxis": "16.32",
+        "xAxis": "2025-05-16",
+        "retracementValue": "-13.26"
+      },
+      {
+        "yAxis": "15.58",
+        "xAxis": "2025-05-19",
+        "retracementValue": "-13.82"
+      },
+      {
+        "yAxis": "16.76",
+        "xAxis": "2025-05-20",
+        "retracementValue": "-12.94"
+      },
+      {
+        "yAxis": "17.25",
+        "xAxis": "2025-05-21",
+        "retracementValue": "-12.57"
+      },
+      {
+        "yAxis": "15.32",
+        "xAxis": "2025-05-22",
+        "retracementValue": "-14.01"
+      },
+      {
+        "yAxis": "15.21",
+        "xAxis": "2025-05-23",
+        "retracementValue": "-14.10"
+      },
+      {
+        "yAxis": "13.15",
+        "xAxis": "2025-05-26",
+        "retracementValue": "-15.63"
+      },
+      {
+        "yAxis": "13.71",
+        "xAxis": "2025-05-27",
+        "retracementValue": "-15.21"
+      },
+      {
+        "yAxis": "13.54",
+        "xAxis": "2025-05-28",
+        "retracementValue": "-15.34"
+      },
+      {
+        "yAxis": "16.26",
+        "xAxis": "2025-05-29",
+        "retracementValue": "-13.31"
+      },
+      {
+        "yAxis": "13.41",
+        "xAxis": "2025-05-30",
+        "retracementValue": "-15.44"
+      },
+      {
+        "yAxis": "13.82",
+        "xAxis": "2025-06-03",
+        "retracementValue": "-15.13"
+      },
+      {
+        "yAxis": "14.46",
+        "xAxis": "2025-06-04",
+        "retracementValue": "-14.65"
+      },
+      {
+        "yAxis": "16.54",
+        "xAxis": "2025-06-05",
+        "retracementValue": "-13.10"
+      },
+      {
+        "yAxis": "15.79",
+        "xAxis": "2025-06-06",
+        "retracementValue": "-13.66"
+      },
+      {
+        "yAxis": "19.13",
+        "xAxis": "2025-06-09",
+        "retracementValue": "-11.17"
+      },
+      {
+        "yAxis": "18.10",
+        "xAxis": "2025-06-10",
+        "retracementValue": "-11.94"
+      },
+      {
+        "yAxis": "19.25",
+        "xAxis": "2025-06-11",
+        "retracementValue": "-11.08"
+      },
+      {
+        "yAxis": "16.70",
+        "xAxis": "2025-06-12",
+        "retracementValue": "-12.98"
+      },
+      {
+        "yAxis": "14.79",
+        "xAxis": "2025-06-13",
+        "retracementValue": "-14.41"
+      },
+      {
+        "yAxis": "16.02",
+        "xAxis": "2025-06-16",
+        "retracementValue": "-13.49"
+      },
+      {
+        "yAxis": "15.79",
+        "xAxis": "2025-06-17",
+        "retracementValue": "-13.66"
+      },
+      {
+        "yAxis": "14.03",
+        "xAxis": "2025-06-18",
+        "retracementValue": "-14.97"
+      },
+      {
+        "yAxis": "11.39",
+        "xAxis": "2025-06-19",
+        "retracementValue": "-16.94"
+      },
+      {
+        "yAxis": "12.24",
+        "xAxis": "2025-06-20",
+        "retracementValue": "-16.31"
+      },
+      {
+        "yAxis": "13.38",
+        "xAxis": "2025-06-23",
+        "retracementValue": "-15.46"
+      },
+      {
+        "yAxis": "15.59",
+        "xAxis": "2025-06-24",
+        "retracementValue": "-13.81"
+      },
+      {
+        "yAxis": "16.89",
+        "xAxis": "2025-06-25",
+        "retracementValue": "-12.84"
+      },
+      {
+        "yAxis": "16.54",
+        "xAxis": "2025-06-26",
+        "retracementValue": "-13.10"
+      },
+      {
+        "yAxis": "16.52",
+        "xAxis": "2025-06-27",
+        "retracementValue": "-13.11"
+      },
+      {
+        "yAxis": "15.66",
+        "xAxis": "2025-06-30",
+        "retracementValue": "-13.75"
+      },
+      {
+        "yAxis": "15.58",
+        "xAxis": "2025-07-01",
+        "retracementValue": "-13.82"
+      },
+      {
+        "yAxis": "14.91",
+        "xAxis": "2025-07-02",
+        "retracementValue": "-14.32"
+      },
+      {
+        "yAxis": "14.14",
+        "xAxis": "2025-07-03",
+        "retracementValue": "-14.89"
+      },
+      {
+        "yAxis": "13.84",
+        "xAxis": "2025-07-04",
+        "retracementValue": "-15.12"
+      },
+      {
+        "yAxis": "14.05",
+        "xAxis": "2025-07-07",
+        "retracementValue": "-14.96"
+      },
+      {
+        "yAxis": "16.04",
+        "xAxis": "2025-07-08",
+        "retracementValue": "-13.47"
+      },
+      {
+        "yAxis": "14.11",
+        "xAxis": "2025-07-09",
+        "retracementValue": "-14.91"
+      },
+      {
+        "yAxis": "13.74",
+        "xAxis": "2025-07-10",
+        "retracementValue": "-15.19"
+      },
+      {
+        "yAxis": "14.30",
+        "xAxis": "2025-07-11",
+        "retracementValue": "-14.78"
+      },
+      {
+        "yAxis": "15.04",
+        "xAxis": "2025-07-14",
+        "retracementValue": "-14.22"
+      },
+      {
+        "yAxis": "18.09",
+        "xAxis": "2025-07-15",
+        "retracementValue": "-11.95"
+      },
+      {
+        "yAxis": "17.88",
+        "xAxis": "2025-07-16",
+        "retracementValue": "-12.11"
+      },
+      {
+        "yAxis": "18.39",
+        "xAxis": "2025-07-17",
+        "retracementValue": "-11.72"
+      },
+      {
+        "yAxis": "20.32",
+        "xAxis": "2025-07-18",
+        "retracementValue": "-10.28"
+      },
+      {
+        "yAxis": "21.31",
+        "xAxis": "2025-07-21",
+        "retracementValue": "-9.55"
+      },
+      {
+        "yAxis": "21.61",
+        "xAxis": "2025-07-22",
+        "retracementValue": "-9.32"
+      },
+      {
+        "yAxis": "24.39",
+        "xAxis": "2025-07-23",
+        "retracementValue": "-7.25"
+      },
+      {
+        "yAxis": "24.27",
+        "xAxis": "2025-07-24",
+        "retracementValue": "-7.34"
+      },
+      {
+        "yAxis": "22.98",
+        "xAxis": "2025-07-25",
+        "retracementValue": "-8.30"
+      },
+      {
+        "yAxis": "22.80",
+        "xAxis": "2025-07-28",
+        "retracementValue": "-8.43"
+      },
+      {
+        "yAxis": "22.47",
+        "xAxis": "2025-07-29",
+        "retracementValue": "-8.68"
+      },
+      {
+        "yAxis": "19.26",
+        "xAxis": "2025-07-30",
+        "retracementValue": "-11.07"
+      },
+      {
+        "yAxis": "18.50",
+        "xAxis": "2025-07-31",
+        "retracementValue": "-11.64"
+      },
+      {
+        "yAxis": "17.31",
+        "xAxis": "2025-08-01",
+        "retracementValue": "-12.52"
+      },
+      {
+        "yAxis": "18.89",
+        "xAxis": "2025-08-04",
+        "retracementValue": "-11.35"
+      },
+      {
+        "yAxis": "19.61",
+        "xAxis": "2025-08-05",
+        "retracementValue": "-10.82"
+      },
+      {
+        "yAxis": "19.89",
+        "xAxis": "2025-08-06",
+        "retracementValue": "-10.61"
+      },
+      {
+        "yAxis": "20.09",
+        "xAxis": "2025-08-07",
+        "retracementValue": "-10.46"
+      },
+      {
+        "yAxis": "18.36",
+        "xAxis": "2025-08-08",
+        "retracementValue": "-11.75"
+      },
+      {
+        "yAxis": "18.38",
+        "xAxis": "2025-08-11",
+        "retracementValue": "-11.73"
+      },
+      {
+        "yAxis": "17.96",
+        "xAxis": "2025-08-12",
+        "retracementValue": "-12.05"
+      },
+      {
+        "yAxis": "21.73",
+        "xAxis": "2025-08-13",
+        "retracementValue": "-9.23"
+      },
+      {
+        "yAxis": "20.61",
+        "xAxis": "2025-08-14",
+        "retracementValue": "-10.06"
+      },
+      {
+        "yAxis": "20.13",
+        "xAxis": "2025-08-15",
+        "retracementValue": "-10.42"
+      },
+      {
+        "yAxis": "20.77",
+        "xAxis": "2025-08-18",
+        "retracementValue": "-9.95"
+      },
+      {
+        "yAxis": "20.12",
+        "xAxis": "2025-08-19",
+        "retracementValue": "-10.43"
+      },
+      {
+        "yAxis": "20.38",
+        "xAxis": "2025-08-20",
+        "retracementValue": "-10.24"
+      },
+      {
+        "yAxis": "19.20",
+        "xAxis": "2025-08-21",
+        "retracementValue": "-11.12"
+      },
+      {
+        "yAxis": "22.25",
+        "xAxis": "2025-08-22",
+        "retracementValue": "-8.85"
+      },
+      {
+        "yAxis": "25.58",
+        "xAxis": "2025-08-25",
+        "retracementValue": "-6.36"
+      },
+      {
+        "yAxis": "24.79",
+        "xAxis": "2025-08-26",
+        "retracementValue": "-6.95"
+      },
+      {
+        "yAxis": "23.24",
+        "xAxis": "2025-08-27",
+        "retracementValue": "-8.11"
+      },
+      {
+        "yAxis": "22.09",
+        "xAxis": "2025-08-28",
+        "retracementValue": "-8.96"
+      },
+      {
+        "yAxis": "22.54",
+        "xAxis": "2025-08-29",
+        "retracementValue": "-8.63"
+      },
+      {
+        "yAxis": "25.11",
+        "xAxis": "2025-09-01",
+        "retracementValue": "-6.71"
+      },
+      {
+        "yAxis": "23.66",
+        "xAxis": "2025-09-02",
+        "retracementValue": "-7.79"
+      },
+      {
+        "yAxis": "22.63",
+        "xAxis": "2025-09-03",
+        "retracementValue": "-8.56"
+      },
+      {
+        "yAxis": "20.50",
+        "xAxis": "2025-09-04",
+        "retracementValue": "-10.15"
+      },
+      {
+        "yAxis": "22.72",
+        "xAxis": "2025-09-05",
+        "retracementValue": "-8.49"
+      },
+      {
+        "yAxis": "23.89",
+        "xAxis": "2025-09-08",
+        "retracementValue": "-7.62"
+      },
+      {
+        "yAxis": "25.49",
+        "xAxis": "2025-09-09",
+        "retracementValue": "-6.43"
+      },
+      {
+        "yAxis": "27.15",
+        "xAxis": "2025-09-10",
+        "retracementValue": "-5.19"
+      },
+      {
+        "yAxis": "26.81",
+        "xAxis": "2025-09-11",
+        "retracementValue": "-5.44"
+      },
+      {
+        "yAxis": "28.84",
+        "xAxis": "2025-09-12",
+        "retracementValue": "-3.93"
+      },
+      {
+        "yAxis": "30.15",
+        "xAxis": "2025-09-15",
+        "retracementValue": "-2.95"
+      },
+      {
+        "yAxis": "30.81",
+        "xAxis": "2025-09-16",
+        "retracementValue": "-2.46"
+      },
+      {
+        "yAxis": "35.93",
+        "xAxis": "2025-09-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "34.86",
+        "xAxis": "2025-09-18",
+        "retracementValue": "-0.79"
+      },
+      {
+        "yAxis": "35.38",
+        "xAxis": "2025-09-19",
+        "retracementValue": "-0.41"
+      },
+      {
+        "yAxis": "34.66",
+        "xAxis": "2025-09-22",
+        "retracementValue": "-0.93"
+      },
+      {
+        "yAxis": "32.77",
+        "xAxis": "2025-09-23",
+        "retracementValue": "-2.32"
+      },
+      {
+        "yAxis": "35.87",
+        "xAxis": "2025-09-24",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "37.03",
+        "xAxis": "2025-09-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "33.24",
+        "xAxis": "2025-09-26",
+        "retracementValue": "-2.76"
+      },
+      {
+        "yAxis": "35.76",
+        "xAxis": "2025-09-29",
+        "retracementValue": "-0.92"
+      },
+      {
+        "yAxis": "38.53",
+        "xAxis": "2025-09-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "38.75",
+        "xAxis": "2025-10-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "34.31",
+        "xAxis": "2025-10-10",
+        "retracementValue": "-3.20"
+      },
+      {
+        "yAxis": "31.98",
+        "xAxis": "2025-10-13",
+        "retracementValue": "-4.88"
+      },
+      {
+        "yAxis": "27.60",
+        "xAxis": "2025-10-14",
+        "retracementValue": "-8.04"
+      },
+      {
+        "yAxis": "30.71",
+        "xAxis": "2025-10-15",
+        "retracementValue": "-5.80"
+      },
+      {
+        "yAxis": "29.21",
+        "xAxis": "2025-10-16",
+        "retracementValue": "-6.88"
+      },
+      {
+        "yAxis": "24.27",
+        "xAxis": "2025-10-17",
+        "retracementValue": "-10.44"
+      },
+      {
+        "yAxis": "27.80",
+        "xAxis": "2025-10-20",
+        "retracementValue": "-7.89"
+      },
+      {
+        "yAxis": "29.26",
+        "xAxis": "2025-10-21",
+        "retracementValue": "-6.84"
+      },
+      {
+        "yAxis": "27.53",
+        "xAxis": "2025-10-22",
+        "retracementValue": "-8.09"
+      },
+      {
+        "yAxis": "28.05",
+        "xAxis": "2025-10-23",
+        "retracementValue": "-7.72"
+      },
+      {
+        "yAxis": "30.27",
+        "xAxis": "2025-10-24",
+        "retracementValue": "-6.12"
+      },
+      {
+        "yAxis": "32.52",
+        "xAxis": "2025-10-27",
+        "retracementValue": "-4.49"
+      },
+      {
+        "yAxis": "30.90",
+        "xAxis": "2025-10-28",
+        "retracementValue": "-5.66"
+      },
+      {
+        "yAxis": "30.86",
+        "xAxis": "2025-10-29",
+        "retracementValue": "-5.69"
+      },
+      {
+        "yAxis": "30.02",
+        "xAxis": "2025-10-30",
+        "retracementValue": "-6.29"
+      },
+      {
+        "yAxis": "27.13",
+        "xAxis": "2025-10-31",
+        "retracementValue": "-8.37"
+      },
+      {
+        "yAxis": "27.32",
+        "xAxis": "2025-11-03",
+        "retracementValue": "-8.24"
+      },
+      {
+        "yAxis": "25.20",
+        "xAxis": "2025-11-04",
+        "retracementValue": "-9.77"
+      },
+      {
+        "yAxis": "24.58",
+        "xAxis": "2025-11-05",
+        "retracementValue": "-10.21"
+      },
+      {
+        "yAxis": "27.72",
+        "xAxis": "2025-11-06",
+        "retracementValue": "-7.95"
+      },
+      {
+        "yAxis": "25.48",
+        "xAxis": "2025-11-07",
+        "retracementValue": "-9.56"
+      },
+      {
+        "yAxis": "27.06",
+        "xAxis": "2025-11-10",
+        "retracementValue": "-8.43"
+      },
+      {
+        "yAxis": "27.29",
+        "xAxis": "2025-11-11",
+        "retracementValue": "-8.26"
+      },
+      {
+        "yAxis": "27.46",
+        "xAxis": "2025-11-12",
+        "retracementValue": "-8.14"
+      },
+      {
+        "yAxis": "28.50",
+        "xAxis": "2025-11-13",
+        "retracementValue": "-7.39"
+      },
+      {
+        "yAxis": "24.98",
+        "xAxis": "2025-11-14",
+        "retracementValue": "-9.92"
+      },
+      {
+        "yAxis": "23.79",
+        "xAxis": "2025-11-17",
+        "retracementValue": "-10.78"
+      },
+      {
+        "yAxis": "21.57",
+        "xAxis": "2025-11-18",
+        "retracementValue": "-12.38"
+      },
+      {
+        "yAxis": "20.61",
+        "xAxis": "2025-11-19",
+        "retracementValue": "-13.07"
+      },
+      {
+        "yAxis": "19.99",
+        "xAxis": "2025-11-20",
+        "retracementValue": "-13.52"
+      },
+      {
+        "yAxis": "16.28",
+        "xAxis": "2025-11-21",
+        "retracementValue": "-16.20"
+      },
+      {
+        "yAxis": "19.30",
+        "xAxis": "2025-11-24",
+        "retracementValue": "-14.02"
+      },
+      {
+        "yAxis": "20.64",
+        "xAxis": "2025-11-25",
+        "retracementValue": "-13.05"
+      },
+      {
+        "yAxis": "20.81",
+        "xAxis": "2025-11-26",
+        "retracementValue": "-12.93"
+      },
+      {
+        "yAxis": "20.29",
+        "xAxis": "2025-11-27",
+        "retracementValue": "-13.31"
+      },
+      {
+        "yAxis": "20.32",
+        "xAxis": "2025-11-28",
+        "retracementValue": "-13.29"
+      },
+      {
+        "yAxis": "21.09",
+        "xAxis": "2025-12-01",
+        "retracementValue": "-12.73"
+      },
+      {
+        "yAxis": "20.68",
+        "xAxis": "2025-12-02",
+        "retracementValue": "-13.02"
+      },
+      {
+        "yAxis": "18.84",
+        "xAxis": "2025-12-03",
+        "retracementValue": "-14.35"
+      },
+      {
+        "yAxis": "20.50",
+        "xAxis": "2025-12-04",
+        "retracementValue": "-13.16"
+      },
+      {
+        "yAxis": "21.45",
+        "xAxis": "2025-12-05",
+        "retracementValue": "-12.47"
+      },
+      {
+        "yAxis": "21.42",
+        "xAxis": "2025-12-08",
+        "retracementValue": "-12.49"
+      },
+      {
+        "yAxis": "19.31",
+        "xAxis": "2025-12-09",
+        "retracementValue": "-14.02"
+      },
+      {
+        "yAxis": "19.83",
+        "xAxis": "2025-12-10",
+        "retracementValue": "-13.64"
+      },
+      {
+        "yAxis": "18.75",
+        "xAxis": "2025-12-11",
+        "retracementValue": "-14.42"
+      },
+      {
+        "yAxis": "20.73",
+        "xAxis": "2025-12-12",
+        "retracementValue": "-12.99"
+      },
+      {
+        "yAxis": "17.89",
+        "xAxis": "2025-12-15",
+        "retracementValue": "-15.04"
+      },
+      {
+        "yAxis": "15.80",
+        "xAxis": "2025-12-16",
+        "retracementValue": "-16.55"
+      },
+      {
+        "yAxis": "16.94",
+        "xAxis": "2025-12-17",
+        "retracementValue": "-15.72"
+      },
+      {
+        "yAxis": "16.22",
+        "xAxis": "2025-12-18",
+        "retracementValue": "-16.24"
+      }
+    ],
+    "restorePoint": {
+      "yAxis": "35.93",
+      "xAxis": "2025-09-17"
+    },
+    "dataCycle": 4,
+    "chartName": "回撤修复",
+    "maxRetracementStartPoint": {
+      "yAxis": "34.11",
+      "xAxis": "2025-03-18"
+    },
+    "maxRetracementValue": -26.11,
+    "chartTitleList": [
+      {
+        "name": "最大回撤",
+        "value": -26.11
+      },
+      {
+        "name": "修复天数",
+        "value": "163天"
+      }
+    ],
+    "chartType": 7,
+    "maxRetracementEndPoint": {
+      "yAxis": "-0.90",
+      "xAxis": "2025-04-07"
+    },
+    "pollFlag": false
+  },
+  {
+    "fund_code": "012276",
+    "fund_name": "富国中证沪港深500ETF联接C",
+    "fund_type": "指数型-股票",
+    "restoreDay": 99,
+    "establishmentCycleDesc": "4年158天",
+    "majorChartPointList": [
+      {
+        "yAxis": "0.00",
+        "xAxis": "2024-12-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "-0.10",
+        "xAxis": "2024-12-19",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "-0.29",
+        "xAxis": "2024-12-20",
+        "retracementValue": "-0.29"
+      },
+      {
+        "yAxis": "-0.08",
+        "xAxis": "2024-12-23",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "1.08",
+        "xAxis": "2024-12-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.08",
+        "xAxis": "2024-12-25",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.13",
+        "xAxis": "2024-12-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.02",
+        "xAxis": "2024-12-27",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "1.21",
+        "xAxis": "2024-12-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.35",
+        "xAxis": "2024-12-31",
+        "retracementValue": "-0.85"
+      },
+      {
+        "yAxis": "-2.02",
+        "xAxis": "2025-01-02",
+        "retracementValue": "-3.19"
+      },
+      {
+        "yAxis": "-2.49",
+        "xAxis": "2025-01-03",
+        "retracementValue": "-3.66"
+      },
+      {
+        "yAxis": "-2.77",
+        "xAxis": "2025-01-06",
+        "retracementValue": "-3.94"
+      },
+      {
+        "yAxis": "-2.99",
+        "xAxis": "2025-01-07",
+        "retracementValue": "-4.15"
+      },
+      {
+        "yAxis": "-3.47",
+        "xAxis": "2025-01-08",
+        "retracementValue": "-4.62"
+      },
+      {
+        "yAxis": "-3.65",
+        "xAxis": "2025-01-09",
+        "retracementValue": "-4.80"
+      },
+      {
+        "yAxis": "-4.56",
+        "xAxis": "2025-01-10",
+        "retracementValue": "-5.71"
+      },
+      {
+        "yAxis": "-5.08",
+        "xAxis": "2025-01-13",
+        "retracementValue": "-6.22"
+      },
+      {
+        "yAxis": "-2.96",
+        "xAxis": "2025-01-14",
+        "retracementValue": "-4.12"
+      },
+      {
+        "yAxis": "-3.14",
+        "xAxis": "2025-01-15",
+        "retracementValue": "-4.30"
+      },
+      {
+        "yAxis": "-2.63",
+        "xAxis": "2025-01-16",
+        "retracementValue": "-3.79"
+      },
+      {
+        "yAxis": "-2.39",
+        "xAxis": "2025-01-17",
+        "retracementValue": "-3.56"
+      },
+      {
+        "yAxis": "-1.44",
+        "xAxis": "2025-01-20",
+        "retracementValue": "-2.62"
+      },
+      {
+        "yAxis": "-1.14",
+        "xAxis": "2025-01-21",
+        "retracementValue": "-2.33"
+      },
+      {
+        "yAxis": "-2.12",
+        "xAxis": "2025-01-22",
+        "retracementValue": "-3.29"
+      },
+      {
+        "yAxis": "-2.12",
+        "xAxis": "2025-01-23",
+        "retracementValue": "-3.29"
+      },
+      {
+        "yAxis": "-1.00",
+        "xAxis": "2025-01-24",
+        "retracementValue": "-2.18"
+      },
+      {
+        "yAxis": "-0.84",
+        "xAxis": "2025-01-27",
+        "retracementValue": "-2.03"
+      },
+      {
+        "yAxis": "-0.16",
+        "xAxis": "2025-02-05",
+        "retracementValue": "-1.35"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-02-06",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "2.31",
+        "xAxis": "2025-02-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.15",
+        "xAxis": "2025-02-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.43",
+        "xAxis": "2025-02-11",
+        "retracementValue": "-0.69"
+      },
+      {
+        "yAxis": "4.17",
+        "xAxis": "2025-02-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.90",
+        "xAxis": "2025-02-13",
+        "retracementValue": "-0.26"
+      },
+      {
+        "yAxis": "6.07",
+        "xAxis": "2025-02-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.41",
+        "xAxis": "2025-02-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.67",
+        "xAxis": "2025-02-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.99",
+        "xAxis": "2025-02-19",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.06",
+        "xAxis": "2025-02-20",
+        "retracementValue": "-0.87"
+      },
+      {
+        "yAxis": "8.79",
+        "xAxis": "2025-02-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.27",
+        "xAxis": "2025-02-24",
+        "retracementValue": "-0.48"
+      },
+      {
+        "yAxis": "7.06",
+        "xAxis": "2025-02-25",
+        "retracementValue": "-1.59"
+      },
+      {
+        "yAxis": "9.03",
+        "xAxis": "2025-02-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.99",
+        "xAxis": "2025-02-27",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "6.38",
+        "xAxis": "2025-02-28",
+        "retracementValue": "-2.43"
+      },
+      {
+        "yAxis": "6.60",
+        "xAxis": "2025-03-03",
+        "retracementValue": "-2.22"
+      },
+      {
+        "yAxis": "6.50",
+        "xAxis": "2025-03-04",
+        "retracementValue": "-2.32"
+      },
+      {
+        "yAxis": "7.92",
+        "xAxis": "2025-03-05",
+        "retracementValue": "-1.02"
+      },
+      {
+        "yAxis": "10.37",
+        "xAxis": "2025-03-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "9.90",
+        "xAxis": "2025-03-07",
+        "retracementValue": "-0.43"
+      },
+      {
+        "yAxis": "8.77",
+        "xAxis": "2025-03-10",
+        "retracementValue": "-1.46"
+      },
+      {
+        "yAxis": "9.01",
+        "xAxis": "2025-03-11",
+        "retracementValue": "-1.23"
+      },
+      {
+        "yAxis": "8.49",
+        "xAxis": "2025-03-12",
+        "retracementValue": "-1.70"
+      },
+      {
+        "yAxis": "8.02",
+        "xAxis": "2025-03-13",
+        "retracementValue": "-2.13"
+      },
+      {
+        "yAxis": "10.20",
+        "xAxis": "2025-03-14",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "10.40",
+        "xAxis": "2025-03-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "11.95",
+        "xAxis": "2025-03-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "11.93",
+        "xAxis": "2025-03-19",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "10.36",
+        "xAxis": "2025-03-20",
+        "retracementValue": "-1.42"
+      },
+      {
+        "yAxis": "8.53",
+        "xAxis": "2025-03-21",
+        "retracementValue": "-3.06"
+      },
+      {
+        "yAxis": "9.15",
+        "xAxis": "2025-03-24",
+        "retracementValue": "-2.50"
+      },
+      {
+        "yAxis": "8.04",
+        "xAxis": "2025-03-25",
+        "retracementValue": "-3.49"
+      },
+      {
+        "yAxis": "8.18",
+        "xAxis": "2025-03-26",
+        "retracementValue": "-3.37"
+      },
+      {
+        "yAxis": "8.56",
+        "xAxis": "2025-03-27",
+        "retracementValue": "-3.02"
+      },
+      {
+        "yAxis": "8.11",
+        "xAxis": "2025-03-28",
+        "retracementValue": "-3.43"
+      },
+      {
+        "yAxis": "7.07",
+        "xAxis": "2025-03-31",
+        "retracementValue": "-4.36"
+      },
+      {
+        "yAxis": "7.42",
+        "xAxis": "2025-04-01",
+        "retracementValue": "-4.05"
+      },
+      {
+        "yAxis": "7.37",
+        "xAxis": "2025-04-02",
+        "retracementValue": "-4.09"
+      },
+      {
+        "yAxis": "6.31",
+        "xAxis": "2025-04-03",
+        "retracementValue": "-5.04"
+      },
+      {
+        "yAxis": "-3.65",
+        "xAxis": "2025-04-07",
+        "retracementValue": "-13.93"
+      },
+      {
+        "yAxis": "-2.20",
+        "xAxis": "2025-04-08",
+        "retracementValue": "-12.64"
+      },
+      {
+        "yAxis": "-1.33",
+        "xAxis": "2025-04-09",
+        "retracementValue": "-11.86"
+      },
+      {
+        "yAxis": "0.24",
+        "xAxis": "2025-04-10",
+        "retracementValue": "-10.46"
+      },
+      {
+        "yAxis": "0.83",
+        "xAxis": "2025-04-11",
+        "retracementValue": "-9.93"
+      },
+      {
+        "yAxis": "2.13",
+        "xAxis": "2025-04-14",
+        "retracementValue": "-8.77"
+      },
+      {
+        "yAxis": "2.27",
+        "xAxis": "2025-04-15",
+        "retracementValue": "-8.65"
+      },
+      {
+        "yAxis": "1.59",
+        "xAxis": "2025-04-16",
+        "retracementValue": "-9.26"
+      },
+      {
+        "yAxis": "2.20",
+        "xAxis": "2025-04-17",
+        "retracementValue": "-8.71"
+      },
+      {
+        "yAxis": "2.19",
+        "xAxis": "2025-04-18",
+        "retracementValue": "-8.72"
+      },
+      {
+        "yAxis": "2.37",
+        "xAxis": "2025-04-21",
+        "retracementValue": "-8.56"
+      },
+      {
+        "yAxis": "2.89",
+        "xAxis": "2025-04-22",
+        "retracementValue": "-8.09"
+      },
+      {
+        "yAxis": "4.09",
+        "xAxis": "2025-04-23",
+        "retracementValue": "-7.02"
+      },
+      {
+        "yAxis": "3.77",
+        "xAxis": "2025-04-24",
+        "retracementValue": "-7.30"
+      },
+      {
+        "yAxis": "3.96",
+        "xAxis": "2025-04-25",
+        "retracementValue": "-7.13"
+      },
+      {
+        "yAxis": "3.90",
+        "xAxis": "2025-04-28",
+        "retracementValue": "-7.19"
+      },
+      {
+        "yAxis": "3.83",
+        "xAxis": "2025-04-29",
+        "retracementValue": "-7.25"
+      },
+      {
+        "yAxis": "4.08",
+        "xAxis": "2025-04-30",
+        "retracementValue": "-7.03"
+      },
+      {
+        "yAxis": "5.71",
+        "xAxis": "2025-05-06",
+        "retracementValue": "-5.57"
+      },
+      {
+        "yAxis": "5.86",
+        "xAxis": "2025-05-07",
+        "retracementValue": "-5.44"
+      },
+      {
+        "yAxis": "6.34",
+        "xAxis": "2025-05-08",
+        "retracementValue": "-5.01"
+      },
+      {
+        "yAxis": "6.41",
+        "xAxis": "2025-05-09",
+        "retracementValue": "-4.95"
+      },
+      {
+        "yAxis": "8.32",
+        "xAxis": "2025-05-12",
+        "retracementValue": "-3.24"
+      },
+      {
+        "yAxis": "7.47",
+        "xAxis": "2025-05-13",
+        "retracementValue": "-4.00"
+      },
+      {
+        "yAxis": "9.09",
+        "xAxis": "2025-05-14",
+        "retracementValue": "-2.55"
+      },
+      {
+        "yAxis": "8.28",
+        "xAxis": "2025-05-15",
+        "retracementValue": "-3.28"
+      },
+      {
+        "yAxis": "7.68",
+        "xAxis": "2025-05-16",
+        "retracementValue": "-3.81"
+      },
+      {
+        "yAxis": "7.43",
+        "xAxis": "2025-05-19",
+        "retracementValue": "-4.04"
+      },
+      {
+        "yAxis": "8.32",
+        "xAxis": "2025-05-20",
+        "retracementValue": "-3.24"
+      },
+      {
+        "yAxis": "8.89",
+        "xAxis": "2025-05-21",
+        "retracementValue": "-2.73"
+      },
+      {
+        "yAxis": "8.35",
+        "xAxis": "2025-05-22",
+        "retracementValue": "-3.22"
+      },
+      {
+        "yAxis": "8.01",
+        "xAxis": "2025-05-23",
+        "retracementValue": "-3.52"
+      },
+      {
+        "yAxis": "7.01",
+        "xAxis": "2025-05-26",
+        "retracementValue": "-4.41"
+      },
+      {
+        "yAxis": "7.00",
+        "xAxis": "2025-05-27",
+        "retracementValue": "-4.42"
+      },
+      {
+        "yAxis": "6.67",
+        "xAxis": "2025-05-28",
+        "retracementValue": "-4.71"
+      },
+      {
+        "yAxis": "7.64",
+        "xAxis": "2025-05-29",
+        "retracementValue": "-3.84"
+      },
+      {
+        "yAxis": "6.67",
+        "xAxis": "2025-05-30",
+        "retracementValue": "-4.71"
+      },
+      {
+        "yAxis": "7.20",
+        "xAxis": "2025-06-03",
+        "retracementValue": "-4.24"
+      },
+      {
+        "yAxis": "7.85",
+        "xAxis": "2025-06-04",
+        "retracementValue": "-3.66"
+      },
+      {
+        "yAxis": "8.43",
+        "xAxis": "2025-06-05",
+        "retracementValue": "-3.15"
+      },
+      {
+        "yAxis": "8.26",
+        "xAxis": "2025-06-06",
+        "retracementValue": "-3.30"
+      },
+      {
+        "yAxis": "9.21",
+        "xAxis": "2025-06-09",
+        "retracementValue": "-2.45"
+      },
+      {
+        "yAxis": "8.91",
+        "xAxis": "2025-06-10",
+        "retracementValue": "-2.71"
+      },
+      {
+        "yAxis": "9.85",
+        "xAxis": "2025-06-11",
+        "retracementValue": "-1.87"
+      },
+      {
+        "yAxis": "9.25",
+        "xAxis": "2025-06-12",
+        "retracementValue": "-2.41"
+      },
+      {
+        "yAxis": "8.56",
+        "xAxis": "2025-06-13",
+        "retracementValue": "-3.02"
+      },
+      {
+        "yAxis": "9.05",
+        "xAxis": "2025-06-16",
+        "retracementValue": "-2.59"
+      },
+      {
+        "yAxis": "8.83",
+        "xAxis": "2025-06-17",
+        "retracementValue": "-2.78"
+      },
+      {
+        "yAxis": "8.44",
+        "xAxis": "2025-06-18",
+        "retracementValue": "-3.14"
+      },
+      {
+        "yAxis": "6.99",
+        "xAxis": "2025-06-19",
+        "retracementValue": "-4.43"
+      },
+      {
+        "yAxis": "7.60",
+        "xAxis": "2025-06-20",
+        "retracementValue": "-3.88"
+      },
+      {
+        "yAxis": "8.07",
+        "xAxis": "2025-06-23",
+        "retracementValue": "-3.46"
+      },
+      {
+        "yAxis": "9.61",
+        "xAxis": "2025-06-24",
+        "retracementValue": "-2.08"
+      },
+      {
+        "yAxis": "11.00",
+        "xAxis": "2025-06-25",
+        "retracementValue": "-0.85"
+      },
+      {
+        "yAxis": "10.53",
+        "xAxis": "2025-06-26",
+        "retracementValue": "-1.26"
+      },
+      {
+        "yAxis": "10.15",
+        "xAxis": "2025-06-27",
+        "retracementValue": "-1.61"
+      },
+      {
+        "yAxis": "9.93",
+        "xAxis": "2025-06-30",
+        "retracementValue": "-1.80"
+      },
+      {
+        "yAxis": "10.00",
+        "xAxis": "2025-07-01",
+        "retracementValue": "-1.74"
+      },
+      {
+        "yAxis": "10.25",
+        "xAxis": "2025-07-02",
+        "retracementValue": "-1.52"
+      },
+      {
+        "yAxis": "10.39",
+        "xAxis": "2025-07-03",
+        "retracementValue": "-1.40"
+      },
+      {
+        "yAxis": "10.32",
+        "xAxis": "2025-07-04",
+        "retracementValue": "-1.46"
+      },
+      {
+        "yAxis": "10.08",
+        "xAxis": "2025-07-07",
+        "retracementValue": "-1.67"
+      },
+      {
+        "yAxis": "11.13",
+        "xAxis": "2025-07-08",
+        "retracementValue": "-0.73"
+      },
+      {
+        "yAxis": "10.53",
+        "xAxis": "2025-07-09",
+        "retracementValue": "-1.26"
+      },
+      {
+        "yAxis": "11.11",
+        "xAxis": "2025-07-10",
+        "retracementValue": "-0.75"
+      },
+      {
+        "yAxis": "11.40",
+        "xAxis": "2025-07-11",
+        "retracementValue": "-0.49"
+      },
+      {
+        "yAxis": "11.69",
+        "xAxis": "2025-07-14",
+        "retracementValue": "-0.23"
+      },
+      {
+        "yAxis": "12.74",
+        "xAxis": "2025-07-15",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "12.45",
+        "xAxis": "2025-07-16",
+        "retracementValue": "-0.26"
+      },
+      {
+        "yAxis": "12.94",
+        "xAxis": "2025-07-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "13.98",
+        "xAxis": "2025-07-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "14.65",
+        "xAxis": "2025-07-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "15.35",
+        "xAxis": "2025-07-22",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "16.23",
+        "xAxis": "2025-07-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "17.04",
+        "xAxis": "2025-07-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "16.25",
+        "xAxis": "2025-07-25",
+        "retracementValue": "-0.68"
+      },
+      {
+        "yAxis": "16.85",
+        "xAxis": "2025-07-28",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "17.18",
+        "xAxis": "2025-07-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "16.38",
+        "xAxis": "2025-07-30",
+        "retracementValue": "-0.69"
+      },
+      {
+        "yAxis": "14.68",
+        "xAxis": "2025-07-31",
+        "retracementValue": "-2.14"
+      },
+      {
+        "yAxis": "13.79",
+        "xAxis": "2025-08-01",
+        "retracementValue": "-2.89"
+      },
+      {
+        "yAxis": "14.46",
+        "xAxis": "2025-08-04",
+        "retracementValue": "-2.32"
+      },
+      {
+        "yAxis": "15.32",
+        "xAxis": "2025-08-05",
+        "retracementValue": "-1.59"
+      },
+      {
+        "yAxis": "15.66",
+        "xAxis": "2025-08-06",
+        "retracementValue": "-1.30"
+      },
+      {
+        "yAxis": "15.95",
+        "xAxis": "2025-08-07",
+        "retracementValue": "-1.05"
+      },
+      {
+        "yAxis": "15.40",
+        "xAxis": "2025-08-08",
+        "retracementValue": "-1.52"
+      },
+      {
+        "yAxis": "15.87",
+        "xAxis": "2025-08-11",
+        "retracementValue": "-1.12"
+      },
+      {
+        "yAxis": "16.24",
+        "xAxis": "2025-08-12",
+        "retracementValue": "-0.80"
+      },
+      {
+        "yAxis": "18.09",
+        "xAxis": "2025-08-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "17.94",
+        "xAxis": "2025-08-14",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "18.14",
+        "xAxis": "2025-08-15",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "18.51",
+        "xAxis": "2025-08-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "18.28",
+        "xAxis": "2025-08-19",
+        "retracementValue": "-0.19"
+      },
+      {
+        "yAxis": "19.21",
+        "xAxis": "2025-08-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "19.21",
+        "xAxis": "2025-08-21",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "21.02",
+        "xAxis": "2025-08-22",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "23.10",
+        "xAxis": "2025-08-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "22.38",
+        "xAxis": "2025-08-26",
+        "retracementValue": "-0.59"
+      },
+      {
+        "yAxis": "20.74",
+        "xAxis": "2025-08-27",
+        "retracementValue": "-1.92"
+      },
+      {
+        "yAxis": "21.42",
+        "xAxis": "2025-08-28",
+        "retracementValue": "-1.37"
+      },
+      {
+        "yAxis": "22.03",
+        "xAxis": "2025-08-29",
+        "retracementValue": "-0.87"
+      },
+      {
+        "yAxis": "23.79",
+        "xAxis": "2025-09-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "23.04",
+        "xAxis": "2025-09-02",
+        "retracementValue": "-0.61"
+      },
+      {
+        "yAxis": "22.22",
+        "xAxis": "2025-09-03",
+        "retracementValue": "-1.27"
+      },
+      {
+        "yAxis": "20.16",
+        "xAxis": "2025-09-04",
+        "retracementValue": "-2.94"
+      },
+      {
+        "yAxis": "22.47",
+        "xAxis": "2025-09-05",
+        "retracementValue": "-1.07"
+      },
+      {
+        "yAxis": "23.08",
+        "xAxis": "2025-09-08",
+        "retracementValue": "-0.58"
+      },
+      {
+        "yAxis": "23.32",
+        "xAxis": "2025-09-09",
+        "retracementValue": "-0.38"
+      },
+      {
+        "yAxis": "24.08",
+        "xAxis": "2025-09-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "25.39",
+        "xAxis": "2025-09-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "25.78",
+        "xAxis": "2025-09-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "26.09",
+        "xAxis": "2025-09-15",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "25.93",
+        "xAxis": "2025-09-16",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "27.30",
+        "xAxis": "2025-09-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "25.88",
+        "xAxis": "2025-09-18",
+        "retracementValue": "-1.12"
+      },
+      {
+        "yAxis": "25.93",
+        "xAxis": "2025-09-19",
+        "retracementValue": "-1.08"
+      },
+      {
+        "yAxis": "25.91",
+        "xAxis": "2025-09-22",
+        "retracementValue": "-1.09"
+      },
+      {
+        "yAxis": "25.48",
+        "xAxis": "2025-09-23",
+        "retracementValue": "-1.43"
+      },
+      {
+        "yAxis": "27.12",
+        "xAxis": "2025-09-24",
+        "retracementValue": "-0.14"
+      },
+      {
+        "yAxis": "27.40",
+        "xAxis": "2025-09-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "26.07",
+        "xAxis": "2025-09-26",
+        "retracementValue": "-1.04"
+      },
+      {
+        "yAxis": "28.09",
+        "xAxis": "2025-09-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "28.88",
+        "xAxis": "2025-09-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "29.68",
+        "xAxis": "2025-10-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "27.21",
+        "xAxis": "2025-10-10",
+        "retracementValue": "-1.90"
+      },
+      {
+        "yAxis": "26.12",
+        "xAxis": "2025-10-13",
+        "retracementValue": "-2.75"
+      },
+      {
+        "yAxis": "24.19",
+        "xAxis": "2025-10-14",
+        "retracementValue": "-4.24"
+      },
+      {
+        "yAxis": "26.18",
+        "xAxis": "2025-10-15",
+        "retracementValue": "-2.70"
+      },
+      {
+        "yAxis": "26.23",
+        "xAxis": "2025-10-16",
+        "retracementValue": "-2.66"
+      },
+      {
+        "yAxis": "23.43",
+        "xAxis": "2025-10-17",
+        "retracementValue": "-4.82"
+      },
+      {
+        "yAxis": "25.10",
+        "xAxis": "2025-10-20",
+        "retracementValue": "-3.54"
+      },
+      {
+        "yAxis": "26.48",
+        "xAxis": "2025-10-21",
+        "retracementValue": "-2.47"
+      },
+      {
+        "yAxis": "25.75",
+        "xAxis": "2025-10-22",
+        "retracementValue": "-3.03"
+      },
+      {
+        "yAxis": "26.35",
+        "xAxis": "2025-10-23",
+        "retracementValue": "-2.57"
+      },
+      {
+        "yAxis": "27.71",
+        "xAxis": "2025-10-24",
+        "retracementValue": "-1.52"
+      },
+      {
+        "yAxis": "29.28",
+        "xAxis": "2025-10-27",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "28.84",
+        "xAxis": "2025-10-28",
+        "retracementValue": "-0.65"
+      },
+      {
+        "yAxis": "29.69",
+        "xAxis": "2025-10-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "29.15",
+        "xAxis": "2025-10-30",
+        "retracementValue": "-0.42"
+      },
+      {
+        "yAxis": "27.21",
+        "xAxis": "2025-10-31",
+        "retracementValue": "-1.91"
+      },
+      {
+        "yAxis": "27.79",
+        "xAxis": "2025-11-03",
+        "retracementValue": "-1.47"
+      },
+      {
+        "yAxis": "26.83",
+        "xAxis": "2025-11-04",
+        "retracementValue": "-2.21"
+      },
+      {
+        "yAxis": "26.93",
+        "xAxis": "2025-11-05",
+        "retracementValue": "-2.13"
+      },
+      {
+        "yAxis": "29.14",
+        "xAxis": "2025-11-06",
+        "retracementValue": "-0.43"
+      },
+      {
+        "yAxis": "28.35",
+        "xAxis": "2025-11-07",
+        "retracementValue": "-1.04"
+      },
+      {
+        "yAxis": "29.49",
+        "xAxis": "2025-11-10",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "29.01",
+        "xAxis": "2025-11-11",
+        "retracementValue": "-0.52"
+      },
+      {
+        "yAxis": "29.33",
+        "xAxis": "2025-11-12",
+        "retracementValue": "-0.28"
+      },
+      {
+        "yAxis": "30.55",
+        "xAxis": "2025-11-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "28.38",
+        "xAxis": "2025-11-14",
+        "retracementValue": "-1.67"
+      },
+      {
+        "yAxis": "27.59",
+        "xAxis": "2025-11-17",
+        "retracementValue": "-2.27"
+      },
+      {
+        "yAxis": "26.24",
+        "xAxis": "2025-11-18",
+        "retracementValue": "-3.30"
+      },
+      {
+        "yAxis": "26.23",
+        "xAxis": "2025-11-19",
+        "retracementValue": "-3.31"
+      },
+      {
+        "yAxis": "25.92",
+        "xAxis": "2025-11-20",
+        "retracementValue": "-3.55"
+      },
+      {
+        "yAxis": "22.92",
+        "xAxis": "2025-11-21",
+        "retracementValue": "-5.85"
+      },
+      {
+        "yAxis": "23.94",
+        "xAxis": "2025-11-24",
+        "retracementValue": "-5.07"
+      },
+      {
+        "yAxis": "24.90",
+        "xAxis": "2025-11-25",
+        "retracementValue": "-4.33"
+      },
+      {
+        "yAxis": "25.29",
+        "xAxis": "2025-11-26",
+        "retracementValue": "-4.03"
+      },
+      {
+        "yAxis": "25.16",
+        "xAxis": "2025-11-27",
+        "retracementValue": "-4.13"
+      },
+      {
+        "yAxis": "25.22",
+        "xAxis": "2025-11-28",
+        "retracementValue": "-4.09"
+      },
+      {
+        "yAxis": "26.25",
+        "xAxis": "2025-12-01",
+        "retracementValue": "-3.30"
+      },
+      {
+        "yAxis": "26.06",
+        "xAxis": "2025-12-02",
+        "retracementValue": "-3.44"
+      },
+      {
+        "yAxis": "25.11",
+        "xAxis": "2025-12-03",
+        "retracementValue": "-4.17"
+      },
+      {
+        "yAxis": "25.64",
+        "xAxis": "2025-12-04",
+        "retracementValue": "-3.76"
+      },
+      {
+        "yAxis": "26.40",
+        "xAxis": "2025-12-05",
+        "retracementValue": "-3.18"
+      },
+      {
+        "yAxis": "26.33",
+        "xAxis": "2025-12-08",
+        "retracementValue": "-3.24"
+      },
+      {
+        "yAxis": "25.49",
+        "xAxis": "2025-12-09",
+        "retracementValue": "-3.88"
+      },
+      {
+        "yAxis": "25.66",
+        "xAxis": "2025-12-10",
+        "retracementValue": "-3.75"
+      },
+      {
+        "yAxis": "25.01",
+        "xAxis": "2025-12-11",
+        "retracementValue": "-4.25"
+      },
+      {
+        "yAxis": "26.39",
+        "xAxis": "2025-12-12",
+        "retracementValue": "-3.19"
+      },
+      {
+        "yAxis": "25.08",
+        "xAxis": "2025-12-15",
+        "retracementValue": "-4.19"
+      },
+      {
+        "yAxis": "23.44",
+        "xAxis": "2025-12-16",
+        "retracementValue": "-5.45"
+      },
+      {
+        "yAxis": "25.13",
+        "xAxis": "2025-12-17",
+        "retracementValue": "-4.16"
+      },
+      {
+        "yAxis": "24.75",
+        "xAxis": "2025-12-18",
+        "retracementValue": "-4.45"
+      }
+    ],
+    "restorePoint": {
+      "yAxis": "12.74",
+      "xAxis": "2025-07-15"
+    },
+    "dataCycle": 4,
+    "chartName": "回撤修复",
+    "maxRetracementStartPoint": {
+      "yAxis": "11.95",
+      "xAxis": "2025-03-18"
+    },
+    "maxRetracementValue": -13.93,
+    "chartTitleList": [
+      {
+        "name": "最大回撤",
+        "value": -13.93
+      },
+      {
+        "name": "修复天数",
+        "value": "99天"
+      }
+    ],
+    "chartType": 7,
+    "maxRetracementEndPoint": {
+      "yAxis": "-3.65",
+      "xAxis": "2025-04-07"
+    },
+    "pollFlag": false
+  },
+  {
+    "fund_code": "011496",
+    "fund_name": "华泰紫金月月发1个月滚动债券发起A",
+    "fund_type": "债券型-一级债",
+    "restoreDay": 27,
+    "establishmentCycleDesc": "4年171天",
+    "majorChartPointList": [
+      {
+        "yAxis": "0.00",
+        "xAxis": "2024-12-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "-0.04",
+        "xAxis": "2024-12-19",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.02",
+        "xAxis": "2024-12-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.07",
+        "xAxis": "2024-12-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.05",
+        "xAxis": "2024-12-24",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.03",
+        "xAxis": "2024-12-25",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.01",
+        "xAxis": "2024-12-26",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.06",
+        "xAxis": "2024-12-27",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.08",
+        "xAxis": "2024-12-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2024-12-31",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.32",
+        "xAxis": "2025-01-02",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.38",
+        "xAxis": "2025-01-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.41",
+        "xAxis": "2025-01-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.36",
+        "xAxis": "2025-01-07",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.36",
+        "xAxis": "2025-01-08",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.29",
+        "xAxis": "2025-01-09",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "0.26",
+        "xAxis": "2025-01-10",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-01-13",
+        "retracementValue": "-0.21"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-01-14",
+        "retracementValue": "-0.21"
+      },
+      {
+        "yAxis": "0.22",
+        "xAxis": "2025-01-15",
+        "retracementValue": "-0.19"
+      },
+      {
+        "yAxis": "0.17",
+        "xAxis": "2025-01-16",
+        "retracementValue": "-0.24"
+      },
+      {
+        "yAxis": "0.13",
+        "xAxis": "2025-01-17",
+        "retracementValue": "-0.28"
+      },
+      {
+        "yAxis": "0.10",
+        "xAxis": "2025-01-20",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "0.13",
+        "xAxis": "2025-01-21",
+        "retracementValue": "-0.28"
+      },
+      {
+        "yAxis": "0.14",
+        "xAxis": "2025-01-22",
+        "retracementValue": "-0.27"
+      },
+      {
+        "yAxis": "0.10",
+        "xAxis": "2025-01-23",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "0.09",
+        "xAxis": "2025-01-24",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2025-01-27",
+        "retracementValue": "-0.22"
+      },
+      {
+        "yAxis": "0.25",
+        "xAxis": "2025-02-05",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "0.32",
+        "xAxis": "2025-02-06",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "0.35",
+        "xAxis": "2025-02-07",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.32",
+        "xAxis": "2025-02-10",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "0.31",
+        "xAxis": "2025-02-11",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "0.31",
+        "xAxis": "2025-02-12",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "0.31",
+        "xAxis": "2025-02-13",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "0.24",
+        "xAxis": "2025-02-14",
+        "retracementValue": "-0.17"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2025-02-17",
+        "retracementValue": "-0.22"
+      },
+      {
+        "yAxis": "0.09",
+        "xAxis": "2025-02-18",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "0.12",
+        "xAxis": "2025-02-19",
+        "retracementValue": "-0.29"
+      },
+      {
+        "yAxis": "0.05",
+        "xAxis": "2025-02-20",
+        "retracementValue": "-0.37"
+      },
+      {
+        "yAxis": "-0.09",
+        "xAxis": "2025-02-21",
+        "retracementValue": "-0.50"
+      },
+      {
+        "yAxis": "-0.24",
+        "xAxis": "2025-02-24",
+        "retracementValue": "-0.65"
+      },
+      {
+        "yAxis": "-0.31",
+        "xAxis": "2025-02-25",
+        "retracementValue": "-0.72"
+      },
+      {
+        "yAxis": "-0.30",
+        "xAxis": "2025-02-26",
+        "retracementValue": "-0.71"
+      },
+      {
+        "yAxis": "-0.38",
+        "xAxis": "2025-02-27",
+        "retracementValue": "-0.79"
+      },
+      {
+        "yAxis": "-0.39",
+        "xAxis": "2025-02-28",
+        "retracementValue": "-0.80"
+      },
+      {
+        "yAxis": "-0.32",
+        "xAxis": "2025-03-03",
+        "retracementValue": "-0.73"
+      },
+      {
+        "yAxis": "-0.31",
+        "xAxis": "2025-03-04",
+        "retracementValue": "-0.72"
+      },
+      {
+        "yAxis": "-0.29",
+        "xAxis": "2025-03-05",
+        "retracementValue": "-0.70"
+      },
+      {
+        "yAxis": "-0.35",
+        "xAxis": "2025-03-06",
+        "retracementValue": "-0.76"
+      },
+      {
+        "yAxis": "-0.55",
+        "xAxis": "2025-03-07",
+        "retracementValue": "-0.96"
+      },
+      {
+        "yAxis": "-0.61",
+        "xAxis": "2025-03-10",
+        "retracementValue": "-1.02"
+      },
+      {
+        "yAxis": "-0.77",
+        "xAxis": "2025-03-11",
+        "retracementValue": "-1.18"
+      },
+      {
+        "yAxis": "-0.68",
+        "xAxis": "2025-03-12",
+        "retracementValue": "-1.09"
+      },
+      {
+        "yAxis": "-0.60",
+        "xAxis": "2025-03-13",
+        "retracementValue": "-1.01"
+      },
+      {
+        "yAxis": "-0.56",
+        "xAxis": "2025-03-14",
+        "retracementValue": "-0.97"
+      },
+      {
+        "yAxis": "-0.63",
+        "xAxis": "2025-03-17",
+        "retracementValue": "-1.04"
+      },
+      {
+        "yAxis": "-0.59",
+        "xAxis": "2025-03-18",
+        "retracementValue": "-1.00"
+      },
+      {
+        "yAxis": "-0.52",
+        "xAxis": "2025-03-19",
+        "retracementValue": "-0.93"
+      },
+      {
+        "yAxis": "-0.38",
+        "xAxis": "2025-03-20",
+        "retracementValue": "-0.79"
+      },
+      {
+        "yAxis": "-0.31",
+        "xAxis": "2025-03-21",
+        "retracementValue": "-0.72"
+      },
+      {
+        "yAxis": "-0.25",
+        "xAxis": "2025-03-24",
+        "retracementValue": "-0.66"
+      },
+      {
+        "yAxis": "-0.17",
+        "xAxis": "2025-03-25",
+        "retracementValue": "-0.58"
+      },
+      {
+        "yAxis": "-0.11",
+        "xAxis": "2025-03-26",
+        "retracementValue": "-0.52"
+      },
+      {
+        "yAxis": "-0.09",
+        "xAxis": "2025-03-27",
+        "retracementValue": "-0.50"
+      },
+      {
+        "yAxis": "-0.06",
+        "xAxis": "2025-03-28",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "-0.05",
+        "xAxis": "2025-03-31",
+        "retracementValue": "-0.46"
+      },
+      {
+        "yAxis": "-0.03",
+        "xAxis": "2025-04-01",
+        "retracementValue": "-0.44"
+      },
+      {
+        "yAxis": "0.01",
+        "xAxis": "2025-04-02",
+        "retracementValue": "-0.40"
+      },
+      {
+        "yAxis": "0.21",
+        "xAxis": "2025-04-03",
+        "retracementValue": "-0.21"
+      },
+      {
+        "yAxis": "0.44",
+        "xAxis": "2025-04-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.38",
+        "xAxis": "2025-04-08",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.37",
+        "xAxis": "2025-04-09",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "0.36",
+        "xAxis": "2025-04-10",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "0.38",
+        "xAxis": "2025-04-11",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.40",
+        "xAxis": "2025-04-14",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.39",
+        "xAxis": "2025-04-15",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.41",
+        "xAxis": "2025-04-16",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "0.41",
+        "xAxis": "2025-04-17",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "0.40",
+        "xAxis": "2025-04-18",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.38",
+        "xAxis": "2025-04-21",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.40",
+        "xAxis": "2025-04-22",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.36",
+        "xAxis": "2025-04-23",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "0.33",
+        "xAxis": "2025-04-24",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "0.32",
+        "xAxis": "2025-04-25",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "0.33",
+        "xAxis": "2025-04-28",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "0.36",
+        "xAxis": "2025-04-29",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "0.39",
+        "xAxis": "2025-04-30",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.41",
+        "xAxis": "2025-05-06",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "0.43",
+        "xAxis": "2025-05-07",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.50",
+        "xAxis": "2025-05-08",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.55",
+        "xAxis": "2025-05-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.53",
+        "xAxis": "2025-05-12",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.57",
+        "xAxis": "2025-05-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.60",
+        "xAxis": "2025-05-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.63",
+        "xAxis": "2025-05-15",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.61",
+        "xAxis": "2025-05-16",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.64",
+        "xAxis": "2025-05-19",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.67",
+        "xAxis": "2025-05-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.69",
+        "xAxis": "2025-05-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.72",
+        "xAxis": "2025-05-22",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.73",
+        "xAxis": "2025-05-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.76",
+        "xAxis": "2025-05-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.77",
+        "xAxis": "2025-05-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.76",
+        "xAxis": "2025-05-28",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.72",
+        "xAxis": "2025-05-29",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.73",
+        "xAxis": "2025-05-30",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.75",
+        "xAxis": "2025-06-03",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.75",
+        "xAxis": "2025-06-04",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.75",
+        "xAxis": "2025-06-05",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.78",
+        "xAxis": "2025-06-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.82",
+        "xAxis": "2025-06-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.84",
+        "xAxis": "2025-06-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.86",
+        "xAxis": "2025-06-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.86",
+        "xAxis": "2025-06-12",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.88",
+        "xAxis": "2025-06-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.90",
+        "xAxis": "2025-06-16",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.93",
+        "xAxis": "2025-06-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.94",
+        "xAxis": "2025-06-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-06-19",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-06-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.00",
+        "xAxis": "2025-06-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-06-24",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-06-25",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.94",
+        "xAxis": "2025-06-26",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-06-27",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-06-30",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.01",
+        "xAxis": "2025-07-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.07",
+        "xAxis": "2025-07-02",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.15",
+        "xAxis": "2025-07-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.21",
+        "xAxis": "2025-07-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.26",
+        "xAxis": "2025-07-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.24",
+        "xAxis": "2025-07-08",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "1.23",
+        "xAxis": "2025-07-09",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "1.19",
+        "xAxis": "2025-07-10",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "1.15",
+        "xAxis": "2025-07-11",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "1.13",
+        "xAxis": "2025-07-14",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "1.18",
+        "xAxis": "2025-07-15",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "1.20",
+        "xAxis": "2025-07-16",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "1.23",
+        "xAxis": "2025-07-17",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "1.24",
+        "xAxis": "2025-07-18",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "1.21",
+        "xAxis": "2025-07-21",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "1.17",
+        "xAxis": "2025-07-22",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "1.10",
+        "xAxis": "2025-07-23",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-07-24",
+        "retracementValue": "-0.27"
+      },
+      {
+        "yAxis": "0.95",
+        "xAxis": "2025-07-25",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "1.03",
+        "xAxis": "2025-07-28",
+        "retracementValue": "-0.23"
+      },
+      {
+        "yAxis": "0.94",
+        "xAxis": "2025-07-29",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-07-30",
+        "retracementValue": "-0.29"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-07-31",
+        "retracementValue": "-0.20"
+      },
+      {
+        "yAxis": "1.11",
+        "xAxis": "2025-08-01",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "1.14",
+        "xAxis": "2025-08-04",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "1.15",
+        "xAxis": "2025-08-05",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "1.17",
+        "xAxis": "2025-08-06",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "1.20",
+        "xAxis": "2025-08-07",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "1.21",
+        "xAxis": "2025-08-08",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "1.16",
+        "xAxis": "2025-08-11",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "1.10",
+        "xAxis": "2025-08-12",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "1.11",
+        "xAxis": "2025-08-13",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "1.07",
+        "xAxis": "2025-08-14",
+        "retracementValue": "-0.19"
+      },
+      {
+        "yAxis": "1.05",
+        "xAxis": "2025-08-15",
+        "retracementValue": "-0.21"
+      },
+      {
+        "yAxis": "0.93",
+        "xAxis": "2025-08-18",
+        "retracementValue": "-0.33"
+      },
+      {
+        "yAxis": "0.89",
+        "xAxis": "2025-08-19",
+        "retracementValue": "-0.37"
+      },
+      {
+        "yAxis": "0.88",
+        "xAxis": "2025-08-20",
+        "retracementValue": "-0.38"
+      },
+      {
+        "yAxis": "0.89",
+        "xAxis": "2025-08-21",
+        "retracementValue": "-0.37"
+      },
+      {
+        "yAxis": "0.88",
+        "xAxis": "2025-08-22",
+        "retracementValue": "-0.38"
+      },
+      {
+        "yAxis": "0.90",
+        "xAxis": "2025-08-25",
+        "retracementValue": "-0.36"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-08-26",
+        "retracementValue": "-0.30"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-08-27",
+        "retracementValue": "-0.29"
+      },
+      {
+        "yAxis": "0.91",
+        "xAxis": "2025-08-28",
+        "retracementValue": "-0.35"
+      },
+      {
+        "yAxis": "0.90",
+        "xAxis": "2025-08-29",
+        "retracementValue": "-0.36"
+      },
+      {
+        "yAxis": "0.93",
+        "xAxis": "2025-09-01",
+        "retracementValue": "-0.33"
+      },
+      {
+        "yAxis": "0.93",
+        "xAxis": "2025-09-02",
+        "retracementValue": "-0.33"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-09-03",
+        "retracementValue": "-0.27"
+      },
+      {
+        "yAxis": "1.04",
+        "xAxis": "2025-09-04",
+        "retracementValue": "-0.22"
+      },
+      {
+        "yAxis": "1.01",
+        "xAxis": "2025-09-05",
+        "retracementValue": "-0.25"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-09-08",
+        "retracementValue": "-0.29"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-09-09",
+        "retracementValue": "-0.30"
+      },
+      {
+        "yAxis": "0.92",
+        "xAxis": "2025-09-10",
+        "retracementValue": "-0.34"
+      },
+      {
+        "yAxis": "0.91",
+        "xAxis": "2025-09-11",
+        "retracementValue": "-0.35"
+      },
+      {
+        "yAxis": "0.92",
+        "xAxis": "2025-09-12",
+        "retracementValue": "-0.34"
+      },
+      {
+        "yAxis": "0.94",
+        "xAxis": "2025-09-15",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-09-16",
+        "retracementValue": "-0.28"
+      },
+      {
+        "yAxis": "1.02",
+        "xAxis": "2025-09-17",
+        "retracementValue": "-0.24"
+      },
+      {
+        "yAxis": "1.00",
+        "xAxis": "2025-09-18",
+        "retracementValue": "-0.26"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-09-19",
+        "retracementValue": "-0.27"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-09-22",
+        "retracementValue": "-0.29"
+      },
+      {
+        "yAxis": "0.90",
+        "xAxis": "2025-09-23",
+        "retracementValue": "-0.36"
+      },
+      {
+        "yAxis": "0.80",
+        "xAxis": "2025-09-24",
+        "retracementValue": "-0.46"
+      },
+      {
+        "yAxis": "0.77",
+        "xAxis": "2025-09-25",
+        "retracementValue": "-0.49"
+      },
+      {
+        "yAxis": "0.78",
+        "xAxis": "2025-09-26",
+        "retracementValue": "-0.48"
+      },
+      {
+        "yAxis": "0.79",
+        "xAxis": "2025-09-29",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "0.81",
+        "xAxis": "2025-09-30",
+        "retracementValue": "-0.45"
+      },
+      {
+        "yAxis": "0.86",
+        "xAxis": "2025-10-09",
+        "retracementValue": "-0.40"
+      },
+      {
+        "yAxis": "0.87",
+        "xAxis": "2025-10-10",
+        "retracementValue": "-0.39"
+      },
+      {
+        "yAxis": "0.91",
+        "xAxis": "2025-10-13",
+        "retracementValue": "-0.35"
+      },
+      {
+        "yAxis": "0.93",
+        "xAxis": "2025-10-14",
+        "retracementValue": "-0.33"
+      },
+      {
+        "yAxis": "0.95",
+        "xAxis": "2025-10-15",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "1.00",
+        "xAxis": "2025-10-16",
+        "retracementValue": "-0.26"
+      },
+      {
+        "yAxis": "1.07",
+        "xAxis": "2025-10-17",
+        "retracementValue": "-0.19"
+      },
+      {
+        "yAxis": "1.08",
+        "xAxis": "2025-10-20",
+        "retracementValue": "-0.18"
+      },
+      {
+        "yAxis": "1.11",
+        "xAxis": "2025-10-21",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "1.13",
+        "xAxis": "2025-10-22",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "1.15",
+        "xAxis": "2025-10-23",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "1.16",
+        "xAxis": "2025-10-24",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "1.18",
+        "xAxis": "2025-10-27",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "1.23",
+        "xAxis": "2025-10-28",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "1.26",
+        "xAxis": "2025-10-29",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.31",
+        "xAxis": "2025-10-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-10-31",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.43",
+        "xAxis": "2025-11-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-11-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.47",
+        "xAxis": "2025-11-05",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-11-06",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-11-07",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-11-10",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "1.43",
+        "xAxis": "2025-11-11",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-11-12",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-11-13",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-11-14",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "1.46",
+        "xAxis": "2025-11-17",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.47",
+        "xAxis": "2025-11-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.47",
+        "xAxis": "2025-11-19",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.47",
+        "xAxis": "2025-11-20",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.47",
+        "xAxis": "2025-11-21",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.47",
+        "xAxis": "2025-11-24",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-11-25",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-11-26",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "1.36",
+        "xAxis": "2025-11-27",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "1.39",
+        "xAxis": "2025-11-28",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-12-01",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "1.35",
+        "xAxis": "2025-12-02",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "1.33",
+        "xAxis": "2025-12-03",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "1.26",
+        "xAxis": "2025-12-04",
+        "retracementValue": "-0.20"
+      },
+      {
+        "yAxis": "1.28",
+        "xAxis": "2025-12-05",
+        "retracementValue": "-0.18"
+      },
+      {
+        "yAxis": "1.28",
+        "xAxis": "2025-12-08",
+        "retracementValue": "-0.18"
+      },
+      {
+        "yAxis": "1.31",
+        "xAxis": "2025-12-09",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "1.35",
+        "xAxis": "2025-12-10",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "1.41",
+        "xAxis": "2025-12-11",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "1.43",
+        "xAxis": "2025-12-12",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-12-15",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-12-16",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-12-17",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "1.46",
+        "xAxis": "2025-12-18",
+        "retracementValue": "-0.01"
+      }
+    ],
+    "restorePoint": {
+      "yAxis": "0.44",
+      "xAxis": "2025-04-07"
+    },
+    "dataCycle": 4,
+    "chartName": "回撤修复",
+    "maxRetracementStartPoint": {
+      "yAxis": "0.41",
+      "xAxis": "2025-01-06"
+    },
+    "maxRetracementValue": -1.18,
+    "chartTitleList": [
+      {
+        "name": "最大回撤",
+        "value": -1.18
+      },
+      {
+        "name": "修复天数",
+        "value": "27天"
+      }
+    ],
+    "chartType": 7,
+    "maxRetracementEndPoint": {
+      "yAxis": "-0.77",
+      "xAxis": "2025-03-11"
+    },
+    "pollFlag": false
+  },
+  {
+    "fund_code": "003027",
+    "fund_name": "安信新价值混合C",
+    "fund_type": "混合型-灵活",
+    "restoreDay": 43,
+    "establishmentCycleDesc": "9年122天",
+    "majorChartPointList": [
+      {
+        "yAxis": "0.00",
+        "xAxis": "2024-12-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "-0.11",
+        "xAxis": "2024-12-19",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "0.12",
+        "xAxis": "2024-12-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "-0.07",
+        "xAxis": "2024-12-23",
+        "retracementValue": "-0.19"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2024-12-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2024-12-25",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2024-12-26",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.36",
+        "xAxis": "2024-12-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.59",
+        "xAxis": "2024-12-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2024-12-31",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "-0.22",
+        "xAxis": "2025-01-02",
+        "retracementValue": "-0.81"
+      },
+      {
+        "yAxis": "-0.35",
+        "xAxis": "2025-01-03",
+        "retracementValue": "-0.94"
+      },
+      {
+        "yAxis": "-0.46",
+        "xAxis": "2025-01-06",
+        "retracementValue": "-1.04"
+      },
+      {
+        "yAxis": "-0.22",
+        "xAxis": "2025-01-07",
+        "retracementValue": "-0.80"
+      },
+      {
+        "yAxis": "-0.14",
+        "xAxis": "2025-01-08",
+        "retracementValue": "-0.72"
+      },
+      {
+        "yAxis": "-0.13",
+        "xAxis": "2025-01-09",
+        "retracementValue": "-0.71"
+      },
+      {
+        "yAxis": "-0.39",
+        "xAxis": "2025-01-10",
+        "retracementValue": "-0.97"
+      },
+      {
+        "yAxis": "-0.50",
+        "xAxis": "2025-01-13",
+        "retracementValue": "-1.08"
+      },
+      {
+        "yAxis": "0.15",
+        "xAxis": "2025-01-14",
+        "retracementValue": "-0.44"
+      },
+      {
+        "yAxis": "0.12",
+        "xAxis": "2025-01-15",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "0.21",
+        "xAxis": "2025-01-16",
+        "retracementValue": "-0.38"
+      },
+      {
+        "yAxis": "0.43",
+        "xAxis": "2025-01-17",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "0.44",
+        "xAxis": "2025-01-20",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "0.56",
+        "xAxis": "2025-01-21",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "0.43",
+        "xAxis": "2025-01-22",
+        "retracementValue": "-0.15"
+      },
+      {
+        "yAxis": "0.48",
+        "xAxis": "2025-01-23",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "0.82",
+        "xAxis": "2025-01-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.88",
+        "xAxis": "2025-01-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-02-05",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.39",
+        "xAxis": "2025-02-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.76",
+        "xAxis": "2025-02-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.95",
+        "xAxis": "2025-02-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.95",
+        "xAxis": "2025-02-11",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "2.16",
+        "xAxis": "2025-02-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.11",
+        "xAxis": "2025-02-13",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "2.13",
+        "xAxis": "2025-02-14",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "2.07",
+        "xAxis": "2025-02-17",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "1.63",
+        "xAxis": "2025-02-18",
+        "retracementValue": "-0.51"
+      },
+      {
+        "yAxis": "1.81",
+        "xAxis": "2025-02-19",
+        "retracementValue": "-0.34"
+      },
+      {
+        "yAxis": "1.92",
+        "xAxis": "2025-02-20",
+        "retracementValue": "-0.23"
+      },
+      {
+        "yAxis": "2.01",
+        "xAxis": "2025-02-21",
+        "retracementValue": "-0.14"
+      },
+      {
+        "yAxis": "1.96",
+        "xAxis": "2025-02-24",
+        "retracementValue": "-0.19"
+      },
+      {
+        "yAxis": "1.72",
+        "xAxis": "2025-02-25",
+        "retracementValue": "-0.42"
+      },
+      {
+        "yAxis": "2.04",
+        "xAxis": "2025-02-26",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "2.00",
+        "xAxis": "2025-02-27",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "1.55",
+        "xAxis": "2025-02-28",
+        "retracementValue": "-0.59"
+      },
+      {
+        "yAxis": "1.46",
+        "xAxis": "2025-03-03",
+        "retracementValue": "-0.68"
+      },
+      {
+        "yAxis": "1.58",
+        "xAxis": "2025-03-04",
+        "retracementValue": "-0.56"
+      },
+      {
+        "yAxis": "1.79",
+        "xAxis": "2025-03-05",
+        "retracementValue": "-0.36"
+      },
+      {
+        "yAxis": "2.10",
+        "xAxis": "2025-03-06",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "1.99",
+        "xAxis": "2025-03-07",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "1.97",
+        "xAxis": "2025-03-10",
+        "retracementValue": "-0.18"
+      },
+      {
+        "yAxis": "1.81",
+        "xAxis": "2025-03-11",
+        "retracementValue": "-0.34"
+      },
+      {
+        "yAxis": "1.81",
+        "xAxis": "2025-03-12",
+        "retracementValue": "-0.34"
+      },
+      {
+        "yAxis": "1.75",
+        "xAxis": "2025-03-13",
+        "retracementValue": "-0.40"
+      },
+      {
+        "yAxis": "2.19",
+        "xAxis": "2025-03-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.01",
+        "xAxis": "2025-03-17",
+        "retracementValue": "-0.17"
+      },
+      {
+        "yAxis": "2.10",
+        "xAxis": "2025-03-18",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "2.05",
+        "xAxis": "2025-03-19",
+        "retracementValue": "-0.14"
+      },
+      {
+        "yAxis": "1.99",
+        "xAxis": "2025-03-20",
+        "retracementValue": "-0.20"
+      },
+      {
+        "yAxis": "1.53",
+        "xAxis": "2025-03-21",
+        "retracementValue": "-0.65"
+      },
+      {
+        "yAxis": "1.50",
+        "xAxis": "2025-03-24",
+        "retracementValue": "-0.68"
+      },
+      {
+        "yAxis": "1.86",
+        "xAxis": "2025-03-25",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "1.90",
+        "xAxis": "2025-03-26",
+        "retracementValue": "-0.28"
+      },
+      {
+        "yAxis": "2.03",
+        "xAxis": "2025-03-27",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "1.82",
+        "xAxis": "2025-03-28",
+        "retracementValue": "-0.36"
+      },
+      {
+        "yAxis": "1.58",
+        "xAxis": "2025-03-31",
+        "retracementValue": "-0.60"
+      },
+      {
+        "yAxis": "1.64",
+        "xAxis": "2025-04-01",
+        "retracementValue": "-0.54"
+      },
+      {
+        "yAxis": "1.72",
+        "xAxis": "2025-04-02",
+        "retracementValue": "-0.46"
+      },
+      {
+        "yAxis": "1.73",
+        "xAxis": "2025-04-03",
+        "retracementValue": "-0.45"
+      },
+      {
+        "yAxis": "0.28",
+        "xAxis": "2025-04-07",
+        "retracementValue": "-1.87"
+      },
+      {
+        "yAxis": "0.56",
+        "xAxis": "2025-04-08",
+        "retracementValue": "-1.59"
+      },
+      {
+        "yAxis": "0.86",
+        "xAxis": "2025-04-09",
+        "retracementValue": "-1.31"
+      },
+      {
+        "yAxis": "1.20",
+        "xAxis": "2025-04-10",
+        "retracementValue": "-0.97"
+      },
+      {
+        "yAxis": "1.22",
+        "xAxis": "2025-04-11",
+        "retracementValue": "-0.95"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-04-14",
+        "retracementValue": "-0.73"
+      },
+      {
+        "yAxis": "1.35",
+        "xAxis": "2025-04-15",
+        "retracementValue": "-0.83"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-04-16",
+        "retracementValue": "-0.77"
+      },
+      {
+        "yAxis": "1.33",
+        "xAxis": "2025-04-17",
+        "retracementValue": "-0.84"
+      },
+      {
+        "yAxis": "1.26",
+        "xAxis": "2025-04-18",
+        "retracementValue": "-0.91"
+      },
+      {
+        "yAxis": "1.51",
+        "xAxis": "2025-04-21",
+        "retracementValue": "-0.66"
+      },
+      {
+        "yAxis": "1.55",
+        "xAxis": "2025-04-22",
+        "retracementValue": "-0.63"
+      },
+      {
+        "yAxis": "1.43",
+        "xAxis": "2025-04-23",
+        "retracementValue": "-0.74"
+      },
+      {
+        "yAxis": "1.34",
+        "xAxis": "2025-04-24",
+        "retracementValue": "-0.83"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-04-25",
+        "retracementValue": "-0.77"
+      },
+      {
+        "yAxis": "1.16",
+        "xAxis": "2025-04-28",
+        "retracementValue": "-1.01"
+      },
+      {
+        "yAxis": "1.36",
+        "xAxis": "2025-04-29",
+        "retracementValue": "-0.81"
+      },
+      {
+        "yAxis": "1.24",
+        "xAxis": "2025-04-30",
+        "retracementValue": "-0.93"
+      },
+      {
+        "yAxis": "1.68",
+        "xAxis": "2025-05-06",
+        "retracementValue": "-0.50"
+      },
+      {
+        "yAxis": "1.71",
+        "xAxis": "2025-05-07",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "1.88",
+        "xAxis": "2025-05-08",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "1.87",
+        "xAxis": "2025-05-09",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "2.07",
+        "xAxis": "2025-05-12",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "2.12",
+        "xAxis": "2025-05-13",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "2.16",
+        "xAxis": "2025-05-14",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "1.98",
+        "xAxis": "2025-05-15",
+        "retracementValue": "-0.21"
+      },
+      {
+        "yAxis": "1.93",
+        "xAxis": "2025-05-16",
+        "retracementValue": "-0.25"
+      },
+      {
+        "yAxis": "2.08",
+        "xAxis": "2025-05-19",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "2.32",
+        "xAxis": "2025-05-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.53",
+        "xAxis": "2025-05-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.38",
+        "xAxis": "2025-05-22",
+        "retracementValue": "-0.14"
+      },
+      {
+        "yAxis": "2.25",
+        "xAxis": "2025-05-23",
+        "retracementValue": "-0.27"
+      },
+      {
+        "yAxis": "2.30",
+        "xAxis": "2025-05-26",
+        "retracementValue": "-0.22"
+      },
+      {
+        "yAxis": "2.12",
+        "xAxis": "2025-05-27",
+        "retracementValue": "-0.40"
+      },
+      {
+        "yAxis": "2.10",
+        "xAxis": "2025-05-28",
+        "retracementValue": "-0.42"
+      },
+      {
+        "yAxis": "2.20",
+        "xAxis": "2025-05-29",
+        "retracementValue": "-0.32"
+      },
+      {
+        "yAxis": "2.15",
+        "xAxis": "2025-05-30",
+        "retracementValue": "-0.37"
+      },
+      {
+        "yAxis": "2.32",
+        "xAxis": "2025-06-03",
+        "retracementValue": "-0.20"
+      },
+      {
+        "yAxis": "2.46",
+        "xAxis": "2025-06-04",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "2.52",
+        "xAxis": "2025-06-05",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "2.65",
+        "xAxis": "2025-06-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.73",
+        "xAxis": "2025-06-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.67",
+        "xAxis": "2025-06-10",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "2.90",
+        "xAxis": "2025-06-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.93",
+        "xAxis": "2025-06-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.80",
+        "xAxis": "2025-06-13",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "2.87",
+        "xAxis": "2025-06-16",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "2.98",
+        "xAxis": "2025-06-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.02",
+        "xAxis": "2025-06-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "2.76",
+        "xAxis": "2025-06-19",
+        "retracementValue": "-0.25"
+      },
+      {
+        "yAxis": "2.88",
+        "xAxis": "2025-06-20",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "2.98",
+        "xAxis": "2025-06-23",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "3.22",
+        "xAxis": "2025-06-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.66",
+        "xAxis": "2025-06-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.65",
+        "xAxis": "2025-06-26",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "3.51",
+        "xAxis": "2025-06-27",
+        "retracementValue": "-0.14"
+      },
+      {
+        "yAxis": "3.55",
+        "xAxis": "2025-06-30",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "3.75",
+        "xAxis": "2025-07-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.80",
+        "xAxis": "2025-07-02",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.91",
+        "xAxis": "2025-07-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "3.89",
+        "xAxis": "2025-07-04",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "3.97",
+        "xAxis": "2025-07-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.14",
+        "xAxis": "2025-07-08",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.13",
+        "xAxis": "2025-07-09",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "4.19",
+        "xAxis": "2025-07-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.24",
+        "xAxis": "2025-07-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.26",
+        "xAxis": "2025-07-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.37",
+        "xAxis": "2025-07-15",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "4.26",
+        "xAxis": "2025-07-16",
+        "retracementValue": "-0.10"
+      },
+      {
+        "yAxis": "4.28",
+        "xAxis": "2025-07-17",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "4.34",
+        "xAxis": "2025-07-18",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "4.81",
+        "xAxis": "2025-07-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.19",
+        "xAxis": "2025-07-22",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.36",
+        "xAxis": "2025-07-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.46",
+        "xAxis": "2025-07-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.44",
+        "xAxis": "2025-07-25",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "5.29",
+        "xAxis": "2025-07-28",
+        "retracementValue": "-0.17"
+      },
+      {
+        "yAxis": "5.25",
+        "xAxis": "2025-07-29",
+        "retracementValue": "-0.20"
+      },
+      {
+        "yAxis": "5.34",
+        "xAxis": "2025-07-30",
+        "retracementValue": "-0.12"
+      },
+      {
+        "yAxis": "4.97",
+        "xAxis": "2025-07-31",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "5.10",
+        "xAxis": "2025-08-01",
+        "retracementValue": "-0.35"
+      },
+      {
+        "yAxis": "5.67",
+        "xAxis": "2025-08-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.00",
+        "xAxis": "2025-08-05",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.07",
+        "xAxis": "2025-08-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.27",
+        "xAxis": "2025-08-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.23",
+        "xAxis": "2025-08-08",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "6.15",
+        "xAxis": "2025-08-11",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "6.08",
+        "xAxis": "2025-08-12",
+        "retracementValue": "-0.18"
+      },
+      {
+        "yAxis": "6.34",
+        "xAxis": "2025-08-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "5.93",
+        "xAxis": "2025-08-14",
+        "retracementValue": "-0.39"
+      },
+      {
+        "yAxis": "6.20",
+        "xAxis": "2025-08-15",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "6.29",
+        "xAxis": "2025-08-18",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "6.11",
+        "xAxis": "2025-08-19",
+        "retracementValue": "-0.22"
+      },
+      {
+        "yAxis": "6.29",
+        "xAxis": "2025-08-20",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "6.60",
+        "xAxis": "2025-08-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.88",
+        "xAxis": "2025-08-22",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.23",
+        "xAxis": "2025-08-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.32",
+        "xAxis": "2025-08-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "6.73",
+        "xAxis": "2025-08-27",
+        "retracementValue": "-0.56"
+      },
+      {
+        "yAxis": "6.95",
+        "xAxis": "2025-08-28",
+        "retracementValue": "-0.35"
+      },
+      {
+        "yAxis": "7.23",
+        "xAxis": "2025-08-29",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "7.48",
+        "xAxis": "2025-09-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.31",
+        "xAxis": "2025-09-02",
+        "retracementValue": "-0.16"
+      },
+      {
+        "yAxis": "7.39",
+        "xAxis": "2025-09-03",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "6.78",
+        "xAxis": "2025-09-04",
+        "retracementValue": "-0.65"
+      },
+      {
+        "yAxis": "7.40",
+        "xAxis": "2025-09-05",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "7.58",
+        "xAxis": "2025-09-08",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.69",
+        "xAxis": "2025-09-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.54",
+        "xAxis": "2025-09-10",
+        "retracementValue": "-0.14"
+      },
+      {
+        "yAxis": "7.66",
+        "xAxis": "2025-09-11",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "7.88",
+        "xAxis": "2025-09-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.88",
+        "xAxis": "2025-09-15",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "7.84",
+        "xAxis": "2025-09-16",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "8.00",
+        "xAxis": "2025-09-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "7.40",
+        "xAxis": "2025-09-18",
+        "retracementValue": "-0.55"
+      },
+      {
+        "yAxis": "7.34",
+        "xAxis": "2025-09-19",
+        "retracementValue": "-0.61"
+      },
+      {
+        "yAxis": "7.56",
+        "xAxis": "2025-09-22",
+        "retracementValue": "-0.41"
+      },
+      {
+        "yAxis": "7.47",
+        "xAxis": "2025-09-23",
+        "retracementValue": "-0.49"
+      },
+      {
+        "yAxis": "7.67",
+        "xAxis": "2025-09-24",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "7.60",
+        "xAxis": "2025-09-25",
+        "retracementValue": "-0.36"
+      },
+      {
+        "yAxis": "7.49",
+        "xAxis": "2025-09-26",
+        "retracementValue": "-0.47"
+      },
+      {
+        "yAxis": "7.85",
+        "xAxis": "2025-09-29",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "8.13",
+        "xAxis": "2025-09-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.53",
+        "xAxis": "2025-10-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.20",
+        "xAxis": "2025-10-10",
+        "retracementValue": "-0.31"
+      },
+      {
+        "yAxis": "8.39",
+        "xAxis": "2025-10-13",
+        "retracementValue": "-0.14"
+      },
+      {
+        "yAxis": "8.14",
+        "xAxis": "2025-10-14",
+        "retracementValue": "-0.36"
+      },
+      {
+        "yAxis": "8.40",
+        "xAxis": "2025-10-15",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "8.26",
+        "xAxis": "2025-10-16",
+        "retracementValue": "-0.25"
+      },
+      {
+        "yAxis": "7.91",
+        "xAxis": "2025-10-17",
+        "retracementValue": "-0.58"
+      },
+      {
+        "yAxis": "7.79",
+        "xAxis": "2025-10-20",
+        "retracementValue": "-0.68"
+      },
+      {
+        "yAxis": "8.11",
+        "xAxis": "2025-10-21",
+        "retracementValue": "-0.39"
+      },
+      {
+        "yAxis": "8.05",
+        "xAxis": "2025-10-22",
+        "retracementValue": "-0.44"
+      },
+      {
+        "yAxis": "8.21",
+        "xAxis": "2025-10-23",
+        "retracementValue": "-0.30"
+      },
+      {
+        "yAxis": "8.28",
+        "xAxis": "2025-10-24",
+        "retracementValue": "-0.24"
+      },
+      {
+        "yAxis": "8.61",
+        "xAxis": "2025-10-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.42",
+        "xAxis": "2025-10-28",
+        "retracementValue": "-0.17"
+      },
+      {
+        "yAxis": "8.82",
+        "xAxis": "2025-10-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.73",
+        "xAxis": "2025-10-30",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "8.68",
+        "xAxis": "2025-10-31",
+        "retracementValue": "-0.13"
+      },
+      {
+        "yAxis": "8.89",
+        "xAxis": "2025-11-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "8.66",
+        "xAxis": "2025-11-04",
+        "retracementValue": "-0.21"
+      },
+      {
+        "yAxis": "8.77",
+        "xAxis": "2025-11-05",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "9.10",
+        "xAxis": "2025-11-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "9.23",
+        "xAxis": "2025-11-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "9.58",
+        "xAxis": "2025-11-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "9.46",
+        "xAxis": "2025-11-11",
+        "retracementValue": "-0.11"
+      },
+      {
+        "yAxis": "9.56",
+        "xAxis": "2025-11-12",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "9.91",
+        "xAxis": "2025-11-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "9.54",
+        "xAxis": "2025-11-14",
+        "retracementValue": "-0.34"
+      },
+      {
+        "yAxis": "9.43",
+        "xAxis": "2025-11-17",
+        "retracementValue": "-0.44"
+      },
+      {
+        "yAxis": "9.20",
+        "xAxis": "2025-11-18",
+        "retracementValue": "-0.65"
+      },
+      {
+        "yAxis": "9.46",
+        "xAxis": "2025-11-19",
+        "retracementValue": "-0.41"
+      },
+      {
+        "yAxis": "9.46",
+        "xAxis": "2025-11-20",
+        "retracementValue": "-0.41"
+      },
+      {
+        "yAxis": "8.89",
+        "xAxis": "2025-11-21",
+        "retracementValue": "-0.93"
+      },
+      {
+        "yAxis": "8.76",
+        "xAxis": "2025-11-24",
+        "retracementValue": "-1.05"
+      },
+      {
+        "yAxis": "8.90",
+        "xAxis": "2025-11-25",
+        "retracementValue": "-0.92"
+      },
+      {
+        "yAxis": "8.81",
+        "xAxis": "2025-11-26",
+        "retracementValue": "-1.01"
+      },
+      {
+        "yAxis": "8.82",
+        "xAxis": "2025-11-27",
+        "retracementValue": "-0.99"
+      },
+      {
+        "yAxis": "8.98",
+        "xAxis": "2025-11-28",
+        "retracementValue": "-0.85"
+      },
+      {
+        "yAxis": "9.30",
+        "xAxis": "2025-12-01",
+        "retracementValue": "-0.56"
+      },
+      {
+        "yAxis": "9.17",
+        "xAxis": "2025-12-02",
+        "retracementValue": "-0.67"
+      },
+      {
+        "yAxis": "9.10",
+        "xAxis": "2025-12-03",
+        "retracementValue": "-0.74"
+      },
+      {
+        "yAxis": "8.99",
+        "xAxis": "2025-12-04",
+        "retracementValue": "-0.84"
+      },
+      {
+        "yAxis": "9.24",
+        "xAxis": "2025-12-05",
+        "retracementValue": "-0.62"
+      },
+      {
+        "yAxis": "9.22",
+        "xAxis": "2025-12-08",
+        "retracementValue": "-0.63"
+      },
+      {
+        "yAxis": "9.00",
+        "xAxis": "2025-12-09",
+        "retracementValue": "-0.84"
+      },
+      {
+        "yAxis": "9.11",
+        "xAxis": "2025-12-10",
+        "retracementValue": "-0.73"
+      },
+      {
+        "yAxis": "9.05",
+        "xAxis": "2025-12-11",
+        "retracementValue": "-0.79"
+      },
+      {
+        "yAxis": "9.14",
+        "xAxis": "2025-12-12",
+        "retracementValue": "-0.70"
+      },
+      {
+        "yAxis": "9.17",
+        "xAxis": "2025-12-15",
+        "retracementValue": "-0.67"
+      },
+      {
+        "yAxis": "8.90",
+        "xAxis": "2025-12-16",
+        "retracementValue": "-0.92"
+      },
+      {
+        "yAxis": "9.47",
+        "xAxis": "2025-12-17",
+        "retracementValue": "-0.40"
+      },
+      {
+        "yAxis": "9.51",
+        "xAxis": "2025-12-18",
+        "retracementValue": "-0.37"
+      }
+    ],
+    "restorePoint": {
+      "yAxis": "2.32",
+      "xAxis": "2025-05-20"
+    },
+    "dataCycle": 4,
+    "chartName": "回撤修复",
+    "maxRetracementStartPoint": {
+      "yAxis": "2.19",
+      "xAxis": "2025-03-14"
+    },
+    "maxRetracementValue": -1.87,
+    "chartTitleList": [
+      {
+        "name": "最大回撤",
+        "value": -1.87
+      },
+      {
+        "name": "修复天数",
+        "value": "43天"
+      }
+    ],
+    "chartType": 7,
+    "maxRetracementEndPoint": {
+      "yAxis": "0.28",
+      "xAxis": "2025-04-07"
+    },
+    "pollFlag": false
+  },
+  {
+    "fund_code": "015822",
+    "fund_name": "易方达中证同业存单AAA指数7天持有",
+    "fund_type": "债券型-同业存单",
+    "restoreDay": 17,
+    "establishmentCycleDesc": "3年200天",
+    "majorChartPointList": [
+      {
+        "yAxis": "0.00",
+        "xAxis": "2024-12-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.01",
+        "xAxis": "2024-12-19",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.03",
+        "xAxis": "2024-12-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.06",
+        "xAxis": "2024-12-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.06",
+        "xAxis": "2024-12-24",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.05",
+        "xAxis": "2024-12-25",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.02",
+        "xAxis": "2024-12-26",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.09",
+        "xAxis": "2024-12-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.13",
+        "xAxis": "2024-12-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2024-12-31",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2025-01-02",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-01-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.21",
+        "xAxis": "2025-01-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-01-07",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-01-08",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2025-01-09",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2025-01-10",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.14",
+        "xAxis": "2025-01-13",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "0.14",
+        "xAxis": "2025-01-14",
+        "retracementValue": "-0.07"
+      },
+      {
+        "yAxis": "0.15",
+        "xAxis": "2025-01-15",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.12",
+        "xAxis": "2025-01-16",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "0.12",
+        "xAxis": "2025-01-17",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-20",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-21",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "0.13",
+        "xAxis": "2025-01-22",
+        "retracementValue": "-0.08"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-23",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-24",
+        "retracementValue": "-0.09"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2025-01-27",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-02-05",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.22",
+        "xAxis": "2025-02-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.24",
+        "xAxis": "2025-02-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-02-10",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2025-02-11",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2025-02-12",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2025-02-13",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-02-14",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-02-17",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-02-18",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-02-19",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-02-20",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-02-21",
+        "retracementValue": "-0.06"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2025-02-24",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.19",
+        "xAxis": "2025-02-25",
+        "retracementValue": "-0.05"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-02-26",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-02-27",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-02-28",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.22",
+        "xAxis": "2025-03-03",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.23",
+        "xAxis": "2025-03-04",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.23",
+        "xAxis": "2025-03-05",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.24",
+        "xAxis": "2025-03-06",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.24",
+        "xAxis": "2025-03-07",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.25",
+        "xAxis": "2025-03-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.25",
+        "xAxis": "2025-03-11",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.26",
+        "xAxis": "2025-03-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.26",
+        "xAxis": "2025-03-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.27",
+        "xAxis": "2025-03-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.28",
+        "xAxis": "2025-03-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.28",
+        "xAxis": "2025-03-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.28",
+        "xAxis": "2025-03-19",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.29",
+        "xAxis": "2025-03-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.31",
+        "xAxis": "2025-03-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.32",
+        "xAxis": "2025-03-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.34",
+        "xAxis": "2025-03-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.35",
+        "xAxis": "2025-03-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.35",
+        "xAxis": "2025-03-27",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.36",
+        "xAxis": "2025-03-28",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.38",
+        "xAxis": "2025-03-31",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.38",
+        "xAxis": "2025-04-01",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.41",
+        "xAxis": "2025-04-02",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.44",
+        "xAxis": "2025-04-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.50",
+        "xAxis": "2025-04-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.48",
+        "xAxis": "2025-04-08",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.50",
+        "xAxis": "2025-04-09",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.52",
+        "xAxis": "2025-04-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.54",
+        "xAxis": "2025-04-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.54",
+        "xAxis": "2025-04-14",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.53",
+        "xAxis": "2025-04-15",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.54",
+        "xAxis": "2025-04-16",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.55",
+        "xAxis": "2025-04-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.55",
+        "xAxis": "2025-04-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.56",
+        "xAxis": "2025-04-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.56",
+        "xAxis": "2025-04-22",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.57",
+        "xAxis": "2025-04-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.57",
+        "xAxis": "2025-04-24",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.57",
+        "xAxis": "2025-04-25",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.58",
+        "xAxis": "2025-04-28",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.60",
+        "xAxis": "2025-04-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.61",
+        "xAxis": "2025-04-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.62",
+        "xAxis": "2025-05-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.66",
+        "xAxis": "2025-05-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.70",
+        "xAxis": "2025-05-08",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.72",
+        "xAxis": "2025-05-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.72",
+        "xAxis": "2025-05-12",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-14",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-15",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.73",
+        "xAxis": "2025-05-16",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-19",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.75",
+        "xAxis": "2025-05-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-21",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-22",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-23",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.75",
+        "xAxis": "2025-05-26",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-27",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-28",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.74",
+        "xAxis": "2025-05-29",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.76",
+        "xAxis": "2025-05-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.76",
+        "xAxis": "2025-06-03",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.77",
+        "xAxis": "2025-06-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.77",
+        "xAxis": "2025-06-05",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.79",
+        "xAxis": "2025-06-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.81",
+        "xAxis": "2025-06-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.81",
+        "xAxis": "2025-06-10",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.81",
+        "xAxis": "2025-06-11",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.82",
+        "xAxis": "2025-06-12",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.82",
+        "xAxis": "2025-06-13",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.83",
+        "xAxis": "2025-06-16",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.85",
+        "xAxis": "2025-06-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.86",
+        "xAxis": "2025-06-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.87",
+        "xAxis": "2025-06-19",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.88",
+        "xAxis": "2025-06-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.89",
+        "xAxis": "2025-06-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.89",
+        "xAxis": "2025-06-24",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.89",
+        "xAxis": "2025-06-25",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.88",
+        "xAxis": "2025-06-26",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.90",
+        "xAxis": "2025-06-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.91",
+        "xAxis": "2025-06-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.92",
+        "xAxis": "2025-07-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.94",
+        "xAxis": "2025-07-02",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-07-03",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-07-04",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-07-07",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-07-08",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-07-09",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.95",
+        "xAxis": "2025-07-10",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.95",
+        "xAxis": "2025-07-11",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.95",
+        "xAxis": "2025-07-14",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-07-15",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-07-16",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-07-17",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-07-18",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-07-21",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-07-22",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-07-23",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.95",
+        "xAxis": "2025-07-24",
+        "retracementValue": "-0.04"
+      },
+      {
+        "yAxis": "0.96",
+        "xAxis": "2025-07-25",
+        "retracementValue": "-0.03"
+      },
+      {
+        "yAxis": "0.98",
+        "xAxis": "2025-07-28",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "0.97",
+        "xAxis": "2025-07-29",
+        "retracementValue": "-0.02"
+      },
+      {
+        "yAxis": "0.99",
+        "xAxis": "2025-07-30",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.01",
+        "xAxis": "2025-07-31",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.02",
+        "xAxis": "2025-08-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.03",
+        "xAxis": "2025-08-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.03",
+        "xAxis": "2025-08-05",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.04",
+        "xAxis": "2025-08-06",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.04",
+        "xAxis": "2025-08-07",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.05",
+        "xAxis": "2025-08-08",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-08-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.05",
+        "xAxis": "2025-08-12",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-08-13",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-08-14",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-08-15",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.05",
+        "xAxis": "2025-08-18",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-08-19",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.07",
+        "xAxis": "2025-08-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.06",
+        "xAxis": "2025-08-21",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.07",
+        "xAxis": "2025-08-22",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.08",
+        "xAxis": "2025-08-25",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.09",
+        "xAxis": "2025-08-26",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.09",
+        "xAxis": "2025-08-27",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.09",
+        "xAxis": "2025-08-28",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.10",
+        "xAxis": "2025-08-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.11",
+        "xAxis": "2025-09-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.11",
+        "xAxis": "2025-09-02",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.11",
+        "xAxis": "2025-09-03",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.12",
+        "xAxis": "2025-09-04",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.11",
+        "xAxis": "2025-09-05",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.12",
+        "xAxis": "2025-09-08",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.12",
+        "xAxis": "2025-09-09",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.12",
+        "xAxis": "2025-09-10",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.13",
+        "xAxis": "2025-09-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.13",
+        "xAxis": "2025-09-12",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.14",
+        "xAxis": "2025-09-15",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.14",
+        "xAxis": "2025-09-16",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.15",
+        "xAxis": "2025-09-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.15",
+        "xAxis": "2025-09-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.15",
+        "xAxis": "2025-09-19",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.16",
+        "xAxis": "2025-09-22",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.17",
+        "xAxis": "2025-09-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.16",
+        "xAxis": "2025-09-24",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.16",
+        "xAxis": "2025-09-25",
+        "retracementValue": "-0.01"
+      },
+      {
+        "yAxis": "1.17",
+        "xAxis": "2025-09-26",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.19",
+        "xAxis": "2025-09-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.21",
+        "xAxis": "2025-09-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.25",
+        "xAxis": "2025-10-09",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.25",
+        "xAxis": "2025-10-10",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.27",
+        "xAxis": "2025-10-13",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.27",
+        "xAxis": "2025-10-14",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.27",
+        "xAxis": "2025-10-15",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.27",
+        "xAxis": "2025-10-16",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.27",
+        "xAxis": "2025-10-17",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.28",
+        "xAxis": "2025-10-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.28",
+        "xAxis": "2025-10-21",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.28",
+        "xAxis": "2025-10-22",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.29",
+        "xAxis": "2025-10-23",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.29",
+        "xAxis": "2025-10-24",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.30",
+        "xAxis": "2025-10-27",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.31",
+        "xAxis": "2025-10-28",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.32",
+        "xAxis": "2025-10-29",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.34",
+        "xAxis": "2025-10-30",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.35",
+        "xAxis": "2025-10-31",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.35",
+        "xAxis": "2025-11-03",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.35",
+        "xAxis": "2025-11-04",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.36",
+        "xAxis": "2025-11-05",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.36",
+        "xAxis": "2025-11-06",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.36",
+        "xAxis": "2025-11-07",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.37",
+        "xAxis": "2025-11-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.38",
+        "xAxis": "2025-11-11",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.38",
+        "xAxis": "2025-11-12",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.38",
+        "xAxis": "2025-11-13",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.39",
+        "xAxis": "2025-11-14",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-11-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-11-18",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.40",
+        "xAxis": "2025-11-19",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.41",
+        "xAxis": "2025-11-20",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.41",
+        "xAxis": "2025-11-21",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-11-24",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-11-25",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-11-26",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.42",
+        "xAxis": "2025-11-27",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.43",
+        "xAxis": "2025-11-28",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-12-01",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-12-02",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-12-03",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-12-04",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.44",
+        "xAxis": "2025-12-05",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-12-08",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-12-09",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-12-10",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-12-11",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.45",
+        "xAxis": "2025-12-12",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.46",
+        "xAxis": "2025-12-15",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.46",
+        "xAxis": "2025-12-16",
+        "retracementValue": "0.00"
+      },
+      {
+        "yAxis": "1.47",
+        "xAxis": "2025-12-17",
+        "retracementValue": "0"
+      },
+      {
+        "yAxis": "1.49",
+        "xAxis": "2025-12-18",
+        "retracementValue": "0"
+      }
+    ],
+    "restorePointList": [
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-20"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-21"
+      },
+      {
+        "yAxis": "0.13",
+        "xAxis": "2025-01-22"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-23"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-24"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2025-01-27"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-02-05"
+      },
+      {
+        "yAxis": "0.22",
+        "xAxis": "2025-02-06"
+      }
+    ],
+    "restorePoint": {
+      "yAxis": "0.22",
+      "xAxis": "2025-02-06"
+    },
+    "dataCycle": 4,
+    "chartName": "回撤修复",
+    "maxRetracementStartPoint": {
+      "yAxis": "0.21",
+      "xAxis": "2025-01-06"
+    },
+    "maxRetracementValue": -0.09,
+    "chartTitleList": [
+      {
+        "name": "最大回撤",
+        "value": -0.09
+      },
+      {
+        "name": "修复天数",
+        "value": "17天"
+      }
+    ],
+    "chartType": 7,
+    "maxRetracementEndPoint": {
+      "yAxis": "0.11",
+      "xAxis": "2025-01-20"
+    },
+    "retracementPointList": [
+      {
+        "yAxis": "0.21",
+        "xAxis": "2025-01-06"
+      },
+      {
+        "yAxis": "0.20",
+        "xAxis": "2025-01-07"
+      },
+      {
+        "yAxis": "0.18",
+        "xAxis": "2025-01-08"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2025-01-09"
+      },
+      {
+        "yAxis": "0.16",
+        "xAxis": "2025-01-10"
+      },
+      {
+        "yAxis": "0.14",
+        "xAxis": "2025-01-13"
+      },
+      {
+        "yAxis": "0.14",
+        "xAxis": "2025-01-14"
+      },
+      {
+        "yAxis": "0.15",
+        "xAxis": "2025-01-15"
+      },
+      {
+        "yAxis": "0.12",
+        "xAxis": "2025-01-16"
+      },
+      {
+        "yAxis": "0.12",
+        "xAxis": "2025-01-17"
+      },
+      {
+        "yAxis": "0.11",
+        "xAxis": "2025-01-20"
+      }
+    ],
+    "pollFlag": false
+  },
+  {
+    "fund_code": "000009",
+    "fund_name": "易方达天天理财货币A",
+    "fund_type": "货币型"
+  }
+]

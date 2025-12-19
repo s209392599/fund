@@ -1,23 +1,13 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_07.vue');
-import Chicang_01 from './chi_cang/chicang_01.vue';
-import chicang from './chicang.json'
 const info = reactive({
-  // tableData: [],
-  tableData: chicang,
+  tableData: [],
 });
-// new Array(40).fill(0).forEach((v, i) => {
-//   info.tableData.push({
-//     fund_code: '000001',
-//     fund_name: '测试基金' + i,
-//     fund_type: '测试类型' + i,
-//   });
-// });
-// if (localStorage.getItem('fund_duibi_arr')) {
-//   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
-// } else {
-//   localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
-// }
+if (localStorage.getItem('fund_duibi_arr')) {
+  info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
+} else {
+  localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
+}
 // console.log(info.tableData);
 
 // 存储基金信息
@@ -36,29 +26,14 @@ const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
     const item = info.tableData[i];
 
-    await server_fund_jd_getFundDividendPageInfo({
+    await server_fund_jd_InvestmentDistributionPageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
       console.log(res);
-      let arr = res.data.dividendList || [];
-      info.tableData[i].dividendList = arr;
-
-      let cur_year = new Date().getFullYear();
-      let last_year = cur_year - 1;
-      let total_year_count = 0;
-      let last_year_count = 0;
-      arr.forEach((item) => {
-        let year = new Date(item.executeDate).getFullYear();
-        // 使用 parseInt 或 Math.round 来避免浮点数精度问题
-        if (year === cur_year) {
-          total_year_count += Math.round(Number(item.unitProfit) * 10000);
-        } else if (year === last_year) {
-          last_year_count += Math.round(Number(item.unitProfit) * 10000);
-        }
-      });
-
-      info.tableData[i].total_year_count = total_year_count;
-      info.tableData[i].last_year_count = last_year_count;
+      info.tableData[i] = {
+        ...info.tableData[i],
+        ...res.data,
+      };
 
       saveFundInfoToLocalstorage();
     });
@@ -81,7 +56,6 @@ const Turn_invest = (lineData) => {
     let find_item = invest.filter((item_2) => {
       return item_2.name === arr_type[index_1];
     })[0] || {};
-    console.log('find_item', find_item);
     let ratio = find_item.hasOwnProperty('ratio') ? find_item.ratio : '-';
     html += `<div class="invest_item">${item_1}(${ratio})</div>`;
 
@@ -133,7 +107,7 @@ const Turn_bond = (lineData) => {
 };
 
 onMounted(() => {
-  // getList();
+  getList();
 });
 </script>
 
@@ -187,6 +161,11 @@ onMounted(() => {
           </div>
 
           <div class="bond_main" v-html="Turn_bond(item)"></div>
+        </div>
+
+        <div class="item_box">
+          <div class="item_title">重仓基金</div>
+          <Chicang_02 :data="item.fund" class="fund_main" />
         </div>
 
       </div><!-- list_item -->
@@ -340,6 +319,13 @@ $industry_left_width: calc(100% - $industry_right_width - $industry_center_width
 .stock_main {
   width: 100%;
   height: 410px;
+  overflow: auto;
+}
+
+// 重仓基金样式
+.fund_main {
+  width: 100%;
+  height: 140px;
   overflow: auto;
 }
 

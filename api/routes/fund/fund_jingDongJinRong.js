@@ -120,4 +120,46 @@ router.post('/fund_jd_getFundDividendPageInfo', (req, res) => {
   }
 });
 
+// 获取基金持仓
+router.post('/fund_jd_InvestmentDistributionPageInfo', (req, res) => {
+  const { fund_code = '', pageSize = 10 } = req.body;
+
+  if (!fund_code) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundInvestmentDistributionPageInfo?reqData={"itemId":"111934","fundCode":"${fund_code}","reportDate":"","channel":"9"}`;
+    fetch(u, {})
+      .then((data) => data.json())
+      .then((data) => {
+        if(!data.success){
+          res.send({
+            code: 400,
+            msg: `${fund_code}服务器获取出错`,
+            data: [],
+          });
+        }else{
+          let resultData = data.resultData || {};
+          let datas = resultData.datas || {};
+          res.send({
+            code: 200,
+            msg: '成功',
+            data: datas.investmentDistribution ||  {},
+          });
+        }
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fund_code}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
 module.exports = router;
