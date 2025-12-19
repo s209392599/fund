@@ -68,6 +68,11 @@ onMounted(() => {
           <div class="truncate" :title="item.fund_name" style="font-size: 12px;;">{{ item.fund_name }}</div>
         </div>
 
+        <div class="item_box flex justify-between items-center">
+          <div class="">最大回撤 {{ item.maxRetracementValue }}%</div>
+          <div class="">修复天数 {{ item.restoreDay }}天</div>
+        </div>
+
         <div class="item_box">
           <Chart_xiufu_01 :data="item" class="stock_main" />
         </div>
