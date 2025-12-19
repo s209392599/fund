@@ -9,7 +9,6 @@ if (localStorage.getItem('fund_duibi_arr')) {
 } else {
   localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
 }
-console.log(info.tableData);
 
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
@@ -38,18 +37,26 @@ const getList = async () => {
       let last_year = cur_year - 1;
       let total_year_count = 0;
       let last_year_count = 0;
+
+      let total_cishu_count = 0;
+      let last_year_cishu_count = 0;
       arr.forEach((item) => {
         let year = new Date(item.executeDate).getFullYear();
         // 使用 parseInt 或 Math.round 来避免浮点数精度问题
         if (year === cur_year) {
           total_year_count += Math.round(Number(item.unitProfit) * 10000);
+          total_cishu_count += 1;
         } else if (year === last_year) {
           last_year_count += Math.round(Number(item.unitProfit) * 10000);
+          last_year_cishu_count += 1;
         }
       });
 
       info.tableData[i].total_year_count = total_year_count;
       info.tableData[i].last_year_count = last_year_count;
+
+      info.tableData[i].total_cishu_count = total_cishu_count;
+      info.tableData[i].last_year_cishu_count = last_year_cishu_count;
 
       saveFundInfoToLocalstorage();
     });
@@ -77,8 +84,8 @@ onMounted(() => {
         </div>
 
         <div class="list_title">
-          <div class="list_fundcode">去年:{{ item.last_year_count }}</div>
-          <div class="list_fundname">今年:{{ item.total_year_count }}</div>
+          <div class="">去年:{{ item.last_year_count }}({{ item.last_year_cishu_count }}次)</div>
+          <div class="">今年:{{ item.total_year_count }}({{ item.total_cishu_count }}次)</div>
           <div class="list_del" @click="btn_line_1(item, index)">删除</div>
         </div>
 
@@ -134,7 +141,7 @@ onMounted(() => {
 }
 
 .list_fundcode {
-  width: 60px;
+  width: 40px;
 }
 
 .list_fundname {
@@ -170,6 +177,7 @@ onMounted(() => {
 .list_meifennum {
   width: 30%;
   text-align: right;
+  padding: 0 10px 0 0;
 }
 
 .list_del {
