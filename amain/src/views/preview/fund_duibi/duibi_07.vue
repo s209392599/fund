@@ -147,7 +147,7 @@ onMounted(() => {
         </div>
 
         <div class="item_box">
-          <div class="item_title">重仓股票</div>
+          <div class="item_title">重仓股票({{ item?.reportDateList?.[0] || '' }})</div>
           <Chicang_01 :data="item.stock" class="stock_main" />
         </div>
 
