@@ -28,7 +28,7 @@ const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
     const item = info.tableData[i];
 
-    await server_fund_jd_getFundDividendPageInfo({
+    await server_fund_jd_getFundDetailChartPageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
       console.log(res);
@@ -58,7 +58,7 @@ onMounted(() => {
     <div id="list_wrapper">
       <div class="list_item" v-for="(item, index) in info.tableData" :key="item.fund_code">
 
-        <div class="list_top flex justify-between">
+        <div class="list_top flex justify-between" style="margin: 0px;">
           <div class="">{{ item.fund_code }}</div>
           <div class="">{{ item.fund_type }}</div>
           <div class="list_del" @click="btn_line_1(item, index)">删除</div>
@@ -73,7 +73,7 @@ onMounted(() => {
           <div class="">修复天数 {{ item.restoreDay }}天</div>
         </div>
 
-        <div class="item_box">
+        <div class="item_box" style="margin: 10px 0px 0px 0px;">
           <Chart_xiufu_01 :data="item" class="stock_main" />
         </div>
 
@@ -100,12 +100,13 @@ onMounted(() => {
 .list_item {
   position: relative;
   z-index: 2;
-  width: 340px;
-  min-width: 340px;
+  width: 430px;
+  min-width: 430px;
   height: auto;
   border: 1px solid #ccc;
   border-radius: 12px;
   background-color: #f5f5f5;
+  overflow: hidden;
 }
 
 .list_top {
@@ -116,7 +117,7 @@ onMounted(() => {
 
 .fund_name_box {
   padding: 5px;
-  margin: 5px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   background-color: #fff;
 }
 

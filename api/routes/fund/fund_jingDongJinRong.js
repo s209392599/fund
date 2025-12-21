@@ -35,7 +35,7 @@ router.post('/fund_jd_detailPageInfoWithNoPin', (req, res) => {
         delete datas.noticeList;
         delete datas.purchaseProcessOfItem;
         delete datas.question;
-        delete datas.noticeOfItem;// 分红公告等
+        delete datas.noticeOfItem; // 分红公告等
 
         res.send({
           code: 200,
@@ -137,19 +137,65 @@ router.post('/fund_jd_InvestmentDistributionPageInfo', (req, res) => {
     fetch(u, {})
       .then((data) => data.json())
       .then((data) => {
-        if(!data.success){
+        if (!data.success) {
           res.send({
             code: 400,
             msg: `${fund_code}服务器获取出错`,
             data: [],
           });
-        }else{
+        } else {
           let resultData = data.resultData || {};
           let datas = resultData.datas || {};
           res.send({
             code: 200,
             msg: '成功',
-            data: datas.investmentDistribution ||  {},
+            data: datas.investmentDistribution || {},
+          });
+        }
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fund_code}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
+// 基金修复
+router.post('/fund_jd_getFundDetailChartPageInfo', (req, res) => {
+  const { fund_code = '', pageSize = 10 } = req.body;
+
+  if (!fund_code) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `
+https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?reqData={"chartType":7,"fundCode":"${fund_code}","dataCycle":4,"disclosureType":1}`;
+    fetch(u, {})
+      .then((data) => data.json())
+      .then((data) => {
+        if (!data.success) {
+          res.send({
+            code: 400,
+            msg: `${fund_code}服务器获取出错`,
+            data: [],
+          });
+        } else {
+          let resultData = data.resultData || {};
+          let datas = resultData.datas || {};
+          delete datas.restorePointList;
+          delete datas.retracementPointList;
+          delete datas.chartName;
+          res.send({
+            code: 200,
+            msg: '成功',
+            data: datas.investmentDistribution || {},
           });
         }
       });

@@ -5,7 +5,7 @@ import Duibi_01 from '../fund_duibi/duibi_01.vue';
 console.log('src/views/preview/tabs/preview_13.vue');
 
 const info = reactive({
-  active_tab: '1',
+  active_tab: '5',
   list_tabs: [
     {
       id: '1',

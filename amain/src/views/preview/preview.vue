@@ -113,7 +113,7 @@ const info = reactive({
         defineAsyncComponent(() => import('./tabs/preview_03.vue'))
       ),
       desc: '',
-    }
+    },
     {
       id: 99,
       show: true,
