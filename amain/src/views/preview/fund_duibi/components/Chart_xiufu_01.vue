@@ -5,7 +5,7 @@ const props = defineProps({
   data: {
     type: Object,
     required: true,
-    default: () => {},
+    default: () => { },
   },
 });
 
@@ -19,7 +19,7 @@ let myChart = null;
 const turnData = () => {
   let obj = props.data || {};
   let majorChartPointList = obj.majorChartPointList || [];
-  if(JSON.stringify(majorChartPointList) === '[]'){
+  if (JSON.stringify(majorChartPointList) === '[]') {
     return {};
   }
 
@@ -27,20 +27,84 @@ const turnData = () => {
     xAxisData: [],// x轴数据
     line_data_1: [],// 第一条折线数据
     markArea: [],// 区间背景色
-    markPoint:[],// 特殊点
-    line_data_2:[],// 第二条折线数据
-    line_data_3:[],// 第三条折线数据
+    markPoint: [],// 特殊点
+    line_data_2: [],// 第二条折线数据
+    line_data_3: [],// 第三条折线数据
   }
 
-  let maxRetracementEndPoint = obj.maxRetracementEndPoint || {};// 最大回撤结束点
   let maxRetracementStartPoint = obj.maxRetracementStartPoint || {};// 最大回撤开始点
+  let maxRetracementEndPoint = obj.maxRetracementEndPoint || {};// 最大回撤结束点
   let restorePoint = obj.restorePoint || {};// 修复点
+
+  var xAxis_1 = maxRetracementStartPoint.xAxis || '';
+  var xAxis_2 = maxRetracementEndPoint.xAxis || '';
+  var xAxis_3 = restorePoint.xAxis || '';
 
   majorChartPointList.forEach(item => {
     res.xAxisData.push(item.xAxis);
     res.line_data_1.push(item.yAxis);
-
   });
+
+  if (xAxis_1 && xAxis_2) {
+    let time_1 = new Date(xAxis_1).getTime();
+    let time_2 = new Date(xAxis_2).getTime();
+    res.markPoint.push({
+      name: '回撤开始点',
+      coord: [xAxis_1, maxRetracementStartPoint.yAxis],
+      label: {
+        backgroundColor: '#76b39e',
+      },
+    });
+    res.markPoint.push({
+      name: '回撤结束点',
+      coord: [xAxis_2, maxRetracementEndPoint.yAxis],
+      label: {
+        backgroundColor: '#ef7470',
+      },
+    });
+    majorChartPointList.forEach(item => {
+      let time_3 = new Date(item.xAxis).getTime();
+      if (time_3 >= time_1 && time_3 <= time_2) {
+        res.line_data_2.push(item.yAxis);
+      } else {
+        res.line_data_2.push(null);
+      }
+    });
+  }
+
+  if (xAxis_2 && xAxis_3) {
+    let time_2 = new Date(xAxis_2).getTime();
+    let time_3 = new Date(xAxis_3).getTime();
+    res.markPoint.push({
+      name: '修复点',
+      coord: [xAxis_3, restorePoint.yAxis],
+      label: {
+        backgroundColor: '#ef7470',
+      },
+    });
+    res.markArea = [
+      [
+        {
+          name: '',
+          xAxis: xAxis_2,
+          itemStyle: {
+            color: 'rgba(255, 0, 0, 0.1)',
+          },
+        },
+        {
+          xAxis: xAxis_3,
+        },
+      ],
+    ]
+    majorChartPointList.forEach(item => {
+      let time_4 = new Date(item.xAxis).getTime();
+      if (time_4 >= time_2 && time_4 <= time_3) {
+        res.line_data_3.push(item.yAxis);
+      } else {
+        res.line_data_3.push(null);
+      }
+    });
+  }
 
 
 
@@ -54,29 +118,17 @@ function RenderChart() {
   const chartData = turnData();
   if (JSON.stringify(chartData) === '{}') {
     myChart.setOption({
-      title: {
-        text: '暂无数据',
+      graphic: {
+        type: 'text',
         left: 'center',
         top: 'center',
-        textStyle: {
-          fontSize: 20,
-          color: '#999',
-        },
-      },
-      xAxis: {
-        type: 'category',
-        data: [],
-      },
-      yAxis: {
-        type: 'value',
-      },
-      series: [
-        {
-          type: 'line',
-          data: [],
-        },
-      ],
-    });
+        style: {
+          text: '暂无数据',
+          fontSize: 32,
+          fill: '#999',
+        }
+      }
+    }, true);
     return;
   }
 
@@ -90,6 +142,12 @@ function RenderChart() {
       right: '6%',
       bottom: '2%',
       containLabel: true,
+    },
+    tooltip: {
+      trigger: 'axis',
+      formatter: function (params) {
+        return params[0].name + '<br>' + params[0].seriesName + ': ' + params[0].value + '%';
+      },
     },
     xAxis: {
       type: 'category',
@@ -108,7 +166,7 @@ function RenderChart() {
     series: [
       {
         // 基础折线（全部数据）
-        name: '基础线',
+        name: '涨幅',
         type: 'line',
         data: seriesData,
         symbol: 'none',
@@ -118,99 +176,66 @@ function RenderChart() {
           type: 'dashed', // 虚线表示原始线
         },
         // // 使用 markArea 实现区间背景色
-        // markArea: {
-        //   data: [
-        //     [
-        //       {
-        //         name: '高亮区间',
-        //         xAxis: 'Wed',
-        //         itemStyle: {
-        //           color: 'rgba(255, 0, 0, 0.1)',
-        //         },
-        //       },
-        //       {
-        //         xAxis: 'Fri',
-        //       },
-        //     ],
-        //   ],
-        // },
+        markArea: {
+          data: chartData.markArea || [],
+        },
         // // 使用 markPoint 添加特殊点和提示文字
-        // markPoint: {
-        //   symbolSize: 0,
-        //   label: {
-        //     show: true,
-        //     position: 'top',
-        //     formatter: '{b}',
-        //     color: '#fff',
-        //     padding: [4, 4],
-        //     borderRadius: 4,
-        //     fontSize: 8,
-        //   },
-        //   data: [
-        //     {
-        //       name: '最大回撤-13.93%',
-        //       coord: ['Wed', 932],
-        //       label: {
-        //         backgroundColor: '#76b39e',
-        //       },
-        //     },
-        //     {
-        //       name: '99天修复',
-        //       coord: ['Fri', 1330],
-        //       label: {
-        //         backgroundColor: '#ef7470',
-        //       },
-        //     },
-        //   ],
-        // },
+        markPoint: {
+          symbolSize: 0,
+          label: {
+            show: true,
+            // position: 'top',
+            // formatter: '{b}',
+            color: '#fff',
+            padding: [2.5, 2.5],
+            borderRadius: 2.5,
+            fontSize: 5,
+          },
+          data: chartData.markPoint || [],
+        },
         z: 1, // 层级较低
       },
       {
         // 高亮区间段（从Wed到Fri）
         name: '重点区间',
         type: 'line',
-        data: [],
-        // [
-        //   null, // Mon - 不显示
-        //   null, // Tue - 不显示
-        //   {
-        //     value: 901,
-        //     symbol: 'circle',
-        //     symbolSize: 10,
-        //     itemStyle: {
-        //       color: '#76b39e',
-        //     },
-        //   }, // Wed - 开始
-        //   934, // Thu
-        //   {
-        //     value: 1290,
-        //     symbol: 'circle',
-        //     symbolSize: 8,
-        //     itemStyle: {
-        //       color: '#ef7470',
-        //     },
-        //   }, // Fri - 结束
-        //   null, // Sat - 不显示
-        //   null, // Sun - 不显示
-        // ],
+        data: chartData.line_data_2 || [],
         symbol: 'none',
         lineStyle: {
-          color: '#ff6b6b', // 红色
-          width: 4, // 加粗
+          color: '#76b39e', // 绿色
+          width: 2, // 加粗
           shadowColor: 'rgba(255, 107, 107, 0.3)',
           shadowBlur: 10,
         },
         z: 2, // 层级较高
         emphasis: {
           lineStyle: {
-            width: 6,
+            width: 3,
           },
         },
       },
+      {
+        name: '修复区间',
+        type: 'line',
+        data: chartData.line_data_3 || [],
+        symbol: 'none',
+        lineStyle: {
+          color: '#ff6b6b', // 红色
+          width: 2, // 加粗
+          shadowColor: 'rgba(118, 179, 158, 0.3)',
+          shadowBlur: 10,
+        },
+        z: 2, // 层级较高
+        emphasis: {
+          lineStyle: {
+            width: 3,
+          },
+        },
+      }
     ],
   };
 
-  myChart.setOption(option);
+  myChart.setOption(option, true);
 }
 
 // 在组件挂载时初始化图表
@@ -239,11 +264,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    ref="chartRef"
-    class="stock_main_wrapper"
-    style="width: 100%; height: 200px"
-  ></div>
+  <div ref="chartRef" class="stock_main_wrapper" style="width: 100%; height: 200px"></div>
 </template>
 
 <style scoped lang="scss"></style>
