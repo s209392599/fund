@@ -140,7 +140,7 @@ function RenderChart() {
       top: '4%',
       left: '2%',
       right: '6%',
-      bottom: '2%',
+      bottom: '0',
       containLabel: true,
     },
     tooltip: {
@@ -155,7 +155,42 @@ function RenderChart() {
       axisLabel: {
         showMinLabel: true,
         showMaxLabel: true,
+        formatter: function (value) {
+          if (value && value.length >= 10) {
+            return value.substring(5, 10).replace('-', '/');
+          }
+          return value;
+        },
+        rotate: 30,
+        // 只显示4个label
+        interval: function (index, value) {
+          const total = xAxisData.length - 1;
+          if (total <= 4) return true;
+
+          const positions = [
+            0,  // 第一个
+            Math.floor(total * 1 / 3),  // 1/3位置
+            Math.floor(total * 2 / 3),  // 2/3位置
+            total  // 最后一个
+          ];
+
+          return positions.includes(index);
+        },
+        align: 'center',
+        verticalAlign: 'middle'
       },
+      // axisLine: {
+      //   lineStyle: {
+      //     color: 'rgba(255, 255, 255, 0.2)'
+      //   }
+      // },
+      // axisTick: {
+      //   lineStyle: {
+      //     color: 'rgba(255, 255, 255, 0.2)'
+      //   },
+      //   alignWithLabel: true
+      // },
+      boundaryGap: false,
     },
     yAxis: {
       type: 'value',
@@ -193,6 +228,7 @@ function RenderChart() {
           },
           data: chartData.markPoint || [],
         },
+
         z: 1, // 层级较低
       },
       {

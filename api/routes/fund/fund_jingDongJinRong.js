@@ -195,7 +195,7 @@ https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?reqData={"cha
           res.send({
             code: 200,
             msg: '成功',
-            data: datas.investmentDistribution || {},
+            data: datas || {},
           });
         }
       });
