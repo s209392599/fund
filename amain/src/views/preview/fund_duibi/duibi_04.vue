@@ -36,7 +36,7 @@ const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
     const item = info.tableData[i];
 
-    await server_fund_jd_getFundDetailChartPageInfo({
+    await server_fund_jd_HistoryNetValuePageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
       console.log(res);
