@@ -1,25 +1,72 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_04.vue');
-
+import xiufu from './xiufu.json'
 const info = reactive({
-  tableData: [],
+  // tableData: [],
+  tableData: xiufu,
 });
-if (localStorage.getItem('fund_duibi_arr')) {
-  info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
-} else {
-  localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
-}
-console.log(info.tableData);
+
+// if (localStorage.getItem('fund_duibi_arr')) {
+//   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
+// } else {
+//   localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
+// }
+
+// 存储基金信息
+const saveFundInfoToLocalstorage = () => {
+  let arr = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type,
+    };
+  });
+  localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
+};
 
 const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
     const item = info.tableData[i];
 
-    await server_fund_jd_getFundTradeRulesPageInfo({
+    await server_fund_jd_getFundDetailChartPageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
       console.log(res);
-      info.tableData[i].rules = res.data;
+      /*
+      {000009 货币型的可能没有
+        "date": "2025-02-15",
+        "netValue": "1.0000"
+      },
+
+      {007467
+        "date": "2024-09-09",
+        "netValue": "1.4613",
+        "dailyProfit": "-1.61",
+        "totalNetValue": "1.6413"
+      },
+      */
+      let obj_1 = res.data || {};
+      let majorChartPointList = obj_1.majorChartPointList || [];
+      let zheng = '-';
+      if (majorChartPointList.length > 1) {
+        let count = 0;
+        for (let j = 1; j < majorChartPointList.length - 1; j++) {
+          let obj_2 = majorChartPointList[j] || {};
+          let obj_3 = majorChartPointList[j + 1] || {};
+          let close_1 = parseFloat(obj_2.yAxis) || 0;
+          let close_2 = parseFloat(obj_3.yAxis) || 0;
+          if (close_1 > close_2) {
+            count++;
+          }
+        }
+        obj_1.zheng = (count / (majorChartPointList.length - 1) * 100).toFixed(2) + '%';
+      }
+      info.tableData[i] = {
+        ...info.tableData[i],
+        ...obj_1,
+      };
+
+      saveFundInfoToLocalstorage();
     });
   }
 };
@@ -27,165 +74,42 @@ const getList = async () => {
 // 删除
 const btn_line_1 = (row, index) => {
   info.tableData.splice(index, 1);
-  localStorage.setItem('fund_duibi_arr', JSON.stringify(info.tableData));
-};
-// 买入费率
-const purchaseFeeRatio = (row) => {
-  const arr = row?.rules?.purchaseRule?.purchaseFeeRatio || [];
-  return arr
-    .map((item) => {
-      return `<div>${item.divideIntervalDesc}  (${item.discountedRate})</div>`;
-    })
-    .join('');
-};
-// 卖出费率
-const redeemFeeRatio = (row) => {
-  const arr = row?.rules?.redeemRule?.redeemFeeRatio || [];
-  return arr
-    .map((item) => {
-      return `<div>${item.divideIntervalDesc}  (${item.rate})</div>`;
-    })
-    .join('');
-};
-// 卖出到账
-const redeemBankProcess = (row) => {
-  const arr = row?.rules?.redeemRule?.redeemBankProcess || [];
-  return arr
-    .map((item) => {
-      return `<div>${item.title}  (${item.info})</div>`;
-    })
-    .join('');
+  saveFundInfoToLocalstorage();
 };
 
 onMounted(() => {
-  getList();
+  // getList();
 });
 </script>
 
 <template>
   <div class="page_wrapper">
-    <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
-      <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
+    <div id="list_wrapper">
+      <div class="list_item" v-for="(item, index) in info.tableData" :key="item.fund_code">
 
-      <el-table-column label="操作" width="60" fixed>
-        <template #default="{ row, $index }">
-          <el-button link type="primary" size="small" @click="btn_line_1(row, $index)">删除</el-button>
-        </template>
-      </el-table-column>
+        <div class="list_top flex justify-between" style="margin: 0px;">
+          <div class="">{{ item.fund_code }}</div>
+          <div class="">{{ item.fund_type }}</div>
+          <div class="list_del" @click="btn_line_1(item, index)">删除</div>
+        </div>
 
-      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
-        <template v-slot="{ row }">
-          <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
-            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
-            <span v-else>{{ row.fund_code }}</span>
-          </a>
-        </template>
-      </el-table-column>
+        <div class="fund_name_box item_box flex justify-between items-center">
+          <div class="truncate flex-1" :title="item.fund_name" style="font-size: 12px;;">{{ item.fund_name }}</div>
+          <div class="pl-5">{{ item.establishmentCycleDesc }}</div>
+        </div>
 
-      <!-- <el-table-column prop="fund_name" label="基金名称" width="200" sortable show-overflow-tooltip>
-        <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_name }}</span>
-          <span v-else>{{ row.fund_name }}</span>
-        </template>
-      </el-table-column>
+        <div class="item_box flex justify-between items-center">
+          <div class="">最大回撤 {{ item.maxRetracementValue }}%</div>
+          <div class="">正收益天数比率 {{ item.zheng }}</div>
+          <div class="">修复天数 {{ item.restoreDay }}天</div>
+        </div>
 
-      <el-table-column prop="fund_type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
-        <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_type }}</span>
-          <span v-else>{{ row.fund_type }}</span>
-        </template>
-      </el-table-column> -->
+        <div class="item_box" style="margin: 10px 0px 0px 0px;">
+          <Chart_xiufu_01 :data="item" class="stock_main" />
+        </div>
 
-      <el-table-column prop="" label="isNewFund" width="90">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.isNewFund }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="aipStatus" label="可定投?" width="74">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.purchaseRule?.aipStatus || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="dayLimitAmount" label="日累计限额" width="88">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.purchaseRule?.dayLimitAmount || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="aipMinAmount" label="定投金额" width="72">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.purchaseRule?.aipMinAmount || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="purchaseMinAmount" label="起投金额" width="72">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.purchaseRule?.purchaseMinAmount || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="manageFeeRatio" label="管理费" width="92">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.purchaseRule?.manageFeeRatio || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="depositFeeRatio" label="托管费" width="92">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.purchaseRule?.depositFeeRatio || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="saleServiceFeeRatio" label="销售服务费" width="94">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.purchaseRule?.saleServiceFeeRatio || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="" label="买入费率" width="258" show-overflow-tooltip>
-        <template v-slot="{ row }">
-          <div class="" v-html="purchaseFeeRatio(row)"></div>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="" label="卖出状态" width="70">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.redeemRule?.redeemStatus || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="" label="最小赎回" width="70">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.redeemRule?.redeemMinPortion || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="" label="最小持有" width="70">
-        <template v-slot="{ row }">
-          <span>{{ row?.rules?.redeemRule?.redeemHoldPortion || '' }}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="" label="卖出到账" width="150" show-overflow-tooltip>
-        <template v-slot="{ row }">
-          <div class="" v-html="redeemBankProcess(row)"></div>
-        </template>
-      </el-table-column>
-
-      <el-table-column prop="" label="卖出费率" width="258" show-overflow-tooltip>
-        <template v-slot="{ row }">
-          <div class="" v-html="redeemFeeRatio(row)"></div>
-        </template>
-      </el-table-column>
-
-      <!-- <el-table-column prop="point_top" label="高点" width="66"></el-table-column>
-
-      <el-table-column prop="dwjz" label="净值" width="66"></el-table-column>
-
-       -->
-    </el-table>
+      </div><!-- list_item -->
+    </div><!-- list_wrapper -->
   </div>
 </template>
 
@@ -194,5 +118,48 @@ onMounted(() => {
   height: calc(100vh - 100px);
   overflow: auto;
   padding: 5px 0px 0px 0px;
+  font-size: 12px;
+}
+
+#list_wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.list_item {
+  position: relative;
+  z-index: 2;
+  width: 430px;
+  min-width: 430px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.list_top {
+  padding: 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #fff;
+}
+
+.fund_name_box {
+  padding: 5px;
+  margin: 10px 0px 0px 0px;
+  background-color: #fff;
+}
+
+.list_del {
+  cursor: pointer;
+  color: red;
+}
+
+.item_box {
+  margin: 10px 0px 10px 0px;
+  background-color: #fff;
+  padding: 5px;
 }
 </style>
