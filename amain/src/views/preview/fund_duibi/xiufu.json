@@ -3,6 +3,12 @@
     "fund_code": "007467",
     "fund_name": "华泰柏瑞中证红利低波ETF联接C",
     "fund_type": "指数型-股票",
+    "titleMap": {
+      "netValueRowName": "单位净值",
+      "totalNetValueRowName": "累计净值",
+      "dateRowName": "日期",
+      "dailyRateRowRate": "日涨跌幅"
+    },
     "netValueList": [
       {
         "date": "2024-09-09",
@@ -1870,6 +1876,12 @@
     "fund_code": "020989",
     "fund_name": "南方恒生科技ETF发起联接（QDII）C",
     "fund_type": "QDII-指数",
+    "titleMap": {
+      "netValueRowName": "单位净值",
+      "totalNetValueRowName": "累计净值",
+      "dateRowName": "日期",
+      "dailyRateRowRate": "日涨跌幅"
+    },
     "netValueList": [
       {
         "date": "2024-09-09",
@@ -3737,6 +3749,12 @@
     "fund_code": "012276",
     "fund_name": "富国中证沪港深500ETF联接C",
     "fund_type": "指数型-股票",
+    "titleMap": {
+      "netValueRowName": "单位净值",
+      "totalNetValueRowName": "累计净值",
+      "dateRowName": "日期",
+      "dailyRateRowRate": "日涨跌幅"
+    },
     "netValueList": [
       {
         "date": "2024-09-09",
@@ -5604,6 +5622,12 @@
     "fund_code": "011496",
     "fund_name": "华泰紫金月月发1个月滚动债券发起A",
     "fund_type": "债券型-一级债",
+    "titleMap": {
+      "netValueRowName": "单位净值",
+      "totalNetValueRowName": "累计净值",
+      "dateRowName": "日期",
+      "dailyRateRowRate": "日涨跌幅"
+    },
     "netValueList": [
       {
         "date": "2024-09-09",
@@ -7471,6 +7495,12 @@
     "fund_code": "003027",
     "fund_name": "安信新价值混合C",
     "fund_type": "混合型-灵活",
+    "titleMap": {
+      "netValueRowName": "单位净值",
+      "totalNetValueRowName": "累计净值",
+      "dateRowName": "日期",
+      "dailyRateRowRate": "日涨跌幅"
+    },
     "netValueList": [
       {
         "date": "2024-09-09",
@@ -9338,6 +9368,12 @@
     "fund_code": "015822",
     "fund_name": "易方达中证同业存单AAA指数7天持有",
     "fund_type": "债券型-同业存单",
+    "titleMap": {
+      "netValueRowName": "单位净值",
+      "totalNetValueRowName": "累计净值",
+      "dateRowName": "日期",
+      "dailyRateRowRate": "日涨跌幅"
+    },
     "netValueList": [
       {
         "date": "2024-09-09",
@@ -11205,6 +11241,11 @@
     "fund_code": "000009",
     "fund_name": "易方达天天理财货币A",
     "fund_type": "货币型",
+    "titleMap": {
+      "tenThousandProfitRowName": "万份收益",
+      "weeklyYieldRowName": "七日年化",
+      "dateRowName": "日期"
+    },
     "netValueList": [
       {
         "date": "2025-02-15",

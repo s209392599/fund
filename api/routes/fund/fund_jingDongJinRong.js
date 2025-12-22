@@ -52,6 +52,40 @@ router.post('/fund_jd_detailPageInfoWithNoPin', (req, res) => {
   }
 });
 
+// 获取基金历史净值
+router.post('/fund_jd_HistoryNetValuePageInfo', (req, res) => {
+  const { fund_code = '', pageSize = 10 } = req.body;
+
+  if (!fund_code) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"${fund_code}","pageNum":1,"pageSize":${pageSize},"channel":"9"}`;
+    fetch(u, {})
+      .then((data) => data.json())
+      .then((data) => {
+        let resultData = data.resultData || {};
+        let datas = resultData.datas || {};
+        res.send({
+          code: 200,
+          msg: '成功',
+          data: datas,
+        });
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fund_code}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
 // 获取基金的买卖规则
 router.post('/fund_jd_getFundTradeRulesPageInfo', (req, res) => {
   const { fund_code = '', pageSize = 10 } = req.body;

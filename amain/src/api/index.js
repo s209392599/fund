@@ -89,6 +89,10 @@ export async function server_fund_jd_InvestmentDistributionPageInfo(data) {
 export async function server_fund_jd_getFundDetailChartPageInfo(data) {
   return request.post('/fund_jd_getFundDetailChartPageInfo', data);
 }
+// fund_jd_HistoryNetValuePageInfo 获取基金历史净值
+export async function server_fund_jd_HistoryNetValuePageInfo(data) {
+  return request.post('/fund_jd_HistoryNetValuePageInfo', data);
+}
 
 // --------------------------------------------------------------  下面是数据库操作
 
