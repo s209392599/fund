@@ -52,7 +52,10 @@ router.post('/fund_jd_detailPageInfoWithNoPin', (req, res) => {
   }
 });
 
-// 获取基金历史净值
+/* 获取基金历史净值
+https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=4
+https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"007467","pageNum":1,"pageSize":20,"channel":"9"}
+*/
 router.post('/fund_jd_HistoryNetValuePageInfo', (req, res) => {
   const { fund_code = '', pageSize = 10 } = req.body;
 

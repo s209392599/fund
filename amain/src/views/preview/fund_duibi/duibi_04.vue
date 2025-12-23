@@ -1,18 +1,8 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_04.vue');
-import xiufu from './xiufu.json';
 const info = reactive({
   tableData: [],
-  // tableData: xiufu,
 });
-
-/*
-https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=4
-
-https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"007467","pageNum":1,"pageSize":20,"channel":"9"}
-
-得换一个历史净值的接口
-*/
 
 if (localStorage.getItem('fund_duibi_arr')) {
   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));

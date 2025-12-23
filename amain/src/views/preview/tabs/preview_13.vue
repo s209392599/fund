@@ -22,7 +22,7 @@ const info = reactive({
     },
     {
       id: '4',
-      name: '累计净值', // 均线
+      name: '累计净值(日均线)', // 均线
     },
     {
       id: '5',
