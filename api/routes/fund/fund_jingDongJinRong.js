@@ -71,6 +71,7 @@ router.post('/fund_jd_HistoryNetValuePageInfo', (req, res) => {
       .then((data) => {
         let resultData = data.resultData || {};
         let datas = resultData.datas || {};
+        datas.netValueList = datas.netValueList.reverse();
         res.send({
           code: 200,
           msg: '成功',

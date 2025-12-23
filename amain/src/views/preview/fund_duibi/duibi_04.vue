@@ -2,8 +2,8 @@
 console.log('amain/src/views/preview/fund_duibi/duibi_04.vue');
 import xiufu from './xiufu.json'
 const info = reactive({
-  // tableData: [],
-  tableData: xiufu,
+  tableData: [],
+  // tableData: xiufu,
 });
 
 /*
@@ -14,11 +14,11 @@ https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={
 得换一个历史净值的接口
 */
 
-// if (localStorage.getItem('fund_duibi_arr')) {
-//   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
-// } else {
-//   localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
-// }
+if (localStorage.getItem('fund_duibi_arr')) {
+  info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
+} else {
+  localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
+}
 
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
@@ -38,28 +38,9 @@ const getList = async () => {
 
     await server_fund_jd_HistoryNetValuePageInfo({
       fund_code: item.fund_code,
+      pageSize: 310,// 245 + 60
     }).then((res) => {
-      console.log(res);
-      /*
-      {000009 货币型的可能没有
-        "date": "2025-02-15",
-        "netValue": "1.0000"
-      },
-
-      {
-      "date": "2025-12-21",
-      "weeklyYield": "1.0480",
-      "tenThousandProfit": "0.2852"
-    }
-
-
-      {007467
-        "date": "2024-09-09",
-        "netValue": "1.4613",
-        "dailyProfit": "-1.61",
-        "totalNetValue": "1.6413"
-      },
-      */
+      console.log(item.fund_code, res.data);
       let obj_1 = res.data || {};
       let majorChartPointList = obj_1.majorChartPointList || [];
       let zheng = '-';
@@ -93,7 +74,7 @@ const btn_line_1 = (row, index) => {
 };
 
 onMounted(() => {
-  // getList();
+  getList();
 });
 </script>
 
@@ -108,19 +89,19 @@ onMounted(() => {
           <div class="list_del" @click="btn_line_1(item, index)">删除</div>
         </div>
 
-        <div class="fund_name_box item_box flex justify-between items-center">
+        <div class="fund_name_box flex justify-between items-center">
           <div class="truncate flex-1" :title="item.fund_name" style="font-size: 12px;;">{{ item.fund_name }}</div>
           <div class="pl-5">{{ item.establishmentCycleDesc }}</div>
         </div>
 
-        <div class="item_box flex justify-between items-center">
+        <!-- <div class="item_box flex justify-between items-center">
           <div class="">最大回撤 {{ item.maxRetracementValue }}%</div>
           <div class="">正收益天数比率 {{ item.zheng }}</div>
           <div class="">修复天数 {{ item.restoreDay }}天</div>
-        </div>
+        </div> -->
 
-        <div class="item_box" style="margin: 10px 0px 0px 0px;">
-          <Chart_xiufu_01 :data="item" class="stock_main" />
+        <div class="item_box">
+          <Chart_jingzhi :data="item" class="stock_main" />
         </div>
 
       </div><!-- list_item -->
@@ -146,8 +127,8 @@ onMounted(() => {
 .list_item {
   position: relative;
   z-index: 2;
-  width: 430px;
-  min-width: 430px;
+  width: calc(50% - 10px);
+  min-width: calc(50% - 10px);
   height: auto;
   border: 1px solid #ccc;
   border-radius: 12px;
@@ -156,14 +137,13 @@ onMounted(() => {
 }
 
 .list_top {
-  padding: 5px;
-  margin: 10px 0px 0px 0px;
+  padding: 5px 10px;
   background-color: #fff;
 }
 
 .fund_name_box {
   padding: 5px;
-  margin: 10px 0px 0px 0px;
+  // margin: 10px 0px 0px 0px;
   background-color: #fff;
 }
 
@@ -173,7 +153,7 @@ onMounted(() => {
 }
 
 .item_box {
-  margin: 10px 0px 10px 0px;
+  // margin: 10px 0px 10px 0px;
   background-color: #fff;
   padding: 5px;
 }

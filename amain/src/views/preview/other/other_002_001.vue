@@ -8,7 +8,7 @@ const info = reactive({
 
 <template>
   <div class="page_wrapper">
-    页面1
+    <div class="">算法说明：读取日周月的排行榜前500名，去除A类进行交叉排名取交集</div>
   </div>
 </template>
 

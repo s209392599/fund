@@ -41,6 +41,10 @@ const info = reactive({
       name: '腾讯云宝塔面板',
       adress: 'https://150.158.175.108:60001/tencentcloud'
     },
+    {
+      name: '基金主题',
+      adress: 'https://fund.eastmoney.com/ztjj/'
+    }
   ]
 });
 if (localStorage.getItem('email') === '209392599@qq.com') {
