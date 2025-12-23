@@ -1,6 +1,6 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_04.vue');
-import xiufu from './xiufu.json'
+import xiufu from './xiufu.json';
 const info = reactive({
   tableData: [],
   // tableData: xiufu,
@@ -22,7 +22,7 @@ if (localStorage.getItem('fund_duibi_arr')) {
 
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
-  let arr = info.tableData.map(v => {
+  let arr = info.tableData.map((v) => {
     return {
       fund_code: v.fund_code,
       fund_name: v.fund_name,
@@ -38,12 +38,11 @@ const getList = async () => {
 
     await server_fund_jd_HistoryNetValuePageInfo({
       fund_code: item.fund_code,
-      pageSize: 310,// 245 + 60
+      pageSize: 310, // 245 + 60
     }).then((res) => {
-      console.log(item.fund_code, res.data);
       let obj_1 = res.data || {};
       let majorChartPointList = obj_1.majorChartPointList || [];
-      let zheng = '-';
+      obj_1.zheng = '-';
       if (majorChartPointList.length > 1) {
         let count = 0;
         for (let j = 1; j < majorChartPointList.length - 1; j++) {
@@ -55,7 +54,8 @@ const getList = async () => {
             count++;
           }
         }
-        obj_1.zheng = (count / (majorChartPointList.length - 1) * 100).toFixed(2) + '%';
+        obj_1.zheng =
+          ((count / (majorChartPointList.length - 1)) * 100).toFixed(2) + '%';
       }
       info.tableData[i] = {
         ...info.tableData[i],
@@ -81,16 +81,24 @@ onMounted(() => {
 <template>
   <div class="page_wrapper">
     <div id="list_wrapper">
-      <div class="list_item" v-for="(item, index) in info.tableData" :key="item.fund_code">
-
-        <div class="list_top flex justify-between" style="margin: 0px;">
+      <div
+        class="list_item"
+        v-for="(item, index) in info.tableData"
+        :key="item.fund_code"
+      >
+        <div class="list_top flex justify-between" style="margin: 0px">
           <div class="">{{ item.fund_code }}</div>
           <div class="">{{ item.fund_type }}</div>
           <div class="list_del" @click="btn_line_1(item, index)">删除</div>
         </div>
 
         <div class="fund_name_box flex justify-between items-center">
-          <div class="truncate flex-1" :title="item.fund_name" style="font-size: 12px;;">{{ item.fund_name }}</div>
+          <div
+            class="truncate flex-1"
+            :title="item.fund_name"
+            style="font-size: 12px"
+            >{{ item.fund_name }}</div
+          >
           <div class="pl-5">{{ item.establishmentCycleDesc }}</div>
         </div>
 
@@ -102,10 +110,9 @@ onMounted(() => {
 
         <div class="item_box">
           <Chart_jingzhi :data="item" class="stock_main" />
-        </div>
-
-      </div><!-- list_item -->
-    </div><!-- list_wrapper -->
+        </div> </div
+      ><!-- list_item --> </div
+    ><!-- list_wrapper -->
   </div>
 </template>
 
@@ -142,7 +149,7 @@ onMounted(() => {
 }
 
 .fund_name_box {
-  padding: 5px;
+  padding: 5px 10px;
   // margin: 10px 0px 0px 0px;
   background-color: #fff;
 }

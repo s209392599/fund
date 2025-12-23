@@ -1,11 +1,10 @@
 <script setup>
 import Duibi_01 from '../fund_duibi/duibi_01.vue';
-
 // 基金对比
 console.log('src/views/preview/tabs/preview_13.vue');
 
 const info = reactive({
-  active_tab: '4',
+  active_tab: '1',
   list_tabs: [
     {
       id: '1',
@@ -23,7 +22,7 @@ const info = reactive({
     },
     {
       id: '4',
-      name: '累计净值',// 均线
+      name: '累计净值', // 均线
     },
     {
       id: '5',
@@ -35,7 +34,7 @@ const info = reactive({
     },
     {
       id: '7',
-      name: '持仓',// 前十大持仓(或债券持仓)和比例
+      name: '持仓', // 前十大持仓(或债券持仓)和比例
     },
   ],
 });
@@ -43,14 +42,22 @@ const info = reactive({
 const handleClick = (tab) => {
   // console.log(tab);
 };
-
 </script>
 
 <template>
   <div class="page_wrapper pd-10">
     <div class="">
-      <el-tabs v-model="info.active_tab" @tab-click="handleClick" class="page-tabs">
-        <el-tab-pane v-for="item in info.list_tabs" :key="item.id" :label="item.name" :name="item.id">
+      <el-tabs
+        v-model="info.active_tab"
+        @tab-click="handleClick"
+        class="page-tabs"
+      >
+        <el-tab-pane
+          v-for="item in info.list_tabs"
+          :key="item.id"
+          :label="item.name"
+          :name="item.id"
+        >
         </el-tab-pane>
       </el-tabs>
     </div>

@@ -4,7 +4,7 @@ const props = defineProps({
   data: {
     type: Object,
     required: true,
-    default: () => { },
+    default: () => {},
   },
 });
 
@@ -17,19 +17,19 @@ const turnData = () => {
   let obj = props.data || {};
 
   let res = {
-    xAxisData: [],// x轴数据
-    line_data_01: [],// 基础数据
-    line_data_05: [],// 5日线数据
-    line_data_10: [],// 10日线数据
-    line_data_20: [],// 20日线数据
-    line_data_30: [],// 30日线数据
-    line_data_60: [],// 60日线数据
-    line_data_top: [],// 上布林线数据
-    line_data_bottom: [],// 下布林线数据
-  }
+    xAxisData: [], // x轴数据
+    line_data_01: [], // 基础数据
+    line_data_05: [], // 5日线数据
+    line_data_10: [], // 10日线数据
+    line_data_20: [], // 20日线数据
+    line_data_30: [], // 30日线数据
+    line_data_60: [], // 60日线数据
+    line_data_top: [], // 上布林线数据
+    line_data_bottom: [], // 下布林线数据
+  };
   let titleMap = obj.titleMap || {};
   if (!titleMap.totalNetValueRowName) {
-    return res;// 000009等货币型基金或者其他，不予展示
+    return res; // 000009等货币型基金或者其他，不予展示
   }
 
   let netValueList = obj.netValueList || [];
@@ -94,15 +94,22 @@ const turnData = () => {
   });
 
   //line_data_01 等都只取最后245个，如果不够前面用null
-  res.xAxisData = res.xAxisData.slice(-245).map(item => item || null);
-  res.line_data_01 = res.line_data_01.slice(-245).map(item => item || null);
-  res.line_data_05 = res.line_data_05.slice(-245).map(item => item || null);
-  res.line_data_10 = res.line_data_10.slice(-245).map(item => item || null);
-  res.line_data_20 = res.line_data_20.slice(-245).map(item => item || null);
-  res.line_data_30 = res.line_data_30.slice(-245).map(item => item || null);
-  res.line_data_60 = res.line_data_60.slice(-245).map(item => item || null);
-  // res.line_data_top = res.line_data_top.slice(-245).map(item => item || null);
-  // res.line_data_bottom = res.line_data_bottom.slice(-245).map(item => item || null);
+  res.xAxisData = res.xAxisData.slice(-245).map((item) => item || null);
+  res.line_data_01 = res.line_data_01.slice(-245).map((item) => item || null);
+  res.line_data_05 = res.line_data_05.slice(-245).map((item) => item || null);
+  res.line_data_10 = res.line_data_10.slice(-245).map((item) => item || null);
+  res.line_data_20 = res.line_data_20.slice(-245).map((item) => item || null);
+  res.line_data_30 = res.line_data_30.slice(-245).map((item) => item || null);
+  res.line_data_60 = res.line_data_60.slice(-245).map((item) => item || null);
+
+  // 计算上布林线：20日均线 + 2倍标准差
+  // res.line_data_top = res.line_data_20.map((item, index) =>
+  //   item ? item + 2 * res.line_data_20[index] : null
+  // );
+  // 计算下布林线：20日均线 - 2倍标准差
+  // res.line_data_bottom = res.line_data_20.map((item, index) =>
+  //   item ? item - 2 * res.line_data_20[index] : null
+  // );
 
   return res;
 };
@@ -117,7 +124,7 @@ function calculateYAxisRange(data) {
   return {
     min: min - interval * 0.5,
     max: max + interval * 0.5,
-    interval: interval
+    interval: interval,
   };
 }
 
@@ -127,18 +134,21 @@ function RenderChart() {
 
   const chartData = turnData();
   if (chartData.xAxisData.length === 0) {
-    myChart.setOption({
-      graphic: {
-        type: 'text',
-        left: 'center',
-        top: 'center',
-        style: {
-          text: '暂无数据',
-          fontSize: 32,
-          fill: '#999',
-        }
-      }
-    }, true);
+    myChart.setOption(
+      {
+        graphic: {
+          type: 'text',
+          left: 'center',
+          top: 'center',
+          style: {
+            text: '暂无数据',
+            fontSize: 32,
+            fill: '#999',
+          },
+        },
+      },
+      true
+    );
     return;
   }
 
@@ -158,16 +168,25 @@ function RenderChart() {
       top: '1%',
       data: ['5日线', '10日线', '20日线', '30日线', '60日线'],
       selected: {
-        '上布林线': false,
-        '下布林线': false,
+        上布林线: false,
+        下布林线: false,
         '10日线': false,
-        '20日线': false
-      }
+        // '20日线': false,
+      },
     },
     tooltip: {
       trigger: 'axis',
       formatter: function (params) {
-        return params[0].name + '<br>' + params[0].seriesName + ': ' + params[0].value + '%';
+        // 第一行是name剩下的时基础线 以及对应日线的值
+        let res = params[0].name + '<br>';
+        params.forEach((item) => {
+          if (item.seriesName === '基础') {
+            res += item.seriesName + ': ' + item.value + '<br>';
+          } else {
+            res += item.seriesName + ': ' + item.value + '<br>';
+          }
+        });
+        return res;
       },
     },
     xAxis: {
@@ -189,16 +208,16 @@ function RenderChart() {
           if (total <= 4) return true;
 
           const positions = [
-            0,  // 第一个
-            Math.floor(total * 1 / 3),  // 1/3位置
-            Math.floor(total * 2 / 3),  // 2/3位置
-            total  // 最后一个
+            0, // 第一个
+            Math.floor((total * 1) / 3), // 1/3位置
+            Math.floor((total * 2) / 3), // 2/3位置
+            total, // 最后一个
           ];
 
           return positions.includes(index);
         },
         align: 'center',
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
       },
       boundaryGap: false,
     },
@@ -225,44 +244,50 @@ function RenderChart() {
       max: yAxisRange.max,
       interval: yAxisRange.interval,
       axisLabel: {
-        formatter: (value) => value.toFixed(4)
-      }
+        formatter: (value) => value.toFixed(4),
+      },
     },
-    series: ([
+    series: [
       {
         name: '基础',
         data: chartData.line_data_01 || [],
+        // color: '#d9252d',
       },
-      {
-        name: '上布林线',
-        type: 'line',
-        data: chartData.line_data_top || [],
-      },
-      {
-        name: '下布林线',
-        data: chartData.line_data_bottom || [],
-      },
+      // {
+      //   name: '上布林线',
+      //   type: 'line',
+      //   data: chartData.line_data_top || [],
+      // },
+      // {
+      //   name: '下布林线',
+      //   data: chartData.line_data_bottom || [],
+      // },
       {
         name: '5日线',
         data: chartData.line_data_05 || [],
+        color: '#ff9128',
       },
       {
         name: '10日线',
         data: chartData.line_data_10 || [],
+        color: '#fcd654',
       },
       {
         name: '20日线',
         data: chartData.line_data_20 || [],
+        color: '#de60e2',
       },
       {
         name: '30日线',
         data: chartData.line_data_30 || [],
+        color: '#6ab01c',
       },
       {
         name: '60日线',
         data: chartData.line_data_60 || [],
+        color: '#65c2c4',
       },
-    ]).map(item => {
+    ].map((item) => {
       return {
         ...item,
         type: 'line',
@@ -304,7 +329,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="chartRef" class="stock_main_wrapper" style="width: 100%; height: 300px"></div>
+  <div
+    ref="chartRef"
+    class="stock_main_wrapper"
+    style="width: 100%; height: 300px"
+  ></div>
 </template>
 
 <style scoped lang="scss"></style>
