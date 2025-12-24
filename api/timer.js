@@ -16,43 +16,45 @@ scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
   const week = now.getDay();
   // console.log(`${hours}:${minutes}:${seconds}`);
 
-  const time_09_30_00 = new Date(`${year}-${month}-${day} 09:30:00`).getTime();
-  const time_11_30_00 = new Date(`${year}-${month}-${day} 11:30:00`).getTime();
-  const time_13_30_00 = new Date(`${year}-${month}-${day} 13:30:00`).getTime();
-  const time_15_00_00 = new Date(`${year}-${month}-${day} 15:00:00`).getTime();
-
-  const time_current = now.getTime();
-  const flag_1 = time_current >= time_09_30_00; // 大于9点半
-  const flag_2 = time_current <= time_11_30_00; // 小于11点半
-  const flag_3 = time_current >= time_13_30_00; // 大于9点半
-  const flag_4 = time_current <= time_15_00_00; // 小于11点半
-  const flag_5 = [1, 2, 3, 4, 5].includes(week); // 周一到周五
-  if (flag_5 && ((flag_1 && flag_2) || (flag_3 && flag_4)) && seconds === 0) {
-    let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
-
-    console.log('-------------------------------------');
-    get_zhang_by_tiantian('018561', time_stamp); // 中信保诚多策略C
-    get_zhang_by_tiantian('020726', time_stamp); // 建信灵活配置混合C
-    get_zhang_by_tiantian('016858', time_stamp); // 国金量化多因子股票C--
-    get_zhang_by_tiantian('018729', time_stamp); // 华夏智胜新锐股票C--
-    get_zhang_by_tiantian('023350', time_stamp); // 诺安多策略混合C
-
-    // setTimeout(() => {
-    //   console.log('第1段打印')
-    // }, 50 * 1);
-
-    // setTimeout(() => {
-    //   console.log('第2段打印')
-    // }, 50 * 2);
-
-    // setTimeout(() => {
-    //   console.log('第3段打印')
-    // }, 50 * 3);
-
-    // setTimeout(() => {
-    //   console.log('第4段打印')
-    // }, 50 * 4);
+  // 每天晚上12点更新交叉排行
+  {
+    if (hours === 0 && minutes === 0 && seconds === 0) {
+      console.log('-------------------------------------');
+      console.log('开始更新交叉排行');
+      // 更新交叉排行的代码
+      /*
+      fund_code
+      fund_name
+      update_time 更新时间
+      type: 1:日周交叉 2:月周交叉 3:日周月交叉
+      */
+    }
   }
+
+  // 读取量化基金每分钟涨幅
+  {
+    const time_09_30_00 = new Date(`${year}-${month}-${day} 09:30:00`).getTime();
+    const time_11_30_00 = new Date(`${year}-${month}-${day} 11:30:00`).getTime();
+    const time_13_30_00 = new Date(`${year}-${month}-${day} 13:30:00`).getTime();
+    const time_15_00_00 = new Date(`${year}-${month}-${day} 15:00:00`).getTime();
+    const time_current = now.getTime();
+    const flag_1 = time_current >= time_09_30_00; // 大于9点半
+    const flag_2 = time_current <= time_11_30_00; // 小于11点半
+    const flag_3 = time_current >= time_13_30_00; // 大于9点半
+    const flag_4 = time_current <= time_15_00_00; // 小于11点半
+    const flag_5 = [1, 2, 3, 4, 5].includes(week); // 周一到周五
+    if (flag_5 && ((flag_1 && flag_2) || (flag_3 && flag_4)) && seconds === 0) {
+      let time_stamp = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd hh:mm:ss');
+
+      console.log('-------------------------------------');
+      get_zhang_by_tiantian('018561', time_stamp); // 中信保诚多策略C
+      get_zhang_by_tiantian('020726', time_stamp); // 建信灵活配置混合C
+      get_zhang_by_tiantian('016858', time_stamp); // 国金量化多因子股票C--
+      get_zhang_by_tiantian('018729', time_stamp); // 华夏智胜新锐股票C--
+      get_zhang_by_tiantian('023350', time_stamp); // 诺安多策略混合C
+    }
+  }
+
 });
 
 async function getFund(code, index) {
