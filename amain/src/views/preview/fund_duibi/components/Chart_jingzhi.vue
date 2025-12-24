@@ -8,10 +8,22 @@ const props = defineProps({
   },
 });
 
+const info = reactive({
+  width: '100%',
+  height: '300px',
+});
+
 // 注入 echarts
 const echarts = inject('echarts');
 const chartRef = ref(null);
 let myChart = null;
+
+// 添加窗口大小变化处理函数
+const handleResize = () => {
+  if (myChart) {
+    myChart.resize();
+  }
+};
 
 const turnData = () => {
   let obj = props.data || {};
@@ -308,6 +320,9 @@ onMounted(() => {
   if (chartRef.value && echarts) {
     myChart = echarts.init(chartRef.value);
     RenderChart(); // 渲染图形
+    
+    // 添加窗口大小变化监听器
+    window.addEventListener('resize', handleResize);
   }
 });
 
@@ -319,12 +334,26 @@ watch(
   },
   { deep: true }
 );
+// 监听图表大小变化，重新调整图表大小
+watch(
+  () => [info.width, info.height],
+  () => {
+    if (myChart) {
+      // 容器大小改变后，调用 resize 让 echarts 自适应
+      setTimeout(() => {
+        myChart.resize();
+      }, 0);
+    }
+  }
+);
 
-// 在组件卸载时销毁图表
+// 在组件卸载时销毁图表和事件监听器
 onUnmounted(() => {
   if (myChart) {
     myChart.dispose();
   }
+  // 移除窗口大小变化监听器
+  window.removeEventListener('resize', handleResize);
 });
 </script>
 
@@ -332,7 +361,7 @@ onUnmounted(() => {
   <div
     ref="chartRef"
     class="stock_main_wrapper"
-    style="width: 100%; height: 300px"
+    :style="{ width: info.width, height: info.height }"
   ></div>
 </template>
 
