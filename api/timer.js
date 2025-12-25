@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const CustomFn = require('./CustomFn.js');
+const { jiaochapaihang } = require('./api/data/pai_hang_jiao_cha/paiHangJiaoCha.js'); // 交叉排行
 
 let scheduledTasks = null; // 定时任务
 scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
@@ -16,19 +17,8 @@ scheduledTasks = schedule.scheduleJob('* * * * * *', async () => {
   const week = now.getDay();
   // console.log(`${hours}:${minutes}:${seconds}`);
 
-  // 每天晚上12点更新交叉排行
-  {
-    if (hours === 0 && minutes === 0 && seconds === 0) {
-      console.log('-------------------------------------');
-      console.log('开始更新交叉排行');
-      // 更新交叉排行的代码
-      /*
-      fund_code
-      fund_name
-      update_time 更新时间
-      type: 1:日周交叉 2:月周交叉 3:日周月交叉
-      */
-    }
+  if (hours === 0 && minutes === 0 && seconds === 0) {
+    jiaochapaihang();// 每天晚上12点更新交叉排行
   }
 
   // 读取量化基金每分钟涨幅

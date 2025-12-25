@@ -93,6 +93,10 @@ export async function server_fund_jd_getFundDetailChartPageInfo(data) {
 export async function server_fund_jd_HistoryNetValuePageInfo(data) {
   return request.post('/fund_jd_HistoryNetValuePageInfo', data);
 }
+// fund_apifolder_jiaichapaihang 获取天天基金排行榜交叉数据
+export async function server_fund_apifolder_jiaichapaihang(data) {
+  return request.post('/fund_apifolder_jiaichapaihang', data);
+}
 
 // --------------------------------------------------------------  下面是数据库操作
 

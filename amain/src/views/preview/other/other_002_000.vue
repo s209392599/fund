@@ -43,20 +43,20 @@ const info = reactive({
         defineAsyncComponent(() => import('./other_002_005.vue'))
       ),
     },
-    {
-      id: '6',
-      name: 'QDII',
-      component: markRaw(
-        defineAsyncComponent(() => import('./other_002_006.vue'))
-      ),
-    },
-    {
-      id: '7',
-      name: 'FOF',
-      component: markRaw(
-        defineAsyncComponent(() => import('./other_002_007.vue'))
-      ),
-    },
+    // {
+    //   id: '6',
+    //   name: 'QDII',
+    //   component: markRaw(
+    //     defineAsyncComponent(() => import('./other_002_006.vue'))
+    //   ),
+    // },
+    // {
+    //   id: '7',
+    //   name: 'FOF',
+    //   component: markRaw(
+    //     defineAsyncComponent(() => import('./other_002_007.vue'))
+    //   ),
+    // },
   ]
 })
 const handleClick = (tab) => {
