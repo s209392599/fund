@@ -133,7 +133,7 @@ onMounted(() => {
   width: 100%;
   height: 30px;
   border-bottom: 1px solid #ccc;
-  padding: 0 8px;
+  padding: 0 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +141,8 @@ onMounted(() => {
 }
 
 .list_fundcode {
-  width: 40px;
+  width: 48px;
+  padding: 0 8px 0 0;
 }
 
 .list_fundname {
@@ -166,6 +167,10 @@ onMounted(() => {
   align-items: center;
   font-size: 14px;
   padding: 0 8px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
 }
 
 .list_dengjiri,
@@ -181,13 +186,13 @@ onMounted(() => {
 }
 
 .list_del {
-  width: 60px;
+  width: 48px;
   background-color: #f0f0f0;
   text-align: center;
   color: red;
   cursor: pointer;
   border-radius: 4px;
-  margin-left: 10px;
+  margin-left: 4px;
   height: 26px;
   line-height: 26px;
 }

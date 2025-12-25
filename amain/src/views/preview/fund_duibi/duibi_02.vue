@@ -121,7 +121,22 @@ const Turn_historyPerformanceList = (row, item, type) => {
       } else if (type === 'avg') {
         return item_1.avg;
       } else if (type === 'rank') {
-        return item_1.rank;
+        let rank = item_1.rank || '-';
+        if (rank.includes('/')) {
+          let num_1 = rank.split('/')[0];
+          let num_2 = rank.split('/')[1];
+          if (num_2 > 0) {
+            if (num_1 / num_2 > 0.5) {
+              return `<span style="color: red">${rank}</span>`
+            } else {
+              return rank;
+            }
+          } else {
+            return rank;
+          }
+        } else {
+          return rank;
+        }
       }
     })
     .join('；');
@@ -252,7 +267,7 @@ onMounted(() => {
           <template v-slot="{ row }">
             <div class="">{{
               row?.fundProfileOfItem?.fundScaleList?.join('；')
-              }}</div>
+            }}</div>
           </template>
         </el-table-column>
 

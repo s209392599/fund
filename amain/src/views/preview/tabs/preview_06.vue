@@ -30,20 +30,34 @@ const info = reactive({
       adress: 'https://www.funddb.cn/fund/fund_pk',
     },
     {
-      name: '新发基金',
+      name: '新发基金(天天基金)',
       adress: 'http://fund.eastmoney.com/data/xinfund.html',
     },
     {
-      name: '阿里云函数计算控制台',
-      adress: 'https://fc.console.aliyun.com/fc/service/cn-shanghai/fund/functions'
-    },
-    {
-      name: '腾讯云宝塔面板',
-      adress: 'https://150.158.175.108:60001/tencentcloud'
-    },
-    {
-      name: '基金主题',
+      name: '基金主题(天天基金)',
       adress: 'https://fund.eastmoney.com/ztjj/'
+    },
+    {
+      name: '理杏仁',
+      adress: 'https://www.lixinger.com/'
+    },
+    {
+      name: '集思录',
+      adress: "https://www.jisilu.cn/data/idx_performance/#idx"
+    },
+    {
+      name: "分红发放日(天天基金)",
+      adress: "https://fund.eastmoney.com/data/fundfenhong.html#FFR,desc,1,,,"
+    },
+    {
+      name: "热销基金(天天基金)",
+      adress: "https://fund.eastmoney.com/fundhot8.html"
+    }, {
+      name: "全球资讯(天天基金)",
+      adress: "https://kuaixun.eastmoney.com/7_24.html"
+    }, {
+      name: "财联社(行情面板)",
+      adress: "https://www.cls.cn/quotation"
     }
   ]
 });
@@ -55,14 +69,15 @@ if (localStorage.getItem('email') === '209392599@qq.com') {
 const addUser = () => {
   console.log('sdfsf');
 }
+/*
+<div class="flex pb-5" v-if="info.showBtn">
+      <el-button type="primary" size="small" @click="addUser()">新增地址</el-button>
+    </div>
+*/
 </script>
 
 <template>
-  <div class="page_wrapper">
-    <div class="flex pb-5" v-if="info.showBtn">
-      <el-button type="primary" size="small" @click="addUser()">新增地址</el-button>
-    </div>
-
+  <div class="page_wrapper flex flex-wrap gap-10">
     <div v-for="(item, index) in info.list" :key="index" class="nav_item">
       <a :href="item.adress" target="_blank">{{ item.name }}</a>
     </div>
@@ -78,11 +93,17 @@ const addUser = () => {
   font-size: 14px;
   height: 34px;
   line-height: 34px;
-  border-bottom: 1px dashed #ccc;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 10px;
+  // border-bottom: 1px dashed #ccc;
 
   a {
-    // color: #000;
     text-decoration: none;
+  }
+
+  &:hover {
+    background-color: #f5f5f5;
   }
 }
 </style>

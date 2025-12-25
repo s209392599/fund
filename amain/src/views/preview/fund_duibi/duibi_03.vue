@@ -76,25 +76,22 @@ onMounted(() => {
       <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
         <template v-slot="{ row }">
           <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
-            <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
-            <span v-else>{{ row.fund_code }}</span>
+            <span>{{ row.fund_code }}</span>
           </a>
         </template>
       </el-table-column>
 
-      <!-- <el-table-column prop="fund_name" label="基金名称" width="200" sortable show-overflow-tooltip>
+      <el-table-column prop="fund_name" label="基金名称" width="380" sortable show-overflow-tooltip>
         <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_name }}</span>
-          <span v-else>{{ row.fund_name }}</span>
+          <span>{{ row.fund_name }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column prop="fund_type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
+      <el-table-column prop="fund_type" label="类型" width="150" align="center" sortable show-overflow-tooltip>
         <template v-slot="{ row }">
-          <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_type }}</span>
-          <span v-else>{{ row.fund_type }}</span>
+          <span>{{ row.fund_type }}</span>
         </template>
-      </el-table-column> -->
+      </el-table-column>
 
       <el-table-column prop="" label="isNewFund" width="90">
         <template v-slot="{ row }">
