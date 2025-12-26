@@ -58,6 +58,12 @@ const info = reactive({
     }, {
       name: "财联社(行情面板)",
       adress: "https://www.cls.cn/quotation"
+    }, {
+      name: "同花顺(龙虎榜)",
+      adress: "https://data.10jqka.com.cn/market/longhu/"
+    }, {
+      name: "同花顺(行情中心)",
+      adress: "https://q.10jqka.com.cn/"
     }
   ]
 });

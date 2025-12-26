@@ -11,6 +11,7 @@ const info = reactive({
     {
       id: '1',
       name: '全部',
+      sign: 'all',
       component: markRaw(
         defineAsyncComponent(() => import('./other_002_001.vue'))
       ),
@@ -18,6 +19,7 @@ const info = reactive({
     {
       id: '2',
       name: '指数型',
+      sign: 'zhishu',
       component: markRaw(
         defineAsyncComponent(() => import('./other_002_002.vue'))
       ),
@@ -25,6 +27,7 @@ const info = reactive({
     {
       id: '3',
       name: '股票型',
+      sign: 'gupiao',
       component: markRaw(
         defineAsyncComponent(() => import('./other_002_003.vue'))
       ),
@@ -32,6 +35,7 @@ const info = reactive({
     {
       id: '4',
       name: '混合型',
+      sign: 'hunhe',
       component: markRaw(
         defineAsyncComponent(() => import('./other_002_004.vue'))
       ),
@@ -39,6 +43,7 @@ const info = reactive({
     {
       id: '5',
       name: '债券型',
+      sign: 'zhaiquan',
       component: markRaw(
         defineAsyncComponent(() => import('./other_002_005.vue'))
       ),
@@ -57,14 +62,28 @@ const info = reactive({
     //     defineAsyncComponent(() => import('./other_002_007.vue'))
     //   ),
     // },
-  ]
+  ],
+  data_jiaocha: {},// 交叉的数据
 })
+const getTableData = async () => {
+  try {
+    const res = await server_fund_apifolder_jiaichapaihang({})
+    console.log(res);
+    if (res.code === 200) {
+      info.data_jiaocha = res.data; // 将获取的数据存储到 info.data_jiaocha
+    }
+  } catch (error) {
+    console.error('获取交叉排行数据失败:', error);
+  }
+}
+
 const handleClick = (tab) => {
   const tabId = tab.props.name;
+  info.active_tab = tabId;
   info.currentTabComponent = info.list_tabs.find(
     (tab) => tab.id == tabId
   )?.component;
-  localStorage.setItem('preview_active_tab', tabId);
+  // localStorage.setItem('preview_active_tab', tabId);
 };
 onMounted(() => {
   const firstTab = info.list_tabs[0];
@@ -79,6 +98,7 @@ onMounted(() => {
     //   info.currentTabComponent = info.list_tabs.find(tab => tab.id === savedTab)?.component;
     // }
   }
+  getTableData();
 });
 </script>
 
@@ -90,7 +110,7 @@ onMounted(() => {
     </el-tabs>
 
     <div class="main">
-      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" />
+      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" :data="info.data_jiaocha" />
     </div>
   </div>
 </template>

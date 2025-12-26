@@ -1,89 +1,249 @@
 {
-  "2025-12-25": {
-    "jiaocha_ri_zhou": [
+  "2025-12-26": {
+    "all_jiaocha_ri_zhou": [
       {
         "fund_code": "015790",
         "fund_name": "永赢高端装备智选混合发起C"
       },
       {
-        "fund_code": "018816",
-        "fund_name": "方正富邦核心优势混合C"
+        "fund_code": "009854",
+        "fund_name": "中加优势企业混合C"
       },
       {
         "fund_code": "000690",
         "fund_name": "前海开源大海洋混合"
       },
       {
-        "fund_code": "010052",
-        "fund_name": "长城久嘉创新成长混合C"
+        "fund_code": "016273",
+        "fund_name": "华泰保兴吉年红混合发起C"
       },
       {
-        "fund_code": "025793",
-        "fund_name": "东方阿尔法科技甄选混合发起C"
-      },
-      {
-        "fund_code": "025647",
-        "fund_name": "平安高端装备混合发起式C"
-      },
-      {
-        "fund_code": "025209",
-        "fund_name": "永赢先锋半导体智选混合发起C"
-      },
-      {
-        "fund_code": "001732",
-        "fund_name": "广发百发大数据价值混合E"
-      },
-      {
-        "fund_code": "016924",
-        "fund_name": "广发百发大数据价值混合C"
-      },
-      {
-        "fund_code": "013618",
-        "fund_name": "华安大安全主题混合C"
+        "fund_code": "018376",
+        "fund_name": "金信景气优选混合C"
       },
       {
         "fund_code": "024195",
         "fund_name": "永赢国证商用卫星通信产业ETF发起联接C"
       },
       {
+        "fund_code": "021490",
+        "fund_name": "中航趋势领航混合发起C"
+      },
+      {
+        "fund_code": "001770",
+        "fund_name": "前海开源嘉鑫混合C"
+      },
+      {
+        "fund_code": "023567",
+        "fund_name": "德邦高端装备混合发起式C"
+      },
+      {
+        "fund_code": "010052",
+        "fund_name": "长城久嘉创新成长混合C"
+      },
+      {
+        "fund_code": "025949",
+        "fund_name": "诺安研究精选股票C"
+      },
+      {
+        "fund_code": "018140",
+        "fund_name": "中金先进制造混合C"
+      },
+      {
+        "fund_code": "002580",
+        "fund_name": "泰信鑫选灵活配置混合C"
+      },
+      {
+        "fund_code": "001864",
+        "fund_name": "中海魅力长三角混合"
+      },
+      {
+        "fund_code": "019412",
+        "fund_name": "长城新兴产业混合C"
+      },
+      {
+        "fund_code": "001271",
+        "fund_name": "英大灵活配置混合型发起式B"
+      },
+      {
+        "fund_code": "017968",
+        "fund_name": "华富科技动能混合C"
+      },
+      {
+        "fund_code": "290011",
+        "fund_name": "泰信中小盘精选混合"
+      },
+      {
+        "fund_code": "008998",
+        "fund_name": "同泰竞争优势混合C"
+      },
+      {
         "fund_code": "024749",
         "fund_name": "博时中证卫星产业指数C"
       },
       {
-        "fund_code": "016273",
-        "fund_name": "华泰保兴吉年红混合发起C"
+        "fund_code": "025647",
+        "fund_name": "平安高端装备混合发起式C"
       },
       {
-        "fund_code": "019114",
-        "fund_name": "东财慧心优选C"
+        "fund_code": "013044",
+        "fund_name": "富国国家安全主题混合C"
       },
       {
-        "fund_code": "005328",
-        "fund_name": "前海开源价值策略股票"
+        "fund_code": "026126",
+        "fund_name": "山证资管改革精选混合C"
       },
       {
-        "fund_code": "007690",
-        "fund_name": "国投瑞银新能源混合C"
+        "fund_code": "024648",
+        "fund_name": "中欧制造升级混合发起C"
+      },
+      {
+        "fund_code": "004233",
+        "fund_name": "中欧盛世成长混合(LOF)C"
+      },
+      {
+        "fund_code": "001888",
+        "fund_name": "中欧盛世成长混合(LOF)E"
+      },
+      {
+        "fund_code": "001732",
+        "fund_name": "广发百发大数据价值混合E"
+      },
+      {
+        "fund_code": "014700",
+        "fund_name": "东方高端制造混合C"
+      },
+      {
+        "fund_code": "016924",
+        "fund_name": "广发百发大数据价值混合C"
+      },
+      {
+        "fund_code": "002683",
+        "fund_name": "民生加银前沿科技灵活配置混合"
+      },
+      {
+        "fund_code": "169201",
+        "fund_name": "浙商鼎盈事件驱动混合"
+      },
+      {
+        "fund_code": "015401",
+        "fund_name": "弘毅远方甄选混合C"
+      },
+      {
+        "fund_code": "025942",
+        "fund_name": "广发新动力混合C"
+      },
+      {
+        "fund_code": "501080",
+        "fund_name": "中金科创主题灵活配置混合(LOF)"
+      },
+      {
+        "fund_code": "020420",
+        "fund_name": "鹏华科技驱动混合发起式C"
+      },
+      {
+        "fund_code": "020973",
+        "fund_name": "易方达机器人ETF联接C"
+      },
+      {
+        "fund_code": "025318",
+        "fund_name": "光大保德信国证机器人产业指数发起式C"
+      },
+      {
+        "fund_code": "017511",
+        "fund_name": "鹏华稳健回报混合C"
+      },
+      {
+        "fund_code": "019213",
+        "fund_name": "华富物联世界灵活配置混合C"
+      },
+      {
+        "fund_code": "021982",
+        "fund_name": "安联中国精选混合C"
+      },
+      {
+        "fund_code": "020107",
+        "fund_name": "兴业安保优选混合C"
+      },
+      {
+        "fund_code": "011148",
+        "fund_name": "南方军工改革灵活配置混合C"
+      },
+      {
+        "fund_code": "015101",
+        "fund_name": "华泰柏瑞低碳经济智选混合C"
+      },
+      {
+        "fund_code": "019205",
+        "fund_name": "鹏华优质企业混合C"
+      },
+      {
+        "fund_code": "018028",
+        "fund_name": "嘉实中证高端装备细分50ETF发起联接C"
+      },
+      {
+        "fund_code": "017941",
+        "fund_name": "国投瑞银国家安全混合C"
+      },
+      {
+        "fund_code": "010491",
+        "fund_name": "鹏华高质量增长混合C"
+      },
+      {
+        "fund_code": "011712",
+        "fund_name": "大摩万众创新混合C"
+      },
+      {
+        "fund_code": "014939",
+        "fund_name": "同泰产业升级混合C"
+      },
+      {
+        "fund_code": "010741",
+        "fund_name": "汇安核心价值混合C"
+      },
+      {
+        "fund_code": "015733",
+        "fund_name": "尚正新能源产业混合C"
       },
       {
         "fund_code": "020206",
         "fund_name": "民生加银双核动力混合C"
       },
       {
-        "fund_code": "002164",
-        "fund_name": "汇添富新睿精选混合C"
+        "fund_code": "017889",
+        "fund_name": "东方阿尔法招阳混合E"
       },
       {
-        "fund_code": "001704",
-        "fund_name": "国投瑞银进宝灵活配置混合"
+        "fund_code": "007041",
+        "fund_name": "前海联合泳涛混合C"
       },
       {
-        "fund_code": "012149",
-        "fund_name": "国投瑞银产业趋势混合C"
+        "fund_code": "014871",
+        "fund_name": "大摩科技领先混合C"
       },
       {
-        "fund_code": "006736",
-        "fund_name": "国投瑞银先进制造混合"
+        "fund_code": "009132",
+        "fund_name": "广发小盘成长混合(LOF)C"
+      },
+      {
+        "fund_code": "002067",
+        "fund_name": "诺安精选回报混合"
+      },
+      {
+        "fund_code": "013618",
+        "fund_name": "华安大安全主题混合C"
+      },
+      {
+        "fund_code": "017727",
+        "fund_name": "鑫元成长驱动股票发起式C"
+      },
+      {
+        "fund_code": "018075",
+        "fund_name": "长盛航天海工混合C"
+      },
+      {
+        "fund_code": "016256",
+        "fund_name": "中信保诚中小盘混合C"
       },
       {
         "fund_code": "017752",
@@ -94,402 +254,672 @@
         "fund_name": "金信转型创新成长混合发起式C"
       },
       {
-        "fund_code": "015772",
-        "fund_name": "银华互联网主题灵活配置混合C"
-      },
-      {
-        "fund_code": "018075",
-        "fund_name": "长盛航天海工混合C"
-      },
-      {
         "fund_code": "008960",
         "fund_name": "长信国防军工量化混合C"
-      },
-      {
-        "fund_code": "013613",
-        "fund_name": "宝盈国家安全沪港深股票C"
-      },
-      {
-        "fund_code": "020686",
-        "fund_name": "南方上证科创板新材料ETF发起联接C"
-      },
-      {
-        "fund_code": "002148",
-        "fund_name": "国寿安保稳惠混合"
-      },
-      {
-        "fund_code": "014601",
-        "fund_name": "博时回报严选混合C"
-      },
-      {
-        "fund_code": "017103",
-        "fund_name": "大摩数字经济混合C"
-      },
-      {
-        "fund_code": "004958",
-        "fund_name": "圆信永丰优享生活"
-      },
-      {
-        "fund_code": "008129",
-        "fund_name": "湘财长源股票型C"
-      },
-      {
-        "fund_code": "018028",
-        "fund_name": "嘉实中证高端装备细分50ETF发起联接C"
-      },
-      {
-        "fund_code": "010623",
-        "fund_name": "恒越成长精选混合C"
-      },
-      {
-        "fund_code": "010384",
-        "fund_name": "宝盈基础产业混合C"
-      },
-      {
-        "fund_code": "009883",
-        "fund_name": "华润元大核心动力混合C"
-      },
-      {
-        "fund_code": "005600",
-        "fund_name": "汇安量化优选灵活配置C"
-      },
-      {
-        "fund_code": "002112",
-        "fund_name": "德邦鑫星价值灵活配置混合C"
-      },
-      {
-        "fund_code": "015990",
-        "fund_name": "华安碳中和混合C"
-      },
-      {
-        "fund_code": "009056",
-        "fund_name": "圆信永丰大湾区C"
-      },
-      {
-        "fund_code": "024867",
-        "fund_name": "圆信永丰新材料混合发起C"
-      },
-      {
-        "fund_code": "011712",
-        "fund_name": "大摩万众创新混合C"
-      },
-      {
-        "fund_code": "014845",
-        "fund_name": "中银新趋势灵活配置混合C"
-      },
-      {
-        "fund_code": "016874",
-        "fund_name": "广发远见智选混合C"
-      },
-      {
-        "fund_code": "002145",
-        "fund_name": "诺安景鑫灵活配置混合"
-      },
-      {
-        "fund_code": "007046",
-        "fund_name": "方正富邦创新动力混合C"
-      },
-      {
-        "fund_code": "017889",
-        "fund_name": "东方阿尔法招阳混合E"
-      },
-      {
-        "fund_code": "017745",
-        "fund_name": "嘉实绿色主题股票发起式C"
-      },
-      {
-        "fund_code": "019089",
-        "fund_name": "华润元大信息传媒科技混合C"
-      },
-      {
-        "fund_code": "005963",
-        "fund_name": "宝盈人工智能股票C"
-      },
-      {
-        "fund_code": "023101",
-        "fund_name": "国寿安保智慧生活股票C"
-      },
-      {
-        "fund_code": "014497",
-        "fund_name": "诺安研究优选混合C"
-      },
-      {
-        "fund_code": "014550",
-        "fund_name": "诺安益鑫灵活配置混合C"
-      },
-      {
-        "fund_code": "004819",
-        "fund_name": "国寿安保目标策略混合发起C"
-      },
-      {
-        "fund_code": "015608",
-        "fund_name": "信澳转型创新股票C"
-      },
-      {
-        "fund_code": "018288",
-        "fund_name": "信澳优势产业混合C"
-      },
-      {
-        "fund_code": "013484",
-        "fund_name": "长城行业轮动混合C"
-      },
-      {
-        "fund_code": "011592",
-        "fund_name": "博时军工主题股票C"
       },
       {
         "fund_code": "019374",
         "fund_name": "广发睿杰精选混合发起式A1"
       },
       {
-        "fund_code": "501076",
-        "fund_name": "鹏华创新动力混合(LOF)"
+        "fund_code": "005978",
+        "fund_name": "中信保诚至兴混合C"
       },
       {
-        "fund_code": "011241",
-        "fund_name": "东吴双动力混合C"
+        "fund_code": "213008",
+        "fund_name": "宝盈资源优选混合"
       },
       {
-        "fund_code": "007632",
-        "fund_name": "华润元大安鑫灵活配置混合C"
+        "fund_code": "019220",
+        "fund_name": "中信保诚先进制造混合C"
       },
       {
-        "fund_code": "017698",
-        "fund_name": "华夏新材料龙头混合发起式C"
+        "fund_code": "013613",
+        "fund_name": "宝盈国家安全沪港深股票C"
       },
       {
-        "fund_code": "011949",
-        "fund_name": "东吴多策略混合C"
+        "fund_code": "016616",
+        "fund_name": "国泰估值优势混合(LOF)C"
       },
       {
-        "fund_code": "011143",
-        "fund_name": "创金合信新材料新能源股票C"
+        "fund_code": "008083",
+        "fund_name": "国寿安保研究精选混合C"
       },
       {
-        "fund_code": "019258",
-        "fund_name": "恒越智选科技混合C"
+        "fund_code": "021095",
+        "fund_name": "东方低碳经济混合C"
       },
       {
         "fund_code": "022328",
         "fund_name": "宏利高端装备股票C"
       },
       {
-        "fund_code": "016389",
-        "fund_name": "汇安均衡成长混合C"
+        "fund_code": "000969",
+        "fund_name": "前海开源大安全混合"
       },
       {
-        "fund_code": "024889",
-        "fund_name": "信澳优势行业混合C"
+        "fund_code": "004605",
+        "fund_name": "富国新活力灵活配置混合C"
       },
       {
-        "fund_code": "011939",
-        "fund_name": "博时新能源汽车主题混合C"
+        "fund_code": "023675",
+        "fund_name": "德邦新兴产业混合发起式C"
       },
       {
-        "fund_code": "016780",
-        "fund_name": "国投瑞银锐意改革混合C"
+        "fund_code": "018791",
+        "fund_name": "华泰柏瑞均衡成长混合C"
       },
       {
-        "fund_code": "021542",
-        "fund_name": "国投瑞银信息消费混合C"
+        "fund_code": "020592",
+        "fund_name": "金信多策略精选混合C"
       },
       {
-        "fund_code": "013507",
-        "fund_name": "华安制造先锋混合C"
+        "fund_code": "163818",
+        "fund_name": "中银中小盘成长混合"
       },
       {
-        "fund_code": "013722",
-        "fund_name": "信澳景气优选混合C"
+        "fund_code": "001744",
+        "fund_name": "诺安进取回报混合"
       },
       {
-        "fund_code": "017747",
-        "fund_name": "建信电子行业股票C"
+        "fund_code": "004375",
+        "fund_name": "华泰保兴吉年丰混合发起C"
       },
       {
-        "fund_code": "010023",
-        "fund_name": "广发制造业精选混合C"
+        "fund_code": "007632",
+        "fund_name": "华润元大安鑫灵活配置混合C"
       },
       {
-        "fund_code": "020018",
-        "fund_name": "国泰金鹿混合"
+        "fund_code": "025351",
+        "fund_name": "诺安优选回报混合C"
       },
       {
-        "fund_code": "009848",
-        "fund_name": "圆信永丰研究精选混合C"
+        "fund_code": "050012",
+        "fund_name": "博时策略混合"
       },
       {
-        "fund_code": "013142",
-        "fund_name": "华商乐享互联灵活配置混合C"
+        "fund_code": "019362",
+        "fund_name": "富国核心优势混合发起式C"
       },
       {
-        "fund_code": "004671",
-        "fund_name": "国联核心成长"
+        "fund_code": "011389",
+        "fund_name": "国都聚成混合"
       },
       {
-        "fund_code": "009048",
-        "fund_name": "浦银安盛科技创新优选混合"
+        "fund_code": "011020",
+        "fund_name": "财通资管消费精选混合C"
       },
       {
-        "fund_code": "011341",
-        "fund_name": "博时战略新材料主题混合C"
-      },
-      {
-        "fund_code": "007579",
-        "fund_name": "宝盈先进制造混合C"
-      },
-      {
-        "fund_code": "023286",
-        "fund_name": "前海开源人工智能主题混合C"
-      },
-      {
-        "fund_code": "022831",
-        "fund_name": "华商电子行业量化股票发起式C"
-      },
-      {
-        "fund_code": "011447",
-        "fund_name": "长江新能源产业混合发起C"
-      },
-      {
-        "fund_code": "021627",
-        "fund_name": "华富半导体产业混合发起式C"
-      },
-      {
-        "fund_code": "001396",
-        "fund_name": "建信互联网+产业升级股票"
-      },
-      {
-        "fund_code": "008641",
-        "fund_name": "方正富邦科技创新C"
-      },
-      {
-        "fund_code": "014967",
-        "fund_name": "建信潜力新蓝筹股票C"
-      },
-      {
-        "fund_code": "015005",
-        "fund_name": "中邮能源革新混合型发起C"
-      },
-      {
-        "fund_code": "018123",
-        "fund_name": "永赢数字经济智选混合发起C"
-      },
-      {
-        "fund_code": "002556",
-        "fund_name": "博时丝路主题股票C"
+        "fund_code": "011592",
+        "fund_name": "博时军工主题股票C"
       }
     ],
-    "jiaocha_zhou_yue": [
+    "all_jiaocha_zhou_yue": [
       {
         "fund_code": "000690",
         "fund_name": "前海开源大海洋混合"
-      },
-      {
-        "fund_code": "007690",
-        "fund_name": "国投瑞银新能源混合C"
-      },
-      {
-        "fund_code": "012149",
-        "fund_name": "国投瑞银产业趋势混合C"
-      },
-      {
-        "fund_code": "001704",
-        "fund_name": "国投瑞银进宝灵活配置混合"
       },
       {
         "fund_code": "006736",
         "fund_name": "国投瑞银先进制造混合"
       },
       {
-        "fund_code": "017747",
-        "fund_name": "建信电子行业股票C"
-      },
-      {
-        "fund_code": "019374",
-        "fund_name": "广发睿杰精选混合发起式A1"
-      },
-      {
-        "fund_code": "016874",
-        "fund_name": "广发远见智选混合C"
-      },
-      {
-        "fund_code": "001742",
-        "fund_name": "广发百发大数据精选混合E"
+        "fund_code": "015790",
+        "fund_name": "永赢高端装备智选混合发起C"
       },
       {
         "fund_code": "013613",
         "fund_name": "宝盈国家安全沪港深股票C"
       },
       {
-        "fund_code": "005328",
-        "fund_name": "前海开源价值策略股票"
+        "fund_code": "018376",
+        "fund_name": "金信景气优选混合C"
       },
       {
-        "fund_code": "008641",
-        "fund_name": "方正富邦科技创新C"
+        "fund_code": "004605",
+        "fund_name": "富国新活力灵活配置混合C"
       },
       {
-        "fund_code": "015608",
-        "fund_name": "信澳转型创新股票C"
-      },
-      {
-        "fund_code": "007639",
-        "fund_name": "汇添富竞争优势灵活配置混合"
-      },
-      {
-        "fund_code": "015790",
-        "fund_name": "永赢高端装备智选混合发起C"
-      },
-      {
-        "fund_code": "014863",
-        "fund_name": "建信信息产业股票C"
-      },
-      {
-        "fund_code": "018288",
-        "fund_name": "信澳优势产业混合C"
+        "fund_code": "014845",
+        "fund_name": "中银新趋势灵活配置混合C"
       },
       {
         "fund_code": "024889",
         "fund_name": "信澳优势行业混合C"
       },
       {
-        "fund_code": "001396",
-        "fund_name": "建信互联网+产业升级股票"
+        "fund_code": "017511",
+        "fund_name": "鹏华稳健回报混合C"
+      },
+      {
+        "fund_code": "018288",
+        "fund_name": "信澳优势产业混合C"
       },
       {
         "fund_code": "013722",
         "fund_name": "信澳景气优选混合C"
       },
       {
-        "fund_code": "016780",
-        "fund_name": "国投瑞银锐意改革混合C"
+        "fund_code": "005328",
+        "fund_name": "前海开源价值策略股票"
       },
       {
-        "fund_code": "021542",
-        "fund_name": "国投瑞银信息消费混合C"
-      },
-      {
-        "fund_code": "010623",
-        "fund_name": "恒越成长精选混合C"
-      },
-      {
-        "fund_code": "010052",
-        "fund_name": "长城久嘉创新成长混合C"
-      },
-      {
-        "fund_code": "017698",
-        "fund_name": "华夏新材料龙头混合发起式C"
+        "fund_code": "019362",
+        "fund_name": "富国核心优势混合发起式C"
       },
       {
         "fund_code": "016273",
         "fund_name": "华泰保兴吉年红混合发起C"
       },
       {
+        "fund_code": "018140",
+        "fund_name": "中金先进制造混合C"
+      },
+      {
+        "fund_code": "008960",
+        "fund_name": "长信国防军工量化混合C"
+      },
+      {
+        "fund_code": "011712",
+        "fund_name": "大摩万众创新混合C"
+      },
+      {
+        "fund_code": "017698",
+        "fund_name": "华夏新材料龙头混合发起式C"
+      },
+      {
+        "fund_code": "001732",
+        "fund_name": "广发百发大数据价值混合E"
+      },
+      {
+        "fund_code": "013044",
+        "fund_name": "富国国家安全主题混合C"
+      },
+      {
+        "fund_code": "016924",
+        "fund_name": "广发百发大数据价值混合C"
+      },
+      {
+        "fund_code": "017752",
+        "fund_name": "长城创新成长混合C"
+      },
+      {
+        "fund_code": "009132",
+        "fund_name": "广发小盘成长混合(LOF)C"
+      },
+      {
+        "fund_code": "501080",
+        "fund_name": "中金科创主题灵活配置混合(LOF)"
+      },
+      {
         "fund_code": "015772",
         "fund_name": "银华互联网主题灵活配置混合C"
       },
       {
-        "fund_code": "004671",
-        "fund_name": "国联核心成长"
+        "fund_code": "002281",
+        "fund_name": "建信裕利灵活配置混合"
+      },
+      {
+        "fund_code": "019374",
+        "fund_name": "广发睿杰精选混合发起式A1"
+      },
+      {
+        "fund_code": "024195",
+        "fund_name": "永赢国证商用卫星通信产业ETF发起联接C"
+      },
+      {
+        "fund_code": "009854",
+        "fund_name": "中加优势企业混合C"
+      },
+      {
+        "fund_code": "024424",
+        "fund_name": "东方阿尔法科技优选混合发起C"
+      },
+      {
+        "fund_code": "007639",
+        "fund_name": "汇添富竞争优势灵活配置混合"
+      },
+      {
+        "fund_code": "020018",
+        "fund_name": "国泰金鹿混合"
+      },
+      {
+        "fund_code": "169201",
+        "fund_name": "浙商鼎盈事件驱动混合"
+      },
+      {
+        "fund_code": "050012",
+        "fund_name": "博时策略混合"
+      },
+      {
+        "fund_code": "112002",
+        "fund_name": "易方达策略成长二号混合"
+      },
+      {
+        "fund_code": "025647",
+        "fund_name": "平安高端装备混合发起式C"
+      },
+      {
+        "fund_code": "019258",
+        "fund_name": "恒越智选科技混合C"
+      },
+      {
+        "fund_code": "110002",
+        "fund_name": "易方达策略成长混合"
+      },
+      {
+        "fund_code": "213008",
+        "fund_name": "宝盈资源优选混合"
+      },
+      {
+        "fund_code": "008382",
+        "fund_name": "融通产业趋势股票"
+      },
+      {
+        "fund_code": "001742",
+        "fund_name": "广发百发大数据精选混合E"
+      },
+      {
+        "fund_code": "014737",
+        "fund_name": "创金合信专精特新股票发起C"
+      },
+      {
+        "fund_code": "016780",
+        "fund_name": "国投瑞银锐意改革混合C"
+      },
+      {
+        "fund_code": "016874",
+        "fund_name": "广发远见智选混合C"
+      },
+      {
+        "fund_code": "004677",
+        "fund_name": "博时战略新兴产业混合"
+      },
+      {
+        "fund_code": "021542",
+        "fund_name": "国投瑞银信息消费混合C"
+      },
+      {
+        "fund_code": "014601",
+        "fund_name": "博时回报严选混合C"
+      },
+      {
+        "fund_code": "020592",
+        "fund_name": "金信多策略精选混合C"
+      },
+      {
+        "fund_code": "015576",
+        "fund_name": "宏利绩优混合C"
+      },
+      {
+        "fund_code": "009048",
+        "fund_name": "浦银安盛科技创新优选混合"
+      },
+      {
+        "fund_code": "010023",
+        "fund_name": "广发制造业精选混合C"
+      },
+      {
+        "fund_code": "017103",
+        "fund_name": "大摩数字经济混合C"
+      },
+      {
+        "fund_code": "024434",
+        "fund_name": "嘉实成长共赢混合C"
+      },
+      {
+        "fund_code": "021528",
+        "fund_name": "财通成长优选混合C"
+      },
+      {
+        "fund_code": "021095",
+        "fund_name": "东方低碳经济混合C"
+      },
+      {
+        "fund_code": "000969",
+        "fund_name": "前海开源大安全混合"
+      },
+      {
+        "fund_code": "005483",
+        "fund_name": "博时创新驱动混合C"
+      },
+      {
+        "fund_code": "017612",
+        "fund_name": "宏利复兴混合C"
+      },
+      {
+        "fund_code": "019514",
+        "fund_name": "交银荣鑫灵活配置混合C"
+      },
+      {
+        "fund_code": "024749",
+        "fund_name": "博时中证卫星产业指数C"
+      },
+      {
+        "fund_code": "008641",
+        "fund_name": "方正富邦科技创新C"
+      },
+      {
+        "fund_code": "014192",
+        "fund_name": "广发先进制造股票发起式C"
+      },
+      {
+        "fund_code": "019205",
+        "fund_name": "鹏华优质企业混合C"
+      },
+      {
+        "fund_code": "217020",
+        "fund_name": "招商安达灵活配置混合"
+      },
+      {
+        "fund_code": "016269",
+        "fund_name": "建信改革红利股票C"
+      },
+      {
+        "fund_code": "015389",
+        "fund_name": "宝盈转型动力混合C"
+      },
+      {
+        "fund_code": "002112",
+        "fund_name": "德邦鑫星价值灵活配置混合C"
+      },
+      {
+        "fund_code": "024481",
+        "fund_name": "财通品质甄选混合C"
+      },
+      {
+        "fund_code": "000698",
+        "fund_name": "宝盈科技30混合"
+      },
+      {
+        "fund_code": "014871",
+        "fund_name": "大摩科技领先混合C"
+      },
+      {
+        "fund_code": "006080",
+        "fund_name": "海富通电子传媒股票C"
+      },
+      {
+        "fund_code": "010236",
+        "fund_name": "广发电子信息传媒股票C"
+      },
+      {
+        "fund_code": "023452",
+        "fund_name": "中欧信息科技混合发起C"
+      },
+      {
+        "fund_code": "001407",
+        "fund_name": "景顺长城稳健回报混合C"
+      },
+      {
+        "fund_code": "003858",
+        "fund_name": "前海开源周期优选混合C"
+      },
+      {
+        "fund_code": "019120",
+        "fund_name": "财通资管产业优选混合发起式C"
+      },
+      {
+        "fund_code": "018998",
+        "fund_name": "景顺长城研究精选股票C"
+      },
+      {
+        "fund_code": "213003",
+        "fund_name": "宝盈策略增长混合"
+      },
+      {
+        "fund_code": "162201",
+        "fund_name": "宏利成长混合"
+      },
+      {
+        "fund_code": "002418",
+        "fund_name": "汇添富优选回报混合C"
+      },
+      {
+        "fund_code": "013108",
+        "fund_name": "华夏先进制造龙头混合C"
+      },
+      {
+        "fund_code": "020692",
+        "fund_name": "博时中证全指通信设备指数发起式C"
+      },
+      {
+        "fund_code": "000308",
+        "fund_name": "建信创新中国混合"
+      },
+      {
+        "fund_code": "020900",
+        "fund_name": "天弘中证全指通信设备指数发起C"
+      },
+      {
+        "fund_code": "009645",
+        "fund_name": "东方阿尔法优势产业混合C"
+      },
+      {
+        "fund_code": "016579",
+        "fund_name": "长安宏观策略混合C"
+      },
+      {
+        "fund_code": "021533",
+        "fund_name": "天弘半导体材料设备指数C"
+      },
+      {
+        "fund_code": "020640",
+        "fund_name": "广发中证半导体材料设备ETF发起式联接C"
+      },
+      {
+        "fund_code": "016238",
+        "fund_name": "华夏数字经济龙头混合发起式C"
+      },
+      {
+        "fund_code": "010238",
+        "fund_name": "安信创新先锋混合发起C"
+      },
+      {
+        "fund_code": "010052",
+        "fund_name": "长城久嘉创新成长混合C"
+      },
+      {
+        "fund_code": "020441",
+        "fund_name": "东兴数字经济混合发起C"
+      },
+      {
+        "fund_code": "002580",
+        "fund_name": "泰信鑫选灵活配置混合C"
+      },
+      {
+        "fund_code": "007818",
+        "fund_name": "国泰中证全指通信设备ETF联接C"
+      },
+      {
+        "fund_code": "010623",
+        "fund_name": "恒越成长精选混合C"
+      },
+      {
+        "fund_code": "014648",
+        "fund_name": "融通先进制造混合C"
+      },
+      {
+        "fund_code": "022500",
+        "fund_name": "国泰中证全指通信设备ETF联接E"
+      },
+      {
+        "fund_code": "025949",
+        "fund_name": "诺安研究精选股票C"
+      },
+      {
+        "fund_code": "015159",
+        "fund_name": "申万菱信智能驱动股票C"
+      },
+      {
+        "fund_code": "290011",
+        "fund_name": "泰信中小盘精选混合"
+      },
+      {
+        "fund_code": "021541",
+        "fund_name": "建信社会责任混合C"
+      },
+      {
+        "fund_code": "016263",
+        "fund_name": "银华高端制造业混合C"
+      },
+      {
+        "fund_code": "019863",
+        "fund_name": "招商稳健优选股票C"
+      },
+      {
+        "fund_code": "021894",
+        "fund_name": "易方达半导体设备ETF联接C"
+      },
+      {
+        "fund_code": "005551",
+        "fund_name": "汇安成长优选混合C"
+      },
+      {
+        "fund_code": "009063",
+        "fund_name": "财通智慧成长混合C"
+      },
+      {
+        "fund_code": "020357",
+        "fund_name": "华夏半导体材料设备ETF联接C"
+      },
+      {
+        "fund_code": "021523",
+        "fund_name": "财通价值动量混合C"
+      },
+      {
+        "fund_code": "570008",
+        "fund_name": "诺德周期策略混合"
+      },
+      {
+        "fund_code": "024207",
+        "fund_name": "信澳产业升级混合C"
+      },
+      {
+        "fund_code": "008989",
+        "fund_name": "大成科技创新混合C"
+      }
+    ],
+    "all_jiaocha_ri_zhou_yue": [
+      {
+        "fund_code": "015790",
+        "fund_name": "永赢高端装备智选混合发起C"
+      },
+      {
+        "fund_code": "009854",
+        "fund_name": "中加优势企业混合C"
+      },
+      {
+        "fund_code": "000690",
+        "fund_name": "前海开源大海洋混合"
+      },
+      {
+        "fund_code": "016273",
+        "fund_name": "华泰保兴吉年红混合发起C"
+      },
+      {
+        "fund_code": "018376",
+        "fund_name": "金信景气优选混合C"
+      },
+      {
+        "fund_code": "024195",
+        "fund_name": "永赢国证商用卫星通信产业ETF发起联接C"
+      },
+      {
+        "fund_code": "010052",
+        "fund_name": "长城久嘉创新成长混合C"
+      },
+      {
+        "fund_code": "025949",
+        "fund_name": "诺安研究精选股票C"
+      },
+      {
+        "fund_code": "018140",
+        "fund_name": "中金先进制造混合C"
+      },
+      {
+        "fund_code": "002580",
+        "fund_name": "泰信鑫选灵活配置混合C"
+      },
+      {
+        "fund_code": "290011",
+        "fund_name": "泰信中小盘精选混合"
+      },
+      {
+        "fund_code": "024749",
+        "fund_name": "博时中证卫星产业指数C"
+      },
+      {
+        "fund_code": "025647",
+        "fund_name": "平安高端装备混合发起式C"
+      },
+      {
+        "fund_code": "013044",
+        "fund_name": "富国国家安全主题混合C"
+      },
+      {
+        "fund_code": "001732",
+        "fund_name": "广发百发大数据价值混合E"
+      },
+      {
+        "fund_code": "016924",
+        "fund_name": "广发百发大数据价值混合C"
+      },
+      {
+        "fund_code": "169201",
+        "fund_name": "浙商鼎盈事件驱动混合"
+      },
+      {
+        "fund_code": "501080",
+        "fund_name": "中金科创主题灵活配置混合(LOF)"
+      },
+      {
+        "fund_code": "017511",
+        "fund_name": "鹏华稳健回报混合C"
+      },
+      {
+        "fund_code": "019205",
+        "fund_name": "鹏华优质企业混合C"
+      },
+      {
+        "fund_code": "011712",
+        "fund_name": "大摩万众创新混合C"
+      },
+      {
+        "fund_code": "014871",
+        "fund_name": "大摩科技领先混合C"
+      },
+      {
+        "fund_code": "009132",
+        "fund_name": "广发小盘成长混合(LOF)C"
+      },
+      {
+        "fund_code": "017752",
+        "fund_name": "长城创新成长混合C"
+      },
+      {
+        "fund_code": "008960",
+        "fund_name": "长信国防军工量化混合C"
+      },
+      {
+        "fund_code": "019374",
+        "fund_name": "广发睿杰精选混合发起式A1"
+      },
+      {
+        "fund_code": "213008",
+        "fund_name": "宝盈资源优选混合"
+      },
+      {
+        "fund_code": "013613",
+        "fund_name": "宝盈国家安全沪港深股票C"
+      },
+      {
+        "fund_code": "021095",
+        "fund_name": "东方低碳经济混合C"
+      },
+      {
+        "fund_code": "000969",
+        "fund_name": "前海开源大安全混合"
       },
       {
         "fund_code": "004605",
@@ -500,52 +930,460 @@
         "fund_name": "金信多策略精选混合C"
       },
       {
-        "fund_code": "024749",
-        "fund_name": "博时中证卫星产业指数C"
-      },
-      {
-        "fund_code": "024424",
-        "fund_name": "东方阿尔法科技优选混合发起C"
-      },
-      {
-        "fund_code": "025793",
-        "fund_name": "东方阿尔法科技甄选混合发起C"
-      },
-      {
-        "fund_code": "024434",
-        "fund_name": "嘉实成长共赢混合C"
-      },
-      {
-        "fund_code": "014845",
-        "fund_name": "中银新趋势灵活配置混合C"
+        "fund_code": "050012",
+        "fund_name": "博时策略混合"
       },
       {
         "fund_code": "019362",
         "fund_name": "富国核心优势混合发起式C"
-      },
-      {
-        "fund_code": "009883",
-        "fund_name": "华润元大核心动力混合C"
-      },
-      {
-        "fund_code": "009132",
-        "fund_name": "广发小盘成长混合(LOF)C"
-      },
-      {
-        "fund_code": "020470",
-        "fund_name": "长城半导体混合发起式C"
-      },
+      }
+    ],
+    "zhishu_jiaocha_ri_zhou": [
       {
         "fund_code": "024195",
         "fund_name": "永赢国证商用卫星通信产业ETF发起联接C"
       },
       {
-        "fund_code": "018836",
-        "fund_name": "广发成长启航混合C"
+        "fund_code": "024749",
+        "fund_name": "博时中证卫星产业指数C"
       },
       {
-        "fund_code": "010236",
-        "fund_name": "广发电子信息传媒股票C"
+        "fund_code": "015046",
+        "fund_name": "前海开源中航军工指数C"
+      },
+      {
+        "fund_code": "020973",
+        "fund_name": "易方达机器人ETF联接C"
+      },
+      {
+        "fund_code": "025318",
+        "fund_name": "光大保德信国证机器人产业指数发起式C"
+      },
+      {
+        "fund_code": "020894",
+        "fund_name": "景顺长城国证机器人ETF联接C"
+      },
+      {
+        "fund_code": "020982",
+        "fund_name": "华安国证机器人产业指数发起式C"
+      },
+      {
+        "fund_code": "025699",
+        "fund_name": "鹏华国证机器人产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "025693",
+        "fund_name": "南方中证通用航空主题ETF发起联接C"
+      },
+      {
+        "fund_code": "025733",
+        "fund_name": "华安国证航天航空行业ETF发起式联接C"
+      },
+      {
+        "fund_code": "018028",
+        "fund_name": "嘉实中证高端装备细分50ETF发起联接C"
+      },
+      {
+        "fund_code": "012041",
+        "fund_name": "鹏华中证国防指数(LOF)C"
+      },
+      {
+        "fund_code": "010364",
+        "fund_name": "鹏华空天军工指数(LOF)C"
+      },
+      {
+        "fund_code": "024349",
+        "fund_name": "中欧国证通用航空产业指数发起C"
+      },
+      {
+        "fund_code": "024689",
+        "fund_name": "富国国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "024767",
+        "fund_name": "华宝国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "023531",
+        "fund_name": "永赢国证通用航空产业ETF发起联接C"
+      },
+      {
+        "fund_code": "024913",
+        "fund_name": "华夏国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "025381",
+        "fund_name": "汇添富国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "025491",
+        "fund_name": "平安中证卫星产业指数C"
+      },
+      {
+        "fund_code": "013035",
+        "fund_name": "富国中证军工指数(LOF)C"
+      },
+      {
+        "fund_code": "005693",
+        "fund_name": "广发中证军工ETF联接C"
+      },
+      {
+        "fund_code": "012842",
+        "fund_name": "易方达中证军工(LOF)C"
+      },
+      {
+        "fund_code": "016209",
+        "fund_name": "申万菱信中证军工指数(LOF)C"
+      },
+      {
+        "fund_code": "017652",
+        "fund_name": "中航华证商飞高端制造产业指数发起C"
+      },
+      {
+        "fund_code": "002199",
+        "fund_name": "前海开源中证军工指数C"
+      },
+      {
+        "fund_code": "020608",
+        "fund_name": "南方中证机器人ETF发起联接C"
+      },
+      {
+        "fund_code": "014881",
+        "fund_name": "天弘中证机器人ETF发起联接C"
+      },
+      {
+        "fund_code": "020482",
+        "fund_name": "招商中证机器人ETF发起联接C"
+      },
+      {
+        "fund_code": "020256",
+        "fund_name": "中欧中证机器人指数发起C"
+      },
+      {
+        "fund_code": "018345",
+        "fund_name": "华夏中证机器人ETF发起式联接C"
+      },
+      {
+        "fund_code": "021896",
+        "fund_name": "国投瑞银中证机器人指数发起式C"
+      },
+      {
+        "fund_code": "024620",
+        "fund_name": "嘉实中证机器人ETF发起联接C"
+      },
+      {
+        "fund_code": "018095",
+        "fund_name": "博时中证机器人指数发起式C"
+      },
+      {
+        "fund_code": "020290",
+        "fund_name": "国泰中证机器人ETF发起联接C"
+      },
+      {
+        "fund_code": "021302",
+        "fund_name": "银河中证机器人指数发起式C"
+      },
+      {
+        "fund_code": "024769",
+        "fund_name": "汇添富中证机器人ETF发起式联接C"
+      },
+      {
+        "fund_code": "025552",
+        "fund_name": "中银中证机器人指数C"
+      },
+      {
+        "fund_code": "021036",
+        "fund_name": "博时中证汽车零部件主题指数发起式C"
+      },
+      {
+        "fund_code": "021622",
+        "fund_name": "天弘汽车零部件指数C"
+      },
+      {
+        "fund_code": "022387",
+        "fund_name": "华夏中证汽车零部件主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "021141",
+        "fund_name": "易方达汽车零部件ETF联接C"
+      },
+      {
+        "fund_code": "022732",
+        "fund_name": "平安中证汽车零部件主题ETF联接C"
+      },
+      {
+        "fund_code": "024542",
+        "fund_name": "平安中证汽车零部件主题ETF联接E"
+      },
+      {
+        "fund_code": "015599",
+        "fund_name": "国泰国证航天军工指数(LOF)C"
+      },
+      {
+        "fund_code": "021279",
+        "fund_name": "永赢上证科创板100指数增强发起C"
+      },
+      {
+        "fund_code": "023112",
+        "fund_name": "景顺长城上证科创板200指数C"
+      },
+      {
+        "fund_code": "024979",
+        "fund_name": "易方达上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023687",
+        "fund_name": "建信上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023749",
+        "fund_name": "广发上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023388",
+        "fund_name": "华泰柏瑞上证科创板200ETF发起式联接I"
+      },
+      {
+        "fund_code": "023622",
+        "fund_name": "华夏上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "021386",
+        "fund_name": "天弘上证科创板100指数增强发起C"
+      },
+      {
+        "fund_code": "023383",
+        "fund_name": "华泰柏瑞上证科创板200ETF发起式联接C"
+      },
+      {
+        "fund_code": "023927",
+        "fund_name": "鹏华上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023519",
+        "fund_name": "国投瑞银上证科创板200指数发起式C"
+      },
+      {
+        "fund_code": "014172",
+        "fund_name": "富国中证工业4.0指数(LOF)C"
+      },
+      {
+        "fund_code": "020684",
+        "fund_name": "南方上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "021330",
+        "fund_name": "富国上证科创板100ETF发起式联接C"
+      },
+      {
+        "fund_code": "017574",
+        "fund_name": "华夏中证机床ETF发起式联接C"
+      },
+      {
+        "fund_code": "020292",
+        "fund_name": "华夏科创100ETF联接C"
+      },
+      {
+        "fund_code": "021661",
+        "fund_name": "中欧上证科创板100指数发起C"
+      },
+      {
+        "fund_code": "017472",
+        "fund_name": "国泰中证机床ETF发起联接C"
+      },
+      {
+        "fund_code": "019867",
+        "fund_name": "国泰上证科创板100ETF发起联接C"
+      },
+      {
+        "fund_code": "020294",
+        "fund_name": "易方达上证科创板100ETF联接发起式C"
+      },
+      {
+        "fund_code": "023051",
+        "fund_name": "交银上证科创板100指数C"
+      },
+      {
+        "fund_code": "023002",
+        "fund_name": "汇添富上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "019858",
+        "fund_name": "博时上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "020321",
+        "fund_name": "华泰柏瑞上证科创板100ETF发起式联接C"
+      },
+      {
+        "fund_code": "019860",
+        "fund_name": "银华上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "019862",
+        "fund_name": "鹏华上证科创100ETF联接C"
+      },
+      {
+        "fund_code": "021276",
+        "fund_name": "万家上证科创板100指数增强发起式C"
+      },
+      {
+        "fund_code": "015467",
+        "fund_name": "太平中证1000指数增强C"
+      },
+      {
+        "fund_code": "023447",
+        "fund_name": "长城上证科创板100指数增强C"
+      },
+      {
+        "fund_code": "024351",
+        "fund_name": "建信上证智选科创板创新价值ETF联接C"
+      },
+      {
+        "fund_code": "017893",
+        "fund_name": "鹏华国证2000指数增强C"
+      },
+      {
+        "fund_code": "019786",
+        "fund_name": "广发上证科创板成长ETF发起式联接C"
+      },
+      {
+        "fund_code": "019703",
+        "fund_name": "易方达上证科创板成长ETF联接发起式C"
+      },
+      {
+        "fund_code": "004347",
+        "fund_name": "南方中证500信息技术联接C"
+      },
+      {
+        "fund_code": "018335",
+        "fund_name": "华夏中证智选1000成长创新策略ETF发起式联接C"
+      },
+      {
+        "fund_code": "025679",
+        "fund_name": "广发上证科创板100增强策略ETF发起式联接C"
+      },
+      {
+        "fund_code": "018775",
+        "fund_name": "汇添富华证专精特新100指数发起式C"
+      },
+      {
+        "fund_code": "019924",
+        "fund_name": "华泰柏瑞中证2000指数增强C"
+      },
+      {
+        "fund_code": "019815",
+        "fund_name": "民生加银国证2000指数增强C"
+      },
+      {
+        "fund_code": "025324",
+        "fund_name": "鑫元上证科创板综合价格指数增强C"
+      },
+      {
+        "fund_code": "019319",
+        "fund_name": "汇添富国证2000指数增强C"
+      },
+      {
+        "fund_code": "016916",
+        "fund_name": "中金华证清洁能源指数发起C"
+      },
+      {
+        "fund_code": "014202",
+        "fund_name": "天弘中证1000指数增强C"
+      },
+      {
+        "fund_code": "024360",
+        "fund_name": "中欧上证科创板综合指数增强C"
+      },
+      {
+        "fund_code": "024753",
+        "fund_name": "华宝上证科创板综合指数增强C"
+      },
+      {
+        "fund_code": "024892",
+        "fund_name": "中欧上证科创板综合指数量化增强C"
+      },
+      {
+        "fund_code": "023902",
+        "fund_name": "博道上证科创板综合指数增强C"
+      },
+      {
+        "fund_code": "024250",
+        "fund_name": "景顺长城上证科创板综合指数增强C"
+      },
+      {
+        "fund_code": "019921",
+        "fund_name": "万家中证2000指数增强C"
+      },
+      {
+        "fund_code": "019919",
+        "fund_name": "招商中证2000指数增强C"
+      },
+      {
+        "fund_code": "019871",
+        "fund_name": "华泰柏瑞中证2000ETF发起式联接C"
+      },
+      {
+        "fund_code": "011036",
+        "fund_name": "嘉实中证稀土产业ETF联接C"
+      },
+      {
+        "fund_code": "014332",
+        "fund_name": "华泰柏瑞中证稀土产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "017548",
+        "fund_name": "天弘国证2000指数增强C"
+      },
+      {
+        "fund_code": "018654",
+        "fund_name": "万家国证2000指数增强C"
+      },
+      {
+        "fund_code": "005314",
+        "fund_name": "万家中证1000指数增强C"
+      },
+      {
+        "fund_code": "021285",
+        "fund_name": "浦银安盛科创板100指数增强C"
+      },
+      {
+        "fund_code": "023890",
+        "fund_name": "国泰海通上证科创板综合价格指数增强C"
+      },
+      {
+        "fund_code": "017847",
+        "fund_name": "国金中证1000指数增强C"
+      },
+      {
+        "fund_code": "023852",
+        "fund_name": "富国上证科创板新能源ETF发起式联接C"
+      },
+      {
+        "fund_code": "023076",
+        "fund_name": "鹏华上证科创板新能源ETF发起式联接C"
+      },
+      {
+        "fund_code": "004195",
+        "fund_name": "招商中证1000指数增强C"
+      },
+      {
+        "fund_code": "005727",
+        "fund_name": "嘉实中创400ETF联接C"
+      },
+      {
+        "fund_code": "023894",
+        "fund_name": "大成上证科创板综合指数增强C"
+      }
+    ],
+    "zhishu_jiaocha_zhou_yue": [
+      {
+        "fund_code": "024195",
+        "fund_name": "永赢国证商用卫星通信产业ETF发起联接C"
+      },
+      {
+        "fund_code": "024749",
+        "fund_name": "博时中证卫星产业指数C"
       },
       {
         "fund_code": "020692",
@@ -556,24 +1394,16 @@
         "fund_name": "天弘中证全指通信设备指数发起C"
       },
       {
-        "fund_code": "016269",
-        "fund_name": "建信改革红利股票C"
+        "fund_code": "021533",
+        "fund_name": "天弘半导体材料设备指数C"
       },
       {
-        "fund_code": "009048",
-        "fund_name": "浦银安盛科技创新优选混合"
+        "fund_code": "020640",
+        "fund_name": "广发中证半导体材料设备ETF发起式联接C"
       },
       {
-        "fund_code": "015159",
-        "fund_name": "申万菱信智能驱动股票C"
-      },
-      {
-        "fund_code": "019258",
-        "fund_name": "恒越智选科技混合C"
-      },
-      {
-        "fund_code": "020018",
-        "fund_name": "国泰金鹿混合"
+        "fund_code": "020840",
+        "fund_name": "南方中证半导体产业指数发起C"
       },
       {
         "fund_code": "007818",
@@ -584,95 +1414,507 @@
         "fund_name": "国泰中证全指通信设备ETF联接E"
       },
       {
-        "fund_code": "002112",
-        "fund_name": "德邦鑫星价值灵活配置混合C"
+        "fund_code": "021719",
+        "fund_name": "华泰紫金中证半导体产业指数型发起C"
       },
       {
-        "fund_code": "017103",
-        "fund_name": "大摩数字经济混合C"
+        "fund_code": "018028",
+        "fund_name": "嘉实中证高端装备细分50ETF发起联接C"
       },
       {
-        "fund_code": "010023",
-        "fund_name": "广发制造业精选混合C"
+        "fund_code": "024070",
+        "fund_name": "上银中证半导体产业指数发起式C"
       },
       {
-        "fund_code": "700003",
-        "fund_name": "平安策略先锋混合"
+        "fund_code": "021894",
+        "fund_name": "易方达半导体设备ETF联接C"
       },
       {
-        "fund_code": "570008",
-        "fund_name": "诺德周期策略混合"
+        "fund_code": "020357",
+        "fund_name": "华夏半导体材料设备ETF联接C"
       },
       {
-        "fund_code": "014601",
-        "fund_name": "博时回报严选混合C"
+        "fund_code": "019633",
+        "fund_name": "国泰半导体设备ETF联接C"
       },
       {
-        "fund_code": "014192",
-        "fund_name": "广发先进制造股票发起式C"
+        "fund_code": "008087",
+        "fund_name": "华夏中证5G通信主题ETF联接C"
       },
       {
-        "fund_code": "673143",
-        "fund_name": "西部利得景程混合C"
+        "fund_code": "023765",
+        "fund_name": "华夏中证5G通信主题ETF联接D"
       },
       {
-        "fund_code": "501026",
-        "fund_name": "财通多策略福享混合(LOF)"
+        "fund_code": "017574",
+        "fund_name": "华夏中证机床ETF发起式联接C"
       },
       {
-        "fund_code": "002164",
-        "fund_name": "汇添富新睿精选混合C"
+        "fund_code": "014855",
+        "fund_name": "嘉实中证半导体指数增强发起式C"
       },
       {
-        "fund_code": "004391",
-        "fund_name": "平安转型创新混合C"
+        "fund_code": "020465",
+        "fund_name": "招商中证半导体产业ETF发起式联接C"
       },
       {
-        "fund_code": "022120",
-        "fund_name": "平安产业趋势混合C"
+        "fund_code": "010524",
+        "fund_name": "银华中证5G通信主题ETF联接C"
       },
       {
-        "fund_code": "016624",
-        "fund_name": "银华卓信成长精选混合C"
+        "fund_code": "012041",
+        "fund_name": "鹏华中证国防指数(LOF)C"
       },
       {
-        "fund_code": "014461",
-        "fund_name": "平安品质优选混合C"
+        "fund_code": "010364",
+        "fund_name": "鹏华空天军工指数(LOF)C"
       },
       {
-        "fund_code": "014628",
-        "fund_name": "财通福盛混合发起(LOF)C"
+        "fund_code": "024418",
+        "fund_name": "华夏上证科创板半导体材料设备主题ETF发起式联接C"
       },
       {
-        "fund_code": "019089",
-        "fund_name": "华润元大信息传媒科技混合C"
+        "fund_code": "021978",
+        "fund_name": "中欧中证细分化工产业主题指数发起C"
       },
       {
-        "fund_code": "013108",
-        "fund_name": "华夏先进制造龙头混合C"
+        "fund_code": "013528",
+        "fund_name": "嘉实中证细分化工产业主题ETF发起联接C"
       },
       {
-        "fund_code": "000017",
-        "fund_name": "财通可持续混合"
+        "fund_code": "015897",
+        "fund_name": "天弘中证细分化工产业主题ETF联接C"
+      },
+      {
+        "fund_code": "020274",
+        "fund_name": "富国中证细分化工产业主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "023829",
+        "fund_name": "万家中证半导体材料设备主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "017472",
+        "fund_name": "国泰中证机床ETF发起联接C"
+      },
+      {
+        "fund_code": "019590",
+        "fund_name": "东财化工C"
+      },
+      {
+        "fund_code": "012538",
+        "fund_name": "华宝中证细分化工产业主题ETF联接C"
+      },
+      {
+        "fund_code": "012842",
+        "fund_name": "易方达中证军工(LOF)C"
+      },
+      {
+        "fund_code": "002199",
+        "fund_name": "前海开源中证军工指数C"
+      },
+      {
+        "fund_code": "014943",
+        "fund_name": "鹏华中证细分化工产业主题ETF联接C"
+      },
+      {
+        "fund_code": "016209",
+        "fund_name": "申万菱信中证军工指数(LOF)C"
+      },
+      {
+        "fund_code": "024975",
+        "fund_name": "华泰柏瑞上证科创板半导体材料设备主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "005693",
+        "fund_name": "广发中证军工ETF联接C"
+      },
+      {
+        "fund_code": "016008",
+        "fund_name": "招商中证消费电子主题ETF联接C"
+      },
+      {
+        "fund_code": "013035",
+        "fund_name": "富国中证军工指数(LOF)C"
+      },
+      {
+        "fund_code": "008327",
+        "fund_name": "东财通信C"
+      },
+      {
+        "fund_code": "018897",
+        "fund_name": "易方达消费电子ETF联接C"
+      },
+      {
+        "fund_code": "021279",
+        "fund_name": "永赢上证科创板100指数增强发起C"
+      },
+      {
+        "fund_code": "015877",
+        "fund_name": "富国中证消费电子主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "010531",
+        "fund_name": "申万中证申万电子行业投资指数(LOF)C"
+      },
+      {
+        "fund_code": "021661",
+        "fund_name": "中欧上证科创板100指数发起C"
+      },
+      {
+        "fund_code": "025833",
+        "fund_name": "天弘中证电网设备主题指数发起C"
+      },
+      {
+        "fund_code": "021934",
+        "fund_name": "富国中证通信设备主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "021330",
+        "fund_name": "富国上证科创板100ETF发起式联接C"
+      },
+      {
+        "fund_code": "004347",
+        "fund_name": "南方中证500信息技术联接C"
+      },
+      {
+        "fund_code": "020684",
+        "fund_name": "南方上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "014111",
+        "fund_name": "嘉实中证稀有金属主题ETF发起联接C"
+      },
+      {
+        "fund_code": "020294",
+        "fund_name": "易方达上证科创板100ETF联接发起式C"
+      },
+      {
+        "fund_code": "025733",
+        "fund_name": "华安国证航天航空行业ETF发起式联接C"
+      },
+      {
+        "fund_code": "020321",
+        "fund_name": "华泰柏瑞上证科创板100ETF发起式联接C"
+      },
+      {
+        "fund_code": "021386",
+        "fund_name": "天弘上证科创板100指数增强发起C"
+      },
+      {
+        "fund_code": "023051",
+        "fund_name": "交银上证科创板100指数C"
+      },
+      {
+        "fund_code": "019088",
+        "fund_name": "工银中证稀有金属主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "019875",
+        "fund_name": "广发中证稀有金属ETF发起式联接C"
+      },
+      {
+        "fund_code": "021989",
+        "fund_name": "银河中证通信设备主题指数发起式C"
+      },
+      {
+        "fund_code": "023639",
+        "fund_name": "国泰恒生电网ETF联接C"
+      },
+      {
+        "fund_code": "018775",
+        "fund_name": "汇添富华证专精特新100指数发起式C"
+      },
+      {
+        "fund_code": "020292",
+        "fund_name": "华夏科创100ETF联接C"
+      },
+      {
+        "fund_code": "015046",
+        "fund_name": "前海开源中航军工指数C"
+      },
+      {
+        "fund_code": "019867",
+        "fund_name": "国泰上证科创板100ETF发起联接C"
+      },
+      {
+        "fund_code": "019858",
+        "fund_name": "博时上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "013943",
+        "fund_name": "华宝中证稀有金属指数增强发起C"
+      },
+      {
+        "fund_code": "022387",
+        "fund_name": "华夏中证汽车零部件主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "014194",
+        "fund_name": "汇添富中证芯片产业指数增强发起式C"
+      },
+      {
+        "fund_code": "023447",
+        "fund_name": "长城上证科创板100指数增强C"
+      },
+      {
+        "fund_code": "021036",
+        "fund_name": "博时中证汽车零部件主题指数发起式C"
+      },
+      {
+        "fund_code": "024349",
+        "fund_name": "中欧国证通用航空产业指数发起C"
+      },
+      {
+        "fund_code": "015599",
+        "fund_name": "国泰国证航天军工指数(LOF)C"
+      },
+      {
+        "fund_code": "021622",
+        "fund_name": "天弘汽车零部件指数C"
+      },
+      {
+        "fund_code": "021141",
+        "fund_name": "易方达汽车零部件ETF联接C"
+      },
+      {
+        "fund_code": "022681",
+        "fund_name": "华泰柏瑞中韩半导体ETF发起式联接(QDII)I"
+      },
+      {
+        "fund_code": "019455",
+        "fund_name": "华泰柏瑞中韩半导体ETF发起式联接(QDII)C"
+      },
+      {
+        "fund_code": "024542",
+        "fund_name": "平安中证汽车零部件主题ETF联接E"
+      },
+      {
+        "fund_code": "022732",
+        "fund_name": "平安中证汽车零部件主题ETF联接C"
+      },
+      {
+        "fund_code": "024689",
+        "fund_name": "富国国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "023749",
+        "fund_name": "广发上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023112",
+        "fund_name": "景顺长城上证科创板200指数C"
+      },
+      {
+        "fund_code": "024913",
+        "fund_name": "华夏国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "024767",
+        "fund_name": "华宝国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "023622",
+        "fund_name": "华夏上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "024979",
+        "fund_name": "易方达上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "025381",
+        "fund_name": "汇添富国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "023531",
+        "fund_name": "永赢国证通用航空产业ETF发起联接C"
+      },
+      {
+        "fund_code": "023519",
+        "fund_name": "国投瑞银上证科创板200指数发起式C"
+      },
+      {
+        "fund_code": "025693",
+        "fund_name": "南方中证通用航空主题ETF发起联接C"
+      },
+      {
+        "fund_code": "023687",
+        "fund_name": "建信上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023383",
+        "fund_name": "华泰柏瑞上证科创板200ETF发起式联接C"
+      },
+      {
+        "fund_code": "023388",
+        "fund_name": "华泰柏瑞上证科创板200ETF发起式联接I"
+      },
+      {
+        "fund_code": "020671",
+        "fund_name": "易方达上证科创板芯片指数发起式C"
+      },
+      {
+        "fund_code": "024854",
+        "fund_name": "国泰上证科创板芯片ETF发起联接C"
+      },
+      {
+        "fund_code": "021225",
+        "fund_name": "华宝上证科创板芯片指数发起C"
+      },
+      {
+        "fund_code": "017470",
+        "fund_name": "嘉实上证科创板芯片ETF发起联接C"
+      },
+      {
+        "fund_code": "019254",
+        "fund_name": "大成深证成长40ETF联接C"
+      },
+      {
+        "fund_code": "023927",
+        "fund_name": "鹏华上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "024043",
+        "fund_name": "富国恒生A股专精特新企业ETF发起式联接C"
+      },
+      {
+        "fund_code": "008282",
+        "fund_name": "国泰CES半导体芯片行业ETF联接C"
+      },
+      {
+        "fund_code": "022497",
+        "fund_name": "国泰CES半导体芯片行业ETF联接E"
+      },
+      {
+        "fund_code": "020854",
+        "fund_name": "大成中证芯片产业指数发起式C"
+      },
+      {
+        "fund_code": "019786",
+        "fund_name": "广发上证科创板成长ETF发起式联接C"
+      },
+      {
+        "fund_code": "020483",
+        "fund_name": "中欧中证芯片产业指数发起C"
+      },
+      {
+        "fund_code": "004371",
+        "fund_name": "景顺长城中证科技传媒通信150ETF联接C"
+      },
+      {
+        "fund_code": "001618",
+        "fund_name": "天弘中证电子ETF联接C"
+      },
+      {
+        "fund_code": "015337",
+        "fund_name": "嘉实中证芯片产业指数发起式C"
+      },
+      {
+        "fund_code": "019703",
+        "fund_name": "易方达上证科创板成长ETF联接发起式C"
+      },
+      {
+        "fund_code": "025491",
+        "fund_name": "平安中证卫星产业指数C"
+      },
+      {
+        "fund_code": "007475",
+        "fund_name": "华夏创业板成长ETF联接C"
+      },
+      {
+        "fund_code": "023782",
+        "fund_name": "华夏创业板成长ETF联接D"
+      },
+      {
+        "fund_code": "012838",
+        "fund_name": "华安CES半导体芯片行业指数发起C"
+      },
+      {
+        "fund_code": "007301",
+        "fund_name": "国联安中证半导体ETF联接C"
+      },
+      {
+        "fund_code": "008888",
+        "fund_name": "华夏国证半导体芯片ETF联接C"
+      },
+      {
+        "fund_code": "016123",
+        "fund_name": "华富中证科创创业50指数增强C"
+      },
+      {
+        "fund_code": "024973",
+        "fund_name": "景顺长城中证芯片产业ETF联接C"
+      },
+      {
+        "fund_code": "010356",
+        "fund_name": "诺安创业板指数增强(LOF)C"
+      },
+      {
+        "fund_code": "012553",
+        "fund_name": "天弘芯片产业ETF联接C"
+      },
+      {
+        "fund_code": "006910",
+        "fund_name": "华夏战略新兴成指ETF联接C"
+      },
+      {
+        "fund_code": "019072",
+        "fund_name": "嘉实国证通信ETF发起联接C"
+      },
+      {
+        "fund_code": "021750",
+        "fund_name": "易方达创业板成长ETF联接发起式C"
+      },
+      {
+        "fund_code": "014419",
+        "fund_name": "西部利得CES芯片指数增强C"
+      },
+      {
+        "fund_code": "018412",
+        "fund_name": "易方达芯片ETF联接C"
+      },
+      {
+        "fund_code": "024892",
+        "fund_name": "中欧上证科创板综合指数量化增强C"
+      },
+      {
+        "fund_code": "004870",
+        "fund_name": "融通创业板指数C"
+      },
+      {
+        "fund_code": "019237",
+        "fund_name": "广发国证通信ETF发起式联接C"
+      },
+      {
+        "fund_code": "012551",
+        "fund_name": "华宝中证电子50ETF联接C"
+      },
+      {
+        "fund_code": "025171",
+        "fund_name": "博时创业板指数增强C"
+      },
+      {
+        "fund_code": "007737",
+        "fund_name": "诺德研发创新100"
+      },
+      {
+        "fund_code": "017193",
+        "fund_name": "天弘工业有色金属指数C"
+      },
+      {
+        "fund_code": "023143",
+        "fund_name": "兴全中证500指数增强C"
+      },
+      {
+        "fund_code": "016730",
+        "fund_name": "长信中证科创创业50指数增强C"
+      },
+      {
+        "fund_code": "014219",
+        "fund_name": "汇添富中证科创创业50指数增强发起式C"
       }
     ],
-    "jiaocha_ri_zhou_yue": [
-      {
-        "fund_code": "015790",
-        "fund_name": "永赢高端装备智选混合发起C"
-      },
-      {
-        "fund_code": "000690",
-        "fund_name": "前海开源大海洋混合"
-      },
-      {
-        "fund_code": "010052",
-        "fund_name": "长城久嘉创新成长混合C"
-      },
-      {
-        "fund_code": "025793",
-        "fund_name": "东方阿尔法科技甄选混合发起C"
-      },
+    "zhishu_jiaocha_ri_zhou_yue": [
       {
         "fund_code": "024195",
         "fund_name": "永赢国证商用卫星通信产业ETF发起联接C"
@@ -682,136 +1924,4310 @@
         "fund_name": "博时中证卫星产业指数C"
       },
       {
-        "fund_code": "016273",
-        "fund_name": "华泰保兴吉年红混合发起C"
+        "fund_code": "015046",
+        "fund_name": "前海开源中航军工指数C"
       },
       {
-        "fund_code": "005328",
-        "fund_name": "前海开源价值策略股票"
+        "fund_code": "025693",
+        "fund_name": "南方中证通用航空主题ETF发起联接C"
       },
       {
-        "fund_code": "007690",
-        "fund_name": "国投瑞银新能源混合C"
+        "fund_code": "025733",
+        "fund_name": "华安国证航天航空行业ETF发起式联接C"
       },
       {
-        "fund_code": "002164",
-        "fund_name": "汇添富新睿精选混合C"
+        "fund_code": "018028",
+        "fund_name": "嘉实中证高端装备细分50ETF发起联接C"
       },
       {
-        "fund_code": "001704",
-        "fund_name": "国投瑞银进宝灵活配置混合"
+        "fund_code": "012041",
+        "fund_name": "鹏华中证国防指数(LOF)C"
       },
       {
-        "fund_code": "012149",
-        "fund_name": "国投瑞银产业趋势混合C"
+        "fund_code": "010364",
+        "fund_name": "鹏华空天军工指数(LOF)C"
       },
       {
-        "fund_code": "006736",
-        "fund_name": "国投瑞银先进制造混合"
+        "fund_code": "024349",
+        "fund_name": "中欧国证通用航空产业指数发起C"
       },
       {
-        "fund_code": "015772",
-        "fund_name": "银华互联网主题灵活配置混合C"
+        "fund_code": "024689",
+        "fund_name": "富国国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "024767",
+        "fund_name": "华宝国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "023531",
+        "fund_name": "永赢国证通用航空产业ETF发起联接C"
+      },
+      {
+        "fund_code": "024913",
+        "fund_name": "华夏国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "025381",
+        "fund_name": "汇添富国证通用航空产业ETF发起式联接C"
+      },
+      {
+        "fund_code": "025491",
+        "fund_name": "平安中证卫星产业指数C"
+      },
+      {
+        "fund_code": "013035",
+        "fund_name": "富国中证军工指数(LOF)C"
+      },
+      {
+        "fund_code": "005693",
+        "fund_name": "广发中证军工ETF联接C"
+      },
+      {
+        "fund_code": "012842",
+        "fund_name": "易方达中证军工(LOF)C"
+      },
+      {
+        "fund_code": "016209",
+        "fund_name": "申万菱信中证军工指数(LOF)C"
+      },
+      {
+        "fund_code": "002199",
+        "fund_name": "前海开源中证军工指数C"
+      },
+      {
+        "fund_code": "021036",
+        "fund_name": "博时中证汽车零部件主题指数发起式C"
+      },
+      {
+        "fund_code": "021622",
+        "fund_name": "天弘汽车零部件指数C"
+      },
+      {
+        "fund_code": "022387",
+        "fund_name": "华夏中证汽车零部件主题ETF发起式联接C"
+      },
+      {
+        "fund_code": "021141",
+        "fund_name": "易方达汽车零部件ETF联接C"
+      },
+      {
+        "fund_code": "022732",
+        "fund_name": "平安中证汽车零部件主题ETF联接C"
+      },
+      {
+        "fund_code": "024542",
+        "fund_name": "平安中证汽车零部件主题ETF联接E"
+      },
+      {
+        "fund_code": "015599",
+        "fund_name": "国泰国证航天军工指数(LOF)C"
+      },
+      {
+        "fund_code": "021279",
+        "fund_name": "永赢上证科创板100指数增强发起C"
+      },
+      {
+        "fund_code": "023112",
+        "fund_name": "景顺长城上证科创板200指数C"
+      },
+      {
+        "fund_code": "024979",
+        "fund_name": "易方达上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023687",
+        "fund_name": "建信上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023749",
+        "fund_name": "广发上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023388",
+        "fund_name": "华泰柏瑞上证科创板200ETF发起式联接I"
+      },
+      {
+        "fund_code": "023622",
+        "fund_name": "华夏上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "021386",
+        "fund_name": "天弘上证科创板100指数增强发起C"
+      },
+      {
+        "fund_code": "023383",
+        "fund_name": "华泰柏瑞上证科创板200ETF发起式联接C"
+      },
+      {
+        "fund_code": "023927",
+        "fund_name": "鹏华上证科创板200ETF联接C"
+      },
+      {
+        "fund_code": "023519",
+        "fund_name": "国投瑞银上证科创板200指数发起式C"
+      },
+      {
+        "fund_code": "020684",
+        "fund_name": "南方上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "021330",
+        "fund_name": "富国上证科创板100ETF发起式联接C"
+      },
+      {
+        "fund_code": "017574",
+        "fund_name": "华夏中证机床ETF发起式联接C"
+      },
+      {
+        "fund_code": "020292",
+        "fund_name": "华夏科创100ETF联接C"
+      },
+      {
+        "fund_code": "021661",
+        "fund_name": "中欧上证科创板100指数发起C"
+      },
+      {
+        "fund_code": "017472",
+        "fund_name": "国泰中证机床ETF发起联接C"
+      },
+      {
+        "fund_code": "019867",
+        "fund_name": "国泰上证科创板100ETF发起联接C"
+      },
+      {
+        "fund_code": "020294",
+        "fund_name": "易方达上证科创板100ETF联接发起式C"
+      },
+      {
+        "fund_code": "023051",
+        "fund_name": "交银上证科创板100指数C"
+      },
+      {
+        "fund_code": "019858",
+        "fund_name": "博时上证科创板100ETF联接C"
+      },
+      {
+        "fund_code": "020321",
+        "fund_name": "华泰柏瑞上证科创板100ETF发起式联接C"
+      },
+      {
+        "fund_code": "023447",
+        "fund_name": "长城上证科创板100指数增强C"
+      },
+      {
+        "fund_code": "019786",
+        "fund_name": "广发上证科创板成长ETF发起式联接C"
+      },
+      {
+        "fund_code": "019703",
+        "fund_name": "易方达上证科创板成长ETF联接发起式C"
+      },
+      {
+        "fund_code": "004347",
+        "fund_name": "南方中证500信息技术联接C"
+      },
+      {
+        "fund_code": "018775",
+        "fund_name": "汇添富华证专精特新100指数发起式C"
+      },
+      {
+        "fund_code": "024892",
+        "fund_name": "中欧上证科创板综合指数量化增强C"
+      }
+    ],
+    "gupiao_jiaocha_ri_zhou": [
+      {
+        "fund_code": "025949",
+        "fund_name": "诺安研究精选股票C"
+      },
+      {
+        "fund_code": "016848",
+        "fund_name": "中欧高端装备股票发起C"
+      },
+      {
+        "fund_code": "013479",
+        "fund_name": "金鹰先进制造股票(LOF)C"
+      },
+      {
+        "fund_code": "018241",
+        "fund_name": "嘉实制造升级股票发起式C"
+      },
+      {
+        "fund_code": "005928",
+        "fund_name": "创金合信新能源汽车股票C"
+      },
+      {
+        "fund_code": "017727",
+        "fund_name": "鑫元成长驱动股票发起式C"
+      },
+      {
+        "fund_code": "011323",
+        "fund_name": "国泰智能汽车股票C"
+      },
+      {
+        "fund_code": "005969",
+        "fund_name": "创金合信工业周期股票C"
+      },
+      {
+        "fund_code": "019458",
+        "fund_name": "平安先进制造主题股票发起C"
+      },
+      {
+        "fund_code": "018462",
+        "fund_name": "光大保德信智能汽车主题股票C"
       },
       {
         "fund_code": "013613",
         "fund_name": "宝盈国家安全沪港深股票C"
       },
       {
-        "fund_code": "014601",
-        "fund_name": "博时回报严选混合C"
+        "fund_code": "022328",
+        "fund_name": "宏利高端装备股票C"
       },
       {
-        "fund_code": "017103",
-        "fund_name": "大摩数字经济混合C"
+        "fund_code": "001644",
+        "fund_name": "汇丰晋信智造先锋股票C"
       },
       {
-        "fund_code": "010623",
-        "fund_name": "恒越成长精选混合C"
+        "fund_code": "007134",
+        "fund_name": "嘉实长青竞争优势股票C"
       },
       {
-        "fund_code": "009883",
-        "fund_name": "华润元大核心动力混合C"
+        "fund_code": "011322",
+        "fund_name": "国泰智能装备股票C"
       },
       {
-        "fund_code": "002112",
-        "fund_name": "德邦鑫星价值灵活配置混合C"
+        "fund_code": "011592",
+        "fund_name": "博时军工主题股票C"
       },
       {
-        "fund_code": "014845",
-        "fund_name": "中银新趋势灵活配置混合C"
+        "fund_code": "013511",
+        "fund_name": "汇丰晋信低碳先锋股票C"
       },
       {
-        "fund_code": "016874",
-        "fund_name": "广发远见智选混合C"
+        "fund_code": "014669",
+        "fund_name": "银华专精特新量化优选股票发起C"
       },
       {
-        "fund_code": "019089",
-        "fund_name": "华润元大信息传媒科技混合C"
+        "fund_code": "018998",
+        "fund_name": "景顺长城研究精选股票C"
       },
       {
-        "fund_code": "015608",
-        "fund_name": "信澳转型创新股票C"
+        "fund_code": "014186",
+        "fund_name": "招商专精特新股票C"
       },
       {
-        "fund_code": "018288",
-        "fund_name": "信澳优势产业混合C"
+        "fund_code": "024169",
+        "fund_name": "信澳先进智造股票型C"
       },
       {
-        "fund_code": "019374",
-        "fund_name": "广发睿杰精选混合发起式A1"
+        "fund_code": "014455",
+        "fund_name": "中银成长优选股票C"
       },
       {
-        "fund_code": "017698",
-        "fund_name": "华夏新材料龙头混合发起式C"
+        "fund_code": "012181",
+        "fund_name": "中银智能制造股票C"
       },
       {
-        "fund_code": "019258",
-        "fund_name": "恒越智选科技混合C"
+        "fund_code": "014453",
+        "fund_name": "中银新动力股票C"
       },
       {
-        "fund_code": "024889",
-        "fund_name": "信澳优势行业混合C"
+        "fund_code": "010322",
+        "fund_name": "大摩新兴产业股票"
       },
       {
-        "fund_code": "016780",
-        "fund_name": "国投瑞银锐意改革混合C"
+        "fund_code": "014192",
+        "fund_name": "广发先进制造股票发起式C"
       },
       {
-        "fund_code": "021542",
-        "fund_name": "国投瑞银信息消费混合C"
+        "fund_code": "023532",
+        "fund_name": "西部利得事件驱动股票C"
       },
       {
-        "fund_code": "013722",
-        "fund_name": "信澳景气优选混合C"
+        "fund_code": "008084",
+        "fund_name": "海富通先进制造股票C"
+      },
+      {
+        "fund_code": "007950",
+        "fund_name": "招商量化精选股票C"
+      },
+      {
+        "fund_code": "001042",
+        "fund_name": "华夏领先股票"
+      },
+      {
+        "fund_code": "014063",
+        "fund_name": "景顺长城专精特新量化优选股票C"
+      },
+      {
+        "fund_code": "015060",
+        "fund_name": "华夏节能环保股票C"
+      },
+      {
+        "fund_code": "009538",
+        "fund_name": "太平行业优选股票C"
+      },
+      {
+        "fund_code": "015002",
+        "fund_name": "工银生态环境股票C"
+      },
+      {
+        "fund_code": "019903",
+        "fund_name": "国寿安保先进制造股票发起式C"
+      },
+      {
+        "fund_code": "023855",
+        "fund_name": "景顺长城量化小盘股票C"
+      },
+      {
+        "fund_code": "010113",
+        "fund_name": "广发研究精选股票C"
+      },
+      {
+        "fund_code": "001421",
+        "fund_name": "南方量化成长"
+      },
+      {
+        "fund_code": "023101",
+        "fund_name": "国寿安保智慧生活股票C"
+      },
+      {
+        "fund_code": "020699",
+        "fund_name": "国泰海通科创板量化选股股票发起C"
+      },
+      {
+        "fund_code": "020902",
+        "fund_name": "招商成长量化选股股票C"
+      },
+      {
+        "fund_code": "003865",
+        "fund_name": "创金合信量化多因子股票C"
+      },
+      {
+        "fund_code": "017916",
+        "fund_name": "国寿安保成长优选股票C"
+      },
+      {
+        "fund_code": "013622",
+        "fund_name": "华安智能装备主题股票C"
+      },
+      {
+        "fund_code": "001975",
+        "fund_name": "景顺长城环保优势股票"
+      },
+      {
+        "fund_code": "011507",
+        "fund_name": "建信高端装备股票C"
+      },
+      {
+        "fund_code": "005826",
+        "fund_name": "华夏潜龙精选股票"
+      },
+      {
+        "fund_code": "008935",
+        "fund_name": "大成科技消费股票C"
+      },
+      {
+        "fund_code": "011043",
+        "fund_name": "国泰价值先锋股票C"
+      },
+      {
+        "fund_code": "020487",
+        "fund_name": "华富成长企业精选股票C"
+      },
+      {
+        "fund_code": "010236",
+        "fund_name": "广发电子信息传媒股票C"
+      },
+      {
+        "fund_code": "013242",
+        "fund_name": "北信瑞丰优势行业股票"
+      },
+      {
+        "fund_code": "013642",
+        "fund_name": "博道成长智航股票C"
+      },
+      {
+        "fund_code": "540010",
+        "fund_name": "汇丰晋信科技先锋股票"
+      },
+      {
+        "fund_code": "007389",
+        "fund_name": "摩根研究驱动股票C"
+      },
+      {
+        "fund_code": "016292",
+        "fund_name": "华安物联网主题股票C"
+      },
+      {
+        "fund_code": "016052",
+        "fund_name": "华商改革创新股票C"
+      },
+      {
+        "fund_code": "021500",
+        "fund_name": "景顺长城优质成长股票C"
+      },
+      {
+        "fund_code": "005038",
+        "fund_name": "银华新能源新材料C"
+      },
+      {
+        "fund_code": "011378",
+        "fund_name": "创金合信积极成长股票C"
+      }
+    ],
+    "gupiao_jiaocha_zhou_yue": [
+      {
+        "fund_code": "013613",
+        "fund_name": "宝盈国家安全沪港深股票C"
+      },
+      {
+        "fund_code": "005328",
+        "fund_name": "前海开源价值策略股票"
       },
       {
         "fund_code": "017747",
         "fund_name": "建信电子行业股票C"
       },
       {
-        "fund_code": "010023",
-        "fund_name": "广发制造业精选混合C"
+        "fund_code": "015608",
+        "fund_name": "信澳转型创新股票C"
       },
       {
-        "fund_code": "020018",
-        "fund_name": "国泰金鹿混合"
+        "fund_code": "008382",
+        "fund_name": "融通产业趋势股票"
       },
       {
-        "fund_code": "004671",
-        "fund_name": "国联核心成长"
+        "fund_code": "014737",
+        "fund_name": "创金合信专精特新股票发起C"
       },
       {
-        "fund_code": "009048",
-        "fund_name": "浦银安盛科技创新优选混合"
+        "fund_code": "014967",
+        "fund_name": "建信潜力新蓝筹股票C"
+      },
+      {
+        "fund_code": "017727",
+        "fund_name": "鑫元成长驱动股票发起式C"
+      },
+      {
+        "fund_code": "001042",
+        "fund_name": "华夏领先股票"
+      },
+      {
+        "fund_code": "020277",
+        "fund_name": "银河新材料股票发起式C"
+      },
+      {
+        "fund_code": "011592",
+        "fund_name": "博时军工主题股票C"
+      },
+      {
+        "fund_code": "014192",
+        "fund_name": "广发先进制造股票发起式C"
+      },
+      {
+        "fund_code": "008129",
+        "fund_name": "湘财长源股票型C"
+      },
+      {
+        "fund_code": "016269",
+        "fund_name": "建信改革红利股票C"
+      },
+      {
+        "fund_code": "020774",
+        "fund_name": "国寿安保产业升级股票发起式C"
       },
       {
         "fund_code": "001396",
         "fund_name": "建信互联网+产业升级股票"
       },
       {
+        "fund_code": "014863",
+        "fund_name": "建信信息产业股票C"
+      },
+      {
+        "fund_code": "023101",
+        "fund_name": "国寿安保智慧生活股票C"
+      },
+      {
+        "fund_code": "006080",
+        "fund_name": "海富通电子传媒股票C"
+      },
+      {
+        "fund_code": "010236",
+        "fund_name": "广发电子信息传媒股票C"
+      },
+      {
+        "fund_code": "011507",
+        "fund_name": "建信高端装备股票C"
+      },
+      {
+        "fund_code": "018998",
+        "fund_name": "景顺长城研究精选股票C"
+      },
+      {
+        "fund_code": "022328",
+        "fund_name": "宏利高端装备股票C"
+      },
+      {
+        "fund_code": "025949",
+        "fund_name": "诺安研究精选股票C"
+      },
+      {
+        "fund_code": "015159",
+        "fund_name": "申万菱信智能驱动股票C"
+      },
+      {
+        "fund_code": "025415",
+        "fund_name": "新华策略精选股票C"
+      },
+      {
+        "fund_code": "011378",
+        "fund_name": "创金合信积极成长股票C"
+      },
+      {
+        "fund_code": "019863",
+        "fund_name": "招商稳健优选股票C"
+      },
+      {
+        "fund_code": "015048",
+        "fund_name": "建信新能源行业股票C"
+      },
+      {
+        "fund_code": "014380",
+        "fund_name": "建信中国制造2025股票C"
+      },
+      {
+        "fund_code": "012697",
+        "fund_name": "同泰数字经济股票C"
+      },
+      {
+        "fund_code": "014186",
+        "fund_name": "招商专精特新股票C"
+      },
+      {
+        "fund_code": "015060",
+        "fund_name": "华夏节能环保股票C"
+      },
+      {
+        "fund_code": "001496",
+        "fund_name": "工银聚焦30股票"
+      },
+      {
+        "fund_code": "005928",
+        "fund_name": "创金合信新能源汽车股票C"
+      },
+      {
+        "fund_code": "014453",
+        "fund_name": "中银新动力股票C"
+      },
+      {
+        "fund_code": "017489",
+        "fund_name": "嘉实信息产业股票发起式C"
+      },
+      {
+        "fund_code": "005629",
+        "fund_name": "汇安趋势动力股票C"
+      },
+      {
+        "fund_code": "018495",
+        "fund_name": "融通产业趋势臻选股票C"
+      },
+      {
+        "fund_code": "005963",
+        "fund_name": "宝盈人工智能股票C"
+      },
+      {
+        "fund_code": "020682",
+        "fund_name": "建信环保产业股票C"
+      },
+      {
+        "fund_code": "015198",
+        "fund_name": "汇添富移动互联股票C"
+      },
+      {
+        "fund_code": "005826",
+        "fund_name": "华夏潜龙精选股票"
+      },
+      {
+        "fund_code": "014937",
+        "fund_name": "摩根核心精选股票C"
+      },
+      {
+        "fund_code": "022831",
+        "fund_name": "华商电子行业量化股票发起式C"
+      },
+      {
+        "fund_code": "017916",
+        "fund_name": "国寿安保成长优选股票C"
+      },
+      {
+        "fund_code": "013242",
+        "fund_name": "北信瑞丰优势行业股票"
+      },
+      {
+        "fund_code": "013340",
+        "fund_name": "创金合信芯片产业股票发起C"
+      },
+      {
+        "fund_code": "020487",
+        "fund_name": "华富成长企业精选股票C"
+      },
+      {
+        "fund_code": "021500",
+        "fund_name": "景顺长城优质成长股票C"
+      },
+      {
+        "fund_code": "022868",
+        "fund_name": "英大国企改革C"
+      },
+      {
+        "fund_code": "009538",
+        "fund_name": "太平行业优选股票C"
+      },
+      {
+        "fund_code": "001416",
+        "fund_name": "嘉实事件驱动股票"
+      },
+      {
+        "fund_code": "001956",
+        "fund_name": "国联安科技动力"
+      },
+      {
+        "fund_code": "519935",
+        "fund_name": "长信创新驱动股票"
+      },
+      {
+        "fund_code": "015075",
+        "fund_name": "摩根卓越制造股票C"
+      },
+      {
+        "fund_code": "021876",
+        "fund_name": "路博迈资源精选股票发起C"
+      },
+      {
+        "fund_code": "022710",
+        "fund_name": "工银智能制造股票C"
+      },
+      {
+        "fund_code": "013622",
+        "fund_name": "华安智能装备主题股票C"
+      },
+      {
+        "fund_code": "016052",
+        "fund_name": "华商改革创新股票C"
+      },
+      {
+        "fund_code": "015002",
+        "fund_name": "工银生态环境股票C"
+      },
+      {
+        "fund_code": "005969",
+        "fund_name": "创金合信工业周期股票C"
+      },
+      {
+        "fund_code": "017289",
+        "fund_name": "宏利首选企业股票C"
+      },
+      {
+        "fund_code": "011322",
+        "fund_name": "国泰智能装备股票C"
+      },
+      {
+        "fund_code": "024170",
+        "fund_name": "信澳新能源产业股票C"
+      },
+      {
+        "fund_code": "026155",
+        "fund_name": "红土创新新科技股票C"
+      },
+      {
+        "fund_code": "015686",
+        "fund_name": "富国新兴产业股票C"
+      },
+      {
+        "fund_code": "540010",
+        "fund_name": "汇丰晋信科技先锋股票"
+      },
+      {
+        "fund_code": "008935",
+        "fund_name": "大成科技消费股票C"
+      },
+      {
+        "fund_code": "001409",
+        "fund_name": "工银互联网加股票"
+      },
+      {
+        "fund_code": "001223",
+        "fund_name": "鹏华文化传媒娱乐股票"
+      },
+      {
+        "fund_code": "010893",
+        "fund_name": "中银证券精选行业股票C"
+      },
+      {
+        "fund_code": "017177",
+        "fund_name": "摩根新兴服务股票C"
+      },
+      {
+        "fund_code": "340006",
+        "fund_name": "兴全全球视野股票"
+      },
+      {
+        "fund_code": "013151",
+        "fund_name": "长信低碳环保行业量化股票C"
+      },
+      {
+        "fund_code": "021938",
+        "fund_name": "华安半导体产业股票发起式C"
+      },
+      {
+        "fund_code": "014455",
+        "fund_name": "中银成长优选股票C"
+      },
+      {
+        "fund_code": "017099",
+        "fund_name": "摩根民生需求股票C"
+      },
+      {
+        "fund_code": "001542",
+        "fund_name": "国泰互联网+股票"
+      },
+      {
+        "fund_code": "017745",
+        "fund_name": "嘉实绿色主题股票发起式C"
+      },
+      {
+        "fund_code": "014377",
+        "fund_name": "东吴新能源汽车股票C"
+      },
+      {
+        "fund_code": "020477",
+        "fund_name": "泰康半导体量化选股股票发起式C"
+      },
+      {
+        "fund_code": "014300",
+        "fund_name": "宏利先进制造股票C"
+      },
+      {
+        "fund_code": "005885",
+        "fund_name": "金鹰信息产业股票C"
+      },
+      {
+        "fund_code": "009492",
+        "fund_name": "宝盈创新驱动股票C"
+      },
+      {
+        "fund_code": "015735",
+        "fund_name": "红塔红土信息产业精选股票发起式C"
+      },
+      {
+        "fund_code": "012181",
+        "fund_name": "中银智能制造股票C"
+      },
+      {
+        "fund_code": "014063",
+        "fund_name": "景顺长城专精特新量化优选股票C"
+      },
+      {
+        "fund_code": "024805",
+        "fund_name": "华夏量化选股股票C"
+      },
+      {
+        "fund_code": "016919",
+        "fund_name": "摩根智慧互联股票C"
+      },
+      {
+        "fund_code": "015773",
+        "fund_name": "招商移动互联网产业股票基金C"
+      },
+      {
+        "fund_code": "014417",
+        "fund_name": "泰康研究精选股票发起C"
+      },
+      {
+        "fund_code": "001036",
+        "fund_name": "嘉实企业变革股票"
+      },
+      {
+        "fund_code": "015905",
+        "fund_name": "广发新能源精选股票C"
+      },
+      {
+        "fund_code": "019903",
+        "fund_name": "国寿安保先进制造股票发起式C"
+      },
+      {
+        "fund_code": "011323",
+        "fund_name": "国泰智能汽车股票C"
+      },
+      {
+        "fund_code": "025541",
+        "fund_name": "华夏创新前沿股票C"
+      },
+      {
+        "fund_code": "016292",
+        "fund_name": "华安物联网主题股票C"
+      },
+      {
+        "fund_code": "013479",
+        "fund_name": "金鹰先进制造股票(LOF)C"
+      },
+      {
+        "fund_code": "012351",
+        "fund_name": "万家元贞量化选股股票C"
+      },
+      {
+        "fund_code": "022004",
+        "fund_name": "博道大盘成长股票C"
+      },
+      {
+        "fund_code": "008177",
+        "fund_name": "建信高股息主题股票"
+      },
+      {
+        "fund_code": "011230",
+        "fund_name": "创金合信数字经济主题股票C"
+      },
+      {
+        "fund_code": "001421",
+        "fund_name": "南方量化成长"
+      },
+      {
+        "fund_code": "007950",
+        "fund_name": "招商量化精选股票C"
+      },
+      {
+        "fund_code": "012800",
+        "fund_name": "宏利转型机遇股票C"
+      },
+      {
+        "fund_code": "015172",
+        "fund_name": "摩根安全战略股票C"
+      },
+      {
+        "fund_code": "015157",
+        "fund_name": "申万菱信行业轮动股票C"
+      },
+      {
+        "fund_code": "010235",
+        "fund_name": "广发资源优选股票C"
+      },
+      {
+        "fund_code": "020902",
+        "fund_name": "招商成长量化选股股票C"
+      },
+      {
+        "fund_code": "010113",
+        "fund_name": "广发研究精选股票C"
+      },
+      {
+        "fund_code": "013642",
+        "fund_name": "博道成长智航股票C"
+      },
+      {
+        "fund_code": "001158",
+        "fund_name": "工银新材料新能源股票"
+      },
+      {
+        "fund_code": "011270",
+        "fund_name": "中银证券优势制造股票C"
+      },
+      {
+        "fund_code": "014536",
+        "fund_name": "诺安高端制造股票C"
+      },
+      {
+        "fund_code": "015754",
+        "fund_name": "上银内需增长股票C"
+      }
+    ],
+    "gupiao_jiaocha_ri_zhou_yue": [
+      {
+        "fund_code": "025949",
+        "fund_name": "诺安研究精选股票C"
+      },
+      {
+        "fund_code": "013479",
+        "fund_name": "金鹰先进制造股票(LOF)C"
+      },
+      {
+        "fund_code": "005928",
+        "fund_name": "创金合信新能源汽车股票C"
+      },
+      {
+        "fund_code": "017727",
+        "fund_name": "鑫元成长驱动股票发起式C"
+      },
+      {
+        "fund_code": "011323",
+        "fund_name": "国泰智能汽车股票C"
+      },
+      {
+        "fund_code": "005969",
+        "fund_name": "创金合信工业周期股票C"
+      },
+      {
+        "fund_code": "013613",
+        "fund_name": "宝盈国家安全沪港深股票C"
+      },
+      {
+        "fund_code": "022328",
+        "fund_name": "宏利高端装备股票C"
+      },
+      {
+        "fund_code": "011322",
+        "fund_name": "国泰智能装备股票C"
+      },
+      {
+        "fund_code": "011592",
+        "fund_name": "博时军工主题股票C"
+      },
+      {
+        "fund_code": "018998",
+        "fund_name": "景顺长城研究精选股票C"
+      },
+      {
+        "fund_code": "014186",
+        "fund_name": "招商专精特新股票C"
+      },
+      {
+        "fund_code": "014455",
+        "fund_name": "中银成长优选股票C"
+      },
+      {
+        "fund_code": "012181",
+        "fund_name": "中银智能制造股票C"
+      },
+      {
+        "fund_code": "014453",
+        "fund_name": "中银新动力股票C"
+      },
+      {
+        "fund_code": "014192",
+        "fund_name": "广发先进制造股票发起式C"
+      },
+      {
+        "fund_code": "007950",
+        "fund_name": "招商量化精选股票C"
+      },
+      {
+        "fund_code": "001042",
+        "fund_name": "华夏领先股票"
+      },
+      {
+        "fund_code": "014063",
+        "fund_name": "景顺长城专精特新量化优选股票C"
+      },
+      {
+        "fund_code": "015060",
+        "fund_name": "华夏节能环保股票C"
+      },
+      {
+        "fund_code": "009538",
+        "fund_name": "太平行业优选股票C"
+      },
+      {
+        "fund_code": "015002",
+        "fund_name": "工银生态环境股票C"
+      },
+      {
+        "fund_code": "019903",
+        "fund_name": "国寿安保先进制造股票发起式C"
+      },
+      {
+        "fund_code": "010113",
+        "fund_name": "广发研究精选股票C"
+      },
+      {
+        "fund_code": "001421",
+        "fund_name": "南方量化成长"
+      },
+      {
+        "fund_code": "023101",
+        "fund_name": "国寿安保智慧生活股票C"
+      },
+      {
+        "fund_code": "020902",
+        "fund_name": "招商成长量化选股股票C"
+      },
+      {
+        "fund_code": "017916",
+        "fund_name": "国寿安保成长优选股票C"
+      },
+      {
+        "fund_code": "013622",
+        "fund_name": "华安智能装备主题股票C"
+      },
+      {
+        "fund_code": "011507",
+        "fund_name": "建信高端装备股票C"
+      },
+      {
+        "fund_code": "005826",
+        "fund_name": "华夏潜龙精选股票"
+      },
+      {
+        "fund_code": "008935",
+        "fund_name": "大成科技消费股票C"
+      },
+      {
+        "fund_code": "020487",
+        "fund_name": "华富成长企业精选股票C"
+      },
+      {
+        "fund_code": "010236",
+        "fund_name": "广发电子信息传媒股票C"
+      },
+      {
+        "fund_code": "013242",
+        "fund_name": "北信瑞丰优势行业股票"
+      },
+      {
+        "fund_code": "013642",
+        "fund_name": "博道成长智航股票C"
+      },
+      {
+        "fund_code": "540010",
+        "fund_name": "汇丰晋信科技先锋股票"
+      },
+      {
+        "fund_code": "016292",
+        "fund_name": "华安物联网主题股票C"
+      },
+      {
+        "fund_code": "016052",
+        "fund_name": "华商改革创新股票C"
+      },
+      {
+        "fund_code": "021500",
+        "fund_name": "景顺长城优质成长股票C"
+      },
+      {
+        "fund_code": "011378",
+        "fund_name": "创金合信积极成长股票C"
+      }
+    ],
+    "hunhe_jiaocha_ri_zhou": [
+      {
+        "fund_code": "015790",
+        "fund_name": "永赢高端装备智选混合发起C"
+      },
+      {
+        "fund_code": "009854",
+        "fund_name": "中加优势企业混合C"
+      },
+      {
+        "fund_code": "000690",
+        "fund_name": "前海开源大海洋混合"
+      },
+      {
+        "fund_code": "016273",
+        "fund_name": "华泰保兴吉年红混合发起C"
+      },
+      {
+        "fund_code": "018376",
+        "fund_name": "金信景气优选混合C"
+      },
+      {
+        "fund_code": "021490",
+        "fund_name": "中航趋势领航混合发起C"
+      },
+      {
+        "fund_code": "001770",
+        "fund_name": "前海开源嘉鑫混合C"
+      },
+      {
+        "fund_code": "023567",
+        "fund_name": "德邦高端装备混合发起式C"
+      },
+      {
+        "fund_code": "010052",
+        "fund_name": "长城久嘉创新成长混合C"
+      },
+      {
+        "fund_code": "018140",
+        "fund_name": "中金先进制造混合C"
+      },
+      {
+        "fund_code": "002580",
+        "fund_name": "泰信鑫选灵活配置混合C"
+      },
+      {
+        "fund_code": "001864",
+        "fund_name": "中海魅力长三角混合"
+      },
+      {
+        "fund_code": "019412",
+        "fund_name": "长城新兴产业混合C"
+      },
+      {
+        "fund_code": "001271",
+        "fund_name": "英大灵活配置混合型发起式B"
+      },
+      {
+        "fund_code": "017968",
+        "fund_name": "华富科技动能混合C"
+      },
+      {
+        "fund_code": "290011",
+        "fund_name": "泰信中小盘精选混合"
+      },
+      {
+        "fund_code": "008998",
+        "fund_name": "同泰竞争优势混合C"
+      },
+      {
+        "fund_code": "025647",
+        "fund_name": "平安高端装备混合发起式C"
+      },
+      {
+        "fund_code": "013044",
+        "fund_name": "富国国家安全主题混合C"
+      },
+      {
+        "fund_code": "026126",
+        "fund_name": "山证资管改革精选混合C"
+      },
+      {
+        "fund_code": "024648",
+        "fund_name": "中欧制造升级混合发起C"
+      },
+      {
+        "fund_code": "004233",
+        "fund_name": "中欧盛世成长混合(LOF)C"
+      },
+      {
+        "fund_code": "001888",
+        "fund_name": "中欧盛世成长混合(LOF)E"
+      },
+      {
+        "fund_code": "001732",
+        "fund_name": "广发百发大数据价值混合E"
+      },
+      {
+        "fund_code": "014700",
+        "fund_name": "东方高端制造混合C"
+      },
+      {
+        "fund_code": "016924",
+        "fund_name": "广发百发大数据价值混合C"
+      },
+      {
+        "fund_code": "002683",
+        "fund_name": "民生加银前沿科技灵活配置混合"
+      },
+      {
+        "fund_code": "000796",
+        "fund_name": "宝盈睿丰创新混合C"
+      },
+      {
+        "fund_code": "008182",
+        "fund_name": "方正富邦信泓混合C"
+      },
+      {
+        "fund_code": "169201",
+        "fund_name": "浙商鼎盈事件驱动混合"
+      },
+      {
+        "fund_code": "015401",
+        "fund_name": "弘毅远方甄选混合C"
+      },
+      {
+        "fund_code": "025942",
+        "fund_name": "广发新动力混合C"
+      },
+      {
+        "fund_code": "501080",
+        "fund_name": "中金科创主题灵活配置混合(LOF)"
+      },
+      {
+        "fund_code": "020420",
+        "fund_name": "鹏华科技驱动混合发起式C"
+      },
+      {
+        "fund_code": "005542",
+        "fund_name": "前海开源盛鑫混合C"
+      },
+      {
+        "fund_code": "007046",
+        "fund_name": "方正富邦创新动力混合C"
+      },
+      {
+        "fund_code": "004006",
+        "fund_name": "东方民丰回报赢安混合C"
+      },
+      {
+        "fund_code": "017511",
+        "fund_name": "鹏华稳健回报混合C"
+      },
+      {
+        "fund_code": "016478",
+        "fund_name": "光大专精特新混合C"
+      },
+      {
+        "fund_code": "019213",
+        "fund_name": "华富物联世界灵活配置混合C"
+      },
+      {
+        "fund_code": "021982",
+        "fund_name": "安联中国精选混合C"
+      },
+      {
+        "fund_code": "020107",
+        "fund_name": "兴业安保优选混合C"
+      },
+      {
+        "fund_code": "011148",
+        "fund_name": "南方军工改革灵活配置混合C"
+      },
+      {
+        "fund_code": "015101",
+        "fund_name": "华泰柏瑞低碳经济智选混合C"
+      },
+      {
+        "fund_code": "019205",
+        "fund_name": "鹏华优质企业混合C"
+      },
+      {
+        "fund_code": "017941",
+        "fund_name": "国投瑞银国家安全混合C"
+      },
+      {
+        "fund_code": "010491",
+        "fund_name": "鹏华高质量增长混合C"
+      },
+      {
+        "fund_code": "010077",
+        "fund_name": "湘财长弘灵活配置混合C"
+      },
+      {
+        "fund_code": "011712",
+        "fund_name": "大摩万众创新混合C"
+      },
+      {
+        "fund_code": "014939",
+        "fund_name": "同泰产业升级混合C"
+      },
+      {
+        "fund_code": "010741",
+        "fund_name": "汇安核心价值混合C"
+      },
+      {
+        "fund_code": "015733",
+        "fund_name": "尚正新能源产业混合C"
+      },
+      {
+        "fund_code": "020206",
+        "fund_name": "民生加银双核动力混合C"
+      },
+      {
+        "fund_code": "017889",
+        "fund_name": "东方阿尔法招阳混合E"
+      },
+      {
+        "fund_code": "007041",
+        "fund_name": "前海联合泳涛混合C"
+      },
+      {
+        "fund_code": "001758",
+        "fund_name": "嘉实研究增强混合"
+      },
+      {
+        "fund_code": "014871",
+        "fund_name": "大摩科技领先混合C"
+      },
+      {
+        "fund_code": "009132",
+        "fund_name": "广发小盘成长混合(LOF)C"
+      },
+      {
+        "fund_code": "002067",
+        "fund_name": "诺安精选回报混合"
+      },
+      {
+        "fund_code": "013618",
+        "fund_name": "华安大安全主题混合C"
+      },
+      {
+        "fund_code": "002482",
+        "fund_name": "宝盈互联网沪港深混合"
+      },
+      {
+        "fund_code": "018075",
+        "fund_name": "长盛航天海工混合C"
+      },
+      {
+        "fund_code": "016256",
+        "fund_name": "中信保诚中小盘混合C"
+      },
+      {
+        "fund_code": "017752",
+        "fund_name": "长城创新成长混合C"
+      },
+      {
+        "fund_code": "020384",
+        "fund_name": "金信转型创新成长混合发起式C"
+      },
+      {
+        "fund_code": "008960",
+        "fund_name": "长信国防军工量化混合C"
+      },
+      {
+        "fund_code": "019374",
+        "fund_name": "广发睿杰精选混合发起式A1"
+      },
+      {
+        "fund_code": "005978",
+        "fund_name": "中信保诚至兴混合C"
+      },
+      {
+        "fund_code": "213008",
+        "fund_name": "宝盈资源优选混合"
+      },
+      {
+        "fund_code": "019220",
+        "fund_name": "中信保诚先进制造混合C"
+      },
+      {
+        "fund_code": "016616",
+        "fund_name": "国泰估值优势混合(LOF)C"
+      },
+      {
+        "fund_code": "008083",
+        "fund_name": "国寿安保研究精选混合C"
+      },
+      {
+        "fund_code": "021095",
+        "fund_name": "东方低碳经济混合C"
+      },
+      {
+        "fund_code": "481010",
+        "fund_name": "工银中小盘混合"
+      },
+      {
+        "fund_code": "000969",
+        "fund_name": "前海开源大安全混合"
+      },
+      {
+        "fund_code": "004605",
+        "fund_name": "富国新活力灵活配置混合C"
+      },
+      {
+        "fund_code": "023675",
+        "fund_name": "德邦新兴产业混合发起式C"
+      },
+      {
+        "fund_code": "018791",
+        "fund_name": "华泰柏瑞均衡成长混合C"
+      },
+      {
+        "fund_code": "020592",
+        "fund_name": "金信多策略精选混合C"
+      },
+      {
+        "fund_code": "163818",
+        "fund_name": "中银中小盘成长混合"
+      },
+      {
+        "fund_code": "001744",
+        "fund_name": "诺安进取回报混合"
+      },
+      {
+        "fund_code": "004375",
+        "fund_name": "华泰保兴吉年丰混合发起C"
+      },
+      {
+        "fund_code": "007632",
+        "fund_name": "华润元大安鑫灵活配置混合C"
+      },
+      {
+        "fund_code": "025351",
+        "fund_name": "诺安优选回报混合C"
+      },
+      {
+        "fund_code": "050012",
+        "fund_name": "博时策略混合"
+      },
+      {
+        "fund_code": "019362",
+        "fund_name": "富国核心优势混合发起式C"
+      },
+      {
+        "fund_code": "004671",
+        "fund_name": "国联核心成长"
+      },
+      {
+        "fund_code": "011389",
+        "fund_name": "国都聚成混合"
+      },
+      {
+        "fund_code": "011020",
+        "fund_name": "财通资管消费精选混合C"
+      },
+      {
+        "fund_code": "014575",
+        "fund_name": "鑫元清洁能源混合发起式C"
+      },
+      {
+        "fund_code": "016238",
+        "fund_name": "华夏数字经济龙头混合发起式C"
+      },
+      {
+        "fund_code": "003858",
+        "fund_name": "前海开源周期优选混合C"
+      },
+      {
+        "fund_code": "016120",
+        "fund_name": "华富时代锐选混合C"
+      },
+      {
+        "fund_code": "005934",
+        "fund_name": "前海联合先进制造混合C"
+      },
+      {
+        "fund_code": "004819",
+        "fund_name": "国寿安保目标策略混合发起C"
+      },
+      {
+        "fund_code": "012224",
+        "fund_name": "信澳成长精选混合C"
+      },
+      {
+        "fund_code": "001197",
+        "fund_name": "长盛转型升级主题灵活配置混合"
+      },
+      {
+        "fund_code": "012621",
+        "fund_name": "诺安先锋混合C"
+      },
+      {
+        "fund_code": "001407",
+        "fund_name": "景顺长城稳健回报混合C"
+      },
+      {
+        "fund_code": "213003",
+        "fund_name": "宝盈策略增长混合"
+      },
+      {
+        "fund_code": "004677",
+        "fund_name": "博时战略新兴产业混合"
+      },
+      {
+        "fund_code": "019114",
+        "fund_name": "东财慧心优选C"
+      },
+      {
+        "fund_code": "011978",
+        "fund_name": "格林研究优选混合C"
+      }
+    ],
+    "hunhe_jiaocha_zhou_yue": [
+      {
+        "fund_code": "000690",
+        "fund_name": "前海开源大海洋混合"
+      },
+      {
+        "fund_code": "007690",
+        "fund_name": "国投瑞银新能源混合C"
+      },
+      {
+        "fund_code": "012149",
+        "fund_name": "国投瑞银产业趋势混合C"
+      },
+      {
+        "fund_code": "001704",
+        "fund_name": "国投瑞银进宝灵活配置混合"
+      },
+      {
+        "fund_code": "006736",
+        "fund_name": "国投瑞银先进制造混合"
+      },
+      {
+        "fund_code": "015790",
+        "fund_name": "永赢高端装备智选混合发起C"
+      },
+      {
+        "fund_code": "018376",
+        "fund_name": "金信景气优选混合C"
+      },
+      {
+        "fund_code": "004605",
+        "fund_name": "富国新活力灵活配置混合C"
+      },
+      {
+        "fund_code": "014845",
+        "fund_name": "中银新趋势灵活配置混合C"
+      },
+      {
+        "fund_code": "024889",
+        "fund_name": "信澳优势行业混合C"
+      },
+      {
+        "fund_code": "017511",
+        "fund_name": "鹏华稳健回报混合C"
+      },
+      {
+        "fund_code": "018288",
+        "fund_name": "信澳优势产业混合C"
+      },
+      {
+        "fund_code": "013722",
+        "fund_name": "信澳景气优选混合C"
+      },
+      {
+        "fund_code": "019362",
+        "fund_name": "富国核心优势混合发起式C"
+      },
+      {
+        "fund_code": "016273",
+        "fund_name": "华泰保兴吉年红混合发起C"
+      },
+      {
+        "fund_code": "018140",
+        "fund_name": "中金先进制造混合C"
+      },
+      {
+        "fund_code": "008960",
+        "fund_name": "长信国防军工量化混合C"
+      },
+      {
+        "fund_code": "011712",
+        "fund_name": "大摩万众创新混合C"
+      },
+      {
+        "fund_code": "018791",
+        "fund_name": "华泰柏瑞均衡成长混合C"
+      },
+      {
+        "fund_code": "019213",
+        "fund_name": "华富物联世界灵活配置混合C"
+      },
+      {
+        "fund_code": "017698",
+        "fund_name": "华夏新材料龙头混合发起式C"
+      },
+      {
+        "fund_code": "001732",
+        "fund_name": "广发百发大数据价值混合E"
+      },
+      {
+        "fund_code": "013044",
+        "fund_name": "富国国家安全主题混合C"
+      },
+      {
+        "fund_code": "016924",
+        "fund_name": "广发百发大数据价值混合C"
+      },
+      {
+        "fund_code": "017752",
+        "fund_name": "长城创新成长混合C"
+      },
+      {
+        "fund_code": "009132",
+        "fund_name": "广发小盘成长混合(LOF)C"
+      },
+      {
+        "fund_code": "501080",
+        "fund_name": "中金科创主题灵活配置混合(LOF)"
+      },
+      {
+        "fund_code": "015772",
+        "fund_name": "银华互联网主题灵活配置混合C"
+      },
+      {
+        "fund_code": "002281",
+        "fund_name": "建信裕利灵活配置混合"
+      },
+      {
+        "fund_code": "010491",
+        "fund_name": "鹏华高质量增长混合C"
+      },
+      {
+        "fund_code": "019374",
+        "fund_name": "广发睿杰精选混合发起式A1"
+      },
+      {
+        "fund_code": "002164",
+        "fund_name": "汇添富新睿精选混合C"
+      },
+      {
+        "fund_code": "009854",
+        "fund_name": "中加优势企业混合C"
+      },
+      {
+        "fund_code": "024424",
+        "fund_name": "东方阿尔法科技优选混合发起C"
+      },
+      {
+        "fund_code": "007639",
+        "fund_name": "汇添富竞争优势灵活配置混合"
+      },
+      {
+        "fund_code": "020018",
+        "fund_name": "国泰金鹿混合"
+      },
+      {
+        "fund_code": "169201",
+        "fund_name": "浙商鼎盈事件驱动混合"
+      },
+      {
+        "fund_code": "050012",
+        "fund_name": "博时策略混合"
+      },
+      {
+        "fund_code": "112002",
+        "fund_name": "易方达策略成长二号混合"
+      },
+      {
+        "fund_code": "025647",
+        "fund_name": "平安高端装备混合发起式C"
+      },
+      {
+        "fund_code": "019258",
+        "fund_name": "恒越智选科技混合C"
+      },
+      {
+        "fund_code": "110002",
+        "fund_name": "易方达策略成长混合"
+      },
+      {
+        "fund_code": "011020",
+        "fund_name": "财通资管消费精选混合C"
+      },
+      {
+        "fund_code": "213008",
+        "fund_name": "宝盈资源优选混合"
+      },
+      {
+        "fund_code": "001742",
+        "fund_name": "广发百发大数据精选混合E"
+      },
+      {
+        "fund_code": "016780",
+        "fund_name": "国投瑞银锐意改革混合C"
+      },
+      {
+        "fund_code": "016874",
+        "fund_name": "广发远见智选混合C"
+      },
+      {
+        "fund_code": "014190",
+        "fund_name": "南方专精特新混合C"
+      },
+      {
+        "fund_code": "004677",
+        "fund_name": "博时战略新兴产业混合"
+      },
+      {
+        "fund_code": "021542",
+        "fund_name": "国投瑞银信息消费混合C"
+      },
+      {
+        "fund_code": "020206",
+        "fund_name": "民生加银双核动力混合C"
+      },
+      {
+        "fund_code": "018556",
+        "fund_name": "中银新经济灵活配置混合C"
+      },
+      {
+        "fund_code": "014601",
+        "fund_name": "博时回报严选混合C"
+      },
+      {
+        "fund_code": "020592",
+        "fund_name": "金信多策略精选混合C"
+      },
+      {
+        "fund_code": "015576",
+        "fund_name": "宏利绩优混合C"
+      },
+      {
+        "fund_code": "009048",
+        "fund_name": "浦银安盛科技创新优选混合"
+      },
+      {
+        "fund_code": "010023",
+        "fund_name": "广发制造业精选混合C"
+      },
+      {
+        "fund_code": "017103",
+        "fund_name": "大摩数字经济混合C"
+      },
+      {
+        "fund_code": "024434",
+        "fund_name": "嘉实成长共赢混合C"
+      },
+      {
+        "fund_code": "021528",
+        "fund_name": "财通成长优选混合C"
+      },
+      {
+        "fund_code": "021095",
+        "fund_name": "东方低碳经济混合C"
+      },
+      {
+        "fund_code": "165313",
+        "fund_name": "建信优势动力混合(LOF)"
+      },
+      {
+        "fund_code": "000969",
+        "fund_name": "前海开源大安全混合"
+      },
+      {
+        "fund_code": "005483",
+        "fund_name": "博时创新驱动混合C"
+      },
+      {
+        "fund_code": "017612",
+        "fund_name": "宏利复兴混合C"
+      },
+      {
+        "fund_code": "019514",
+        "fund_name": "交银荣鑫灵活配置混合C"
+      },
+      {
         "fund_code": "008641",
         "fund_name": "方正富邦科技创新C"
+      },
+      {
+        "fund_code": "019205",
+        "fund_name": "鹏华优质企业混合C"
+      },
+      {
+        "fund_code": "023675",
+        "fund_name": "德邦新兴产业混合发起式C"
+      },
+      {
+        "fund_code": "519158",
+        "fund_name": "新华趋势领航混合"
+      },
+      {
+        "fund_code": "003962",
+        "fund_name": "易方达瑞程灵活配置混合C"
+      },
+      {
+        "fund_code": "217020",
+        "fund_name": "招商安达灵活配置混合"
+      },
+      {
+        "fund_code": "015389",
+        "fund_name": "宝盈转型动力混合C"
+      },
+      {
+        "fund_code": "002112",
+        "fund_name": "德邦鑫星价值灵活配置混合C"
+      },
+      {
+        "fund_code": "024481",
+        "fund_name": "财通品质甄选混合C"
+      },
+      {
+        "fund_code": "000698",
+        "fund_name": "宝盈科技30混合"
+      },
+      {
+        "fund_code": "014871",
+        "fund_name": "大摩科技领先混合C"
+      },
+      {
+        "fund_code": "009828",
+        "fund_name": "融通转型三动力灵活配置混合C"
+      },
+      {
+        "fund_code": "005251",
+        "fund_name": "银华多元动力灵活配置混合"
+      },
+      {
+        "fund_code": "023452",
+        "fund_name": "中欧信息科技混合发起C"
+      },
+      {
+        "fund_code": "001407",
+        "fund_name": "景顺长城稳健回报混合C"
+      },
+      {
+        "fund_code": "003858",
+        "fund_name": "前海开源周期优选混合C"
+      },
+      {
+        "fund_code": "019120",
+        "fund_name": "财通资管产业优选混合发起式C"
+      },
+      {
+        "fund_code": "213003",
+        "fund_name": "宝盈策略增长混合"
+      },
+      {
+        "fund_code": "162201",
+        "fund_name": "宏利成长混合"
+      },
+      {
+        "fund_code": "002418",
+        "fund_name": "汇添富优选回报混合C"
+      },
+      {
+        "fund_code": "010741",
+        "fund_name": "汇安核心价值混合C"
+      },
+      {
+        "fund_code": "013108",
+        "fund_name": "华夏先进制造龙头混合C"
+      },
+      {
+        "fund_code": "000308",
+        "fund_name": "建信创新中国混合"
+      },
+      {
+        "fund_code": "009645",
+        "fund_name": "东方阿尔法优势产业混合C"
+      },
+      {
+        "fund_code": "014989",
+        "fund_name": "国泰新经济灵活配置混合C"
+      },
+      {
+        "fund_code": "016579",
+        "fund_name": "长安宏观策略混合C"
+      },
+      {
+        "fund_code": "015585",
+        "fund_name": "国泰优势行业混合C"
+      },
+      {
+        "fund_code": "016238",
+        "fund_name": "华夏数字经济龙头混合发起式C"
+      },
+      {
+        "fund_code": "010238",
+        "fund_name": "安信创新先锋混合发起C"
+      },
+      {
+        "fund_code": "010052",
+        "fund_name": "长城久嘉创新成长混合C"
+      },
+      {
+        "fund_code": "020441",
+        "fund_name": "东兴数字经济混合发起C"
+      },
+      {
+        "fund_code": "002580",
+        "fund_name": "泰信鑫选灵活配置混合C"
+      },
+      {
+        "fund_code": "010623",
+        "fund_name": "恒越成长精选混合C"
+      },
+      {
+        "fund_code": "014648",
+        "fund_name": "融通先进制造混合C"
+      },
+      {
+        "fund_code": "015689",
+        "fund_name": "富国价值增长混合C"
+      },
+      {
+        "fund_code": "290011",
+        "fund_name": "泰信中小盘精选混合"
+      },
+      {
+        "fund_code": "008963",
+        "fund_name": "建信科技创新混合C"
+      },
+      {
+        "fund_code": "013484",
+        "fund_name": "长城行业轮动混合C"
+      },
+      {
+        "fund_code": "021541",
+        "fund_name": "建信社会责任混合C"
+      },
+      {
+        "fund_code": "016263",
+        "fund_name": "银华高端制造业混合C"
+      },
+      {
+        "fund_code": "005551",
+        "fund_name": "汇安成长优选混合C"
+      },
+      {
+        "fund_code": "009063",
+        "fund_name": "财通智慧成长混合C"
+      },
+      {
+        "fund_code": "021523",
+        "fund_name": "财通价值动量混合C"
+      },
+      {
+        "fund_code": "570008",
+        "fund_name": "诺德周期策略混合"
+      },
+      {
+        "fund_code": "024207",
+        "fund_name": "信澳产业升级混合C"
+      },
+      {
+        "fund_code": "008989",
+        "fund_name": "大成科技创新混合C"
+      },
+      {
+        "fund_code": "011790",
+        "fund_name": "建信创新驱动混合"
+      },
+      {
+        "fund_code": "011487",
+        "fund_name": "博时创新精选混合C"
+      },
+      {
+        "fund_code": "000404",
+        "fund_name": "易方达新兴成长灵活配置"
+      },
+      {
+        "fund_code": "162214",
+        "fund_name": "宏利领先中小盘混合"
+      },
+      {
+        "fund_code": "501078",
+        "fund_name": "广发科创主题灵活配置混合(LOF)"
+      },
+      {
+        "fund_code": "013312",
+        "fund_name": "工银主题策略混合C"
+      },
+      {
+        "fund_code": "160226",
+        "fund_name": "国泰民益混合(LOF)C"
+      },
+      {
+        "fund_code": "024593",
+        "fund_name": "圆信永丰科技驱动混合发起C"
+      },
+      {
+        "fund_code": "501026",
+        "fund_name": "财通多策略福享混合(LOF)"
+      },
+      {
+        "fund_code": "013883",
+        "fund_name": "交银启明混合C"
+      },
+      {
+        "fund_code": "018836",
+        "fund_name": "广发成长启航混合C"
+      },
+      {
+        "fund_code": "015725",
+        "fund_name": "英大碳中和混合C"
+      },
+      {
+        "fund_code": "004671",
+        "fund_name": "国联核心成长"
+      },
+      {
+        "fund_code": "050009",
+        "fund_name": "博时新兴成长混合"
+      },
+      {
+        "fund_code": "016508",
+        "fund_name": "长城数字经济混合C"
+      },
+      {
+        "fund_code": "001388",
+        "fund_name": "国联新经济混合C"
+      },
+      {
+        "fund_code": "001701",
+        "fund_name": "国联产业升级混合"
+      },
+      {
+        "fund_code": "002482",
+        "fund_name": "宝盈互联网沪港深混合"
+      },
+      {
+        "fund_code": "673143",
+        "fund_name": "西部利得景程混合C"
+      },
+      {
+        "fund_code": "009883",
+        "fund_name": "华润元大核心动力混合C"
+      }
+    ],
+    "hunhe_jiaocha_ri_zhou_yue": [
+      {
+        "fund_code": "015790",
+        "fund_name": "永赢高端装备智选混合发起C"
+      },
+      {
+        "fund_code": "009854",
+        "fund_name": "中加优势企业混合C"
+      },
+      {
+        "fund_code": "000690",
+        "fund_name": "前海开源大海洋混合"
+      },
+      {
+        "fund_code": "016273",
+        "fund_name": "华泰保兴吉年红混合发起C"
+      },
+      {
+        "fund_code": "018376",
+        "fund_name": "金信景气优选混合C"
+      },
+      {
+        "fund_code": "010052",
+        "fund_name": "长城久嘉创新成长混合C"
+      },
+      {
+        "fund_code": "018140",
+        "fund_name": "中金先进制造混合C"
+      },
+      {
+        "fund_code": "002580",
+        "fund_name": "泰信鑫选灵活配置混合C"
+      },
+      {
+        "fund_code": "290011",
+        "fund_name": "泰信中小盘精选混合"
+      },
+      {
+        "fund_code": "025647",
+        "fund_name": "平安高端装备混合发起式C"
+      },
+      {
+        "fund_code": "013044",
+        "fund_name": "富国国家安全主题混合C"
+      },
+      {
+        "fund_code": "001732",
+        "fund_name": "广发百发大数据价值混合E"
+      },
+      {
+        "fund_code": "016924",
+        "fund_name": "广发百发大数据价值混合C"
+      },
+      {
+        "fund_code": "169201",
+        "fund_name": "浙商鼎盈事件驱动混合"
+      },
+      {
+        "fund_code": "501080",
+        "fund_name": "中金科创主题灵活配置混合(LOF)"
+      },
+      {
+        "fund_code": "017511",
+        "fund_name": "鹏华稳健回报混合C"
+      },
+      {
+        "fund_code": "019213",
+        "fund_name": "华富物联世界灵活配置混合C"
+      },
+      {
+        "fund_code": "019205",
+        "fund_name": "鹏华优质企业混合C"
+      },
+      {
+        "fund_code": "010491",
+        "fund_name": "鹏华高质量增长混合C"
+      },
+      {
+        "fund_code": "011712",
+        "fund_name": "大摩万众创新混合C"
+      },
+      {
+        "fund_code": "010741",
+        "fund_name": "汇安核心价值混合C"
+      },
+      {
+        "fund_code": "020206",
+        "fund_name": "民生加银双核动力混合C"
+      },
+      {
+        "fund_code": "014871",
+        "fund_name": "大摩科技领先混合C"
+      },
+      {
+        "fund_code": "009132",
+        "fund_name": "广发小盘成长混合(LOF)C"
+      },
+      {
+        "fund_code": "002482",
+        "fund_name": "宝盈互联网沪港深混合"
+      },
+      {
+        "fund_code": "017752",
+        "fund_name": "长城创新成长混合C"
+      },
+      {
+        "fund_code": "008960",
+        "fund_name": "长信国防军工量化混合C"
+      },
+      {
+        "fund_code": "019374",
+        "fund_name": "广发睿杰精选混合发起式A1"
+      },
+      {
+        "fund_code": "213008",
+        "fund_name": "宝盈资源优选混合"
+      },
+      {
+        "fund_code": "021095",
+        "fund_name": "东方低碳经济混合C"
+      },
+      {
+        "fund_code": "000969",
+        "fund_name": "前海开源大安全混合"
+      },
+      {
+        "fund_code": "004605",
+        "fund_name": "富国新活力灵活配置混合C"
+      },
+      {
+        "fund_code": "023675",
+        "fund_name": "德邦新兴产业混合发起式C"
+      },
+      {
+        "fund_code": "018791",
+        "fund_name": "华泰柏瑞均衡成长混合C"
+      },
+      {
+        "fund_code": "020592",
+        "fund_name": "金信多策略精选混合C"
+      },
+      {
+        "fund_code": "050012",
+        "fund_name": "博时策略混合"
+      },
+      {
+        "fund_code": "019362",
+        "fund_name": "富国核心优势混合发起式C"
+      },
+      {
+        "fund_code": "004671",
+        "fund_name": "国联核心成长"
+      },
+      {
+        "fund_code": "011020",
+        "fund_name": "财通资管消费精选混合C"
+      },
+      {
+        "fund_code": "016238",
+        "fund_name": "华夏数字经济龙头混合发起式C"
+      },
+      {
+        "fund_code": "003858",
+        "fund_name": "前海开源周期优选混合C"
+      },
+      {
+        "fund_code": "001407",
+        "fund_name": "景顺长城稳健回报混合C"
+      },
+      {
+        "fund_code": "213003",
+        "fund_name": "宝盈策略增长混合"
+      },
+      {
+        "fund_code": "004677",
+        "fund_name": "博时战略新兴产业混合"
+      }
+    ],
+    "zhaiquan_jiaocha_ri_zhou": [
+      {
+        "fund_code": "022585",
+        "fund_name": "申万菱信安泰景利纯债C"
+      },
+      {
+        "fund_code": "009466",
+        "fund_name": "东方可转债债券C"
+      },
+      {
+        "fund_code": "025464",
+        "fund_name": "国泰可转债债券D"
+      },
+      {
+        "fund_code": "007033",
+        "fund_name": "平安可转债债券C"
+      },
+      {
+        "fund_code": "050119",
+        "fund_name": "博时转债增强债券C"
+      },
+      {
+        "fund_code": "023165",
+        "fund_name": "博时转债增强债券E"
+      },
+      {
+        "fund_code": "006031",
+        "fund_name": "南方昌元可转债债券C"
+      },
+      {
+        "fund_code": "025400",
+        "fund_name": "南方昌元可转债债券B"
+      },
+      {
+        "fund_code": "007684",
+        "fund_name": "华商转债精选债券C"
+      },
+      {
+        "fund_code": "161625",
+        "fund_name": "融通可转债债券C"
+      },
+      {
+        "fund_code": "010964",
+        "fund_name": "鹏华可转债债券C"
+      },
+      {
+        "fund_code": "015723",
+        "fund_name": "长城久悦债券C"
+      },
+      {
+        "fund_code": "022156",
+        "fund_name": "鹏华可转债债券D"
+      },
+      {
+        "fund_code": "002587",
+        "fund_name": "金鹰添利信用债债券C"
+      },
+      {
+        "fund_code": "200113",
+        "fund_name": "长城积极增利债券C"
+      },
+      {
+        "fund_code": "022105",
+        "fund_name": "金鹰添利信用债债券E"
+      },
+      {
+        "fund_code": "025278",
+        "fund_name": "长城积极增利债券D"
+      },
+      {
+        "fund_code": "019540",
+        "fund_name": "富国可转换债券E"
+      },
+      {
+        "fund_code": "003511",
+        "fund_name": "长盛可转债债券C"
+      },
+      {
+        "fund_code": "003459",
+        "fund_name": "嘉实稳宏债券C"
+      },
+      {
+        "fund_code": "024213",
+        "fund_name": "嘉实稳宏债券D"
+      },
+      {
+        "fund_code": "004994",
+        "fund_name": "中欧可转债债券C"
+      },
+      {
+        "fund_code": "024077",
+        "fund_name": "南方希元可转债债券D"
+      },
+      {
+        "fund_code": "023928",
+        "fund_name": "中欧可转债债券E"
+      },
+      {
+        "fund_code": "019109",
+        "fund_name": "泰康丰盈债券C"
+      },
+      {
+        "fund_code": "019152",
+        "fund_name": "大成可转债增强债券C"
+      },
+      {
+        "fund_code": "023702",
+        "fund_name": "银华可转债债券D"
+      },
+      {
+        "fund_code": "519976",
+        "fund_name": "长信可转债债券C"
+      },
+      {
+        "fund_code": "002522",
+        "fund_name": "永赢双利债券C"
+      },
+      {
+        "fund_code": "019500",
+        "fund_name": "招商安瑞进取债券C"
+      },
+      {
+        "fund_code": "008817",
+        "fund_name": "华宝可转债债券C"
+      },
+      {
+        "fund_code": "025259",
+        "fund_name": "华宝可转债债券D"
+      },
+      {
+        "fund_code": "006619",
+        "fund_name": "长江可转债债券C"
+      },
+      {
+        "fund_code": "006102",
+        "fund_name": "浙商丰利增强债券"
+      },
+      {
+        "fund_code": "460003",
+        "fund_name": "华泰柏瑞稳本增利债券B"
+      },
+      {
+        "fund_code": "020502",
+        "fund_name": "华泰柏瑞稳本增利债券C"
+      },
+      {
+        "fund_code": "022127",
+        "fund_name": "华富可转债债券C"
+      },
+      {
+        "fund_code": "014336",
+        "fund_name": "金鹰元丰债券C"
+      },
+      {
+        "fund_code": "022568",
+        "fund_name": "金鹰元丰债券D"
+      },
+      {
+        "fund_code": "006148",
+        "fund_name": "宝盈融源可转债债券C"
+      },
+      {
+        "fund_code": "015748",
+        "fund_name": "上银可转债精选债券C"
+      },
+      {
+        "fund_code": "012887",
+        "fund_name": "华夏可转债增强债券C"
+      },
+      {
+        "fund_code": "006483",
+        "fund_name": "广发可转债债券C"
+      },
+      {
+        "fund_code": "010629",
+        "fund_name": "广发可转债债券E"
+      },
+      {
+        "fund_code": "022744",
+        "fund_name": "广发可转债债券D"
+      },
+      {
+        "fund_code": "164814",
+        "fund_name": "工银双债增强债券"
+      },
+      {
+        "fund_code": "003383",
+        "fund_name": "民生加银鑫享债券C"
+      },
+      {
+        "fund_code": "007955",
+        "fund_name": "民生加银鑫享债券D"
+      },
+      {
+        "fund_code": "005284",
+        "fund_name": "华商可转债债券C"
+      },
+      {
+        "fund_code": "002102",
+        "fund_name": "创金合信转债精选债券C"
+      },
+      {
+        "fund_code": "007317",
+        "fund_name": "交银可转债债券C"
+      },
+      {
+        "fund_code": "022730",
+        "fund_name": "创金合信转债精选债券E"
+      },
+      {
+        "fund_code": "690202",
+        "fund_name": "民生增强收益债券C"
+      },
+      {
+        "fund_code": "040013",
+        "fund_name": "华安强化收益债券B"
+      },
+      {
+        "fund_code": "000004",
+        "fund_name": "中海可转债债券C"
+      },
+      {
+        "fund_code": "002972",
+        "fund_name": "前海开源鼎安债券C"
+      },
+      {
+        "fund_code": "202107",
+        "fund_name": "南方广利回报债券C"
+      },
+      {
+        "fund_code": "019095",
+        "fund_name": "东方双债添利债券D"
+      },
+      {
+        "fund_code": "400029",
+        "fund_name": "东方双债添利债券C"
+      },
+      {
+        "fund_code": "023618",
+        "fund_name": "富国天丰强化债券(LOF)C"
+      },
+      {
+        "fund_code": "002406",
+        "fund_name": "光大中高等级债券C"
+      },
+      {
+        "fund_code": "161506",
+        "fund_name": "银河通利债券(LOF)C"
+      },
+      {
+        "fund_code": "531020",
+        "fund_name": "建信转债增强债券C"
+      },
+      {
+        "fund_code": "006141",
+        "fund_name": "广发集嘉债券C"
+      },
+      {
+        "fund_code": "360014",
+        "fund_name": "光大信用添益债券C"
+      },
+      {
+        "fund_code": "003134",
+        "fund_name": "易方达裕鑫债券C"
+      },
+      {
+        "fund_code": "007610",
+        "fund_name": "汇安嘉诚债券C"
+      },
+      {
+        "fund_code": "610108",
+        "fund_name": "信澳信用债债券C"
+      },
+      {
+        "fund_code": "008346",
+        "fund_name": "南华瑞泽债券C"
+      },
+      {
+        "fund_code": "008332",
+        "fund_name": "万家可转债债券C"
+      },
+      {
+        "fund_code": "012819",
+        "fund_name": "招商享诚增强债券C"
+      },
+      {
+        "fund_code": "024989",
+        "fund_name": "信澳信用债债券F"
+      },
+      {
+        "fund_code": "025133",
+        "fund_name": "万家可转债债券D"
+      },
+      {
+        "fund_code": "163817",
+        "fund_name": "中银转债增强债券B"
+      },
+      {
+        "fund_code": "003198",
+        "fund_name": "光大安诚债券C"
+      },
+      {
+        "fund_code": "550019",
+        "fund_name": "中信保诚优质纯债债券B"
+      },
+      {
+        "fund_code": "020414",
+        "fund_name": "中信保诚优质纯债债券I"
+      },
+      {
+        "fund_code": "023688",
+        "fund_name": "中信保诚优质纯债债券D"
+      },
+      {
+        "fund_code": "050006",
+        "fund_name": "博时稳定价值债券B"
+      },
+      {
+        "fund_code": "003204",
+        "fund_name": "财通收益增强债券C"
+      },
+      {
+        "fund_code": "001087",
+        "fund_name": "华富恒利债券C"
+      },
+      {
+        "fund_code": "013558",
+        "fund_name": "长信利富债券C"
+      },
+      {
+        "fund_code": "013788",
+        "fund_name": "华泰柏瑞信用增利债(LOF)B"
+      },
+      {
+        "fund_code": "050123",
+        "fund_name": "博时天颐债券C"
+      },
+      {
+        "fund_code": "005580",
+        "fund_name": "光大晟利债券C"
+      },
+      {
+        "fund_code": "025163",
+        "fund_name": "长盛积极配置债券C"
+      },
+      {
+        "fund_code": "240013",
+        "fund_name": "华宝增强收益债券B"
+      },
+      {
+        "fund_code": "022830",
+        "fund_name": "华富安鑫债券C"
+      },
+      {
+        "fund_code": "003205",
+        "fund_name": "财通可转债债券C"
+      },
+      {
+        "fund_code": "630109",
+        "fund_name": "华商稳定增利债券C"
+      },
+      {
+        "fund_code": "002474",
+        "fund_name": "中邮睿信增强债"
+      },
+      {
+        "fund_code": "000048",
+        "fund_name": "华夏双债债券C"
+      },
+      {
+        "fund_code": "233013",
+        "fund_name": "大摩多元收益债券C"
+      },
+      {
+        "fund_code": "023409",
+        "fund_name": "银河强化债券C"
+      },
+      {
+        "fund_code": "470059",
+        "fund_name": "汇添富可转换债券C"
+      },
+      {
+        "fund_code": "025413",
+        "fund_name": "汇添富可转换债券D"
+      },
+      {
+        "fund_code": "020508",
+        "fund_name": "嘉实债券C"
+      },
+      {
+        "fund_code": "217008",
+        "fund_name": "招商安本增利债券C"
+      },
+      {
+        "fund_code": "000068",
+        "fund_name": "民生加银转债优选C"
+      },
+      {
+        "fund_code": "040023",
+        "fund_name": "华安可转债债券B"
+      },
+      {
+        "fund_code": "009520",
+        "fund_name": "中欧鼎利债券C"
+      },
+      {
+        "fund_code": "009519",
+        "fund_name": "中欧鼎利债券E"
+      },
+      {
+        "fund_code": "014493",
+        "fund_name": "浙商汇金兴利增强债券C"
+      },
+      {
+        "fund_code": "021434",
+        "fund_name": "融通通福债券(LOF)D"
+      },
+      {
+        "fund_code": "022171",
+        "fund_name": "富国新天锋债券(LOF)E"
+      },
+      {
+        "fund_code": "050111",
+        "fund_name": "博时信用债券C"
+      },
+      {
+        "fund_code": "001752",
+        "fund_name": "华商信用增强债券C"
+      },
+      {
+        "fund_code": "002277",
+        "fund_name": "中邮纯债恒利债券C"
+      },
+      {
+        "fund_code": "004953",
+        "fund_name": "兴全恒益债券C"
+      },
+      {
+        "fund_code": "009637",
+        "fund_name": "招商信用添利债券(LOF)C"
+      },
+      {
+        "fund_code": "161627",
+        "fund_name": "融通通福债券(LOF)C"
+      },
+      {
+        "fund_code": "008398",
+        "fund_name": "汇添富鑫福债"
+      },
+      {
+        "fund_code": "022760",
+        "fund_name": "华富安享债券C"
+      },
+      {
+        "fund_code": "023513",
+        "fund_name": "银华增强收益债券D"
+      },
+      {
+        "fund_code": "023823",
+        "fund_name": "银华增强收益债券C"
+      },
+      {
+        "fund_code": "261101",
+        "fund_name": "景顺长城稳定收益债券C"
+      },
+      {
+        "fund_code": "217203",
+        "fund_name": "招商安泰债券B"
+      },
+      {
+        "fund_code": "660109",
+        "fund_name": "农银增强收益债券C"
+      },
+      {
+        "fund_code": "001863",
+        "fund_name": "东方红收益增强债券C"
+      },
+      {
+        "fund_code": "002460",
+        "fund_name": "华夏鼎利债券发起式C"
+      },
+      {
+        "fund_code": "675013",
+        "fund_name": "西部利得稳健双利债券C"
+      },
+      {
+        "fund_code": "000812",
+        "fund_name": "富国收益增强债券C"
+      },
+      {
+        "fund_code": "003505",
+        "fund_name": "景顺长城景颐丰利债券C"
+      },
+      {
+        "fund_code": "006899",
+        "fund_name": "天弘弘丰增强回报债券C"
+      },
+      {
+        "fund_code": "013391",
+        "fund_name": "招商安泰债券D"
+      },
+      {
+        "fund_code": "022229",
+        "fund_name": "富国兴利增强债券E"
+      },
+      {
+        "fund_code": "023512",
+        "fund_name": "景顺长城景颐丰利债券F"
+      },
+      {
+        "fund_code": "025562",
+        "fund_name": "大摩灵动优选债券E"
+      },
+      {
+        "fund_code": "013149",
+        "fund_name": "鹏华双债加利债券C"
+      },
+      {
+        "fund_code": "014868",
+        "fund_name": "大摩灵动优选债券C"
+      },
+      {
+        "fund_code": "018500",
+        "fund_name": "兴银收益增强C"
+      },
+      {
+        "fund_code": "022226",
+        "fund_name": "鹏华双债加利债券D"
+      },
+      {
+        "fund_code": "006867",
+        "fund_name": "易方达丰华债券C"
+      },
+      {
+        "fund_code": "022251",
+        "fund_name": "中信保诚增强收益债券(LOF)C"
+      },
+      {
+        "fund_code": "022159",
+        "fund_name": "富国丰利增强债券E"
+      },
+      {
+        "fund_code": "011417",
+        "fund_name": "恒越嘉鑫债券C"
+      },
+      {
+        "fund_code": "016671",
+        "fund_name": "博时恒耀债券C"
+      },
+      {
+        "fund_code": "017771",
+        "fund_name": "华夏聚利债券C"
+      },
+      {
+        "fund_code": "020962",
+        "fund_name": "中信保诚双盈债券(LOF)D"
+      },
+      {
+        "fund_code": "021841",
+        "fund_name": "海富通集利纯债债券C"
+      },
+      {
+        "fund_code": "023615",
+        "fund_name": "银华远景债券D"
+      },
+      {
+        "fund_code": "008476",
+        "fund_name": "招商民安增益债券C"
+      },
+      {
+        "fund_code": "020788",
+        "fund_name": "国寿安保泰裕债券C"
+      },
+      {
+        "fund_code": "024103",
+        "fund_name": "浙商汇金锦利增强30天持有期债券C"
+      },
+      {
+        "fund_code": "160514",
+        "fund_name": "博时稳健回报债券(LOF)C"
+      },
+      {
+        "fund_code": "519933",
+        "fund_name": "长信利发债券"
+      },
+      {
+        "fund_code": "025336",
+        "fund_name": "博时稳健回报债券(LOF)E"
+      },
+      {
+        "fund_code": "007834",
+        "fund_name": "长盛稳怡添利债券C"
+      },
+      {
+        "fund_code": "017584",
+        "fund_name": "鑫元聚鑫收益增强D"
+      },
+      {
+        "fund_code": "022484",
+        "fund_name": "金鹰元祺债券C"
+      },
+      {
+        "fund_code": "000897",
+        "fund_name": "鑫元聚鑫收益增强C"
+      },
+      {
+        "fund_code": "017135",
+        "fund_name": "博道和祥多元稳健债券C"
+      },
+      {
+        "fund_code": "019486",
+        "fund_name": "金元顺安沣泉债券C"
+      },
+      {
+        "fund_code": "022534",
+        "fund_name": "景顺长城稳定收益债券F"
+      },
+      {
+        "fund_code": "519666",
+        "fund_name": "银河银信债券B"
+      },
+      {
+        "fund_code": "202102",
+        "fund_name": "南方多利增强债券C"
+      },
+      {
+        "fund_code": "003135",
+        "fund_name": "金元顺安沣楹债券"
+      },
+      {
+        "fund_code": "008557",
+        "fund_name": "易方达裕富债券C"
+      },
+      {
+        "fund_code": "010053",
+        "fund_name": "安信聚利增强债券B"
+      },
+      {
+        "fund_code": "952320",
+        "fund_name": "国泰海通君得盈债券C"
+      },
+      {
+        "fund_code": "023210",
+        "fund_name": "国泰海通君得盈债券D"
+      },
+      {
+        "fund_code": "023792",
+        "fund_name": "国投瑞银双债债券D"
+      },
+      {
+        "fund_code": "070020",
+        "fund_name": "嘉实稳固收益债券C"
+      },
+      {
+        "fund_code": "161221",
+        "fund_name": "国投瑞银双债债券C"
+      },
+      {
+        "fund_code": "531009",
+        "fund_name": "建信收益增强债券C"
+      },
+      {
+        "fund_code": "000378",
+        "fund_name": "摩根双债增利债券C"
+      },
+      {
+        "fund_code": "003336",
+        "fund_name": "长江收益增强债券"
+      },
+      {
+        "fund_code": "164105",
+        "fund_name": "华富强化回报债券(LOF)"
+      },
+      {
+        "fund_code": "004808",
+        "fund_name": "中银证券安弘债券C"
+      },
+      {
+        "fund_code": "003302",
+        "fund_name": "华夏鼎融债券C"
+      },
+      {
+        "fund_code": "006840",
+        "fund_name": "安信聚利增强债券C"
+      },
+      {
+        "fund_code": "013205",
+        "fund_name": "恒生前海恒源天利债券C"
+      },
+      {
+        "fund_code": "005367",
+        "fund_name": "摩根丰瑞债券C"
+      },
+      {
+        "fund_code": "018980",
+        "fund_name": "富国优化增强债券E"
+      },
+      {
+        "fund_code": "021493",
+        "fund_name": "摩根丰瑞债券D"
+      },
+      {
+        "fund_code": "022577",
+        "fund_name": "鹏华信用增利债券D"
+      },
+      {
+        "fund_code": "024212",
+        "fund_name": "嘉实稳固收益债券D"
+      },
+      {
+        "fund_code": "023813",
+        "fund_name": "摩根双债增利债券D"
+      },
+      {
+        "fund_code": "164902",
+        "fund_name": "交银信用添利债券(LOF)"
+      },
+      {
+        "fund_code": "206004",
+        "fund_name": "鹏华信用增利债券B"
+      },
+      {
+        "fund_code": "163812",
+        "fund_name": "中银双利债券B"
+      },
+      {
+        "fund_code": "004486",
+        "fund_name": "嘉实稳怡债券"
+      },
+      {
+        "fund_code": "022357",
+        "fund_name": "富国盛利增强债券发起式E"
+      },
+      {
+        "fund_code": "000123",
+        "fund_name": "汇添富实业债债券C"
+      },
+      {
+        "fund_code": "000338",
+        "fund_name": "鹏华双债保利债券B"
+      },
+      {
+        "fund_code": "162105",
+        "fund_name": "金鹰持久增利债券(LOF)C"
+      },
+      {
+        "fund_code": "004267",
+        "fund_name": "金鹰持久增利债券(LOF)E"
+      },
+      {
+        "fund_code": "004428",
+        "fund_name": "交银增利增强债券C"
+      },
+      {
+        "fund_code": "008045",
+        "fund_name": "博远增强回报债券C"
+      },
+      {
+        "fund_code": "630107",
+        "fund_name": "华商稳健双利债券B"
+      }
+    ],
+    "zhaiquan_jiaocha_zhou_yue": [
+      {
+        "fund_code": "022568",
+        "fund_name": "金鹰元丰债券D"
+      },
+      {
+        "fund_code": "014336",
+        "fund_name": "金鹰元丰债券C"
+      },
+      {
+        "fund_code": "025400",
+        "fund_name": "南方昌元可转债债券B"
+      },
+      {
+        "fund_code": "006031",
+        "fund_name": "南方昌元可转债债券C"
+      },
+      {
+        "fund_code": "009466",
+        "fund_name": "东方可转债债券C"
+      },
+      {
+        "fund_code": "015167",
+        "fund_name": "申万菱信可转债债券C"
+      },
+      {
+        "fund_code": "025464",
+        "fund_name": "国泰可转债债券D"
+      },
+      {
+        "fund_code": "022156",
+        "fund_name": "鹏华可转债债券D"
+      },
+      {
+        "fund_code": "010964",
+        "fund_name": "鹏华可转债债券C"
+      },
+      {
+        "fund_code": "005284",
+        "fund_name": "华商可转债债券C"
+      },
+      {
+        "fund_code": "024213",
+        "fund_name": "嘉实稳宏债券D"
+      },
+      {
+        "fund_code": "003459",
+        "fund_name": "嘉实稳宏债券C"
+      },
+      {
+        "fund_code": "690202",
+        "fund_name": "民生增强收益债券C"
+      },
+      {
+        "fund_code": "015723",
+        "fund_name": "长城久悦债券C"
+      },
+      {
+        "fund_code": "050119",
+        "fund_name": "博时转债增强债券C"
+      },
+      {
+        "fund_code": "202107",
+        "fund_name": "南方广利回报债券C"
+      },
+      {
+        "fund_code": "023165",
+        "fund_name": "博时转债增强债券E"
+      },
+      {
+        "fund_code": "012887",
+        "fund_name": "华夏可转债增强债券C"
+      },
+      {
+        "fund_code": "007033",
+        "fund_name": "平安可转债债券C"
+      },
+      {
+        "fund_code": "240013",
+        "fund_name": "华宝增强收益债券B"
+      },
+      {
+        "fund_code": "019540",
+        "fund_name": "富国可转换债券E"
+      },
+      {
+        "fund_code": "519976",
+        "fund_name": "长信可转债债券C"
+      },
+      {
+        "fund_code": "003383",
+        "fund_name": "民生加银鑫享债券C"
+      },
+      {
+        "fund_code": "007955",
+        "fund_name": "民生加银鑫享债券D"
+      },
+      {
+        "fund_code": "000004",
+        "fund_name": "中海可转债债券C"
+      },
+      {
+        "fund_code": "002522",
+        "fund_name": "永赢双利债券C"
+      },
+      {
+        "fund_code": "000048",
+        "fund_name": "华夏双债债券C"
+      },
+      {
+        "fund_code": "024077",
+        "fund_name": "南方希元可转债债券D"
+      },
+      {
+        "fund_code": "531020",
+        "fund_name": "建信转债增强债券C"
+      },
+      {
+        "fund_code": "019109",
+        "fund_name": "泰康丰盈债券C"
+      },
+      {
+        "fund_code": "002587",
+        "fund_name": "金鹰添利信用债债券C"
+      },
+      {
+        "fund_code": "022105",
+        "fund_name": "金鹰添利信用债债券E"
+      },
+      {
+        "fund_code": "010629",
+        "fund_name": "广发可转债债券E"
+      },
+      {
+        "fund_code": "022744",
+        "fund_name": "广发可转债债券D"
+      },
+      {
+        "fund_code": "006483",
+        "fund_name": "广发可转债债券C"
+      },
+      {
+        "fund_code": "003511",
+        "fund_name": "长盛可转债债券C"
+      },
+      {
+        "fund_code": "023702",
+        "fund_name": "银华可转债债券D"
+      },
+      {
+        "fund_code": "006102",
+        "fund_name": "浙商丰利增强债券"
+      },
+      {
+        "fund_code": "019152",
+        "fund_name": "大成可转债增强债券C"
+      },
+      {
+        "fund_code": "004994",
+        "fund_name": "中欧可转债债券C"
+      },
+      {
+        "fund_code": "023928",
+        "fund_name": "中欧可转债债券E"
+      },
+      {
+        "fund_code": "025133",
+        "fund_name": "万家可转债债券D"
+      },
+      {
+        "fund_code": "008332",
+        "fund_name": "万家可转债债券C"
+      },
+      {
+        "fund_code": "022127",
+        "fund_name": "华富可转债债券C"
+      },
+      {
+        "fund_code": "014116",
+        "fund_name": "上银慧恒收益增强债券C"
+      },
+      {
+        "fund_code": "025163",
+        "fund_name": "长盛积极配置债券C"
+      },
+      {
+        "fund_code": "161625",
+        "fund_name": "融通可转债债券C"
+      },
+      {
+        "fund_code": "200113",
+        "fund_name": "长城积极增利债券C"
+      },
+      {
+        "fund_code": "025278",
+        "fund_name": "长城积极增利债券D"
+      },
+      {
+        "fund_code": "006619",
+        "fund_name": "长江可转债债券C"
+      },
+      {
+        "fund_code": "003198",
+        "fund_name": "光大安诚债券C"
+      },
+      {
+        "fund_code": "025259",
+        "fund_name": "华宝可转债债券D"
+      },
+      {
+        "fund_code": "008817",
+        "fund_name": "华宝可转债债券C"
+      },
+      {
+        "fund_code": "007684",
+        "fund_name": "华商转债精选债券C"
+      },
+      {
+        "fund_code": "019500",
+        "fund_name": "招商安瑞进取债券C"
+      },
+      {
+        "fund_code": "630109",
+        "fund_name": "华商稳定增利债券C"
+      },
+      {
+        "fund_code": "164814",
+        "fund_name": "工银双债增强债券"
+      },
+      {
+        "fund_code": "025413",
+        "fund_name": "汇添富可转换债券D"
+      },
+      {
+        "fund_code": "470059",
+        "fund_name": "汇添富可转换债券C"
+      },
+      {
+        "fund_code": "007317",
+        "fund_name": "交银可转债债券C"
+      },
+      {
+        "fund_code": "006148",
+        "fund_name": "宝盈融源可转债债券C"
+      },
+      {
+        "fund_code": "007610",
+        "fund_name": "汇安嘉诚债券C"
+      },
+      {
+        "fund_code": "003204",
+        "fund_name": "财通收益增强债券C"
+      },
+      {
+        "fund_code": "162105",
+        "fund_name": "金鹰持久增利债券(LOF)C"
+      },
+      {
+        "fund_code": "004267",
+        "fund_name": "金鹰持久增利债券(LOF)E"
+      },
+      {
+        "fund_code": "024989",
+        "fund_name": "信澳信用债债券F"
+      },
+      {
+        "fund_code": "017771",
+        "fund_name": "华夏聚利债券C"
+      },
+      {
+        "fund_code": "610108",
+        "fund_name": "信澳信用债债券C"
+      },
+      {
+        "fund_code": "161506",
+        "fund_name": "银河通利债券(LOF)C"
+      },
+      {
+        "fund_code": "022226",
+        "fund_name": "鹏华双债加利债券D"
+      },
+      {
+        "fund_code": "013149",
+        "fund_name": "鹏华双债加利债券C"
+      },
+      {
+        "fund_code": "001752",
+        "fund_name": "华商信用增强债券C"
+      },
+      {
+        "fund_code": "022585",
+        "fund_name": "申万菱信安泰景利纯债C"
+      },
+      {
+        "fund_code": "012627",
+        "fund_name": "申万菱信汇元宝债券C"
+      },
+      {
+        "fund_code": "023618",
+        "fund_name": "富国天丰强化债券(LOF)C"
+      },
+      {
+        "fund_code": "002972",
+        "fund_name": "前海开源鼎安债券C"
+      },
+      {
+        "fund_code": "019095",
+        "fund_name": "东方双债添利债券D"
+      },
+      {
+        "fund_code": "400029",
+        "fund_name": "东方双债添利债券C"
+      },
+      {
+        "fund_code": "460003",
+        "fund_name": "华泰柏瑞稳本增利债券B"
+      },
+      {
+        "fund_code": "020502",
+        "fund_name": "华泰柏瑞稳本增利债券C"
+      },
+      {
+        "fund_code": "005946",
+        "fund_name": "工银可转债优选债券C"
+      },
+      {
+        "fund_code": "008346",
+        "fund_name": "南华瑞泽债券C"
+      },
+      {
+        "fund_code": "022760",
+        "fund_name": "华富安享债券C"
+      },
+      {
+        "fund_code": "022730",
+        "fund_name": "创金合信转债精选债券E"
+      },
+      {
+        "fund_code": "003134",
+        "fund_name": "易方达裕鑫债券C"
+      },
+      {
+        "fund_code": "014493",
+        "fund_name": "浙商汇金兴利增强债券C"
+      },
+      {
+        "fund_code": "013558",
+        "fund_name": "长信利富债券C"
+      },
+      {
+        "fund_code": "003505",
+        "fund_name": "景顺长城景颐丰利债券C"
+      },
+      {
+        "fund_code": "023512",
+        "fund_name": "景顺长城景颐丰利债券F"
+      },
+      {
+        "fund_code": "163817",
+        "fund_name": "中银转债增强债券B"
+      },
+      {
+        "fund_code": "022229",
+        "fund_name": "富国兴利增强债券E"
+      },
+      {
+        "fund_code": "022830",
+        "fund_name": "华富安鑫债券C"
+      },
+      {
+        "fund_code": "002474",
+        "fund_name": "中邮睿信增强债"
+      },
+      {
+        "fund_code": "018980",
+        "fund_name": "富国优化增强债券E"
+      },
+      {
+        "fund_code": "013205",
+        "fund_name": "恒生前海恒源天利债券C"
+      },
+      {
+        "fund_code": "470011",
+        "fund_name": "汇添富多元收益债券C"
+      },
+      {
+        "fund_code": "021772",
+        "fund_name": "汇添富双利增强债券D"
+      },
+      {
+        "fund_code": "025414",
+        "fund_name": "汇添富双利增强债券B"
+      },
+      {
+        "fund_code": "000407",
+        "fund_name": "汇添富双利增强债券C"
+      },
+      {
+        "fund_code": "002460",
+        "fund_name": "华夏鼎利债券发起式C"
+      },
+      {
+        "fund_code": "630107",
+        "fund_name": "华商稳健双利债券B"
+      },
+      {
+        "fund_code": "016580",
+        "fund_name": "万家双利债券C"
+      },
+      {
+        "fund_code": "023210",
+        "fund_name": "国泰海通君得盈债券D"
+      },
+      {
+        "fund_code": "952320",
+        "fund_name": "国泰海通君得盈债券C"
+      },
+      {
+        "fund_code": "010015",
+        "fund_name": "华夏鼎清债券C"
+      },
+      {
+        "fund_code": "009519",
+        "fund_name": "中欧鼎利债券E"
+      },
+      {
+        "fund_code": "012747",
+        "fund_name": "富国双利增强债券C"
+      },
+      {
+        "fund_code": "016720",
+        "fund_name": "富国稳健双盈债券发起式C"
+      },
+      {
+        "fund_code": "009520",
+        "fund_name": "中欧鼎利债券C"
+      },
+      {
+        "fund_code": "003135",
+        "fund_name": "金元顺安沣楹债券"
+      },
+      {
+        "fund_code": "016367",
+        "fund_name": "嘉实多利收益债券C"
+      },
+      {
+        "fund_code": "110028",
+        "fund_name": "易方达安心回报债券B"
+      },
+      {
+        "fund_code": "162299",
+        "fund_name": "宏利集利债券C"
+      },
+      {
+        "fund_code": "675123",
+        "fund_name": "西部利得汇逸债券C"
+      },
+      {
+        "fund_code": "217008",
+        "fund_name": "招商安本增利债券C"
+      },
+      {
+        "fund_code": "000812",
+        "fund_name": "富国收益增强债券C"
+      },
+      {
+        "fund_code": "004808",
+        "fund_name": "中银证券安弘债券C"
+      },
+      {
+        "fund_code": "202102",
+        "fund_name": "南方多利增强债券C"
+      },
+      {
+        "fund_code": "022159",
+        "fund_name": "富国丰利增强债券E"
+      },
+      {
+        "fund_code": "018500",
+        "fund_name": "兴银收益增强C"
+      },
+      {
+        "fund_code": "025410",
+        "fund_name": "汇添富双享回报债券D"
+      },
+      {
+        "fund_code": "012790",
+        "fund_name": "汇添富双享回报债券C"
+      },
+      {
+        "fund_code": "018403",
+        "fund_name": "富国稳健添利债券E"
+      },
+      {
+        "fund_code": "675013",
+        "fund_name": "西部利得稳健双利债券C"
+      },
+      {
+        "fund_code": "023409",
+        "fund_name": "银河强化债券C"
+      },
+      {
+        "fund_code": "002637",
+        "fund_name": "广发集裕债券C"
+      },
+      {
+        "fund_code": "016699",
+        "fund_name": "易方达丰和债券C"
+      },
+      {
+        "fund_code": "019486",
+        "fund_name": "金元顺安沣泉债券C"
+      },
+      {
+        "fund_code": "016479",
+        "fund_name": "易方达裕丰回报债券C"
+      },
+      {
+        "fund_code": "050111",
+        "fund_name": "博时信用债券C"
+      },
+      {
+        "fund_code": "024107",
+        "fund_name": "万家裕利债券C"
+      },
+      {
+        "fund_code": "004953",
+        "fund_name": "兴全恒益债券C"
+      },
+      {
+        "fund_code": "007834",
+        "fund_name": "长盛稳怡添利债券C"
+      },
+      {
+        "fund_code": "008727",
+        "fund_name": "平安添裕债券C"
+      },
+      {
+        "fund_code": "013788",
+        "fund_name": "华泰柏瑞信用增利债(LOF)B"
+      },
+      {
+        "fund_code": "233013",
+        "fund_name": "大摩多元收益债券C"
+      },
+      {
+        "fund_code": "008476",
+        "fund_name": "招商民安增益债券C"
+      },
+      {
+        "fund_code": "023578",
+        "fund_name": "平安添裕债券E"
+      },
+      {
+        "fund_code": "010474",
+        "fund_name": "华富安华债券C"
+      },
+      {
+        "fund_code": "023513",
+        "fund_name": "银华增强收益债券D"
+      },
+      {
+        "fund_code": "023823",
+        "fund_name": "银华增强收益债券C"
+      },
+      {
+        "fund_code": "024103",
+        "fund_name": "浙商汇金锦利增强30天持有期债券C"
+      },
+      {
+        "fund_code": "004572",
+        "fund_name": "万家家瑞债券C"
+      },
+      {
+        "fund_code": "021992",
+        "fund_name": "新华双利债券E"
+      },
+      {
+        "fund_code": "015932",
+        "fund_name": "金鹰恒润债券发起式C"
+      },
+      {
+        "fund_code": "017584",
+        "fund_name": "鑫元聚鑫收益增强D"
+      },
+      {
+        "fund_code": "000897",
+        "fund_name": "鑫元聚鑫收益增强C"
+      },
+      {
+        "fund_code": "050116",
+        "fund_name": "博时宏观回报债券C"
+      },
+      {
+        "fund_code": "016671",
+        "fund_name": "博时恒耀债券C"
+      },
+      {
+        "fund_code": "020508",
+        "fund_name": "嘉实债券C"
+      },
+      {
+        "fund_code": "006867",
+        "fund_name": "易方达丰华债券C"
+      },
+      {
+        "fund_code": "020219",
+        "fund_name": "万家锦利债券发起式C"
+      },
+      {
+        "fund_code": "163812",
+        "fund_name": "中银双利债券B"
+      },
+      {
+        "fund_code": "004486",
+        "fund_name": "嘉实稳怡债券"
+      },
+      {
+        "fund_code": "016820",
+        "fund_name": "长信先优债券C"
+      },
+      {
+        "fund_code": "160641",
+        "fund_name": "鹏华丰锐债券LOF"
+      },
+      {
+        "fund_code": "008557",
+        "fund_name": "易方达裕富债券C"
+      },
+      {
+        "fund_code": "013629",
+        "fund_name": "广发集悦债券C"
+      },
+      {
+        "fund_code": "024008",
+        "fund_name": "圆信永丰瑞盈债券E"
+      },
+      {
+        "fund_code": "023615",
+        "fund_name": "银华远景债券D"
+      },
+      {
+        "fund_code": "018841",
+        "fund_name": "汇添富稳元回报债券发起式C"
+      },
+      {
+        "fund_code": "020832",
+        "fund_name": "圆信永丰瑞盈债券C"
+      },
+      {
+        "fund_code": "014720",
+        "fund_name": "长江聚利债券型C"
+      },
+      {
+        "fund_code": "021883",
+        "fund_name": "南方宝元债券E"
+      },
+      {
+        "fund_code": "022171",
+        "fund_name": "富国新天锋债券(LOF)E"
+      },
+      {
+        "fund_code": "006585",
+        "fund_name": "南方宝元债券C"
+      },
+      {
+        "fund_code": "008045",
+        "fund_name": "博远增强回报债券C"
+      },
+      {
+        "fund_code": "013720",
+        "fund_name": "新华增怡债券E"
+      },
+      {
+        "fund_code": "015540",
+        "fund_name": "富国元利债券C"
+      },
+      {
+        "fund_code": "019584",
+        "fund_name": "富国稳健添辰债券C"
+      },
+      {
+        "fund_code": "006739",
+        "fund_name": "工银瑞信添慧债券C"
+      },
+      {
+        "fund_code": "023792",
+        "fund_name": "国投瑞银双债债券D"
+      },
+      {
+        "fund_code": "161221",
+        "fund_name": "国投瑞银双债债券C"
+      },
+      {
+        "fund_code": "005272",
+        "fund_name": "安信恒利增强债券C"
+      },
+      {
+        "fund_code": "519933",
+        "fund_name": "长信利发债券"
+      },
+      {
+        "fund_code": "450006",
+        "fund_name": "国富强化收益债券C"
+      },
+      {
+        "fund_code": "017718",
+        "fund_name": "嘉实多盈债券C"
+      },
+      {
+        "fund_code": "013971",
+        "fund_name": "长江尊利债券C"
+      },
+      {
+        "fund_code": "021846",
+        "fund_name": "创金合信聚鑫债券E"
+      },
+      {
+        "fund_code": "022577",
+        "fund_name": "鹏华信用增利债券D"
+      },
+      {
+        "fund_code": "206004",
+        "fund_name": "鹏华信用增利债券B"
+      },
+      {
+        "fund_code": "022409",
+        "fund_name": "鑫元睿鑫添益债券C"
+      },
+      {
+        "fund_code": "024212",
+        "fund_name": "嘉实稳固收益债券D"
+      },
+      {
+        "fund_code": "070020",
+        "fund_name": "嘉实稳固收益债券C"
+      },
+      {
+        "fund_code": "018849",
+        "fund_name": "鑫元恒鑫收益增强债券型发起式E"
+      },
+      {
+        "fund_code": "000386",
+        "fund_name": "景顺长城景颐双利债券C"
+      },
+      {
+        "fund_code": "017135",
+        "fund_name": "博道和祥多元稳健债券C"
+      },
+      {
+        "fund_code": "007753",
+        "fund_name": "中银招利债券C"
+      },
+      {
+        "fund_code": "022357",
+        "fund_name": "富国盛利增强债券发起式E"
+      },
+      {
+        "fund_code": "006650",
+        "fund_name": "招商安庆债券"
+      },
+      {
+        "fund_code": "010053",
+        "fund_name": "安信聚利增强债券B"
+      },
+      {
+        "fund_code": "531017",
+        "fund_name": "建信双息红利债券C"
+      },
+      {
+        "fund_code": "003336",
+        "fund_name": "长江收益增强债券"
+      },
+      {
+        "fund_code": "006840",
+        "fund_name": "安信聚利增强债券C"
+      }
+    ],
+    "zhaiquan_jiaocha_ri_zhou_yue": [
+      {
+        "fund_code": "022585",
+        "fund_name": "申万菱信安泰景利纯债C"
+      },
+      {
+        "fund_code": "009466",
+        "fund_name": "东方可转债债券C"
+      },
+      {
+        "fund_code": "025464",
+        "fund_name": "国泰可转债债券D"
+      },
+      {
+        "fund_code": "007033",
+        "fund_name": "平安可转债债券C"
+      },
+      {
+        "fund_code": "050119",
+        "fund_name": "博时转债增强债券C"
+      },
+      {
+        "fund_code": "023165",
+        "fund_name": "博时转债增强债券E"
+      },
+      {
+        "fund_code": "006031",
+        "fund_name": "南方昌元可转债债券C"
+      },
+      {
+        "fund_code": "025400",
+        "fund_name": "南方昌元可转债债券B"
+      },
+      {
+        "fund_code": "007684",
+        "fund_name": "华商转债精选债券C"
+      },
+      {
+        "fund_code": "161625",
+        "fund_name": "融通可转债债券C"
+      },
+      {
+        "fund_code": "010964",
+        "fund_name": "鹏华可转债债券C"
+      },
+      {
+        "fund_code": "015723",
+        "fund_name": "长城久悦债券C"
+      },
+      {
+        "fund_code": "022156",
+        "fund_name": "鹏华可转债债券D"
+      },
+      {
+        "fund_code": "002587",
+        "fund_name": "金鹰添利信用债债券C"
+      },
+      {
+        "fund_code": "200113",
+        "fund_name": "长城积极增利债券C"
+      },
+      {
+        "fund_code": "022105",
+        "fund_name": "金鹰添利信用债债券E"
+      },
+      {
+        "fund_code": "025278",
+        "fund_name": "长城积极增利债券D"
+      },
+      {
+        "fund_code": "019540",
+        "fund_name": "富国可转换债券E"
+      },
+      {
+        "fund_code": "003511",
+        "fund_name": "长盛可转债债券C"
+      },
+      {
+        "fund_code": "003459",
+        "fund_name": "嘉实稳宏债券C"
+      },
+      {
+        "fund_code": "024213",
+        "fund_name": "嘉实稳宏债券D"
+      },
+      {
+        "fund_code": "004994",
+        "fund_name": "中欧可转债债券C"
+      },
+      {
+        "fund_code": "024077",
+        "fund_name": "南方希元可转债债券D"
+      },
+      {
+        "fund_code": "023928",
+        "fund_name": "中欧可转债债券E"
+      },
+      {
+        "fund_code": "019109",
+        "fund_name": "泰康丰盈债券C"
+      },
+      {
+        "fund_code": "019152",
+        "fund_name": "大成可转债增强债券C"
+      },
+      {
+        "fund_code": "023702",
+        "fund_name": "银华可转债债券D"
+      },
+      {
+        "fund_code": "519976",
+        "fund_name": "长信可转债债券C"
+      },
+      {
+        "fund_code": "002522",
+        "fund_name": "永赢双利债券C"
+      },
+      {
+        "fund_code": "019500",
+        "fund_name": "招商安瑞进取债券C"
+      },
+      {
+        "fund_code": "008817",
+        "fund_name": "华宝可转债债券C"
+      },
+      {
+        "fund_code": "025259",
+        "fund_name": "华宝可转债债券D"
+      },
+      {
+        "fund_code": "006619",
+        "fund_name": "长江可转债债券C"
+      },
+      {
+        "fund_code": "006102",
+        "fund_name": "浙商丰利增强债券"
+      },
+      {
+        "fund_code": "460003",
+        "fund_name": "华泰柏瑞稳本增利债券B"
+      },
+      {
+        "fund_code": "020502",
+        "fund_name": "华泰柏瑞稳本增利债券C"
+      },
+      {
+        "fund_code": "022127",
+        "fund_name": "华富可转债债券C"
+      },
+      {
+        "fund_code": "014336",
+        "fund_name": "金鹰元丰债券C"
+      },
+      {
+        "fund_code": "022568",
+        "fund_name": "金鹰元丰债券D"
+      },
+      {
+        "fund_code": "006148",
+        "fund_name": "宝盈融源可转债债券C"
+      },
+      {
+        "fund_code": "012887",
+        "fund_name": "华夏可转债增强债券C"
+      },
+      {
+        "fund_code": "006483",
+        "fund_name": "广发可转债债券C"
+      },
+      {
+        "fund_code": "010629",
+        "fund_name": "广发可转债债券E"
+      },
+      {
+        "fund_code": "022744",
+        "fund_name": "广发可转债债券D"
+      },
+      {
+        "fund_code": "164814",
+        "fund_name": "工银双债增强债券"
+      },
+      {
+        "fund_code": "003383",
+        "fund_name": "民生加银鑫享债券C"
+      },
+      {
+        "fund_code": "007955",
+        "fund_name": "民生加银鑫享债券D"
+      },
+      {
+        "fund_code": "005284",
+        "fund_name": "华商可转债债券C"
+      },
+      {
+        "fund_code": "007317",
+        "fund_name": "交银可转债债券C"
+      },
+      {
+        "fund_code": "022730",
+        "fund_name": "创金合信转债精选债券E"
+      },
+      {
+        "fund_code": "690202",
+        "fund_name": "民生增强收益债券C"
+      },
+      {
+        "fund_code": "000004",
+        "fund_name": "中海可转债债券C"
+      },
+      {
+        "fund_code": "002972",
+        "fund_name": "前海开源鼎安债券C"
+      },
+      {
+        "fund_code": "202107",
+        "fund_name": "南方广利回报债券C"
+      },
+      {
+        "fund_code": "019095",
+        "fund_name": "东方双债添利债券D"
+      },
+      {
+        "fund_code": "400029",
+        "fund_name": "东方双债添利债券C"
+      },
+      {
+        "fund_code": "023618",
+        "fund_name": "富国天丰强化债券(LOF)C"
+      },
+      {
+        "fund_code": "161506",
+        "fund_name": "银河通利债券(LOF)C"
+      },
+      {
+        "fund_code": "531020",
+        "fund_name": "建信转债增强债券C"
+      },
+      {
+        "fund_code": "003134",
+        "fund_name": "易方达裕鑫债券C"
+      },
+      {
+        "fund_code": "007610",
+        "fund_name": "汇安嘉诚债券C"
+      },
+      {
+        "fund_code": "610108",
+        "fund_name": "信澳信用债债券C"
+      },
+      {
+        "fund_code": "008346",
+        "fund_name": "南华瑞泽债券C"
+      },
+      {
+        "fund_code": "008332",
+        "fund_name": "万家可转债债券C"
+      },
+      {
+        "fund_code": "024989",
+        "fund_name": "信澳信用债债券F"
+      },
+      {
+        "fund_code": "025133",
+        "fund_name": "万家可转债债券D"
+      },
+      {
+        "fund_code": "163817",
+        "fund_name": "中银转债增强债券B"
+      },
+      {
+        "fund_code": "003198",
+        "fund_name": "光大安诚债券C"
+      },
+      {
+        "fund_code": "003204",
+        "fund_name": "财通收益增强债券C"
+      },
+      {
+        "fund_code": "013558",
+        "fund_name": "长信利富债券C"
+      },
+      {
+        "fund_code": "013788",
+        "fund_name": "华泰柏瑞信用增利债(LOF)B"
+      },
+      {
+        "fund_code": "025163",
+        "fund_name": "长盛积极配置债券C"
+      },
+      {
+        "fund_code": "240013",
+        "fund_name": "华宝增强收益债券B"
+      },
+      {
+        "fund_code": "022830",
+        "fund_name": "华富安鑫债券C"
+      },
+      {
+        "fund_code": "630109",
+        "fund_name": "华商稳定增利债券C"
+      },
+      {
+        "fund_code": "002474",
+        "fund_name": "中邮睿信增强债"
+      },
+      {
+        "fund_code": "000048",
+        "fund_name": "华夏双债债券C"
+      },
+      {
+        "fund_code": "233013",
+        "fund_name": "大摩多元收益债券C"
+      },
+      {
+        "fund_code": "023409",
+        "fund_name": "银河强化债券C"
+      },
+      {
+        "fund_code": "470059",
+        "fund_name": "汇添富可转换债券C"
+      },
+      {
+        "fund_code": "025413",
+        "fund_name": "汇添富可转换债券D"
+      },
+      {
+        "fund_code": "020508",
+        "fund_name": "嘉实债券C"
+      },
+      {
+        "fund_code": "217008",
+        "fund_name": "招商安本增利债券C"
+      },
+      {
+        "fund_code": "009520",
+        "fund_name": "中欧鼎利债券C"
+      },
+      {
+        "fund_code": "009519",
+        "fund_name": "中欧鼎利债券E"
+      },
+      {
+        "fund_code": "014493",
+        "fund_name": "浙商汇金兴利增强债券C"
+      },
+      {
+        "fund_code": "022171",
+        "fund_name": "富国新天锋债券(LOF)E"
+      },
+      {
+        "fund_code": "050111",
+        "fund_name": "博时信用债券C"
+      },
+      {
+        "fund_code": "001752",
+        "fund_name": "华商信用增强债券C"
+      },
+      {
+        "fund_code": "004953",
+        "fund_name": "兴全恒益债券C"
+      },
+      {
+        "fund_code": "022760",
+        "fund_name": "华富安享债券C"
+      },
+      {
+        "fund_code": "023513",
+        "fund_name": "银华增强收益债券D"
+      },
+      {
+        "fund_code": "023823",
+        "fund_name": "银华增强收益债券C"
+      },
+      {
+        "fund_code": "002460",
+        "fund_name": "华夏鼎利债券发起式C"
+      },
+      {
+        "fund_code": "675013",
+        "fund_name": "西部利得稳健双利债券C"
+      },
+      {
+        "fund_code": "000812",
+        "fund_name": "富国收益增强债券C"
+      },
+      {
+        "fund_code": "003505",
+        "fund_name": "景顺长城景颐丰利债券C"
+      },
+      {
+        "fund_code": "022229",
+        "fund_name": "富国兴利增强债券E"
+      },
+      {
+        "fund_code": "023512",
+        "fund_name": "景顺长城景颐丰利债券F"
+      },
+      {
+        "fund_code": "013149",
+        "fund_name": "鹏华双债加利债券C"
+      },
+      {
+        "fund_code": "018500",
+        "fund_name": "兴银收益增强C"
+      },
+      {
+        "fund_code": "022226",
+        "fund_name": "鹏华双债加利债券D"
+      },
+      {
+        "fund_code": "006867",
+        "fund_name": "易方达丰华债券C"
+      },
+      {
+        "fund_code": "022159",
+        "fund_name": "富国丰利增强债券E"
+      },
+      {
+        "fund_code": "016671",
+        "fund_name": "博时恒耀债券C"
+      },
+      {
+        "fund_code": "017771",
+        "fund_name": "华夏聚利债券C"
+      },
+      {
+        "fund_code": "023615",
+        "fund_name": "银华远景债券D"
+      },
+      {
+        "fund_code": "008476",
+        "fund_name": "招商民安增益债券C"
+      },
+      {
+        "fund_code": "024103",
+        "fund_name": "浙商汇金锦利增强30天持有期债券C"
+      },
+      {
+        "fund_code": "519933",
+        "fund_name": "长信利发债券"
+      },
+      {
+        "fund_code": "007834",
+        "fund_name": "长盛稳怡添利债券C"
+      },
+      {
+        "fund_code": "017584",
+        "fund_name": "鑫元聚鑫收益增强D"
+      },
+      {
+        "fund_code": "000897",
+        "fund_name": "鑫元聚鑫收益增强C"
+      },
+      {
+        "fund_code": "017135",
+        "fund_name": "博道和祥多元稳健债券C"
+      },
+      {
+        "fund_code": "019486",
+        "fund_name": "金元顺安沣泉债券C"
+      },
+      {
+        "fund_code": "202102",
+        "fund_name": "南方多利增强债券C"
+      },
+      {
+        "fund_code": "003135",
+        "fund_name": "金元顺安沣楹债券"
+      },
+      {
+        "fund_code": "008557",
+        "fund_name": "易方达裕富债券C"
+      },
+      {
+        "fund_code": "010053",
+        "fund_name": "安信聚利增强债券B"
+      },
+      {
+        "fund_code": "952320",
+        "fund_name": "国泰海通君得盈债券C"
+      },
+      {
+        "fund_code": "023210",
+        "fund_name": "国泰海通君得盈债券D"
+      },
+      {
+        "fund_code": "023792",
+        "fund_name": "国投瑞银双债债券D"
+      },
+      {
+        "fund_code": "070020",
+        "fund_name": "嘉实稳固收益债券C"
+      },
+      {
+        "fund_code": "161221",
+        "fund_name": "国投瑞银双债债券C"
+      },
+      {
+        "fund_code": "003336",
+        "fund_name": "长江收益增强债券"
+      },
+      {
+        "fund_code": "004808",
+        "fund_name": "中银证券安弘债券C"
+      },
+      {
+        "fund_code": "006840",
+        "fund_name": "安信聚利增强债券C"
+      },
+      {
+        "fund_code": "013205",
+        "fund_name": "恒生前海恒源天利债券C"
+      },
+      {
+        "fund_code": "018980",
+        "fund_name": "富国优化增强债券E"
+      },
+      {
+        "fund_code": "022577",
+        "fund_name": "鹏华信用增利债券D"
+      },
+      {
+        "fund_code": "024212",
+        "fund_name": "嘉实稳固收益债券D"
+      },
+      {
+        "fund_code": "206004",
+        "fund_name": "鹏华信用增利债券B"
+      },
+      {
+        "fund_code": "163812",
+        "fund_name": "中银双利债券B"
+      },
+      {
+        "fund_code": "004486",
+        "fund_name": "嘉实稳怡债券"
+      },
+      {
+        "fund_code": "022357",
+        "fund_name": "富国盛利增强债券发起式E"
+      },
+      {
+        "fund_code": "162105",
+        "fund_name": "金鹰持久增利债券(LOF)C"
+      },
+      {
+        "fund_code": "004267",
+        "fund_name": "金鹰持久增利债券(LOF)E"
+      },
+      {
+        "fund_code": "008045",
+        "fund_name": "博远增强回报债券C"
+      },
+      {
+        "fund_code": "630107",
+        "fund_name": "华商稳健双利债券B"
       }
     ]
   }
