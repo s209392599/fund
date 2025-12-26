@@ -11,11 +11,9 @@ const info = reactive({
 });
 
 const getHistoryPerformance = (fund_code) => {
-  console.log('fund_code', fund_code);
   server_fund_history_performance({
     fundcode: fund_code,
   }).then((res) => {
-    console.log('res', res);
     if (res.code === 200) {
       info.tableData.forEach((item, index) => {
         if (
@@ -72,7 +70,6 @@ const query_list = () => {
     server_fund_amain_fund_query_by_user({
       fund_user_id: localStorage.getItem('user_id'),
     }).then((res) => {
-      console.log('res', res);
       if (res.code === 200) {
         info.tableData = (res.data.data || []).map((item, index) => {
           item.zhang_his = [];
@@ -90,8 +87,6 @@ const query_list = () => {
 query_list();
 
 const getHisdata = (row, index) => {
-  console.log('row.zhang_his', row);
-
   const obj = row.zhang_his?.[index] || {};
   if (!obj.avg) return '-';
 
