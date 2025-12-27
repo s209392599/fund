@@ -1,4 +1,5 @@
 <script setup>
+console.log('amain/src/views/preview/tabs/preview_10.vue');
 const echartsInstance = inject('echarts');
 
 const chart = ref(null);
@@ -13,26 +14,26 @@ const info = reactive({
 });
 
 const getShowName = (item) => {
-  let str = `${item.code}-${item.name}`;
+  let str = `${item.fund_code}-${item.fund_name}`;
   let title = str.length > 15 ? str.substring(0, 15) + '...' : str;
   return title;
 };
 
 /*
-fundcode： 基金代码
+fund_code 基金代码
 list_index： 基金数组的下标
 */
-const getHisData = (fundcode, list_index) => {
+const getHisData = (fund_code, list_index) => {
   // 请求历史数据
   server_fund_history_data({
-    fundcode: fundcode,
+    fund_code: fund_code,
     pageSize: info.dayArr[info.dayArr.length - 1],
   }).then((res) => {
     if (res.code === 200) {
       page.list[list_index].his_data = res.data || [];
       render_chart_fn(); // 渲染图形
     } else {
-      ElMessage.error(`${fundcode}未正确获取数据`);
+      ElMessage.error(`${fund_code}未正确获取数据`);
     }
   });
 };
@@ -52,7 +53,6 @@ const render_chart_fn = () => {
     legend: {
       type: 'scroll',
       orient: 'vertical',
-
       icon: 'circle',
       right: 10,
       y: 'center',
@@ -67,11 +67,11 @@ const render_chart_fn = () => {
       axisPointer: {
         type: 'line',
       },
-      alwaysShowContent: true,// 始终显示所有系列
+      alwaysShowContent: true, // 始终显示所有系列
       formatter: function (params) {
         // let str = `横向坐标：${params[0].axisValue}<br/>`;
         // params.forEach((item,index) => {
-        //   str += `${item.marker} ${page.list[index].name}：${item.data}<br/>`;
+        //   str += `${item.marker} ${page.list[index].fund_name}：${item.data}<br/>`;
         // });
         // return str;
         let str = `横向坐标：${params[0].axisValue}<br/>`;
@@ -80,16 +80,18 @@ const render_chart_fn = () => {
         const sortedData = params
           .map((item, index) => ({
             marker: item.marker,
-            name: page.list[index].name,
+            name: page.list[index].fund_name,
             data: item.data,
-            originalIndex: index // 保留原始索引，如果需要的话
+            originalIndex: index, // 保留原始索引，如果需要的话
           }))
           // 从大到小排序
           .sort((a, b) => b.data - a.data);
 
         // 循环排序后的数据
-        sortedData.forEach(item => {
-          str += `${item.marker} ${page.list[item.originalIndex].code}-${item.name}：${item.data}<br/>`;
+        sortedData.forEach((item) => {
+          str += `${item.marker} ${page.list[item.originalIndex].fund_code}-${
+            item.name
+          }：${item.data}<br/>`;
         });
         return str;
       },
@@ -163,9 +165,12 @@ const render_chart_fn = () => {
         name: getShowName(item),
         data: data,
         type: 'line',
-        // symbol: 'none',
         symbolSize: 2,
-        // smooth: true
+        symbol: 'none',
+        // smooth: true,
+        lineStyle: {
+          width: 0.7,
+        },
       };
     }),
   };
@@ -180,7 +185,9 @@ const viewDayFn = (num, active) => {
 
 // 获取用户数据
 const getUserInfo = () => {
-  server_fund_manage_fund_query().then((res) => {
+  server_fund_table_query_by_user({
+    fund_user_id: localStorage.getItem('user_id'),
+  }).then((res) => {
     if (res.code === 200) {
       page.list = (res.data || []).map((v) => {
         v.his_data = []; // 添加一个历史数据的字段
@@ -188,11 +195,11 @@ const getUserInfo = () => {
       });
       for (let i = 0; i < page.list.length; i++) {
         setTimeout(() => {
-          getHisData(page.list[i].code, i); //请求历史数据
+          getHisData(page.list[i].fund_code, i); //请求历史数据
         }, i * 100);
       }
     } else {
-      ElMessage.error(`获取群主基金列表失败`);
+      ElMessage.error('获取列表失败，请重试！');
     }
   });
 };
@@ -204,48 +211,54 @@ const turnSelect = () => {
   const newSelectedState = {};
 
   // 遍历所有图例，对每个图例的选中状态取反
-  currentOption.legend[0].data.forEach(name => {
+  currentOption.legend[0].data.forEach((name) => {
     // 如果当前图例是选中状态，则反选后为未选中；如果未选中，则反选后为选中
     // 如果 selected 中不存在该图例的状态，默认视为选中（因为图例默认就是选中的）
     newSelectedState[name] = !(currentSelected[name] !== false);
   });
 
   myChart.setOption({
-    legend: [{
-      selected: newSelectedState
-    }]
+    legend: [
+      {
+        selected: newSelectedState,
+      },
+    ],
   });
-}
+};
 
 // 全选
 const CheckAll = () => {
   const currentOption = myChart.getOption();
   const newSelectedState = {};
-  currentOption.legend[0].data.forEach(name => {
+  currentOption.legend[0].data.forEach((name) => {
     newSelectedState[name] = true;
   });
   myChart.setOption({
-    legend: [{
-      selected: newSelectedState
-    }]
+    legend: [
+      {
+        selected: newSelectedState,
+      },
+    ],
   });
-}
+};
 // 全不选
 const UnSelectAll = () => {
   // 获取当前的 option
   const currentOption = myChart.getOption();
   // 构建一个所有图例名称对应 false 的对象
   const newSelectedState = {};
-  currentOption.legend[0].data.forEach(name => {
+  currentOption.legend[0].data.forEach((name) => {
     newSelectedState[name] = false;
   });
   // 使用 setOption 更新 selected 状态
   myChart.setOption({
-    legend: [{
-      selected: newSelectedState
-    }]
+    legend: [
+      {
+        selected: newSelectedState,
+      },
+    ],
   });
-}
+};
 
 // 在组件挂载时初始化图表
 onMounted(() => {
@@ -270,13 +283,48 @@ onUnmounted(() => {
 <template>
   <div class="page_wrapper">
     <div class="flex pb-5">
-      <el-button type="primary" :class="{ active: info.active === 0 }" @click="viewDayFn(5, 0)">近一周</el-button>
-      <el-button type="primary" :class="{ active: info.active === 1 }" @click="viewDayFn(10, 1)">近两周</el-button>
-      <el-button type="primary" :class="{ active: info.active === 2 }" @click="viewDayFn(20, 2)">近一个月</el-button>
-      <el-button type="primary" :class="{ active: info.active === 3 }" @click="viewDayFn(40, 3)">近两个月</el-button>
-      <el-button type="primary" :class="{ active: info.active === 4 }" @click="viewDayFn(60, 4)">近三个月</el-button>
-      <el-button type="primary" :class="{ active: info.active === 5 }" @click="viewDayFn(120, 5)">近半年</el-button>
-      <el-button type="primary" :class="{ active: info.active === 6 }" @click="viewDayFn(244, 6)">近一年</el-button>
+      <el-button
+        type="primary"
+        :class="{ active: info.active === 0 }"
+        @click="viewDayFn(5, 0)"
+        >近一周</el-button
+      >
+      <el-button
+        type="primary"
+        :class="{ active: info.active === 1 }"
+        @click="viewDayFn(10, 1)"
+        >近两周</el-button
+      >
+      <el-button
+        type="primary"
+        :class="{ active: info.active === 2 }"
+        @click="viewDayFn(20, 2)"
+        >近一个月</el-button
+      >
+      <el-button
+        type="primary"
+        :class="{ active: info.active === 3 }"
+        @click="viewDayFn(40, 3)"
+        >近两个月</el-button
+      >
+      <el-button
+        type="primary"
+        :class="{ active: info.active === 4 }"
+        @click="viewDayFn(60, 4)"
+        >近三个月</el-button
+      >
+      <el-button
+        type="primary"
+        :class="{ active: info.active === 5 }"
+        @click="viewDayFn(120, 5)"
+        >近半年</el-button
+      >
+      <el-button
+        type="primary"
+        :class="{ active: info.active === 6 }"
+        @click="viewDayFn(244, 6)"
+        >近一年</el-button
+      >
 
       <el-button type="primary" @click="turnSelect()">反选</el-button>
       <el-button type="primary" @click="CheckAll()">全选</el-button>

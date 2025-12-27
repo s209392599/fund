@@ -74,8 +74,8 @@ function realTimeInformation(str) {
 }
 // 获取实时涨幅
 router.post('/fund_amain_getfundgz', (req, res) => {
-  const { fundcode = '', pageSize = 10 } = req.body;
-  var isSixDigitNumber = /^\d{6}$/.test(fundcode); // 6位数字��类型
+  const { fund_code = '', pageSize = 10 } = req.body;
+  var isSixDigitNumber = /^\d{6}$/.test(fund_code); // 6位数字��类型
   if (!isSixDigitNumber) {
     res.send({
       code: 400,
@@ -85,7 +85,7 @@ router.post('/fund_amain_getfundgz', (req, res) => {
     return;
   }
   try {
-    let u = `https://fundgz.1234567.com.cn/js/${fundcode}.js?rt=${+new Date()}`;
+    let u = `https://fundgz.1234567.com.cn/js/${fund_code}.js?rt=${+new Date()}`;
     fetch(u, {})
       .then((data) => data.text())
       .then((data) => {
@@ -102,7 +102,7 @@ router.post('/fund_amain_getfundgz', (req, res) => {
             code: 200,
             msg: '成功',
             data: {
-              fund_code: fundcode,
+              fund_code: fund_code,
               fund_name: obsData.name || '',
               gszzl: obsData.gszzl || '',
               dwjz: obsData.dwjz || '',
@@ -115,7 +115,7 @@ router.post('/fund_amain_getfundgz', (req, res) => {
   } catch (err) {
     res.send({
       code: 400,
-      msg: `${fundcode}未能正确获取到值`,
+      msg: `${fund_code}未能正确获取到值`,
       data: [],
     });
   }
@@ -254,9 +254,9 @@ router.post('/fund_amain_public_funds', async (req, res) => {
 
 // 获取基金历史数据
 router.post('/fund_history_data', (req, res) => {
-  const { fundcode = '', pageSize = 10 } = req.body;
-  console.log('fund_history_data', fundcode, pageSize);
-  if (!fundcode) {
+  const { fund_code = '', pageSize = 10 } = req.body;
+  console.log('fund_history_data', fund_code, pageSize);
+  if (!fund_code) {
     res.send({
       code: 400,
       msg: '未正确获取到基金代码',
@@ -265,7 +265,7 @@ router.post('/fund_history_data', (req, res) => {
     return;
   }
   try {
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"${fundcode}","pageNum":1,"pageSize":${pageSize},"channel":"9"}`;
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"${fund_code}","pageNum":1,"pageSize":${pageSize},"channel":"9"}`;
     fetch(u, {})
       .then((data) => data.json())
       .then((data) => {
@@ -282,7 +282,7 @@ router.post('/fund_history_data', (req, res) => {
   } catch (err) {
     res.send({
       code: 400,
-      msg: `${fundcode}未能正确获取到值`,
+      msg: `${fund_code}未能正确获取到值`,
       data: [],
     });
   }
@@ -290,8 +290,8 @@ router.post('/fund_history_data', (req, res) => {
 
 // 获取timer基金当天涨幅
 router.post('/fund_today_rate_by_timer', (req, res) => {
-  const fundcode = req.body.fundcode || '';
-  if (!fundcode) {
+  const fund_code = req.body.fund_code || '';
+  if (!fund_code) {
     res.send({
       code: 400,
       msg: '未正确获取到基金代码',
@@ -300,7 +300,7 @@ router.post('/fund_today_rate_by_timer', (req, res) => {
     return;
   }
   const apiDir = path.join(__dirname, '../../'); // 回退到 /api 目录
-  let fileDir = path.join(apiDir, 'data/preview/', fundcode);
+  let fileDir = path.join(apiDir, 'data/preview/', fund_code);
 
   // console.log('fileDir', fileDir);
   // /Users/guokun/github/fund/api/routes/fund/data/preview/023350
@@ -380,9 +380,9 @@ https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disc
 近一周多少、近一月多少。。。。。。
 */
 router.post('/fund_history_performance', (req, res) => {
-  const { fundcode = '', pageSize = 10 } = req.body;
+  const { fund_code = '', pageSize = 10 } = req.body;
 
-  if (!fundcode) {
+  if (!fund_code) {
     res.send({
       code: 400,
       msg: '未正确获取到基金代码',
@@ -391,7 +391,7 @@ router.post('/fund_history_performance', (req, res) => {
     return;
   }
   try {
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryPerformancePageInfo?reqData={"fundCode":"${fundcode}","channel":"9"}`;
+    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryPerformancePageInfo?reqData={"fundCode":"${fund_code}","channel":"9"}`;
     fetch(u, {})
       .then((data) => data.json())
       .then((data) => {
@@ -407,7 +407,7 @@ router.post('/fund_history_performance', (req, res) => {
   } catch (err) {
     res.send({
       code: 400,
-      msg: `${fundcode}未能正确获取到值`,
+      msg: `${fund_code}未能正确获取到值`,
       data: [],
     });
   }

@@ -23,9 +23,10 @@ router.post('/fund_table_query_by_user', async (req, res) => {
   DatabasePostQuery({
     res: res,
     query: `SELECT * FROM fund_user_collection WHERE fund_user_id = ${fund_user_id} ORDER BY sort_order ASC`,
-    format: (results) => ({
-      data: results,
-    }),
+    format: (results) => results,
+    // format: (results) => ({
+    //   data: results,
+    // }),
   });
 });
 

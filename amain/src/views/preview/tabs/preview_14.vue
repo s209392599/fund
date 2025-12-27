@@ -12,7 +12,7 @@ const info = reactive({
 
 const getHistoryPerformance = (fund_code) => {
   server_fund_history_performance({
-    fundcode: fund_code,
+    fund_code: fund_code,
   }).then((res) => {
     if (res.code === 200) {
       info.tableData.forEach((item, index) => {

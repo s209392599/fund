@@ -53,7 +53,7 @@ const query_list = () => {
       console.log('res', res);
       if (res.code === 200) {
         ElMessage.success('已读取最新数据');
-        info.tableData = res.data.data || [];
+        info.tableData = res.data || [];
       } else {
         ElMessage.error('获取列表失败，请重试！');
       }

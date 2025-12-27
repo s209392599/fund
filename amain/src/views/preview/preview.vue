@@ -33,15 +33,15 @@ const info = reactive({
       ),
       desc: '',
     },
-    {
-      id: 2,
-      show: true,
-      name: '额外基金监控',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_02.vue'))
-      ),
-      desc: '',
-    },
+    // {
+    //   id: 2,
+    //   show: true,
+    //   name: '额外基金监控',
+    //   component: markRaw(
+    //     defineAsyncComponent(() => import('./tabs/preview_02.vue'))
+    //   ),
+    //   desc: '',
+    // },
     {
       id: 10,
       show: true,

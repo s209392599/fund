@@ -15,96 +15,12 @@ jd_totalAsset
 */
 
 const info = reactive({
-  text: '红利',
+  text: '港股通红利',
   step: 1,
   tableData: [], // 列表数据
   tableHeight: 400,
 });
-// 计算网页高度 - 40
-info.tableHeight = document.documentElement.clientHeight - 150;
-
-/*
-jd_header_tag: jd_header_tag,// 头部标签
-{"rankList":[],"highlights":{"tagList":["基金规模大"],"morningstarRating":"4"},"userFocus":[],"themeNameList":["半导体","机器视觉"]}
-{
-"rankList":["连续5年跑赢同类 · 第9名"],
-"highlights":{"tagList":[],"morningstarRating":"2"},
-"userFocus":[],"themeNameList":["农产品加工","免税店"]}
-
-
-jd_historyPerformance,// 历史业绩
-[{"avg":"2.36","rate":"2.12","name":"近1周","rank":"2495/4881"},
-{"avg":"11.12","rate":"11.20","name":"近1月","rank":"2032/4859"},
-{"avg":"23.08","rate":"28.29","name":"近3月","rank":"1210/4719"},
-{"avg":"22.01","rate":"26.57","name":"近6月","rank":"1236/4609"},
-{"avg":"57.35","rate":"55.06","name":"近1年","rank":"1913/4416"},
-{"avg":"30.09","rate":"29.99","name":"今年以来","rank":"2013/4881"},
-{"avg":"7.60","rate":"-17.99","name":"近3年","rank":"2772/3171"},
-{"avg":"649.70","rate":"145.30","name":"成立以来","rank":"135/162"}]
-
-
-jd_fundDiagnosis,// 综合诊断
-99|29|11|51
-
-
-jd_proportion,// 持仓分类占比
-18.58|83.99|2.99|0.00|0.00
-
-
-jd_totalAsset,// 资产
-35940533.08
-
-
-jd_chi_cang,// 持仓详情(股票占比)
-{
-  "stock":[
-    {"name":"宁德时代","industryName":"电池","ratio":"1.26%"},
-    {"name":"路维光电","industryName":"半导体","ratio":"1.16%"},
-    {"name":"比亚迪","industryName":"汽车整车","ratio":"1.11%"},
-    {"name":"科伦药业","industryName":"化学制药","ratio":"1.10%"},
-    {"name":"中航沈飞","industryName":"军工装备","ratio":"1.06%"},
-    {"name":"永兴材料","industryName":"能源金属","ratio":"0.93%"},
-    {"name":"恺英网络","industryName":"游戏","ratio":"0.92%"},
-    {"name":"潮宏基","industryName":"服装家纺","ratio":"0.81%"},
-    {"name":"芯原股份","industryName":"半导体","ratio":"0.81%"},
-    {"name":"中金黄金","industryName":"贵金属","ratio":"0.81%"}
-  ],
-  "bond":[
-    {"name":"国债2420","industryName":"国债","ratio":"10.82%"},
-    {"name":"19西咸02","industryName":"企业债","ratio":"5.76%"},
-    {"name":"25国债01","industryName":"国债","ratio":"5.03%"},
-    {"name":"兴业转债","industryName":"可转债","ratio":"4.85%"},
-    {"name":"20国债04","industryName":"国债","ratio":"4.15%"}
-  ],
-  "fund":[]
-}
-
-jd_fund_archive,// 基金档案
-{
-  "establishedDateByCn":"2013年04月24日",
-  "company_name":"华富基金管理有限公司",
-  "fundScaleList":["0.37","0.31","0.32","0.33"],
-  "instPurchaseRatio":"29.77",
-  "purchaseRatio":"70.23",
-  "companyManageScale":"978.06亿",
-  "manageNumber":"72"
-}
-
-jd_managerInfo,// 基金经理
-[
-  {
-    "yearPerformance":"3.40",
-    "employPerformance":"13.99",
-    "employmentDate":"2年357天",
-    "accessionDateDesc":"2022.09.23-至今",
-    "managerName":"戴弘毅",
-    "accessionDate":"2年357天",
-    "manageScale":"5.03亿元"
-  }
-]
-
-
-*/
+const his_name_arr = ['近1周', '近1月', '近3月', '近6月', '近1年', '近3年', '近5年', '今年以来', '成立以来'];
 
 const getList = () => {
   if (info.text.trim() === '') {
@@ -165,22 +81,7 @@ const removeA = () => {
     });
 };
 
-const addFn = () => {
-  console.log('新增');
-};
-const btn_del = (row, $index) => {
-  console.log('删除', row);
-  // info.tableData.splice($index, 1);
-
-  // 创建新数组而不是直接修改原数组
-  const newData = info.tableData.filter(
-    (item) => item.fund_code !== row.fund_code
-  );
-
-  // 使用markRaw减少响应式开销
-  info.tableData = markRaw(newData);
-};
-
+// 得分
 const defenFn = (jd_historyPerformance) => {
   let defen = 0;
   try {
@@ -216,67 +117,24 @@ const defenFn = (jd_historyPerformance) => {
   }
 };
 
-const getAllInfo = () => {
-  const funds = info.tableData.map((v) => v.fund_code);
-  if (funds === 0) {
-    ElMessage.info('请先选择基金数据');
-    return;
-  }
-  server_fund_mysql_fundinfo_byfunds({
-    funds: funds,
-  })
-    .then((res) => {
-      console.log('关键词搜索', 'res', res);
-      if (res.code === 200) {
-        let arr_1 = res.data || [];
-        let arr_2 = arr_1.map((item) => {
-          let jd_historyPerformance = item.jd_historyPerformance
-            ? JSON.parse(item.jd_historyPerformance)
-            : [];
-          if (jd_historyPerformance) {
-            jd_historyPerformance = jd_historyPerformance.map((i) => {
-              return {
-                ...i,
-                avg: i.avg ? parseFloat(i.avg) : '',
-                rate: i.rate ? parseFloat(i.rate) : '',
-              };
-            });
-          }
-          item.score = defenFn(jd_historyPerformance);
-          return {
-            ...item,
-            jd_header_tag: item.jd_header_tag
-              ? JSON.parse(item.jd_header_tag)
-              : null,
-            jd_historyPerformance: jd_historyPerformance,
-            jd_fundDiagnosis: item.jd_fundDiagnosis,
-            jd_proportion: item.jd_proportion,
-            jd_totalAsset: item.jd_totalAsset,
-            jd_chi_cang: item.jd_chi_cang ? JSON.parse(item.jd_chi_cang) : null,
-            jd_fund_archive: item.jd_fund_archive
-              ? JSON.parse(item.jd_fund_archive)
-              : null,
-            jd_managerInfo: item.jd_managerInfo
-              ? JSON.parse(item.jd_managerInfo)
-              : null,
-          };
-        });
-        info.tableData = [...arr_2];
-      } else {
-        // info.tableData = [];
-        ElMessage.error(res.msg || '获');
-      }
-    })
-    .catch((err) => {
-      info.tableData = [];
-      console.log(err.message);
-    })
-    .finally(() => {
-      if (info.tableData.length) {
-        info.step = 4;
-      }
+const getAllInfo = async () => {
+  for (let i = 0; i < info.tableData.length; i++) {
+    const item = info.tableData[i];
+
+    await server_fund_jd_detailPageInfoWithNoPin({
+      fund_code: item.fund_code,
+    }).then((res) => {
+      console.log(res);
+      info.tableData[i] = {
+        ...info.tableData[i],
+        ...res.data,
+        fund_name: res.data?.headerOfItem?.fundName || '',
+        fund_type: res.data?.headerOfItem?.fundTypeName || '',
+      };
     });
+  }
 };
+
 // 资产转换
 const turnAssetFn = (str) => {
   if (!str || str.length === 0) return 0;
@@ -300,117 +158,144 @@ const removeFn_1 = () => {
   info.tableData = [...arr_1];
   // info.step = info.tableData.length ? 5 : 1;
 };
-// 涨幅转换
-const zhangFn = (arr_1, num, row) => {
-  // 检查 arr_1 是否为非空数组
-  if (!Array.isArray(arr_1) || arr_1.length === 0) {
-    return '';
-  }
-  const obj = {
-    1: '近1周',
-    2: '近1月',
-    3: '近3月',
-    4: '近6月',
-    5: '近1年',
-    6: '今年以来',
-    7: '近3年',
-    8: '成立以来',
-  };
 
-  if (!obj[num]) {
-    return '';
-  }
-  const arr_2 = arr_1.filter((item) => item.name === obj[num]);
-  if (arr_2.length > 0) {
-    const selectedObj = arr_2[0];
-    if (
-      selectedObj.hasOwnProperty('avg') &&
-      ![null, undefined].includes(selectedObj.avg)
-    ) {
-      const rate = parseFloat(selectedObj.rate);
-      if (!isNaN(rate)) {
-        return rate;
-      }
-    }
-  }
-  return '';
+// 删除
+const btn_line_1 = (row, index) => {
+  info.tableData.splice(index, 1);
 };
-
-const sortByYearRate = (num) => {
-  let obj = {
-    1: '近1周',
-    2: '近1月',
-    3: '近3月',
-    4: '近6月',
-    5: '近1年',
-    6: '今年以来',
-    7: '近3年',
-    8: '成立以来',
-  };
-  // 提取 a 和 b 的 "近1年" 涨幅值
-  const getValue = (item) => {
-    const arr_1 = item.jd_historyPerformance;
-    if (!Array.isArray(arr_1) || arr_1.length === 0) return '';
-
-    const period = obj[num];
-    const match = arr_1.find((i) => i.name === period);
-    if (match && match.rate !== undefined) {
-      return parseFloat(match.rate);
-    }
-    return '';
-  };
-  return function (a, b, order) {
-    const valA = getValue(a);
-    const valB = getValue(b);
-
-    // 处理 NaN 情况：让空值排在最后
-    if (valA === '') return order === 'ascending' ? 1 : -1;
-    if (valB === '') return order === 'ascending' ? -1 : 1;
-
-    // 正常数值比较
-    return order === 'ascending' ? valB - valA : valA - valB;
-  };
+// 榜单
+const Turn_rankList = (row) => {
+  const rankList = row?.headerOfItem?.rankList || [];
+  return rankList.map((item) => item.wealthRank).join('；');
 };
-
-// 转换标签
-const turn_rankList = (row = {}) => {
-  const jd_header_tag = row.jd_header_tag || {};
-  const rankList = jd_header_tag.rankList || [];
-  return rankList.join('；');
-};
-const turn_tagList = (row = {}) => {
-  const jd_header_tag = row.jd_header_tag || {};
-  const highlights = jd_header_tag.highlights || {};
+// 特色亮点
+const TurnHighlights = (row) => {
+  const highlights = row?.headerOfItem?.highlights || {};
   const tagList = highlights.tagList || [];
   var str = '';
   if (highlights.hasOwnProperty('morningstarRating')) {
     str += `晨星${highlights.morningstarRating}星；`;
   }
-
   return str + tagList.join('；');
 };
-const turn_userFocus = (row = {}) => {
-  const jd_header_tag = row.jd_header_tag || {};
-  const userFocus = jd_header_tag.userFocus || [];
-  return userFocus.join('；');
+// 用户关注
+const Turn_userFocus = (row) => {
+  const userFocus = row?.headerOfItem?.userFocus || [];
+  return userFocus.map((item) => item.title).join('；');
 };
-const turn_themeNameList = (row = {}) => {
-  const jd_header_tag = row.jd_header_tag || {};
-  const themeNameList = jd_header_tag.themeNameList || [];
-  return themeNameList.join('；');
+// 投资方向
+const TurnInvestDirection = (row) => {
+  const themeNameList = row?.headerOfItem?.themeNameList || [];
+  return themeNameList.map((item) => item.themeName).join('；');
 };
 
-// watch(
-//   () => info.tableData,
-//   async (newVal) => {
-//     await nextTick(); // 确保 DOM 更新完成
-//     info.tablata = newVal.map((row) => ({
-//       ...row,
-//       defen: defenFn(row),
-//     }));
-//   },
-//   { immediate: true }
-// );
+// 管理公司
+const Turn_company_name = (row) => {
+  let company_name = row?.fundProfileOfItem?.company_name || '';
+  // 剔除这些关键词
+  var tichu = ['基金管理有限公司', '基金管理股份有限公司'];
+  tichu.forEach((item) => {
+    company_name = company_name.replace(item, '');
+  });
+  return company_name;
+};
+// 基金经理
+const Turn_managerInfoList = (row) => {
+  const managerInfoList = row?.fundManagerOfItem?.managerInfoList || [];
+  let html = '';
+  managerInfoList.forEach((item) => {
+    const awardList = item.awardList || [];
+    let str_award = awardList.map((v_1) => v_1.awardTypeName).join('、');// 金牛奖得主 等
+    html += `<div>${item.managerName} ${str_award ? `(${str_award})` : ''}
+        本基金:${item.accessionDate}(${item.employPerformance}%)
+        从业:${item.employmentDate}(${item.yearPerformance}%)
+      </div>`;
+  });
+  return html;
+};
+// 综合诊断
+const Turn_fundDiagnosisData = (row, index) => {
+  const obj_1 = row?.fundDiagnosisOfItem || {};
+  const obj_2 = obj_1.fundDiagnosisData || {};
+  return obj_2['tab' + index]?.overSameTypePercent || '';
+};
+// 历史业绩
+const Turn_historyPerformanceList = (row, item, type) => {
+  const obj_1 = row?.performanceOfItem || {};
+  const obj_2 = obj_1.historyPerformanceMap || {};
+  const arr = obj_2.historyPerformanceList || [];
+  return arr
+    .filter((item_1) => item_1.name === item)
+    .map((item_1) => {
+      if (type === 'rate') {
+        return item_1.rate;
+      } else if (type === 'avg') {
+        return item_1.avg;
+      } else if (type === 'rank') {
+        let rank = item_1.rank || '-';
+        if (rank.includes('/')) {
+          let num_1 = rank.split('/')[0];
+          let num_2 = rank.split('/')[1];
+          if (num_2 > 0) {
+            if (num_1 / num_2 > 0.5) {
+              return `<span style="color: red">${rank}</span>`
+            } else {
+              return rank;
+            }
+          } else {
+            return rank;
+          }
+        } else {
+          return rank;
+        }
+      }
+    })
+    .join('；');
+};
+
+// 是否可买
+const turnSacleFn = (row={}) => {
+  if(row.hasOwnProperty('isForSale')){
+    return row.isForSale ? '可买' : '不可买';
+  }
+  return '-';
+};
+// 复制数据
+const copyData = () => {
+  if(!info.tableData.length){
+    ElMessage.info('暂无数据');
+    return;
+  }
+  const data = info.tableData.map(v =>{
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type,
+    };
+  });
+  navigator.clipboard.writeText(JSON.stringify(data));
+  ElMessage.success('复制成功');
+};
+
+// 涨跌幅的排序
+const sort_zhangfu_fn = (row={},index) => {
+  // const his_name_arr = ['近1周', '近1月', '近3月', '近6月', '近1年', '近3年', '近5年', '今年以来', '成立以来'];
+  return (a, b) => {
+    console.log('-------------------------------');
+    console.log('row',row);
+    console.log('row,index',row,index);
+    const getRate = (item, period) => {
+      const obj_1 = row?.performanceOfItem || {};
+      const obj_2 = obj_1.historyPerformanceMap || {};
+      const arr = obj_2.historyPerformanceList || [];
+
+      return Math.random > 0.5
+    };
+    const rateA = getRate(a, his_name_arr[index]);
+    const rateB = getRate(b, his_name_arr[index]);
+    return rateB - rateA;
+  };
+};
 </script>
 
 <template>
@@ -427,7 +312,7 @@ const turn_themeNameList = (row = {}) => {
           <el-button type="success" @click="removeA" :disabled="info.step < 2" data-num="3">去除A类</el-button>
           <el-button type="success" @click="getAllInfo" :disabled="info.step < 3" data-num="4">详细信息</el-button>
           <el-button type="success" @click="removeFn_1" :disabled="info.step < 4" data-num="5">去除小于1亿</el-button>
-          <el-button type="success" @click="console.log([...info.tableData])">打印数据</el-button>
+          <el-button type="success" @click="copyData">复制数据</el-button>
           <!-- <el-button type="success" @click="addFn">新增</el-button> -->
         </el-form-item>
       </el-form>
@@ -438,131 +323,185 @@ const turn_themeNameList = (row = {}) => {
     </div>
 
     <div class="main_box">
-      <el-table :data="info.tableData" border style="width: 100%" :height="info.tableHeight">
-        <el-table-column fixed label="序" type="index" width="50" />
+      <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
+        <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
-        <!-- <el-table-column prop="fund_code" label="基金号" width="80" /> -->
+        <el-table-column label="操作" width="45" fixed>
+          <template #default="{ row, $index }">
+            <el-button link type="primary" size="small" @click="btn_line_1(row, $index)">删除</el-button>
+          </template>
+        </el-table-column>
 
         <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
           <template v-slot="{ row }">
             <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
-              <span v-if="row.sign === '历史'" style="color: #876ad2; font-weight: 700">{{ row.fund_code }}</span>
-              <span v-else>{{ row.fund_code }}</span>
+              <span>{{ row.fund_code }}</span>
             </a>
           </template>
         </el-table-column>
 
-        <el-table-column prop="fund_name" label="基金名称" width="240" show-overflow-tooltip />
-        <el-table-column prop="fund_type_name" label="基金类型" width="110" show-overflow-tooltip />
+        <el-table-column label="基本信息" align="center">
+          <el-table-column prop="" label="基金名称" width="350">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.headerOfItem?.fundName || row?.fund_name }}</div>
+            </template>
+          </el-table-column>
 
-        <el-table-column prop="score" label="得分" width="120" align="right" sortable>
-          <template #default="{ row, $index }">
-            <span>{{ row.score }}</span>
+          <el-table-column prop="" label="基金类型" width="130">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.headerOfItem?.fundTypeName || row?.fund_type_name }}</div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="可买?" width="58">
+            <template v-slot="{ row }">
+              <span>{{ turnSacleFn(row) }}</span>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="锁定" width="120">
+            <template v-slot="{ row }">
+              <span>{{ row?.headerOfItem?.lockOrCloseTipsMap?.tag || '' }}</span>
+            </template>
+          </el-table-column>
+        </el-table-column>
+
+        <!-- https://fundgz.1234567.com.cn/js/007467.js -->
+
+        <el-table-column label="历史业绩" align="center">
+          <template v-for="(item, index_1) in his_name_arr" :key="item" v-slot="{ row }">
+            <el-table-column :label="item" align="center">
+              <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable :sort-method="(a, b) => sort_zhangfu_fn(row, index_1)(a, b)">
+                <template v-slot="{ row }">
+                  <div v-html="Turn_historyPerformanceList(row, item, 'rate')"></div>
+                </template>
+              </el-table-column>
+              <el-table-column prop="" label="同类均值" width="70" align="right">
+                <template v-slot="{ row }">
+                  <div v-html="Turn_historyPerformanceList(row, item, 'avg')"></div>
+                </template>
+              </el-table-column>
+              <el-table-column prop="" label="同类排名" width="94" align="right">
+                <template v-slot="{ row }">
+                  <div v-html="Turn_historyPerformanceList(row, item, 'rank')"></div>
+                </template>
+              </el-table-column>
+            </el-table-column>
           </template>
         </el-table-column>
 
-        <el-table-column label="总资产" width="120" align="right" sortable>
-          <template #default="{ row, $index }">
-            <span>{{ turnAssetFn(row.jd_totalAsset) }}</span>
-          </template>
+        <el-table-column label="定投业绩" align="center"></el-table-column>
+
+        <el-table-column label="综合诊断 (收益能力等是超越多少同类)" align="center">
+          <el-table-column prop="" label="基准" width="48">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.fundDiagnosisOfItem?.codeDesc }}</div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="收益能力" width="70" align="right">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_fundDiagnosisData(row, 1)"></div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="性价比" width="54" align="right">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_fundDiagnosisData(row, 2)"></div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="抗下跌" width="54" align="right">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_fundDiagnosisData(row, 3)"></div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="抗波动" width="54" align="right">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_fundDiagnosisData(row, 4)"></div>
+            </template>
+          </el-table-column>
         </el-table-column>
 
-        <el-table-column label="近1周" width="100" align="right" sortable :sort-method="sortByYearRate(1)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 1) }}</span>
-          </template>
+        <el-table-column label="基金档案" align="center">
+          <el-table-column prop="" label="成立时间" width="100">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.fundProfileOfItem?.establishedDate }}</div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="基金规模" width="100">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.fundProfileOfItem?.fundScale }}</div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="规模变化" width="220">
+            <template v-slot="{ row }">
+              <div class="">{{
+                row?.fundProfileOfItem?.fundScaleList?.join('；')
+              }}</div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="机构占比" width="70">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.fundProfileOfItem?.instPurchaseRatio }}</div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="基金经理" width="540">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_managerInfoList(row)"></div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="管理公司" width="90">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_company_name(row)"></div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="管理资产" width="100">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.fundProfileOfItem?.companyManageScale }}</div>
+            </template>
+          </el-table-column>
+
+          <el-table-column prop="" label="基金数量" width="70">
+            <template v-slot="{ row }">
+              <div class="">{{ row?.fundProfileOfItem?.manageNumber }}</div>
+            </template>
+          </el-table-column>
         </el-table-column>
 
-        <el-table-column label="近1月" width="100" align="right" sortable :sort-method="sortByYearRate(2)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 2) }}</span>
-          </template>
-        </el-table-column>
+        <el-table-column label="基金标签" align="center">
+          <el-table-column prop="" label="榜单" width="258">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_rankList(row)"></div>
+            </template>
+          </el-table-column>
 
-        <el-table-column label="近3月" width="100" align="right" sortable :sort-method="sortByYearRate(3)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 3) }}</span>
-          </template>
-        </el-table-column>
+          <el-table-column prop="" label="特色亮点" width="380">
+            <template v-slot="{ row }">
+              <div class="" v-html="TurnHighlights(row)"></div>
+            </template>
+          </el-table-column>
 
-        <el-table-column label="近6月" width="100" align="right" sortable :sort-method="sortByYearRate(4)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 4) }}</span>
-          </template>
-        </el-table-column>
+          <el-table-column prop="" label="用户关注" width="270">
+            <template v-slot="{ row }">
+              <div class="" v-html="Turn_userFocus(row)"></div>
+            </template>
+          </el-table-column>
 
-        <el-table-column label="近1年" width="100" align="right" sortable :sort-method="sortByYearRate(5)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 5) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="今年以来" width="100" align="right" sortable :sort-method="sortByYearRate(6)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 6) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="近3年" width="100" align="right" sortable :sort-method="sortByYearRate(7)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 7, row) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="成立以来" width="100" align="right" sortable :sort-method="sortByYearRate(8)">
-          <template #default="{ row, $index }">
-            <span>{{ zhangFn(row.jd_historyPerformance, 8) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="榜单" width="150" align="right" sortable>
-          <template #default="{ row, $index }">
-            <span>{{ turn_rankList(row) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="特色亮点" width="250" align="right" sortable>
-          <template #default="{ row, $index }">
-            <span>{{ turn_tagList(row) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="用户关注" width="250" align="right" sortable>
-          <template #default="{ row, $index }">
-            <span>{{ turn_userFocus(row) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="投资方向" width="250" align="right" sortable>
-          <template #default="{ row, $index }">
-            <span>{{ turn_themeNameList(row) }}</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column label="Operations" min-width="120">
-          <template #default="{ row, $index }">
-            <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
-          </template>
+          <el-table-column prop="" label="投资方向" width="258">
+            <template v-slot="{ row }">
+              <div class="" v-html="TurnInvestDirection(row)"></div>
+            </template>
+          </el-table-column>
         </el-table-column>
       </el-table>
-
-      <!--
-      基金经理的返回值
-      {
-        "yearPerformance":"6.06",
-        "employPerformance":"105.86",
-        "employmentDate":"14年217天",
-        "accessionDateDesc":"2013.03.29-至今",
-        "managerName":"何秀红",
-        "accessionDate":"12年170天",
-        "manageScale":"81.94亿元",
-        "awardList":[
-          {"awardTypeName":"金牛奖"},
-          {"awardTypeName":"金基金奖"},
-          {"awardTypeName":"明星基金奖"}
-        ]
-      },
-      -->
     </div>
   </div>
 </template>

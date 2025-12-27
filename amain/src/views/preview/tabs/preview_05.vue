@@ -3,32 +3,42 @@
 console.log('amain/src/views/preview/tabs/preview_05.vue');
 
 const info = reactive({
-  tableData: []
+  tableData: [],
 });
 // 获取-列表数据
 const query_list = () => {
   setTimeout(() => {
     server_fund_table_query_by_user({
-      fund_user_id: localStorage.getItem('user_id')
-    }).then(res => {
+      fund_user_id: localStorage.getItem('user_id'),
+    }).then((res) => {
       console.log('res', res);
       if (res.code === 200) {
-        info.tableData = res.data.data || [];
+        info.tableData = res.data || [];
       } else {
         ElMessage.error('获取列表失败，请重试！');
       }
-    })
+    });
   }, 300);
-}
+};
 query_list();
 </script>
 
 <template>
   <div class="page_wrapper">
     <div class="imgbox">
-      <a v-for="(item, index) in info.tableData" :key="index" target="_blank"
-        :href="'http://fund.eastmoney.com/' + (item.fund_code) + '.html?spm=aladin'" class="type_1">
-        <img class="fundImg" :src="`https://j3.dfcfw.com/images/JJJZ12/${item.fund_code}.png`" />
+      <a
+        v-for="(item, index) in info.tableData"
+        :key="index"
+        target="_blank"
+        :href="
+          'http://fund.eastmoney.com/' + item.fund_code + '.html?spm=aladin'
+        "
+        class="type_1"
+      >
+        <img
+          class="fundImg"
+          :src="`https://j3.dfcfw.com/images/JJJZ12/${item.fund_code}.png`"
+        />
       </a>
     </div>
   </div>
@@ -45,7 +55,7 @@ query_list();
   display: block;
   border: 1px solid #ddd;
   margin: 2px;
-  height: 120px;
+  height: 160px;
   width: calc(50% - 4px);
 }
 

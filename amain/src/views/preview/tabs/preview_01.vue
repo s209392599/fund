@@ -1,5 +1,5 @@
 <script setup>
-console.log('src/views/preview/tabs/preview_01.vue');
+console.log('amain/src/views/preview/tabs/preview_01.vue');
 // 涨幅预览  这个要里面要做收益预估
 const isMobile =
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -71,7 +71,7 @@ const query_list = () => {
       fund_user_id: localStorage.getItem('user_id'),
     }).then((res) => {
       if (res.code === 200) {
-        info.tableData = (res.data.data || []).map((item, index) => {
+        info.tableData = (res.data || []).map((item, index) => {
           item.zhang_his = [];
           return item;
         });
