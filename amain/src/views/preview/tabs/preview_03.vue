@@ -1,5 +1,4 @@
 <script setup>
-import { computed } from 'vue';
 console.log('amain/src/views/preview/tabs/preview_03.vue');
 // 群主分类推荐
 const tableMaxHeight = computed(() => {

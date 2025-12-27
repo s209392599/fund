@@ -17,8 +17,8 @@ export async function server_fund_amain_save_fund_data(data) {
   return request.post('/fund_amain_save_fund_data', data);
 }
 // 查询用户基金
-export async function server_fund_amain_fund_query_by_user(data) {
-  return request.post('/fund_amain_fund_query_by_user', data);
+export async function server_fund_table_query_by_user(data) {
+  return request.post('/fund_table_query_by_user', data);
 }
 // 修改某个用户信息
 export async function server_fund_update_user_info(data) {

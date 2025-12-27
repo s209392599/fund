@@ -2,6 +2,9 @@
 console.log('amain/src/views/preview/tabs/preview_07.vue');
 // 基金维护
 import { VueDraggable } from 'vue-draggable-plus';
+const tableMaxHeight = computed(() => {
+  return `calc(100vh - 125px)`;
+});
 
 // 判断是否为手机端
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -44,7 +47,7 @@ const rules = {
 // 获取-列表数据
 const query_list = () => {
   setTimeout(() => {
-    server_fund_amain_fund_query_by_user({
+    server_fund_table_query_by_user({
       fund_user_id: localStorage.getItem('user_id')
     }).then(res => {
       console.log('res', res);
@@ -83,6 +86,24 @@ const btn_del_fn = (row, $index) => {
     })
     .catch(() => { })
 }
+// 全部删除
+const btn_delete_all = () => {
+  ElMessageBox.confirm(
+    '确认删除吗?',
+    '警告',
+    {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消',
+      type: 'warning',
+    }
+  )
+    .then(() => {
+      info.tableData = [];
+      ElMessage.success('删除成功');
+    })
+    .catch(() => { })
+}
+
 // 前插
 const btn_pre = (row, $index) => {
   resetForm();
@@ -245,29 +266,40 @@ const groupPublic = () => {
     }
   })
 }
+// btn_copy_data
+const btn_copy_data = () => {
+  const data = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type
+    }
+  })
+  navigator.clipboard.writeText(JSON.stringify(data));
+  ElMessage.success('复制成功');
+}
 
 </script>
 
 <template>
   <div class="page-wrapper pd-10">
-    <div>注：基金数量有变化时一定要点<span style="color:red;">“保存数据”</span>按钮！</div>
+    <div class="desc_box">注：基金数量有变化时一定要点<span style="color:red;">“保存数据”</span>按钮！最多保存30条数据</div>
     <div class="top_btn_wrapper flex flex-wrap pb-5">
-      <el-button type="primary" size="small" @click="addNewFund()">新增基金</el-button>
-      <el-button type="primary" size="small" @click="SaveData()"
-        :disabled="info.tableData.length === 0">保存数据</el-button>
-      <el-button type="primary" size="small" @click="info.tableData = []"
-        :disabled="info.tableData.length === 0">全部删除</el-button>
-      <el-button type="primary" size="small" @click="groupPublic()">合并群主基金</el-button>
-      <el-button type="primary" size="small" @click="query_list()">刷新数据</el-button>
+      <el-button class="top_btn btn_1" @click="addNewFund()" :disabled="info.tableData.length >= 30">新增基金</el-button>
+      <el-button class="top_btn btn_2" @click="SaveData()">保存数据</el-button>
+      <el-button class="top_btn btn_4" @click="groupPublic()">合并群主基金</el-button>
+      <el-button class="top_btn btn_5" @click="query_list()">恢复到初始化数据</el-button>
+      <el-button class="top_btn btn_3" @click="btn_delete_all()" :disabled="!info.tableData.length">全部删除</el-button>
+      <el-button class="top_btn btn_5" @click="btn_copy_data()">复制数据</el-button>
     </div>
 
     <!--
-handle=".drag-handle"  只允许通过手柄拖拽
-filter=".no-drag"     过滤不可拖拽元素
--->
+      handle=".drag-handle"  只允许通过手柄拖拽
+      filter=".no-drag"     过滤不可拖拽元素
+    -->
     <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
       class="el-table" handle=".drag-handle" filter=".no-drag">
-      <el-table :data="info.tableData" border style="width: 100%" :height="info.table_height">
+      <el-table :data="info.tableData" border style="width: 100%" :max-height="tableMaxHeight">
         <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
         <el-table-column fixed label="拽" type="index" width="40" align="center">
@@ -323,7 +355,7 @@ filter=".no-drag"     过滤不可拖拽元素
       </el-table>
     </VueDraggable>
 
-    <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500">
+    <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500" :close-on-click-modal="false" >
       <el-form :model="info.form" :rules="rules" ref="diaForm">
         <el-form-item label="基金代码" prop="fund_code" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.fund_code" @change="change_fund_code" autocomplete="off" />
@@ -381,7 +413,38 @@ filter=".no-drag"     过滤不可拖拽元素
 </template>
 
 <style scoped lang="scss">
+.desc_box{
+  height: 25px;
+  line-height: 25px;
+}
+
 .top_btn_wrapper button {
-  margin: 5px;
+  height: 35px;
+  line-height: 35px;
+}
+
+:deep(.top_btn) {
+  color: #fff;
+  border: none;
+
+  &.btn_1 {
+    background-color: #7e57c2 !important; // 紫色
+  }
+
+  &.btn_2 {
+    background-color: #26a69a !important; // 青色
+  }
+
+  &.btn_3 {
+    background-color: #ff7043 !important; // 橙红色
+  }
+
+  &.btn_4 {
+    background-color: #ffa726 !important; // 橙黄色
+  }
+
+  &.btn_5 {
+    background-color: #29b6f6 !important; // 天蓝色
+  }
 }
 </style>

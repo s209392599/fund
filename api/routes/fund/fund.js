@@ -121,25 +121,7 @@ router.post('/fund_amain_getfundgz', (req, res) => {
   }
 });
 
-// 查询用户的基金
-router.post('/fund_amain_fund_query_by_user', async (req, res) => {
-  let { fund_user_id } = req.body;
-  if (!CustomFn.isValidFundUserId(fund_user_id)) {
-    return res.send({
-      code: 400,
-      msg: '用户id格式错误',
-      data: [],
-    });
-  }
-  fund_user_id = parseFloat(fund_user_id);
-  DatabasePostQuery({
-    res: res,
-    query: `SELECT * FROM fund_user_collection WHERE fund_user_id = ${fund_user_id} ORDER BY sort_order ASC`,
-    format: (results) => ({
-      data: results,
-    }),
-  });
-});
+
 
 // 保存用户的基金数据
 router.post('/fund_amain_save_fund_data', async (req, res) => {

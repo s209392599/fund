@@ -60,8 +60,6 @@ https://fund.eastmoney.com/trade/hh.html#zwf_,sc_z,st_desc
 https://m.1234567.com.cn/index.html?page=jjph&tab=qb  手机端上的排行
 
 
-SELECT * FROM fund_user_collection WHERE fund_user_id=57 ORDER BY sort_order ASC;
-
 UPDATE fund_user_collection SET
 fund_code = '008087',
 fund_name = 'test',

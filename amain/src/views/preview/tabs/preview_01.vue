@@ -67,7 +67,7 @@ window.jsonpgz = (data) => {
 // 获取-列表数据
 const query_list = () => {
   setTimeout(() => {
-    server_fund_amain_fund_query_by_user({
+    server_fund_table_query_by_user({
       fund_user_id: localStorage.getItem('user_id'),
     }).then((res) => {
       if (res.code === 200) {
@@ -145,11 +145,6 @@ const sortHisData8 = (a, b) => sortHistoricalData(a, b, 8);
         <template v-if="item.fund_sign === '正常' && item.zhang_url?.startsWith('http')">
           <a class="type_1" :href="`https://fund.eastmoney.com/${item.fundcode}.html`" target="_blank">
             <img :src="item.zhang_url" :alt="item.fund_name" />
-            <span class="" v-if="!['', null, undefined].includes(item.dwjz)">
-              <span v-if="Number(row.dwjz) > Number(row.point_top)" style="color:red;">过高</span>
-              <span v-else-if="Number(row.dwjz) > Number(row.point_down)" style="color:#0e48ff;">过低</span>
-              <span v-else>正常</span>
-            </span>
           </a>
         </template>
       </template>
