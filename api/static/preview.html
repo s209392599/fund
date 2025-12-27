@@ -419,19 +419,19 @@
     }
 
     // 获取历史数据
-    function getHistoryPerformance(fundcode) {
+    function getHistoryPerformance(fund_code) {
       fetch('http://150.158.175.108:9999/fund_history_performance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          fundcode: fundcode,
+          fund_code: fund_code,
         })
       }).then(res => res.json()).then(res => {
         if (res.code === 200) {
           info.arr_1.forEach((item, index) => {
-            if (item.fund_code === fundcode && (!item.zhang_his || item.zhang_his.length === 0)) {
+            if (item.fund_code === fund_code && (!item.zhang_his || item.zhang_his.length === 0)) {
               item.zhang_his = res.data || [];
             }
           })
