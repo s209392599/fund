@@ -7,6 +7,10 @@ console.log('amain/src/views/preview/fund_duibi/duibi_02.vue');
 const info = reactive({
   tableData: [],
 });
+const tableMaxHeight = computed(() => {
+  return `calc(100vh - 105px)`;
+});
+
 const his_name_arr = ['近1周', '近1月', '近3月', '近6月', '近1年', '近3年', '近5年', '今年以来', '成立以来'];
 if (localStorage.getItem('fund_duibi_arr')) {
   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
@@ -142,6 +146,22 @@ const Turn_historyPerformanceList = (row, item, type) => {
     .join('；');
 };
 
+const sort_zhangfu_fn = (a, b, index) => {
+  // 从a和b这两个行数据中获取对应的历史业绩数据进行比较
+  const getRate = (item, period) => {
+    const obj_1 = item?.performanceOfItem || {};
+    const obj_2 = obj_1.historyPerformanceMap || {};
+    const arr = obj_2.historyPerformanceList || [];
+    const foundItem = arr.find(historyItem => historyItem.name === period);
+    return foundItem ? parseFloat(foundItem.rate) || 0 : 0;
+  };
+  
+  const rateA = getRate(a, his_name_arr[index]);
+  const rateB = getRate(b, his_name_arr[index]);
+  
+  return rateA - rateB; // 降序排列
+};
+
 onMounted(() => {
   getList();
 });
@@ -149,7 +169,7 @@ onMounted(() => {
 
 <template>
   <div class="page_wrapper">
-    <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
+    <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
       <el-table-column label="操作" width="45" fixed>
@@ -195,9 +215,9 @@ onMounted(() => {
       <!-- https://fundgz.1234567.com.cn/js/007467.js -->
 
       <el-table-column label="历史业绩" align="center">
-        <template v-for="item in his_name_arr" :key="item">
+        <template v-for="(item, index_1) in his_name_arr" :key="item">
           <el-table-column :label="item" align="center">
-            <el-table-column prop="" label="涨跌幅" width="62" align="right">
+            <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable :sort-method="(a, b) => sort_zhangfu_fn(a, b, index_1)">
               <template v-slot="{ row }">
                 <div v-html="Turn_historyPerformanceList(row, item, 'rate')"></div>
               </template>

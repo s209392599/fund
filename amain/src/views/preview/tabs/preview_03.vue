@@ -47,7 +47,6 @@ const slectItem = (item) => {
   info.tableMiddle = JSON.parse(JSON.stringify(item.data)); // 深拷贝避免引用问题
 }
 
-// server_fund_table_mix_query
 // 获取群主推荐基金
 const query_qun_zhu_fund = () => {
   server_fund_table_mix_query({
@@ -66,7 +65,7 @@ const query_qun_zhu_fund = () => {
 // 查询基金信息
 const query_fund_info = (fund_code) => {
   server_fund_history_performance({
-    fundcode: fund_code,
+    fund_code: fund_code,
   }).then((res) => {
     if (res.code === 200) {
       info.tableData = info.tableData.map(item => {

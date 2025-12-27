@@ -14,8 +14,12 @@ router.post('/fund_apifolder_jiaichapaihang', async (req, res) => {
     // const jsonData = JSON.parse(data);
 
     let filePath = '';
-    if(__dirname.includes('api/routes/fund')){
+    console.log('__dirname',__dirname);
+    if(__dirname.includes('api/routes/fund')){// mac
       let prestr = __dirname.replace('routes/fund', 'data/pai_hang_jiao_cha');
+      filePath = prestr + '/data.json';
+    }else if(__dirname.includes('api\\routes\\fund')){// windows
+      let prestr = __dirname.replace('routes\\fund', 'data/pai_hang_jiao_cha');
       filePath = prestr + '/data.json';
     }else{
       filePath = './data.json';// 本文件执行

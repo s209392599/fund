@@ -67,11 +67,14 @@ const info = reactive({
 })
 const getTableData = async () => {
   try {
-    const res = await server_fund_apifolder_jiaichapaihang({})
-    console.log(res);
-    if (res.code === 200) {
-      info.data_jiaocha = res.data; // 将获取的数据存储到 info.data_jiaocha
-    }
+    server_fund_apifolder_jiaichapaihang({
+      }).then((res) => {
+        if (res.code === 200) {
+          info.data_jiaocha = res.data || {};
+        } else {
+          ElMessage.error('获取群主分类推荐失败，请重试！');
+        }
+      });
   } catch (error) {
     console.error('获取交叉排行数据失败:', error);
   }
@@ -86,6 +89,7 @@ const handleClick = (tab) => {
   // localStorage.setItem('preview_active_tab', tabId);
 };
 onMounted(() => {
+  getTableData();
   const firstTab = info.list_tabs[0];
   if (firstTab) {
     info.currentTabComponent = firstTab.component;
@@ -98,7 +102,6 @@ onMounted(() => {
     //   info.currentTabComponent = info.list_tabs.find(tab => tab.id === savedTab)?.component;
     // }
   }
-  getTableData();
 });
 </script>
 

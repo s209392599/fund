@@ -1,19 +1,6 @@
 <script setup>
 console.log('src/views/preview/tabs/preview_12.vue');
 
-/*
-
-jd_chi_cang
-jd_fundDiagnosis
-jd_fund_archive
-jd_header_tag
-jd_historyPerformance
-jd_managerInfo
-jd_proportion
-jd_totalAsset
-
-*/
-
 const info = reactive({
   text: '港股通红利',
   step: 1,
@@ -21,6 +8,9 @@ const info = reactive({
   tableHeight: 400,
 });
 const his_name_arr = ['近1周', '近1月', '近3月', '近6月', '近1年', '近3年', '近5年', '今年以来', '成立以来'];
+const tableMaxHeight = computed(() => {
+  return `calc(100vh - 135px)`;
+});
 
 const getList = () => {
   if (info.text.trim() === '') {
@@ -234,8 +224,8 @@ const Turn_historyPerformanceList = (row, item, type) => {
       } else if (type === 'rank') {
         let rank = item_1.rank || '-';
         if (rank.includes('/')) {
-          let num_1 = rank.split('/')[0];
-          let num_2 = rank.split('/')[1];
+          let num_1 = parseInt(rank.split('/')[0]);
+          let num_2 = parseInt(rank.split('/')[1]);
           if (num_2 > 0) {
             if (num_1 / num_2 > 0.5) {
               return `<span style="color: red">${rank}</span>`
@@ -278,23 +268,20 @@ const copyData = () => {
 };
 
 // 涨跌幅的排序
-const sort_zhangfu_fn = (row={},index) => {
-  // const his_name_arr = ['近1周', '近1月', '近3月', '近6月', '近1年', '近3年', '近5年', '今年以来', '成立以来'];
-  return (a, b) => {
-    console.log('-------------------------------');
-    console.log('row',row);
-    console.log('row,index',row,index);
-    const getRate = (item, period) => {
-      const obj_1 = row?.performanceOfItem || {};
-      const obj_2 = obj_1.historyPerformanceMap || {};
-      const arr = obj_2.historyPerformanceList || [];
-
-      return Math.random > 0.5
-    };
-    const rateA = getRate(a, his_name_arr[index]);
-    const rateB = getRate(b, his_name_arr[index]);
-    return rateB - rateA;
+const sort_zhangfu_fn = (a, b, index) => {
+  // 从a和b这两个行数据中获取对应的历史业绩数据进行比较
+  const getRate = (item, period) => {
+    const obj_1 = item?.performanceOfItem || {};
+    const obj_2 = obj_1.historyPerformanceMap || {};
+    const arr = obj_2.historyPerformanceList || [];
+    const foundItem = arr.find(historyItem => historyItem.name === period);
+    return foundItem ? parseFloat(foundItem.rate) || 0 : 0;
   };
+  
+  const rateA = getRate(a, his_name_arr[index]);
+  const rateB = getRate(b, his_name_arr[index]);
+  
+  return rateA - rateB; // 降序排列
 };
 </script>
 
@@ -319,11 +306,11 @@ const sort_zhangfu_fn = (row={},index) => {
     </div>
 
     <div>
-      <span class="">总数量：{{ info.tableData.length }}个</span>
+      <span class="" style="height:24px;line-height:24px">总数量：{{ info.tableData.length }}个</span>
     </div>
 
     <div class="main_box">
-      <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
+      <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
         <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
         <el-table-column label="操作" width="45" fixed>
@@ -369,9 +356,9 @@ const sort_zhangfu_fn = (row={},index) => {
         <!-- https://fundgz.1234567.com.cn/js/007467.js -->
 
         <el-table-column label="历史业绩" align="center">
-          <template v-for="(item, index_1) in his_name_arr" :key="item" v-slot="{ row }">
+          <template v-for="(item, index_1) in his_name_arr" :key="item">
             <el-table-column :label="item" align="center">
-              <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable :sort-method="(a, b) => sort_zhangfu_fn(row, index_1)(a, b)">
+              <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable :sort-method="(a, b) => sort_zhangfu_fn(a, b, index_1)">
                 <template v-slot="{ row }">
                   <div v-html="Turn_historyPerformanceList(row, item, 'rate')"></div>
                 </template>

@@ -108,5 +108,5 @@ const copy_fn = (type) => {
 </template>
 
 <style scoped lang="scss">
-@import './css/other_002_001.scss';
+@import '@/views/preview/other/css/other_002_001.scss';
 </style>
