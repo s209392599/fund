@@ -27,7 +27,7 @@ const info = reactive({
     {
       id: 14,
       show: true,
-      name: '标准基金',
+      name: '群主基金',
       component: markRaw(
         defineAsyncComponent(() => import('./tabs/preview_14.vue'))
       ),
@@ -49,7 +49,7 @@ const info = reactive({
       component: markRaw(
         defineAsyncComponent(() => import('./tabs/preview_10.vue'))
       ),
-      desc: '标准基金的对比 和 手动挑选一些基金进行对比',
+      desc: '群主基金的对比 和 手动挑选一些基金进行对比',
     },
     {
       id: 5,

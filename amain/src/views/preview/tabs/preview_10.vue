@@ -192,7 +192,7 @@ const getUserInfo = () => {
         }, i * 100);
       }
     } else {
-      ElMessage.error(`获取标准基金列表失败`);
+      ElMessage.error(`获取群主基金列表失败`);
     }
   });
 };

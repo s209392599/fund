@@ -460,14 +460,14 @@ const updateUserJson = (newJsonData) => {
   }
 };
 
-// 获取 标准基金 数据
+// 获取 群主基金 数据
 const getPublicFundJson = () => {
   const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const jsonData = JSON.parse(fileContent);
   return jsonData;
 };
-// 更新 标准基金 数据
+// 更新 群主基金 数据
 const updatePublicFundJson = (newJsonData) => {
   const filePath = path.join(__dirname, '../../data/base/standard_fund.json');
   try {
