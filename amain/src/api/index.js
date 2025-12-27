@@ -112,3 +112,7 @@ export async function server_fund_mysql_query_keywords(data) {
 export async function server_fund_mysql_fundinfo_byfunds(data) {
   return request.post('/fund_mysql_fundinfo_byfunds', data);
 }
+// fund_table_mix_query 获取基金数据
+export async function server_fund_table_mix_query(data) {
+  return request.post('/fund_table_mix_query', data);
+}

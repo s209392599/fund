@@ -10,52 +10,32 @@ const info = reactive({
   active_id: 1,
   active_update_time: '-',// 分组的更新时间
   list: [
-    {
-      id: 1,
-      type: '红利',
-      desc: '',
-      update_time: '2025年12月26日16:59:14',
-      data: [
-        {
-          fund_code: '023918',
-          fund_name: '华夏国证自由现金流ETF联接C',
-          fund_type: '',
-          update_time: '2025-12-26 17:27:47',
-        },
-        {
-          fund_code: '020867',
-          fund_name: '华安恒生红利',
-          fund_type: '',
-          update_time: '2025-12-26 17:27:47',
-        },
-        {
-          fund_code: '019261',
-          fund_name: '富国恒生红利ETF联接C',
-          fund_type: '',
-          update_time: '2025-12-26 17:27:47',
-        }
-      ]
-    },
-    {
-      id: 2,
-      type: '量化',
-      desc: '',
-      update_time: '2025年12月26日16:59:14',
-      data: [
-        {
-          fund_code: '016858',
-          fund_name: '国金量化多因子股票C',
-          fund_type: '',
-          update_time: '2025-12-26 17:27:47',
-        },
-        {
-          fund_code: '021991',
-          fund_name: '中加专精特新量化混合C',
-          fund_type: '',
-          update_time: '2025-12-26 17:27:47',
-        }
-      ]
-    },
+    // {
+    //   id: 1,
+    //   type: '红利',
+    //   desc: '',
+    //   update_time: '2025年12月26日16:59:14',
+    //   data: [
+    //     {
+    //       fund_code: '023918',
+    //       fund_name: '华夏国证自由现金流ETF联接C',
+    //       fund_type: '',
+    //       update_time: '2025-12-26 17:27:47',
+    //     },
+    //     {
+    //       fund_code: '020867',
+    //       fund_name: '华安恒生红利',
+    //       fund_type: '',
+    //       update_time: '2025-12-26 17:27:47',
+    //     },
+    //     {
+    //       fund_code: '019261',
+    //       fund_name: '富国恒生红利ETF联接C',
+    //       fund_type: '',
+    //       update_time: '2025-12-26 17:27:47',
+    //     }
+    //   ]
+    // },
   ],
   tableData: [],
   tableMiddle: [],// 中间变量
@@ -68,6 +48,23 @@ const slectItem = (item) => {
   info.tableMiddle = JSON.parse(JSON.stringify(item.data)); // 深拷贝避免引用问题
 }
 
+// server_fund_table_mix_query
+// 获取群主推荐基金
+const query_qun_zhu_fund = () => {
+  server_fund_table_mix_query({
+    type_1: 'qun_zhu_fen_lei_tui_jian',
+  }).then((res) => {
+    if (res.code === 200) {
+      let turnData = (res.data || [])[0]?.mix_data || '[]';
+      info.list = JSON.parse(turnData);
+      slectItem(info.list[0]);// 默认选中第一个
+    } else {
+      ElMessage.error('获取群主分类推荐失败，请重试！');
+    }
+  });
+}
+
+// 查询基金信息
 const query_fund_info = (fund_code) => {
   server_fund_history_performance({
     fundcode: fund_code,
@@ -147,7 +144,7 @@ const copyText = () => {
 }
 
 onMounted(() => {
-  slectItem(info.list[0]);
+  query_qun_zhu_fund();
 })
 </script>
 

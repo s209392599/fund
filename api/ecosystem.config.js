@@ -4,7 +4,7 @@ module.exports = {
     {
       name: 'fund_api',
       desc: '基金接口',
-      script: 'app.js',
+      script: './app.js',
       watch: true,
       log_date_format: 'YYYY-MM-DD HH:mm Z', // 时间格式
       watch: ['app.js', 'routes/**/*.js', 'data/base/user.json'], // 监控 app.js 和 routes 下所有文件
@@ -22,7 +22,7 @@ module.exports = {
     {
       name: 'timer',
       desc: '关于基金的定时任务(获取一些涨幅数据等)',
-      script: 'timer.js',
+      script: './timer.js',
       log_date_format: 'YYYY-MM-DD HH:mm Z', // 时间格式
       time: true, // 显示时间戳
 
