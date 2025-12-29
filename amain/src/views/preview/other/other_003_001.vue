@@ -6,6 +6,23 @@ const tableMaxHeight = computed(() => {
 const info = reactive({
   tableData: [],
 })
+const selectedRows = ref([]);
+
+// 处理勾选变化
+const handleSelectionChange = (val) => {
+  selectedRows.value = val || [];
+}
+
+// 读取并复制/打印勾选的数据
+const getSelected = () => {
+  console.log('selectedRows', selectedRows.value);
+  if ((selectedRows.value || []).length === 0) {
+    ElMessage.info('未勾选任何项');
+    return;
+  }
+  fallbackCopyText(JSON.stringify(selectedRows.value));
+  ElMessage.success('已复制勾选数据到剪贴板');
+}
 //
 // 获取今日加仓榜
 const getList = () => {
@@ -35,6 +52,12 @@ const getFundMetrics = (row) => {
   return (row.fundMetrics || []).join(',');
 }
 
+// 删除
+const btn_del = (row, index) => {
+  info.tableData.splice(index, 1);
+  ElMessage.success('删除成功');
+}
+
 onMounted(() => {
   getList();
 })
@@ -51,10 +74,18 @@ onMounted(() => {
     <div class="page_right flex-1">
       <div class="top_box flex items-center">
         <div class="btn_copy" @click="copyText">复制数据</div>
+        <div class="btn_copy ml-2" @click="getSelected">读取勾选</div>
         <div class="flex-1 text-right truncate pl-5"></div>
       </div>
-      <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
+      <el-table ref="tableRef" :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight" @selection-change="handleSelectionChange">
         <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
+        <el-table-column type="selection" width="40" fixed></el-table-column>
+        <el-table-column label="操作" width="60" fixed>
+          <template #default="{ row, $index }">
+            <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
+          </template>
+        </el-table-column>
+
 
         <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
           <template v-slot="{ row }">
@@ -64,7 +95,7 @@ onMounted(() => {
           </template>
         </el-table-column>
 
-        <el-table-column prop="fundName" label="基金名称" width="250">
+        <el-table-column prop="fundName" label="基金名称" width="360">
         </el-table-column>
 
         <el-table-column prop="fundTypeStr" label="类型" width="100">
@@ -91,7 +122,7 @@ onMounted(() => {
           </template>
         </el-table-column>
 
-        <el-table-column align="right" label="特征" width="240">
+        <el-table-column align="right" label="特征" width="300">
           <template v-slot="{ row }">
             <span v-html="getFundMetrics(row)"></span>
           </template>

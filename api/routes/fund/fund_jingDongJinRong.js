@@ -291,4 +291,36 @@ router.post('/fund_jd_getWealthDatas', (req, res) => {
   }
 });
 
+// 连续跑赢大盘
+// https://ms.jr.jd.com/gw2/generic/jj/newh5/m/getInvestResearchRank
+// reqData {"rankType":"lxpydp"}
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=lxpydp
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&rankCode=466476965486976&fundUtmSource=1677&fundUtmParam=jrcfb
+
+// 长期绩优
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=cqjy
+
+// 屡创新高
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=lcxg
+
+// 半导体
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=semi
+
+// 低费用
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=dfy
+
+// 机构偏爱
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=jgpa
+
+// 晨星评级
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=cxpj
+
+// 严控回撤
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=ykhc
+
+// 高性价比
+// 持仓盈利多
+// 复购占比
+// 综合人气
+// 热门定投
 module.exports = router;

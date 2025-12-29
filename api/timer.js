@@ -32,7 +32,7 @@ schedule.scheduleJob('0 0 0 * * *', async () => {
   }
 });
 // 基金数据更新
-schedule.scheduleJob('1 0 0 * * *', async () => {
+schedule.scheduleJob('30 0 0 * * *', async () => {
   try {
     await getFundcodeSearch();
     // console.log('2222', new Date().toLocaleString());
