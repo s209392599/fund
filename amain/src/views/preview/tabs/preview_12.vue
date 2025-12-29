@@ -1,8 +1,9 @@
 <script setup>
 console.log('src/views/preview/tabs/preview_12.vue');
+// https://fundgz.1234567.com.cn/js/007467.js
 
 const info = reactive({
-  text: '港股通红利',
+  text: '',
   step: 1,
   tableData: [], // 列表数据
   tableHeight: 400,
@@ -13,34 +14,28 @@ const tableMaxHeight = computed(() => {
 });
 
 const getList = () => {
-  if (info.text.trim() === '') {
+  if (info.text.trim().length < 2) {
+    ElMessage.warning('最少输入两个字符');
     info.tableData = [];
     return;
   }
-  server_fund_mysql_query_keywords({ text: info.text.trim() })
+  info.tableData = [];
+  server_fund_apifolder_query_keywords({ text: info.text.trim() })
     .then((res) => {
-      console.log('关键词搜索', 'res', res);
       if (res.code === 200) {
-        info.tableData = [...res.data];
-        if (!info.tableData.length) {
+        if (!res.data.length) {
           ElMessage.info('暂无数据');
+          return;
         }
-        // // 不以ETF结尾的基金
-        // info.tableData = [...res.data].filter(item => !item.name.endsWith('ETF'));
-        // info.tableData.push({
-        //   code: '008164',
-        //   name: 'aaaaaa',
-        // })
-        // // getFundGZ();// 查看是否可以读取到当日的涨幅
-        // getFundGZ(info.tableData.map(item => item.code));
-      } else {
-        info.tableData = [];
-        ElMessage.error(res.msg || '获取列表失败');
+        if (res.data.length > 500) {
+          ElMessage.warning('最多显示500条数据');
+          info.tableData = res.data.slice(0, 500);
+        } else {
+          info.tableData = [...res.data];
+        }
       }
     })
     .catch(() => {
-      info.tableData = [];
-      ElMessage.error('获取列表失败');
     })
     .finally(() => {
       info.step = info.tableData.length ? 2 : 1;
@@ -54,7 +49,6 @@ const resetForm = () => {
 
 // 去除A类
 const removeA = () => {
-  console.log('去除name最后一个字符是A');
   ElMessageBox.confirm('确认去除吗?', '警告', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
@@ -101,7 +95,6 @@ const defenFn = (jd_historyPerformance) => {
     }
     return defen;
   } catch (err) {
-    // console.log(err, row);
   } finally {
     return defen;
   }
@@ -114,39 +107,29 @@ const getAllInfo = async () => {
     await server_fund_jd_detailPageInfoWithNoPin({
       fund_code: item.fund_code,
     }).then((res) => {
-      console.log(res);
       info.tableData[i] = {
         ...info.tableData[i],
         ...res.data,
         fund_name: res.data?.headerOfItem?.fundName || '',
         fund_type: res.data?.headerOfItem?.fundTypeName || '',
       };
+      info.step = 4;
     });
   }
 };
 
-// 资产转换
-const turnAssetFn = (str) => {
-  if (!str || str.length === 0) return 0;
-  if (['0', '', 'undefined'].includes(str)) return 0;
-  var num_1 = parseFloat(str);
-  return num_1;
-};
 // 去除小于1亿
 const removeFn_1 = () => {
   var arr_1 = [];
   info.tableData.forEach((item) => {
-    if (!['0', '', 'undefined'].includes(item.jd_totalAsset)) {
-      if (
-        item.jd_totalAsset &&
-        parseFloat(item.jd_totalAsset) > 1 * 10000 * 10000
-      ) {
-        arr_1.push(item);
-      }
+    const obj_1 = item?.fundProfileOfItem || {};
+    const fundScale = obj_1.fundScale || '';
+    let flag_1 = fundScale.includes('亿元');
+    if (flag_1 && parseFloat(fundScale) >= 1) {
+      arr_1.push(item);
     }
   });
   info.tableData = [...arr_1];
-  // info.step = info.tableData.length ? 5 : 1;
 };
 
 // 删除
@@ -244,27 +227,26 @@ const Turn_historyPerformanceList = (row, item, type) => {
 };
 
 // 是否可买
-const turnSacleFn = (row={}) => {
-  if(row.hasOwnProperty('isForSale')){
+const turnSacleFn = (row = {}) => {
+  if (row.hasOwnProperty('isForSale')) {
     return row.isForSale ? '可买' : '不可买';
   }
   return '-';
 };
 // 复制数据
 const copyData = () => {
-  if(!info.tableData.length){
+  if (!info.tableData.length) {
     ElMessage.info('暂无数据');
     return;
   }
-  const data = info.tableData.map(v =>{
+  const data = info.tableData.map(v => {
     return {
       fund_code: v.fund_code,
       fund_name: v.fund_name,
       fund_type: v.fund_type,
     };
   });
-  navigator.clipboard.writeText(JSON.stringify(data));
-  ElMessage.success('复制成功');
+  fallbackCopyText(JSON.stringify(data));
 };
 
 // 涨跌幅的排序
@@ -277,28 +259,53 @@ const sort_zhangfu_fn = (a, b, index) => {
     const foundItem = arr.find(historyItem => historyItem.name === period);
     return foundItem ? parseFloat(foundItem.rate) || 0 : 0;
   };
-  
+
   const rateA = getRate(a, his_name_arr[index]);
   const rateB = getRate(b, his_name_arr[index]);
-  
+
   return rateA - rateB; // 降序排列
 };
+// 去除不可买
+const removeFn_2 = () => {
+  var arr_2 = [];
+  info.tableData.forEach((item) => {
+    if (turnSacleFn(item) === '可买') {
+      arr_2.push(item);
+    }
+  });
+  info.tableData = [...arr_2];
+  ElMessage.success('去除不可买成功');
+};
+// 去除ETF
+const removeFn_3 = () => {
+  var arr_3 = [];
+  info.tableData.forEach((item) => {
+    if (!item.fund_name.endsWith('ETF')) {
+      arr_3.push(item);
+    }
+  });
+  info.tableData = [...arr_3];
+  ElMessage.success('去除ETF成功');
+};
+
 </script>
 
 <template>
   <div class="page_wrapper pd-10">
     <div class="search_box">
       <el-form :inline="true">
-        <el-form-item label="关键字">
-          <el-input v-model="info.text" placeholder="搜索的文字" clearable />
+        <el-form-item label="基金名称关键字">
+          <el-input v-model="info.text" placeholder="最少两个字符" clearable />
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="getList" data-num="2">搜索</el-button>
+          <el-button type="primary" @click="getList">搜索</el-button>
           <el-button @click="resetForm">重置</el-button>
-          <el-button type="success" @click="removeA" :disabled="info.step < 2" data-num="3">去除A类</el-button>
-          <el-button type="success" @click="getAllInfo" :disabled="info.step < 3" data-num="4">详细信息</el-button>
-          <el-button type="success" @click="removeFn_1" :disabled="info.step < 4" data-num="5">去除小于1亿</el-button>
+          <el-button type="success" @click="removeA" :disabled="info.step < 2">去除A类</el-button>
+          <el-button type="success" @click="removeFn_3" :disabled="info.step < 2">去除ETF</el-button>
+          <el-button type="success" @click="getAllInfo" :disabled="info.step < 3">详细信息</el-button>
+          <el-button type="success" @click="removeFn_2" :disabled="info.step < 4">去除不可买</el-button>
+          <el-button type="success" @click="removeFn_1" :disabled="info.step < 4">去除小于1亿</el-button>
           <el-button type="success" @click="copyData">复制数据</el-button>
           <!-- <el-button type="success" @click="addFn">新增</el-button> -->
         </el-form-item>
@@ -306,7 +313,7 @@ const sort_zhangfu_fn = (a, b, index) => {
     </div>
 
     <div>
-      <span class="" style="height:24px;line-height:24px">总数量：{{ info.tableData.length }}个</span>
+      <span class="" style="height:24px;line-height:24px">总数量：{{ info.tableData.length }}个(只展示前500条)</span>
     </div>
 
     <div class="main_box">
@@ -353,12 +360,11 @@ const sort_zhangfu_fn = (a, b, index) => {
           </el-table-column>
         </el-table-column>
 
-        <!-- https://fundgz.1234567.com.cn/js/007467.js -->
-
         <el-table-column label="历史业绩" align="center">
           <template v-for="(item, index_1) in his_name_arr" :key="item">
             <el-table-column :label="item" align="center">
-              <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable :sort-method="(a, b) => sort_zhangfu_fn(a, b, index_1)">
+              <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable
+                :sort-method="(a, b) => sort_zhangfu_fn(a, b, index_1)">
                 <template v-slot="{ row }">
                   <div v-html="Turn_historyPerformanceList(row, item, 'rate')"></div>
                 </template>
@@ -440,7 +446,7 @@ const sort_zhangfu_fn = (a, b, index) => {
 
           <el-table-column prop="" label="基金经理" width="540">
             <template v-slot="{ row }">
-              <div class="" v-html="Turn_managerInfoList(row)"></div>
+              <div v-html="Turn_managerInfoList(row)"></div>
             </template>
           </el-table-column>
 

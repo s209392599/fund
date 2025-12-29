@@ -97,6 +97,10 @@ export async function server_fund_jd_HistoryNetValuePageInfo(data) {
 export async function server_fund_apifolder_jiaichapaihang(data) {
   return request.post('/fund_apifolder_jiaichapaihang', data);
 }
+// fund_jd_getWealthDatas 获取基金今日加仓榜
+export async function server_fund_jd_getWealthDatas(data) {
+  return request.post('/fund_jd_getWealthDatas', data);
+}
 
 // --------------------------------------------------------------  下面是数据库操作
 
@@ -105,8 +109,8 @@ export async function server_fund_mysql_normal_all(data) {
   return request.post('/fund_mysql_normal_all', data);
 }
 // 根据关键词返回基金
-export async function server_fund_mysql_query_keywords(data) {
-  return request.post('/fund_mysql_query_keywords', data);
+export async function server_fund_apifolder_query_keywords(data) {
+  return request.post('/fund_apifolder_query_keywords', data);
 }
 
 // fund_table_mix_query 获取基金数据

@@ -16,6 +16,12 @@ const info = reactive({
       hasComponent: true, // 标识该节点没有组件，仅为父节点
       component: () => import('@/views/preview/other/other_002_000.vue')
     },
+    {
+      id: 'other_003_000',
+      name: '榜单(京东金融)',
+      hasComponent: true, // 标识该节点没有组件，仅为父节点
+      component: () => import('@/views/preview/other/other_003_000.vue')
+    },
     // {
     //   id: 'other_002_000',
     //   name: '交叉排行',

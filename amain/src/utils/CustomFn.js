@@ -1,3 +1,5 @@
+import { ElMessage } from 'element-plus';
+
 // CustomDateFtt(1565059668200,"yyyy-MM-dd hh:mm:ss");// '2019-08-06 10:47:48'
 // CustomDateFtt(1565059668200,"yyyy-MM-dd");// '2019-08-06'
 export const CustomDateFtt = (date, fmt = 'yyyy-MM-dd hh:mm:ss') => {
@@ -57,4 +59,16 @@ export const CustomUUID = () => {
   const customDate = CustomDateFtt(new Date(), 'yyyy_MM_dd_hh_mm_ss_S');
   const randomString = generateRandomString(6);
   return `${prefix}_${customDate}_${randomString}`;
+};
+
+// 复制文本
+export const fallbackCopyText = (text) => {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  ElMessage.success('复制成功');
+  ElMessage.success('复制成功 boxue 6666');
 };

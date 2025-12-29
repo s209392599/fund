@@ -469,26 +469,6 @@ router.post('/fund_search_bytiantian', (req, res) => {
   }
 });
 
-// 根据关键词返回基金
-router.post('/fund_mysql_query_keywords', async (req, res) => {
-  const { text = '' } = req.body;
-  if (text.length < 2) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到搜索关键词',
-      data: [],
-    });
-    return;
-  }
-  var query = `SELECT fund_code,fund_name,fund_type_name FROM fund_all WHERE fund_name LIKE ? AND no_keyword = 'y' AND is_sale = 'y'`;
-  DatabasePostQuery({
-    res: res,
-    query: query,
-    values: [`%${text}%`],
-    format: (results) => results,
-  });
-});
-
 // router.get('/users/:id', (req, res) => {
 //   const userId = req.params.id;
 //   res.send(`Get user with ID ${userId}`);

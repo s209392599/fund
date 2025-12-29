@@ -137,8 +137,7 @@ const copyText = () => {
       fund_type: item.fund_type || '',
     }
   });
-  navigator.clipboard.writeText(JSON.stringify(data));
-  ElMessage.success('复制成功');
+  fallbackCopyText(JSON.stringify(data));
 }
 
 onMounted(() => {

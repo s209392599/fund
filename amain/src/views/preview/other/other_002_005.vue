@@ -34,11 +34,11 @@ const del_item = (type, fund_code) => {
 }
 const copy_fn = (type) => {
   if (type === 'rizhou') {
-    navigator.clipboard.writeText(JSON.stringify(info.ri_zhou));
+    fallbackCopyText(JSON.stringify(info.ri_zhou));
   } else if (type === 'zhouyue') {
-    navigator.clipboard.writeText(JSON.stringify(info.zhou_yue));
+    fallbackCopyText(JSON.stringify(info.zhou_yue));
   } else if (type === 'rizhouyue') {
-    navigator.clipboard.writeText(JSON.stringify(info.ri_zhou_yue));
+    fallbackCopyText(JSON.stringify(info.ri_zhou_yue));
   }
   ElMessage.success('复制成功');
 }

@@ -246,4 +246,49 @@ https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?reqData={"cha
   }
 });
 
+// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&rankCode=432126255181888
+// 获取京东金融上面的“今日加仓榜”
+router.post('/fund_jd_getWealthDatas', (req, res) => {
+  try {
+    let u = `https://ms.jr.jd.com/gw2/generic/opdataapi/newh5/m/getWealthDatas`;
+    fetch(u, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body:JSON.stringify({
+        reqData:{
+          "rankCode": "432126255181888",
+          "sourceType": 1
+        }
+      })
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (!data.success) {
+          res.send({
+            code: 400,
+            msg: `服务器获取出错`,
+            data: [],
+          });
+        } else {
+          let resultData = data.resultData || {};
+          let obj_1 = resultData.data || {};
+          let obj_2 = obj_1.data || [];
+          res.send({
+            code: 200,
+            msg: '成功',
+            data: obj_2 || [],
+          });
+        }
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `未能正确获取到值`,
+      data: [],
+    });
+  }
+});
+
 module.exports = router;

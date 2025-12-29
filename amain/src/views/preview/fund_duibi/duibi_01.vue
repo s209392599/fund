@@ -69,10 +69,7 @@ const btn_line_2 = (row, index) => {
 };
 const btn_fn_03 = () => {
   let str = info.tableData.map(v => v.fund_code).join(',');
-  console.log(str);
-  navigator.clipboard.writeText(str);
-  // 提示复制成功
-  ElMessage.success('复制成功');
+  fallbackCopyText(str);
 };
 const btn_fn_04 = () => {
   var str = prompt(`示例：[{"fund_code": "", "fund_name": "", "fund_type": ""}]`, "");
@@ -118,21 +115,19 @@ const btn_fn_04 = () => {
   }
 };
 const btn_fn_05 = () => {
-  if(!info.tableData.length){
+  if (!info.tableData.length) {
     ElMessage.error('没有基金信息');
     return false;
   }
-  var data = info.tableData.map(v => { 
-    return { 
-    fund_code: v.fund_code,
-    fund_name: v.fund_name,
-    fund_type: v.fund_type
-   }
+  var data = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type
+    }
   });
   let str = JSON.stringify(data);
-  navigator.clipboard.writeText(str);
-  // 提示复制成功
-  ElMessage.success('复制成功');
+  fallbackCopyText(str);
 };
 </script>
 

@@ -64,6 +64,12 @@ const info = reactive({
     }, {
       name: "同花顺(行情中心)",
       adress: "https://q.10jqka.com.cn/"
+    }, {
+      name: "金融财富榜(京东金融)",
+      adress: "https://show.jd.com/m/dVAaqEjDlpo3kRyP/"
+    }, {
+      name: "今日加仓榜(京东金融)",
+      adress: "https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&rankCode=432126255181888"
     }
   ]
 });

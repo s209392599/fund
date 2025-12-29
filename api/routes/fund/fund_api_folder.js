@@ -6,52 +6,88 @@ const fs = require('fs');
 const path = require('path');
 const CustomFn = require('../../CustomFn.js');
 
-// 读取交叉排行的数据
-router.post('/fund_apifolder_jiaichapaihang', async (req, res) => {
-  try{
-    // const filePath = path.join(__dirname, 'data', '');
-    // const data = fs.readFileSync(filePath, 'utf8');
-    // const jsonData = JSON.parse(data);
+// 封装一个读取文件并返回json数据的方法
+async function readJsonFile(filePath = '') {
+  if (__dirname.includes('api/routes/fund')) {
+    let prestr = __dirname.replace('routes/fund', filePath);
+    filePath = prestr; // mac
+  } else if (__dirname.includes('api\\routes\\fund')) {
+    let prestr = __dirname.replace('routes\\fund', filePath);
+    filePath = prestr; // windows
+  }
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+  const data = await fs.promises.readFile(filePath, 'utf8');
+  return JSON.parse(data);
+}
 
-    let filePath = '';
-    console.log('__dirname',__dirname);
-    if(__dirname.includes('api/routes/fund')){// mac
-      let prestr = __dirname.replace('routes/fund', 'data/pai_hang_jiao_cha');
-      filePath = prestr + '/data.json';
-    }else if(__dirname.includes('api\\routes\\fund')){// windows
-      let prestr = __dirname.replace('routes\\fund', 'data/pai_hang_jiao_cha');
-      filePath = prestr + '/data.json';
-    }else{
-      filePath = './data.json';// 本文件执行
-    }
-    console.log('filePath',filePath);
-    // 1. 使用异步读取（避免阻塞事件循环）
-    const data = await fs.promises.readFile(filePath, 'utf8');
-    const jsonData = JSON.parse(data);
-    // 2. 添加文件存在性检查
-    if (!fs.existsSync(filePath)) {
+async function turnDataFn(res, obj){
+  const filePath = obj.filePath || './data.json';
+  // 不对数据转换，不用写
+  const turnDataFn = obj.turnDataFn || ((v)=>{ return v;});
+  try {
+    let json_data = await readJsonFile(filePath);
+    if (!json_data) {
       return res.send({
         code: 404,
         msg: '数据文件不存在',
-        data: null
-      });
-    }else{
-      const curDay = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd');
-      const turnData = jsonData[curDay] || {};// 只取当天的数据
-      res.send({
-        code: 200,
-        msg: '读取文件成功',
-        data: turnData,
+        data: null,
       });
     }
+    const turnData = turnDataFn(json_data);
+    return res.send({
+      code: 200,
+      msg: '读取文件成功',
+      data: turnData,
+    });
   } catch (error) {
-    res.send({
+    return res.send({
       code: 400,
       msg: '读取文件失败',
+      data: null,
+    });
+  }
+}
+
+// 读取交叉排行的数据
+router.post('/fund_apifolder_jiaichapaihang', async (req, res) => {
+  return turnDataFn(res, {
+    filePath: 'data/pai_hang_jiao_cha/data.json',
+    turnDataFn: (json_data) => {
+      const curDay = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd');
+      return json_data[curDay] || {}; // 只取当天的数据
+    },
+  });
+});
+
+// 根据关键词返回基金
+router.post('/fund_apifolder_query_keywords', async (req, res) => {
+  const { text = '' } = req.body;
+  if (text.length < 2) {
+    return res.send({
+      code: 400,
+      msg: '未正确获取到搜索关键词',
       data: [],
     });
   }
+  return turnDataFn(res, {
+    filePath: 'data/fund_all/data.json',
+    turnDataFn: (json_data) => {
+      let arr = [];
+      json_data.forEach((item) => {
+        let fund_name = item[1];
+        if(fund_name.includes(text)){
+          arr.push({
+            fund_code: item[0],
+            fund_name: item[1],
+            fund_type: item[2],
+          });
+        }
+      });
+      return arr;
+    },
+  });
 });
-
 
 module.exports = router;

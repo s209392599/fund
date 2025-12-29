@@ -272,68 +272,16 @@ const btn_copy_data = () => {
     ElMessage.error('没有基金信息');
     return false;
   }
-  var data = info.tableData.map(v => { 
-    return { 
-    fund_code: v.fund_code,
-    fund_name: v.fund_name,
-    fund_type: v.fund_type
-   }
+  var data = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type
+    }
   });
   let str = JSON.stringify(data);
-  
-  // 检查 Clipboard API 是否可用
-  if (navigator.clipboard && window.isSecureContext) {
-    // Clipboard API 可用且在安全上下文中
-    navigator.clipboard.writeText(str)
-      .then(() => {
-        ElMessage.success('复制成功');
-      })
-      .catch((err) => {
-        console.error('复制失败:', err);
-        // 如果 Clipboard API 失败，使用备用方法
-        fallbackCopyText(str);
-      });
-  } else {
-    // 使用备用方法
-    fallbackCopyText(str);
-  }
+  fallbackCopyText(JSON.stringify(str));
 }
-
-// 备用复制方法
-const fallbackCopyText = (text) => {
-  // 创建一个临时 textarea 元素
-  const textarea = document.createElement('textarea');
-  textarea.value = text;
-  
-  // 设置为不可见
-  textarea.style.position = 'fixed';
-  textarea.style.left = '-999999px';
-  textarea.style.top = '-999999px';
-  
-  // 添加到 DOM
-  document.body.appendChild(textarea);
-  
-  // 选中文本
-  textarea.select();
-  textarea.setSelectionRange(0, 99999); // 移动端兼容
-  
-  try {
-    // 执行复制命令
-    const successful = document.execCommand('copy');
-    if (successful) {
-      ElMessage.success('复制成功');
-    } else {
-      ElMessage.error('复制失败');
-    }
-  } catch (err) {
-    console.error('复制失败:', err);
-    ElMessage.error('复制失败');
-  } finally {
-    // 移除临时元素
-    document.body.removeChild(textarea);
-  }
-}
-
 </script>
 
 <template>
@@ -410,7 +358,7 @@ const fallbackCopyText = (text) => {
       </el-table>
     </VueDraggable>
 
-    <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500" :close-on-click-modal="false" >
+    <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500" :close-on-click-modal="false">
       <el-form :model="info.form" :rules="rules" ref="diaForm">
         <el-form-item label="基金代码" prop="fund_code" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.fund_code" @change="change_fund_code" autocomplete="off" />
@@ -468,7 +416,7 @@ const fallbackCopyText = (text) => {
 </template>
 
 <style scoped lang="scss">
-.desc_box{
+.desc_box {
   height: 25px;
   line-height: 25px;
 }
