@@ -3,8 +3,12 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const CustomFn = require('./CustomFn.js');
-
-const { jiaochapaihang } = require('./data/pai_hang_jiao_cha/paiHangJiaoCha.js'); // 交叉排行
+// 交叉排行
+const {
+  jiaochapaihang,
+} = require('./data/pai_hang_jiao_cha/paiHangJiaoCha.js');
+// 基金数据
+const { getFundcodeSearch } = require('./data/fund_all/update_all.js');
 
 /* 参数解释
 *    *    *    *    *    *
@@ -22,9 +26,18 @@ const { jiaochapaihang } = require('./data/pai_hang_jiao_cha/paiHangJiaoCha.js')
 schedule.scheduleJob('0 0 0 * * *', async () => {
   try {
     await jiaochapaihang();
-    console.log('1111', new Date().toLocaleString());
+    // console.log('1111', new Date().toLocaleString());
   } catch (error) {
     console.error('交叉排行任务执行失败:', error);
+  }
+});
+// 基金数据更新
+schedule.scheduleJob('1 0 0 * * *', async () => {
+  try {
+    await getFundcodeSearch();
+    // console.log('2222', new Date().toLocaleString());
+  } catch (error) {
+    console.error('基金数据任务执行失败:', error);
   }
 });
 
