@@ -118,13 +118,22 @@ const btn_fn_04 = () => {
   }
 };
 const btn_fn_05 = () => {
-  let str = JSON.stringify(info.tableData);
+  if(!info.tableData.length){
+    ElMessage.error('没有基金信息');
+    return false;
+  }
+  var data = info.tableData.map(v => { 
+    return { 
+    fund_code: v.fund_code,
+    fund_name: v.fund_name,
+    fund_type: v.fund_type
+   }
+  });
+  let str = JSON.stringify(data);
   navigator.clipboard.writeText(str);
   // 提示复制成功
   ElMessage.success('复制成功');
 };
-
-
 </script>
 
 <template>
