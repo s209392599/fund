@@ -70,5 +70,4 @@ export const fallbackCopyText = (text) => {
   document.execCommand('copy');
   document.body.removeChild(textarea);
   ElMessage.success('复制成功');
-  ElMessage.success('复制成功 boxue 6666');
 };

@@ -276,17 +276,6 @@ const removeFn_2 = () => {
   info.tableData = [...arr_2];
   ElMessage.success('去除不可买成功');
 };
-// 去除ETF
-const removeFn_3 = () => {
-  var arr_3 = [];
-  info.tableData.forEach((item) => {
-    if (!item.fund_name.endsWith('ETF')) {
-      arr_3.push(item);
-    }
-  });
-  info.tableData = [...arr_3];
-  ElMessage.success('去除ETF成功');
-};
 
 </script>
 
@@ -302,7 +291,6 @@ const removeFn_3 = () => {
           <el-button type="primary" @click="getList">搜索</el-button>
           <el-button @click="resetForm">重置</el-button>
           <el-button type="success" @click="removeA" :disabled="info.step < 2">去除A类</el-button>
-          <el-button type="success" @click="removeFn_3" :disabled="info.step < 2">去除ETF</el-button>
           <el-button type="success" @click="getAllInfo" :disabled="info.step < 3">详细信息</el-button>
           <el-button type="success" @click="removeFn_2" :disabled="info.step < 4">去除不可买</el-button>
           <el-button type="success" @click="removeFn_1" :disabled="info.step < 4">去除小于1亿</el-button>
@@ -434,7 +422,7 @@ const removeFn_3 = () => {
             <template v-slot="{ row }">
               <div class="">{{
                 row?.fundProfileOfItem?.fundScaleList?.join('；')
-              }}</div>
+                }}</div>
             </template>
           </el-table-column>
 

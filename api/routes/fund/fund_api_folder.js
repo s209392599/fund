@@ -5,6 +5,8 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const CustomFn = require('../../CustomFn.js');
+const noText = require('../../utils/noText.js'); // 排除的关键词
+const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 
 // 封装一个读取文件并返回json数据的方法
 async function readJsonFile(filePath = '') {
@@ -77,7 +79,9 @@ router.post('/fund_apifolder_query_keywords', async (req, res) => {
       let arr = [];
       json_data.forEach((item) => {
         let fund_name = item[1];
-        if(fund_name.includes(text)){
+        let flag_1 = fund_name.includes(text);
+        // let flag_2 = noFundCode.includes(item[0]);
+        if(flag_1){
           arr.push({
             fund_code: item[0],
             fund_name: item[1],

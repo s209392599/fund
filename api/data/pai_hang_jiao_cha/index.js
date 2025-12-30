@@ -221,4 +221,3 @@ async function jiaochapaihang() {
 }
 // jiaochapaihang();
 module.exports = { jiaochapaihang };
-// const { jiaochapaihang } = require('./api/data/pai_hang_jiao_cha/paiHangJiaoCha.js');

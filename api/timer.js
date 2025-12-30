@@ -6,9 +6,9 @@ const CustomFn = require('./CustomFn.js');
 // 交叉排行
 const {
   jiaochapaihang,
-} = require('./data/pai_hang_jiao_cha/paiHangJiaoCha.js');
+} = require('./data/pai_hang_jiao_cha/index.js');
 // 基金数据
-const { getFundcodeSearch } = require('./data/fund_all/update_all.js');
+const { getFundcodeSearch } = require('./data/fund_all/index.js');
 
 /* 参数解释
 *    *    *    *    *    *
