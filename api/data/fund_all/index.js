@@ -33,8 +33,6 @@ async function getFundcodeSearch() {
 
       let flag_1 = noText.some((item) => fund_name.includes(item));
       let flag_2 = noFundCode.some((item) => fund_code.includes(item));
-      flag_1 = false;
-      flag_2 = false;
 
       let endsArr = ['ETF', 'ETF(QDII)','(QDII-ETF)'];
       let flag_3 = endsArr.some((item) => fund_name.endsWith(item));// 不以ETF结尾
@@ -78,5 +76,5 @@ async function getFundcodeSearch() {
     console.log('err => ', err);
   }
 }
-getFundcodeSearch();
-// module.exports = { getFundcodeSearch };
+// getFundcodeSearch();
+module.exports = { getFundcodeSearch };
