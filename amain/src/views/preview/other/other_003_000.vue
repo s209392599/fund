@@ -82,7 +82,7 @@ onMounted(() => {
 .page_wrapper {
   height: 100%;
   overflow: auto;
-  padding: 10px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
 }
 
 .main {

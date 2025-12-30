@@ -24,6 +24,11 @@ body {
 .el-table .el-table__cell{
   padding: 2px 0 !important;
 }
+.el-button {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px !important;
+}
 .el-button+.el-button{
   margin-left: 6px;
 }

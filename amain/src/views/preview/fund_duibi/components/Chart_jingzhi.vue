@@ -4,7 +4,7 @@ const props = defineProps({
   data: {
     type: Object,
     required: true,
-    default: () => {},
+    default: () => { },
   },
 });
 
@@ -282,7 +282,7 @@ function RenderChart() {
       {
         name: '10日线',
         data: chartData.line_data_10 || [],
-        color: '#fcd654',
+        color: '#f00',
       },
       {
         name: '20日线',
@@ -320,7 +320,7 @@ onMounted(() => {
   if (chartRef.value && echarts) {
     myChart = echarts.init(chartRef.value);
     RenderChart(); // 渲染图形
-    
+
     // 添加窗口大小变化监听器
     window.addEventListener('resize', handleResize);
   }
@@ -358,11 +358,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    ref="chartRef"
-    class="stock_main_wrapper"
-    :style="{ width: info.width, height: info.height }"
-  ></div>
+  <div ref="chartRef" class="stock_main_wrapper" :style="{ width: info.width, height: info.height }"></div>
 </template>
 
 <style scoped lang="scss"></style>

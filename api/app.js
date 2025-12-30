@@ -4,14 +4,14 @@ const express = require('express');
 const cors = require('cors');
 
 const whiteAdree = [
-  'http://150.158.175.108:9999',
-  'http://150.158.175.108:9000', // 基金网站的使用
-  'http://150.158.175.108:9005', // 后台管理接口
-  'http://localhost:9000', // Vue项目-主项目
-  'http://localhost:9001', // Vue项目-后台
-  'http://localhost:9999', // 本地测试
-  'http://127.0.0.1:9002', // live server插件
-  'http://127.0.0.1:9999', // live server插件
+  '150.158.175.108:9999',
+  '150.158.175.108:9000', // 基金网站的使用
+  '150.158.175.108:9005', // 后台管理接口
+  'localhost:9000', // Vue项目-主项目
+  'localhost:9001', // Vue项目-后台
+  'localhost:9999', // 本地测试
+  '127.0.0.1:9002', // live server插件
+  '127.0.0.1:9999', // live server插件
 ];
 
 /* 应用IP速率限制
@@ -54,14 +54,10 @@ function getCurrentTime() {
 }
 
 app.use((req, res, next) => {
-  const request_origin = req.get('origin');
-  const request_referer = req.get('referer');
   const machineSecretToken = req.get('X-Machine-Secret'); // 用于验证您特定Mac的自定义请求头
   const machineSecret = 'C02CN1R4MD6Q'; // mac电脑的序列号
-  // wmic csproduct get uuid  在windows上获取uuid
   console.log('-------------------------------------');
   // const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-
   console.log('req.originalUrl => ', req.originalUrl, getCurrentTime());
 
   // 检查是否是OPTIONS预检请求，直接通过
@@ -78,27 +74,8 @@ app.use((req, res, next) => {
     return res.sendStatus(204);
   }
 
-  if (request_origin) {
-    let flag_2 = false;
-    whiteAdree.forEach((item) => {
-      if (request_origin.startsWith(item)) {
-        flag_2 = true;
-      }
-    });
-    if (flag_2) {
-      return next(); // 允许白名单
-    }
-  }
-  if (request_referer) {
-    let flag_3 = false;
-    whiteAdree.forEach((item) => {
-      if (request_referer.startsWith(item)) {
-        flag_3 = true;
-      }
-    });
-    if (flag_3) {
-      return next(); // 允许白名单
-    }
+  if (whiteAdree.includes(req.get('host'))) {
+    return next(); // 允许白名单
   }
 
   if (machineSecretToken === machineSecret) {

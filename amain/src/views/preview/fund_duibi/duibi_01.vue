@@ -62,7 +62,7 @@ const btn_fn_02 = () => {
   }
 };
 const btn_line_1 = (row, index) => {
-  info.tableData.splice(index, 1);
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 const btn_line_2 = (row, index) => {
   console.log('插入到基金', row, index);

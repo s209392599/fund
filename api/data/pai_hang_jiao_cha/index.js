@@ -108,6 +108,7 @@ async function getData(url, key) {
       mode: 'cors',
       credentials: 'include',
     });
+
     const cur_text = await res.text();
     const match = cur_text.match(/var\s+rankData\s*=\s*(\{[\s\S]*?\});/);
     if (match) {

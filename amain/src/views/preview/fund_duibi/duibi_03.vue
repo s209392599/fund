@@ -64,6 +64,18 @@ onMounted(() => {
 
 <template>
   <div class="page_wrapper">
+    <div class="pb-5">
+      <el-button class="top_btn btn_1" @click="btn_fn_01()">删除不可定投</el-button>
+      <el-button class="top_btn btn_2" @click="btn_fn_02()">删除卖出限制超过30天</el-button>
+      <!-- <el-button class="top_btn btn_3" @click="btn_fn_03()">删除1、3、6月排名靠后</el-button> -->
+      <!-- <el-button class="top_btn btn_4" @click="btn_fn_04()">复制基金号(逗号)</el-button> -->
+      <!-- <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button> -->
+    </div>
+
+    <div class="desc_box">
+      <span>基金数量：{{ info.tableData.length }}</span>
+    </div>
+
     <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
@@ -141,7 +153,7 @@ onMounted(() => {
         </template>
       </el-table-column>
 
-      <el-table-column prop="" label="买入费率" width="270" show-overflow-tooltip>
+      <el-table-column prop="" label="买入费率" width="160" show-overflow-tooltip>
         <template v-slot="{ row }">
           <div class="" v-html="purchaseFeeRatio(row)"></div>
         </template>

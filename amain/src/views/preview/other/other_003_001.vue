@@ -1,32 +1,40 @@
 <script setup>
 console.log('amain/src/views/preview/other/other_002_001.vue');
 const tableMaxHeight = computed(() => {
-  return `calc(100vh - 105px)`;
+  return `calc(100vh - 135px)`;
 });
 const info = reactive({
   tableData: [],
+  selectedRows: []
 })
-const selectedRows = ref([]);
 
 // 处理勾选变化
 const handleSelectionChange = (val) => {
-  selectedRows.value = val || [];
+  info.selectedRows = val || [];
 }
 
 // 读取并复制/打印勾选的数据
-const getSelected = () => {
-  console.log('selectedRows', selectedRows.value);
-  if ((selectedRows.value || []).length === 0) {
+const btn_fn_02 = () => {
+  if ((info.selectedRows || []).length === 0) {
     ElMessage.info('未勾选任何项');
     return;
   }
-  fallbackCopyText(JSON.stringify(selectedRows.value));
-  ElMessage.success('已复制勾选数据到剪贴板');
+  let data = info.selectedRows.map(item => ({
+    fund_code: item.fundCode || '',
+    fund_name: item.fundName || '',
+    fund_type: item.fundTypeStr || ''
+  }));
+  fallbackCopyText(JSON.stringify(data));
 }
 //
 // 获取今日加仓榜
 const getList = () => {
-  server_fund_jd_getWealthDatas().then((res) => {
+  server_fund_jd_getWealthDatas({
+    reqData: {
+      rankCode: "432126255181888",
+      sourceType: 1
+    }
+  }).then((res) => {
     console.log(res);
     if (res.code === 200) {
       let turnData = (res.data || []).map(v => JSON.parse(v));
@@ -72,19 +80,28 @@ onMounted(() => {
       </div>
     </div>
     <div class="page_right flex-1">
-      <div class="top_box flex items-center">
-        <div class="btn_copy" @click="copyText">复制数据</div>
-        <div class="btn_copy ml-2" @click="getSelected">读取勾选</div>
+      <div class="top_box flex items-center pb-10">
+        <div class="">
+          <el-button class="top_btn btn_1" @click="btn_fn_01()">复制数据</el-button>
+          <el-button class="top_btn btn_2" @click="btn_fn_02()">复制勾选数据</el-button>
+          <!-- <el-button class="top_btn btn_3" @click="btn_fn_02()">删除所有基金</el-button> -->
+          <!-- <el-button class="top_btn btn_4" @click="btn_fn_03()">复制基金号(逗号)</el-button> -->
+          <!-- <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button> -->
+        </div>
         <div class="flex-1 text-right truncate pl-5"></div>
       </div>
-      <el-table ref="tableRef" :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight" @selection-change="handleSelectionChange">
+
+      <el-table ref="tableRef" :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight"
+        @selection-change="handleSelectionChange">
         <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
-        <el-table-column type="selection" width="40" fixed></el-table-column>
-        <el-table-column label="操作" width="60" fixed>
+
+        <el-table-column label="操作" width="60" fixed align="center">
           <template #default="{ row, $index }">
             <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
           </template>
         </el-table-column>
+
+        <el-table-column type="selection" width="40" fixed align="center"></el-table-column>
 
 
         <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
@@ -116,7 +133,7 @@ onMounted(() => {
           </template>
         </el-table-column>
 
-        <el-table-column prop="setupRate" label="成立以来" width="80" align="right">
+        <el-table-column prop="setupRate" label="成立以来" width="100" align="right">
           <template v-slot="{ row }">
             <span>{{ row.setupRate ? row.setupRate.toFixed(2) : '-' }}%</span>
           </template>
@@ -134,23 +151,37 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .page_wrapper {
-  height: calc(100vh - 40px);
-  overflow: auto;
+  padding: 10px 0px 0px 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.top_box {
-  height: 30px;
-  line-height: 30px;
+.page_right {
+  min-width: 0;
+}
 
-  .btn_copy {
-    cursor: pointer;
-    padding: 0 10px;
-    height: 24px;
-    line-height: 24px;
-    background-color: #49a2ff;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 12px;
+:deep(.top_btn) {
+  color: #fff;
+  border: none;
+
+  &.btn_1 {
+    background-color: #7e57c2 !important; // 紫色
+  }
+
+  &.btn_2 {
+    background-color: #26a69a !important; // 青色
+  }
+
+  &.btn_3 {
+    background-color: #ff7043 !important; // 橙红色
+  }
+
+  &.btn_4 {
+    background-color: #ffa726 !important; // 橙黄色
+  }
+
+  &.btn_5 {
+    background-color: #29b6f6 !important; // 天蓝色
   }
 }
 </style>

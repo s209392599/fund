@@ -22,6 +22,8 @@ if (localStorage.getItem('fund_duibi_arr')) {
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
   let arr = info.tableData.map(v => {
+    console.log('v', v.fund_code, v.fund_name, v.fund_type);
+
     return {
       fund_code: v.fund_code,
       fund_name: v.fund_name,
@@ -45,7 +47,6 @@ const getList = async () => {
         fund_name: res.data?.headerOfItem?.fundName || '',
         fund_type: res.data?.headerOfItem?.fundTypeName || '',
       };
-      saveFundInfoToLocalstorage();
     });
   }
 };
@@ -53,8 +54,7 @@ const getList = async () => {
 
 // 删除
 const btn_line_1 = (row, index) => {
-  info.tableData.splice(index, 1);
-  saveFundInfoToLocalstorage();
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 // 榜单
 const Turn_rankList = (row) => {
@@ -155,12 +155,31 @@ const sort_zhangfu_fn = (a, b, index) => {
     const foundItem = arr.find(historyItem => historyItem.name === period);
     return foundItem ? parseFloat(foundItem.rate) || 0 : 0;
   };
-  
+
   const rateA = getRate(a, his_name_arr[index]);
   const rateB = getRate(b, his_name_arr[index]);
-  
+
   return rateA - rateB; // 降序排列
 };
+
+// 删除不可买
+const btn_fn_01 = () => {
+  info.tableData = info.tableData.filter((item) => item?.headerOfItem?.isBuyable === true);
+};
+// 删除1、3月排名靠后
+const btn_fn_02 = () => {
+  info.tableData = info.tableData.filter((item) => item?.headerOfItem?.rankList?.some((v_1) => v_1.wealthRank !== '1' && v_1.wealthRank !== '3'));
+};
+// 删除1、3、6月排名靠后
+const btn_fn_03 = () => {
+  info.tableData = info.tableData.filter((item) => item?.headerOfItem?.rankList?.some((v_1) => v_1.wealthRank !== '1' && v_1.wealthRank !== '3' && v_1.wealthRank !== '6'));
+};
+
+watch(() => info.tableData, (newVal, oldVal) => {
+  nextTick(() => {
+    saveFundInfoToLocalstorage();
+  });
+}, { deep: true });
 
 onMounted(() => {
   getList();
@@ -169,6 +188,19 @@ onMounted(() => {
 
 <template>
   <div class="page_wrapper">
+
+    <div class="pb-5">
+      <el-button class="top_btn btn_1" @click="btn_fn_01()">删除不可买</el-button>
+      <el-button class="top_btn btn_2" @click="btn_fn_02()">删除1、3月排名靠后</el-button>
+      <el-button class="top_btn btn_3" @click="btn_fn_03()">删除1、3、6月排名靠后</el-button>
+      <!-- <el-button class="top_btn btn_4" @click="btn_fn_04()">复制基金号(逗号)</el-button> -->
+      <!-- <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button> -->
+    </div>
+
+    <div class="desc_box">
+      <span>基金数量：{{ info.tableData.length }}</span>
+    </div>
+
     <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
@@ -217,7 +249,8 @@ onMounted(() => {
       <el-table-column label="历史业绩" align="center">
         <template v-for="(item, index_1) in his_name_arr" :key="item">
           <el-table-column :label="item" align="center">
-            <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable :sort-method="(a, b) => sort_zhangfu_fn(a, b, index_1)">
+            <el-table-column prop="" label="涨跌幅" width="80" align="right" sortable
+              :sort-method="(a, b) => sort_zhangfu_fn(a, b, index_1)">
               <template v-slot="{ row }">
                 <div v-html="Turn_historyPerformanceList(row, item, 'rate')"></div>
               </template>
@@ -356,5 +389,31 @@ onMounted(() => {
   height: calc(100vh - 100px);
   overflow: auto;
   padding: 5px 0px 0px 0px;
+}
+
+
+:deep(.top_btn) {
+  color: #fff;
+  border: none;
+
+  &.btn_1 {
+    background-color: #7e57c2 !important; // 紫色
+  }
+
+  &.btn_2 {
+    background-color: #26a69a !important; // 青色
+  }
+
+  &.btn_3 {
+    background-color: #ff7043 !important; // 橙红色
+  }
+
+  &.btn_4 {
+    background-color: #ffa726 !important; // 橙黄色
+  }
+
+  &.btn_5 {
+    background-color: #29b6f6 !important; // 天蓝色
+  }
 }
 </style>
