@@ -1,3 +1,25 @@
 {
-  "liveServer.settings.port": 5503
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "Vue.volar",
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "Vue.volar"
+  }
 }

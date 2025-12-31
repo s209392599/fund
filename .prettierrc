@@ -1,22 +1,23 @@
 {
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "bracketSameLine": false,
   "bracketSpacing": true,
+  "cssDeclarationSorterOrder": "alphabetical",
   "embeddedLanguageFormatting": "auto",
   "htmlWhitespaceSensitivity": "strict",
   "insertPragma": false,
   "jsxSingleQuote": false,
-  "printWidth": 80,
+  "plugins": ["prettier-plugin-css-order"],
+  "printWidth": 100,
   "proseWrap": "preserve",
   "quoteProps": "as-needed",
   "requirePragma": false,
-  "semi": true,
+  "semi": false,
+  "singleAttributePerLine": false,
   "singleQuote": true,
+  "sortAttributes": true,
   "tabWidth": 2,
-  "trailingComma": "es5",
+  "trailingComma": "none",
   "useTabs": false,
-  "scripts": {
-    "format": "prettier --write ."
-  },
-  "vueIndentScriptAndStyle": false
+  "vueIndentScriptAndStyle": true
 }

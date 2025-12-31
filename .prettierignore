@@ -6,5 +6,6 @@
 **/*.md
 **/*.svg
 **/*.ejs
-**/*.html
 
+**/dist
+*.log
