@@ -47,17 +47,8 @@ const handleClick = (tab) => {
 <template>
   <div class="page_wrapper pd-10">
     <div class="">
-      <el-tabs
-        v-model="info.active_tab"
-        @tab-click="handleClick"
-        class="page-tabs"
-      >
-        <el-tab-pane
-          v-for="item in info.list_tabs"
-          :key="item.id"
-          :label="item.name"
-          :name="item.id"
-        >
+      <el-tabs v-model="info.active_tab" @tab-click="handleClick" class="page-tabs">
+        <el-tab-pane v-for="item in info.list_tabs" :key="item.id" :label="item.name" :name="item.id">
         </el-tab-pane>
       </el-tabs>
     </div>

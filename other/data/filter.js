@@ -159,21 +159,17 @@ async function isEligible(arr) {
     // 等待计算累计净值
     const netValueList = await NetValue(productCode);
     if (netValueList.length >= 300) {
-      const nowValue_000 = Number(netValueList[0].totalNetValue) || 0;
-      const nowValue_100 = Number(netValueList[99].totalNetValue) || 0;
-      const nowValue_200 = Number(netValueList[199].totalNetValue) || 0;
-      const nowValue_300 = Number(netValueList[299].totalNetValue) || 0;
+      const num_1 = Number(netValueList[0].totalNetValue) || 0;
+      const num_2 = Number(netValueList[99].totalNetValue) || 0;
+      const num_3 = Number(netValueList[199].totalNetValue) || 0;
+      const num_4 = Number(netValueList[299].totalNetValue) || 0;
 
-      const flag_1 =
-        nowValue_000 > nowValue_100 &&
-        (nowValue_000 - nowValue_100) / nowValue_100 > 0.015;
-      const flag_2 =
-        nowValue_100 > nowValue_200 &&
-        (nowValue_100 - nowValue_200) / nowValue_200 > 0.015;
-      const flag_3 =
-        nowValue_200 > nowValue_300 &&
-        (nowValue_200 - nowValue_300) / nowValue_300 > 0.015;
-      if (flag_1 && flag_2 && flag_3) {
+      let flag_0 = (num_2 > num_1) && (num_3 - num_2) && (num_4 - num_3);
+      const flag_1 = num_1 > num_2 && (num_1 - num_2) / num_2 > 0.015;
+      const flag_2 = num_2 > num_3 && (num_2 - num_3) / num_3 > 0.015;
+      const flag_3 = num_3 > num_4 && (num_3 - num_4) / num_4 > 0.015;
+
+      if (flag_0 && flag_1 && flag_2 && flag_3) {
         EligibleList.push(arr[index]);
 
         // 将 JSON 字符串写入文件
