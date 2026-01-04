@@ -36,6 +36,10 @@ const info = reactive({
       id: '7',
       name: '持仓', // 前十大持仓(或债券持仓)和比例
     },
+    {
+      id: '8',
+      name: '近来对比',
+    },
   ],
 });
 
@@ -80,6 +84,10 @@ const handleClick = (tab) => {
 
       <div class="" v-if="info.active_tab === '7'">
         <duibi_07></duibi_07>
+      </div>
+
+      <div class="" v-if="info.active_tab === '8'">
+        <duibi_08></duibi_08>
       </div>
     </div>
   </div>

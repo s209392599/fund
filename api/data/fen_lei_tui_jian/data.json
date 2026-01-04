@@ -1,0 +1,34 @@
+{
+  "data":[
+    {
+      "groupname": "科创50",
+      "list": [
+        {
+          "fund_name": "易方达上证科创50ETF联接C",
+          "fund_code": "011609"
+        },
+        {
+          "fund_name": "华夏科创50ETF联接C",
+          "fund_code": "011613"
+        }
+      ]
+    },
+    {
+      "groupname": "北证50",
+      "list": [
+        {
+          "fund_name": "广发北证50成份",
+          "fund_code": "017513"
+        },
+        {
+          "fund_name": "易方达北证50成",
+          "fund_code": "017516"
+        },
+        {
+          "fund_name": "工银北证50成份",
+          "fund_code": "018113"
+        }
+      ]
+    }
+  ]
+}
