@@ -66,7 +66,7 @@ const getFundMetrics = (row) => {
 
 // 删除
 const btn_del = (row, index) => {
-  info.tableData.splice(index, 1);
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
   ElMessage.success('删除成功');
 }
 

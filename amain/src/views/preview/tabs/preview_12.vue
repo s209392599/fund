@@ -134,7 +134,7 @@ const removeFn_1 = () => {
 
 // 删除
 const btn_line_1 = (row, index) => {
-  info.tableData.splice(index, 1);
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 // 榜单
 const Turn_rankList = (row) => {
@@ -422,7 +422,7 @@ const removeFn_2 = () => {
             <template v-slot="{ row }">
               <div class="">{{
                 row?.fundProfileOfItem?.fundScaleList?.join('；')
-              }}</div>
+                }}</div>
             </template>
           </el-table-column>
 
