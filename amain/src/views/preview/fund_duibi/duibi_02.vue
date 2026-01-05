@@ -199,6 +199,13 @@ const btn_fn_03 = () => {
   ElMessage.success('删除1、3、6月排名靠后成功');
 };
 
+// sortInstPurchaseRatio
+const sortInstPurchaseRatio = (a, b) => {
+  let ratioA = parseFloat(a.fundProfileOfItem?.instPurchaseRatio || 0);
+  let ratioB = parseFloat(b.fundProfileOfItem?.instPurchaseRatio || 0);
+  return ratioB - ratioA; // 降序排列
+};
+
 watch(() => info.tableData, (newVal, oldVal) => {
   nextTick(() => {
     saveFundInfoToLocalstorage();
@@ -240,7 +247,7 @@ onMounted(() => {
       </el-table-column>
 
       <el-table-column label="基本信息" align="center">
-        <el-table-column prop="" label="基金名称" width="350">
+        <el-table-column prop="" label="基金名称" width="350" sortable>
           <template v-slot="{ row }">
             <div class="">{{ row?.headerOfItem?.fundName }}</div>
           </template>
@@ -343,7 +350,7 @@ onMounted(() => {
           </template>
         </el-table-column>
 
-        <el-table-column prop="" label="机构占比" width="70">
+        <el-table-column prop="" label="机构占比" width="100" sortable :sort-method="(a, b) => sortInstPurchaseRatio(a, b)">
           <template v-slot="{ row }">
             <div class="">{{ row?.fundProfileOfItem?.instPurchaseRatio }}</div>
           </template>
