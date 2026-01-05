@@ -45,10 +45,13 @@ const getList = async () => {
         fund_name: res.data?.headerOfItem?.fundName || '',
         fund_type: res.data?.headerOfItem?.fundTypeName || '',
       };
+
+      if (i === info.tableData.length - 1) {
+        ElMessage.success('已获取所有基金的交易规则');
+      }
     });
   }
 };
-
 
 // 删除
 const btn_line_1 = (row, index) => {
@@ -185,7 +188,7 @@ const btn_fn_03 = () => {
     const rank6 = perfList.find(v1 => v1.name === '近6月')?.rank || '';
 
     if (!rank1 || !rank3 || !rank6) {
-      return false; // 如果缺少排名信息，则认为不符合条件，删除该基金
+      return true; // 如果缺少排名信息，则认为不符合条件，删除该基金
     }
     let flag_1 = parseInt(rank1.split('/')[0]) / parseInt(rank1.split('/')[1]) > 0.5;
     let flag_3 = parseInt(rank3.split('/')[0]) / parseInt(rank3.split('/')[1]) > 0.5;
@@ -214,7 +217,7 @@ onMounted(() => {
       <el-button class="top_btn btn_1" @click="btn_fn_01()">删除不可买</el-button>
       <el-button class="top_btn btn_2" @click="btn_fn_02()">删除小于1亿</el-button>
       <el-button class="top_btn btn_3" @click="btn_fn_03()">删除1、3、6月排名靠后</el-button>
-      <!-- <el-button class="top_btn btn_4" @click="btn_fn_04()">复制基金号(逗号)</el-button> -->
+      <!-- <el-button class="top_btn btn_4" @click="btn_fn_04()"></el-button> -->
       <!-- <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button> -->
       <span class="ml-10">基金数量：{{ info.tableData.length }}</span>
     </div>
@@ -336,7 +339,7 @@ onMounted(() => {
           <template v-slot="{ row }">
             <div class="">{{
               row?.fundProfileOfItem?.fundScaleList?.join('；')
-              }}</div>
+            }}</div>
           </template>
         </el-table-column>
 

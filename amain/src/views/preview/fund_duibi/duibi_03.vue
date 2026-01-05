@@ -4,6 +4,9 @@ console.log('amain/src/views/preview/fund_duibi/duibi_03.vue');
 const info = reactive({
   tableData: [],
 });
+const tableMaxHeight = computed(() => {
+  return `calc(100vh - 140px)`;
+});
 if (localStorage.getItem('fund_duibi_arr')) {
   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
 } else {
@@ -42,6 +45,10 @@ const getList = async () => {
       let total_fei = depositFeeRatio + manageFeeRatio + saleServiceFeeRatio;
       res.data.zonghe_fei = Number(total_fei.toFixed(2));
       info.tableData[i].rules = res.data;
+
+      if (i === info.tableData.length - 1) {
+        ElMessage.success('已获取所有基金的交易规则');
+      }
     });
   }
 };
@@ -83,6 +90,44 @@ const sortZonghefeilv = (a, b) => {
   return b.rules.zonghe_fei - a.rules.zonghe_fei;
 };
 
+// 删除不可定投
+const btn_fn_01 = () => {
+  info.tableData = info.tableData.filter((item) => {
+    let aipStatus = item.rules?.purchaseRule?.aipStatus || '';
+    return aipStatus !== '不可定投';
+  });
+  ElMessage.success('已删除不可定投基金');
+};
+// 删除卖出限制超过30天
+const btn_fn_02 = () => {
+  info.tableData = info.tableData.filter((item) => {
+    const arr = item?.rules?.redeemRule?.redeemFeeRatio || [];
+    if (arr.length > 3) {
+      return false;
+    }
+    let falg = true;
+    let no_text = ['90', '180', '360', '365', '730', '731'];
+    arr.forEach(v_2 => {
+      no_text.forEach(v_3 => {
+        if (v_2.divideIntervalDesc.includes(v_3)) {
+          falg = false;
+        }
+      });
+    });
+    return falg;
+  });
+  ElMessage.success('已删除综合费率大于2的基金');
+};
+// btn_fn_03 删除综合费率大于2
+const btn_fn_03 = () => {
+  info.tableData = info.tableData.filter((item) => {
+    let zonghe_fei = item?.rules?.zonghe_fei || 0;
+    console.log('fei', item, zonghe_fei <= 2);
+    return zonghe_fei <= 2;
+  });
+  ElMessage.success('已删除综合费率大于2的基金');
+};
+
 onMounted(() => {
   getList();
 });
@@ -93,16 +138,14 @@ onMounted(() => {
     <div class="pb-5">
       <el-button class="top_btn btn_1" @click="btn_fn_01()">删除不可定投</el-button>
       <el-button class="top_btn btn_2" @click="btn_fn_02()">删除卖出限制超过30天</el-button>
-      <!-- <el-button class="top_btn btn_3" @click="btn_fn_03()">删除1、3、6月排名靠后</el-button> -->
+      <el-button class="top_btn btn_3" @click="btn_fn_03()">删除综合费率大于2</el-button>
       <!-- <el-button class="top_btn btn_4" @click="btn_fn_04()">复制基金号(逗号)</el-button> -->
       <!-- <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button> -->
+
+      <span class="ml-10">基金数量：{{ info.tableData.length }}</span>
     </div>
 
-    <div class="desc_box">
-      <span>基金数量：{{ info.tableData.length }}</span>
-    </div>
-
-    <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
+    <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
       <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
 
       <el-table-column label="操作" width="60" fixed>
@@ -221,11 +264,6 @@ onMounted(() => {
         </template>
       </el-table-column>
 
-      <!-- <el-table-column prop="point_top" label="高点" width="66"></el-table-column>
-
-      <el-table-column prop="dwjz" label="净值" width="66"></el-table-column>
-
-       -->
     </el-table>
   </div>
 </template>
@@ -235,5 +273,30 @@ onMounted(() => {
   height: calc(100vh - 100px);
   overflow: auto;
   padding: 5px 0px 0px 0px;
+}
+
+:deep(.top_btn) {
+  color: #fff;
+  border: none;
+
+  &.btn_1 {
+    background-color: #7e57c2 !important; // 紫色
+  }
+
+  &.btn_2 {
+    background-color: #26a69a !important; // 青色
+  }
+
+  &.btn_3 {
+    background-color: #ff7043 !important; // 橙红色
+  }
+
+  &.btn_4 {
+    background-color: #ffa726 !important; // 橙黄色
+  }
+
+  &.btn_5 {
+    background-color: #29b6f6 !important; // 天蓝色
+  }
 }
 </style>
