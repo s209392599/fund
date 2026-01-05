@@ -1,5 +1,5 @@
 <script setup>
-console.log('amain/src/views/preview/fund_duibi/duibi_07.vue');
+console.log('amain/src/views/preview/fund_duibi/duibi_08.vue');
 const echartsInstance = inject('echarts');
 
 const info = reactive({

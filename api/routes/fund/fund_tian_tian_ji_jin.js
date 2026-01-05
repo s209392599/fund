@@ -52,5 +52,62 @@ router.post('/fund_jd_detailPageInfoWithNoPin11111111', (req, res) => {
   }
 });
 
+function realTimeInformation(str) {
+  if (str.startsWith('jsonpgz(')) {
+    str = str.slice(8);
+  }
+  if (str.endsWith(');')) {
+    str = str.substring(0, str.length - 2);
+  }
+  return str;
+}
+// 获取实时涨幅
+router.post('/fund_amain_getfundgz', (req, res) => {
+  const { fund_code = '', pageSize = 10 } = req.body;
+  var isSixDigitNumber = /^\d{6}$/.test(fund_code); // 6位数字��类型
+  if (!isSixDigitNumber) {
+    res.send({
+      code: 400,
+      msg: '未正确获取到基金代码',
+      data: [],
+    });
+    return;
+  }
+  try {
+    let u = `https://fundgz.1234567.com.cn/js/${fund_code}.js?rt=${+new Date()}`;
+    fetch(u, {})
+      .then((data) => data.text())
+      .then((data) => {
+        if (data.length > 250) {
+          res.send({
+            code: 400,
+            msg: '此基金号可能暂未开放，请确认',
+            data: [],
+          });
+        } else {
+          let str = realTimeInformation(data);
+          let obsData = JSON.parse(str || '{}');
+          res.send({
+            code: 200,
+            msg: '成功',
+            data: {
+              fund_code: fund_code,
+              fund_name: obsData.name || '',
+              gszzl: obsData.gszzl || '',
+              dwjz: obsData.dwjz || '',
+              gsz: obsData.gsz || '',
+              gztime: obsData.gztime || '',
+            },
+          });
+        }
+      });
+  } catch (err) {
+    res.send({
+      code: 400,
+      msg: `${fund_code}未能正确获取到值`,
+      data: [],
+    });
+  }
+});
 
 module.exports = router;

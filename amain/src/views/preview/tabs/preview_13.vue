@@ -40,6 +40,10 @@ const info = reactive({
       id: '8',
       name: '近来对比',
     },
+    {
+      id: '9',
+      name: '预测涨幅',
+    }
   ],
 });
 
@@ -88,6 +92,11 @@ const handleClick = (tab) => {
 
       <div class="" v-if="info.active_tab === '8'">
         <duibi_08></duibi_08>
+      </div>
+
+      <!-- 预测涨幅 -->
+      <div class="" v-if="info.active_tab === '9'">
+        <duibi_09></duibi_09>
       </div>
     </div>
   </div>
