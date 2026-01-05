@@ -8,7 +8,7 @@ const info = reactive({
   tableData: [],
 });
 const tableMaxHeight = computed(() => {
-  return `calc(100vh - 105px)`;
+  return `calc(100vh - 140px)`;
 });
 
 const his_name_arr = ['近1周', '近1月', '近3月', '近6月', '近1年', '近3年', '近5年', '今年以来', '成立以来'];
@@ -22,8 +22,6 @@ if (localStorage.getItem('fund_duibi_arr')) {
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
   let arr = info.tableData.map(v => {
-    console.log('v', v.fund_code, v.fund_name, v.fund_type);
-
     return {
       fund_code: v.fund_code,
       fund_name: v.fund_name,
@@ -86,7 +84,7 @@ const TurnInvestDirection = (row) => {
 const Turn_company_name = (row) => {
   let company_name = row?.fundProfileOfItem?.company_name || '';
   // 剔除这些关键词
-  var tichu = ['基金管理有限公司', '基金管理股份有限公司', '基金管理有限责任公司'];
+  var tichu = ['基金管理有限公司', '基金管理股份有限公司', '基金管理有限责任公司', '资产管理(广东)有限公司'];
   tichu.forEach((item) => {
     company_name = company_name.replace(item, '');
   });
@@ -164,15 +162,38 @@ const sort_zhangfu_fn = (a, b, index) => {
 
 // 删除不可买
 const btn_fn_01 = () => {
-  info.tableData = info.tableData.filter((item) => item?.headerOfItem?.isBuyable === true);
+  info.tableData = info.tableData.filter((item) => item.isForSale === true);
+  ElMessage.success('删除不可买成功');
 };
-// 删除1、3月排名靠后
+// 删除小于1亿
 const btn_fn_02 = () => {
-  info.tableData = info.tableData.filter((item) => item?.headerOfItem?.rankList?.some((v_1) => v_1.wealthRank !== '1' && v_1.wealthRank !== '3'));
+  info.tableData = info.tableData.filter((item) => {
+    let fundScale = item.fundProfileOfItem?.fundScale || '';
+    return !fundScale.includes('万元')
+  });
+  ElMessage.success('删除小于1亿成功');
 };
 // 删除1、3、6月排名靠后
 const btn_fn_03 = () => {
-  info.tableData = info.tableData.filter((item) => item?.headerOfItem?.rankList?.some((v_1) => v_1.wealthRank !== '1' && v_1.wealthRank !== '3' && v_1.wealthRank !== '6'));
+  info.tableData = info.tableData.filter((item) => {
+    const perfObj = item?.performanceOfItem || {};
+    const perfMap = perfObj.historyPerformanceMap || {};
+    const perfList = perfMap.historyPerformanceList || [];
+
+    const rank1 = perfList.find(v1 => v1.name === '近1月')?.rank || '';
+    const rank3 = perfList.find(v1 => v1.name === '近3月')?.rank || '';
+    const rank6 = perfList.find(v1 => v1.name === '近6月')?.rank || '';
+
+    if (!rank1 || !rank3 || !rank6) {
+      return false; // 如果缺少排名信息，则认为不符合条件，删除该基金
+    }
+    let flag_1 = parseInt(rank1.split('/')[0]) / parseInt(rank1.split('/')[1]) > 0.5;
+    let flag_3 = parseInt(rank3.split('/')[0]) / parseInt(rank3.split('/')[1]) > 0.5;
+    let flag_6 = parseInt(rank6.split('/')[0]) / parseInt(rank6.split('/')[1]) > 0.5;
+
+    return !(flag_1 && flag_3 && flag_6);
+  });
+  ElMessage.success('删除1、3、6月排名靠后成功');
 };
 
 watch(() => info.tableData, (newVal, oldVal) => {
@@ -191,14 +212,11 @@ onMounted(() => {
 
     <div class="pb-5">
       <el-button class="top_btn btn_1" @click="btn_fn_01()">删除不可买</el-button>
-      <el-button class="top_btn btn_2" @click="btn_fn_02()">删除1、3月排名靠后</el-button>
+      <el-button class="top_btn btn_2" @click="btn_fn_02()">删除小于1亿</el-button>
       <el-button class="top_btn btn_3" @click="btn_fn_03()">删除1、3、6月排名靠后</el-button>
       <!-- <el-button class="top_btn btn_4" @click="btn_fn_04()">复制基金号(逗号)</el-button> -->
       <!-- <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button> -->
-    </div>
-
-    <div class="desc_box">
-      <span>基金数量：{{ info.tableData.length }}</span>
+      <span class="ml-10">基金数量：{{ info.tableData.length }}</span>
     </div>
 
     <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
@@ -243,8 +261,6 @@ onMounted(() => {
           </template>
         </el-table-column>
       </el-table-column>
-
-      <!-- https://fundgz.1234567.com.cn/js/007467.js -->
 
       <el-table-column label="历史业绩" align="center">
         <template v-for="(item, index_1) in his_name_arr" :key="item">

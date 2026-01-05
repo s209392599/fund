@@ -166,7 +166,7 @@ const TurnInvestDirection = (row) => {
 const Turn_company_name = (row) => {
   let company_name = row?.fundProfileOfItem?.company_name || '';
   // 剔除这些关键词
-  var tichu = ['基金管理有限公司', '基金管理股份有限公司', '基金管理有限责任公司'];
+  var tichu = ['基金管理有限公司', '基金管理股份有限公司', '基金管理有限责任公司', '资产管理(广东)有限公司'];
   tichu.forEach((item) => {
     company_name = company_name.replace(item, '');
   });

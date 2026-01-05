@@ -185,7 +185,7 @@ onMounted(() => {
         </template>
       </el-table-column>
 
-      <el-table-column prop="" label="买入费率" width="160" show-overflow-tooltip>
+      <el-table-column prop="" label="买入费率" width="270" show-overflow-tooltip>
         <template v-slot="{ row }">
           <div class="" v-html="purchaseFeeRatio(row)"></div>
         </template>
