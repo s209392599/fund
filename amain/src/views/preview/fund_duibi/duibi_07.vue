@@ -21,6 +21,9 @@ const saveFundInfoToLocalstorage = () => {
   });
   localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
 };
+watch(() => info.tableData, () => {
+  saveFundInfoToLocalstorage();
+}, { deep: true });
 
 const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
@@ -34,16 +37,13 @@ const getList = async () => {
         ...info.tableData[i],
         ...res.data,
       };
-
-      saveFundInfoToLocalstorage();
     });
   }
 };
 
 // 删除
 const btn_line_1 = (row, index) => {
-  info.tableData.splice(index, 1);
-  saveFundInfoToLocalstorage();
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 
 // 转换资产分布数据

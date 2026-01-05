@@ -9,7 +9,21 @@ if (localStorage.getItem('fund_duibi_arr')) {
 } else {
   localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
 }
-console.log(info.tableData);
+
+const saveFundInfoToLocalstorage = () => {
+  let arr = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code || '',
+      fund_name: v.fund_name || '',
+      fund_type: v.fund_type || '',
+    };
+  });
+  localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
+  console.log('触发了保存基金信息到本地存储');
+};
+watch(() => info.tableData, () => {
+  saveFundInfoToLocalstorage();
+}, { deep: true });
 
 const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
@@ -18,7 +32,15 @@ const getList = async () => {
     await server_fund_jd_getFundTradeRulesPageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
-      console.log(res);
+
+      let purchaseRule = res.data.purchaseRule || {};
+      console.log(22, res);
+
+      let depositFeeRatio = parseFloat(purchaseRule.depositFeeRatio || 0);
+      let manageFeeRatio = parseFloat(purchaseRule.manageFeeRatio || 0);
+      let saleServiceFeeRatio = parseFloat(purchaseRule.saleServiceFeeRatio || 0);
+      let total_fei = depositFeeRatio + manageFeeRatio + saleServiceFeeRatio;
+      res.data.zonghe_fei = Number(total_fei.toFixed(2));
       info.tableData[i].rules = res.data;
     });
   }
@@ -26,8 +48,7 @@ const getList = async () => {
 
 // 删除
 const btn_line_1 = (row, index) => {
-  info.tableData.splice(index, 1);
-  localStorage.setItem('fund_duibi_arr', JSON.stringify(info.tableData));
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 // 买入费率
 const purchaseFeeRatio = (row) => {
@@ -55,6 +76,11 @@ const redeemBankProcess = (row) => {
       return `<div>${item.title}  (${item.info})</div>`;
     })
     .join('');
+};
+
+// 排序-综合费率
+const sortZonghefeilv = (a, b) => {
+  return b.rules.zonghe_fei - a.rules.zonghe_fei;
 };
 
 onMounted(() => {
@@ -150,6 +176,12 @@ onMounted(() => {
       <el-table-column prop="saleServiceFeeRatio" label="销售服务费" width="94">
         <template v-slot="{ row }">
           <span>{{ row?.rules?.purchaseRule?.saleServiceFeeRatio || '' }}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column prop="purchaseRule" label="综合费率" width="100" sortable :sort-method="sortZonghefeilv">
+        <template v-slot="{ row }">
+          <span>{{ row?.rules?.zonghe_fei || '' }}</span>
         </template>
       </el-table-column>
 

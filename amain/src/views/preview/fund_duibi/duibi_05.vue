@@ -9,18 +9,20 @@ if (localStorage.getItem('fund_duibi_arr')) {
 } else {
   localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
 }
-
-// 存储基金信息
 const saveFundInfoToLocalstorage = () => {
   let arr = info.tableData.map(v => {
     return {
-      fund_code: v.fund_code,
-      fund_name: v.fund_name,
-      fund_type: v.fund_type,
+      fund_code: v.fund_code || '',
+      fund_name: v.fund_name || '',
+      fund_type: v.fund_type || '',
     };
   });
   localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
+  console.log('触发了保存基金信息到本地存储');
 };
+watch(() => info.tableData, () => {
+  saveFundInfoToLocalstorage();
+}, { deep: true });
 
 const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
@@ -50,16 +52,13 @@ const getList = async () => {
         ...info.tableData[i],
         ...obj_1,
       };
-
-      saveFundInfoToLocalstorage();
     });
   }
 };
 
 // 删除
 const btn_line_1 = (row, index) => {
-  info.tableData.splice(index, 1);
-  saveFundInfoToLocalstorage();
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 
 onMounted(() => {

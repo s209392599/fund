@@ -25,6 +25,7 @@ function clearFolder(folderPath) {
     console.log(`文件夹 ${folderPath} 已成功清空，但文件夹本身被保留`);
   } else {
     console.log(`文件夹 ${folderPath} 不存在`);
+    fs.mkdirSync(folderPath, { recursive: true });
   }
 }
 
@@ -47,6 +48,7 @@ function resetJson(jsonPath, resetValue = []) {
 // 使用示例
 clearFolder('./FundDetailPageInfo'); // 清空文件夹
 clearFolder('./HistoryNetValue'); // 清空文件夹
+clearFolder('./FundFenhong'); // 清空文件夹
 resetJson('./data/filter.json', []); // 重置JSON文件内容为 []
 resetJson('./data/error_detailpageinfo.json', []); // 重置JSON文件内容为 []
 // resetJson('./data/a.json', []); // 重置JSON文件内容为 []

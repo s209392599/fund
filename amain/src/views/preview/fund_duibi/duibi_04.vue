@@ -12,15 +12,19 @@ if (localStorage.getItem('fund_duibi_arr')) {
 
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
-  let arr = info.tableData.map((v) => {
+  let arr = info.tableData.map(v => {
     return {
-      fund_code: v.fund_code,
-      fund_name: v.fund_name,
-      fund_type: v.fund_type,
+      fund_code: v.fund_code || '',
+      fund_name: v.fund_name || '',
+      fund_type: v.fund_type || '',
     };
   });
   localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
+  console.log('触发了保存基金信息到本地存储');
 };
+watch(() => info.tableData, () => {
+  saveFundInfoToLocalstorage();
+}, { deep: true });
 
 const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
@@ -51,16 +55,13 @@ const getList = async () => {
         ...info.tableData[i],
         ...obj_1,
       };
-
-      saveFundInfoToLocalstorage();
     });
   }
 };
 
 // 删除
 const btn_line_1 = (row, index) => {
-  info.tableData.splice(index, 1);
-  saveFundInfoToLocalstorage();
+  info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 
 onMounted(() => {
@@ -71,11 +72,7 @@ onMounted(() => {
 <template>
   <div class="page_wrapper">
     <div id="list_wrapper">
-      <div
-        class="list_item"
-        v-for="(item, index) in info.tableData"
-        :key="item.fund_code"
-      >
+      <div class="list_item" v-for="(item, index) in info.tableData" :key="item.fund_code">
         <div class="list_top flex justify-between" style="margin: 0px">
           <div class="">{{ item.fund_code }}</div>
           <div class="">{{ item.fund_type }}</div>
@@ -83,12 +80,7 @@ onMounted(() => {
         </div>
 
         <div class="fund_name_box flex justify-between items-center">
-          <div
-            class="truncate flex-1"
-            :title="item.fund_name"
-            style="font-size: 12px"
-            >{{ item.fund_name }}</div
-          >
+          <div class="truncate flex-1" :title="item.fund_name" style="font-size: 12px">{{ item.fund_name }}</div>
           <div class="pl-5">{{ item.establishmentCycleDesc }}</div>
         </div>
 
@@ -100,9 +92,9 @@ onMounted(() => {
 
         <div class="item_box">
           <Chart_jingzhi :data="item" class="stock_main" />
-        </div> </div
-      ><!-- list_item --> </div
-    ><!-- list_wrapper -->
+        </div>
+      </div><!-- list_item -->
+    </div><!-- list_wrapper -->
   </div>
 </template>
 
