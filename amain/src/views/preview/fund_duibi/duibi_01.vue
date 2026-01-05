@@ -2,7 +2,9 @@
 import { watch } from 'vue';
 
 console.log('amain/src/views/preview/fund_duibi/duibi_01.vue');
-
+const tableMaxHeight = computed(() => {
+  return `calc(100vh - 145px)`;
+});
 const info = reactive({
   tableData: []
 })
@@ -64,9 +66,9 @@ const btn_fn_02 = () => {
 const btn_line_1 = (row, index) => {
   info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
-const btn_line_2 = (row, index) => {
-  console.log('插入到基金', row, index);
-};
+// const btn_line_2 = (row, index) => {
+//   console.log('插入到基金', row, index);
+// };
 const btn_fn_03 = () => {
   let str = info.tableData.map(v => v.fund_code).join(',');
   fallbackCopyText(str);
@@ -129,6 +131,43 @@ const btn_fn_05 = () => {
   let str = JSON.stringify(data);
   fallbackCopyText(str);
 };
+// 基金搜索
+const btn_fn_06 = () => {
+  info.tableData = [];
+
+  // 第二步
+  var str = prompt(`输入基金名称(至少两个字符)`, "");
+  str = (str || '').trim();
+  if (str.length < 2) {
+    ElMessage.error('输入的基金名称至少两个字符');
+    return false;
+  }
+
+  server_fund_apifolder_query_keywords({ text: str })
+    .then((res) => {
+      if (res.code === 200) {
+        if (!res.data.length) {
+          ElMessage.info('暂无数据');
+          return;
+        }
+        if (res.data.length > 500) {
+          ElMessage.warning('最多显示500条数据');
+          info.tableData = res.data.slice(0, 500);
+        } else {
+          info.tableData = [...res.data];
+        }
+      }
+    })
+    .catch(() => {
+    })
+    .finally(() => {
+      info.step = info.tableData.length ? 2 : 1;
+    });
+};
+// 去除A类
+const btn_fn_07 = () => {
+  info.tableData = info.tableData.filter(v => !v.fund_name.endsWith('A'));
+};
 </script>
 
 <template>
@@ -139,19 +178,22 @@ const btn_fn_05 = () => {
       <el-button class="top_btn btn_3" @click="btn_fn_02()">删除所有基金</el-button>
       <el-button class="top_btn btn_4" @click="btn_fn_03()">复制基金号(逗号)</el-button>
       <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button>
+      <el-button class="top_btn btn_6" @click="btn_fn_06()">基金搜索</el-button>
+      <el-button class="top_btn btn_7" @click="btn_fn_07()">去除A类</el-button>
+      <span class="ml-10">基金数({{ info.tableData.length }}个)</span>
     </div>
 
-    <el-table :data="info.tableData" style="width: 100%" border stripe max-height="520">
-      <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
+    <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
+      <el-table-column fixed type="index" align="center" label="序" width="80"></el-table-column>
 
-      <el-table-column label="操作" width="140" fixed>
+      <el-table-column label="操作" width="80" fixed align="center">
         <template #default="{ row, $index }">
           <el-button link type="primary" size="small" @click="btn_line_1(row, $index)">删除</el-button>
-          <el-button link type="primary" size="small" @click="btn_line_2(row, $index)">插入到</el-button>
+          <!-- <el-button link type="primary" size="small" @click="btn_line_2(row, $index)">插入到</el-button> -->
         </template>
       </el-table-column>
 
-      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="64">
+      <el-table-column fixed prop="fund_code" align="center" label="基金号" width="80">
         <template v-slot="{ row }">
           <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank" style="text-decoration: none">
             <span>{{ row.fund_code }}</span>
@@ -203,6 +245,14 @@ const btn_fn_05 = () => {
 
   &.btn_5 {
     background-color: #29b6f6 !important; // 天蓝色
+  }
+
+  &.btn_6 {
+    background-color: #f56c6c !important; // 红色
+  }
+
+  &.btn_7 {
+    background-color: #409eff !important; // 蓝色
   }
 }
 </style>

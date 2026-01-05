@@ -49,7 +49,7 @@ const handleClick = (tab) => {
 </script>
 
 <template>
-  <div class="page_wrapper pd-10">
+  <div class="page_wrapper pr-10 pb-10 pl-10">
     <div class="">
       <el-tabs v-model="info.active_tab" @tab-click="handleClick" class="page-tabs">
         <el-tab-pane v-for="item in info.list_tabs" :key="item.id" :label="item.name" :name="item.id">
