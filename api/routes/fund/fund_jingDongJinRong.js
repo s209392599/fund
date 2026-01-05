@@ -213,8 +213,8 @@ router.post('/fund_jd_getFundDetailChartPageInfo', (req, res) => {
     return;
   }
   try {
-    let u = `
-https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?reqData={"chartType":7,"fundCode":"${fund_code}","dataCycle":4,"disclosureType":1}`;
+    let base_url = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?`;
+    let u = `${base_url}reqData={"chartType":7,"fundCode":"${fund_code}","dataCycle":4,"disclosureType":1}`;
     fetch(u, {})
       .then((data) => data.json())
       .then((data) => {
@@ -250,6 +250,7 @@ https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?reqData={"cha
 // 获取京东金融上面的“今日加仓榜”
 router.post('/fund_jd_getWealthDatas', (req, res) => {
   const { reqData = {} } = req.body;
+  console.log('reqData',reqData);
 
   try {
     let u = `https://ms.jr.jd.com/gw2/generic/opdataapi/newh5/m/getWealthDatas`;
@@ -316,11 +317,12 @@ router.post('/fund_jd_getInvestResearchRank', (req, res) => {
         } else {
           let resultData = data.resultData || {};
           let obj_1 = resultData.datas || {};
-          // let obj_2 = obj_1.data || [];
+          const productTabList = obj_1.productTabList || [];
+          const productList = (productTabList[0] || {}).productList || [];
           res.send({
             code: 200,
             msg: '成功',
-            data: obj_1,
+            data: productList,
           });
         }
       });
@@ -333,36 +335,4 @@ router.post('/fund_jd_getInvestResearchRank', (req, res) => {
   }
 });
 
-// 连续跑赢大盘
-// https://ms.jr.jd.com/gw2/generic/jj/newh5/m/getInvestResearchRank
-// reqData {"rankType":"lxpydp"}
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=lxpydp
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&rankCode=466476965486976&fundUtmSource=1677&fundUtmParam=jrcfb
-
-// 长期绩优
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=cqjy
-
-// 屡创新高
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=lcxg
-
-// 半导体
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=semi
-
-// 低费用
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=dfy
-
-// 机构偏爱
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=jgpa
-
-// 晨星评级
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=cxpj
-
-// 严控回撤
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&secondDataCode=ykhc
-
-// 高性价比
-// 持仓盈利多
-// 复购占比
-// 综合人气
-// 热门定投
 module.exports = router;

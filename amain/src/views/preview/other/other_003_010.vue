@@ -1,5 +1,5 @@
 <script setup>
-console.log('amain/src/views/preview/other/other_003_001.vue');
+console.log('amain/src/views/preview/other/other_003_010.vue');
 
 const props = defineProps({
   child_info: {
@@ -37,18 +37,14 @@ const btn_fn_02 = () => {
 //
 // 获取今日加仓榜
 const getList = () => {
-  server_fund_jd_getWealthDatas({
+  server_fund_jd_getInvestResearchRank({
     reqData: {
-      rankCode: "432126255181888",
-      sourceType: 1,
+      rankType: "stable_zhrq"
     }
   }).then((res) => {
     console.log(res);
     if (res.code === 200) {
-      let turnData = (res.data || []).map(v => JSON.parse(v));
-      console.log('turnData', turnData);
-
-      info.tableData = turnData || [];
+      info.tableData = res.data || [];
     } else {
       ElMessage.error('获取失败，请重试！');
     }
@@ -65,7 +61,7 @@ const copyText = () => {
 }
 
 const getFundMetrics = (row) => {
-  return (row.fundMetrics || []).join(',');
+  return (row.tagList || []).join(',');
 }
 
 // 删除
@@ -125,33 +121,33 @@ onMounted(() => {
         <el-table-column prop="fundName" label="基金名称" width="360">
         </el-table-column>
 
-        <el-table-column prop="fundTypeStr" label="类型" width="100">
+        <!-- <el-table-column prop="fundTypeStr" label="类型" width="100">
+        </el-table-column> -->
+
+        <el-table-column prop="riskLevel" label="风险" width="80">
         </el-table-column>
 
-        <el-table-column prop="riskLevelStr" label="风险" width="80">
-        </el-table-column>
-
-        <el-table-column prop="" label="近1年" width="80" align="right">
+        <el-table-column prop="" label="字段1" width="160" align="right">
           <template v-slot="{ row }">
-            <span>{{ row.singleYearRate ? row.singleYearRate.toFixed(2) : '-' }}%</span>
+            <span>{{ row.firstIndexDesc }}: {{ row.firstIndexVal }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column prop="" label="近1月" width="80" align="right">
+        <el-table-column prop="" label="字段2" width="160" align="right">
           <template v-slot="{ row }">
-            <span>{{ row.singleMonthRate ? row.singleMonthRate.toFixed(2) : '-' }}%</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column prop="" label="成立以来" width="100" align="right">
-          <template v-slot="{ row }">
-            <span>{{ row.setupRate ? row.setupRate.toFixed(2) : '-' }}%</span>
+            <span>{{ row.secondIndexDesc }}: {{ row.secondIndexVal }}</span>
           </template>
         </el-table-column>
 
         <el-table-column align="right" label="特征" width="300">
           <template v-slot="{ row }">
             <span v-html="getFundMetrics(row)"></span>
+          </template>
+        </el-table-column>
+
+        <el-table-column prop="" label="字段3" width="220" align="right">
+          <template v-slot="{ row }">
+            <span>{{ row.accompanyText }}</span>
           </template>
         </el-table-column>
       </el-table>

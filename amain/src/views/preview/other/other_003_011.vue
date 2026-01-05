@@ -1,5 +1,5 @@
 <script setup>
-console.log('amain/src/views/preview/other/other_003_001.vue');
+console.log('amain/src/views/preview/other/other_003_011.vue');
 
 const props = defineProps({
   child_info: {
@@ -39,7 +39,7 @@ const btn_fn_02 = () => {
 const getList = () => {
   server_fund_jd_getWealthDatas({
     reqData: {
-      rankCode: "432126255181888",
+      rankCode: "466474240979584",
       sourceType: 1,
     }
   }).then((res) => {
@@ -137,15 +137,9 @@ onMounted(() => {
           </template>
         </el-table-column>
 
-        <el-table-column prop="" label="近1月" width="80" align="right">
+        <el-table-column prop="" label="近3年" width="80" align="right">
           <template v-slot="{ row }">
-            <span>{{ row.singleMonthRate ? row.singleMonthRate.toFixed(2) : '-' }}%</span>
-          </template>
-        </el-table-column>
-
-        <el-table-column prop="" label="成立以来" width="100" align="right">
-          <template v-slot="{ row }">
-            <span>{{ row.setupRate ? row.setupRate.toFixed(2) : '-' }}%</span>
+            <span>{{ row.threeYearRate ? row.threeYearRate.toFixed(2) : '-' }}%</span>
           </template>
         </el-table-column>
 

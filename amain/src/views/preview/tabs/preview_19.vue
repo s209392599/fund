@@ -22,6 +22,12 @@ const info = reactive({
       hasComponent: true, // 标识该节点没有组件，仅为父节点
       component: () => import('@/views/preview/other/other_003_000.vue')
     },
+    {
+      id: 'other_004_001',
+      name: '新成立基金',
+      hasComponent: true,
+      component: () => import('@/views/preview/other/other_004_000.vue')
+    },
     // {
     //   id: 'other_002_000',
     //   name: '交叉排行',

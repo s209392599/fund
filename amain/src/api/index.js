@@ -97,9 +97,13 @@ export async function server_fund_jd_HistoryNetValuePageInfo(data) {
 export async function server_fund_apifolder_jiaichapaihang(data) {
   return request.post('/fund_apifolder_jiaichapaihang', data);
 }
-// fund_jd_getWealthDatas 获取基金今日加仓榜
+// fund_jd_getWealthDatas 获取基金今日加仓榜等排行榜
 export async function server_fund_jd_getWealthDatas(data) {
   return request.post('/fund_jd_getWealthDatas', data);
+}
+// fund_jd_getInvestResearchRank 获取基金研究排名等排行榜
+export async function server_fund_jd_getInvestResearchRank(data) {
+  return request.post('/fund_jd_getInvestResearchRank', data);
 }
 
 // --------------------------------------------------------------  下面是数据库操作

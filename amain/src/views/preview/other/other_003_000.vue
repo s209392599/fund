@@ -3,47 +3,88 @@ console.log('amain/src/views/preview/other/other_003_000.vue');
 const info = reactive({
   currentTabComponent: '',
   active_tab: '',
+  // 传递给子组件
+  child_info: {
+    url: 'https://show.jd.com/m/dVAaqEjDlpo3kRyP/',// 榜单的根地址
+  },
   list_tabs: [
     {
       id: '1',
       name: '今日加仓榜',
-      sign: 'all',
       component: markRaw(
         defineAsyncComponent(() => import('./other_003_001.vue'))
       ),
     },
-    // {
-    //   id: '2',
-    //   name: '指数型',
-    //   sign: 'zhishu',
-    //   component: markRaw(
-    //     defineAsyncComponent(() => import('./other_002_002.vue'))
-    //   ),
-    // },
-    // {
-    //   id: '3',
-    //   name: '股票型',
-    //   sign: 'gupiao',
-    //   component: markRaw(
-    //     defineAsyncComponent(() => import('./other_002_003.vue'))
-    //   ),
-    // },
-    // {
-    //   id: '4',
-    //   name: '混合型',
-    //   sign: 'hunhe',
-    //   component: markRaw(
-    //     defineAsyncComponent(() => import('./other_002_004.vue'))
-    //   ),
-    // },
-    // {
-    //   id: '5',
-    //   name: '债券型',
-    //   sign: 'zhaiquan',
-    //   component: markRaw(
-    //     defineAsyncComponent(() => import('./other_002_005.vue'))
-    //   ),
-    // },
+    {
+      id: '2',
+      name: '持有人数飙升',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_002.vue'))
+      ),
+    },
+    {
+      id: '3',
+      name: '屡创新高',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_003.vue'))
+      ),
+    },
+    {
+      id: '4',
+      name: '连续跑赢大盘',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_004.vue'))
+      ),
+    },
+    {
+      id: '5',
+      name: '连续跑赢赛道',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_005.vue'))
+      ),
+    },
+    {
+      id: '6',
+      name: '业绩稳定',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_006.vue'))
+      ),
+    },
+    {
+      id: '7',
+      name: '长期绩优',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_007.vue'))
+      ),
+    },
+    {
+      id: '8',
+      name: '严控回撤',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_008.vue'))
+      ),
+    },
+    {
+      id: '9',
+      name: '机构偏爱',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_009.vue'))
+      ),
+    },
+    {
+      id: '10',
+      name: '综合人气',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_010.vue'))
+      ),
+    },
+    {
+      id: '11',
+      name: '热门定投',
+      component: markRaw(
+        defineAsyncComponent(() => import('./other_003_011.vue'))
+      ),
+    },
   ],
 })
 
@@ -73,7 +114,7 @@ onMounted(() => {
     </el-tabs>
 
     <div class="main">
-      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" :data="info.data_jiaocha" />
+      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" :child_info="info.child_info" />
     </div>
   </div>
 </template>
