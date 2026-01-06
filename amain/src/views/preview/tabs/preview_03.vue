@@ -156,7 +156,7 @@ onMounted(() => {
     <div class="page_right flex-1">
       <div class="top_box flex items-center">
         <div class="btn_copy" @click="copyText">复制数据</div>
-        <div class="flex-1 text-right truncate pl-5">本列表最后更新时间为：{{ info.active_update_time }}</div>
+        <div class="ml-10">更新时间：{{ info.active_update_time }}</div>
       </div>
       <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
         <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>

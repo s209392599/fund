@@ -1,13 +1,3 @@
 
-011068,002872,015881,002233,022270
 
-[{"fund_code":"011068","fund_name":"华宝资源优选混合C","fund_type":"混合型-偏股"},{"fund_code":"002872","fund_name":"华夏智胜价值成长股票C","fund_type":"股票型"},{"fund_code":"015881","fund_name":"中欧小盘成长混合C","fund_type":"混合型-偏股"},{"fund_code":"002233","fund_name":"工银丰收回报灵活配置混合C","fund_type":"混合型-灵活"},{"fund_code":"022270","fund_name":"中信保诚周期优选混合C","fund_type":"混合型-偏股"}]
-
-
-[{"fund_code":"017574","fund_name":"华夏中证机床ETF发起式联接C","fund_type":"指数型-股票"},{"fund_code":"017472","fund_name":"国泰中证机床ETF发起联接C","fund_type":"指数型-股票"}]
-
-[{"fund_code":"000591","fund_name":"中银健康生活混合","fund_type":"混合型-偏股"},{"fund_code":"001056","fund_name":"华银健康生活主题灵活配置","fund_type":"混合型-灵活"}]
-
-红利：
-020867,021143,021962
-[{"fund_code":"020867","fund_name":"华安恒生港股通中国央企红利ETF发起式联接C","fund_type":"指数型-股票"},{"fund_code":"021143","fund_name":"华夏港股通央企红利ETF联接C","fund_type":"指数型-股票"},{"fund_code":"021962","fund_name":"景顺长城中证国新港股通央企红利ETF联接C","fund_type":"指数型-股票"}]
+[{"id":1,"type":"红利","desc":"","update_time":"2025年12月26日16:59:14","data":[{"fund_code":"023918","fund_name":"华夏国证自由现金流ETF联接C","fund_type":"","update_time":"2025-12-26 17:27:47"},{"fund_code":"020867","fund_name":"华安恒生红利","fund_type":"","update_time":"2025-12-26 17:27:47"},{"fund_code":"019261","fund_name":"富国恒生红利ETF联接C","fund_type":"","update_time":"2025-12-26 17:27:47"}]},{"id":2,"type":"量化","desc":"","update_time":"2025年12月26日16:59:14","data":[{"fund_code":"016858","fund_name":"国金量化多因子股票C","fund_type":"","update_time":"2025-12-26 17:27:47"},{"fund_code":"021991","fund_name":"中加专精特新量化混合C","fund_type":"","update_time":"2025-12-26 17:27:47"}]}]

@@ -20,11 +20,11 @@ router.post('/fund_table_mix_query', async (req, res) => {
     });
     return;
   }
-  var query = `SELECT * FROM fund_mix WHERE type_1 = :type_1`;
+  var query = `SELECT * FROM fund_mix WHERE type_1 = ?`;
   DatabasePostQuery({
     res: res,
     query: query,
-    values: { type_1 }, // 使用对象而不是数组
+    values: [type_1], // 修改：将对象格式改为数组格式
     format: (results) => results,
   });
 });
