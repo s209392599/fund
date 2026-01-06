@@ -1,6 +1,8 @@
 <script setup>
 console.log('ahoutai/src/views/preview/tabs/preview_04.vu');
+import { VueDraggable } from 'vue-draggable-plus';
 
+const formRef = ref(null);
 const info = reactive({
   active_type: '科创50',// 当前选中的分类
   // 分类的所有数据
@@ -184,16 +186,28 @@ const info = reactive({
     }
   ],
   tableData: [],
+  dialogFormVisible: false,// 对话框是否显示
+  update_flag: '',// 对话框的标题
+  form: {},// 对话框的表单数据
+  tableKey: new Date().getTime(),// 用于强制刷新表格
 })
+info.tableData = info.list[0].data;
+
 const tableMaxHeight = computed(() => {
   return `calc(100vh - 60px)`;
 });
 
-
-info.tableData = info.list[0].data;
+// 表单验证规则
+const rules = {
+  fund_code: [
+    { required: true, message: '请输入基金号', trigger: 'blur' },
+    { pattern: /^\d{6}$/, message: '基金号必须是6位数字', trigger: 'blur' }
+  ],
+  fund_name: [{ required: true, message: '请输入基金名称', trigger: 'blur' }]
+};
 
 // 新增分类
-const btn_fn_1 = () => {
+const btn_fn_01 = () => {
   const type = prompt('请输入分类名称', '');
   const str = (type || '').trim();
   if (str !== '') {
@@ -212,43 +226,47 @@ const btn_fn_1 = () => {
 };
 
 // 保存数据
-const btn_fn_2 = () => {
+const btn_fn_02 = () => {
   console.log('保存数据', info.list);
 };
 
 // 新增基金
-const btn_fn_3 = () => {
-  const fund_code = prompt('请输入基金号', '');
-  if (fund_code !== null && fund_code.trim() !== '') {
-    info.tableData.push({
-      fund_code: fund_code.trim(),
-      fund_name: '',
-      fund_type: '',
-      fund_desc: '',
-      update_time: '',
-    });
+const btn_fn_03 = () => {
+  info.form = {
+    fund_code: '',
+    fund_name: '',
+    fund_type: '',
+    fund_desc: '',
+    _originalFundCode: null, // 明确标识这是新增，不是编辑
   }
+  info.dialogFormVisible = true;
 };
 // 批量导入
-const btn_fn_4 = () => {
+const btn_fn_04 = () => {
   const file = document.createElement('input');
   file.type = 'file';
   file.accept = '.xlsx, .xls';
   file.click();
 };
-
 // 切换分类
 const changeType = (type) => {
+  info.tableData = [];
   info.active_type = type || (info.list[0] || {}).type || '';
   if (info.active_type === '') {
     info.tableData = [];
     return;
   }
-  info.tableData = info.list.find(item => item.type === info.active_type).data || [];
+  const foundItem = info.list.find(item => item.type === info.active_type);
+  if (!foundItem) {
+    info.tableData = [];
+    return;
+  }
+  info.tableData = [...foundItem.data];
+  info.tableKey = new Date().getTime();
 };
 
 // 编辑分类
-const btn_fn_5 = (type) => {
+const btn_fn_05 = (type) => {
   const str_1 = prompt('请输入分类名称', '');
   const str_2 = (str_1 || '').trim();
   if (str_2 !== '') {
@@ -272,7 +290,7 @@ const btn_fn_5 = (type) => {
 };
 
 // 删除分类
-const btn_fn_6 = (type) => {
+const btn_fn_06 = (type) => {
   info.list = info.list.filter(item => item.type !== type);
   if (info.active_type === type) {
     changeType((info.list[0] || {}).type || '');
@@ -280,14 +298,119 @@ const btn_fn_6 = (type) => {
 };
 
 
-// 编辑
-const btn_fn_7 = (row, index) => {
-  console.log('编辑', row, index);
+// 编辑基金 - 修改
+const btn_fn_07 = (row) => {
+  console.log('编辑', row);
+  info.update_flag = '编辑基金';
+  info.form = {
+    ...row,
+    _originalFundCode: row.fund_code, // 保存原始基金号
+  };
+  console.log('info.form', info.form);
+  info.dialogFormVisible = true;
 };
 
-// 删除
-const btn_fn_8 = (row, index) => {
-  console.log('删除', row, index);
+// 删除基金
+const btn_fn_08 = (row, index) => {
+  // 从当前显示的表格数据中删除
+  const tableIndex = info.tableData.findIndex(item => item.fund_code === row.fund_code);
+  if (tableIndex !== -1) {
+    info.tableData.splice(tableIndex, 1);
+  }
+
+  // 同步到分类数据
+  const obj = info.list.find(item => item.type === info.active_type);
+  if (obj) {
+    obj.data = [...info.tableData];
+  }
+};
+
+// 编辑基金的弹窗保存
+const btn_fn_09 = () => {
+  formRef.value.validate((valid) => {
+    if (valid) {
+      let fundData = {
+        fund_code: info.form.fund_code,
+        fund_name: info.form.fund_name,
+        fund_type: info.form.fund_type,
+        fund_desc: info.form.fund_desc,
+        update_time: CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"),
+      }
+
+      const obj = info.list.find(item => item.type === info.active_type);
+      if (!obj) {
+        ElMessage.error('分类不存在');
+        return;
+      }
+
+      // 检查是否是编辑模式
+      const isEditMode = info.form._originalFundCode;
+
+      if (isEditMode) {
+        // 编辑模式
+        if (info.form._originalFundCode !== info.form.fund_code) {
+          // 基金号被修改了，检查新基金号是否已存在
+          const codeExists = obj.data.some(item =>
+            item.fund_code === fundData.fund_code &&
+            item.fund_code !== info.form._originalFundCode
+          );
+          if (codeExists) {
+            ElMessage.error('基金号已存在');
+            return;
+          }
+        }
+      } else {
+        // 新增模式，检查基金号是否已存在
+        const codeExists = obj.data.some(item => item.fund_code === fundData.fund_code);
+        if (codeExists) {
+          ElMessage.error('基金号已存在');
+          return;
+        }
+      }
+
+      // 关键：直接操作 info.tableData 而不是 obj.data
+      if (isEditMode) {
+        // 编辑 - 替换现有项
+        const index = info.tableData.findIndex(item => item.fund_code === info.form._originalFundCode);
+        if (index !== -1) {
+          // Vue 的响应式数组更新
+          info.tableData.splice(index, 1, fundData);
+        }
+      } else {
+        // 新增 - 添加到末尾
+        info.tableData.push(fundData);
+      }
+
+      // 同步到 obj.data
+      obj.data = [...info.tableData];
+
+      info.dialogFormVisible = false;
+      info.form = {
+        index: null,
+        _originalFundCode: null
+      };
+
+      // 等待下一个 tick 确保数据更新
+      await nextTick();
+
+      // 强制重新渲染表格
+      info.tableKey = Date.now().getTime();
+
+      ElMessage.success(isEditMode ? '编辑成功' : '新增成功');
+    } else {
+      console.log('表单验证失败');
+      return false;
+    }
+  });
+};
+
+const onDragEnd = (evt) => {
+  console.log(info.tableData.map(item => item.fund_code));
+  const find_index = info.list.findIndex(item => item.type === info.active_type);
+  if (find_index === -1) return;
+
+  // 直接更新分类的数据
+  info.list[find_index].data = [...info.tableData];
 };
 </script>
 
@@ -295,18 +418,18 @@ const btn_fn_8 = (row, index) => {
   <div class="page-wrapper h-full flex">
     <div class="page_left flex flex-col">
       <div class="left_top flex items-center justify-center">
-        <el-button type="primary" @click="btn_fn_1()">新增分类</el-button>
-        <el-button type="primary" @click="btn_fn_2()">保存数据</el-button>
+        <el-button type="primary" @click="btn_fn_01()">新增分类</el-button>
+        <el-button type="primary" @click="btn_fn_02()">保存数据</el-button>
       </div>
 
       <div class="left_content flex-1">
         <div class="left_item flex" v-for="item in info.list" :key="item.type"
           :class="{ 'active': item.type === info.active_type }" @click="changeType(item.type)">
           <div class="type_text flex-1">{{ item.type }}</div>
-          <div class="type_edit" @click.stop="btn_fn_5(item.type)">
+          <div class="type_edit" @click.stop="btn_fn_05(item.type)">
             <span style="font-family: Arial; font-size: 16px;">&#x270E;</span> <!-- 显示为 ✎ -->
           </div>
-          <div class="type_del" @click.stop="btn_fn_6(item.type)">
+          <div class="type_del" @click.stop="btn_fn_06(item.type)">
             <span style="font-family: Arial; font-size: 16px;">&#x2716;</span> <!-- 显示为 ✖ -->
           </div>
         </div>
@@ -315,38 +438,74 @@ const btn_fn_8 = (row, index) => {
 
     <div class="page_right flex-1 flex_col">
       <div class="right_top items-center flex pl-10 pr-10 border-b">
-        <el-button type="primary" @click="btn_fn_3()" :disabled="!info.active_type">新增基金</el-button>
-        <el-button type="primary" @click="btn_fn_4()" :disabled="!info.active_type">批量导入</el-button>
+        <el-button type="primary" @click="btn_fn_03()" :disabled="!info.active_type">新增基金</el-button>
+        <el-button type="primary" @click="btn_fn_04()" :disabled="!info.active_type">批量导入</el-button>
       </div>
 
       <div class="right_content flex-1 pd-10">
-        <el-table :data="info.tableData" border style="width: 100%" :max-height="tableMaxHeight">
-          <el-table-column fixed label="序" type="index" width="50" align="center" />
+        <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
+          class="el-table" handle=".drag-handle" filter=".no-drag">
+          <el-table :data="info.tableData" :key="info.tableKey" border style="width: 100%" :max-height="tableMaxHeight">
+            <el-table-column fixed label="序" type="index" width="50" align="center" />
 
-          <el-table-column fixed label="操作" width="100" align="center">
-            <template #default="{ row, $index }">
-              <el-button link type="primary" size="small" @click="btn_fn_7(row, $index)">编辑</el-button>
-              <el-button link type="primary" size="small" @click="btn_fn_8(row, $index)">删除</el-button>
-            </template>
-          </el-table-column>
+            <el-table-column fixed label="拽" type="" width="40" align="center">
+              <template #default="{ $index }">
+                <div class="drag-handle"
+                  style="cursor: grab; color: #909399; display: flex; align-items: center;justify-content:center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z" />
+                  </svg>
+                </div>
+              </template>
+            </el-table-column>
 
-          <el-table-column fixed prop="fund_code" align="center" label="基金号" width="80">
-            <template v-slot="{ row }">
-              <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
-                style="text-decoration: none">
-                <span>{{ row.fund_code }}</span>
-              </a>
-            </template>
-          </el-table-column>
+            <el-table-column fixed label="操作" width="100" align="center">
+              <template #default="{ row, $index }">
+                <el-button link type="primary" size="small" @click="btn_fn_07(row, $index)">编辑</el-button>
+                <el-button link type="primary" size="small" @click="btn_fn_08(row, $index)">删除</el-button>
+              </template>
+            </el-table-column>
 
-          <el-table-column prop="fund_name" label="基金名称" width="380" />
-          <el-table-column prop="fund_type" label="基金类型" width="130" />
-          <el-table-column prop="fund_desc" label="备注" width="280" />
-        </el-table>
+            <el-table-column fixed prop="fund_code" align="center" label="基金号" width="80">
+              <template v-slot="{ row }">
+                <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
+                  style="text-decoration: none">
+                  <span>{{ row.fund_code }}</span>
+                </a>
+              </template>
+            </el-table-column>
+
+            <el-table-column prop="fund_name" label="基金名称" width="380" />
+            <el-table-column prop="fund_type" label="基金类型" width="130" />
+            <el-table-column prop="fund_desc" label="备注" width="280" />
+            <el-table-column prop="update_time" label="更新时间" width="160" />
+          </el-table>
+        </VueDraggable>
       </div>
     </div>
   </div>
 
+  <!-- 编辑基金的弹窗 -->
+  <el-dialog v-model="info.dialogFormVisible" title="编辑基金" width="400px" :close-on-click-modal="false">
+    <el-form :model="info.form" :rules="rules" ref="formRef" label-width="120px">
+      <el-form-item label="基金号" prop="fund_code">
+        <el-input v-model="info.form.fund_code" placeholder="请输入基金号" />
+      </el-form-item>
+      <el-form-item label="基金名称" prop="fund_name">
+        <el-input v-model="info.form.fund_name" placeholder="请输入基金名称" />
+      </el-form-item>
+      <el-form-item label="基金类型" prop="fund_type">
+        <el-input v-model="info.form.fund_type" placeholder="请输入基金类型" />
+      </el-form-item>
+      <el-form-item label="备注" prop="fund_desc">
+        <el-input v-model="info.form.fund_desc" placeholder="请输入备注" />
+      </el-form-item>
+    </el-form>
+    <template #footer>
+      <el-button type="primary" @click="btn_fn_09()">保存</el-button>
+      <el-button type="primary" @click="info.dialogFormVisible = false">取消</el-button>
+    </template>
+  </el-dialog>
 </template>
 
 <style scoped lang="scss">
