@@ -21,6 +21,19 @@ const handleSelectionChange = (val) => {
   info.selectedRows = val || [];
 }
 
+const btn_fn_01 = () => {
+  if (info.tableData.length === 0) {
+    ElMessage.info('当前无数据');
+    return;
+  }
+  let data = info.tableData.map(item => ({
+    fund_code: item.fundCode || '',
+    fund_name: item.fundName || '',
+    fund_type: item.fundTypeStr || ''
+  }));
+  fallbackCopyText(JSON.stringify(data));
+}
+
 // 读取并复制/打印勾选的数据
 const btn_fn_02 = () => {
   if ((info.selectedRows || []).length === 0) {
@@ -49,15 +62,6 @@ const getList = () => {
       ElMessage.error('获取失败，请重试！');
     }
   });
-}
-// 复制
-const copyText = () => {
-  const data = info.tableData.map(item => ({
-    fund_code: item.fundCode,
-    fund_name: item.fundName,
-    fund_type: item.fundTypeStr
-  }));
-  fallbackCopyText(JSON.stringify(data));
 }
 
 const getFundMetrics = (row) => {
