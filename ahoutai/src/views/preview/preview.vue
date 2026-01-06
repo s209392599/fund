@@ -9,7 +9,7 @@ const info = reactive({
   list_default: [
     {
       id: 1,
-      name: '群主基金维护',
+      name: '基金维护',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_01.vue'))),
     },
     {
@@ -24,7 +24,7 @@ const info = reactive({
     },
     {
       id: 4,
-      name: '邮件公告-其它',
+      name: '分类基金推荐',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
     },
   ],

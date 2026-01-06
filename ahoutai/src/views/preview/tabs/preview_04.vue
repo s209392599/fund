@@ -1,209 +1,423 @@
 <script setup>
-console.log('src/views/preview/tabs/preview_09.vue');
+console.log('ahoutai/src/views/preview/tabs/preview_04.vu');
 
-const diaForm = ref(null);
 const info = reactive({
+  active_type: '科创50',// 当前选中的分类
+  // 分类的所有数据
+  list: [
+    {
+      "type": "科创50",
+      "data": [
+        {
+          "fund_code": "011609",
+          "fund_name": "易方达上证科创50ETF联接C",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "011613",
+          "fund_name": "华夏科创50ETF联接C",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        }
+      ]
+    },
+    {
+      "type": "北证50",
+      "data": [
+        {
+          "fund_code": "017513",
+          "fund_name": "广发北证50成份",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "017516",
+          "fund_name": "易方达北证50成",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "018113",
+          "fund_name": "工银北证50成份",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        }
+      ]
+    },
+    {
+      "type": "红利",
+      "data": [
+        {
+          "fund_code": "023918",
+          "fund_name": "华夏国证自由现金流ETF联接C",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "019261",
+          "fund_name": "富国恒生红利ETF联接C",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "020867",
+          "fund_name": "华安恒生港股通中国央企红利ETF发起式联接C",
+          "fund_type": "指数型-股票",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "021143",
+          "fund_name": "华夏港股通央企红利ETF联接C",
+          "fund_type": "指数型-股票",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "021962",
+          "fund_name": "景顺长城中证国新港股通央企红利ETF联接C",
+          "fund_type": "指数型-股票",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        }
+      ]
+    },
+    {
+      "type": "量化",
+      "data": [
+        {
+          "fund_code": "016858",
+          "fund_name": "国金量化多因子股票C",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "021991",
+          "fund_name": "中加专精特新量化混合C",
+          "fund_type": "",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "011068",
+          "fund_name": "华宝资源优选混合C",
+          "fund_type": "混合型-偏股",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "002872",
+          "fund_name": "华夏智胜价值成长股票C",
+          "fund_type": "股票型",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "015881",
+          "fund_name": "中欧小盘成长混合C",
+          "fund_type": "混合型-偏股",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "002233",
+          "fund_name": "工银丰收回报灵活配置混合C",
+          "fund_type": "混合型-灵活",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "022270",
+          "fund_name": "中信保诚周期优选混合C",
+          "fund_type": "混合型-偏股",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        }
+      ]
+    },
+    {
+      "type": "工业母机",
+      "data": [
+        {
+          "fund_code": "017574",
+          "fund_name": "华夏中证机床ETF发起式联接C",
+          "fund_type": "指数型-股票",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "017472",
+          "fund_name": "国泰中证机床ETF发起联接C",
+          "fund_type": "",
+          "fund_desc": "指数型-股票",
+          "update_time": "2025-12-26 17:27:47"
+        }
+      ]
+    },
+    {
+      "type": "脑机-医药",
+      "data": [
+        {
+          "fund_code": "000591",
+          "fund_name": "中银健康生活混合",
+          "fund_type": "混合型-偏股",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        },
+        {
+          "fund_code": "001056",
+          "fund_name": "华银健康生活主题灵活配置",
+          "fund_type": "混合型-灵活",
+          "fund_desc": "",
+          "update_time": "2025-12-26 17:27:47"
+        }
+      ]
+    }
+  ],
   tableData: [],
-  formLabelWidth: '140px',
-  update_flag: 'add',// 修改还是编辑
-  dialogFormVisible: false,
-  form: {
-    "email": "test@qq.com",
-    "name": "1231",
-    "update_time": "",
-    "password": "1231312",
-    "fund": [],
-    "active": '',
-    "desc": 'ceshi',
-  }
 })
-const rules = {
-  email: [
-    { required: true, message: '请输入邮箱地址', trigger: 'blur' },
-    { type: 'email', message: '请输入有效的邮箱地址', trigger: ['blur', 'change'] }
-  ],
-  name: [
-    { required: true, message: '请输入备注', trigger: 'blur' },
-    { min: 1, message: '至少输入1位', trigger: 'blur' }
-  ],
-  password: [
-    { required: true, message: '请输入密码', trigger: 'blur' },
-    { min: 4, message: '密码长度至少为4位', trigger: 'blur' }
-  ]
+const tableMaxHeight = computed(() => {
+  return `calc(100vh - 60px)`;
+});
+
+
+info.tableData = info.list[0].data;
+
+// 新增分类
+const btn_fn_1 = () => {
+  const type = prompt('请输入分类名称', '');
+  const str = (type || '').trim();
+  if (str !== '') {
+    // 判断是否存在
+    const flag = info.list.some(item => item.type === str);
+    if (flag) {
+      ElMessage.error('分类已存在');
+      return;
+    }
+    info.list.push({
+      type: str,
+      data: [],
+    });
+    changeType(str);
+  }
 };
 
-// 获取所有用户
-const getAllUser = () => {
-  server_fund_get_all_user_info({}).then(res => {
-    info.tableData = res.data;
-  })
-}
-getAllUser();
+// 保存数据
+const btn_fn_2 = () => {
+  console.log('保存数据', info.list);
+};
 
-// 添加class
-const tableRowClassName = ({ row, rowIndex }) => {
-  return rowIndex % 2 === 1 ? 'warning-row' : 'success-row';
-}
+// 新增基金
+const btn_fn_3 = () => {
+  const fund_code = prompt('请输入基金号', '');
+  if (fund_code !== null && fund_code.trim() !== '') {
+    info.tableData.push({
+      fund_code: fund_code.trim(),
+      fund_name: '',
+      fund_type: '',
+      fund_desc: '',
+      update_time: '',
+    });
+  }
+};
+// 批量导入
+const btn_fn_4 = () => {
+  const file = document.createElement('input');
+  file.type = 'file';
+  file.accept = '.xlsx, .xls';
+  file.click();
+};
+
+// 切换分类
+const changeType = (type) => {
+  info.active_type = type || (info.list[0] || {}).type || '';
+  if (info.active_type === '') {
+    info.tableData = [];
+    return;
+  }
+  info.tableData = info.list.find(item => item.type === info.active_type).data || [];
+};
+
+// 编辑分类
+const btn_fn_5 = (type) => {
+  const str_1 = prompt('请输入分类名称', '');
+  const str_2 = (str_1 || '').trim();
+  if (str_2 !== '') {
+    // 判断是否存在
+    const flag = info.list.some(item => item.type === str_2);
+    if (flag) {
+      ElMessage.error('分类已存在');
+      return;
+    }
+    // 修改名称
+    const obj = info.list.find(item => item.type === type);
+    if (obj) {
+      obj.type = str_2;
+    }
+    // 如果是当前分类，也要修改
+    if (info.active_type === type) {
+      info.active_type = str_2;
+    }
+    changeType(str_2);
+  }
+};
+
+// 删除分类
+const btn_fn_6 = (type) => {
+  info.list = info.list.filter(item => item.type !== type);
+  if (info.active_type === type) {
+    changeType((info.list[0] || {}).type || '');
+  }
+};
+
+
 // 编辑
-const btn_edit = (row, $index) => {
-  info.form = Object.assign({}, info.form, row);
-  info.update_flag = 'edit';// 标识编辑
-  info.dialogFormVisible = true;// 打开弹窗
-}
-// 停用
-const btn_stop = (row, $index) => {
-  console.log("停用");
-}
+const btn_fn_7 = (row, index) => {
+  console.log('编辑', row, index);
+};
+
 // 删除
-const btn_del = (row, $index) => {
-  console.log("删除", row.email);
-  ElMessageBox.confirm(
-    '确认删除吗?',
-    '警告',
-    {
-      confirmButtonText: '确定',
-      cancelButtonText: '取消',
-      type: 'warning',
-    }
-  )
-    .then(() => {
-      server_fund_del_user_info({ email: row.email }).then(res => {
-        console.log('res', res);
-        if (res.code === 200) {
-          ElMessage.success('删除成功');
-          getAllUser();
-        } else {
-          ElMessage.error('删除失败，请重试！');
-        }
-      })
-    })
-    .catch(() => { })
-}
-// 新增
-const addUser = () => {
-  console.log("新增");
-  info.update_flag = 'add';// 标识新增
-  info.dialogFormVisible = true;// 打开弹窗
-}
-// 清空表单
-const resetForm = () => {
-  diaForm.value.resetFields();
-}
-// 弹窗提交
-const onSubmit = () => {
-  diaForm.value.validate((valid) => {
-    if (valid) {
-      console.log('form', info.form);
-      info.form.update_time = CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss");
-
-      if (info.update_flag === 'add') {
-        server_fund_add_user_info({
-          form: info.form
-        }).then(res => {
-          console.log('新增', res);
-          if (res.code === 200) {
-            ElMessage.success('新增成功');
-            info.dialogFormVisible = false;
-            resetForm();
-            getAllUser();
-          } else {
-            ElMessage.error('新增失败！')
-          }
-        })
-      } else {
-        server_fund_update_user_info({
-          form: info.form
-        }).then(res => {
-          console.log('更新', res);
-          if (res.code === 200) {
-            ElMessage.success('更新成功');
-            info.dialogFormVisible = false;
-            resetForm();
-            getAllUser();
-          } else {
-            ElMessage.error('更新失败！')
-          }
-        })
-
-      }
-
-
-    } else {
-      console.log('error submit!!');
-      return false;
-    }
-  });
+const btn_fn_8 = (row, index) => {
+  console.log('删除', row, index);
 };
 </script>
 
 <template>
-  <div class="page-wrapper">
-    <div class="flex pb-5">
-      <el-button type="primary" size="small" @click="addUser()">新增用户</el-button>
+  <div class="page-wrapper h-full flex">
+    <div class="page_left flex flex-col">
+      <div class="left_top flex items-center justify-center">
+        <el-button type="primary" @click="btn_fn_1()">新增分类</el-button>
+        <el-button type="primary" @click="btn_fn_2()">保存数据</el-button>
+      </div>
+
+      <div class="left_content flex-1">
+        <div class="left_item flex" v-for="item in info.list" :key="item.type"
+          :class="{ 'active': item.type === info.active_type }" @click="changeType(item.type)">
+          <div class="type_text flex-1">{{ item.type }}</div>
+          <div class="type_edit" @click.stop="btn_fn_5(item.type)">
+            <span style="font-family: Arial; font-size: 16px;">&#x270E;</span> <!-- 显示为 ✎ -->
+          </div>
+          <div class="type_del" @click.stop="btn_fn_6(item.type)">
+            <span style="font-family: Arial; font-size: 16px;">&#x2716;</span> <!-- 显示为 ✖ -->
+          </div>
+        </div>
+      </div>
     </div>
 
-    <el-table :data="info.tableData" border :row-class-name="tableRowClassName" style="width: 100%" height="500">
-      <el-table-column fixed label="序" type="index" width="50" />
-      <el-table-column prop="email" label="邮箱" width="300" />
-      <el-table-column prop="name" label="名称" width="150" />
-      <el-table-column prop="password" label="密码" width="200" />
-      <el-table-column prop="desc" label="备注" width="200" />
-      <el-table-column label="Operations" min-width="120">
-        <template #default="{ row, $index }">
-          <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
-          <el-button link type="primary" size="small" @click="btn_stop(row, $index)">停用</el-button>
-          <el-button link type="primary" size="small" @click="btn_del(row, $index)">删除</el-button>
-        </template>
-      </el-table-column>
-    </el-table>
+    <div class="page_right flex-1 flex_col">
+      <div class="right_top items-center flex pl-10 pr-10 border-b">
+        <el-button type="primary" @click="btn_fn_3()" :disabled="!info.active_type">新增基金</el-button>
+        <el-button type="primary" @click="btn_fn_4()" :disabled="!info.active_type">批量导入</el-button>
+      </div>
 
-    <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500">
-      <el-form :model="info.form" :rules="rules" ref="diaForm">
-        <el-form-item label="邮箱" prop="email" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.email" autocomplete="off" />
-        </el-form-item>
+      <div class="right_content flex-1 pd-10">
+        <el-table :data="info.tableData" border style="width: 100%" :max-height="tableMaxHeight">
+          <el-table-column fixed label="序" type="index" width="50" align="center" />
 
-        <el-form-item label="名称" prop="name" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.name" autocomplete="off" />
-        </el-form-item>
+          <el-table-column fixed label="操作" width="100" align="center">
+            <template #default="{ row, $index }">
+              <el-button link type="primary" size="small" @click="btn_fn_7(row, $index)">编辑</el-button>
+              <el-button link type="primary" size="small" @click="btn_fn_8(row, $index)">删除</el-button>
+            </template>
+          </el-table-column>
 
-        <el-form-item label="密码" prop="password" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.password" autocomplete="off" />
-        </el-form-item>
+          <el-table-column fixed prop="fund_code" align="center" label="基金号" width="80">
+            <template v-slot="{ row }">
+              <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
+                style="text-decoration: none">
+                <span>{{ row.fund_code }}</span>
+              </a>
+            </template>
+          </el-table-column>
 
-        <el-form-item label="激活状态" :label-width="info.formLabelWidth">
-          <el-select v-model="info.form.active" placeholder="请选择状态">
-            <el-option label="在用" value="" />
-            <el-option label="停用" value="停用" />
-          </el-select>
-        </el-form-item>
-
-        <el-form-item label="备注" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.desc" autocomplete="off" />
-        </el-form-item>
-      </el-form>
-      <template #footer>
-        <div class="dialog-footer">
-          <el-button @click="info.dialogFormVisible = false">取消</el-button>
-          <el-button type="primary" @click="onSubmit">确定</el-button>
-        </div>
-      </template>
-    </el-dialog>
+          <el-table-column prop="fund_name" label="基金名称" width="380" />
+          <el-table-column prop="fund_type" label="基金类型" width="130" />
+          <el-table-column prop="fund_desc" label="备注" width="280" />
+        </el-table>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <style scoped lang="scss">
 .page-wrapper {
-  padding: 10px;
-}
-</style>
+  .page_left {
+    min-width: 200px;
+    max-width: 200px;
+    border-right: 1px solid #e8e8e8;
 
-<style>
-.el-table .warning-row {
-  --el-table-tr-bg-color: var(--el-color-warning-light-9);
+    .left_top {
+      height: 50px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .left_content {
+      height: calc(100% - 50px);
+      overflow: auto;
+      padding: 0px 5px;
+
+      .left_item {
+        margin: 4px 0;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        padding: 0px 10px;
+        border-radius: 4px;
+
+        .type_text {
+          &:hover {
+            color: #e722e3;
+          }
+        }
+
+        .type_edit,
+        .type_del {
+          width: 20px;
+          height: 100%;
+          cursor: pointer;
+          margin-right: 0px 5px;
+
+          &:hover {
+            color: #e722e3;
+          }
+        }
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+
+        &.active {
+          background-color: #e722e3 !important;
+
+          .type_text {
+            color: #fff !important;
+          }
+
+          .type_edit:hover,
+          .type_del:hover {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
 }
 
-.el-table .success-row {
-  --el-table-tr-bg-color: var(--el-color-success-light-9);
+.page_right {
+  .right_top {
+    height: 50px;
+    border-bottom: 1px solid #e8e8e8;
+  }
 }
 </style>
