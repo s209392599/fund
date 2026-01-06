@@ -1,29 +1,18 @@
 /*
 
-光伏：2026年01月06日15:29:40
-011103,012365,012723,012886,013817,014605
-[{"fund_code":"011103","fund_name":"天弘中证光伏C","fund_type":"指数型-股票"},{"fund_code":"012365","fund_name":"广发中证光伏产业指数C","fund_type":"指数型-股票"},{"fund_code":"012723","fund_name":"平安中证光伏产业指数C","fund_type":"指数型-股票"},{"fund_code":"012886","fund_name":"华夏中证光伏产业ETF发起式联接C","fund_type":"指数型-股票"},{"fund_code":"013817","fund_name":"汇添富中证光伏产业指数增强发起式C","fund_type":"指数增强-股票"},{"fund_code":"014605","fund_name":"嘉实中证光伏产业ETF发起联接C","fund_type":"指数型-股票"}]
-
-
-
-华夏智胜新锐股票C(018729)
-工银中证稀有金属主题ETF发起式联接C(019088)
-012322
-东财云计算增强C
-
-012276
-富国中证沪港深500ETF联接C
-
+018729--华夏智胜新锐股票C
+019088--工银中证稀有金属主题ETF发起式联接C
+012322--东财云计算增强C
+012276--富国中证沪港深500ETF联接C
 002834--华夏新锦绣混合C  每天限额一百
+018561--中信保诚多策略混合(LOF)C 
 
-018561
-中信保诚多策略混合(LOF)C
+019261--富国恒生红利ETF联接C
+004815--中欧红利优享混合C
+021458--易方达恒生红利低波ETF联接C
+023573--万家中证港股通央企红利ETF联接C
+005051--摩根标普港股通低波红利指数A
 
-富国恒生红利ETF联接C(019261)
-中欧红利优享混合C(004815)
-易方达恒生红利低波ETF联接C(021458)
-万家中证港股通央企红利ETF联接C(023573)
-摩根标普港股通低波红利指数A(005051)
 中证国企红利指数的股息率为6.38% 看看对应的基金
 华宝标普港股通低波红利ETF、长城中证红利低波100ETF两只红利低波ETF
 https://fund.eastmoney.com/513630.html?spm=search
@@ -69,14 +58,9 @@ https://quote.eastmoney.com/sh515120.html 创新药的ETF
 https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&type=&nid=1.515120
 https://so.eastmoney.com/web/s?keyword=515120
 
-
-
 */
 
 /*
-每天00点 执行copy公共数据到服务器的位置；另外需要一个接口进行数据同步
-周 月 季 6个月 交叉涨幅靠前的
-
 http://150.158.175.108:9005/index.html  后台管理界面
 http://150.158.175.108:9000 基金前台页面
 
@@ -88,49 +72,6 @@ https://github.com/kubero-dev/ladder  开源的网页抓取查看工具。用户
 
 https://lc.jr.jd.com/finance/funddetail/home/?fundCode=000844  不可买
 
-SELECT fund_code, fund_name, fund_type_name, no_keyword, is_fundgz, is_sale,is_allow,no_allow_reason,jd_totalAsset
-FROM fund
-WHERE (no_keyword = 'y' OR no_keyword IS NULL)
-  AND (is_fundgz = 'y' OR is_fundgz IS NULL)
-  AND (is_sale = 'y' OR is_sale IS NULL)
-  AND (is_allow = 'y' OR is_allow IS NULL)
-  AND (fund_type_name NOT LIKE '%债%' OR fund_type_name IS NULL)
-  AND (fund_type_name NOT LIKE '%固收%' OR fund_type_name IS NULL)
-  AND (fund_type_name NOT LIKE '%货币%' OR fund_type_name IS NULL)
-  AND RIGHT(fund_name, 1) != 'A'
-  AND (jd_totalAsset IS NULL OR CAST(jd_totalAsset AS DECIMAL(18, 2)) >= 100000000);
-
-
-
-
-SELECT *
-FROM fund
-WHERE is_fundgz = 'y'
-  AND is_fundgz IS NOT NULL
-  AND no_keyword = 'y'
-  AND no_keyword IS NOT NULL
-  AND is_sale = 'y'
-  AND is_sale IS NOT NULL
-  AND RIGHT(fund_name, 1) != 'A';
-
-SELECT *
-FROM fund
-WHERE is_fundgz = 'y'
-  AND no_keyword = 'y'
-  AND is_sale = 'y'
-  AND RIGHT(fund_name, 1) != 'A'
-  AND UPPER(fund_type_name) NOT LIKE '%债%';
-
-
-
-
-预览界面 添加过往基金、华夏5G、中航等
-
-
-搜索优化：
-搜索的时候假如 基金数据不是今天更新的再去更新
-或者 当天只更新 基金类型为某一类的再去更新
-或者 大家购买的基金数据再去更新
 
 https://fund.eastmoney.com/trade/xf.html 新发基金
 苏新上证科创综指增强C(023938)  类似的科创综指数找一找，抖音博主推荐收益类型的

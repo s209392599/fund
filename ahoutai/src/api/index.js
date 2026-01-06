@@ -77,3 +77,12 @@ export async function server_fund_apifolder_query_keywords(data) {
 export async function server_fund_send_mail_operate(data) {
   return request.post('/fund_send_mail_operate', data);
 }
+
+// fund_table_mix_query 获取基金数据
+export async function server_fund_table_mix_query(data) {
+  return request.post('/fund_table_mix_query', data);
+}
+// fund_table_mix_update 更新基金数据
+export async function server_fund_table_mix_update(data) {
+  return request.post('/fund_table_mix_update', data);
+} 

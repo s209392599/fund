@@ -318,10 +318,10 @@ const btn_copy_data = () => {
 
         <el-table-column label="操作" width="180" align="center">
           <template #default="{ row, $index }">
-            <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
-            <el-button link type="primary" size="small" @click="btn_del_fn(row, $index)">删除</el-button>
-            <el-button link type="primary" size="small" @click="btn_pre(row, $index)">前插</el-button>
-            <el-button link type="primary" size="small" @click="btn_ape(row, $index)">后插</el-button>
+            <el-button class="line_btn" link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
+            <el-button class="line_btn" link type="primary" size="small" @click="btn_del_fn(row, $index)">删除</el-button>
+            <el-button class="line_btn" link type="primary" size="small" @click="btn_pre(row, $index)">前插</el-button>
+            <el-button class="line_btn" link type="primary" size="small" @click="btn_ape(row, $index)">后插</el-button>
           </template>
         </el-table-column>
 
@@ -449,5 +449,10 @@ const btn_copy_data = () => {
   &.btn_5 {
     background-color: #29b6f6 !important; // 天蓝色
   }
+}
+
+:deep(.el-button.line_btn) {
+  padding: 0px 5px !important;
+  margin-left: 5px !important;
 }
 </style>

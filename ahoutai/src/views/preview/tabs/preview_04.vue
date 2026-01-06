@@ -1,197 +1,65 @@
 <script setup>
-console.log('ahoutai/src/views/preview/tabs/preview_04.vu');
-import { VueDraggable } from 'vue-draggable-plus';
+console.log('ahoutai/src/views/preview/tabs/preview_04.vue');
+import Sortable from 'sortablejs';
 
 const formRef = ref(null);
 const info = reactive({
   active_type: '科创50',// 当前选中的分类
   // 分类的所有数据
-  list: [
-    {
-      "type": "科创50",
-      "data": [
-        {
-          "fund_code": "011609",
-          "fund_name": "易方达上证科创50ETF联接C",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "011613",
-          "fund_name": "华夏科创50ETF联接C",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        }
-      ]
-    },
-    {
-      "type": "北证50",
-      "data": [
-        {
-          "fund_code": "017513",
-          "fund_name": "广发北证50成份",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "017516",
-          "fund_name": "易方达北证50成",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "018113",
-          "fund_name": "工银北证50成份",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        }
-      ]
-    },
-    {
-      "type": "红利",
-      "data": [
-        {
-          "fund_code": "023918",
-          "fund_name": "华夏国证自由现金流ETF联接C",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "019261",
-          "fund_name": "富国恒生红利ETF联接C",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "020867",
-          "fund_name": "华安恒生港股通中国央企红利ETF发起式联接C",
-          "fund_type": "指数型-股票",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "021143",
-          "fund_name": "华夏港股通央企红利ETF联接C",
-          "fund_type": "指数型-股票",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "021962",
-          "fund_name": "景顺长城中证国新港股通央企红利ETF联接C",
-          "fund_type": "指数型-股票",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        }
-      ]
-    },
-    {
-      "type": "量化",
-      "data": [
-        {
-          "fund_code": "016858",
-          "fund_name": "国金量化多因子股票C",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "021991",
-          "fund_name": "中加专精特新量化混合C",
-          "fund_type": "",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "011068",
-          "fund_name": "华宝资源优选混合C",
-          "fund_type": "混合型-偏股",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "002872",
-          "fund_name": "华夏智胜价值成长股票C",
-          "fund_type": "股票型",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "015881",
-          "fund_name": "中欧小盘成长混合C",
-          "fund_type": "混合型-偏股",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "002233",
-          "fund_name": "工银丰收回报灵活配置混合C",
-          "fund_type": "混合型-灵活",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "022270",
-          "fund_name": "中信保诚周期优选混合C",
-          "fund_type": "混合型-偏股",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        }
-      ]
-    },
-    {
-      "type": "工业母机",
-      "data": [
-        {
-          "fund_code": "017574",
-          "fund_name": "华夏中证机床ETF发起式联接C",
-          "fund_type": "指数型-股票",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "017472",
-          "fund_name": "国泰中证机床ETF发起联接C",
-          "fund_type": "",
-          "fund_desc": "指数型-股票",
-          "update_time": "2025-12-26 17:27:47"
-        }
-      ]
-    },
-    {
-      "type": "脑机-医药",
-      "data": [
-        {
-          "fund_code": "000591",
-          "fund_name": "中银健康生活混合",
-          "fund_type": "混合型-偏股",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        },
-        {
-          "fund_code": "001056",
-          "fund_name": "华银健康生活主题灵活配置",
-          "fund_type": "混合型-灵活",
-          "fund_desc": "",
-          "update_time": "2025-12-26 17:27:47"
-        }
-      ]
-    }
-  ],
+  list: [],
   tableData: [],
   dialogFormVisible: false,// 对话框是否显示
   update_flag: '',// 对话框的标题
   form: {},// 对话框的表单数据
   tableKey: new Date().getTime(),// 用于强制刷新表格
 })
-info.tableData = info.list[0].data;
+
+// 初始化拖拽功能
+const initDraggable = () => {
+  nextTick(() => {
+    const tableBody = document.querySelector('#sortable-table .el-table__body tbody');
+    if (tableBody) {
+      Sortable.create(tableBody, {
+        onEnd: (evt) => {
+          // 拖拽结束时更新数据顺序
+          const oldIndex = evt.oldIndex;
+          const newIndex = evt.newIndex;
+
+          if (oldIndex !== newIndex) {
+            // 重新排序数据
+            const movedItem = info.tableData.splice(oldIndex, 1)[0];
+            info.tableData.splice(newIndex, 0, movedItem);
+
+            // 更新分类中的数据
+            const find_index = info.list.findIndex(item => item.type === info.active_type);
+            if (find_index !== -1) {
+              info.list[find_index].data = [...info.tableData];
+            }
+
+            // 强制刷新表格
+            info.tableKey = new Date().getTime();
+          }
+        },
+        handle: '.drag-handle', // 只有拖拽手柄可以触发拖拽
+        animation: 150,
+        ghostClass: 'sortable-ghost',
+        chosenClass: 'sortable-chosen',
+      });
+    }
+  });
+};
+
+// 监听数据变化，重新初始化拖拽
+watch(() => info.tableData, () => {
+  nextTick(() => {
+    initDraggable();
+  });
+}, { deep: true });
+
+// 在组件挂载后初始化拖拽功能
+onMounted(() => {
+  initDraggable();
+});
 
 const tableMaxHeight = computed(() => {
   return `calc(100vh - 60px)`;
@@ -227,7 +95,17 @@ const btn_fn_01 = () => {
 
 // 保存数据
 const btn_fn_02 = () => {
-  console.log('保存数据', info.list);
+  server_fund_table_mix_update({
+    type_1: 'qun_zhu_fen_lei_tui_jian',
+    updateFields: {
+      mix_data: JSON.stringify(info.list)
+    }
+  }
+  ).then((res) => {
+    if (res.code === 200) {
+      ElMessage.success('保存成功');
+    }
+  });
 };
 
 // 新增基金
@@ -241,12 +119,45 @@ const btn_fn_03 = () => {
   }
   info.dialogFormVisible = true;
 };
+// 一个字符串必须是6位，且都是数字0-9
+function isSixDigitNumber(str) {
+  return /^[0-9]{6}$/.test(str);
+}
 // 批量导入
 const btn_fn_04 = () => {
-  const file = document.createElement('input');
-  file.type = 'file';
-  file.accept = '.xlsx, .xls';
-  file.click();
+  var str = prompt(`示例：[{"fund_code": "", "fund_name": "", "fund_type": ""}]`, "");
+  if (str !== null) {
+    str = str.trim();
+    console.log('str', str);
+    var arr = [];
+    try {
+      arr = JSON.parse(str);
+    } catch (e) {
+      ElMessage.error('无法解析');
+      return false;
+    }
+    if (Array.isArray(arr)) {
+    } else {
+      ElMessage.error('不是数组字符串');
+      return false;
+    }
+    arr.forEach(item => {
+      if (item.fund_code && isSixDigitNumber(item.fund_code)) {
+        let flag = info.tableData.some((v) => v.fund_code === item.fund_code);
+        console.log('基金代码', item.fund_code, '是否存在', flag, info.tableData.map(v => v.fund_code));
+        if (!flag) {
+          info.tableData.push({
+            fund_code: item.fund_code || '',
+            fund_name: item.fund_name || '',
+            fund_type: item.fund_type || '',
+            fund_desc: item.fund_desc || '',
+            update_time: CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"),
+          });
+        }
+      }
+    });
+    ElMessage.success('添加完毕');
+  }
 };
 // 切换分类
 const changeType = (type) => {
@@ -326,7 +237,7 @@ const btn_fn_08 = (row, index) => {
 };
 
 // 编辑基金的弹窗保存
-const btn_fn_09 = () => {
+const btn_fn_09 = async () => {
   formRef.value.validate((valid) => {
     if (valid) {
       let fundData = {
@@ -390,13 +301,11 @@ const btn_fn_09 = () => {
         _originalFundCode: null
       };
 
-      // 等待下一个 tick 确保数据更新
-      await nextTick();
+      nextTick(() => {
+        info.tableKey = new Date().getTime();// 强制重新渲染表格
+        ElMessage.success(isEditMode ? '编辑成功' : '新增成功');
+      });
 
-      // 强制重新渲染表格
-      info.tableKey = Date.now().getTime();
-
-      ElMessage.success(isEditMode ? '编辑成功' : '新增成功');
     } else {
       console.log('表单验证失败');
       return false;
@@ -404,14 +313,27 @@ const btn_fn_09 = () => {
   });
 };
 
-const onDragEnd = (evt) => {
-  console.log(info.tableData.map(item => item.fund_code));
-  const find_index = info.list.findIndex(item => item.type === info.active_type);
-  if (find_index === -1) return;
-
-  // 直接更新分类的数据
-  info.list[find_index].data = [...info.tableData];
+// server_fund_table_mix_query
+const server_fund_table_mix_query = async (data) => {
+  return request.post('/fund_table_mix_query', data);
 };
+
+const getList = async () => {
+  server_fund_table_mix_query({ type_1: 'qun_zhu_fen_lei_tui_jian' }).then((res) => {
+    if (res.code === 200) {
+      let data = res.data || [];
+      const mix_data = data[0]?.mix_data || '[]';
+      info.list = JSON.parse(mix_data);
+      console.log('JSON.parse(mix_data)', JSON.parse(mix_data));
+      info.tableData = info.list[0]?.data || [];
+    }
+  });
+};
+
+
+onMounted(() => {
+  getList();// 获取列表数据
+});
 </script>
 
 <template>
@@ -443,44 +365,42 @@ const onDragEnd = (evt) => {
       </div>
 
       <div class="right_content flex-1 pd-10">
-        <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
-          class="el-table" handle=".drag-handle" filter=".no-drag">
-          <el-table :data="info.tableData" :key="info.tableKey" border style="width: 100%" :max-height="tableMaxHeight">
-            <el-table-column fixed label="序" type="index" width="50" align="center" />
+        <el-table :data="info.tableData" :key="info.tableKey" border style="width: 100%" :max-height="tableMaxHeight"
+          id="sortable-table">
+          <el-table-column fixed label="序" type="index" width="50" align="center" />
 
-            <el-table-column fixed label="拽" type="" width="40" align="center">
-              <template #default="{ $index }">
-                <div class="drag-handle"
-                  style="cursor: grab; color: #909399; display: flex; align-items: center;justify-content:center;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z" />
-                  </svg>
-                </div>
-              </template>
-            </el-table-column>
+          <el-table-column fixed label="拽" type="" width="40" align="center">
+            <template #default="{ $index }">
+              <div class="drag-handle"
+                style="cursor: grab; color: #909399; display: flex; align-items: center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z" />
+                </svg>
+              </div>
+            </template>
+          </el-table-column>
 
-            <el-table-column fixed label="操作" width="100" align="center">
-              <template #default="{ row, $index }">
-                <el-button link type="primary" size="small" @click="btn_fn_07(row, $index)">编辑</el-button>
-                <el-button link type="primary" size="small" @click="btn_fn_08(row, $index)">删除</el-button>
-              </template>
-            </el-table-column>
+          <el-table-column fixed label="操作" width="100" align="center">
+            <template #default="{ row, $index }">
+              <el-button link type="primary" size="small" @click="btn_fn_07(row, $index)">编辑</el-button>
+              <el-button link type="primary" size="small" @click="btn_fn_08(row, $index)">删除</el-button>
+            </template>
+          </el-table-column>
 
-            <el-table-column fixed prop="fund_code" align="center" label="基金号" width="80">
-              <template v-slot="{ row }">
-                <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
-                  style="text-decoration: none">
-                  <span>{{ row.fund_code }}</span>
-                </a>
-              </template>
-            </el-table-column>
+          <el-table-column fixed prop="fund_code" align="center" label="基金号" width="80">
+            <template v-slot="{ row }">
+              <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
+                style="text-decoration: none">
+                <span>{{ row.fund_code }}</span>
+              </a>
+            </template>
+          </el-table-column>
 
-            <el-table-column prop="fund_name" label="基金名称" width="380" />
-            <el-table-column prop="fund_type" label="基金类型" width="130" />
-            <el-table-column prop="fund_desc" label="备注" width="280" />
-            <el-table-column prop="update_time" label="更新时间" width="160" />
-          </el-table>
-        </VueDraggable>
+          <el-table-column prop="fund_name" label="基金名称" width="380" />
+          <el-table-column prop="fund_type" label="基金类型" width="130" />
+          <el-table-column prop="fund_desc" label="备注" width="280" />
+          <el-table-column prop="update_time" label="更新时间" width="160" />
+        </el-table>
       </div>
     </div>
   </div>

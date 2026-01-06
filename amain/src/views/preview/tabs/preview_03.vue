@@ -7,7 +7,6 @@ const tableMaxHeight = computed(() => {
 
 const info = reactive({
   active_id: 1,
-  active_update_time: '-',// 分组的更新时间
   list: [
     // {
     //   id: 1,
@@ -41,8 +40,7 @@ const info = reactive({
 })
 
 const slectItem = (item) => {
-  info.active_id = item.id;
-  info.active_update_time = item.update_time;
+  info.active_id = item.type;
   info.tableData = JSON.parse(JSON.stringify(item.data)); // 深拷贝避免引用问题
   info.tableMiddle = JSON.parse(JSON.stringify(item.data)); // 深拷贝避免引用问题
 }
@@ -148,15 +146,14 @@ onMounted(() => {
 <template>
   <div class="page_wrapper flex flex-row ">
     <div class="page_left h-full">
-      <div class="type_list" v-for="item in info.list" :key="item.id"
-        :class="item.id === info.active_id ? 'active' : ''" @click="slectItem(item)">
+      <div class="type_list" v-for="item in info.list" :key="item.type"
+        :class="item.type === info.active_id ? 'active' : ''" @click="slectItem(item)">
         <div class="type_name">{{ item.type }}</div>
       </div>
     </div>
     <div class="page_right flex-1">
       <div class="top_box flex items-center">
         <div class="btn_copy" @click="copyText">复制数据</div>
-        <div class="ml-10">更新时间：{{ info.active_update_time }}</div>
       </div>
       <el-table :data="info.tableData" style="width: 100%" border stripe :max-height="tableMaxHeight">
         <el-table-column fixed type="index" align="center" label="序" width="36"></el-table-column>
