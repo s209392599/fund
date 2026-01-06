@@ -1,3 +1,0 @@
-
-
-[{"id":1,"type":"红利","desc":"","update_time":"2025年12月26日16:59:14","data":[{"fund_code":"023918","fund_name":"华夏国证自由现金流ETF联接C","fund_type":"","update_time":"2025-12-26 17:27:47"},{"fund_code":"020867","fund_name":"华安恒生红利","fund_type":"","update_time":"2025-12-26 17:27:47"},{"fund_code":"019261","fund_name":"富国恒生红利ETF联接C","fund_type":"","update_time":"2025-12-26 17:27:47"}]},{"id":2,"type":"量化","desc":"","update_time":"2025年12月26日16:59:14","data":[{"fund_code":"016858","fund_name":"国金量化多因子股票C","fund_type":"","update_time":"2025-12-26 17:27:47"},{"fund_code":"021991","fund_name":"中加专精特新量化混合C","fund_type":"","update_time":"2025-12-26 17:27:47"}]}]
