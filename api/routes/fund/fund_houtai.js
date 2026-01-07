@@ -177,45 +177,7 @@ router.post('/fund_manage_fund_delete', (req, res) => {
   }
 });
 
-// 排序-公共的基金数据
-router.post('/fund_manage_fund_sort', async (req, res) => {
-  const { fund_code, index_new, index_old } = req.body;
 
-  // 确保 index_new 和 index_old 是数字
-  const newIndex = parseInt(index_new, 10);
-  const oldIndex = parseInt(index_old, 10);
-
-  // 构造 SQL 查询
-  const queries = [
-    `UPDATE fund_public SET sort_order = 0 WHERE fund_code = '${fund_code}';`,
-    newIndex > oldIndex
-      ? `UPDATE fund_public SET sort_order = sort_order - 1 WHERE sort_order <= ${newIndex} AND sort_order > ${oldIndex} AND fund_code != '${fund_code}';`
-      : `UPDATE fund_public SET sort_order = sort_order + 1 WHERE sort_order >= ${newIndex} AND sort_order < ${oldIndex} AND fund_code != '${fund_code}';`,
-    `UPDATE fund_public SET sort_order = ${newIndex} WHERE fund_code = '${fund_code}';`,
-  ];
-
-  try {
-    // 执行 SQL 查询
-    for (const query of queries) {
-      await DatabasePostQuery({
-        query,
-        next: true, // 如果 DatabasePostQuery 支持 next 参数
-      });
-    }
-
-    // 返回成功响应
-    res.send({
-      code: 200,
-      msg: '排序更新成功',
-    });
-  } catch (err) {
-    console.error('排序更新失败:', err);
-    res.send({
-      code: 500,
-      msg: '排序更新失败',
-    });
-  }
-});
 
 // -------------------------------------------------------------------------  下面的待改造
 
@@ -315,14 +277,14 @@ router.post('/fund_table_mix_update', async (req, res) => {
   // 构建SET子句和值数组
   const fields = Object.keys(updateFields);
   const values = Object.values(updateFields);
-  
+
   // 创建SET子句 (例如: field1=?, field2=?)
   const setClause = fields.map(field => `${field} = ?`).join(', ');
   const query = `UPDATE fund_mix SET ${setClause} WHERE type_1 = ?`;
-  
+
   // 添加type_1到值数组的末尾
   const queryValues = [...values, type_1];
-  
+
   DatabasePostQuery({
     res: res,
     query: query,

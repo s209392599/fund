@@ -61,10 +61,7 @@ export async function server_fund_manage_fund_delete(data) {
 export async function server_fund_search_bytiantian(data) {
   return request.post('/fund_search_bytiantian', data);
 }
-// 排序-公共的基金数据
-export async function server_fund_manage_fund_sort(data) {
-  return request.post('/fund_manage_fund_sort', data);
-}
+
 // fund_amain_getfundgz-获取实时涨幅
 export async function server_fund_amain_getfundgz(data) {
   return request.post('/fund_amain_getfundgz', data);

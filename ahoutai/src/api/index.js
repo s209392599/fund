@@ -58,8 +58,8 @@ export async function server_fund_search_bytiantian(data) {
   return request.post('/fund_search_bytiantian', data);
 }
 // 排序-公共的基金数据
-export async function server_fund_manage_fund_sort(data) {
-  return request.post('/fund_manage_fund_sort', data);
+export async function server_fund_public_fund_sort(data) {
+  return request.post('/fund_public_fund_sort', data);
 }
 
 // --------------------------------------------------------------  下面是数据库操作
@@ -85,4 +85,4 @@ export async function server_fund_table_mix_query(data) {
 // fund_table_mix_update 更新基金数据
 export async function server_fund_table_mix_update(data) {
   return request.post('/fund_table_mix_update', data);
-} 
+}

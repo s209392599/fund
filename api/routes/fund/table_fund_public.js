@@ -9,35 +9,23 @@ const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // post请求数据库查询封装
 
-// 查询用户的基金
-router.post('/fund_table_query_by_user', async (req, res) => {
-  let { fund_user_id } = req.body;
-  if (!CustomFn.isValidFundUserId(fund_user_id)) {
-    return res.send({
+
+// 排序-公共的基金数据
+router.post('/fund_public_fund_sort', async (req, res) => {
+  const { fund_code = [], email = null } = req.body;
+
+  if(email !== '209392599@qq.com') {
+    res.send({
       code: 400,
-      msg: '用户id格式错误',
+      msg: '权限不足',
       data: [],
     });
   }
-  fund_user_id = parseFloat(fund_user_id);
-  DatabasePostQuery({
-    res: res,
-    query: `SELECT * FROM fund_user_collection WHERE fund_user_id = ${fund_user_id} ORDER BY sort_order ASC`,
-    format: (results) => results,
-    // format: (results) => ({
-    //   data: results,
-    // }),
-  });
-});
 
-
-// 排序-公共的基金数据
-router.post('/fund_msssssssssssssssssssss', async (req, res) => {
-  const { fund_code = [], fund_user_id = null } = req.body;
-  if (!fund_user_id || fund_code.length === 0) {
+  if (fund_code.length === 0) {
     res.send({
       code: 400,
-      msg: '参数不完整',
+      msg: '基金代码不能为空',
       data: [],
     });
   }
@@ -51,13 +39,12 @@ router.post('/fund_msssssssssssssssssssss', async (req, res) => {
 
   // 使用CASE语句批量更新排序值
   query_str = `
-    UPDATE fund_manage
+    UPDATE fund_public
     SET sort_order = CASE fund_code
       ${fund_code.map((code, index) => `WHEN ? THEN ?`).join(' ')}
       ELSE sort_order
     END
-    WHERE fund_user_id = ?
-    AND fund_code IN (${fund_code.map(() => '?').join(',')})
+    WHERE fund_code IN (${fund_code.map(() => '?').join(',')})
   `;
 
   // 构建参数值数组
@@ -65,7 +52,6 @@ router.post('/fund_msssssssssssssssssssss', async (req, res) => {
   fund_code.forEach((code, index) => {
     values.push(code, index_arr[index]); // code作为WHEN条件，index作为THEN值
   });
-  values.push(fund_user_id); // WHERE条件的fund_user_id
   fund_code.forEach(code => {
     values.push(code); // WHERE条件的IN子句
   });

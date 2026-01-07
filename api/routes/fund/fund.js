@@ -18,10 +18,10 @@ router.post('/fund_amain_login', async (req, res) => {
       data: [],
     });
   }
-  
+
   let query = `SELECT * FROM fund_users WHERE user_email = '${user_email}'`;
   query += ` AND user_password = '${user_password}'`;
-  query += ` AND user_token = '${user_token}' OR user_token IS NULL OR user_token = ''`;
+  query += ` AND (user_token = '${user_token}' OR user_token IS NULL OR user_token = '')`;
 
   const userData = await DatabasePostQuery({
     res: res,

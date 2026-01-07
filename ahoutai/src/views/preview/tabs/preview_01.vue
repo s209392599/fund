@@ -5,6 +5,9 @@ import { VueDraggable } from 'vue-draggable-plus';
 // 判断是否为手机端
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 const width_name = isMobile ? '146' : '240';
+const tableMaxHeight = computed(() => {
+  return `calc(100vh - 90px)`;
+});
 
 const diaForm = ref(null);
 const info = reactive({
@@ -89,7 +92,7 @@ const btn_cha = (row, $index) => {
     index = Math.min(index, info.tableData.length) - 1;
     if (index > -1 && index !== $index) {
       console.log('index', index, $index);
-      server_fund_manage_fund_sort({
+      server_fund_public_fund_sort({
         fund_code: row.fund_code,
         index_new: index + 1,
         index_old: $index
@@ -170,13 +173,14 @@ const onSubmit = () => {
   });
 };
 const updateOrder = () => {
-  info.tableData = info.tableData.map((item, index) => {
-    item.sort_order = index + 1;
-  })
-  server_fund_manage_fund_sort({
-    fund_code: info.form.fund_code,
-    index_new: info.form.index_new,
-    index_old: info.form.index_old
+  const email = localStorage.getItem('email') || null;
+  if (!email) {
+    ElMessage.error('请先登录！');
+    return;
+  }
+  server_fund_public_fund_sort({
+    email: email,
+    fund_code: info.tableData.map(item => item.fund_code)
   }).then(res => {
     console.log('res', res);
     if (res.code === 200) {
@@ -189,7 +193,24 @@ const updateOrder = () => {
 }
 const onDragEnd = (evt) => {
   console.log('拖拽完成:', info.tableData.map(item => item.fund_code));
+  console.log('info.tableData', info.tableData);
 };
+// 复制基金号
+const btn_fn_03 = () => {
+  const str = info.tableData.map(v => v.fund_code).join(',');
+  fallbackCopyText(str);
+}
+// 复制基金数组
+const btn_fn_04 = () => {
+  const str = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type
+    }
+  });
+  fallbackCopyText(JSON.stringify(str));
+}
 </script>
 
 <template>
@@ -197,12 +218,14 @@ const onDragEnd = (evt) => {
     <div class="flex pb-5">
       <el-button type="primary" size="small" @click="addUser()">新增基金</el-button>
       <el-button type="primary" size="small" @click="updateOrder()">更新服务器排序</el-button>
+      <el-button type="primary" size="small" @click="btn_fn_03()">复制基金号</el-button>
+      <el-button type="primary" size="small" @click="btn_fn_04()">复制基金数组</el-button>
     </div>
 
     <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
       class="el-table" handle=".drag-handle" filter=".no-drag">
 
-      <el-table :data="info.tableData" border style="width: 100%" height="800">
+      <el-table :data="info.tableData" border style="width: 100%" :max-height="tableMaxHeight">
         <el-table-column fixed label="拽" type="index" width="40" align="center">
           <template #default="{ $index }">
             <div class="drag-handle"

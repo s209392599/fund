@@ -48,6 +48,14 @@ const info = reactive({
       id: '10',
       name: '纯涨幅',
     },
+    {
+      id: '11',
+      name: '收益走势',
+    },
+    {
+      id: '12',
+      name: '排名走势',
+    }
   ],
 });
 
@@ -106,6 +114,16 @@ const handleClick = (tab) => {
       <!-- 纯涨幅 -->
       <div class="" v-if="info.active_tab === '10'">
         <duibi_10></duibi_10>
+      </div>
+
+      <!-- 收益走势 -->
+      <div class="" v-if="info.active_tab === '11'">
+        <duibi_11></duibi_11>
+      </div>
+
+      <!-- 排名走势 -->
+      <div class="" v-if="info.active_tab === '12'">
+        <duibi_12></duibi_12>
       </div>
     </div>
   </div>

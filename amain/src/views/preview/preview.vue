@@ -33,15 +33,6 @@ const info = reactive({
       ),
       desc: '',
     },
-    // {
-    //   id: 2,
-    //   show: true,
-    //   name: '额外基金监控',
-    //   component: markRaw(
-    //     defineAsyncComponent(() => import('./tabs/preview_02.vue'))
-    //   ),
-    //   desc: '',
-    // },
     {
       id: 10,
       show: true,
@@ -57,6 +48,24 @@ const info = reactive({
       name: '历史净值',
       component: markRaw(
         defineAsyncComponent(() => import('./tabs/preview_05.vue'))
+      ),
+      desc: '',
+    },
+    {
+      id: 9,
+      show: true,
+      name: '收益走势',
+      component: markRaw(
+        defineAsyncComponent(() => import('./tabs/preview_09.vue'))
+      ),
+      desc: '',
+    },
+    {
+      id: 15,
+      show: true,
+      name: '排名走势',
+      component: markRaw(
+        defineAsyncComponent(() => import('./tabs/preview_15.vue'))
       ),
       desc: '',
     },
