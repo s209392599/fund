@@ -10,39 +10,30 @@ const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // po
 
 // 登录
 router.post('/fund_amain_login', async (req, res) => {
-  const { user_name = '', password = '' } = req.body;
-  if (!user_name || !password || password.length < 4) {
+  const { user_email = '', user_password = '',user_token='' } = req.body;
+  if (!user_email || !user_password || user_password.length < 4) {
     return res.send({
       code: 400,
-      msg: '参数错误',
+      msg: '请检查输入',
       data: [],
     });
   }
+  
+  let query = `SELECT * FROM fund_users WHERE user_email = '${user_email}'`;
+  query += ` AND user_password = '${user_password}'`;
+  query += ` AND user_token = '${user_token}' OR user_token IS NULL OR user_token = ''`;
+
   const userData = await DatabasePostQuery({
     res: res,
-    query: `SELECT * FROM fund_users WHERE user_name = '${user_name}' AND user_password = '${password}';`,
+    query: query,
     format: (results) => ({
       id: results[0]?.id,
       user_email: results[0]?.user_email,
-      user_name: results[0]?.user_name,
+      user_password: results[0]?.user_password,
     }),
     next: true,
   });
-  /*
-  {
-  "id": 57,
-  "user_email": "203812677@qq.com",
-  "user_name": "boxue",
-  "zh_name": "自己的测试号",
-  "user_password": "qaz123..",
-  "fund_count": 30,
-  "remark": null,
-  "expiration_time": "2098-12-31T16:00:00.000Z",
-  "create_time": "2025-10-14T06:26:09.000Z",
-  "update_time": "2025-10-14T06:26:16.000Z",
-  "user_token": null
-}
-  */
+
   if (userData && userData.length && userData[0].id) {
     return res.send({
       code: 200,
@@ -50,7 +41,6 @@ router.post('/fund_amain_login', async (req, res) => {
       data: {
         id: userData[0].id,
         user_email: userData[0].user_email,
-        user_name: userData[0].user_name,
         user_password: userData[0].user_password,
       },
     });

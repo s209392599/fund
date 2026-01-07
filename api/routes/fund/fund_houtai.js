@@ -235,11 +235,49 @@ router.post('/fund_get_all_user_info', async (req, res) => {
   });
 });
 
+
+/**
+ {
+  "email": "378604984@qq.com",
+  "name": "吴伟结",
+  "update_time": "2026-01-07 07:00:41",
+  "password": "111666",
+  "fund": [],
+  "user_status": "",
+  "remark": "周公子的律师朋友"
+}
+ */
 // 新增用户
 router.post('/fund_add_user_info', (req, res) => {
-  const { form = {} } = req.body;
-  let USER_JSON = {};
+  let { form = {} } = req.body;
+  if(!form.email){
+    res.send({
+      code: 400,
+      msg: '请传入邮箱',
+      data: [],
+    });
+    return;
+  }
+  if(!form.name){
+    res.send({
+      code: 400,
+      msg: '请传入用户名',
+      data: [],
+    });
+    return;
+  }
+  if(!form.password){
+    res.send({
+      code: 400,
+      msg: '请传入密码',
+      data: [],
+    });
+    return;
+  }
+  form.fund_count = form.fund_count || 30;
 
+
+  let USER_JSON = {};
   const userData = USER_JSON.data || [];
   const user = userData.find((item) => item.email === form.email);
   if (!user) {
@@ -267,6 +305,34 @@ router.post('/fund_add_user_info', (req, res) => {
     });
   }
 });
+
+
+
+
+router.post('/fund_table_mix_update', async (req, res) => {
+  const { type_1 = '', updateFields = {} } = req.body;
+
+  // 构建SET子句和值数组
+  const fields = Object.keys(updateFields);
+  const values = Object.values(updateFields);
+  
+  // 创建SET子句 (例如: field1=?, field2=?)
+  const setClause = fields.map(field => `${field} = ?`).join(', ');
+  const query = `UPDATE fund_mix SET ${setClause} WHERE type_1 = ?`;
+  
+  // 添加type_1到值数组的末尾
+  const queryValues = [...values, type_1];
+  
+  DatabasePostQuery({
+    res: res,
+    query: query,
+    values: queryValues,
+    format: (results) => results,
+  });
+});
+
+
+
 
 // 修改某个用户信息
 router.post('/fund_update_user_info', (req, res) => {

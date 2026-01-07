@@ -8,14 +8,35 @@ const info = reactive({
   update_flag: 'add',// 修改还是编辑
   dialogFormVisible: false,
   search_name: '',
+
+
+
+  /*
+user_email	varchar(64)
+user_name	varchar(64)
+zh_name	varchar(255)
+user_password	varchar(64)
+fund_count	int(3)
+remark	varchar(100)
+expiration_time	datetime
+create_time	datetime
+update_time	datetime
+user_token	varchar(32)
+user_status	varchar(10)
+  */
   form: {
-    "email": "test@qq.com",
-    "name": "1231",
-    "update_time": "",
-    "password": "1231312",
-    "fund": [],
-    "active": '',
-    "desc": 'ceshi',
+    "user_email": "",
+    "user_name": "",
+    "zh_name": "",
+    "user_password": "",
+    "fund_count": 30,
+    "remark": "",
+    "expiration_time": "",// 过期时间
+    "create_time": "",// 创建时间
+    "update_time": "",// 更新时间
+    "user_token": "",// 专属令牌(二级密码)
+    "user_status": "",// 用户状态(1:停用，其他为可用)
+
   }
 })
 const rules = {
@@ -172,7 +193,7 @@ const onSubmit = () => {
   "zh_name": "郭坤",
   "user_password": "1234",
   "fund_count": 100,
-  "desc": null,
+  "remark": null,
   "expiration_time": "2098-12-31T16:00:00.000Z",
   "create_time": "2025-09-23T04:24:38.000Z",
   "update_time": "2025-09-23T05:01:25.000Z",
@@ -199,11 +220,11 @@ const onSubmit = () => {
     <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500">
       <el-form :model="info.form" :rules="rules" ref="diaForm">
         <el-form-item label="邮箱" prop="email" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.email" autocomplete="off" />
+          <el-input v-model="info.form.user_email" autocomplete="off" />
         </el-form-item>
 
         <el-form-item label="名称" prop="name" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.name" autocomplete="off" />
+          <el-input v-model="info.form.user_name" autocomplete="off" />
         </el-form-item>
 
         <el-form-item label="密码" prop="password" :label-width="info.formLabelWidth">
@@ -211,14 +232,14 @@ const onSubmit = () => {
         </el-form-item>
 
         <el-form-item label="激活状态" :label-width="info.formLabelWidth">
-          <el-select v-model="info.form.active" placeholder="请选择状态">
+          <el-select v-model="info.form.user_status" placeholder="请选择状态">
             <el-option label="在用" value="" />
-            <el-option label="停用" value="停用" />
+            <el-option label="停用" value="1" />
           </el-select>
         </el-form-item>
 
         <el-form-item label="备注" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.desc" autocomplete="off" />
+          <el-input v-model="info.form.remark" autocomplete="off" />
         </el-form-item>
       </el-form>
       <template #footer>
