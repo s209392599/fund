@@ -1,28 +1,48 @@
 /*
 
-018729--华夏智胜新锐股票C
-019088--工银中证稀有金属主题ETF发起式联接C
-012322--东财云计算增强C
-012276--富国中证沪港深500ETF联接C
-002834--华夏新锦绣混合C  每天限额一百
-018561--中信保诚多策略混合(LOF)C
+CPO：
+022365-永赢科技智选混合发起C
 
-019261--富国恒生红利ETF联接C
+军工：
+013613--宝盈国家安全沪港深股票C
+
+红利低波：
+008115-天弘中证
+021551-博时中证
+007467-华泰柏瑞中证红利低波C
+008164-南方红利低波
+019261-富国恒生红利ETF联接C
+019260-富国恒生红利ETF联接A
+020989-南方恒生科技指数发起C
+023918-华夏国证自由现金流ETF发起式联接C
+023521-博时上证科创板人工智能ETF发起式联接C
+020973-易方达机器人ETF联接C
 004815--中欧红利优享混合C
 021458--易方达恒生红利低波ETF联接C
 023573--万家中证港股通央企红利ETF联接C
 005051--摩根标普港股通低波红利指数A
 
-中证国企红利指数的股息率为6.38% 看看对应的基金
-华宝标普港股通低波红利ETF、长城中证红利低波100ETF两只红利低波ETF
-https://fund.eastmoney.com/513630.html?spm=search
-https://danjuanfunds.com/funding/019261  看看有没有可以摘录的
-比如跟踪中证红利低波动指数的红利低波动ETF（563020），跟踪恒生港股通高股息低波动指数的恒生红利低波ETF（159545），都是高股息+低波动，双重因子筛选出来的指数，前者是A股指数，后者是港股指数。
-这时候，假如你同时持有红利价值ETF（563700）、恒生红利低波ETF（159545）和红利低波动ETF（563020），就有机会每个月都获得分红。因为从下图所示的分红评价安排来看，这三只ETF分红评价节奏刚好错开。
-ROE？ 基金怎么看这个，有对应的基金吗
+煤炭：
+013596-招商中证煤炭等权指数C
+013275-富国中证煤炭指数C
+016814-国联中证煤炭指数C
 
-国联中证煤炭指数C(016814)
 
+量化：
+020726-建信灵活配置混合C
+016858-国金量化多因子股票C
+018729-华夏智胜新锐股票C
+023350-诺安多策略混合C
+002834-华夏新锦绣混合C  每天限额一百
+018561-中信保诚多策略混合(LOF)C
+
+宽基：
+012276--富国中证沪港深500ETF联接C
+
+019088--工银中证稀有金属主题ETF发起式联接C
+
+软件：
+012322--东财云计算增强C
 */
 
 /*
@@ -40,104 +60,19 @@ https://quote.eastmoney.com/sh515120.html 创新药的ETF
 https://webquotepic.eastmoney.com/GetPic.aspx?imageType=r&type=&nid=1.515120
 https://so.eastmoney.com/web/s?keyword=515120
 
-*/
 
-/*
-http://150.158.175.108:9005/index.html  后台管理界面
-http://150.158.175.108:9000 基金前台页面
-
-https://github.com/kubero-dev/ladder  开源的网页抓取查看工具。用户输入网址，它会自动将网页抓取展示出来。
-
-如果长时间不操作出现屏保 或者 出现登录界面保护隐私，可好？
-
-加入操作历史的查询；只保留最近的50条；
-
-https://lc.jr.jd.com/finance/funddetail/home/?fundCode=000844  不可买
-
-
-https://fund.eastmoney.com/trade/xf.html 新发基金
 苏新上证科创综指增强C(023938)  类似的科创综指数找一找，抖音博主推荐收益类型的
 
 夏普比率 这个要不要收集数据？
 创金合信新材料新能源股票C(011143)
 
-[近一周，近一月，近3月]的收益    基金规模，手续费，持有人结构，成立时长，前十持仓占比，过去一年分红，修复天数
-最大回撤、基金经理、换手率 万万
-
-
-管理后台的直接换个项目来做，单独去部署，包括公共基金维护
-接口的数据统计，哪个邮箱 什么ip，访问的什么接口，什么请求参数
-
 下面的特色榜单之类的，要不要每天做个邮件通知？ 还是群通知？
 https://channel.jr.jd.com/data-ranking/home/?jrcontainer=h5&jrlogin=false&channel=bd_rank_rebound_leader
-*/
+https://roma.jd.com/fund/product/filter?jrcontainer=h5&rankingType=2
 
+017836-信澳匠心回报混合C
+021605-富国消费精选30股票C
 
-/* 独立涨幅表（推荐）
--- 主表（基金基本信息）
-CREATE TABLE fund_basic (
-    fund_id          VARCHAR(20) PRIMARY KEY,  -- 基金代码
-    fund_name        VARCHAR(100),
-    create_date      DATE,
-    other_static_info TEXT
-);
-
--- 涨幅表（动态指标）
-CREATE TABLE fund_growth (
-    id          BIGINT AUTO_INCREMENT PRIMARY KEY,
-    fund_id     VARCHAR(20) NOT NULL,          -- 关联基金
-    period_type ENUM('1周','1月','3月','6月','1年','3年','5年','今年','成立') NOT NULL,
-    avg_value   DECIMAL(10,2),                 -- 同类平均涨幅
-    rate        DECIMAL(10,2),                 -- 本基金涨幅
-    rank        VARCHAR(20),                   -- 排名（如"230/2152"）
-    level       TINYINT,                       -- 等级（1=优秀,2=良好...）
-    update_time DATETIME DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE KEY uk_fund_period (fund_id, period_type),  -- 防止重复插入
-    FOREIGN KEY (fund_id) REFERENCES fund_basic(fund_id)
-);
-
--- 查询某基金近1年表现
-SELECT * FROM fund_growth
-WHERE fund_id = '018561' AND period_type = '1年';
-
--- 统计所有基金"近1月"平均涨幅
-SELECT AVG(rate) FROM fund_growth
-WHERE period_type = '1月' AND level = 1;  -- 仅优秀基金
-
-*/
-
-
-/*  宽表（主表包含所有涨幅字段）
-CREATE TABLE fund_wide (
-    fund_id          VARCHAR(20) PRIMARY KEY,
-    fund_name        VARCHAR(100),
-    -- 涨幅字段
-    week_avg         DECIMAL(10,2),
-    week_rate        DECIMAL(10,2),
-    week_rank        VARCHAR(20),
-    week_level       TINYINT,
-    month_avg        DECIMAL(10,2),
-    month_rate       DECIMAL(10,2),
-    month_rank       VARCHAR(20),
-    month_level      TINYINT,
-    -- ...其他周期字段
-    update_time      DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-*/
-
-/*
-017836
-021605
-024861
-004815
-
-量化：
-{ code: '018561', name: '中信保诚多策略C' },// 30天
-{ code: '020726', name: '建信灵活配置混合C' },// 30天
-{ code: '002834', name: '华夏新锦绣混合C' },// 30天
-{ code: '016858', name: '国金量化多因子股票C' },// 30天
-{ code: '018729', name: '华夏智胜新锐股票C' },// 30天
-{ code: '023350', name: '诺安多策略混合C' },// 30天
 德邦鑫星价值灵活配置混合C(002112)
 中航机遇领航混合发起C(018957)
 
@@ -158,18 +93,6 @@ CREATE TABLE fund_wide (
 019072-嘉实国证通信ETF发起联接C
 019237-广发国证通信ETF发起式联接C
 023765- 华夏中证5G通信主题ETF联接D
-
-红利低波：
-008115-天弘中证
-021551-博时中证
-007467-华泰柏瑞中证红利低波C
-008164-南方红利低波
-
-019260-富国恒生红利ETF联接A
-020989-南方恒生科技指数发起C
-023918-华夏国证自由现金流ETF发起式联接C
-023521-博时上证科创板人工智能ETF发起式联接C
-020973-易方达机器人ETF联接C
 
 核能:
 永赢制造升级智选混合发起C(024203)
@@ -201,46 +124,21 @@ CPO：
 光伏：
 无
 
-
+半导体：
+泰康半导体量化选股股票发起式C(020477)
 
 债券类推荐：
 006980-国寿安保泰恒纯债债券
 016870-景顺长城稳健增益C
 
-债券类其它5+推荐：
-007540-华泰保兴安悦债券A
-007584-鹏华丰鑫债券A
-
-http://150.158.175.108:9999/preview.html 最新的基金涨幅预览地址哈
-
 024195-永赢国证商用卫星通信产业ETF发起联接C 有通信和商业航天
 015790-永赢高端装备智选混合发起C 这个商业航天
 
 国泰国证航天军工指数(LOF)C(015599)
-*/
 
-
-
-/*
 可以看到很多数据
 https://fund.eastmoney.com/pingzhongdata/019260.js?v=20250724153651
 
-实时涨幅
-https://fundgz.1234567.com.cn/js/019260.js
-https://fundgz.1234567.com.cn/js/019260.js?rt=1753342851359
-
-https://image.sinajs.cn/newchart/v5/fundpre/min_s/008164.gif 涨幅
-
-https://basic.10jqka.com.cn/JPZV30/ 可以按这个展示格式扣下数据
-
-买卖规则
-https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundTradeRulesPageInfo?reqData={"fundCode":"515450","orderLimit":"","channel":"9"}
-
-
-*/
-
-
-/*
 
 医药相关：
 国泰国证疫苗与生物科技ETF发起联接C(017186)
@@ -269,8 +167,6 @@ https://saithink.top/guide/demo.html 模板网站
 华夏中证5G通信主题ETF联接D(023765)
 
 东财互联网C(012372) 适合到一定为止，但是是否和红利类的重合？
-
-
 
 /*
 
@@ -319,14 +215,13 @@ const updatePublicFundJson = (newJsonData) => {
 001076--易方达改革红利混合
 020867-华安恒生港股通中国央企红利ETF发起式联接C
 020989-南方恒生科技指数C
-019261-富国恒生红利ETF联接C
 012276-富国中证沪港深500ETF联接C
 023999-易方达上证科创板综合增强C
 160424-华安创业板50ETF联接C
 022425-广发中证A500ETF联接C
 023521-博时上证人工智能
 12322-东财云计算
-018561-中信保诚多策略混合(LOF)C
+
 002834-华夏新锦绣混合C
 016858-国金量化多因子股票C
 003027-安信新价值混合C
@@ -355,13 +250,6 @@ const updatePublicFundJson = (newJsonData) => {
 001438--易方达瑞享混合E
 天弘全球高端制造混合(QDII)C(016665)
 
-基金排行---收集一下两个种类的不同，一个可以node-fetch
-
-CPO：
-022365-永赢科技智选混合发起C
-
-军工：
-013613--宝盈国家安全沪港深股票C
 
 基金减仓榜？连续三天前5名不可取
 */
@@ -370,7 +258,7 @@ CPO：
 // 待学习
 {
   /*
-
+https://github.com/kubero-dev/ladder  开源的网页抓取查看工具。用户输入网址，它会自动将网页抓取展示出来。
 
 electron的学习
 uniapp-开发鸿蒙开发
