@@ -1,6 +1,7 @@
 <script setup>
 // 历史净值
 console.log('amain/src/views/preview/tabs/preview_09.vue');
+// 来源https://fund.eastmoney.com/
 
 const info = reactive({
   tableData: [],
