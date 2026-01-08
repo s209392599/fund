@@ -7,6 +7,7 @@ https://fund.eastmoney.com/data/fundranking.html 基金排行 2025年12月23日1
 const info = reactive({
   currentTabComponent: '',
   active_tab: '',
+  mtime: '',// 最后更新时间
   list_tabs: [
     {
       id: '1',
@@ -48,33 +49,20 @@ const info = reactive({
         defineAsyncComponent(() => import('./other_002_005.vue'))
       ),
     },
-    // {
-    //   id: '6',
-    //   name: 'QDII',
-    //   component: markRaw(
-    //     defineAsyncComponent(() => import('./other_002_006.vue'))
-    //   ),
-    // },
-    // {
-    //   id: '7',
-    //   name: 'FOF',
-    //   component: markRaw(
-    //     defineAsyncComponent(() => import('./other_002_007.vue'))
-    //   ),
-    // },
   ],
   data_jiaocha: {},// 交叉的数据
 })
 const getTableData = async () => {
   try {
     server_fund_apifolder_jiaichapaihang({
-      }).then((res) => {
-        if (res.code === 200) {
-          info.data_jiaocha = res.data || {};
-        } else {
-          ElMessage.error('获取群主分类推荐失败，请重试！');
-        }
-      });
+    }).then((res) => {
+      if (res.code === 200) {
+        info.data_jiaocha = res.data || {};
+        info.mtime = res.mtime || '';
+      } else {
+        ElMessage.error('获取群主分类推荐失败，请重试！');
+      }
+    });
   } catch (error) {
     console.error('获取交叉排行数据失败:', error);
   }
@@ -113,7 +101,8 @@ onMounted(() => {
     </el-tabs>
 
     <div class="main">
-      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" :data="info.data_jiaocha" />
+      <component :is="info.currentTabComponent" v-if="info.currentTabComponent" :data="info.data_jiaocha"
+        :mtime="info.mtime" />
     </div>
   </div>
 </template>

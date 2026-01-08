@@ -54,11 +54,8 @@ const getList = () => {
       sourceType: 1,
     }
   }).then((res) => {
-    console.log(res);
     if (res.code === 200) {
       let turnData = (res.data || []).map(v => JSON.parse(v));
-      console.log('turnData', turnData);
-
       info.tableData = turnData || [];
     } else {
       ElMessage.error('获取失败，请重试！');

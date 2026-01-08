@@ -50,7 +50,6 @@ const query_list = () => {
     server_fund_table_query_by_user({
       fund_user_id: localStorage.getItem('user_id')
     }).then(res => {
-      console.log('res', res);
       if (res.code === 200) {
         ElMessage.success('已读取最新数据');
         info.tableData = res.data || [];
@@ -195,7 +194,6 @@ const SaveData = () => {
     fund_info: fund_info,
     fund_user_id: localStorage.getItem('user_id'),
   }).then(res => {
-    console.log('res', res);
     if (res.code === 200) {
       ElMessage.success('操作成功');
       query_list();
@@ -250,7 +248,6 @@ const change_fund_code = (val) => {
 // 合并群主基金
 const groupPublic = () => {
   server_fund_amain_public_funds().then(res => {
-    console.log('res', res);
     if (res.code === 200) {
       const arr_1 = [...info.tableData];
       const arr_2 = res.data || [];

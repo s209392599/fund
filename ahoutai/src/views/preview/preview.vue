@@ -38,8 +38,6 @@ if ([null, '', undefined].includes(email)) {
   ElMessage.error('登录失败！')
   router.push('/');
 } else {
-  console.log('账号为：', email);
-
   info.list_tabs = [...info.list_default];// 可以附加其它过滤条件
 
   // 从本地存储获取active_tab，确保它在可用选项中

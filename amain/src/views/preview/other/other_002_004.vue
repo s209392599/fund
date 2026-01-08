@@ -4,6 +4,10 @@ const props = defineProps({
   data: {
     type: Object,
     default: () => { }
+  },
+  mtime: {
+    type: String,
+    default: ''
   }
 })
 const info = reactive({
@@ -46,7 +50,7 @@ const copy_fn = (type) => {
 
 <template>
   <div class="page_wrapper">
-    <div class="desc">算法说明：读取日周月的排行榜前500名，去除A类进行交叉排名取交集</div>
+    <div class="desc">算法说明：读取日周月的排行榜前500名，去除A类进行交叉排名取交集。{{ props.mtime ? '最后更新时间：' + props.mtime : '' }}</div>
 
     <div class="flex flex-row gap-10 jiaocha_wrapper">
       <!-- 日周交叉 -->

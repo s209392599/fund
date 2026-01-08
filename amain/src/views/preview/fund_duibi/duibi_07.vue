@@ -32,7 +32,6 @@ const getList = async () => {
     await server_fund_jd_InvestmentDistributionPageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
-      console.log(res);
       info.tableData[i] = {
         ...info.tableData[i],
         ...res.data,

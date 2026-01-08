@@ -25,7 +25,19 @@ async function readJsonFile(filePath = '') {
 }
 
 async function turnDataFn(res, obj){
-  const filePath = obj.filePath || './data.json';
+  const filePath = obj.filePath || 'data.json';
+
+  // let filePath_info = path.join(__dirname, obj.filePath);
+  // filePath_info = filePath_info.replace(/\/routes\/fund/g, '');
+
+  let mtime = '';// 最后修改时间
+  try {
+    const stats = await fs.promises.stat(filePath);
+    mtime = CustomFn.CustomDateFtt(stats.mtime, 'yyyy-MM-dd hh:mm:ss');
+  } catch (err) {
+    // console.error('获取文件信息失败:', err);
+  }
+
   // 不对数据转换，不用写
   const turnDataFn = obj.turnDataFn || ((v)=>{ return v;});
   try {
@@ -42,6 +54,7 @@ async function turnDataFn(res, obj){
       code: 200,
       msg: '读取文件成功',
       data: turnData,
+      mtime: mtime,
     });
   } catch (error) {
     return res.send({

@@ -12,7 +12,6 @@ const query_list = () => {
     server_fund_table_query_by_user({
       fund_user_id: localStorage.getItem('user_id'),
     }).then((res) => {
-      console.log('res', res);
       if (res.code === 200) {
         info.tableData = res.data || [];
       } else {

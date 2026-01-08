@@ -55,7 +55,6 @@ const getList = () => {
       rankType: "cqjy"
     }
   }).then((res) => {
-    console.log(res);
     if (res.code === 200) {
       info.tableData = res.data || [];
     } else {

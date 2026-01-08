@@ -35,7 +35,6 @@ const getList = async () => {
     await server_fund_amain_getfundgz({
       fund_code: item.fund_code,
     }).then((res) => {
-      console.log('res', res.data);
       if (res.code === 200) {
         info.tableData[i] = {
           ...info.tableData[i],

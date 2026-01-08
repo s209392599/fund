@@ -20,7 +20,6 @@ const btn_1 = () => {
   )
     .then(() => {
       server_fund_send_mail_operate({ msg: info.val }).then(res => {
-        console.log('res', res);
         if (res.code === 200) {
           ElMessage.success('删除成功');
           // getAllUser();

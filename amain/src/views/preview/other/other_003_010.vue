@@ -55,7 +55,6 @@ const getList = () => {
       rankType: "stable_zhrq"
     }
   }).then((res) => {
-    console.log(res);
     if (res.code === 200) {
       info.tableData = res.data || [];
     } else {

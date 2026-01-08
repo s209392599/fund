@@ -32,7 +32,6 @@ const getList = async () => {
     await server_fund_jd_getFundDividendPageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
-      console.log(res);
       let arr = res.data.dividendList || [];
       info.tableData[i].dividendList = arr;
 

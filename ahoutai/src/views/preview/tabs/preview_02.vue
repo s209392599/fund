@@ -57,7 +57,6 @@ const rules = {
 // 获取所有用户
 const getAllUser = () => {
   server_fund_get_all_user_info({}).then(res => {
-    console.log(38, res);
     info.tableData = res.data;
   })
 }
@@ -108,7 +107,6 @@ const btn_del = (row, $index) => {
   )
     .then(() => {
       server_fund_del_user_info({ email: row.email }).then(res => {
-        console.log('res', res);
         if (res.code === 200) {
           ElMessage.success('删除成功');
           getAllUser();

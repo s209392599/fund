@@ -55,7 +55,7 @@ const getList = () => {
       rankType: "lxpysd"
     }
   }).then((res) => {
-    console.log(res);
+
     if (res.code === 200) {
       info.tableData = res.data || [];
     } else {

@@ -41,7 +41,6 @@ const onSubmit = () => {
   loginForm.value.validate((valid) => {
     if (valid) {
       server_fund_admin_login(form).then(res => {
-        console.log('登录', res);
         if (res.code === 200) {
           // 登录成功
           localStorage.setItem('email', form.email);
@@ -50,7 +49,6 @@ const onSubmit = () => {
           // 存储基金信息
           localStorage.setItem('fund', JSON.stringify(res.data.fund || []));
           localStorage.setItem('loginTime', CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss"));
-          console.log('res', res.data)
           // 跳转到
           router.push('/preview');
         } else {
@@ -59,7 +57,6 @@ const onSubmit = () => {
         }
       })
     } else {
-      console.log('error submit!!');
       return false;
     }
   });

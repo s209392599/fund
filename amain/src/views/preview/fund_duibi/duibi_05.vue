@@ -31,7 +31,6 @@ const getList = async () => {
     await server_fund_jd_getFundDetailChartPageInfo({
       fund_code: item.fund_code,
     }).then((res) => {
-      console.log(res);
       let obj_1 = res.data || {};
       let majorChartPointList = obj_1.majorChartPointList || [];
       let zheng = '-';

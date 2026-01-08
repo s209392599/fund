@@ -44,7 +44,6 @@ const rules = {
 const query_list = () => {
   setTimeout(() => {
     server_fund_manage_fund_query().then(res => {
-      console.log('res', res);
       if (res.code === 200) {
         info.tableData = res.data || [];
       } else {
@@ -97,7 +96,6 @@ const btn_cha = (row, $index) => {
         index_new: index + 1,
         index_old: $index
       }).then(res => {
-        console.log('res', res);
         if (res.code === 200) {
           ElMessage.success('操作成功');
           query_list();
@@ -182,7 +180,6 @@ const updateOrder = () => {
     email: email,
     fund_code: info.tableData.map(item => item.fund_code)
   }).then(res => {
-    console.log('res', res);
     if (res.code === 200) {
       ElMessage.success('操作成功');
       query_list();

@@ -16,8 +16,6 @@ const getFundInfo = async (fundCode) => {
       "credentials": "include"
     });
     const res = (await response.json()) || {};
-    console.log(res);
-    
     obj = res?.resultData?.datas || {};
   } catch (err) {
     console.log(err)
@@ -54,8 +52,8 @@ let arr = [
   '160424',// 华安创业板50ETF联接
   '002834',// 华夏新锦绣混合C
   '022691',// 华安医药生物股票发起式C
-  // '',// 
-  // '',// 
+  // '',//
+  // '',//
 ]
 arr.forEach((v,index) => {
   setTimeout(() => {
