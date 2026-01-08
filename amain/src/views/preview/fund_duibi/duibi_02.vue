@@ -205,6 +205,14 @@ const sortInstPurchaseRatio = (a, b) => {
   return ratioB - ratioA; // 降序排列
 };
 
+// 复制-折行
+const btn_fn_04 = () => {
+  let str = info.tableData.map((item) => {
+    return `${item.fund_code}-${item.fund_name}`;
+  }).join('\n');
+  fallbackCopyText(str);
+};
+
 watch(() => info.tableData, (newVal, oldVal) => {
   nextTick(() => {
     saveFundInfoToLocalstorage();
@@ -223,8 +231,7 @@ onMounted(() => {
       <el-button class="top_btn btn_1" @click="btn_fn_01()">删除不可买</el-button>
       <el-button class="top_btn btn_2" @click="btn_fn_02()">删除小于1亿</el-button>
       <el-button class="top_btn btn_3" @click="btn_fn_03()">删除1、3、6月排名靠后</el-button>
-      <!-- <el-button class="top_btn btn_4" @click="btn_fn_04()"></el-button> -->
-      <!-- <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button> -->
+      <el-button class="top_btn btn_4" @click="btn_fn_04()">复制(折行)</el-button>
       <span class="ml-10">基金数量：{{ info.tableData.length }}</span>
     </div>
 

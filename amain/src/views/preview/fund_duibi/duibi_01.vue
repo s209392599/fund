@@ -168,6 +168,13 @@ const btn_fn_06 = () => {
 const btn_fn_07 = () => {
   info.tableData = info.tableData.filter(v => !v.fund_name.endsWith('A'));
 };
+// 复制-折行
+const btn_fn_08 = () => {
+  let str = info.tableData.map((item) => {
+    return `${item.fund_code}-${item.fund_name}`;
+  }).join('\n');
+  fallbackCopyText(str);
+};
 </script>
 
 <template>
@@ -176,8 +183,9 @@ const btn_fn_07 = () => {
       <el-button class="top_btn btn_1" @click="btn_fn_01()">添加基金(逗号)</el-button>
       <el-button class="top_btn btn_2" @click="btn_fn_04()">添加基金(包含基金名称)</el-button>
       <el-button class="top_btn btn_3" @click="btn_fn_02()">删除所有基金</el-button>
-      <el-button class="top_btn btn_4" @click="btn_fn_03()">复制基金号(逗号)</el-button>
-      <el-button class="top_btn btn_5" @click="btn_fn_05()">复制基金号(数组)</el-button>
+      <el-button class="top_btn btn_4" @click="btn_fn_03()">复制(逗号)</el-button>
+      <el-button class="top_btn btn_5" @click="btn_fn_05()">复制(数组)</el-button>
+      <el-button class="top_btn btn_5" @click="btn_fn_08()">复制(折行)</el-button>
       <el-button class="top_btn btn_6" @click="btn_fn_06()">基金搜索</el-button>
       <el-button class="top_btn btn_7" @click="btn_fn_07()">去除A类</el-button>
       <span class="ml-10">基金数({{ info.tableData.length }}个)</span>

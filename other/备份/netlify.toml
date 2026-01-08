@@ -1,5 +1,0 @@
-[build]
-  # 指定构建命令（如 npm run build）
-  command = "npm run build"
-  # 指定部署的目录（如 dist、build、public 等）
-  publish = "dist"
