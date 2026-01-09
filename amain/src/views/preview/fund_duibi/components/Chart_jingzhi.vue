@@ -203,6 +203,23 @@ function RenderChart() {
     },
     tooltip: {
       trigger: 'axis',
+      axisPointer: {
+        type: 'cross',
+        crossStyle: {
+          color: '#999',
+          width: 1,
+          type: 'dashed',
+        },
+        label: {
+          backgroundColor: '#6a7985',
+          formatter: function (obj) {
+            if (obj.axisDimension === 'y') {
+              return obj.value.toFixed(4);
+            }
+            return obj.value;
+          },
+        },
+      },
       formatter: function (params) {
         // 第一行是name剩下的时基础线 以及对应日线的值
         let res = params[0].name + '<br>';
