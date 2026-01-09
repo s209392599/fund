@@ -1,5 +1,17 @@
 /*
 
+
+小金属的，那么其它的呢
+https://data.eastmoney.com/center/ 数据中心里面找
+https://quote.eastmoney.com/center/gridlist.html#boards2-90.BK1027 行业板块
+https://webquotepic.eastmoney.com/GetPic.aspx?nid=90.BK1027&imageType=FFRST&type=ffr
+
+航天航空
+https://webquotepic.eastmoney.com/GetPic.aspx?nid=90.BK0480&imageType=FFRST&type=ffr
+
+
+
+
 CPO：
 022365-永赢科技智选混合发起C
 
@@ -43,6 +55,9 @@ CPO：
 
 软件：
 012322--东财云计算增强C
+
+501029-华宝标普中国A股红利机会ETF联接A(LOF)
+501060-中金中证优选300指数(LOF)A
 */
 
 /*
@@ -276,6 +291,17 @@ const updatePublicFundJson = (newJsonData) => {
 020003-国泰金龙行业精选混合
 
 创金合信专精特新股票发起C(014737)
+
+
+2026年01月09日08:48:36 周五日周月交叉
+025949-诺安研究精选股票C
+015046-前海开源中航军工C
+024195-永赢国证商用卫星通信产业ETF发起联接C
+013566-华夏军工安全混合C
+017941-国投瑞银国家安全混合C
+012041-鹏华中证国防指数(LOF)C
+015945-易方达国防军工混合C
+025491-平安中证卫星产业指数C
 
 */
 

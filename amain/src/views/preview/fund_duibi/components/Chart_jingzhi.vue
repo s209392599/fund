@@ -114,14 +114,29 @@ const turnData = () => {
   res.line_data_30 = res.line_data_30.slice(-245).map((item) => item || null);
   res.line_data_60 = res.line_data_60.slice(-245).map((item) => item || null);
 
-  // 计算上布林线：20日均线 + 2倍标准差
-  // res.line_data_top = res.line_data_20.map((item, index) =>
-  //   item ? item + 2 * res.line_data_20[index] : null
-  // );
-  // 计算下布林线：20日均线 - 2倍标准差
-  // res.line_data_bottom = res.line_data_20.map((item, index) =>
-  //   item ? item - 2 * res.line_data_20[index] : null
-  // );
+  // 计算布林带：上带 = 20日均线 + 2 * 标准差， 下带 = 20日均线 - 2 * 标准差
+  // 标准差基于原始基础数据 res.line_data_01 的过去 20 个有效值计算
+  res.line_data_top = res.line_data_20.map((ma20, index) => {
+    if (ma20 == null) return null;
+    const start = Math.max(0, index - 19);
+    const window = res.line_data_01.slice(start, index + 1).filter((v) => v != null);
+    if (window.length < 20) return null;
+    const mean = window.reduce((s, v) => s + v, 0) / window.length;
+    const variance = window.reduce((s, v) => s + Math.pow(v - mean, 2), 0) / window.length;
+    const sd = Math.sqrt(variance);
+    return Number((ma20 + 2 * sd).toFixed(4));
+  });
+
+  res.line_data_bottom = res.line_data_20.map((ma20, index) => {
+    if (ma20 == null) return null;
+    const start = Math.max(0, index - 19);
+    const window = res.line_data_01.slice(start, index + 1).filter((v) => v != null);
+    if (window.length < 20) return null;
+    const mean = window.reduce((s, v) => s + v, 0) / window.length;
+    const variance = window.reduce((s, v) => s + Math.pow(v - mean, 2), 0) / window.length;
+    const sd = Math.sqrt(variance);
+    return Number((ma20 - 2 * sd).toFixed(4));
+  });
 
   return res;
 };
@@ -178,12 +193,12 @@ function RenderChart() {
     legend: {
       show: true,
       top: '1%',
-      data: ['5日线', '10日线', '20日线', '30日线', '60日线'],
+      data: ['5日线', '10日线', '20日线', '30日线', '60日线', '上布林线', '下布林线'],
       selected: {
-        上布林线: false,
-        下布林线: false,
+        // 上布林线: false,
+        // 下布林线: false,
         '10日线': false,
-        // '20日线': false,
+        '30日线': false,
       },
     },
     tooltip: {
@@ -299,6 +314,16 @@ function RenderChart() {
         data: chartData.line_data_60 || [],
         color: '#65c2c4',
       },
+      {
+        name: '上布林线',
+        data: chartData.line_data_top || [],
+        color: '#ff0000',
+      },
+      {
+        name: '下布林线',
+        data: chartData.line_data_bottom || [],
+        color: '#ff0000',
+      }
     ].map((item) => {
       return {
         ...item,

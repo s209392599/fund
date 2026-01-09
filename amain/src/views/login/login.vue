@@ -6,7 +6,7 @@
     <el-form-item label="密码" prop="user_password">
       <el-input v-model="form.user_password"></el-input>
     </el-form-item>
-    <el-form-item label="二级密码(token)" prop="user_token">
+    <el-form-item label="二级密码" prop="user_token">
       <el-input v-model="form.user_token"></el-input>
     </el-form-item>
     <el-form-item>
