@@ -171,7 +171,7 @@ const btn_fn_01 = () => {
 const btn_fn_02 = () => {
   info.tableData = info.tableData.filter((item) => {
     let fundScale = item.fundProfileOfItem?.fundScale || '';
-    return !fundScale.includes('万元')
+    return fundScale.includes('亿元')
   });
   ElMessage.success('删除小于1亿成功');
 };
@@ -352,7 +352,7 @@ onMounted(() => {
           <template v-slot="{ row }">
             <div class="">{{
               row?.fundProfileOfItem?.fundScaleList?.join('；')
-              }}</div>
+            }}</div>
           </template>
         </el-table-column>
 
