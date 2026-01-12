@@ -269,14 +269,13 @@ const btn_copy_data = () => {
     ElMessage.error('没有基金信息');
     return false;
   }
-  var data = info.tableData.map(v => {
+  const str = info.tableData.map(v => {
     return {
       fund_code: v.fund_code,
       fund_name: v.fund_name,
       fund_type: v.fund_type
     }
   });
-  let str = JSON.stringify(data);
   fallbackCopyText(JSON.stringify(str));
 }
 </script>

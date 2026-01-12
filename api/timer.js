@@ -22,17 +22,8 @@ const { getFundcodeSearch } = require('./data/fund_all/index.js');
 └───────────────────────── 秒 (0-59)
 */
 
-// 每天晚上12点进行 交叉排行更新
-schedule.scheduleJob('0 0 0 * * *', async () => {
-  try {
-    await jiaochapaihang();
-    // console.log('1111', new Date().toLocaleString());
-  } catch (error) {
-    console.error('交叉排行任务执行失败:', error);
-  }
-});
 // 基金数据更新
-schedule.scheduleJob('30 0 0 * * *', async () => {
+schedule.scheduleJob('0 0 0 * * *', async () => {
   try {
     await getFundcodeSearch();
     // console.log('2222', new Date().toLocaleString());
@@ -40,5 +31,17 @@ schedule.scheduleJob('30 0 0 * * *', async () => {
     console.error('基金数据任务执行失败:', error);
   }
 });
+
+// 交叉排行更新
+schedule.scheduleJob('30 0 0 * * *', async () => {
+  try {
+    await jiaochapaihang();
+    // console.log('1111', new Date().toLocaleString());
+  } catch (error) {
+    console.error('交叉排行任务执行失败:', error);
+  }
+});
+
+
 
 // schedule.scheduleJob('6 * 14-15 * * *', logCleanupTask); // 14:00-15:59每分钟第6秒

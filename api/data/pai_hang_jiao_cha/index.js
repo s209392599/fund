@@ -7,6 +7,7 @@ const fetch = require('node-fetch');
 const CustomFn = require('../../CustomFn.js');
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
+const {filterBuyableFunds} = require('./mai.js');
 // console.log('noText', noText);
 // console.log('noFundCode', noFundCode);
 const hisData = fs.readFileSync(path.join(__dirname, 'data.json'), 'utf8');
@@ -173,6 +174,9 @@ async function jiaochapaihang() {
       });
     }
   }
+
+  let buyableFunds = await filterBuyableFunds(info.all_jiaocha_ri_zhou_yue);
+  // info.all_data_1 = buyableFunds;
 
   const curDay = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd');
 
