@@ -78,7 +78,12 @@ onMounted(() => {
     <div id="list_wrapper">
       <div class="list_item" v-for="(item, index) in info.tableData" :key="item.fund_code">
         <div class="list_title">
-          <div class="list_fundcode">{{ item.fund_code }}</div>
+          <div class="list_fundcode">
+            <a :href="`https://fund.eastmoney.com/${item.fund_code}.html`" target="_blank"
+              style="text-decoration: none">
+              <span>{{ item.fund_code }}</span>
+            </a>
+          </div>
           <div class="list_fundname" :title="item.fund_name">{{ item.fund_name }}</div>
         </div>
 

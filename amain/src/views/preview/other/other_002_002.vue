@@ -44,7 +44,6 @@ const copy_fn = (type) => {
   } else if (type === 'rizhouyue') {
     fallbackCopyText(JSON.stringify(info.ri_zhou_yue));
   }
-  ElMessage.success('复制成功');
 }
 </script>
 

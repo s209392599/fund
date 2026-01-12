@@ -30,6 +30,40 @@ const getList = async () => {
   for (let i = 0; i < info.tableData.length; i++) {
     const item = info.tableData[i];
 
+    let gz_arr = [];
+    try {
+      let res_1 = await server_fund_amain_getfundgz({
+        fund_code: item.fund_code,
+      });
+      if (res_1.code === 200) {
+        /*
+
+        // {date: '2025-04-29', netValue: '1.0000', totalNetValue: '1.0000'}
+        {
+          "fund_code": "023918",
+          "fund_name": "华夏国证自由现金流ETF发起式联接C",
+          "gszzl": "0.68",
+          "dwjz": "1.2468",
+          "gsz": "1.2552",
+          "gztime": "2026-01-09 15:00"
+        }
+        */
+
+        if (!res_1.gztime) return
+        let curDay = CustomFormatDate(new Date(), 'yyyy-MM-dd');
+        if (res_1.gztime.split(' ')[0] !== curDay) return;
+        if (!res_1.gsz) return;
+
+        gz_arr.push({
+          date: curDay,
+          netValue: res_1.dwjz,
+          totalNetValue: res_1.gsz,
+        });
+      }
+    } catch (e) {
+      // console.log('获取基金估值失败', e);
+    }
+
     await server_fund_jd_HistoryNetValuePageInfo({
       fund_code: item.fund_code,
       pageSize: 310, // 245 + 60
@@ -55,6 +89,7 @@ const getList = async () => {
         ...info.tableData[i],
         ...obj_1,
       };
+      console.log(info.tableData[i]);
     });
   }
 };
@@ -63,6 +98,9 @@ const getList = async () => {
 const btn_line_1 = (row, index) => {
   info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
+
+//
+// {date: '2025-04-29', netValue: '1.0000', totalNetValue: '1.0000'}
 
 onMounted(() => {
   getList();

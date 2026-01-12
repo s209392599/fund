@@ -18,7 +18,6 @@ const saveFundInfoToLocalstorage = () => {
     };
   });
   localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
-  console.log('触发了保存基金信息到本地存储');
 };
 watch(() => info.tableData, () => {
   saveFundInfoToLocalstorage();
@@ -71,7 +70,12 @@ onMounted(() => {
       <div class="list_item" v-for="(item, index) in info.tableData" :key="item.fund_code">
 
         <div class="list_top flex justify-between" style="margin: 0px;">
-          <div class="">{{ item.fund_code }}</div>
+          <div class="">
+            <a :href="`https://fund.eastmoney.com/${item.fund_code}.html`" target="_blank"
+              style="text-decoration: none">
+              <span>{{ item.fund_code }}</span>
+            </a>
+          </div>
           <div class="">{{ item.fund_type }}</div>
           <div class="list_del" @click="btn_line_1(item, index)">删除</div>
         </div>
