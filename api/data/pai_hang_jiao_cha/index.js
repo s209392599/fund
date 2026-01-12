@@ -175,7 +175,7 @@ async function jiaochapaihang() {
     }
   }
 
-  let buyableFunds = await filterBuyableFunds(info.all_jiaocha_ri_zhou_yue);
+  // let buyableFunds = await filterBuyableFunds(info.all_jiaocha_ri_zhou_yue);
   // info.all_data_1 = buyableFunds;
 
   const curDay = CustomFn.CustomDateFtt(new Date(), 'yyyy-MM-dd');

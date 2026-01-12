@@ -12,9 +12,13 @@ const info = {
 };
 
 async function test() {
-  let buyableFunds = await filterBuyableFunds(rizhouDaata);
-  info.tableList = buyableFunds;
+  let { result, no_hege } = await filterBuyableFunds(rizhouDaata);
+  info.tableList = result;
+  info.no_hege = no_hege;
+  
   console.log(info.tableList.length, '可买入交叉排行总数');
+  console.log(info.no_hege.length, '不满足条件的基金总数');
+
   fs.writeFileSync(
     path.join(__dirname, 'test.json'),
     JSON.stringify(info, null, 2),

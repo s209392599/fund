@@ -1,3 +1,732 @@
 {
-  "tableList": []
+  "tableList": [
+    {
+      "fund_code": "023754",
+      "fund_name": "永赢信息产业智选混合发起C"
+    },
+    {
+      "fund_code": "018590",
+      "fund_name": "银华体育文化灵活配置混合C"
+    },
+    {
+      "fund_code": "015790",
+      "fund_name": "永赢高端装备智选混合发起C"
+    },
+    {
+      "fund_code": "019276",
+      "fund_name": "长城智能产业混合C"
+    },
+    {
+      "fund_code": "011904",
+      "fund_name": "南方领航优选混合C"
+    },
+    {
+      "fund_code": "011148",
+      "fund_name": "南方军工改革灵活配置混合C"
+    },
+    {
+      "fund_code": "016924",
+      "fund_name": "广发百发大数据价值混合C"
+    },
+    {
+      "fund_code": "023715",
+      "fund_name": "华夏中证动漫游戏ETF发起式联接D"
+    },
+    {
+      "fund_code": "012729",
+      "fund_name": "国泰中证动漫游戏ETF联接C"
+    },
+    {
+      "fund_code": "022481",
+      "fund_name": "国泰中证动漫游戏ETF联接E"
+    },
+    {
+      "fund_code": "024246",
+      "fund_name": "广发上证科创板人工智能ETF发起式联接C"
+    },
+    {
+      "fund_code": "024561",
+      "fund_name": "华宝上证科创板人工智能ETF发起式联接C"
+    },
+    {
+      "fund_code": "023565",
+      "fund_name": "易方达科创人工智能ETF联接C"
+    },
+    {
+      "fund_code": "013566",
+      "fund_name": "华夏军工安全混合C"
+    },
+    {
+      "fund_code": "013035",
+      "fund_name": "富国中证军工指数(LOF)C"
+    },
+    {
+      "fund_code": "010364",
+      "fund_name": "鹏华空天军工指数(LOF)C"
+    },
+    {
+      "fund_code": "005693",
+      "fund_name": "广发中证军工ETF联接C"
+    },
+    {
+      "fund_code": "012842",
+      "fund_name": "易方达中证军工(LOF)C"
+    },
+    {
+      "fund_code": "012041",
+      "fund_name": "鹏华中证国防指数(LOF)C"
+    },
+    {
+      "fund_code": "022243",
+      "fund_name": "中邮军民融合灵活配置混合C"
+    },
+    {
+      "fund_code": "013618",
+      "fund_name": "华安大安全主题混合C"
+    },
+    {
+      "fund_code": "011113",
+      "fund_name": "富国军工主题混合C"
+    },
+    {
+      "fund_code": "015046",
+      "fund_name": "前海开源中航军工指数C"
+    },
+    {
+      "fund_code": "024203",
+      "fund_name": "永赢制造升级智选混合发起C"
+    }
+  ],
+  "no_hege": [
+    {
+      "fund_code": "020065",
+      "fund_name": "西部利得科技创新混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019116",
+      "fund_name": "东财卓越成长C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "013346",
+      "fund_name": "富荣信息技术混合C",
+      "reason": "最大回撤-27.97%，修复天数279天"
+    },
+    {
+      "fund_code": "017736",
+      "fund_name": "融通明锐混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018049",
+      "fund_name": "申万菱信数字产业股票型发起式C",
+      "reason": "最大回撤-24.44%，修复天数132天"
+    },
+    {
+      "fund_code": "025460",
+      "fund_name": "湘财科技智选混合C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "020266",
+      "fund_name": "长城产业优选混合C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "001150",
+      "fund_name": "融通互联网传媒灵活配置混合",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "012183",
+      "fund_name": "广发沪港深精选混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018363",
+      "fund_name": "东方阿尔法瑞丰混合发起C",
+      "reason": "最大回撤-26.19%，修复天数102天"
+    },
+    {
+      "fund_code": "001252",
+      "fund_name": "中海进取收益混合",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "014422",
+      "fund_name": "弘毅远方消费升级混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "020594",
+      "fund_name": "华夏软件龙头混合发起式C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "024224",
+      "fund_name": "国新国证新锐C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "015395",
+      "fund_name": "招商体育文化休闲股票C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "015667",
+      "fund_name": "银河文体娱乐混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018249",
+      "fund_name": "中欧致和混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "004321",
+      "fund_name": "前海开源沪港深强国产业混合",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "169201",
+      "fund_name": "浙商鼎盈事件驱动混合",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "016074",
+      "fund_name": "创金合信软件产业股票发起C",
+      "reason": "最大回撤-23.34%，修复天数140天"
+    },
+    {
+      "fund_code": "007046",
+      "fund_name": "方正富邦创新动力混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "012847",
+      "fund_name": "诺安积极回报混合C",
+      "reason": "最大回撤-26.87%，修复天数NaN天"
+    },
+    {
+      "fund_code": "015668",
+      "fund_name": "银河消费混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019504",
+      "fund_name": "博时中证软件服务指数发起式C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019144",
+      "fund_name": "东财景气驱动C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "010052",
+      "fund_name": "长城久嘉创新成长混合C",
+      "reason": "最大回撤-26.66%，修复天数121天"
+    },
+    {
+      "fund_code": "021615",
+      "fund_name": "华泰紫金中证全指软件指数型发起C",
+      "reason": "最大回撤-23.53%，修复天数137天"
+    },
+    {
+      "fund_code": "019764",
+      "fund_name": "中欧半导体产业股票发起C",
+      "reason": "最大回撤-19.61%，修复天数135天"
+    },
+    {
+      "fund_code": "018386",
+      "fund_name": "招商中证全指软件ETF发起式联接C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "020485",
+      "fund_name": "中欧中证全指软件开发指数发起C",
+      "reason": "最大回撤-24.66%，修复天数133天"
+    },
+    {
+      "fund_code": "021672",
+      "fund_name": "国泰中证全指软件ETF联接E",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "023255",
+      "fund_name": "汇添富中证全指软件ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "012637",
+      "fund_name": "国泰中证全指软件ETF联接C",
+      "reason": "最大回撤-23.15%，修复天数137天"
+    },
+    {
+      "fund_code": "021536",
+      "fund_name": "天弘中证软件服务指数发起C",
+      "reason": "最大回撤-24.25%，修复天数140天"
+    },
+    {
+      "fund_code": "004753",
+      "fund_name": "广发中证传媒ETF联接C",
+      "reason": "最大回撤-19.72%，修复天数128天"
+    },
+    {
+      "fund_code": "010677",
+      "fund_name": "工银传媒指数C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018864",
+      "fund_name": "广发中证传媒ETF联接E",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "020407",
+      "fund_name": "工银传媒指数E",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "015675",
+      "fund_name": "鹏华中证传媒指数(LOF)C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "020486",
+      "fund_name": "华富智慧城市灵活配置混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "012620",
+      "fund_name": "嘉实中证软件服务ETF联接C",
+      "reason": "最大回撤-24.39%，修复天数141天"
+    },
+    {
+      "fund_code": "018183",
+      "fund_name": "万家中证软件服务ETF发起式联接C",
+      "reason": "最大回撤-23.72%，修复天数140天"
+    },
+    {
+      "fund_code": "015665",
+      "fund_name": "银河和美生活混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "020730",
+      "fund_name": "华安中证全指软件开发ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019062",
+      "fund_name": "易方达中证软件服务ETF联接发起式C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "021789",
+      "fund_name": "华安中证全指计算机指数发起式C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "021654",
+      "fund_name": "南方中证全指计算机ETF发起联接C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "018463",
+      "fund_name": "德邦稳盈增长灵活配置混合C",
+      "reason": "最大回撤-29.1%，修复天数203天"
+    },
+    {
+      "fund_code": "004636",
+      "fund_name": "中信建投智信物联网C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "025949",
+      "fund_name": "诺安研究精选股票C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "016389",
+      "fund_name": "汇安均衡成长混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018203",
+      "fund_name": "信澳核心科技混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "017649",
+      "fund_name": "信澳聚优智选混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018376",
+      "fund_name": "金信景气优选混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "020184",
+      "fund_name": "博时中证传媒指数发起式C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "017628",
+      "fund_name": "华商计算机行业量化股票发起式C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "000063",
+      "fund_name": "长盛电子信息主题灵活配置混合",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "013394",
+      "fund_name": "信澳价值精选混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "013386",
+      "fund_name": "信澳优势价值混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "009854",
+      "fund_name": "中加优势企业混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "007812",
+      "fund_name": "淳厚信泽混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "007041",
+      "fund_name": "前海联合泳涛混合C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "012322",
+      "fund_name": "东财云计算增强C",
+      "reason": "最大回撤-25.98%，修复天数128天"
+    },
+    {
+      "fund_code": "024749",
+      "fund_name": "博时中证卫星产业指数C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "006241",
+      "fund_name": "国联医疗健康混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "021398",
+      "fund_name": "广发中证云计算与大数据ETF发起式联接C",
+      "reason": "最大回撤-25.6%，修复天数133天"
+    },
+    {
+      "fund_code": "002067",
+      "fund_name": "诺安精选回报混合",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "014130",
+      "fund_name": "融通中证云计算与大数据主题指数(LOF)C",
+      "reason": "最大回撤-25.74%，修复天数133天"
+    },
+    {
+      "fund_code": "019213",
+      "fund_name": "华富物联世界灵活配置混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019869",
+      "fund_name": "华夏云计算与大数据ETF联接C",
+      "reason": "最大回撤-26.24%，修复天数133天"
+    },
+    {
+      "fund_code": "025693",
+      "fund_name": "南方中证通用航空主题ETF发起联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "014256",
+      "fund_name": "富国中证娱乐主题指数增强(LOF)C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "023779",
+      "fund_name": "华夏中证大数据产业ETF发起式联接D",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "020336",
+      "fund_name": "华夏中证大数据产业ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "017761",
+      "fund_name": "银河智联混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "001223",
+      "fund_name": "鹏华文化传媒娱乐股票",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "016273",
+      "fund_name": "华泰保兴吉年红混合发起C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018135",
+      "fund_name": "富国中证大数据产业ETF发起式联接C",
+      "reason": "最大回撤-24.69%，修复天数171天"
+    },
+    {
+      "fund_code": "008181",
+      "fund_name": "同泰慧利混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018140",
+      "fund_name": "中金先进制造混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "015839",
+      "fund_name": "广发招利混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "002583",
+      "fund_name": "泰信行业精选混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "001732",
+      "fund_name": "广发百发大数据价值混合E",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "018028",
+      "fund_name": "嘉实中证高端装备细分50ETF发起联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "020434",
+      "fund_name": "金信量化精选混合C",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "024689",
+      "fund_name": "富国国证通用航空产业ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "001537",
+      "fund_name": "中加改革红利混合",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "012769",
+      "fund_name": "华夏中证动漫游戏ETF发起式联接C",
+      "reason": "最大回撤-25.07%，修复天数92天"
+    },
+    {
+      "fund_code": "024767",
+      "fund_name": "华宝国证通用航空产业ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "009751",
+      "fund_name": "汇安价值蓝筹混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "024764",
+      "fund_name": "富国上证科创板人工智能ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019748",
+      "fund_name": "金鹰周期优选混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "023521",
+      "fund_name": "博时上证科创板人工智能ETF发起式联接C",
+      "reason": "最大回撤-20.58%，修复天数121天"
+    },
+    {
+      "fund_code": "023552",
+      "fund_name": "银华上证科创板人工智能ETF发起式联接I",
+      "reason": "最大回撤-20.28%，修复天数127天"
+    },
+    {
+      "fund_code": "023551",
+      "fund_name": "银华上证科创板人工智能ETF发起式联接C",
+      "reason": "最大回撤-20.28%，修复天数127天"
+    },
+    {
+      "fund_code": "020206",
+      "fund_name": "民生加银双核动力混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "024410",
+      "fund_name": "鑫元科创AI指数发起式C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "006425",
+      "fund_name": "嘉合锦程混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "025106",
+      "fund_name": "南方上证科创板人工智能指数发起C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "024776",
+      "fund_name": "永赢上证科创板人工智能指数发起E",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "004927",
+      "fund_name": "中航军民融合精选C",
+      "reason": "最大回撤-24.12%，修复天数132天"
+    },
+    {
+      "fund_code": "017889",
+      "fund_name": "东方阿尔法招阳混合E",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "024349",
+      "fund_name": "中欧国证通用航空产业指数发起C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "002051",
+      "fund_name": "诺安创新驱动混合C",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "025069",
+      "fund_name": "景顺长城高端装备股票",
+      "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "290011",
+      "fund_name": "泰信中小盘精选混合",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "000690",
+      "fund_name": "前海开源大海洋混合",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "023531",
+      "fund_name": "永赢国证通用航空产业ETF发起联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "023561",
+      "fund_name": "富达创新驱动混合发起C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "002199",
+      "fund_name": "前海开源中证军工指数C",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "002580",
+      "fund_name": "泰信鑫选灵活配置混合C",
+      "reason": "最大回撤-24.14%，修复天数133天"
+    },
+    {
+      "fund_code": "017458",
+      "fund_name": "长城创新驱动混合C",
+      "reason": "最大回撤-17.17%，修复天数121天"
+    },
+    {
+      "fund_code": "016209",
+      "fund_name": "申万菱信中证军工指数(LOF)C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019199",
+      "fund_name": "华富国泰民安灵活配置混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "016018",
+      "fund_name": "银河康乐股票C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "010741",
+      "fund_name": "汇安核心价值混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "025381",
+      "fund_name": "汇添富国证通用航空产业ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "002136",
+      "fund_name": "广发鑫源混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "024913",
+      "fund_name": "华夏国证通用航空产业ETF发起式联接C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "013044",
+      "fund_name": "富国国家安全主题混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "015642",
+      "fund_name": "银华数字经济股票发起式C",
+      "reason": "最大回撤-22.74%，修复天数134天"
+    },
+    {
+      "fund_code": "501080",
+      "fund_name": "中金科创主题灵活配置混合(LOF)",
+      "reason": "买入规则超过1条"
+    },
+    {
+      "fund_code": "001572",
+      "fund_name": "嘉合磐石C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "019205",
+      "fund_name": "鹏华优质企业混合C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "013479",
+      "fund_name": "金鹰先进制造股票(LOF)C",
+      "reason": "小于1亿"
+    },
+    {
+      "fund_code": "398001",
+      "fund_name": "中海优质成长混合",
+      "reason": "买入规则超过1条"
+    }
+  ]
 }
