@@ -4,12 +4,6 @@ const info = reactive({
   tableData: [],
 });
 
-if (localStorage.getItem('fund_duibi_arr')) {
-  info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
-} else {
-  localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
-}
-
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
   let arr = info.tableData.map(v => {
@@ -20,7 +14,6 @@ const saveFundInfoToLocalstorage = () => {
     };
   });
   localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
-  console.log('触发了保存基金信息到本地存储');
 };
 watch(() => info.tableData, () => {
   saveFundInfoToLocalstorage();
@@ -31,14 +24,15 @@ const getList = async () => {
     const item = info.tableData[i];
 
     let gz_arr = [];
+    info.tableData[i].gszzl = '-';// 预测涨幅
     try {
       let res_1 = await server_fund_amain_getfundgz({
         fund_code: item.fund_code,
       });
       if (res_1.code === 200) {
+        let obj = res_1.data || {};
         /*
-
-        // {date: '2025-04-29', netValue: '1.0000', totalNetValue: '1.0000'}
+        {date: '2025-04-29', netValue: '1.0000', totalNetValue: '1.0000'}
         {
           "fund_code": "023918",
           "fund_name": "华夏国证自由现金流ETF发起式联接C",
@@ -48,20 +42,21 @@ const getList = async () => {
           "gztime": "2026-01-09 15:00"
         }
         */
+        let flag_1 = obj.hasOwnProperty('gztime') && obj.gztime !== '';
+        let flag_2 = obj.hasOwnProperty('gsz') && obj.gsz !== '';
+        let flag_3 = obj.hasOwnProperty('gszzl') && obj.gszzl !== '';
+        if (flag_1 && flag_2 && flag_3) {
+          let curDay = CustomDateFtt(new Date(), 'yyyy-MM-dd');
+          gz_arr.push({
+            date: curDay,
+            netValue: obj.dwjz,
+            totalNetValue: obj.gsz,
+          });
 
-        if (!res_1.gztime) return
-        let curDay = CustomFormatDate(new Date(), 'yyyy-MM-dd');
-        if (res_1.gztime.split(' ')[0] !== curDay) return;
-        if (!res_1.gsz) return;
-
-        gz_arr.push({
-          date: curDay,
-          netValue: res_1.dwjz,
-          totalNetValue: res_1.gsz,
-        });
+          info.tableData[i].gszzl = Math.round(parseFloat(obj.gszzl) * 100 * 100) / 100;
+        }
       }
     } catch (e) {
-      // console.log('获取基金估值失败', e);
     }
 
     await server_fund_jd_HistoryNetValuePageInfo({
@@ -89,7 +84,6 @@ const getList = async () => {
         ...info.tableData[i],
         ...obj_1,
       };
-      console.log(info.tableData[i]);
     });
   }
 };
@@ -99,10 +93,12 @@ const btn_line_1 = (row, index) => {
   info.tableData = info.tableData.filter((item) => item.fund_code !== row.fund_code);
 };
 
-//
-// {date: '2025-04-29', netValue: '1.0000', totalNetValue: '1.0000'}
-
 onMounted(() => {
+  if (localStorage.getItem('fund_duibi_arr')) {
+    info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
+  } else {
+    localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
+  }
   getList();
 });
 </script>
@@ -112,14 +108,26 @@ onMounted(() => {
     <div id="list_wrapper">
       <div class="list_item" v-for="(item, index) in info.tableData" :key="item.fund_code">
         <div class="list_top flex justify-between" style="margin: 0px">
-          <div class="">{{ item.fund_code }}</div>
+          <div class="">
+            <a :href="`https://fund.eastmoney.com/${item.fund_code}.html`" target="_blank"
+              style="text-decoration: none">
+              <span>{{ item.fund_code }}</span>
+            </a>
+          </div>
           <div class="">{{ item.fund_type }}</div>
           <div class="list_del" @click="btn_line_1(item, index)">删除</div>
         </div>
 
         <div class="fund_name_box flex justify-between items-center">
           <div class="truncate flex-1" :title="item.fund_name" style="font-size: 12px">{{ item.fund_name }}</div>
-          <div class="pl-5">{{ item.establishmentCycleDesc }}</div>
+          <div class="pl-5">
+            今日预测涨幅：
+            <template v-if="item.gszzl !== '-'">
+              <span v-if="item.gszzl >= 0" style="color: red;">{{ item.gszzl }}</span>
+              <span v-else style="color: #090;">{{ item.gszzl }}</span>
+            </template>
+            <template v-else>-</template>
+          </div>
         </div>
 
         <!-- <div class="item_box flex justify-between items-center">
@@ -162,6 +170,29 @@ onMounted(() => {
   background-color: #f5f5f5;
   overflow: hidden;
 }
+
+/* 500px一个，超过1500放三个，2000放四个，2500放5个 */
+@media screen and (min-width: 1500px) {
+  .list_item {
+    width: calc(33.33% - 10px);
+    min-width: calc(33.33% - 10px);
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .list_item {
+    width: calc(25% - 10px);
+    min-width: calc(25% - 10px);
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .list_item {
+    width: calc(20% - 10px);
+    min-width: calc(20% - 10px);
+  }
+}
+
 
 .list_top {
   padding: 5px 10px;

@@ -31,13 +31,13 @@ const turnData = () => {
   let res = {
     xAxisData: [], // x轴数据
     line_data_01: [], // 基础数据
-    line_data_05: [], // 5日线数据
-    line_data_10: [], // 10日线数据
-    line_data_20: [], // 20日线数据
-    line_data_30: [], // 30日线数据
-    line_data_60: [], // 60日线数据
-    line_data_top: [], // 上布林线数据
-    line_data_bottom: [], // 下布林线数据
+    line_data_05: [], // 5日数据
+    line_data_10: [], // 10日数据
+    line_data_20: [], // 20日数据
+    line_data_30: [], // 30日数据
+    line_data_60: [], // 60日数据
+    line_data_top: [], // 上轨数据
+    line_data_bottom: [], // 下轨数据
   };
   let titleMap = obj.titleMap || {};
   if (!titleMap.totalNetValueRowName) {
@@ -193,12 +193,12 @@ function RenderChart() {
     legend: {
       show: true,
       top: '1%',
-      data: ['5日线', '10日线', '20日线', '30日线', '60日线', '上布林线', '下布林线'],
+      data: ['5日', '10日', '20日', '30日', '60日', '上轨', '下轨'],
       selected: {
-        // 上布林线: false,
-        // 下布林线: false,
-        '10日线': false,
-        '30日线': false,
+        // 上轨: false,
+        // 下轨: false,
+        '10日': false,
+        '30日': false,
       },
     },
     tooltip: {
@@ -221,7 +221,7 @@ function RenderChart() {
         },
       },
       formatter: function (params) {
-        // 第一行是name剩下的时基础线 以及对应日线的值
+        // 第一行是name剩下的时基础线 以及对应日的值
         let res = params[0].name + '<br>';
         params.forEach((item) => {
           if (item.seriesName === '基础') {
@@ -298,46 +298,46 @@ function RenderChart() {
         // color: '#d9252d',
       },
       // {
-      //   name: '上布林线',
+      //   name: '上轨',
       //   type: 'line',
       //   data: chartData.line_data_top || [],
       // },
       // {
-      //   name: '下布林线',
+      //   name: '下轨',
       //   data: chartData.line_data_bottom || [],
       // },
       {
-        name: '5日线',
+        name: '5日',
         data: chartData.line_data_05 || [],
         color: '#ff9128',
       },
       {
-        name: '10日线',
+        name: '10日',
         data: chartData.line_data_10 || [],
         color: '#f00',
       },
       {
-        name: '20日线',
+        name: '20日',
         data: chartData.line_data_20 || [],
         color: '#de60e2',
       },
       {
-        name: '30日线',
+        name: '30日',
         data: chartData.line_data_30 || [],
         color: '#6ab01c',
       },
       {
-        name: '60日线',
+        name: '60日',
         data: chartData.line_data_60 || [],
         color: '#65c2c4',
       },
       {
-        name: '上布林线',
+        name: '上轨',
         data: chartData.line_data_top || [],
         color: '#ff0000',
       },
       {
-        name: '下布林线',
+        name: '下轨',
         data: chartData.line_data_bottom || [],
         color: '#ff0000',
       }
