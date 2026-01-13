@@ -1,5 +1,8 @@
 const fetch = require('node-fetch');
 
+const num_huiche = -20;// 仅能接受20%的回撤
+const num_day_xiufu = 100;// 仅能接受100天的修复时间
+
 const no_hege = [];// 不合格的基金
 
 // 删除基本信息
@@ -51,6 +54,16 @@ const getFundDetailPageInfoWithNoPin = async (fund_code, item) => {
         reason: '1-3-6月排名靠后'
       })
       console.log(`${fund_code} 1-3-6月排名靠后`);
+      return false;
+    }
+
+    const rate_year_1 = perfList.find(v1 => v1.name === '近1年')?.rate || '';
+    if(rate_year_1!=='' && parseFloat(rate_year_1) < 6){
+      no_hege.push({
+        ...item,
+        reason: '1年收益率低于6%'
+      })
+      console.log(`${fund_code} 1年收益率低于6%`);
       return false;
     }
 
@@ -139,7 +152,7 @@ const isFundGz = async (fund_code, item) => {
     let u = `https://fundgz.1234567.com.cn/js/${fund_code}.js?rt=${+new Date()}`;
     const response = await fetch(u);
     const data = await response.text();
-    
+
     if (data.length > 250) {
       no_hege.push({
         ...item,
@@ -166,7 +179,7 @@ const getFundDetailChartPageInfo = async (fund_code, item) => {
     let u = `${base_url}reqData={"chartType":7,"fundCode":"${fund_code}","dataCycle":4,"disclosureType":1}`;
     const response = await fetch(u);
     const data = await response.json();
-    
+
     if (data.success) {
       let resultData = data.resultData || {};
       let datas = resultData.datas || {};
@@ -180,8 +193,8 @@ const getFundDetailChartPageInfo = async (fund_code, item) => {
           f_2 = parseFloat(item.value);
         }
       });
-      
-      if (f_1 > -25 && f_2 < 120) {
+
+      if (f_1 > num_huiche && f_2 < num_day_xiufu) {
         return true;
       }else{
         no_hege.push({
@@ -190,7 +203,7 @@ const getFundDetailChartPageInfo = async (fund_code, item) => {
         })
       }
     }
-    
+
     return false;
   } catch (err) {
     no_hege.push({
@@ -206,14 +219,14 @@ const filterBuyableFunds = async (funds) => {
   if (funds.length === 0) {
     return [];
   }
-  
+
   const result = [];
   for (let i = 0; i < funds.length; i++) {
     let item = funds[i];
     let fund_code = item.fund_code;
     console.log(`正在处理第 ${i + 1} 个基金：${fund_code} - ${item.fund_name}`);
 
-    // 获取基本信息，删除不可买、删除小于1亿、删除1-3-6月排名靠后
+    // 获取基本信息，删除不可买、删除小于1亿、删除1-3-6月排名靠后、删除1年收益率低于6%
     let isBuyable = await getFundDetailPageInfoWithNoPin(fund_code,item);
     if (!isBuyable) {
       continue;

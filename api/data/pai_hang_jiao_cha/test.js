@@ -12,10 +12,12 @@ const info = {
 };
 
 async function test() {
-  let { result, no_hege } = await filterBuyableFunds(rizhouDaata);
+  let { result=[], no_hege=[] } = await filterBuyableFunds(rizhouDaata);
+  info['入选'] = result.length;
+  info['不满足'] = no_hege.length;
   info.tableList = result;
   info.no_hege = no_hege;
-  
+
   console.log(info.tableList.length, '可买入交叉排行总数');
   console.log(info.no_hege.length, '不满足条件的基金总数');
 

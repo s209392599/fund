@@ -2,6 +2,10 @@
 2026年01月12日17:35:07 后台的基金
 [{"fund_code":"023918","fund_name":"华夏国证自由现金流ETF发起式联接C","fund_type":"红利"},{"fund_code":"019261","fund_name":"富国恒生红利ETF联接C","fund_type":"红利"},{"fund_code":"008164","fund_name":"南方红利低波","fund_type":"红利"},{"fund_code":"020867","fund_name":"华安恒生港股通中国央企红利ETF发起式联接C","fund_type":"红利"},{"fund_code":"020989","fund_name":"南方恒生科技指数C","fund_type":"恒生科技"},{"fund_code":"020256","fund_name":"中欧中证机器人指数发起C","fund_type":"科技"},{"fund_code":"012863","fund_name":"汇添富中证电池主题ETF联接C","fund_type":"科技"},{"fund_code":"002112","fund_name":"德邦鑫星价值灵活配置混合C","fund_type":"CPO"},{"fund_code":"023765","fund_name":"华夏中证5G通信主题ETF联接D","fund_type":"通信"},{"fund_code":"022425","fund_name":"广发中证A500ETF联接C","fund_type":"宽基"},{"fund_code":"011609","fund_name":"易方达上证科创50联接C","fund_type":"宽基"},{"fund_code":"017513","fund_name":"广发北证50成份指数C","fund_type":"宽基"},{"fund_code":"024203","fund_name":"永赢制造升级智选混合发起C","fund_type":"量化"},{"fund_code":"021991","fund_name":"中加专精特新量化选股混合发起式C","fund_type":"量化"},{"fund_code":"016858","fund_name":"国金量化多因子股票C","fund_type":"量化"},{"fund_code":"022365","fund_name":"永赢科技智选混合发起C","fund_type":"量化"},{"fund_code":"015790","fund_name":"永赢高端装备智选混合发起C","fund_type":"量化"},{"fund_code":"024195","fund_name":"永赢国证商用卫星通信产业ETF发起联接C","fund_type":"通信"},{"fund_code":"016702","fund_name":"银华海外数字经济量化选股混合发起式(QDII)C","fund_type":"美股"},{"fund_code":"012922","fund_name":"易方达全球成长精选混合(QDII)人民币C","fund_type":"美股"},{"fund_code":"003027","fund_name":"安信新价值混合C","fund_type":"债券"},{"fund_code":"019088","fund_name":"工银中证稀有金属主题ETF-C","fund_type":"金属"},{"fund_code":"017574","fund_name":"华夏中证机床ETF发起式联接C","fund_type":"设备"}]
 
+
+012922-易方达全球成长精选混合(QDII)C
+
+
 小金属的，那么其它的呢
 https://data.eastmoney.com/center/ 数据中心里面找
 https://quote.eastmoney.com/center/gridlist.html#boards2-90.BK1027 行业板块

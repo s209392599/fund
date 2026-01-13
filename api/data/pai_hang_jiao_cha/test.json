@@ -1,28 +1,20 @@
 {
   "tableList": [
     {
-      "fund_code": "023754",
-      "fund_name": "永赢信息产业智选混合发起C"
-    },
-    {
       "fund_code": "018590",
       "fund_name": "银华体育文化灵活配置混合C"
-    },
-    {
-      "fund_code": "015790",
-      "fund_name": "永赢高端装备智选混合发起C"
     },
     {
       "fund_code": "019276",
       "fund_name": "长城智能产业混合C"
     },
     {
-      "fund_code": "011904",
-      "fund_name": "南方领航优选混合C"
-    },
-    {
       "fund_code": "011148",
       "fund_name": "南方军工改革灵活配置混合C"
+    },
+    {
+      "fund_code": "024195",
+      "fund_name": "永赢国证商用卫星通信产业ETF发起联接C"
     },
     {
       "fund_code": "016924",
@@ -31,14 +23,6 @@
     {
       "fund_code": "023715",
       "fund_name": "华夏中证动漫游戏ETF发起式联接D"
-    },
-    {
-      "fund_code": "012729",
-      "fund_name": "国泰中证动漫游戏ETF联接C"
-    },
-    {
-      "fund_code": "022481",
-      "fund_name": "国泰中证动漫游戏ETF联接E"
     },
     {
       "fund_code": "024246",
@@ -97,6 +81,8 @@
       "fund_name": "永赢制造升级智选混合发起C"
     }
   ],
+  "入选": 20,
+  "不满足": 131,
   "no_hege": [
     {
       "fund_code": "020065",
@@ -107,6 +93,11 @@
       "fund_code": "019116",
       "fund_name": "东财卓越成长C",
       "reason": "不是可定投基金"
+    },
+    {
+      "fund_code": "023754",
+      "fund_name": "永赢信息产业智选混合发起C",
+      "reason": "最大回撤-24.71%，修复天数27天"
     },
     {
       "fund_code": "013346",
@@ -344,6 +335,11 @@
       "reason": "小于1亿"
     },
     {
+      "fund_code": "015790",
+      "fund_name": "永赢高端装备智选混合发起C",
+      "reason": "最大回撤-17.78%，修复天数119天"
+    },
+    {
       "fund_code": "025949",
       "fund_name": "诺安研究精选股票C",
       "reason": "小于1亿"
@@ -454,6 +450,11 @@
       "reason": "小于1亿"
     },
     {
+      "fund_code": "011904",
+      "fund_name": "南方领航优选混合C",
+      "reason": "最大回撤-13.06%，修复天数106天"
+    },
+    {
       "fund_code": "014256",
       "fund_name": "富国中证娱乐主题指数增强(LOF)C",
       "reason": "小于1亿"
@@ -537,6 +538,16 @@
       "fund_code": "012769",
       "fund_name": "华夏中证动漫游戏ETF发起式联接C",
       "reason": "最大回撤-25.07%，修复天数92天"
+    },
+    {
+      "fund_code": "012729",
+      "fund_name": "国泰中证动漫游戏ETF联接C",
+      "reason": "最大回撤-24.05%，修复天数92天"
+    },
+    {
+      "fund_code": "022481",
+      "fund_name": "国泰中证动漫游戏ETF联接E",
+      "reason": "最大回撤-24.04%，修复天数92天"
     },
     {
       "fund_code": "024767",
