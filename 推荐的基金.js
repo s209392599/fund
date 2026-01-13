@@ -5,6 +5,12 @@
 
 012922-易方达全球成长精选混合(QDII)C
 
+# 在 nginx 配置中查找类似内容
+if ($http_user_agent ~* "(mobile|android|iphone|ipad)") {
+    # ...
+}
+
+
 
 小金属的，那么其它的呢
 https://data.eastmoney.com/center/ 数据中心里面找
