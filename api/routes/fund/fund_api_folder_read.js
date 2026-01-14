@@ -1,4 +1,4 @@
-// api文件夹下暴露过来的一些方法  fund_apifolder_开头
+// api文件夹下 文件的读取
 const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');

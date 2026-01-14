@@ -21,5 +21,10 @@
   },
   "[less]": {
     "editor.defaultFormatter": "Vue.volar"
-  }
+  },
+  "liveServer.settings.ignoreFiles": [
+    "static/**",
+    "node_modules/**",
+    "*.log"
+  ]
 }

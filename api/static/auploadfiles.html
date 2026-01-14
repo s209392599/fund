@@ -86,7 +86,12 @@
     <div class="opera_con">
       <!-- 基金-前台项目 -->
       <div class="upload_block active" data-sign="1">
-
+        <div>选择dist文件夹</div>
+        <form id="upload_form_1" action="" onsubmit="return false;">
+          <input type="file" id="file_1" name="file" multiple webkitdirectory />
+          <!-- <button id="upload_1">开始上传</button> -->
+          <button type="submit">开始上传</button>
+        </form>
       </div>
 
       <!-- 基金-后台项目 -->
@@ -134,6 +139,46 @@
         document.querySelector('.upload_block[data-sign="' + active_sign + '"]').classList.add('active');
       });
     });
+
+    // 上传后台关系系统的代码 - 为表单添加提交事件监听器
+    // <input type="file" id="file_1" webkitdirectory multiple>
+    document.getElementById('upload_form_1').addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const files = document.getElementById('file_1').files;
+      const formData = new FormData();
+
+      // 遍历所有文件
+      let preStr = '';
+      if (files.length) {
+        let relativePath = files[0].webkitRelativePath || files[0].name;
+        preStr = relativePath.split('/')[0] + '/';
+      }
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        let relativePath = file.webkitRelativePath || file.name;
+        if (preStr) {
+          relativePath = relativePath.replace(preStr, '');
+        }
+        // 关键：使用路径作为字段名的一部分
+        formData.append(`files[${relativePath}]`, file);
+      }
+
+      // 添加额外信息
+      formData.append('uploadInfo', JSON.stringify({
+        timestamp: new Date().toISOString(),
+        totalFiles: files.length
+      }));
+
+      // 发送请求
+      fetch('http://localhost:9999/fund_apifolder_fundmanager', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => console.log('Success:', data));
+    });
+
 
   </script>
 </body>

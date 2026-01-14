@@ -9,7 +9,7 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm Z', // 时间格式
       watch: ['app.js', 'routes/**/*.js'], // 监控 app.js 和 routes 下所有文件
       force: true, // 确保覆盖默认监听规则
-      ignore_watch: ['node_modules'], // 明确忽略 node_modules
+      ignore_watch: ['node_modules','static/*'], // 明确忽略 node_modules
       watch_options: {
         followSymlinks: false, // 禁用符号链接（可选）
         usePolling: true, // 强制轮询（解决部分文件系统问题）
@@ -27,7 +27,7 @@ module.exports = {
       time: true, // 显示时间戳
 
       // ---------------------- 下面是一个组合，现在用watch直接替代
-      watch: ['timer.js'], // 仅监控 timer.js 文件
+      watch: ['timer.js','static/*'], // 仅监控 timer.js 文件
       force: true, // 确保覆盖默认监听规则
       // watch: true,
       // ignore_watch: [
