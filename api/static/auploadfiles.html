@@ -86,17 +86,20 @@
     <div class="opera_con">
       <!-- 基金-前台项目 -->
       <div class="upload_block active" data-sign="1">
-        <div>选择dist文件夹</div>
+        <div>选择dist文件夹即可</div>
         <form id="upload_form_1" action="" onsubmit="return false;">
           <input type="file" id="file_1" name="file" multiple webkitdirectory />
-          <!-- <button id="upload_1">开始上传</button> -->
           <button type="submit">开始上传</button>
         </form>
       </div>
 
       <!-- 基金-后台项目 -->
       <div class="upload_block" data-sign="2">
-        2
+        <div>选择dist文件夹即可</div>
+        <form id="upload_form_2" action="" onsubmit="return false;">
+          <input type="file" id="file_2" name="file" multiple webkitdirectory />
+          <button type="submit">开始上传</button>
+        </form>
       </div>
 
       <!-- 上传文件 -->
@@ -122,6 +125,7 @@
 
   <script>
     let active_sign = '1';
+    const baseUrl = 'http://127.0.0.1:9999';
 
     // opera_type 点击事件 opera_type切换到新的active
     document.querySelectorAll('.opera_type').forEach(item => {
@@ -140,12 +144,10 @@
       });
     });
 
-    // 上传后台关系系统的代码 - 为表单添加提交事件监听器
-    // <input type="file" id="file_1" webkitdirectory multiple>
-    document.getElementById('upload_form_1').addEventListener('submit', async (event) => {
-      event.preventDefault();
+    function getFormData(formId) {
+      const form = document.getElementById(formId);
 
-      const files = document.getElementById('file_1').files;
+      const files = document.getElementById(formId).files;
       const formData = new FormData();
 
       // 遍历所有文件
@@ -170,16 +172,47 @@
         totalFiles: files.length
       }));
 
-      // 发送请求
-      fetch('http://localhost:9999/fund_apifolder_fundmanager', {
+
+      return formData;
+    }
+
+    // 更新 基金-前端项目
+    document.getElementById('upload_form_1').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const formData = getFormData('file_1');
+      fetch(baseUrl + '/fund_apifolder_fundamain', {
         method: 'POST',
         body: formData
       })
         .then(response => response.json())
-        .then(data => console.log('Success:', data));
+        .then(data => {
+          console.log('Success:', data);
+          alert('上传成功');
+          const input = document.getElementById('file_1');
+          if (input) {
+            input.value = '';
+          }
+        });
     });
 
-
+    // 更新 基金-后台管理
+    document.getElementById('upload_form_2').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const formData = getFormData('file_2');
+      fetch(baseUrl + '/fund_apifolder_fundmanager', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+          alert('上传成功');
+          const input = document.getElementById('file_2');
+          if (input) {
+            input.value = '';
+          }
+        });
+    });
   </script>
 </body>
 

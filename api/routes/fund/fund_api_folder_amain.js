@@ -3,6 +3,7 @@ const multer = require('multer');
 const router = express.Router();
 const fs = require('fs');
 const path = require('path');
+const iconv = require("iconv-lite");// 处理文件名编码
 
 // 深度删除文件或文件夹的nodejs公共方法，只需要批量传入文件或者文件夹的路径
 function deleteFile(filePath) {
@@ -18,6 +19,18 @@ function deleteFile(filePath) {
       }
     });
     fs.rmdirSync(filePath);
+  }
+}
+
+function decodeFileName(name) {
+  if (!name) {
+    return name;
+  }
+  try {
+    const buf = Buffer.from(name, 'binary');
+    return iconv.decode(buf, 'utf8');
+  } catch (e) {
+    return name;
   }
 }
 
@@ -52,10 +65,10 @@ const storage = multer.diskStorage({
 
     if (fieldName.startsWith('files[') && fieldName.endsWith(']')) {
       const fullPath = fieldName.substring(6, fieldName.length - 1);
-      const fileName = path.basename(fullPath);
+      const fileName = decodeFileName(path.basename(fullPath));
       cb(null, fileName);
     } else {
-      cb(null, file.originalname);
+      cb(null, decodeFileName(file.originalname));
     }
   }
 });
@@ -94,14 +107,14 @@ router.post('/fund_apifolder_fundmanager2222',
 
         const files = req.files || [];
         const fileArr = files.map(file => ({
-          originalName: file.originalname,
+          originalName: decodeFileName(file.originalname),
           savedPath: file.path,
           size: file.size
         }));
 
         console.log('上传的文件：');
         files.forEach(file => {
-          console.log(`  ${file.originalname} -> ${file.path}`);
+          console.log(`  ${decodeFileName(file.originalname)} -> ${file.path}`);
         });
 
         resolve({ success: true, files: fileArr });
@@ -122,7 +135,6 @@ router.post('/fund_apifolder_fundmanager2222',
 );
 
 
-// ... existing code ...
 // 处理任意字段名的文件
 router.post('/fund_apifolder_fundmanager',
   (req, res, next) => {
@@ -153,14 +165,14 @@ router.post('/fund_apifolder_fundmanager',
     try {
       const files = req.files || [];
       const fileArr = files.map(file => ({
-        originalName: file.originalname,
+        originalName: decodeFileName(file.originalname),
         savedPath: file.path,
         size: file.size
       }));
 
       console.log('上传的文件：');
       files.forEach(file => {
-        console.log(`  ${file.originalname} -> ${file.path}`);
+        console.log(`  ${decodeFileName(file.originalname)} -> ${file.path}`);
       });
 
       res.json({ success: true, files: fileArr });
