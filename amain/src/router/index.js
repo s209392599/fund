@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Login from '@/views/login/login.vue';
+import LoginBoxue from '@/views/login/login_boxue.vue';
 
 const routes = [
   {
@@ -13,9 +14,9 @@ const routes = [
   //   component: () => import('@/views/preview/preview.vue'),
   // },
   {
-    path: '/login',
-    name: 'Login_linshi',
-    component: Login,
+    path: '/boxue',
+    name: 'Login_boxue',
+    component: LoginBoxue,
   },
   {
     path: '/preview',
