@@ -278,6 +278,10 @@ const btn_copy_data = () => {
   });
   fallbackCopyText(JSON.stringify(str));
 }
+const btn_copy_tabledata = () => {
+  fallbackCopyText(info.tableData);
+}
+
 </script>
 
 <template>
@@ -290,6 +294,7 @@ const btn_copy_data = () => {
       <el-button class="top_btn btn_5" @click="query_list()">恢复到初始化数据</el-button>
       <el-button class="top_btn btn_3" @click="btn_delete_all()" :disabled="!info.tableData.length">全部删除</el-button>
       <el-button class="top_btn btn_5" @click="btn_copy_data()">复制数据</el-button>
+      <el-button class="top_btn btn_5" @click="btn_copy_tabledata()">复制(表格)</el-button>
     </div>
 
     <!--

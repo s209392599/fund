@@ -208,6 +208,38 @@ const btn_fn_04 = () => {
   });
   fallbackCopyText(JSON.stringify(str));
 }
+// 导入基金
+const btn_fn_05 = () => {
+  var str = prompt(`示例：[{"fund_code": "", "fund_name": "", "fund_type": ""}]`, "");
+  if (str !== null) {
+    str = str.trim();
+    console.log('str', str);
+    /*
+[
+  {"fund_code": ""},
+  {"fund_code": "", "fund_name": "", "fund_type": ""},
+  {"fund_code": "012345", "fund_name": "", "fund_type": ""},
+  {"fund_code": "012365", "fund_name": "", "fund_type": ""},
+  {"fund_code": "123445", "fund_name": "测试", "fund_type": "故意"},
+  {"fund_code": "015790", "fund_name": "测试1", "fund_type": "故意2"}
+]
+    */
+    var arr = [];
+    try {
+      arr = JSON.parse(str);
+    } catch (e) {
+      ElMessage.error('无法解析');
+      return false;
+    }
+    if (Array.isArray(arr)) {
+    } else {
+      ElMessage.error('不是数组字符串');
+      return false;
+    }
+    info.tableData = [...arr];
+    ElMessage.success('添加完毕');
+  }
+}
 </script>
 
 <template>
@@ -217,6 +249,7 @@ const btn_fn_04 = () => {
       <el-button type="primary" size="small" @click="updateOrder()">更新服务器排序</el-button>
       <el-button type="primary" size="small" @click="btn_fn_03()">复制基金号</el-button>
       <el-button type="primary" size="small" @click="btn_fn_04()">复制基金数组</el-button>
+      <el-button type="primary" size="small" @click="btn_fn_05()">导入基金</el-button>
     </div>
 
     <VueDraggable v-model="info.tableData" :animation="150" target="tbody" :disabled="false" @end="onDragEnd"
@@ -269,7 +302,7 @@ const btn_fn_04 = () => {
         </el-table-column>
 
         <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
-        <el-table-column prop="fixed" label="定投金额" width="70" align="right" />
+        <el-table-column prop="fund_fixed" label="定投金额" width="70" align="right" />
         <el-table-column prop="point_down" label="低点" width="100" align="right" />
         <el-table-column prop="point_top" label="高点" width="100" align="right" />
         <el-table-column prop="fund_desc" label="备注" width="300" />
