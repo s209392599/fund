@@ -53,7 +53,8 @@ const getList = async () => {
             totalNetValue: obj.gsz,
           });
 
-          info.tableData[i].gszzl = Math.round(parseFloat(obj.gszzl) * 100 * 100) / 100;
+          // info.tableData[i].gszzl = Math.round(parseFloat(obj.gszzl) * 100 * 100) / 100;
+          info.tableData[i].gszzl = parseFloat(obj.gszzl);
         }
       }
     } catch (e) {
@@ -80,10 +81,15 @@ const getList = async () => {
         obj_1.zheng =
           ((count / (majorChartPointList.length - 1)) * 100).toFixed(2) + '%';
       }
+      if (gz_arr.length > 0 && obj_1?.netValueList?.length > 0) {
+        obj_1.netValueList = obj_1.netValueList.concat(gz_arr);
+      }
       info.tableData[i] = {
         ...info.tableData[i],
         ...obj_1,
       };
+
+      console.log('i', info.tableData[i]);
     });
   }
 };
@@ -123,8 +129,8 @@ onMounted(() => {
           <div class="pl-5">
             今日预测涨幅：
             <template v-if="item.gszzl !== '-'">
-              <span v-if="item.gszzl >= 0" style="color: red;">{{ item.gszzl }}</span>
-              <span v-else style="color: #090;">{{ item.gszzl }}</span>
+              <span v-if="item.gszzl >= 0" style="color: red;">{{ item.gszzl }}%</span>
+              <span v-else style="color: #090;">{{ item.gszzl }}%</span>
             </template>
             <template v-else>-</template>
           </div>
