@@ -182,6 +182,16 @@ function RenderChart() {
   let xAxisData = chartData.xAxisData || [];
   const yAxisRange = calculateYAxisRange(chartData.line_data_01);
 
+
+  let markLine = [];
+  if (![null, undefined, '0'].includes(props.data.point_top)) {
+    markLine.push({ yAxis: parseFloat(props.data.point_top), name: '高警戒线', lineStyle: { color: 'red' } });
+  }
+  if (![null, undefined, '0'].includes(props.data.point_down)) {
+    markLine.push({ yAxis: parseFloat(props.data.point_down), name: '低警戒线', lineStyle: { color: 'green' } });
+  }
+
+
   let option = {
     grid: {
       top: '30',
@@ -295,17 +305,15 @@ function RenderChart() {
       {
         name: '基础',
         data: chartData.line_data_01 || [],
+
+        markLine: {
+          symbol: 'none',
+          lineStyle: { color: '#FF4500', width: 1, type: 'solid' },// type: 'dashed', width: 2
+          label: { show: true, position: 'end' },
+          data: markLine
+        }
         // color: '#d9252d',
       },
-      // {
-      //   name: '上轨',
-      //   type: 'line',
-      //   data: chartData.line_data_top || [],
-      // },
-      // {
-      //   name: '下轨',
-      //   data: chartData.line_data_bottom || [],
-      // },
       {
         name: '5日',
         data: chartData.line_data_05 || [],

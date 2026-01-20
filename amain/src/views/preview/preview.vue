@@ -16,6 +16,15 @@ const info = reactive({
       desc: '',
     },
     {
+      id: 4,
+      show: true,
+      name: '60日均线',
+      component: markRaw(
+        defineAsyncComponent(() => import('./tabs/preview_04.vue'))
+      ),
+      desc: '',
+    },
+    {
       id: 7,
       show: true,
       name: '基金维护',
