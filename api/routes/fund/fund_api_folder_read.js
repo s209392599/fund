@@ -78,8 +78,8 @@ router.post('/fund_apifolder_jiaichapaihang', async (req, res) => {
 
 // 根据关键词返回基金
 router.post('/fund_apifolder_query_keywords', async (req, res) => {
-  const { text = '' } = req.body;
-  if (text.length < 2) {
+  let { text = '' } = req.body;
+  if ((text.replace(/,/g, '')).length < 2) {
     return res.send({
       code: 400,
       msg: '未正确获取到搜索关键词',
@@ -90,17 +90,23 @@ router.post('/fund_apifolder_query_keywords', async (req, res) => {
     filePath: 'data/fund_all/data.json',
     turnDataFn: (json_data) => {
       let arr = [];
+      let text_arr = text.split(',');
+      console.log('text_arr',text_arr);
       json_data.forEach((item) => {
         let fund_name = item[1];
-        let flag_1 = fund_name.includes(text);
-        // let flag_2 = noFundCode.includes(item[0]);
-        if(flag_1){
-          arr.push({
-            fund_code: item[0],
-            fund_name: item[1],
-            fund_type: item[2],
-          });
-        }
+        text_arr.forEach((text) => {
+          text = text.trim();
+          if (text.length > 0) {
+            let flag_1 = fund_name.includes(text);
+            if(flag_1){
+              arr.push({
+                fund_code: item[0],
+                fund_name: item[1],
+                fund_type: item[2],
+              });
+            }
+          }
+        });
       });
       return arr;
     },
