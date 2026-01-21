@@ -287,7 +287,7 @@ const btn_fn_05 = () => {
           </template>
         </el-table-column>
 
-        <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
+        <el-table-column prop="fund_name" label="基金名称" :width="width_name" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
             <span v-if="row.sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span>
             <span v-else>{{ row.fund_name }}</span>

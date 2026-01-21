@@ -8,6 +8,11 @@ http://150.158.175.108:9999/fund_manager/index.html#/
 http://150.158.175.108:9999/auploadfiles.html
 
 
+https://data.eastmoney.com/report/industry.jshtml 行业研报
+https://finance.eastmoney.com/a/cywjh.html 资讯精华
+
+
+
 成立时间不到半年
 删除30天
 

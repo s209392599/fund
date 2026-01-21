@@ -21,6 +21,14 @@ https://webquotepic.eastmoney.com/GetPic.aspx?id=899001_TB&imageType=FFRS&type=F
 
 const pre_now = `https://webquotepic.eastmoney.com/GetPic.aspx?`;
 
+// https://data.eastmoney.com/bkzj/hy.html  资金流入流出在这里找基金号
+
+
+// https://webquotepic.eastmoney.com/GetPic.aspx?nid=90.BK1033&imageType=rs 电池涨幅
+// https://webquotepic.eastmoney.com/GetPic.aspx?nid=90.BK1033&imagetype=FFRS&type=ffr 电池主力净流入
+// https://webquotepic.eastmoney.com/GetPic.aspx?nid=90.BK1033&imagetype=FFRS1&type=ffr
+
+
 const info = reactive({
   list: [
     {
@@ -94,6 +102,54 @@ const info = reactive({
     {
       name: '净流出',
       zhang_now: pre_now + 'id=899001_TB&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '上证指数主力静流入',
+      zhang_now: pre_now + 'nid=1.000001&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '深证成指主力静流入',
+      zhang_now: pre_now + 'nid=0.399001&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '沪深300主力静流入',
+      zhang_now: pre_now + 'nid=1.000300&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '上证50主力静流入',
+      zhang_now: pre_now + 'nid=1.000016&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '科创50主力静流入',
+      zhang_now: pre_now + 'nid=1.000688&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '中证A500主力静流入',
+      zhang_now: pre_now + 'nid=1.000510&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '北证50主力静流入',
+      zhang_now: pre_now + 'nid=0.899050&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '创业板主力静流入',
+      zhang_now: pre_now + 'nid=0.399006&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '半导体主力静流入',
+      zhang_now: pre_now + 'nid=90.BK1036&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '电池今日涨幅',
+      zhang_now: pre_now + 'nid=90.BK1033&imageType=rs', // 今日涨幅
+    },
+    {
+      name: '电池主力静流入',
+      zhang_now: pre_now + 'nid=90.BK1033&imageType=FFRS&type=FFR', // 今日涨幅
+    },
+    {
+      name: '人形机器人主力静流入',
+      zhang_now: pre_now + 'nid=90.BK1184&imageType=FFRS&type=FFR', // 今日涨幅
     },
     {
       name: '日经225',

@@ -142,7 +142,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="fund_name" label="Name" :width="width_name" sortable show-overflow-tooltip>
+      <el-table-column prop="fund_name" label="基金名称" :width="width_name" sortable show-overflow-tooltip>
         <template v-slot="{ row }">
           <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{row.fund_name}}</span>
           <span v-else-if="(row.fund_desc || '').includes('二级推荐')"
