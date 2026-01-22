@@ -1,27 +1,17 @@
 [
   {
+    "fund_code": "000001",
+    "fund_name": "华夏成长混合",
+    "fund_type": "混合型-灵活"
+  },
+  {
     "fund_code": "000063",
     "fund_name": "长盛电子信息主题灵活配置混合",
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "000124",
-    "fund_name": "华宝服务优选混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "000165",
     "fund_name": "国投瑞银策略精选混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "000214",
-    "fund_name": "广发成长优选混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "000279",
-    "fund_name": "华商红利优选混合",
     "fund_type": "混合型-灵活"
   },
   {
@@ -32,11 +22,6 @@
   {
     "fund_code": "000545",
     "fund_name": "中邮核心竞争力灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "000584",
-    "fund_name": "新华鑫益灵活配置混合C",
     "fund_type": "混合型-灵活"
   },
   {
@@ -52,21 +37,6 @@
   {
     "fund_code": "000603",
     "fund_name": "易方达创新驱动灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "000634",
-    "fund_name": "富国天盛灵活配置基金",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "000754",
-    "fund_name": "华宝量化对冲混合C",
-    "fund_type": "混合型-绝对收益"
-  },
-  {
-    "fund_code": "000763",
-    "fund_name": "工银新财富灵活配置混合",
     "fund_type": "混合型-灵活"
   },
   {
@@ -90,18 +60,8 @@
     "fund_type": "股票型"
   },
   {
-    "fund_code": "000986",
-    "fund_name": "太平灵活配置",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "001069",
     "fund_name": "华泰柏瑞消费成长混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001111",
-    "fund_name": "中欧瑾泉灵活配置混合C",
     "fund_type": "混合型-灵活"
   },
   {
@@ -130,16 +90,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "001157",
-    "fund_name": "国联安睿祺灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001165",
-    "fund_name": "中欧琪和灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "001174",
     "fund_name": "中欧瑾和灵活配置混合C",
     "fund_type": "混合型-灵活"
@@ -152,11 +102,6 @@
   {
     "fund_code": "001197",
     "fund_name": "长盛转型升级主题灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001222",
-    "fund_name": "鹏华外延成长混合",
     "fund_type": "混合型-灵活"
   },
   {
@@ -180,19 +125,9 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "001406",
-    "fund_name": "东方红策略精选混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "001421",
     "fund_name": "南方量化成长",
     "fund_type": "股票型"
-  },
-  {
-    "fund_code": "001428",
-    "fund_name": "工银瑞信灵活配置混合B",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "001449",
@@ -205,24 +140,9 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "001510",
-    "fund_name": "富国新动力灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001562",
-    "fund_name": "易方达瑞和灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "001577",
     "fund_name": "嘉实低价策略股票",
     "fund_type": "股票型"
-  },
-  {
-    "fund_code": "001636",
-    "fund_name": "万家瑞益灵活配置混合C",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "001637",
@@ -240,38 +160,8 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "001711",
-    "fund_name": "安信新趋势混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001724",
-    "fund_name": "申万菱信多策略灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001745",
-    "fund_name": "易方达瑞富灵活配置混合I",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001756",
-    "fund_name": "嘉实策略优选混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "001759",
     "fund_name": "嘉实成长增强混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001763",
-    "fund_name": "广发多策略混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "001817",
-    "fund_name": "易方达瑞兴灵活配置混合I",
     "fund_type": "混合型-灵活"
   },
   {
@@ -283,11 +173,6 @@
     "fund_code": "001881",
     "fund_name": "中欧新趋势混合E",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "001887",
-    "fund_name": "中欧价值智选混合E",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "001891",
@@ -305,28 +190,8 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "001928",
-    "fund_name": "华夏消费升级灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "001966",
     "fund_name": "圆信永丰兴源灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "002010",
-    "fund_name": "中欧瑾通灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "002031",
-    "fund_name": "华夏策略混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "002049",
-    "fund_name": "融通新机遇灵活配置混合",
     "fund_type": "混合型-灵活"
   },
   {
@@ -348,26 +213,6 @@
     "fund_code": "002112",
     "fund_name": "德邦鑫星价值灵活配置混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "002144",
-    "fund_name": "华安新优选灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "002147",
-    "fund_name": "长安鑫益增强混合C",
-    "fund_type": "混合型-偏债"
-  },
-  {
-    "fund_code": "002196",
-    "fund_name": "金鹰技术领先灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "002228",
-    "fund_name": "长城新优选混合C",
-    "fund_type": "混合型-偏债"
   },
   {
     "fund_code": "002233",
@@ -392,11 +237,6 @@
   {
     "fund_code": "002291",
     "fund_name": "诺安安鑫灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "002364",
-    "fund_name": "华安安康灵活配置混合C",
     "fund_type": "混合型-灵活"
   },
   {
@@ -425,11 +265,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "002665",
-    "fund_name": "万家瑞和灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "002872",
     "fund_name": "华夏智胜价值成长C",
     "fund_type": "股票型"
@@ -455,11 +290,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "003412",
-    "fund_name": "鹏华弘康灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "003494",
     "fund_name": "富国天惠成长混合(LOF)C",
     "fund_type": "混合型-偏股"
@@ -475,24 +305,9 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "003693",
-    "fund_name": "大成景尚灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "003962",
     "fund_name": "易方达瑞程灵活配置混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "004011",
-    "fund_name": "华泰柏瑞鼎利灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "004100",
-    "fund_name": "鹏华安益增强混合D",
-    "fund_type": "混合型-偏债"
   },
   {
     "fund_code": "004119",
@@ -512,26 +327,6 @@
   {
     "fund_code": "004234",
     "fund_name": "中欧数据挖掘多因子混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "004235",
-    "fund_name": "中欧价值智选混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "004252",
-    "fund_name": "国泰安益灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "004263",
-    "fund_name": "华安沪港深机会灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "004335",
-    "fund_name": "华宝新飞跃灵活配置混合",
     "fund_type": "混合型-灵活"
   },
   {
@@ -585,19 +380,9 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "005216",
-    "fund_name": "南方全天候策略(FOF)C",
-    "fund_type": "FOF-稳健型"
-  },
-  {
     "fund_code": "005228",
     "fund_name": "汇添富港股通专注成长",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "005236",
-    "fund_name": "银华食品饮料量化股票发起式C",
-    "fund_type": "股票型"
   },
   {
     "fund_code": "005245",
@@ -617,11 +402,6 @@
   {
     "fund_code": "005276",
     "fund_name": "中欧创新成长灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "005294",
-    "fund_name": "诺德新宜灵活配置混合",
     "fund_type": "混合型-灵活"
   },
   {
@@ -725,11 +505,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "005970",
-    "fund_name": "国泰消费优选股票",
-    "fund_type": "股票型"
-  },
-  {
     "fund_code": "006058",
     "fund_name": "民生加银新兴成长混合",
     "fund_type": "混合型-偏股"
@@ -738,11 +513,6 @@
     "fund_code": "006104",
     "fund_name": "华泰柏瑞量化智慧混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "006223",
-    "fund_name": "交银创新成长混合",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "006315",
@@ -773,11 +543,6 @@
     "fund_code": "006696",
     "fund_name": "汇添富研究优选灵活配置混合",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "006775",
-    "fund_name": "前海开源优质成长混合",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "006864",
@@ -850,18 +615,8 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "008127",
-    "fund_name": "广发趋势优选灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "008262",
     "fund_name": "招商研究优选股票C",
-    "fund_type": "股票型"
-  },
-  {
-    "fund_code": "008304",
-    "fund_name": "宝盈龙头优选股票C",
     "fund_type": "股票型"
   },
   {
@@ -880,26 +635,6 @@
     "fund_type": "股票型"
   },
   {
-    "fund_code": "008481",
-    "fund_name": "永赢股息优选C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "008681",
-    "fund_name": "鹏华价值成长混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "008819",
-    "fund_name": "农银汇理策略趋势混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "008892",
-    "fund_name": "安信价值成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "008950",
     "fund_name": "平安匠心优选混合C",
     "fund_type": "混合型-偏股"
@@ -910,18 +645,8 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "009030",
-    "fund_name": "工银高质量成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "009063",
     "fund_name": "财通智慧成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "009103",
-    "fund_name": "鹏扬红利优选混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -935,18 +660,8 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "009274",
-    "fund_name": "融通健康产业灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "009319",
     "fund_name": "南方成长先锋混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "009331",
-    "fund_name": "鹏华成长价值混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -975,11 +690,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "009669",
-    "fund_name": "长信量化价值驱动混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "009715",
     "fund_name": "汇添富策略增长灵活配置混合",
     "fund_type": "混合型-灵活"
@@ -988,11 +698,6 @@
     "fund_code": "009808",
     "fund_name": "易方达创新成长混合",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "009865",
-    "fund_name": "招商景气优选股票C",
-    "fund_type": "股票型"
   },
   {
     "fund_code": "009897",
@@ -1020,11 +725,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "010142",
-    "fund_name": "朱雀企业优选C",
-    "fund_type": "股票型"
-  },
-  {
     "fund_code": "010149",
     "fund_name": "浙商智选经济动能混合C",
     "fund_type": "混合型-偏股"
@@ -1032,16 +732,6 @@
   {
     "fund_code": "010187",
     "fund_name": "嘉实核心成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "010204",
-    "fund_name": "中银港股通优势成长股票",
-    "fund_type": "股票型"
-  },
-  {
-    "fund_code": "010234",
-    "fund_name": "华泰柏瑞量化增强混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -1070,18 +760,8 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "010380",
-    "fund_name": "广发均衡优选混合C",
-    "fund_type": "混合型-平衡"
-  },
-  {
     "fund_code": "010382",
     "fund_name": "浙商智选价值混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "010411",
-    "fund_name": "长城品质成长混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -1098,11 +778,6 @@
     "fund_code": "010505",
     "fund_name": "申万菱信创业板量化精选股票C",
     "fund_type": "股票型"
-  },
-  {
-    "fund_code": "010549",
-    "fund_name": "富国均衡策略混合",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "010563",
@@ -1125,11 +800,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "010679",
-    "fund_name": "中欧均衡成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "010681",
     "fund_name": "华夏新兴成长股票C",
     "fund_type": "股票型"
@@ -1140,29 +810,9 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "010724",
-    "fund_name": "中欧价值成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "010793",
-    "fund_name": "华安成长先锋混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "010827",
     "fund_name": "大成产业趋势混合C",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "010895",
-    "fund_name": "鹏华汇智优选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "010903",
-    "fund_name": "博时成长领航混合C",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "010966",
@@ -1175,11 +825,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "011070",
-    "fund_name": "工银成长精选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "011123",
     "fund_name": "汇添富ESG可持续成长股票C",
     "fund_type": "股票型"
@@ -1188,16 +833,6 @@
     "fund_code": "011148",
     "fund_name": "南方军工改革灵活配置混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "011163",
-    "fund_name": "博时港股通领先趋势混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "011221",
-    "fund_name": "南方匠心优选股票C",
-    "fund_type": "股票型"
   },
   {
     "fund_code": "011228",
@@ -1215,23 +850,8 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "011295",
-    "fund_name": "中信保诚量化阿尔法股票C",
-    "fund_type": "股票型"
-  },
-  {
     "fund_code": "011305",
     "fund_name": "工银创新成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "011314",
-    "fund_name": "农银创新成长混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "011334",
-    "fund_name": "鹏华品质优选混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -1242,11 +862,6 @@
   {
     "fund_code": "011402",
     "fund_name": "汇添富成长精选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "011404",
-    "fund_name": "融通鑫新成长混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -1275,29 +890,9 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "011462",
-    "fund_name": "东吴兴享成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "011530",
     "fund_name": "泓德优质治理灵活配置混合",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "011556",
-    "fund_name": "富国民裕进取沪港深成长C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "011579",
-    "fund_name": "汇丰晋信核心成长C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "011636",
-    "fund_name": "富国港股通策略精选混合C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "011638",
@@ -1318,11 +913,6 @@
     "fund_code": "011758",
     "fund_name": "广发逆向策略混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "011885",
-    "fund_name": "工银景气优选混合C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "011892",
@@ -1355,11 +945,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "012187",
-    "fund_name": "招商品质成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "012224",
     "fund_name": "信澳成长精选混合C",
     "fund_type": "混合型-偏股"
@@ -1385,16 +970,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "012556",
-    "fund_name": "长盛景气优选混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "012607",
-    "fund_name": "汇添富保鑫灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "012608",
     "fund_name": "信澳领先智选混合",
     "fund_type": "混合型-偏股"
@@ -1410,19 +985,9 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "012660",
-    "fund_name": "华安新乐享灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "012689",
     "fund_name": "长安成长优选混合C",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "012940",
-    "fund_name": "中泰星元灵活配置混合C",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "013096",
@@ -1440,19 +1005,9 @@
     "fund_type": "股票型"
   },
   {
-    "fund_code": "013430",
-    "fund_name": "交银趋势混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "013466",
     "fund_name": "博时智选量化多因子股票C",
     "fund_type": "股票型"
-  },
-  {
-    "fund_code": "013500",
-    "fund_name": "南方金融主题灵活配置混合C",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "013553",
@@ -1465,11 +1020,6 @@
     "fund_type": "股票型"
   },
   {
-    "fund_code": "013711",
-    "fund_name": "广发成长新动能混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "013722",
     "fund_name": "信澳景气优选混合C",
     "fund_type": "混合型-偏股"
@@ -1480,19 +1030,9 @@
     "fund_type": "FOF-进取型"
   },
   {
-    "fund_code": "013852",
-    "fund_name": "中信建投低碳成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "013896",
     "fund_name": "宝盈成长精选混合C",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "014043",
-    "fund_name": "银华心怡灵活配置混合C",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "014063",
@@ -1508,11 +1048,6 @@
     "fund_code": "014143",
     "fund_name": "银河创新成长混合C",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "014163",
-    "fund_name": "富国港股通量化精选股票C",
-    "fund_type": "股票型"
   },
   {
     "fund_code": "014188",
@@ -1545,11 +1080,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "014627",
-    "fund_name": "财通多策略福瑞混合发起式(LOF)C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "014669",
     "fund_name": "银华专精特新量化优选股票发起C",
     "fund_type": "股票型"
@@ -1562,11 +1092,6 @@
   {
     "fund_code": "014755",
     "fund_name": "华安景气优选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "014795",
-    "fund_name": "富国远见优选混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -1600,24 +1125,9 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "015121",
-    "fund_name": "汇添富医疗服务灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "015128",
-    "fund_name": "长城产业成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "015170",
     "fund_name": "摩根核心成长股票C",
     "fund_type": "股票型"
-  },
-  {
-    "fund_code": "015290",
-    "fund_name": "格林高股息优选混合C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "015358",
@@ -1640,11 +1150,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "015463",
-    "fund_name": "天弘永定价值成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "015554",
     "fund_name": "融通价值成长混合C",
     "fund_type": "混合型-偏股"
@@ -1655,11 +1160,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "015582",
-    "fund_name": "国泰量化策略收益混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "015715",
     "fund_name": "富国成长动力混合C",
     "fund_type": "混合型-偏股"
@@ -1667,11 +1167,6 @@
   {
     "fund_code": "015753",
     "fund_name": "上银鑫达灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "015779",
-    "fund_name": "景顺长城价值边际灵活配置混合C",
     "fund_type": "混合型-灵活"
   },
   {
@@ -1695,11 +1190,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "015916",
-    "fund_name": "永赢医药创新智选混合发起C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "015968",
     "fund_name": "永赢半导体产业智选混合发起C",
     "fund_type": "混合型-偏股"
@@ -1707,11 +1197,6 @@
   {
     "fund_code": "016069",
     "fund_name": "华商研究精选灵活配置C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "016090",
-    "fund_name": "中泰玉衡价值优选混合C",
     "fund_type": "混合型-灵活"
   },
   {
@@ -1725,34 +1210,9 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "016175",
-    "fund_name": "汇丰晋信策略优选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "016258",
     "fund_name": "中信保诚创新成长混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "016283",
-    "fund_name": "华泰柏瑞积极优选股票C",
-    "fund_type": "股票型"
-  },
-  {
-    "fund_code": "016313",
-    "fund_name": "富国研究精选灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "016335",
-    "fund_name": "汇丰晋信动态策略混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "016387",
-    "fund_name": "永赢低碳环保智选混合发起C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "016467",
@@ -1768,21 +1228,6 @@
     "fund_code": "016491",
     "fund_name": "华安事件驱动量化混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "016493",
-    "fund_name": "南方均衡成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "016503",
-    "fund_name": "永赢新兴消费智选混合发起C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "016518",
-    "fund_name": "华泰紫金创新成长混合发起C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "016550",
@@ -1802,16 +1247,6 @@
   {
     "fund_code": "016627",
     "fund_name": "汇添富创新成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "016747",
-    "fund_name": "浦银安盛光耀优选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "016841",
-    "fund_name": "博道惠泰优选混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -1842,16 +1277,6 @@
   {
     "fund_code": "017366",
     "fund_name": "泰康新锐成长混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "017787",
-    "fund_name": "万家宏观择时多策略混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "017869",
-    "fund_name": "民生加银均衡优选混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -1895,24 +1320,9 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "018225",
-    "fund_name": "大成策略回报混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "018326",
     "fund_name": "国泰海通创新成长混合发起C",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "018448",
-    "fund_name": "中欧琪和灵活配置混合E",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "018449",
-    "fund_name": "中欧瑾通灵活配置混合E",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "018463",
@@ -1943,11 +1353,6 @@
     "fund_code": "018590",
     "fund_name": "银华体育文化灵活配置混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "018619",
-    "fund_name": "中信保诚远见成长混合C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "018710",
@@ -2005,11 +1410,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "019291",
-    "fund_name": "德邦新回报灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "019348",
     "fund_name": "富国匠心成长混合C",
     "fund_type": "混合型-偏股"
@@ -2023,21 +1423,6 @@
     "fund_code": "019514",
     "fund_name": "交银荣鑫灵活配置混合C",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "019636",
-    "fund_name": "富国研究精选灵活配置混合D",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "019778",
-    "fund_name": "鹏扬消费量化选股混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "019877",
-    "fund_name": "广发均衡成长混合C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "019889",
@@ -2075,11 +1460,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "020155",
-    "fund_name": "长盛量化红利混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "020163",
     "fund_name": "华安睿信优选混合C",
     "fund_type": "混合型-偏股"
@@ -2095,19 +1475,9 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "020258",
-    "fund_name": "鹏华优选价值股票C",
-    "fund_type": "股票型"
-  },
-  {
     "fund_code": "020477",
     "fund_name": "泰康半导体量化选股股票发起式C",
     "fund_type": "股票型"
-  },
-  {
-    "fund_code": "020494",
-    "fund_name": "富达悦享红利优选混合C",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "020699",
@@ -2130,11 +1500,6 @@
     "fund_type": "股票型"
   },
   {
-    "fund_code": "021148",
-    "fund_name": "财通华臻量化选股混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "021265",
     "fund_name": "兴业聚利灵活配置混合C",
     "fund_type": "混合型-灵活"
@@ -2155,11 +1520,6 @@
     "fund_type": "股票型"
   },
   {
-    "fund_code": "021503",
-    "fund_name": "景顺长城成长之星股票C",
-    "fund_type": "股票型"
-  },
-  {
     "fund_code": "021523",
     "fund_name": "财通价值动量混合C",
     "fund_type": "混合型-灵活"
@@ -2170,18 +1530,8 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "021734",
-    "fund_name": "国富基本面优选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "021865",
     "fund_name": "中欧中证800研究智选混合发起C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "021976",
-    "fund_name": "创金合信红利甄选量化选股混合C",
     "fund_type": "混合型-偏股"
   },
   {
@@ -2192,11 +1542,6 @@
   {
     "fund_code": "022004",
     "fund_name": "博道大盘成长股票C",
-    "fund_type": "股票型"
-  },
-  {
-    "fund_code": "022165",
-    "fund_name": "西部利得央企优选股票C",
     "fund_type": "股票型"
   },
   {
@@ -2220,21 +1565,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "022518",
-    "fund_name": "南方产业智选股票C",
-    "fund_type": "股票型"
-  },
-  {
-    "fund_code": "022749",
-    "fund_name": "平安港股通红利优选混合C",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "022853",
-    "fund_name": "中航优选领航混合发起C",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "040007",
     "fund_name": "华安中小盘成长混合",
     "fund_type": "混合型-偏股"
@@ -2248,16 +1578,6 @@
     "fund_code": "050012",
     "fund_name": "博时策略混合",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "070011",
-    "fund_name": "嘉实策略混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "070017",
-    "fund_name": "嘉实量化阿尔法混合",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "070022",
@@ -2310,11 +1630,6 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "160627",
-    "fund_name": "鹏华策略优选灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "160812",
     "fund_name": "长盛同益成长回报(LOF)",
     "fund_type": "混合型-灵活"
@@ -2323,11 +1638,6 @@
     "fund_code": "160813",
     "fund_name": "长盛同盛成长优选(LOF)",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "161706",
-    "fund_name": "招商优质成长混合(LOF)",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "161728",
@@ -2345,11 +1655,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "162207",
-    "fund_name": "宏利效率优选混合(LOF)",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "163302",
     "fund_name": "大摩资源优选混合(LOF)",
     "fund_type": "混合型-灵活"
@@ -2360,11 +1665,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "163503",
-    "fund_name": "天治核心成长混合(LOF)",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "163823",
     "fund_name": "中银稳健策略混合",
     "fund_type": "混合型-灵活"
@@ -2373,11 +1673,6 @@
     "fund_code": "166301",
     "fund_name": "华商新趋势优选灵活配置混合",
     "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "180013",
-    "fund_name": "银华领先策略混合",
-    "fund_type": "混合型-偏股"
   },
   {
     "fund_code": "180020",
@@ -2400,18 +1695,8 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "206007",
-    "fund_name": "鹏华消费优选混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "210004",
     "fund_name": "金鹰稳健成长混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "210008",
-    "fund_name": "金鹰策略配置混合",
     "fund_type": "混合型-偏股"
   },
   {
@@ -2442,11 +1727,6 @@
   {
     "fund_code": "233011",
     "fund_name": "大摩主题优选混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "240009",
-    "fund_name": "华宝先进成长混合",
     "fund_type": "混合型-偏股"
   },
   {
@@ -2490,16 +1770,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "398041",
-    "fund_name": "中海量化策略混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "400007",
-    "fund_name": "东方策略成长混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "460002",
     "fund_name": "华泰柏瑞积极成长混合",
     "fund_type": "混合型-灵活"
@@ -2530,16 +1800,6 @@
     "fund_type": "混合型-灵活"
   },
   {
-    "fund_code": "519001",
-    "fund_name": "银华价值优选混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "519022",
-    "fund_name": "国泰金泰灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
     "fund_code": "519068",
     "fund_name": "汇添富成长焦点混合",
     "fund_type": "混合型-偏股"
@@ -2550,59 +1810,14 @@
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "519150",
-    "fund_name": "新华优选消费混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
     "fund_code": "519158",
     "fund_name": "新华趋势领航混合",
     "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "519191",
-    "fund_name": "万家新利灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "519193",
-    "fund_name": "万家消费成长",
-    "fund_type": "股票型"
-  },
-  {
     "fund_code": "519668",
     "fund_name": "银河成长混合",
     "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "519710",
-    "fund_name": "交银策略回报灵活配置混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "519727",
-    "fund_name": "交银成长30混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "519736",
-    "fund_name": "交银新成长混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "519760",
-    "fund_name": "交银新回报灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "519761",
-    "fund_name": "交银多策略回报灵活配置混合C",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "519769",
-    "fund_name": "交银优选回报灵活配置混合C",
-    "fund_type": "混合型-灵活"
   },
   {
     "fund_code": "519771",
@@ -2612,11 +1827,6 @@
   {
     "fund_code": "519993",
     "fund_name": "长信增利动态策略混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "560002",
-    "fund_name": "益民红利成长混合",
     "fund_type": "混合型-偏股"
   },
   {
@@ -2637,31 +1847,6 @@
   {
     "fund_code": "630008",
     "fund_name": "华商策略精选混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "630015",
-    "fund_name": "华商大盘量化精选混合",
-    "fund_type": "混合型-灵活"
-  },
-  {
-    "fund_code": "660001",
-    "fund_name": "农银行业成长混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "660004",
-    "fund_name": "农银策略价值混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "660010",
-    "fund_name": "农银策略精选混合",
-    "fund_type": "混合型-偏股"
-  },
-  {
-    "fund_code": "673030",
-    "fund_name": "西部利得多策略优选混合C",
     "fund_type": "混合型-灵活"
   },
   {

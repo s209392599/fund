@@ -19,7 +19,7 @@ var keyword_arr = [
   '优选',
 ];
 // 不要的基金类型关键词
-var noFundType = ['债券', '货币', '指数'];
+var noFundType = ['债券', '货币', '指数','QDII'];
 // 不以什么结尾
 var noEndWith = ['A', 'ETF', '(后端)'];
 
