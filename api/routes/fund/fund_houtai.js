@@ -50,6 +50,7 @@ router.post('/fund_manage_fund_update', (req, res) => {
   const query_str = `
     UPDATE fund_public
     SET
+      fund_code = ?,
       fund_name = ?,
       fund_type = ?,
       zhang_url = ?,
@@ -62,6 +63,7 @@ router.post('/fund_manage_fund_update', (req, res) => {
   `;
 
   const values = [
+    form.fund_code,
     form.fund_name,
     form.fund_type,
     form.zhang_url,
@@ -70,7 +72,7 @@ router.post('/fund_manage_fund_update', (req, res) => {
     form.point_top,
     form.fund_desc,
     form.fund_sign,
-    form.fund_code,
+    form.id,
   ];
 
   return DatabasePostQuery({
