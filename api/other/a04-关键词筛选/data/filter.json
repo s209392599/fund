@@ -1,12 +1,37 @@
 [
   {
-    "fund_code": "016441",
-    "fund_name": "华夏中证红利质量ETF发起式联接C",
-    "fund_type": "指数型-股票"
+    "fund_code": "012651",
+    "fund_name": "博时半导体主题混合C",
+    "fund_type": "混合型-偏股"
   },
   {
-    "fund_code": "016563",
-    "fund_name": "金鹰红利价值混合C",
-    "fund_type": "混合型-灵活"
+    "fund_code": "014320",
+    "fund_name": "德邦半导体产业混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "015968",
+    "fund_name": "永赢半导体产业智选混合发起C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "016501",
+    "fund_name": "华夏半导体龙头混合发起C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "017076",
+    "fund_name": "宝盈半导体产业混合发起式C",
+    "fund_type": "混合型-偏股"
+  },
+  {
+    "fund_code": "020477",
+    "fund_name": "泰康半导体量化选股股票发起式C",
+    "fund_type": "股票型"
+  },
+  {
+    "fund_code": "020554",
+    "fund_name": "南方半导体产业股票发起C",
+    "fund_type": "股票型"
   }
 ]

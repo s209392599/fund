@@ -40,12 +40,4 @@ api/other/**/rankData_3.txt
 api/other/**/jiaocha_1.json
 api/other/**/jiaocha_2.json
 api/other/**/jiaocha_3.json
-api/other/**/FundDetailPageInfo/*.json
-api/other/**/Fund_mai_mai_gui_ze/*.json
-api/other/**/Fund_xiu_fu/*.json
-api/other/**/FundDetailPageInfo/*.json
-api/other/**/FundFenhong/*.json
-api/other/**/HistoryNetValue/*.json
 
-api/other/a10-searchtext/HistoryNetValue/*.json
-api/other/a10-searchtext/FundDetailPageInfo/*.json

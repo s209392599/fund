@@ -15,13 +15,24 @@ async function queryResilienceInfo(search_data) {
 
     // 清空原数组并添加新数据，这样会修改原始数组
     search_data.length = 0; // 清空数组
-    const mappedData = fundArray.map(v => {
-      return {
-        fund_code: v[0],
-        fund_name: v[2],
-        fund_type: v[3],
+    let mappedData = [];
+    let len_1 = fundArray.length;
+    for (let i = 0; i < len_1; i++) {
+      let item = fundArray[i];
+      // 不能包含 noText 中的关键词
+      if (noText.some((v) => v.includes(item[2]))) {
+        continue;
       }
-    });
+      // 不能包含 noFundCode 中的基金代码
+      if (noFundCode.includes(item[0])) {
+        continue;
+      }
+      mappedData.push({
+        fund_code: item[0],
+        fund_name: item[2],
+        fund_type: item[3],
+      });
+    }
 
     search_data.push(...mappedData); // 将新数据推入原数组
     console.log(`一共有${fundArray.length}个基金需要过滤`);
@@ -58,14 +69,6 @@ async function filter_keywords(obj) {
     }
     // 不能以 A、ETF、(后端) 结尾
     if (noEndWith.some((v) => fund_name.endsWith(v))) {
-      continue;
-    }
-    // 不能包含 noText 中的关键词
-    if (noText.some((v) => fund_name.includes(v))) {
-      continue;
-    }
-    // 不能包含 noFundCode 中的基金代码
-    if (noFundCode.includes(fund_code)) {
       continue;
     }
     // 额外去除的关键词或者基金名称
