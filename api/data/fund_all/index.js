@@ -16,6 +16,8 @@ const info = {
 };
 
 async function getFundcodeSearch() {
+  info.write_arr = [];
+  info.type_arr = [];
   try {
     let u = `https://fund.eastmoney.com/js/fundcode_search.js`;
 
