@@ -49,6 +49,43 @@ const initDraggable = () => {
   });
 };
 
+// 初始化左侧分类拖拽功能
+const initCategoryDraggable = () => {
+  nextTick(() => {
+    const leftContent = document.querySelector('.left_content');
+    if (leftContent) {
+      Sortable.create(leftContent, {
+        onEnd: (evt) => {
+          // 拖拽结束时更新分类顺序
+          const oldIndex = evt.oldIndex;
+          const newIndex = evt.newIndex;
+
+          if (oldIndex !== newIndex) {
+            // 重新排序分类数据
+            const movedItem = info.list.splice(oldIndex, 1)[0];
+            info.list.splice(newIndex, 0, movedItem);
+
+            // 如果当前激活的是被移动的分类或受影响的分类，更新激活状态
+            if (info.active_type === info.list[newIndex].type) {
+              // 当前激活项被移动，保持激活状态
+            } else {
+              // 重新设置当前激活的分类
+              changeType(info.active_type);
+            }
+
+            // 强制刷新表格以反映更改
+            info.tableKey = new Date().getTime();
+          }
+        },
+        handle: '.drag-handle', // 只有拖拽手柄可以触发拖拽
+        animation: 150,
+        ghostClass: 'sortable-ghost',
+        chosenClass: 'sortable-chosen',
+      });
+    }
+  });
+};
+
 // 监听数据变化，重新初始化拖拽
 watch(() => info.tableData, () => {
   nextTick(() => {
@@ -56,9 +93,17 @@ watch(() => info.tableData, () => {
   });
 }, { deep: true });
 
+// 监听分类数据变化，重新初始化分类拖拽
+watch(() => info.list, () => {
+  nextTick(() => {
+    initCategoryDraggable();
+  });
+}, { deep: true });
+
 // 在组件挂载后初始化拖拽功能
 onMounted(() => {
   initDraggable();
+  initCategoryDraggable();
 });
 
 const tableMaxHeight = computed(() => {
@@ -319,6 +364,74 @@ const server_fund_table_mix_query = async (data) => {
 };
 
 const getList = async () => {
+  // info.list = [
+  //   {
+  //     "type": "科创50",
+  //     "data": [
+  //       {
+  //         "fund_code": "011609",
+  //         "fund_name": "易方达上证科创50ETF联接C",
+  //         "fund_type": "",
+  //         "fund_desc": "",
+  //         "update_time": "2025-12-26 17:27:47"
+  //       },
+  //       {
+  //         "fund_code": "011613",
+  //         "fund_name": "华夏科创50ETF联接C",
+  //         "fund_type": "",
+  //         "fund_desc": "",
+  //         "update_time": "2025-12-26 17:27:47"
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     "type": "北证50",
+  //     "data": [
+  //       {
+  //         "fund_code": "017513",
+  //         "fund_name": "广发北证50成份",
+  //         "fund_type": "",
+  //         "fund_desc": "",
+  //         "update_time": "2025-12-26 17:27:47"
+  //       },
+  //       {
+  //         "fund_code": "017516",
+  //         "fund_name": "易方达北证50成",
+  //         "fund_type": "",
+  //         "fund_desc": "",
+  //         "update_time": "2025-12-26 17:27:47"
+  //       },
+  //       {
+  //         "fund_code": "018113",
+  //         "fund_name": "工银北证50成份",
+  //         "fund_type": "",
+  //         "fund_desc": "",
+  //         "update_time": "2025-12-26 17:27:47"
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     "type": "工业母机",
+  //     "data": [
+  //       {
+  //         "fund_code": "017574",
+  //         "fund_name": "华夏中证机床ETF发起式联接C",
+  //         "fund_type": "指数型-股票",
+  //         "fund_desc": "",
+  //         "update_time": "2025-12-26 17:27:47"
+  //       },
+  //       {
+  //         "fund_code": "017472",
+  //         "fund_name": "国泰中证机床ETF发起联接C",
+  //         "fund_type": "",
+  //         "fund_desc": "指数型-股票",
+  //         "update_time": "2025-12-26 17:27:47"
+  //       }
+  //     ]
+  //   },
+  // ];
+  // info.tableData = info.list[0]?.data || [];
+
   server_fund_table_mix_query({ type_1: 'qun_zhu_fen_lei_tui_jian' }).then((res) => {
     if (res.code === 200) {
       let data = res.data || [];
@@ -347,7 +460,12 @@ onMounted(() => {
       <div class="left_content flex-1">
         <div class="left_item flex" v-for="item in info.list" :key="item.type"
           :class="{ 'active': item.type === info.active_type }" @click="changeType(item.type)">
-          <div class="type_text flex-1">{{ item.type }}</div>
+          <div class="type_drag drag-handle" @click.stop="">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 7h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z" />
+            </svg>
+          </div>
+          <div class="type_text flex-1 truncate" :title="item.type">{{ item.type }}</div>
           <div class="type_edit" @click.stop="btn_fn_05(item.type)">
             <span style="font-family: Arial; font-size: 16px;">&#x270E;</span> <!-- 显示为 ✎ -->
           </div>
@@ -398,7 +516,7 @@ onMounted(() => {
 
           <el-table-column prop="fund_name" label="基金名称" width="380" />
           <el-table-column prop="fund_type" label="基金类型" width="130" />
-          <el-table-column prop="fund_desc" label="备注" width="280" />
+          <el-table-column prop="fund_desc" label="备注" width="480" />
           <el-table-column prop="update_time" label="更新时间" width="160" />
         </el-table>
       </div>
@@ -431,8 +549,8 @@ onMounted(() => {
 <style scoped lang="scss">
 .page-wrapper {
   .page_left {
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 300px;
+    max-width: 300px;
     border-right: 1px solid #e8e8e8;
 
     .left_top {

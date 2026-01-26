@@ -20,7 +20,7 @@ async function queryResilienceInfo(search_data) {
     for (let i = 0; i < len_1; i++) {
       let item = fundArray[i];
       // 不能包含 noText 中的关键词
-      if (noText.some((v) => v.includes(item[2]))) {
+      if (noText.some((v) => item[2].includes(v))) {
         continue;
       }
       // 不能包含 noFundCode 中的基金代码
@@ -60,12 +60,17 @@ async function filter_keywords(obj) {
     let fund_name = item.fund_name; // 基金名称
     let fund_type = item.fund_type; // 基金类型
     // 需要包含 量化、策略、灵活、因子、增强、绝对收益、动量、成长、趋势、绩优、智选、优选、精选
-    if (!keyword_arr.some((v) => fund_name.includes(v))) {
-      continue;
+    if(keyword_arr.length > 0){
+      if (!keyword_arr.some((v) => fund_name.includes(v))) {
+        continue;
+      }
     }
+
     // 基金类型中不能有货币、债券
-    if (noFundType.some((v) => fund_type.includes(v))) {
-      continue;
+    if(fund_type){
+      if (noFundType.some((v) => fund_type.includes(v))) {
+        continue;
+      }
     }
     // 不能以 A、ETF、(后端) 结尾
     if (noEndWith.some((v) => fund_name.endsWith(v))) {
