@@ -10,6 +10,31 @@ http://150.158.175.108:9999/auploadfiles.html
 
 https://data.eastmoney.com/report/industry.jshtml 行业研报
 https://finance.eastmoney.com/a/cywjh.html 资讯精华
+https://fund.eastmoney.com/data/xinfound.html 新成立的基金
+
+
+https://fund.eastmoney.com/cnjy_jzzzl.html 场内基金交易净值排行
+https://fund.eastmoney.com/data/ 基金净值，可以从这里看看最新的评级之类的基金
+
+
+https://fund.eastmoney.com/004335.html?spm=search
+华宝新飞跃灵活配置混合(004335)  这个虽然低，但是还是一直是上涨的
+
+https://fund.eastmoney.com/024738.html?spm=search
+永赢新材料智选混合发起C(024738)
+
+https://fund.eastmoney.com/006038.html?spm=search
+大成景恒混合C(006038)
+
+https://fund.eastmoney.com/020251.html
+中银中证央企红利50指数A(020251)
+
+
+
+
+新的想法：2026年1月26日21:13:28
+每周一进行基金量化筛选，只要是新的符合的基金，每涨5%且涨了30天就释放...没想完，大概这个思路试一下
+
 
 黄金：2026年01月21日13:58:06
 002207-前海开源金银珠宝混合C（30天）
