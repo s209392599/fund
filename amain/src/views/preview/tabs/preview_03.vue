@@ -7,34 +7,7 @@ const tableMaxHeight = computed(() => {
 
 const info = reactive({
   active_id: 1,
-  list: [
-    // {
-    //   id: 1,
-    //   type: '红利',
-    //   desc: '',
-    //   update_time: '2025年12月26日16:59:14',
-    //   data: [
-    //     {
-    //       fund_code: '023918',
-    //       fund_name: '华夏国证自由现金流ETF联接C',
-    //       fund_type: '',
-    //       update_time: '2025-12-26 17:27:47',
-    //     },
-    //     {
-    //       fund_code: '020867',
-    //       fund_name: '华安恒生红利',
-    //       fund_type: '',
-    //       update_time: '2025-12-26 17:27:47',
-    //     },
-    //     {
-    //       fund_code: '019261',
-    //       fund_name: '富国恒生红利ETF联接C',
-    //       fund_type: '',
-    //       update_time: '2025-12-26 17:27:47',
-    //     }
-    //   ]
-    // },
-  ],
+  list: [],
   tableData: [],
   tableMiddle: [],// 中间变量
 })
@@ -138,6 +111,22 @@ const copyText = () => {
   fallbackCopyText(JSON.stringify(data));
 }
 
+const getToday = (row) => {
+  const val = row.zhang_today;
+  if (val === '-') return '-';
+
+  const rate = Number(val);
+  if (isNaN(rate)) return '-';
+
+  const className = rate >= 0 ? 'color-red' : 'color-green';
+  return `<span class="${className}">${val}</span>`;
+};
+const sortToday = (a, b) => {
+  const valA = parseFloat(a.zhang_today) || 0;
+  const valB = parseFloat(b.zhang_today) || 0;
+  return valA - valB;
+};
+
 onMounted(() => {
   query_qun_zhu_fund();
 })
@@ -167,11 +156,13 @@ onMounted(() => {
         </el-table-column>
 
         <el-table-column prop="fund_name" label="基金名称" width="250" sortable show-overflow-tooltip>
-
         </el-table-column>
 
-        <!-- <el-table-column prop="fund_type" label="类型" width="120" sortable show-overflow-tooltip>
-        </el-table-column> -->
+        <el-table-column align="right" label="今日" width="56" sortable :sort-method="sortToday">
+          <template v-slot="{ row }">
+            <span v-html="getToday(row)"></span>
+          </template>
+        </el-table-column>
 
         <el-table-column align="right" label="近1周" width="70" sortable :sort-method="sortHisData0">
           <template v-slot="{ row }">
