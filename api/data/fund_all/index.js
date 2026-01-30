@@ -10,14 +10,9 @@ const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代�
 // console.log('noText', noText);
 // console.log('noFundCode', noFundCode);
 
-const info = {
-  type_arr: [],// 基金类型的数组
-  write_arr: [],// 要写入的数据
-};
-
 async function getFundcodeSearch() {
-  info.write_arr = [];
-  info.type_arr = [];
+  var write_arr = [];
+  var type_arr = [];
   try {
     let u = `https://fund.eastmoney.com/js/fundcode_search.js`;
 
@@ -39,7 +34,7 @@ async function getFundcodeSearch() {
       let endsArr = ['ETF', 'ETF(QDII)','(QDII-ETF)'];
       let flag_3 = endsArr.some((item) => fund_name.endsWith(item));// 不以ETF结尾
       if(!flag_1 && !flag_2 && !flag_3) {
-        info.write_arr.push([fund_code, fund_name, fund_type]);
+        write_arr.push([fund_code, fund_name, fund_type]);
       }else{
         // etf_arr.push({
         //   fund_code: fund_code || '',
@@ -48,23 +43,21 @@ async function getFundcodeSearch() {
         // });
       }
 
-      if (!info.type_arr.includes(fund_type)) {
-        info.type_arr.push(fund_type);
+      if (!type_arr.includes(fund_type)) {
+        type_arr.push(fund_type);
       }
     });
-    // console.log('筛选后',info.write_arr.length);
-    // console.log(`筛选掉 ${fundArray.length - info.write_arr.length} 个基金`);
 
     // 写入
     fs.writeFileSync(
       path.join(__dirname, 'data.json'),
-      JSON.stringify(info.write_arr),
+      JSON.stringify(write_arr),
       'utf8'
     );
     // 写入类型
     fs.writeFileSync(
       path.join(__dirname, 'type.json'),
-      JSON.stringify(info.type_arr, null, 2),
+      JSON.stringify(type_arr, null, 2),
       'utf8'
     );
     // 写入ETF
