@@ -8,13 +8,13 @@ const info = reactive({
     url: 'https://show.jd.com/m/dVAaqEjDlpo3kRyP/',// 榜单的根地址
   },
   list_tabs: [
-    {
-      id: '1',
-      name: '今日加仓榜',
-      component: markRaw(
-        defineAsyncComponent(() => import('./other_003_001.vue'))
-      ),
-    },
+    // {
+    //   id: '1',
+    //   name: '今日加仓榜',
+    //   component: markRaw(
+    //     defineAsyncComponent(() => import('./other_003_001.vue'))
+    //   ),
+    // },
     {
       id: '2',
       name: '持有人数飙升',
