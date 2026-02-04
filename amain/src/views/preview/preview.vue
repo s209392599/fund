@@ -16,6 +16,15 @@ const info = reactive({
       desc: '',
     },
     {
+      id: 20,
+      show: true,
+      name: '综合信息',
+      component: markRaw(
+        defineAsyncComponent(() => import('./tabs/preview_20.vue'))
+      ),
+      desc: '',
+    },
+    {
       id: 8,
       show: true,
       name: '预估涨幅',
@@ -132,6 +141,7 @@ const info = reactive({
       ),
       desc: '',
     },
+
     {
       id: 19,
       show: true,

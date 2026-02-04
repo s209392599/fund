@@ -1,26 +1,6 @@
 // https://www.cls.cn/telegraph
 // https://www.cls.cn/plate?code=cls81935
 
-// https://www.cls.cn/quotation 涨跌分布
-fetch("https://x-quote.cls.cn/quote/index/home?app=CailianpressWeb&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&uid=4299340&sign=b7fedc44422044fba0676edf01be67d8", {
-  "headers": {
-    "accept": "application/json, text/plain, */*",
-    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-    "content-type": "application/x-www-form-urlencoded",
-    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"macOS\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site"
-  },
-  "referrer": "https://www.cls.cn/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-});
-
 // 主力流出
 fetch("https://x-quote.cls.cn/web_quote/web_stock/index_stock_list?app=CailianpressWeb&change=1&main_fund_diff=0&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&tr=1&uid=4299340&sign=df17f1351b5b55f28e940e342db5eb6c", {
   "headers": {
@@ -101,25 +81,6 @@ fetch("https://x-quote.cls.cn/quote/index/tlines?app=CailianpressWeb&os=web&secu
   "credentials": "omit"
 });
 
-// https://www.cls.cn/finance 看盘
-fetch("https://x-quote.cls.cn/v2/quote/a/stock/emotion?app=CailianpressWeb&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&uid=4299340&sign=b7fedc44422044fba0676edf01be67d8", {
-  "headers": {
-    "accept": "application/json, text/plain, */*",
-    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-    "content-type": "application/x-www-form-urlencoded",
-    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
-    "sec-ch-ua-mobile": "?0",
-    "sec-ch-ua-platform": "\"macOS\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site"
-  },
-  "referrer": "https://www.cls.cn/",
-  "body": null,
-  "method": "GET",
-  "mode": "cors",
-  "credentials": "omit"
-});
 
 
 // 当天板块的异动
