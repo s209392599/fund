@@ -1,3 +1,150 @@
+// https://www.cls.cn/telegraph
+// https://www.cls.cn/plate?code=cls81935
+
+// https://www.cls.cn/quotation 涨跌分布
+fetch("https://x-quote.cls.cn/quote/index/home?app=CailianpressWeb&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&uid=4299340&sign=b7fedc44422044fba0676edf01be67d8", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://www.cls.cn/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+// 主力流出
+fetch("https://x-quote.cls.cn/web_quote/web_stock/index_stock_list?app=CailianpressWeb&change=1&main_fund_diff=0&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&tr=1&uid=4299340&sign=df17f1351b5b55f28e940e342db5eb6c", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://www.cls.cn/",
+  "body": "{\"os\":\"web\",\"sv\":\"8.4.6\",\"app\":\"CailianpressWeb\"}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+// 主力流入
+fetch("https://x-quote.cls.cn/web_quote/web_stock/index_stock_list?app=CailianpressWeb&change=1&main_fund_diff=1&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&tr=1&uid=4299340&sign=37565a4ace17fb9138c32d7a8310d67b", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://www.cls.cn/",
+  "body": "{\"os\":\"web\",\"sv\":\"8.4.6\",\"app\":\"CailianpressWeb\"}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+// 上涨
+fetch("https://x-quote.cls.cn/v2/quote/a/web/stocks/basic?app=CailianpressWeb&fields=secu_code,secu_name,change,last_px,preclose_px&os=web&secu_codes=sh000001,sz399001,sz399006,sh000016,sz399300,sh000905&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&uid=4299340&sign=6c036af0b5d4867117a31a183f1cb6b4", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://www.cls.cn/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+// 涨幅详情
+fetch("https://x-quote.cls.cn/quote/index/tlines?app=CailianpressWeb&os=web&secu_codes=sh000001,sz399001,sz399006,sh000016,sz399300,sh000905&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&uid=4299340&sign=6de063eb7d16475350f543d9b8c7af9f", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://www.cls.cn/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+// https://www.cls.cn/finance 看盘
+fetch("https://x-quote.cls.cn/v2/quote/a/stock/emotion?app=CailianpressWeb&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&uid=4299340&sign=b7fedc44422044fba0676edf01be67d8", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site"
+  },
+  "referrer": "https://www.cls.cn/",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+
+// 当天板块的异动
+fetch("https://www.cls.cn/v3/transaction/anchor?app=CailianpressWeb&cdate=2026-02-04&os=web&sv=8.4.6&token=21Dm0IiGcqD99FS46D999If9tHQ2v6i34299340&uid=4299340&sign=9dec9c0e45c0fec1c5ad91c3fbd4f016", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-type": "application/json;charset=utf-8",
+    "sec-ch-ua": "\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"macOS\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://www.cls.cn/finance",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});
+
+
+
+
 /*
 http://150.158.175.108:9999/fund_amain/index.html
 203812677@qq.com / qaz123..
@@ -6,6 +153,14 @@ http://150.158.175.108:9999/fund_manager/index.html#/
 209392599@qq.com / qaz123.. / boxue666
 
 http://150.158.175.108:9999/auploadfiles.html
+
+
+
+
+
+
+
+
 
 
 https://data.eastmoney.com/report/industry.jshtml 行业研报

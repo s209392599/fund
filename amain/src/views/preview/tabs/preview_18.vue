@@ -1,6 +1,6 @@
 <script setup>
 /* 指数中心 */
-console.log('src/views/preview/tabs/preview_18.vue');
+console.log('amain/src/views/preview/tabs/preview_18.vue');
 /*
 https://webquotepic.eastmoney.com/GetPic.aspx?imageType=RSINDEX&nid=1.000001 上证指数
 https://webquotepic.eastmoney.com/GetPic.aspx?imageType=RSINDEX&nid=0.399001 深证成指
@@ -34,126 +34,108 @@ const info = reactive({
     {
       name: '上证指数',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000001', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000001&imageType=FFRS&type=FFR', // 主力净流入
     },
     {
       name: '深证成指',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=0.399001', // 今日涨幅
+      zhu_liu: pre_now + 'nid=0.399001&imageType=FFRS&type=FFR',
     },
     {
       name: '沪深300',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000300', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000300&imageType=FFRS&type=FFR',
     },
     {
       name: '港股通央企红利',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=2.931233', // 今日涨幅
+      zhu_liu: pre_now + 'nid=2.931233&imageType=FFRS&type=FFR',
     },
     {
       name: '中证红利',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000922', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000922&imageType=FFRS&type=FFR',
     },
-    {
-      name: '恒生指数',
-      zhang_now: pre_now + 'imageType=RSINDEX&nid=100.HSI', // 今日涨幅
-    },
-    {
-      name: '恒生科技指数',
-      zhang_now: pre_now + 'imageType=RSINDEX&nid=124.HSTECH', // 今日涨幅
-    },
-    {
-      name: '纳斯达克',
-      zhang_now: pre_now + 'imageType=RSINDEX&nid=100.NDX', // 今日涨幅
-    },
+
     {
       name: '创业板指数',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=0.399006', // 今日涨幅
+      zhu_liu: pre_now + 'nid=0.399006&imageType=FFRS&type=FFR',
     },
     {
       name: '科创综指',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000680', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000680&imageType=FFRS&type=FFR',
     },
     {
       name: '上证50',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000016', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000016&imageType=FFRS&type=FFR',
     },
     {
       name: '科创50',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000688', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000688&imageType=FFRS&type=FFR',
     },
     {
       name: '北证50',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=0.899050', // 今日涨幅
+      zhu_liu: pre_now + 'nid=0.899050&imageType=FFRS&type=FFR',
     },
     {
       name: '中证A500',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000510', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000510&imageType=FFRS&type=FFR',
     },
     {
       name: '中证2000',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=2.932000', // 今日涨幅
+      zhu_liu: pre_now + 'nid=2.932000&imageType=FFRS&type=FFR',
     },
     {
       name: '国债指数',
       zhang_now: pre_now + 'imageType=RSINDEX&nid=1.000012', // 今日涨幅
+      zhu_liu: pre_now + 'nid=1.000012&imageType=FFRS&type=FFR',
     },
     {
-      name: '黄金',
-      zhang_now: pre_now + 'imageType=RSINDEX&nid=101.GC00Y', // 今日涨幅
+      name: '半导体',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=90.BK1036', // 今日涨幅
+      zhu_liu: pre_now + 'nid=90.BK1036&imageType=FFRS&type=FFR',
+    },
+    {
+      name: '电池',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=90.BK1033', // 今日涨幅
+      zhu_liu: pre_now + 'nid=90.BK1033&imageType=FFRS&type=FFR',
+    },
+    {
+      name: '人形机器人主力静流入',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=90.BK1184', // 今日涨幅
+      zhu_liu: pre_now + 'nid=90.BK1184&imageType=FFRS&type=FFR',
     },
     {
       name: '净流出',
       zhang_now: pre_now + 'id=899001_TB&imageType=FFRS&type=FFR', // 今日涨幅
+      zhu_liu: pre_now + 'id=899001_TB&imageType=FFRS&type=FFR',
     },
     {
-      name: '上证指数主力静流入',
-      zhang_now: pre_now + 'nid=1.000001&imageType=FFRS&type=FFR', // 今日涨幅
+      name: '恒生指数',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=100.HSI', // 今日涨幅
+      // zhu_liu: pre_now + 'nid=100.HSI&imageType=FFRS&type=FFR',
     },
     {
-      name: '深证成指主力静流入',
-      zhang_now: pre_now + 'nid=0.399001&imageType=FFRS&type=FFR', // 今日涨幅
+      name: '恒生科技指数',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=124.HSTECH', // 今日涨幅
+      // zhu_liu: pre_now + 'nid=124.HSTECH&imageType=FFRS&type=FFR',
     },
     {
-      name: '沪深300主力静流入',
-      zhang_now: pre_now + 'nid=1.000300&imageType=FFRS&type=FFR', // 今日涨幅
+      name: '纳斯达克',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=100.NDX', // 今日涨幅
+      // zhu_liu: pre_now + 'nid=100.NDX&imageType=FFRS&type=FFR',
     },
     {
-      name: '上证50主力静流入',
-      zhang_now: pre_now + 'nid=1.000016&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '科创50主力静流入',
-      zhang_now: pre_now + 'nid=1.000688&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '中证A500主力静流入',
-      zhang_now: pre_now + 'nid=1.000510&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '北证50主力静流入',
-      zhang_now: pre_now + 'nid=0.899050&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '创业板主力静流入',
-      zhang_now: pre_now + 'nid=0.399006&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '半导体主力静流入',
-      zhang_now: pre_now + 'nid=90.BK1036&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '电池今日涨幅',
-      zhang_now: pre_now + 'nid=90.BK1033&imageType=rs', // 今日涨幅
-    },
-    {
-      name: '电池主力静流入',
-      zhang_now: pre_now + 'nid=90.BK1033&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '人形机器人主力静流入',
-      zhang_now: pre_now + 'nid=90.BK1184&imageType=FFRS&type=FFR', // 今日涨幅
-    },
-    {
-      name: '日经225',
-      zhang_now: pre_now + 'imageType=RSINDEX&nid=100.N225', // 今日涨幅
+      name: '黄金',
+      zhang_now: pre_now + 'imageType=RSINDEX&nid=101.GC00Y', // 今日涨幅
+      // zhu_liu: pre_now + 'nid=101.GC00Y&imageType=FFRS&type=FFR',
     },
   ],
 });
@@ -165,6 +147,7 @@ const info = reactive({
       <!-- 上证指数 -->
       <div class="list_item flex flex-col items-center" v-for="item in info.list" :key="item.name">
         <img class="list_img" :src="item.zhang_now" />
+        <img class="list_img" v-if="item.zhu_liu" :src="item.zhu_liu" />
       </div>
     </div>
   </div>
@@ -175,17 +158,19 @@ const info = reactive({
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .list_item {
-  border: 1px solid #b39c9c;
-  border-radius: 4px;
+  // border: 1px solid #b39c9c;
+  // border-radius: 4px;
   padding: 8px;
   overflow: hidden;
 
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
   .list_img {
-    width: 190px;
+    width: 194px;
     max-width: 100%;
   }
 }
