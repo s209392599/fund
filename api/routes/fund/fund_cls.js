@@ -8,325 +8,117 @@ const CustomFn = require('../../CustomFn.js');
 const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 
+
+/*  待用
+https://www.cls.cn/quotation 行情
+// 简易指数的涨幅信息
+https://x-quote.cls.cn/v2/quote/a/web/stocks/basic?app=CailianpressWeb&secu_codes=sh000001,sz399001,sz399006,sh000016,sz399300,sh000905&fields=secu_code,secu_name,change,last_px,preclose_px
+// 指数详细的涨幅的线
+https://x-quote.cls.cn/quote/index/tlines?app=CailianpressWeb&os=web&secu_codes=sh000001,sz399001,sz399006,sh000016,sz399300,sh000905
+// 指数的详细详情
+https://x-quote.cls.cn/quote/stocks/basic?secu_codes=sh000001,sh603773,sz399001
+// 自己根据上面摸索出来的
+https://x-quote.cls.cn/quote/stocks/basic?secu_codes=sh000001,sz399001,sz399006,sh000016,sz399300,sh000905&fields=secu_code,secu_name,change,last_px,preclose_px
+
+
+https://www.cls.cn/finance “看盘”里面的涨幅异动时间轴，当天板块的异动
+https://www.cls.cn/v3/transaction/anchor?app=CailianpressWeb&cdate=2026-02-05
+
+板块
+https://api3.cls.cn/share/plate/v1/all
+
+获取涨幅
+https://x-quote.cls.cn/quote/plate/refresh?app=cailianpress&channel=0&secu_codes=cls80620
+https://x-quote.cls.cn/quote/plate/refresh?secu_codes=cls80056,cls80620
+
+财联社-主题基金榜单
+https://x-quote.cls.cn/v2/quote/a/plate/fund_heat_by_shzq?days=1&way=change&num=50&rever=0
+https://x-quote.cls.cn/v2/quote/a/plate/fund_heat_by_shzq?days=1&way=change&num=1000&rever=0
+
+
+https://x-quote.cls.cn/v2/quote/a/stock/ranking/topics?app=cailianpress
+*/
+
+
 /*
 https://www.cls.cn/finance 看盘(app)
 https://x-quote.cls.cn/v2/quote/a/stock/emotion?app=CailianpressWeb&os=web&sv=8.4.6
+https://x-quote.cls.cn/v2/quote/a/stock/emotion?app=cailianpress&channel=0 市场,与上面等同
 
 https://www.cls.cn/quotation 涨跌分布(PC)
 https://x-quote.cls.cn/quote/index/home?app=CailianpressWeb&os=web&sv=8.4.6
+https://x-quote.cls.cn/quote/index/home?app=cailianpress&channel=0 市场,与上面等同
 */
-router.post('/fund_cls_detailPageInfoWithNoPin', (req, res) => {
-  const { fund_code = '', pageSize = 10 } = req.body;
-
-  if (!fund_code) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到基金代码',
-      data: [],
-    });
-    return;
-  }
+router.post('/fund_cls_kanpan_app', (req, res) => {
   try {
-    let u = `https://x-quote.cls.cn/v2/quote/a/stock/emotion?app=CailianpressWeb&os=web&sv=8.4.6`;
+    let u = `https://x-quote.cls.cn/v2/quote/a/stock/emotion?app=cailianpress`;
     fetch(u, {})
       .then((data) => data.json())
       .then((data) => {
+        let resultData = {...data.data};
+        delete resultData.limit_up_board;
         res.send({
           code: 200,
           msg: '成功',
-          data: data.data,
+          data: resultData,
         });
       });
   } catch (err) {
     res.send({
       code: 400,
-      msg: `${fund_code}未能正确获取到值`,
+      msg: `获取看盘异常`,
       data: [],
     });
   }
 });
 
-/* 获取基金历史净值
-https://lc.jr.jd.com/finance/fund/latestdetail/achievement/?fundCode=007467&disclosureType=1&activeIndex=4
-https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"007467","pageNum":1,"pageSize":20,"channel":"9"}
+
+/*
+https://www.cls.cn/quotation - 主力净流入排行榜
 */
-router.post('/fund_cls_HistoryNetValuePageInfo', (req, res) => {
-  const { fund_code = '', pageSize = 10 } = req.body;
-
-  if (!fund_code) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到基金代码',
-      data: [],
-    });
-    return;
-  }
+router.post('/fund_cls_zhuliu', (req, res) => {
+  const {main_fund_diff=0} = req.body;
   try {
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundHistoryNetValuePageInfo?reqData={"fundCode":"${fund_code}","pageNum":1,"pageSize":${pageSize},"channel":"9"}`;
-    fetch(u, {})
-      .then((data) => data.json())
-      .then((data) => {
-        let resultData = data.resultData || {};
-        let datas = resultData.datas || {};
-        datas.netValueList = datas.netValueList.reverse();
-        res.send({
-          code: 200,
-          msg: '成功',
-          data: datas,
-        });
-      });
-  } catch (err) {
-    res.send({
-      code: 400,
-      msg: `${fund_code}未能正确获取到值`,
-      data: [],
-    });
-  }
-});
-
-// 获取基金的买卖规则
-router.post('/fund_cls_getFundTradeRulesPageInfo', (req, res) => {
-  const { fund_code = '', pageSize = 10 } = req.body;
-
-  if (!fund_code) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到基金代码',
-      data: [],
-    });
-    return;
-  }
-  try {
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundTradeRulesPageInfo?reqData={"fundCode":"${fund_code}"}`;
-    fetch(u, {})
-      .then((data) => data.json())
-      .then((data) => {
-        let resultData = data.resultData || {};
-        let datas = resultData.datas || {};
-        res.send({
-          code: 200,
-          msg: '成功',
-          data: datas,
-        });
-      });
-  } catch (err) {
-    res.send({
-      code: 400,
-      msg: `${fund_code}未能正确获取到值`,
-      data: [],
-    });
-  }
-});
-
-// 获取基金分红
-router.post('/fund_cls_getFundDividendPageInfo', (req, res) => {
-  const { fund_code = '', pageSize = 10 } = req.body;
-
-  if (!fund_code) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到基金代码',
-      data: [],
-    });
-    return;
-  }
-  try {
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDividendPageInfo?reqData={"fundCode":"${fund_code}","pageNum":1,"pageSize":20,"channel":"9"}`;
-    fetch(u, {})
-      .then((data) => data.json())
-      .then((data) => {
-        let resultData = data.resultData || {};
-        let datas = resultData.datas || {};
-        res.send({
-          code: 200,
-          msg: '成功',
-          data: datas,
-        });
-      });
-  } catch (err) {
-    res.send({
-      code: 400,
-      msg: `${fund_code}未能正确获取到值`,
-      data: [],
-    });
-  }
-});
-
-// 获取基金持仓
-router.post('/fund_cls_InvestmentDistributionPageInfo', (req, res) => {
-  const { fund_code = '', pageSize = 10 } = req.body;
-
-  if (!fund_code) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到基金代码',
-      data: [],
-    });
-    return;
-  }
-  try {
-    let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundInvestmentDistributionPageInfo?reqData={"itemId":"111934","fundCode":"${fund_code}","reportDate":"","channel":"9"}`;
-    fetch(u, {})
-      .then((data) => data.json())
-      .then((data) => {
-        if (!data.success) {
-          res.send({
-            code: 400,
-            msg: `${fund_code}服务器获取出错`,
-            data: [],
-          });
-        } else {
-          let resultData = data.resultData || {};
-          let datas = resultData.datas || {};
-          res.send({
-            code: 200,
-            msg: '成功',
-            data: datas.investmentDistribution || {},
-          });
-        }
-      });
-  } catch (err) {
-    res.send({
-      code: 400,
-      msg: `${fund_code}未能正确获取到值`,
-      data: [],
-    });
-  }
-});
-
-// 基金修复
-router.post('/fund_cls_getFundDetailChartPageInfo', (req, res) => {
-  const { fund_code = '', pageSize = 10 } = req.body;
-
-  if (!fund_code) {
-    res.send({
-      code: 400,
-      msg: '未正确获取到基金代码',
-      data: [],
-    });
-    return;
-  }
-  try {
-    let base_url = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?`;
-    let u = `${base_url}reqData={"chartType":7,"fundCode":"${fund_code}","dataCycle":4,"disclosureType":1}`;
-    fetch(u, {})
-      .then((data) => data.json())
-      .then((data) => {
-        if (!data.success) {
-          res.send({
-            code: 400,
-            msg: `${fund_code}服务器获取出错`,
-            data: [],
-          });
-        } else {
-          let resultData = data.resultData || {};
-          let datas = resultData.datas || {};
-          delete datas.restorePointList;
-          delete datas.retracementPointList;
-          delete datas.chartName;
-          res.send({
-            code: 200,
-            msg: '成功',
-            data: datas || {},
-          });
-        }
-      });
-  } catch (err) {
-    res.send({
-      code: 400,
-      msg: `${fund_code}未能正确获取到值`,
-      data: [],
-    });
-  }
-});
-
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&rankCode=432126255181888
-// 获取京东金融上面的“今日加仓榜”
-router.post('/fund_cls_getWealthDatas', (req, res) => {
-  const { reqData = {} } = req.body;
-  console.log('reqData',reqData);
-
-  try {
-    let u = `https://ms.jr.jd.com/gw2/generic/opdataapi/newh5/m/getWealthDatas`;
+    let u = `https://x-quote.cls.cn/web_quote/web_stock/index_stock_list`;
     fetch(u, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body:JSON.stringify({
-        reqData:reqData
-      })
+      body: JSON.stringify({
+        os: 'web',
+        // sv: '8.4.6',
+        app: 'CailianpressWeb',
+        main_fund_diff: main_fund_diff,
+      }),
     })
       .then((data) => data.json())
       .then((data) => {
-        if (!data.success) {
-          res.send({
-            code: 400,
-            msg: `服务器获取出错`,
-            data: [],
-          });
-        } else {
-          let resultData = data.resultData || {};
-          let obj_1 = resultData.data || {};
-          let obj_2 = obj_1.data || [];
-          res.send({
-            code: 200,
-            msg: '成功',
-            data: obj_2 || [],
-          });
-        }
+        let main_fund_diff = data?.data?.main_fund_diff || [];
+        let turnData = main_fund_diff.map((item) => {
+          return {
+            "secu_name": item.secu_name,
+            "secu_code": item.secu_code,
+            "last_px": item.last_px,
+            "change": item.change,
+            "main_fund_diff": item.main_fund_diff,
+          }
+        });
+        res.send({
+          code: 200,
+          msg: '成功',
+          data: turnData,
+        });
       });
   } catch (err) {
     res.send({
       code: 400,
-      msg: `未能正确获取到值`,
+      msg: `获取主力流出异常`,
       data: [],
     });
   }
-});
+})
 
 
-// https://show.jd.com/m/ZL5vVEgDqrY4lBKr/?pageKey=ZL5vVEgDqrY4lBKr&rankCode=432126255181888 进阶基金榜单
-router.post('/fund_cls_getInvestResearchRank', (req, res) => {
-  const { reqData = {} } = req.body;
-  try {
-    let u = `https://ms.jr.jd.com/gw2/generic/jj/newh5/m/getInvestResearchRank`;
-    fetch(u, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body:JSON.stringify({
-        reqData: reqData
-      })
-    })
-      .then((data) => data.json())
-      .then((data) => {
-        if (!data.success) {
-          res.send({
-            code: 400,
-            msg: `服务器获取出错`,
-            data: [],
-          });
-        } else {
-          let resultData = data.resultData || {};
-          let obj_1 = resultData.datas || {};
-          const productTabList = obj_1.productTabList || [];
-          const productList = (productTabList[0] || {}).productList || [];
-          res.send({
-            code: 200,
-            msg: '成功',
-            data: productList,
-          });
-        }
-      });
-  } catch (err) {
-    res.send({
-      code: 400,
-      msg: `未能正确获取到值`,
-      data: [],
-    });
-  }
-});
 
 module.exports = router;

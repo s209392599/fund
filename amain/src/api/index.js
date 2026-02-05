@@ -103,6 +103,14 @@ export async function server_fund_jd_getInvestResearchRank(data) {
   return request.post('/fund_jd_getInvestResearchRank', data);
 }
 
+// fund_cls_kanpan_app 获取_cls_kanpan_app数据
+export async function server_fund_cls_kanpan_app(data) {
+  return request.post('/fund_cls_kanpan_app', data);
+}
+// fund_cls_zhuliu 获取_cls_zhuliu数据
+export async function server_fund_cls_zhuliu(data) {
+  return request.post('/fund_cls_zhuliu', data);
+}
 // --------------------------------------------------------------  下面是数据库操作
 
 // 获取所有正常监听的基金(排除关键词、不可买)

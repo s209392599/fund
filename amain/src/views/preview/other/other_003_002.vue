@@ -130,17 +130,23 @@ onMounted(() => {
         <el-table-column prop="riskLevelStr" label="风险" width="80">
         </el-table-column>
 
+        <el-table-column prop="" label="近1月" width="80" align="right">
+          <template v-slot="{ row }">
+            <span>{{ row.singleMonthRate ? row.singleMonthRate.toFixed(2) : '-' }}%</span>
+          </template>
+        </el-table-column>
+
         <el-table-column prop="" label="近1年" width="80" align="right">
           <template v-slot="{ row }">
             <span>{{ row.singleYearRate ? row.singleYearRate.toFixed(2) : '-' }}%</span>
           </template>
         </el-table-column>
 
-        <el-table-column prop="" label="近1月持有人数涨幅" width="80" align="right">
+        <!-- <el-table-column prop="" label="近1月持有人数涨幅" width="80" align="right">
           <template v-slot="{ row }">
             <span>{{ row.holdUsrCntIncrsRate30d ? (Number(row.holdUsrCntIncrsRate30d) * 100).toFixed(2) : '-' }}%</span>
           </template>
-        </el-table-column>
+        </el-table-column> -->
 
         <el-table-column align="right" label="特征" width="300">
           <template v-slot="{ row }">

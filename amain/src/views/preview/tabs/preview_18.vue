@@ -115,7 +115,7 @@ const info = reactive({
     {
       name: '净流出',
       zhang_now: pre_now + 'id=899001_TB&imageType=FFRS&type=FFR', // 今日涨幅
-      zhu_liu: pre_now + 'id=899001_TB&imageType=FFRS&type=FFR',
+      // zhu_liu: pre_now + 'id=899001_TB&imageType=FFRS&type=FFR',
     },
     {
       name: '恒生指数',
