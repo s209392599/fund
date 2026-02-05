@@ -53,6 +53,12 @@ const info = reactive({
     //     },
     //   ],
     // },
+    {
+      id: 'other_005_000',
+      name: 'choice资讯',
+      hasComponent: true, // 标识该节点没有组件，仅为父节点
+      component: () => import('@/views/preview/other/other_005_000.vue')
+    },
 
   ],
 });

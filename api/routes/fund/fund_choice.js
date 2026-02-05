@@ -38,17 +38,15 @@ router.post('/fund_choice_zixun_app', (req, res) => {
     })
       .then((data) => data.json())
       .then((data) => {
-        let resultData = { ...data.data };
-        delete resultData.limit_up_board;
-
         const records = data?.data?.records || [];
+        // fs.writeFileSync(path.join(__dirname, '../../data/choice_zixun_app.json'), JSON.stringify(records));
+
         const turnData = records.map(item => {
           return {
             infocode: item.code,// 新闻ID
             showtime: item.data.showtime,// 更新时间
-            simdigest: item.data.simdigest,// 新闻标题
+            simdigest: item.data.simdigest || item.data.title,// 新闻标题
             from: item.data.from,// 来源
-
           };
         });
 
