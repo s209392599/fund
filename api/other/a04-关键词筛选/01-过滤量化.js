@@ -21,10 +21,10 @@ const {
 
 // 过滤条件
 const filterObj = {
-  nian_hua: 50, // 年化收益不低于10
+  nian_hua: 20, // 年化收益不低于10
   mai_chu_gui_ze: 3, // 卖出规则只有两条，三条则可能是要求30天之后
-  xiu_fu_tian_shu: 80,// 回撤修复天数要小于120
-  zui_da_hui_che: -20,// 最大回撤要小于10%
+  xiu_fu_tian_shu: 110,// 回撤修复天数要小于120
+  zui_da_hui_che: -30,// 最大回撤要小于10%
   zong_he_fei_lv: 2,// 综合费率不能大于1.5%
 };
 const params_keywords = {
