@@ -29,6 +29,20 @@ https://www.iwencai.com/unifiedwap/result?w=008164&querytype=fund
 
 005110,010235,014521,019000,018940,019889
 
+同花顺详情中心
+https://q.10jqka.com.cn/
+
+全球焦点快讯
+https://kuaixun.eastmoney.com/yw.html
+
+
+南北向资金
+https://www.eastmoney.com/
+https://data.eastmoney.com/hsgt/hsgtV2.html
+
+天天基金 列表
+https://fund.eastmoney.com/a/cjjyw.html
+
 https://www.csindex.com.cn/#/about/newsCenter 中证指数的新闻与公告
 https://www.csindex.com.cn/#/indices/family/detail?indexCode=000510 A500的详情
 
@@ -87,7 +101,13 @@ https://x-quote.cls.cn/quote/plate/refresh?secu_codes=cls80056,cls80620
 财联社-主题基金榜单
 https://x-quote.cls.cn/v2/quote/a/plate/fund_heat_by_shzq?days=1&way=change&num=50&rever=0
 https://x-quote.cls.cn/v2/quote/a/plate/fund_heat_by_shzq?days=1&way=change&num=1000&rever=0
+https://x-quote.cls.cn/v2/quote/a/plate/fund_heat_by_shzq?days=10&way=change&num=50&rever=0
 
 https://x-quote.cls.cn/v2/quote/a/stock/ranking/topics?app=cailianpress
+
+https://api3.cls.cn/quote/fundplate?sv=817&os=ios&fundTypeCode=cls82517
+
+
+
   */
 }
