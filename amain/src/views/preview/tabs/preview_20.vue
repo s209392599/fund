@@ -225,9 +225,9 @@ const toBillion = (val) => {
 };
 
 onMounted(() => {
-  // getKanPanData();// 看盘数据
-  // getZhuliInData();// 主力流入
-  // getZhuliuOutData();// 主力流出
+  getKanPanData();// 看盘数据
+  getZhuliInData();// 主力流入
+  getZhuliuOutData();// 主力流出
 });
 
 

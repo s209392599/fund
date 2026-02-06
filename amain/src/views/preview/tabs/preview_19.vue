@@ -59,7 +59,12 @@ const info = reactive({
       hasComponent: true, // 标识该节点没有组件，仅为父节点
       component: () => import('@/views/preview/other/other_005_000.vue')
     },
-
+    {
+      id: 'other_006_000',
+      name: '同花顺-基金要闻',
+      hasComponent: true, // 标识该节点没有组件，仅为父节点
+      component: () => import('@/views/preview/other/other_006_000.vue')
+    },
   ],
 });
 

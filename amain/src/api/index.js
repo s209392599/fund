@@ -116,6 +116,10 @@ export async function server_fund_cls_zhuliu(data) {
 export async function server_fund_choice_zixun_app(data) {
   return request.post('/fund_choice_zixun_app', data);
 }
+// fund_tonghusshun_news_app 获取同花顺-基金要闻数据
+export async function server_fund_tonghusshun_news_app(data) {
+  return request.post('/fund_tonghusshun_news_app', data);
+}
 // --------------------------------------------------------------  下面是数据库操作
 
 // 获取所有正常监听的基金(排除关键词、不可买)

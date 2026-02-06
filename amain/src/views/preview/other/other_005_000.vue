@@ -89,9 +89,15 @@ onMounted(() => {
       color: #999;
     }
 
+    &:hover {
+      background-color: #f4f4f4;
+    }
+
     &.active {
       background-color: #ded4d4;
     }
+
+
   }
 }
 </style>
