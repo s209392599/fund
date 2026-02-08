@@ -4,182 +4,56 @@ console.log('amain/src/views/preview/tabs/preview_20.vue');
 
 const info = reactive({
   kanpan: {
-    "market_degree": "34",// 市场热度
-    "shsz_balance": "3279亿",// 两市成交额
-    "shsz_balance_change_px": "-594亿",// 较上一日
-    "preview_balance": "2.17万亿",// 今日量能预测
-    "preview_balance_change_px": "-3068亿",// 较上一日
-    "up_ratio": "88.00%",// 封板率
-    "up_ratio_num": "14",// 封板
-    "up_open_num": "2",// 触及
-    "performance": "0.67%",// 昨涨停今表现
-    "up_open_ratio": "40%",// 高开率
-    "profit_ratio": "43%",// 获利率
-    "up_down_dis": {
-      "status": true,
-      "suspend_num": 12,// 停牌
-      "up_num": 20,// 涨停
-      "down_num": 8,// 跌停
-      "rise_num": 2198,// 上涨
-      "fall_num": 3052,// 下跌
-      "flat_num": 229,// 持平
-      "down_10": 10,// 小于-8%
-      "down_8": 27,// -8%
-      "down_6": 96,// -6%
-      "down_4": 420,// -4%
-      "down_2": 2499,// -2%
-      "up_2": 1888,// +2%
-      "up_4": 211,// +4%
-      "up_6": 59,// +6%
-      "up_8": 12,// +8%
-      "up_10": 28,// 大于+8%
-    },
+    // "market_degree": "34",// 市场热度
+    // "shsz_balance": "3279亿",// 两市成交额
+    // "shsz_balance_change_px": "-594亿",// 较上一日
+    // "preview_balance": "2.17万亿",// 今日量能预测
+    // "preview_balance_change_px": "-3068亿",// 较上一日
+    // "up_ratio": "88.00%",// 封板率
+    // "up_ratio_num": "14",// 封板
+    // "up_open_num": "2",// 触及
+    // "performance": "0.67%",// 昨涨停今表现
+    // "up_open_ratio": "40%",// 高开率
+    // "profit_ratio": "43%",// 获利率
+    // "up_down_dis": {
+    //   "status": true,
+    //   "suspend_num": 12,// 停牌
+    //   "up_num": 20,// 涨停
+    //   "down_num": 8,// 跌停
+    //   "rise_num": 2198,// 上涨
+    //   "fall_num": 3052,// 下跌
+    //   "flat_num": 229,// 持平
+    //   "down_10": 10,// 小于-8%
+    //   "down_8": 27,// -8%
+    //   "down_6": 96,// -6%
+    //   "down_4": 420,// -4%
+    //   "down_2": 2499,// -2%
+    //   "up_2": 1888,// +2%
+    //   "up_4": 211,// +4%
+    //   "up_6": 59,// +6%
+    //   "up_8": 12,// +8%
+    //   "up_10": 28,// 大于+8%
+    // },
   },// 看盘信息
   // 主力流入
   zhuliuInObj: [
-    {
-      "secu_name": "平潭发展",
-      "secu_code": "sz000592",
-      "last_px": 11.83,
-      "change": 0.1005,
-      "main_fund_diff": 1136239673
-    },
-    {
-      "secu_name": "中际旭创",
-      "secu_code": "sz300308",
-      "last_px": 570.9,
-      "change": 0.0195,
-      "main_fund_diff": 665543951
-    },
-    {
-      "secu_name": "N北芯-U",
-      "secu_code": "sh688712",
-      "last_px": 49.92,
-      "change": 1.8493,
-      "main_fund_diff": 510031539
-    },
-    {
-      "secu_name": "网宿科技",
-      "secu_code": "sz300017",
-      "last_px": 17.86,
-      "change": 0.0682,
-      "main_fund_diff": 503513272
-    },
-    {
-      "secu_name": "二六三",
-      "secu_code": "sz002467",
-      "last_px": 7.34,
-      "change": 0.1004,
-      "main_fund_diff": 419389797
-    },
-    {
-      "secu_name": "工业富联",
-      "secu_code": "sh601138",
-      "last_px": 54.15,
-      "change": 0.0139,
-      "main_fund_diff": 408231104
-    },
-    {
-      "secu_name": "贵州茅台",
-      "secu_code": "sh600519",
-      "last_px": 1536.02,
-      "change": 0.0072,
-      "main_fund_diff": 357740328
-    },
-    {
-      "secu_name": "遥望科技",
-      "secu_code": "sz002291",
-      "last_px": 9.04,
-      "change": 0.0998,
-      "main_fund_diff": 350435340
-    },
-    {
-      "secu_name": "光线传媒",
-      "secu_code": "sz300251",
-      "last_px": 20.71,
-      "change": 0.0832,
-      "main_fund_diff": 331043492
-    },
-    {
-      "secu_name": "海峡创新",
-      "secu_code": "sz300300",
-      "last_px": 13.97,
-      "change": 0.1545,
-      "main_fund_diff": 294127437
-    }
+    // {
+    //   "secu_name": "平潭发展",
+    //   "secu_code": "sz000592",
+    //   "last_px": 11.83,
+    //   "change": 0.1005,
+    //   "main_fund_diff": 1136239673
+    // },
   ],
   // 主力流出
   zhuliuOutObj: [
-    {
-      "secu_name": "紫金矿业",
-      "secu_code": "sh601899",
-      "last_px": 37.07,
-      "change": -0.0534,
-      "main_fund_diff": -1865263715
-    },
-    {
-      "secu_name": "特变电工",
-      "secu_code": "sh600089",
-      "last_px": 27.85,
-      "change": -0.043,
-      "main_fund_diff": -1281951958
-    },
-    {
-      "secu_name": "新易盛",
-      "secu_code": "sz300502",
-      "last_px": 390.9,
-      "change": -0.0208,
-      "main_fund_diff": -1143704173
-    },
-    {
-      "secu_name": "洛阳钼业",
-      "secu_code": "sh603993",
-      "last_px": 21.98,
-      "change": -0.0714,
-      "main_fund_diff": -975991730
-    },
-    {
-      "secu_name": "隆基绿能",
-      "secu_code": "sh601012",
-      "last_px": 18.31,
-      "change": -0.0518,
-      "main_fund_diff": -906126084
-    },
-    {
-      "secu_name": "山子高科",
-      "secu_code": "sz000981",
-      "last_px": 4.85,
-      "change": -0.0564,
-      "main_fund_diff": -848896986
-    },
-    {
-      "secu_name": "TCL中环",
-      "secu_code": "sz002129",
-      "last_px": 10.65,
-      "change": 0.0076,
-      "main_fund_diff": -782569284
-    },
-    {
-      "secu_name": "金风科技",
-      "secu_code": "sz002202",
-      "last_px": 25.03,
-      "change": -0.0825,
-      "main_fund_diff": -760588104
-    },
-    {
-      "secu_name": "蓝色光标",
-      "secu_code": "sz300058",
-      "last_px": 19.75,
-      "change": -0.0271,
-      "main_fund_diff": -664573865
-    },
-    {
-      "secu_name": "阳光电源",
-      "secu_code": "sz300274",
-      "last_px": 146.23,
-      "change": -0.0397,
-      "main_fund_diff": -652491572
-    }
+    // {
+    //   "secu_name": "紫金矿业",
+    //   "secu_code": "sh601899",
+    //   "last_px": 37.07,
+    //   "change": -0.0534,
+    //   "main_fund_diff": -1865263715
+    // },
   ],
 });
 
@@ -293,19 +167,19 @@ onMounted(() => {
       <!-- 主力流入榜 -->
       <div class="list_item_box ">
         <div class="list_item_title">主力流入榜</div>
-        <div class="list_item_content">
+        <div class="list_item_content line_liuru">
           <div class="list_item_row flex items-center gap-10 justify-between">
-            <div class="list_item_row_title">股票</div>
-            <div class="list_item_row_content text-right">最新价</div>
-            <div class="list_item_row_content text-right">涨跌幅</div>
-            <div class="list_item_row_content text-right">主力流入</div>
+            <div class="list_item_row_title line_liuru_1">股票</div>
+            <div class="list_item_row_content text-right line_liuru_2">最新价</div>
+            <div class="list_item_row_content text-right line_liuru_3">涨跌幅</div>
+            <div class="list_item_row_content text-right line_liuru_4">主力流入</div>
           </div>
 
           <div class="list_item_row flex items-center gap-10 justify-between" v-for="item in info.zhuliuInObj">
-            <div class="list_item_row_title" :title="item.secu_code">{{ item.secu_name }}</div>
-            <div class="list_item_row_content text-right">{{ item.last_px }}</div>
-            <div class="list_item_row_content text-right">{{ item.change }}</div>
-            <div class="list_item_row_content text-right">{{ toBillion(item.main_fund_diff) }}</div>
+            <div class="list_item_row_title line_liuru_1" :title="item.secu_code">{{ item.secu_name }}</div>
+            <div class="list_item_row_content text-right line_liuru_2">{{ item.last_px }}</div>
+            <div class="list_item_row_content text-right line_liuru_3">{{ item.change }}</div>
+            <div class="list_item_row_content text-right line_liuru_4">{{ toBillion(item.main_fund_diff) }}</div>
           </div>
         </div>
       </div>
@@ -313,27 +187,28 @@ onMounted(() => {
       <!-- 主力流出榜 -->
       <div class="list_item_box">
         <div class="list_item_title">主力流出榜</div>
-        <div class="list_item_content">
+        <div class="list_item_content line_liuru">
           <div class="list_item_row flex items-center gap-10 justify-between">
-            <div class="list_item_row_title">股票</div>
-            <div class="list_item_row_content text-right">最新价</div>
-            <div class="list_item_row_content text-right">涨跌幅</div>
-            <div class="list_item_row_content text-right">主力流出</div>
+            <div class="list_item_row_title line_liuru_1">股票</div>
+            <div class="list_item_row_content text-right line_liuru_2">最新价</div>
+            <div class="list_item_row_content text-right line_liuru_3">涨跌幅</div>
+            <div class="list_item_row_content text-right line_liuru_4">主力流出</div>
           </div>
 
           <div class="list_item_row flex items-center gap-10 justify-between" v-for="item in info.zhuliuOutObj">
-            <div class="list_item_row_title" :title="item.secu_code">{{ item.secu_name }}</div>
-            <div class="list_item_row_content text-right">{{ item.last_px }}</div>
-            <div class="list_item_row_content text-right">{{ item.change }}</div>
-            <div class="list_item_row_content text-right">{{ toBillion(item.main_fund_diff) }}</div>
+            <div class="list_item_row_title line_liuru_1" :title="item.secu_code">{{ item.secu_name }}</div>
+            <div class="list_item_row_content text-right line_liuru_2">{{ item.last_px }}</div>
+            <div class="list_item_row_content text-right line_liuru_3">{{ item.change }}</div>
+            <div class="list_item_row_content text-right line_liuru_4">{{ toBillion(item.main_fund_diff) }}</div>
           </div>
         </div>
       </div>
 
-      <div class="list_item_box"></div>
+      <!-- <div class="list_item_box"></div>
 
       <div class="list_item_box"></div>
-      <div class="list_item_box"></div>
+
+      <div class="list_item_box"></div> -->
 
     </div>
   </div>
@@ -402,5 +277,44 @@ onMounted(() => {
 
 .list_item_content {
   flex: 1;
+}
+
+.line_liuru {
+  .list_item_row {
+    .line_liuru_1 {
+      width: 100px;
+    }
+
+    .line_liuru_2 {
+      width: 80px;
+      padding: 0 5px;
+      text-align: right;
+    }
+
+    .line_liuru_3 {
+      width: 80px;
+      padding: 0 5px;
+      text-align: right;
+    }
+
+    .line_liuru_4 {
+      width: 90px;
+      padding: 0 5px;
+      text-align: right;
+    }
+
+    .list_item_row_title,
+    .list_item_row_content {
+      border-right: 1px solid #ccc;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
 }
 </style>

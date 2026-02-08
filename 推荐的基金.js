@@ -14,10 +14,50 @@ http://150.158.175.108:9999/fund_manager/index.html#/
 http://150.158.175.108:9999/auploadfiles.html
 
 
+
+南北向资金
+https://data.eastmoney.com/hsgt/hsgtV2.html
+
+
+融资融券
+https://data.eastmoney.com/rzrq/sh.html
+主力排名
+https://data.eastmoney.com/zjlx/list.html
+行情中心
+https://wap.eastmoney.com/quote/bj.html
+资金流向
+https://data.eastmoney.com/zjlx/
+南北向资金
+https://emdata.eastmoney.com/hsgt/index.html
+东方财富流向
+https://emdatah5.eastmoney.com/dc/zjlx/stock?fc=0.300059
+
+
+
+
+这个网站再研究下
+https://fund.10jqka.com.cn/
+https://fund.10jqka.com.cn/datacenter/fh/ 基金分红
+https://fund.10jqka.com.cn/market/xfx/ 新发基金
+https://data.10jqka.com.cn/funds/gnzjl 概念资金
+https://data.10jqka.com.cn/market/rzrq/ 融资融券
+
+
+同花顺
+https://www.10jqka.com.cn/
+https://stockpage.10jqka.com.cn/youth/300059/funds/
+
+
+
 https://data.eastmoney.com/report/industry.jshtml 行业研报
 https://finance.eastmoney.com/a/cywjh.html 资讯精华
 https://fund.eastmoney.com/data/xinfound.html 新成立的基金
 
+指数估值
+https://danjuanfunds.com/rn/value-center
+
+全球市场
+https://gushitong.baidu.com/
 
 https://fund.eastmoney.com/cnjy_jzzzl.html 场内基金交易净值排行
 https://fund.eastmoney.com/data/ 基金净值，可以从这里看看最新的评级之类的基金
@@ -36,6 +76,32 @@ https://fund.eastmoney.com/020251.html
 中银中证央企红利50指数A(020251)
 
 
+这种数据统计怎么来？
+截至2月6日，股票ETF仍在延续净流出态势，开年以来一度连续14个交易日净流出，总规模减少近7000亿元，仅沪深300ETF这一品种净流出就接近6000亿元。华泰柏瑞、易方达和华夏旗下的三只沪深300ETF，合计净流出接近5000亿元，规模最大的产品只有2000亿元出头。
+券商中国记者梳理发现，宽基ETF的规模下降，主要源自份额减少，而非行情下跌。沪深300ETF、上证50ETF、中证1000ETF等品种的份额下降幅度基本在40%乃至50%以上，最大降幅超过60%。
+
+
+清理历史数据
+chrome://settings/clearBrowserData
+chrome://sync-internals/  这个是啥？
+chrome://bookmarks/ 书签
+
+
+新浪财经  https://finance.sina.com.cn/
+https://vip.stock.finance.sina.com.cn/mkt/ 行情中心
+https://image.sinajs.cn/newchart/hollow/small/nsh000001.gif?1770542160929
+
+南北向资金
+http://www.chaguwang.cn/north1.html
+
+
+打新债  证券app上有智能打新？
+
+
+基金套利
+
+AH股溢价
+https://xueqiu.com/hq/ah?market=CN&first_name=0&second_name=6
 
 020254,005125
 [{"fund_code":"020254","fund_name":"鹏华盛世创新混合(LOF)C","fund_type":"混合型-偏股"},
@@ -102,6 +168,12 @@ CPO：
 */
 
 /*
+https://webquotepic.eastmoney.com/GetPic.aspx?id=899001_TB&imageType=FFRS&type=FFR
+https://webquotepic.eastmoney.com/GetPic.aspx?id=899001_TB&imageType=FFRS&type=FFR
+https://webquotepic.eastmoney.com/GetPic.aspx?id=899001_TB&imageType=FFRS&type=FFI
+
+
+
 工业富联股票
 https://webquoteklinepic.eastmoney.com/GetPic.aspx?nid=1.601138&imageType=KL
 https://webquotepic.eastmoney.com/GetPic.aspx?nid=0.002475&imageType=RJY

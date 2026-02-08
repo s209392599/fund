@@ -153,6 +153,18 @@
 .h-screen {
   height: 100vh;
 }
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
 .no-border {
   border: none !important;
 }

@@ -26,5 +26,13 @@
     "static/**",
     "node_modules/**",
     "*.log"
-  ]
+  ],
+  "search.exclude": {
+    "**/dist": true,
+    "**/*.min.js": true,
+    "**/*.min.css": true,
+    "**/*.min.map": true,
+    "**/coverage/**": true,
+    "**/node_modules/**": true
+  }
 }

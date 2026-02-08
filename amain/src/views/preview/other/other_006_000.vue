@@ -5,25 +5,26 @@ const localKey = 'choice_zixun_list';
 const info = reactive({
   urlframe: '',
   list: [
-    {
-      "seq": "674606528",
-      "title": "GLP-1减重药成新“药王”，港股通医药ETF易方达涨1.10%",
-      "ctime": "2026-02-06 11:35:45",
-      "source": "财闻",
-      "url": "http://news.10jqka.com.cn/m674606528_494/"
-    },
-    {
-      "seq": "674606520",
-      "title": "2026年将新增建设5G基站2.1万个，通信ETF银华涨1.02%",
-      "ctime": "2026-02-06 11:35:28",
-      "source": "财闻",
-      "url": "http://news.10jqka.com.cn/m674606520_494/"
-    },
+    // {
+    //   "seq": "674606528",
+    //   "title": "GLP-1减重药成新“药王”，港股通医药ETF易方达涨1.10%",
+    //   "ctime": "2026-02-06 11:35:45",
+    //   "source": "财闻",
+    //   "url": "http://news.10jqka.com.cn/m674606528_494/"
+    // },
+    // {
+    //   "seq": "674606520",
+    //   "title": "2026年将新增建设5G基站2.1万个，通信ETF银华涨1.02%",
+    //   "ctime": "2026-02-06 11:35:28",
+    //   "source": "财闻",
+    //   "url": "http://news.10jqka.com.cn/m674606520_494/"
+    // },
   ]
 })
 
 const getData = async () => {
   info.list = [];
+  info.urlframe = '';
   const res = await server_fund_tonghusshun_news_app({});
   console.log('res', res);
   if (res.code === 200) {
@@ -44,14 +45,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="page_wrapper flex">
-    <div class="page_left">
-      <div class="news_item" :class="{ 'active': info.urlframe.includes(item.url) }" v-for="(item, index) in info.list"
-        :key="item.seq" @click="newsClick(item)">
-        <div class="news_title">{{ index + 1 }}. {{ item.title }}</div>
-        <div class="news_time">
-          <span class="news_time_show">{{ item.ctime }}</span>
-          <span class="news_time_from ml-10">{{ item.source }}</span>
+  <div class="page_wrapper flex justify-center">
+    <div class="page_left flex flex-col overflow-auto h-full">
+      <div class="pd-10">
+        <el-button type="primary" @click="getData" style="width: 100%;">刷新</el-button>
+      </div>
+
+      <div class="flex-1 overflow-auto">
+        <div class="news_item" :class="{ 'active': info.urlframe.includes(item.url) }"
+          v-for="(item, index) in info.list" :key="item.seq" @click="newsClick(item)">
+          <div class="news_title">{{ index + 1 }}. {{ item.title }}</div>
+          <div class="news_time">
+            <span class="news_time_show">{{ item.ctime }}</span>
+            <span class="news_time_from ml-10">{{ item.source }}</span>
+          </div>
         </div>
       </div>
     </div>
