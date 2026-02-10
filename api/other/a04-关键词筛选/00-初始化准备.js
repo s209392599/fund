@@ -48,4 +48,3 @@ function resetJson(jsonPath, resetValue = []) {
 // 使用示例
 resetJson('./data/filter.json', []); // 重置JSON文件内容为 []
 resetJson('./data/error_arr.json', []);
-resetJson('./data/multiple.json', {"data":[]});

@@ -194,156 +194,155 @@ const viewDayFn = (num, active) => {
 const getUserInfo = () => {
   const res = {
     data: [
-      {
-        "fund_code": "001147",
-        "fund_name": "中欧瑾源灵活配置混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "002233",
-        "fund_name": "工银丰收回报灵活配置混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "005110",
-        "fund_name": "汇安多策略混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "005438",
-        "fund_name": "易方达易百智能量化策略C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "006104",
-        "fund_name": "华泰柏瑞量化智慧混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "006315",
-        "fund_name": "国联策略优选混合C",
-        "fund_type": "混合型-偏股"
-      },
-      {
-        "fund_code": "006532",
-        "fund_name": "华泰柏瑞量化阿尔法C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "011426",
-        "fund_name": "广发优势成长股票C",
-        "fund_type": "股票型"
-      },
-      {
-        "fund_code": "011741",
-        "fund_name": "博时成长精选混合C",
-        "fund_type": "混合型-偏股"
-      },
-      {
-        "fund_code": "013142",
-        "fund_name": "华商乐享互联灵活配置混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "014063",
-        "fund_name": "景顺长城专精特新量化优选股票C",
-        "fund_type": "股票型"
-      },
-      {
-        "fund_code": "014521",
-        "fund_name": "诺安利鑫灵活配置混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "014806",
-        "fund_name": "国金量化精选混合C",
-        "fund_type": "混合型-偏股"
-      },
-      {
-        "fund_code": "016858",
-        "fund_name": "国金量化多因子股票C",
-        "fund_type": "股票型"
-      },
-      {
-        "fund_code": "018470",
-        "fund_name": "国富策略回报混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "018561",
-        "fund_name": "中信保诚多策略混合(LOF)C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "019506",
-        "fund_name": "国泰海通中证1000优选股票发起C",
-        "fund_type": "股票型"
-      },
-      {
-        "fund_code": "020152",
-        "fund_name": "中信保诚景气优选混合C",
-        "fund_type": "混合型-偏股"
-      },
-      {
-        "fund_code": "020180",
-        "fund_name": "金信深圳成长混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "020268",
-        "fund_name": "宏利睿智成长混合C",
-        "fund_type": "混合型-偏股"
-      },
-      {
-        "fund_code": "020726",
-        "fund_name": "建信灵活配置混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "020749",
-        "fund_name": "国联智选先锋股票C",
-        "fund_type": "股票型"
-      },
-      {
-        "fund_code": "021265",
-        "fund_name": "兴业聚利灵活配置混合C",
-        "fund_type": "混合型-灵活"
-      },
-      {
-        "fund_code": "021865",
-        "fund_name": "中欧中证800研究智选混合发起C",
-        "fund_type": "混合型-偏股"
-      }
+      // {
+      //   "fund_code": "001147",
+      //   "fund_name": "中欧瑾源灵活配置混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "002233",
+      //   "fund_name": "工银丰收回报灵活配置混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "005110",
+      //   "fund_name": "汇安多策略混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "005438",
+      //   "fund_name": "易方达易百智能量化策略C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "006104",
+      //   "fund_name": "华泰柏瑞量化智慧混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "006315",
+      //   "fund_name": "国联策略优选混合C",
+      //   "fund_type": "混合型-偏股"
+      // },
+      // {
+      //   "fund_code": "006532",
+      //   "fund_name": "华泰柏瑞量化阿尔法C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "011426",
+      //   "fund_name": "广发优势成长股票C",
+      //   "fund_type": "股票型"
+      // },
+      // {
+      //   "fund_code": "011741",
+      //   "fund_name": "博时成长精选混合C",
+      //   "fund_type": "混合型-偏股"
+      // },
+      // {
+      //   "fund_code": "013142",
+      //   "fund_name": "华商乐享互联灵活配置混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "014063",
+      //   "fund_name": "景顺长城专精特新量化优选股票C",
+      //   "fund_type": "股票型"
+      // },
+      // {
+      //   "fund_code": "014521",
+      //   "fund_name": "诺安利鑫灵活配置混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "014806",
+      //   "fund_name": "国金量化精选混合C",
+      //   "fund_type": "混合型-偏股"
+      // },
+      // {
+      //   "fund_code": "016858",
+      //   "fund_name": "国金量化多因子股票C",
+      //   "fund_type": "股票型"
+      // },
+      // {
+      //   "fund_code": "018470",
+      //   "fund_name": "国富策略回报混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "018561",
+      //   "fund_name": "中信保诚多策略混合(LOF)C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "019506",
+      //   "fund_name": "国泰海通中证1000优选股票发起C",
+      //   "fund_type": "股票型"
+      // },
+      // {
+      //   "fund_code": "020152",
+      //   "fund_name": "中信保诚景气优选混合C",
+      //   "fund_type": "混合型-偏股"
+      // },
+      // {
+      //   "fund_code": "020180",
+      //   "fund_name": "金信深圳成长混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "020268",
+      //   "fund_name": "宏利睿智成长混合C",
+      //   "fund_type": "混合型-偏股"
+      // },
+      // {
+      //   "fund_code": "020726",
+      //   "fund_name": "建信灵活配置混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "020749",
+      //   "fund_name": "国联智选先锋股票C",
+      //   "fund_type": "股票型"
+      // },
+      // {
+      //   "fund_code": "021265",
+      //   "fund_name": "兴业聚利灵活配置混合C",
+      //   "fund_type": "混合型-灵活"
+      // },
+      // {
+      //   "fund_code": "021865",
+      //   "fund_name": "中欧中证800研究智选混合发起C",
+      //   "fund_type": "混合型-偏股"
+      // }
     ]
   }
-
-  page.list = (res.data || []).map((v) => {
-    v.his_data = []; // 添加一个历史数据的字段
-    return v;
-  });
-  for (let i = 0; i < page.list.length; i++) {
-    setTimeout(() => {
-      getHisData(page.list[i].fund_code, i); //请求历史数据
-    }, i * 100);
-  }
-
-  // server_fund_table_query_by_user({
-  //   fund_user_id: localStorage.getItem('user_id'),
-  // }).then((res) => {
-  //   if (res.code === 200) {
-  //     page.list = (res.data || []).map((v) => {
-  //       v.his_data = []; // 添加一个历史数据的字段
-  //       return v;
-  //     });
-  //     for (let i = 0; i < page.list.length; i++) {
-  //       setTimeout(() => {
-  //         getHisData(page.list[i].fund_code, i); //请求历史数据
-  //       }, i * 100);
-  //     }
-  //   } else {
-  //     ElMessage.error('获取列表失败，请重试！');
-  //   }
+  // page.list = (res.data || []).map((v) => {
+  //   v.his_data = []; // 添加一个历史数据的字段
+  //   return v;
   // });
+  // for (let i = 0; i < page.list.length; i++) {
+  //   setTimeout(() => {
+  //     getHisData(page.list[i].fund_code, i); //请求历史数据
+  //   }, i * 100);
+  // }
+
+  server_fund_table_query_by_user({
+    fund_user_id: localStorage.getItem('user_id'),
+  }).then((res) => {
+    if (res.code === 200) {
+      page.list = (res.data || []).map((v) => {
+        v.his_data = []; // 添加一个历史数据的字段
+        return v;
+      });
+      for (let i = 0; i < page.list.length; i++) {
+        setTimeout(() => {
+          getHisData(page.list[i].fund_code, i); //请求历史数据
+        }, i * 100);
+      }
+    } else {
+      ElMessage.error('获取列表失败，请重试！');
+    }
+  });
 };
 
 // 反选
