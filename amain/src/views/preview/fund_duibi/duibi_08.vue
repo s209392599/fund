@@ -26,8 +26,6 @@ const saveFundInfoToLocalstorage = () => {
   localStorage.setItem('fund_duibi_arr', JSON.stringify(arr));
 };
 
-
-
 const chart = ref(null);
 var myChart = null;
 
@@ -91,20 +89,28 @@ const render_chart_fn = () => {
       },
       alwaysShowContent: true, // 始终显示所有系列
       formatter: function (params) {
-        // let str = `横向坐标：${params[0].axisValue}<br/>`;
-        // params.forEach((item,index) => {
-        //   str += `${item.marker} ${page.list[index].fund_name}：${item.data}<br/>`;
-        // });
-        // return str;
-        let str = `横向坐标：${params[0].axisValue}<br/>`;
+        // 根据params[0].axisValue计算对应的日期
+        const dataIndex = params[0].dataIndex;
+        const len_data = info.dayArr[info.active];
+        const num_start = page.list[0]?.his_data.length - len_data;
 
-        // 创建可排序的数据数组
-        const sortedData = params
-          .map((item, index) => ({
+        let dateStr = `横向坐标：${params[0].axisValue}`;
+        if (num_start !== undefined && page.list[0]?.his_data[num_start + dataIndex]) {
+          dateStr = `日期：${page.list[0].his_data[num_start + dataIndex].date}`;
+        }
+
+        let str = `${dateStr}<br/>`;
+
+        // 过滤掉没有被选中的系列数据
+        const validParams = params.filter(param => param.seriesIndex !== undefined && param.seriesIndex !== -1);
+
+        // 创建可排序的数据数组，只包含有效的参数
+        const sortedData = validParams
+          .map((item) => ({
             marker: item.marker,
-            name: page.list[index].fund_name,
+            name: page.list[item.seriesIndex].fund_name,
             data: item.data,
-            originalIndex: index, // 保留原始索引，如果需要的话
+            originalIndex: item.seriesIndex, // 使用seriesIndex作为原始索引
           }))
           // 从大到小排序
           .sort((a, b) => b.data - a.data);
