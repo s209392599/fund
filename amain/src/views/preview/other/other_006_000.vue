@@ -3,6 +3,7 @@ console.log('amain/src/views/preview/other/other_006_000.vue');
 
 const localKey = 'choice_zixun_list';
 const info = reactive({
+  isBigScreen: false,
   urlframe: '',
   list: [
     // {
@@ -40,12 +41,14 @@ const newsClick = (item) => {
 }
 
 onMounted(() => {
+  // 自己的mac是1792px,家里的电脑是大屏 2026年02月10日16:31:58
+  info.isBigScreen = document.body.clientWidth > 1792;
   getData();
 });
 </script>
 
 <template>
-  <div class="page_wrapper flex justify-center">
+  <div class="page_wrapper flex" :class="{ 'big-screen': info.isBigScreen }">
     <div class="page_left flex flex-col overflow-auto h-full">
       <div class="pd-10">
         <el-button type="primary" @click="getData" style="width: 100%;">刷新</el-button>
@@ -107,6 +110,10 @@ onMounted(() => {
 
 
   }
+}
+
+.big-screen {
+  justify-content: center;
 }
 
 .page_right {

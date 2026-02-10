@@ -69,29 +69,36 @@ const render_chart_fn = () => {
       },
       alwaysShowContent: true, // 始终显示所有系列
       formatter: function (params) {
-        // let str = `横向坐标：${params[0].axisValue}<br/>`;
-        // params.forEach((item,index) => {
-        //   str += `${item.marker} ${page.list[index].fund_name}：${item.data}<br/>`;
-        // });
-        // return str;
-        let str = `横向坐标：${params[0].axisValue}<br/>`;
+        // 根据params[0].axisValue计算对应的日期
+        const dataIndex = params[0].dataIndex;
+        const len_data = info.dayArr[info.active];
+        const num_start = page.list[0]?.his_data.length - len_data;
 
-        // 创建可排序的数据数组
-        const sortedData = params
-          .map((item, index) => ({
+        let dateStr = `横向坐标：${params[0].axisValue}`;
+        if (num_start !== undefined && page.list[0]?.his_data[num_start + dataIndex]) {
+          dateStr = `日期：${page.list[0].his_data[num_start + dataIndex].date}`;
+        }
+
+        let str = `${dateStr}<br/>`;
+
+        // 过滤掉没有被选中的系列数据
+        const validParams = params.filter(param => param.seriesIndex !== undefined && param.seriesIndex !== -1);
+
+        // 创建可排序的数据数组，只包含有效的参数
+        const sortedData = validParams
+          .map((item) => ({
             marker: item.marker,
-            name: page.list[index].fund_name,
+            name: page.list[item.seriesIndex].fund_name,
             data: item.data,
-            originalIndex: index, // 保留原始索引，如果需要的话
+            originalIndex: item.seriesIndex, // 使用seriesIndex作为原始索引
           }))
           // 从大到小排序
           .sort((a, b) => b.data - a.data);
 
         // 循环排序后的数据
         sortedData.forEach((item) => {
-          str += `${item.marker} ${page.list[item.originalIndex].fund_code}-${
-            item.name
-          }：${item.data}<br/>`;
+          str += `${item.marker} ${page.list[item.originalIndex].fund_code}-${item.name
+            }：${item.data}<br/>`;
         });
         return str;
       },
@@ -185,23 +192,158 @@ const viewDayFn = (num, active) => {
 
 // 获取用户数据
 const getUserInfo = () => {
-  server_fund_table_query_by_user({
-    fund_user_id: localStorage.getItem('user_id'),
-  }).then((res) => {
-    if (res.code === 200) {
-      page.list = (res.data || []).map((v) => {
-        v.his_data = []; // 添加一个历史数据的字段
-        return v;
-      });
-      for (let i = 0; i < page.list.length; i++) {
-        setTimeout(() => {
-          getHisData(page.list[i].fund_code, i); //请求历史数据
-        }, i * 100);
+  const res = {
+    data: [
+      {
+        "fund_code": "001147",
+        "fund_name": "中欧瑾源灵活配置混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "002233",
+        "fund_name": "工银丰收回报灵活配置混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "005110",
+        "fund_name": "汇安多策略混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "005438",
+        "fund_name": "易方达易百智能量化策略C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "006104",
+        "fund_name": "华泰柏瑞量化智慧混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "006315",
+        "fund_name": "国联策略优选混合C",
+        "fund_type": "混合型-偏股"
+      },
+      {
+        "fund_code": "006532",
+        "fund_name": "华泰柏瑞量化阿尔法C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "011426",
+        "fund_name": "广发优势成长股票C",
+        "fund_type": "股票型"
+      },
+      {
+        "fund_code": "011741",
+        "fund_name": "博时成长精选混合C",
+        "fund_type": "混合型-偏股"
+      },
+      {
+        "fund_code": "013142",
+        "fund_name": "华商乐享互联灵活配置混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "014063",
+        "fund_name": "景顺长城专精特新量化优选股票C",
+        "fund_type": "股票型"
+      },
+      {
+        "fund_code": "014521",
+        "fund_name": "诺安利鑫灵活配置混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "014806",
+        "fund_name": "国金量化精选混合C",
+        "fund_type": "混合型-偏股"
+      },
+      {
+        "fund_code": "016858",
+        "fund_name": "国金量化多因子股票C",
+        "fund_type": "股票型"
+      },
+      {
+        "fund_code": "018470",
+        "fund_name": "国富策略回报混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "018561",
+        "fund_name": "中信保诚多策略混合(LOF)C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "019506",
+        "fund_name": "国泰海通中证1000优选股票发起C",
+        "fund_type": "股票型"
+      },
+      {
+        "fund_code": "020152",
+        "fund_name": "中信保诚景气优选混合C",
+        "fund_type": "混合型-偏股"
+      },
+      {
+        "fund_code": "020180",
+        "fund_name": "金信深圳成长混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "020268",
+        "fund_name": "宏利睿智成长混合C",
+        "fund_type": "混合型-偏股"
+      },
+      {
+        "fund_code": "020726",
+        "fund_name": "建信灵活配置混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "020749",
+        "fund_name": "国联智选先锋股票C",
+        "fund_type": "股票型"
+      },
+      {
+        "fund_code": "021265",
+        "fund_name": "兴业聚利灵活配置混合C",
+        "fund_type": "混合型-灵活"
+      },
+      {
+        "fund_code": "021865",
+        "fund_name": "中欧中证800研究智选混合发起C",
+        "fund_type": "混合型-偏股"
       }
-    } else {
-      ElMessage.error('获取列表失败，请重试！');
-    }
+    ]
+  }
+
+  page.list = (res.data || []).map((v) => {
+    v.his_data = []; // 添加一个历史数据的字段
+    return v;
   });
+  for (let i = 0; i < page.list.length; i++) {
+    setTimeout(() => {
+      getHisData(page.list[i].fund_code, i); //请求历史数据
+    }, i * 100);
+  }
+
+  // server_fund_table_query_by_user({
+  //   fund_user_id: localStorage.getItem('user_id'),
+  // }).then((res) => {
+  //   if (res.code === 200) {
+  //     page.list = (res.data || []).map((v) => {
+  //       v.his_data = []; // 添加一个历史数据的字段
+  //       return v;
+  //     });
+  //     for (let i = 0; i < page.list.length; i++) {
+  //       setTimeout(() => {
+  //         getHisData(page.list[i].fund_code, i); //请求历史数据
+  //       }, i * 100);
+  //     }
+  //   } else {
+  //     ElMessage.error('获取列表失败，请重试！');
+  //   }
+  // });
 };
 
 // 反选
@@ -260,6 +402,10 @@ const UnSelectAll = () => {
   });
 };
 
+const FreshData = () => {
+  getUserInfo(); // 获取用户数据
+}
+
 // 在组件挂载时初始化图表
 onMounted(() => {
   if (chart.value && echartsInstance) {
@@ -283,52 +429,18 @@ onUnmounted(() => {
 <template>
   <div class="page_wrapper">
     <div class="flex pb-5">
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 0 }"
-        @click="viewDayFn(5, 0)"
-        >近一周</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 1 }"
-        @click="viewDayFn(10, 1)"
-        >近两周</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 2 }"
-        @click="viewDayFn(20, 2)"
-        >近一个月</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 3 }"
-        @click="viewDayFn(40, 3)"
-        >近两个月</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 4 }"
-        @click="viewDayFn(60, 4)"
-        >近三个月</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 5 }"
-        @click="viewDayFn(120, 5)"
-        >近半年</el-button
-      >
-      <el-button
-        type="primary"
-        :class="{ active: info.active === 6 }"
-        @click="viewDayFn(244, 6)"
-        >近一年</el-button
-      >
+      <el-button type="primary" :class="{ active: info.active === 0 }" @click="viewDayFn(5, 0)">近一周</el-button>
+      <el-button type="primary" :class="{ active: info.active === 1 }" @click="viewDayFn(10, 1)">近两周</el-button>
+      <el-button type="primary" :class="{ active: info.active === 2 }" @click="viewDayFn(20, 2)">近一个月</el-button>
+      <el-button type="primary" :class="{ active: info.active === 3 }" @click="viewDayFn(40, 3)">近两个月</el-button>
+      <el-button type="primary" :class="{ active: info.active === 4 }" @click="viewDayFn(60, 4)">近三个月</el-button>
+      <el-button type="primary" :class="{ active: info.active === 5 }" @click="viewDayFn(120, 5)">近半年</el-button>
+      <el-button type="primary" :class="{ active: info.active === 6 }" @click="viewDayFn(244, 6)">近一年</el-button>
 
       <el-button type="primary" @click="turnSelect()">反选</el-button>
       <el-button type="primary" @click="CheckAll()">全选</el-button>
       <el-button type="primary" @click="UnSelectAll()">全不选</el-button>
+      <el-button type="primary" @click="FreshData()">刷新</el-button>
     </div>
 
     <div class="chart_box">
