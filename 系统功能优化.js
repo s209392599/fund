@@ -1,4 +1,8 @@
 /*
+744537967qq.com 孙志江
+474191468@qq.com  密码和邮箱一样 郑州帮帮群-龙龙
+
+
 http://150.158.175.108:9999/preview.html 图片要加上时间戳的后缀
 个人系统也是
 
@@ -34,8 +38,7 @@ https://api3.cls.cn/quote/fundplate?os=ios&fundTypeCode=cls81935
 https://lc.jr.jd.com/fund/funddiagnosis/index/?itemId=111934&dc=36
 https://www.iwencai.com/unifiedwap/result?w=008164&querytype=fund
 
-
-005110,010235,014521,019000,018940,019889
+金十数据app的资讯接口
 
 同花顺详情中心
 https://q.10jqka.com.cn/
@@ -63,6 +66,7 @@ https://emdatah5.eastmoney.com/dc/zjlx/stock?fc=0.300059
 
 
 
+005110,010235,014521,019000,018940,019889
 
 这个网站再研究下
 https://fund.10jqka.com.cn/
