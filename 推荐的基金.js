@@ -5,6 +5,9 @@
 
 
 /*
+2026年02月24日13:31:52 排行榜综选
+[{"fund_code":"016665","fund_name":"天弘全球高端制造混合(QDII)C","fund_type":"QDII-偏股"},{"fund_code":"017747","fund_name":"建信电子行业股票C","fund_type":"股票型"},{"fund_code":"018147","fund_name":"建信新兴市场混合(QDII)C","fund_type":"QDII-偏股"}]
+
 http://150.158.175.108:9999/fund_amain/index.html
 203812677@qq.com / qaz123..
 
@@ -50,6 +53,41 @@ https://fund.eastmoney.com/020251.html
 chrome://settings/clearBrowserData
 chrome://sync-internals/  这个是啥？
 chrome://bookmarks/ 书签
+
+新发基金
+https://fund.eastmoney.com/trade/xf.html
+
+这个是哪里的？
+https://fund.eastmoney.com/a/cjjyw.html
+
+板块资金流
+https://data.eastmoney.com/bkzj/hy.html
+
+
+
+<geolocation
+  onlocation="handleLocation(event)"
+  autolocate
+  accuracymode="precise">
+</geolocation>
+function handleLocation(event) {
+  // 直接从事件对象里拿数据
+  if (event.target.position) {
+    const { latitude, longitude } = event.target.position.coords;
+    console.log(`用户坐标: ${latitude}, ${longitude}`);
+  } else if (event.target.error) {
+    console.error("哎呀，被拒绝了或者定位失败。");
+  }
+}
+autolocate：如果用户之前已经给过权限，页面加载时自动获取，不显示按钮。
+accuracymode：你是要“精准”（precise）还是“大概”（approximate）？
+watch：就像以前的 watchPosition()，用户移动时持续更新。
+
+<geolocation onlocation="updateUI(event)">
+  <button onclick="navigator.geolocation.getCurrentPosition(updateUI)">
+    点我获取定位
+  </button>
+</geolocation>
 
 
 新浪财经  https://finance.sina.com.cn/
