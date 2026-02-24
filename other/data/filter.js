@@ -3,10 +3,17 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const { fangqi } = require('./data.js');
 
-const endNum = 400; // 筛选多少个后终止
+const endNum = 50; // 筛选多少个后终止
 const minRate = 7; // 年收益最低要求
+const TIMEOUT = 10000; // 10秒超时
 
 let EligibleList = []; // 符合条件的基金列表
+
+
+// 如果没有./fundData文件夹
+if (!fs.existsSync('./fundData')) {
+  fs.mkdirSync('./fundData');
+}
 
 /* 获取天天基金 近1年 收益排行榜前300个
 https://fund.eastmoney.com/trade/zq.html
@@ -90,6 +97,7 @@ async function AnnualIncome(fundCode) {
       referrerPolicy: 'strict-origin-when-cross-origin',
       body: 'reqData={"fundCode":"' + fundCode + '","channel":"9"}',
       method: 'POST',
+      timeout: TIMEOUT,
     });
     const res = (await response.json()) || {};
     performanceList = res?.resultData?.datas?.performanceList || [];
@@ -124,6 +132,7 @@ async function NetValue(fundCode) {
         fundCode +
         '","pageNum":1,"pageSize":380,"channel":"9"}',
       method: 'POST',
+      timeout: TIMEOUT,
     });
     const res = (await response.json()) || {};
     netValueList = res?.resultData?.datas?.netValueList || [];
@@ -139,41 +148,46 @@ async function isEligible(arr) {
     return false;
   }
 
-  for (let index = 0; index < arr.length; index++) {
+  let len = arr.length;
+
+  for (let i = 0; i < len; i++) {
     console.log(
-      `正在处理第${index + 1}个基金--${arr[index].productCode
-      }--已完成的基金数--${EligibleList.length}`
+      `${i + 1}/${len}--${arr[i].productCode}--已完成的基金数--${EligibleList.length}`
     );
     if (EligibleList.length >= endNum) {
       break;
     }
-    const productCode = arr[index].productCode;
+    const productCode = arr[i].productCode;
 
     // 等待计算年收益
     const rate = await AnnualIncome(productCode);
     console.log('rate', rate);
     if (rate === '' || Number(rate) < minRate) {
-      return false;
+      continue; // 跳过当前基金，继续下一个
     }
 
     // 等待计算累计净值
     const netValueList = await NetValue(productCode);
+    if (!netValueList || netValueList.length === 0) {
+      console.log(`净值数据为空--{${productCode}}`);
+      continue; // 跳过当前基金，继续下一个
+    }
     if (netValueList.length >= 300) {
       const num_1 = Number(netValueList[0].totalNetValue) || 0;
       const num_2 = Number(netValueList[99].totalNetValue) || 0;
       const num_3 = Number(netValueList[199].totalNetValue) || 0;
       const num_4 = Number(netValueList[299].totalNetValue) || 0;
 
-      let flag_0 = (num_2 > num_1) && (num_3 - num_2) && (num_4 - num_3);
+      let flag_0 = (num_1 > num_2) && (num_2 > num_3) && (num_3 > num_4);
       const flag_1 = num_1 > num_2 && (num_1 - num_2) / num_2 > 0.015;
       const flag_2 = num_2 > num_3 && (num_2 - num_3) / num_3 > 0.015;
       const flag_3 = num_3 > num_4 && (num_3 - num_4) / num_4 > 0.015;
 
       if (flag_0 && flag_1 && flag_2 && flag_3) {
-        EligibleList.push(arr[index]);
+        EligibleList.push(arr[i]);
 
         // 将 JSON 字符串写入文件
-        fs.writeFile(`./fundData/${arr[index].productCode}.json`, JSON.stringify(netValueList), (err) => {
+        fs.writeFile(`./fundData/${arr[i].productCode}.json`, JSON.stringify(netValueList), (err) => {
           if (err) {
             console.error(err);
             return;
@@ -198,7 +212,8 @@ async function startTask() {
   productList = productList.filter((item) => {
     return !fangqi.some((e) => e.productCode === item.productCode);
   });
-  console.log(productList.length);
+  console.log('初步过滤长度：', productList.length);
+
   // 初步过滤后的数组
   filteredList = new Array(productList.length).fill({});
   // 筛选:符合条件的基金列表
