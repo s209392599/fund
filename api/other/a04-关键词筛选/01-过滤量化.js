@@ -13,6 +13,8 @@ const {
   getJingdongBaseInfo, // 获取京东金融基本信息
   getFundDetailChartPageInfo, // 获取京东金融回撤修复
   getFundTradeRulesPageInfo, // 获取基金买卖费率
+  getFundFeatureData, // 获取基金特色数据(波动率、夏普率、最大回撤等)
+  getFundDiagnosisPageInfo, // 获取基金综合诊断
 } = require('./mehods/index.js');
 
 // 过滤条件
@@ -24,6 +26,14 @@ const filterObj = {
   zong_he_fei_lv: 2,// 综合费率不能大于1.5%
   qian_shi_cang: 40,// 前十仓位和不超过45%
   qian_er_cang: 15,// 前二仓位和不超过25%
+  // 优秀稳健型基金：年化波动率 < 10%
+  // 中等稳健型基金：10% < 年化波动率 < 15%
+  // 高波动基金：年化波动率 > 15%
+  volatility: 0.15,// 波动率不能大于15%
+  // 优秀稳健型基金：夏普比率 > 2
+  // 中等稳健型基金：1 < 夏普比率 < 2
+  // 低效率基金：夏普比率 < 1
+  sharp_ratio: 1.5,// 夏普率不能大于1.5
 };
 const params_keywords = {
   keyword_arr: [
@@ -68,6 +78,8 @@ const info = {
     hui_che: [],// 回撤修复错误的
     // 不满足条件的
     not_meet_condition: [],
+    tese: [],// 特色数据错误的基金
+    zhenduan: [],// 综合诊断错误的基金
   },
 };
 
@@ -227,34 +239,34 @@ async function jingdongBaseInfo() {
           const rate_6 = (obj_3[3] || {}).rate || 0;// 近6月收益
           const rate_y_1 = (obj_3[4] || {}).rate || 0;// 近1年收益
 
-          if(rate_1 < filterObj.nian_hua/12){
+          if (rate_1 < filterObj.nian_hua / 12) {
             info.err_data.not_meet_condition.push({
               fund_code: item.fund_code,
               fund_name: item.fund_name,
-              reason: `近1月收益小于${filterObj.nian_hua/12}%`,
+              reason: `近1月收益小于${filterObj.nian_hua / 12}%`,
             });
             return null;// 近1月收益要大于0
           }
           // 近3月收益要大于0 并且近3月收益要大于近1月收益
-          if(rate_3 < filterObj.nian_hua/4 && rate_3 >= rate_1){
+          if (rate_3 < filterObj.nian_hua / 4 && rate_3 >= rate_1) {
             info.err_data.not_meet_condition.push({
               fund_code: item.fund_code,
               fund_name: item.fund_name,
-              reason: `近3月收益小于${filterObj.nian_hua/4}%`,
+              reason: `近3月收益小于${filterObj.nian_hua / 4}%`,
             });
             return null;
           }
           // 近6月收益要大于0 并且近6月收益要大于近3月收益
-          if(rate_6 < filterObj.nian_hua/2 && rate_6 >= rate_3){
+          if (rate_6 < filterObj.nian_hua / 2 && rate_6 >= rate_3) {
             info.err_data.not_meet_condition.push({
               fund_code: item.fund_code,
               fund_name: item.fund_name,
-              reason: `近6月收益小于${filterObj.nian_hua/2}%`,
+              reason: `近6月收益小于${filterObj.nian_hua / 2}%`,
             });
             return null;
           }
           // 近1年收益要大于0 并且近1年收益要大于近6月收益
-          if(rate_y_1 <= 0 && rate_y_1 >= rate_6){
+          if (rate_y_1 <= 0 && rate_y_1 >= rate_6) {
             info.err_data.not_meet_condition.push({
               fund_code: item.fund_code,
               fund_name: item.fund_name,
@@ -449,6 +461,89 @@ async function filterWithdrawalRecovery() {
   console.log(`符合京东金融能读取回撤修复的基金有 ${info.filter_data.length} 个`);
 }
 
+// 特色数据
+async function bodongFn() {
+  info.err_data.tese = [];
+  const promises = info.filter_data.map((item, index) => {
+    return limit(async () => {
+      // 进度
+      let progress = Math.floor((index + 1) / info.filter_data.length * 100);
+      console.log(`第 ${index + 1} 个  进度: ${progress}% ${item.fund_code}-${item.fund_name} 的特色数据...`);
+      try {
+        let datas = await getFundFeatureData(item.fund_code) || [];
+        let isEmpty = (datas[0] || { isEmpty: true }).isEmpty;
+        if (!isEmpty) {
+
+          return item;
+        } else {
+          info.err_data.tese.push({
+            fund_code: item.fund_code,
+            fund_name: item.fund_name,
+            reason: '数据为空',
+          });
+          console.log(`${item.fund_code}-${item.fund_name}  数据为空`);
+          return item;
+        }
+      } catch (err) {
+        info.err_data.tese.push({
+          fund_code: item.fund_code,
+          fund_name: item.fund_name,
+          reason: '请求出错',
+        });
+        console.log('err => ', err.message);
+        return item;
+      }
+    });
+  });
+
+  const results = await Promise.all(promises);
+  const new_data = results.filter(result => result !== null);
+  info.filter_data = new_data;
+  console.log(`符合特色数据的有 ${info.filter_data.length} 个`);
+}
+
+// 综合诊断
+async function zhenduanFn() {
+  info.err_data.zhenduan = [];
+  const promises = info.filter_data.map((item, index) => {
+    return limit(async () => {
+      // 进度
+      let progress = Math.floor((index + 1) / info.filter_data.length * 100);
+      console.log(`第 ${index + 1} 个  进度: ${progress}% ${item.fund_code}-${item.fund_name} 的综合诊断...`);
+      try {
+        let datas = await getFundDiagnosisPageInfo(item.fund_code) || [];
+        let isEmpty = (datas[0] || { isEmpty: true }).isEmpty;
+        if (!isEmpty) {
+          return item;
+        } else {
+          info.err_data.zhenduan.push({
+            fund_code: item.fund_code,
+            fund_name: item.fund_name,
+            reason: '数据为空',
+          });
+          console.log(`${item.fund_code}-${item.fund_name}  数据为空`);
+          return item;
+        }
+      } catch (err) {
+        info.err_data.zhenduan.push({
+          fund_code: item.fund_code,
+          fund_name: item.fund_name,
+          reason: '请求出错',
+        });
+        console.log('err => ', err.message);
+        return item;
+      }
+    });
+  });
+
+  const results = await Promise.all(promises);
+  const new_data = results.filter(result => result !== null);
+  info.filter_data = new_data;
+  console.log(`符合综合诊断的有 ${info.filter_data.length} 个`);
+}
+
+
+
 async function main() {
   const startTime = Date.now();
   try {
@@ -473,6 +568,13 @@ async function main() {
     // 回撤修复
     await filterWithdrawalRecovery();
 
+    // 特色数据
+    // await bodongFn();// 天天基金，暂时放弃，采用京东金融的多个数据，2026年02月26日14:20:06
+
+    // 综合诊断
+    await zhenduanFn();
+
+
     // fs.writeFileSync('./data/filter_keywords.json', JSON.stringify(info.filter_data, null, 2));
     // return false;
 
@@ -492,7 +594,7 @@ async function main() {
     if (info.err_data.hui_che.length > 0) {
       console.log('回撤不满足:', info.err_data.hui_che.length);
     }
-    if(info.err_data.not_meet_condition.length > 0) {
+    if (info.err_data.not_meet_condition.length > 0) {
       console.log('不符合条件错误数据长度:', info.err_data.not_meet_condition.length);
     }
   } catch (err) {

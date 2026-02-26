@@ -29,6 +29,15 @@ https://fund.eastmoney.com/020251.html
 中银中证央企红利50指数A(020251)
 
 
+decimal.js
+import Decimal from 'decimal.js';
+// 设置全局精度（例如保留50位有效数字）
+Decimal.set({ precision: 50 });
+const dailyStdDev = new Decimal(0.01); // 日收益率标准差1%
+const sqrt252 = new Decimal(252).sqrt();
+const annualizedVolatility = dailyStdDev.mul(sqrt252);
+console.log(annualizedVolatility.toString()); // 精确输出: 0.15874507866387544...
+
 这种数据统计怎么来？
 截至2月6日，股票ETF仍在延续净流出态势，开年以来一度连续14个交易日净流出，总规模减少近7000亿元，仅沪深300ETF这一品种净流出就接近6000亿元。华泰柏瑞、易方达和华夏旗下的三只沪深300ETF，合计净流出接近5000亿元，规模最大的产品只有2000亿元出头。
 券商中国记者梳理发现，宽基ETF的规模下降，主要源自份额减少，而非行情下跌。沪深300ETF、上证50ETF、中证1000ETF等品种的份额下降幅度基本在40%乃至50%以上，最大降幅超过60%。
