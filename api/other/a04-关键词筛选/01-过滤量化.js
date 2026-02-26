@@ -2,8 +2,9 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const os = require('os');
 const { default: pLimit } = require('p-limit');
-const limit = pLimit(5); // 设置并发数为5
+// const limit = pLimit(5); // 设置并发数为5
 // const limit = pLimit(os.cpus().length * 2); // CPU核心数
+const limit = pLimit(os.cpus().length); // CPU核心数
 const limit_2 = pLimit(2);
 
 const {
@@ -33,7 +34,7 @@ const filterObj = {
   // 优秀稳健型基金：夏普比率 > 2
   // 中等稳健型基金：1 < 夏普比率 < 2
   // 低效率基金：夏普比率 < 1
-  sharp_ratio: 1.5,// 夏普率,越大越好
+  sharp_ratio: 2,// 夏普率,越大越好
   calmar_ratio: 2,// 卡玛比率,越大越好
 };
 const params_keywords = {
@@ -236,10 +237,10 @@ async function jingdongBaseInfo() {
             });
             return null;
           }
-          const rate_1 = (obj_3[0] || {}).rate || 0;// 近1月收益
-          const rate_3 = (obj_3[2] || {}).rate || 0;// 近3月收益
-          const rate_6 = (obj_3[3] || {}).rate || 0;// 近6月收益
-          const rate_y_1 = (obj_3[4] || {}).rate || 0;// 近1年收益
+          const rate_1 = Number((obj_3[1] || {}).rate || 0);// 近1月收益
+          const rate_3 = Number((obj_3[2] || {}).rate || 0);// 近3月收益
+          const rate_6 = Number((obj_3[3] || {}).rate || 0);// 近6月收益
+          const rate_y_1 = Number((obj_3[4] || {}).rate || 0);// 近1年收益
 
           if (rate_1 < filterObj.nian_hua / 12) {
             info.err_data.not_meet_condition.push({
@@ -278,6 +279,7 @@ async function jingdongBaseInfo() {
           }
 
           item.itemId = datas?.headerOfItem?.itemId || '';
+          item.rate_y_1 = rate_y_1;
 
           return item;
         } else {
@@ -605,6 +607,11 @@ async function main() {
     // return false;
 
     // 写入筛选后的数据
+    info.filter_data.forEach(item => {
+      delete item.itemId;
+    });
+    // 按照rate_y_1 排序
+    info.filter_data.sort((a, b) => b.rate_y_1 - a.rate_y_1);
     fs.writeFileSync('./data/filter.json', JSON.stringify(info.filter_data, null, 2));
     // 写入错误数据
     fs.writeFileSync('./data/error_arr.json', JSON.stringify(info.err_data, null, 2));
