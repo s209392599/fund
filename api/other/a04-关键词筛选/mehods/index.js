@@ -8,7 +8,7 @@ async function queryResilienceInfo(search_data) {
   try {
     let u = `https://fund.eastmoney.com/js/fundcode_search.js`;
 
-    let response = await fetch(u);
+    let response = await fetch(u, { timeout: 15000 });
     const res = (await response.text()) || {};
     const arrayStr = res.substring(res.indexOf('['), res.lastIndexOf(']') + 1);
     const fundArray = JSON.parse(arrayStr);
@@ -103,7 +103,7 @@ async function filter_keywords(obj) {
 async function getFundTradeRulesPageInfo(fund_code) {
   try {
     let u = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundTradeRulesPageInfo?reqData={"fundCode":"${fund_code}"}`;
-    const response = await fetch(u);
+    const response = await fetch(u, { timeout: 15000 });
     const data = await response.json();
     let resultData = data.resultData || {};
     let datas = resultData.datas || {};
@@ -128,7 +128,7 @@ function realTimeInformation(str) {
 async function getFundGz(fundCode) {
   try {
     let u = `https://fundgz.1234567.com.cn/js/${fundCode}.js?rt=${+new Date()}`;
-    let response = await fetch(u);
+    let response = await fetch(u, { timeout: 15000 });
     const res = (await response.text()) || {};
     let str = realTimeInformation(res);
     let obsData = JSON.parse(str || '{}');
@@ -141,7 +141,7 @@ async function getFundGz(fundCode) {
 async function getJingdongBaseInfo(fundCode) {
   try {
     let u = `https://ms.jr.jd.com/gw2/generic/life/h5/m/getFundDetailPageInfoWithNoPin?reqData={"fundCode":"${fundCode}","itemId":"","clientVersion":"","channel":"9"}`;
-    let response = await fetch(u);
+    let response = await fetch(u, { timeout: 15000 });
     const res = (await response.json()) || {};
     let resultData = res.resultData || {};
     let datas = resultData.datas || {};
@@ -156,7 +156,7 @@ async function getFundDetailChartPageInfo(fund_code) {
   try {
     let base_url = `https://ms.jr.jd.com/gw/generic/jj/h5/m/getFundDetailChartPageInfo?`;
     let u = `${base_url}reqData={"chartType":7,"fundCode":"${fund_code}","dataCycle":4,"disclosureType":1}`;
-    const response = await fetch(u);
+    const response = await fetch(u, { timeout: 15000 });
     const data = await response.json();
     let resultData = data.resultData || {};
     let datas = resultData.datas || {};

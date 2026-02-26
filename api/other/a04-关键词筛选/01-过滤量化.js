@@ -2,8 +2,8 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const os = require('os');
 const { default: pLimit } = require('p-limit');
-// const limit = pLimit(5); // 设置并发数为5
-const limit = pLimit(os.cpus().length * 2); // CPU核心数
+const limit = pLimit(5); // 设置并发数为5
+// const limit = pLimit(os.cpus().length * 2); // CPU核心数
 const limit_2 = pLimit(2);
 
 const {
@@ -29,11 +29,12 @@ const filterObj = {
   // 优秀稳健型基金：年化波动率 < 10%
   // 中等稳健型基金：10% < 年化波动率 < 15%
   // 高波动基金：年化波动率 > 15%
-  volatility: 0.15,// 波动率不能大于15%
+  volatility: 20,// 波动率,越小越好
   // 优秀稳健型基金：夏普比率 > 2
   // 中等稳健型基金：1 < 夏普比率 < 2
   // 低效率基金：夏普比率 < 1
-  sharp_ratio: 1.5,// 夏普率不能大于1.5
+  sharp_ratio: 1.5,// 夏普率,越大越好
+  calmar_ratio: 2,// 卡玛比率,越大越好
 };
 const params_keywords = {
   keyword_arr: [
@@ -49,6 +50,7 @@ const params_keywords = {
     '绩优',
     '智选',
     '优选',
+    '周期驱动',
   ],
   noFundType: ['债券', '货币', '指数', 'QDII'],
   noEndWith: ['A', 'ETF', '(后端)'],// 不以什么结尾
@@ -274,6 +276,8 @@ async function jingdongBaseInfo() {
             });
             return null;
           }
+
+          item.itemId = datas?.headerOfItem?.itemId || '';
 
           return item;
         } else {
@@ -511,19 +515,43 @@ async function zhenduanFn() {
       let progress = Math.floor((index + 1) / info.filter_data.length * 100);
       console.log(`第 ${index + 1} 个  进度: ${progress}% ${item.fund_code}-${item.fund_name} 的综合诊断...`);
       try {
-        let datas = await getFundDiagnosisPageInfo(item.fund_code) || [];
-        let isEmpty = (datas[0] || { isEmpty: true }).isEmpty;
-        if (!isEmpty) {
-          return item;
-        } else {
+        let datas = await getFundDiagnosisPageInfo(item.itemId) || {};
+
+        // 波动率
+        let returnSd = datas.returnSd || {};
+        let boDongVal = Number(returnSd.value || 0);
+        if(boDongVal > filterObj.volatility){
           info.err_data.zhenduan.push({
             fund_code: item.fund_code,
             fund_name: item.fund_name,
-            reason: '数据为空',
+            reason: `波动率高于${filterObj.volatility}%`,
           });
-          console.log(`${item.fund_code}-${item.fund_name}  数据为空`);
-          return item;
+          return null;
         }
+        // 夏普比率
+        let sharpRatio = datas.sharpRatio || {};
+        let sharpVal = Number(sharpRatio.value || 0);
+        if(sharpVal < filterObj.sharp_ratio){
+          info.err_data.zhenduan.push({
+            fund_code: item.fund_code,
+            fund_name: item.fund_name,
+            reason: `夏普比率低于${filterObj.sharp_ratio}`,
+          });
+          return null;
+        }
+        // 卡玛比率
+        let calmarRatioMap = datas.calmarRatioMap || {};
+        let calmarVal = Number(calmarRatioMap.value || 0);
+        if(calmarVal < filterObj.calmar_ratio){
+          info.err_data.zhenduan.push({
+            fund_code: item.fund_code,
+            fund_name: item.fund_name,
+            reason: `卡玛比率低于${filterObj.calmar_ratio}`,
+          });
+          return null;
+        }
+
+        return item;
       } catch (err) {
         info.err_data.zhenduan.push({
           fund_code: item.fund_code,
@@ -541,8 +569,6 @@ async function zhenduanFn() {
   info.filter_data = new_data;
   console.log(`符合综合诊断的有 ${info.filter_data.length} 个`);
 }
-
-
 
 async function main() {
   const startTime = Date.now();
@@ -562,14 +588,14 @@ async function main() {
     // 买卖费率
     await filterBuyAndSellFee();
 
+    // fs.writeFileSync('./data/filter_keywords.json', JSON.stringify(info.filter_data, null, 2));
+    // return false;
+
     // 天天基金预测涨幅
     await getPredictedRise();
 
     // 回撤修复
     await filterWithdrawalRecovery();
-
-    // 特色数据
-    // await bodongFn();// 天天基金，暂时放弃，采用京东金融的多个数据，2026年02月26日14:20:06
 
     // 综合诊断
     await zhenduanFn();
@@ -594,9 +620,13 @@ async function main() {
     if (info.err_data.hui_che.length > 0) {
       console.log('回撤不满足:', info.err_data.hui_che.length);
     }
+    if (info.err_data.zhenduan.length > 0) {
+      console.log('综合诊断 不满足:', info.err_data.zhenduan.length);
+    }
     if (info.err_data.not_meet_condition.length > 0) {
       console.log('不符合条件错误数据长度:', info.err_data.not_meet_condition.length);
     }
+
   } catch (err) {
     console.log('err => ', err);
   } finally {
