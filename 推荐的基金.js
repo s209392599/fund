@@ -5,6 +5,8 @@
 
 
 /*
+014111-嘉实中证稀有金属主题ETF发起联接C
+
 2026年02月24日13:31:52 排行榜综选
 [{"fund_code":"016665","fund_name":"天弘全球高端制造混合(QDII)C","fund_type":"QDII-偏股"},{"fund_code":"017747","fund_name":"建信电子行业股票C","fund_type":"股票型"},{"fund_code":"018147","fund_name":"建信新兴市场混合(QDII)C","fund_type":"QDII-偏股"}]
 
