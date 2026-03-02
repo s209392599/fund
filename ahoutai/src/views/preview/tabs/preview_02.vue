@@ -1,5 +1,7 @@
 <script setup>
-console.log('src/views/preview/tabs/preview_09.vue');
+console.log('ahoutai/src/views/preview/tabs/preview_02.vue');
+
+const maxTableHeight = 'calc(100vh - 100px)';
 
 const diaForm = ref(null);
 const info = reactive({
@@ -8,25 +10,23 @@ const info = reactive({
   update_flag: 'add',// 修改还是编辑
   dialogFormVisible: false,
   search_name: '',
-
-
-
   /*
-user_email	varchar(64)
-user_name	varchar(64)
-zh_name	varchar(255)
-user_password	varchar(64)
-fund_count	int(3)
-remark	varchar(100)
-expiration_time	datetime
-create_time	datetime
-update_time	datetime
-user_token	varchar(32)
-user_status	varchar(10)
+    {
+      "id": 1,
+      "user_email": "209392599@qq.com",
+      "user_password": "qaz123..",
+      "fund_count": 100,
+      "user_remark": "郭坤",
+      "expiration_time": "2098-12-31T16:00:00.000Z",
+      "create_time": "2025-09-23T04:24:38.000Z",
+      "update_time": "2026-01-06T23:34:27.000Z",
+      "user_token": "boxue666",
+      "user_status": null
+    }
   */
   form: {
     "user_email": "",
-    "user_name": "",
+    "user_email": "",
     "zh_name": "",
     "user_password": "",
     "fund_count": 30,
@@ -36,7 +36,6 @@ user_status	varchar(10)
     "update_time": "",// 更新时间
     "user_token": "",// 专属令牌(二级密码)
     "user_status": "",// 用户状态(1:停用，其他为可用)
-
   }
 })
 const rules = {
@@ -187,7 +186,7 @@ const onSubmit = () => {
     <!--
     {
   "id": 1,
-  "user_name": "209392599@qq.com",
+  "user_email": "209392599@qq.com",
   "zh_name": "郭坤",
   "user_password": "1234",
   "fund_count": 100,
@@ -198,8 +197,9 @@ const onSubmit = () => {
   "user_token": null
 }
     -->
-    <el-table :data="info.tableData" border :row-class-name="tableRowClassName" style="width: 100%" height="500">
-      <el-table-column fixed label="序" type="index" width="50" />
+    <el-table :data="info.tableData" border :row-class-name="tableRowClassName" style="width: 100%"
+      :height="maxTableHeight">
+      <el-table-column fixed label="序" type="index" width="50" align="center" />
       <el-table-column fixed label="操作" width="140">
         <template #default="{ row, $index }">
           <el-button link type="primary" size="small" @click="btn_edit(row, $index)">编辑</el-button>
@@ -208,10 +208,21 @@ const onSubmit = () => {
         </template>
       </el-table-column>
 
-      <el-table-column prop="user_name" label="账号" width="300" />
-      <el-table-column prop="zh_name" label="名称" width="260" />
+      <el-table-column prop="user_remark" label="备注" width="150" />
+      <el-table-column prop="user_email" label="账号" width="240" />
       <el-table-column prop="user_password" label="密码" width="200" />
-      <el-table-column prop="remark" label="备注" width="200" />
+      <el-table-column prop="fund_count" label="基金数量" width="100" />
+      <el-table-column prop="create_time" label="创建时间" width="145">
+        <template #default="{ row }">
+          {{ CustomDateFtt(new Date(row.create_time), "yyyy-MM-dd hh:mm:ss") }}
+        </template>
+      </el-table-column>
+      <el-table-column prop="update_time" label="更新时间" width="145">
+        <template #default="{ row }">
+          {{ CustomDateFtt(new Date(row.update_time), "yyyy-MM-dd hh:mm:ss") }}
+        </template>
+      </el-table-column>
+      <el-table-column prop="user_token" label="user_token" width="100" />
 
     </el-table>
 
@@ -222,7 +233,7 @@ const onSubmit = () => {
         </el-form-item>
 
         <el-form-item label="名称" prop="name" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.user_name" autocomplete="off" />
+          <el-input v-model="info.form.user_email" autocomplete="off" />
         </el-form-item>
 
         <el-form-item label="密码" prop="password" :label-width="info.formLabelWidth">
@@ -237,7 +248,7 @@ const onSubmit = () => {
         </el-form-item>
 
         <el-form-item label="备注" :label-width="info.formLabelWidth">
-          <el-input v-model="info.form.remark" autocomplete="off" />
+          <el-input v-model="info.form.user_remark" autocomplete="off" />
         </el-form-item>
       </el-form>
       <template #footer>
