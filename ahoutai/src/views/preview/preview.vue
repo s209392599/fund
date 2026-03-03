@@ -18,14 +18,14 @@ const info = reactive({
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_02.vue'))),
     },
     {
-      id: 3,
-      name: '邮件公告-操作',
-      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
-    },
-    {
       id: 4,
       name: '分类基金推荐',
       component: markRaw(defineAsyncComponent(() => import('./tabs/preview_04.vue'))),
+    },
+    {
+      id: 3,
+      name: '邮件公告-操作',
+      component: markRaw(defineAsyncComponent(() => import('./tabs/preview_03.vue'))),
     },
   ],
   list_tabs: [],

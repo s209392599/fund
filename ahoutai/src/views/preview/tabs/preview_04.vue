@@ -12,6 +12,7 @@ const info = reactive({
   update_flag: '',// 对话框的标题
   form: {},// 对话框的表单数据
   tableKey: new Date().getTime(),// 用于强制刷新表格
+  selectedFunds: [],// 选中的基金
 })
 
 // 初始化拖拽功能
@@ -449,7 +450,12 @@ const btn_fn_21 = () => {
   }
 };
 const btn_fn_22 = () => {
-  let str = info.tableData.map(v => v.fund_code).join(',');
+  let str = '';
+  if (info.selectedFunds.length) {
+    str = info.selectedFunds.map(v => v.fund_code).join(',');
+  } else {
+    str = info.tableData.map(v => v.fund_code).join(',');
+  }
   fallbackCopyText(str);
 };
 const btn_fn_23 = () => {
@@ -457,22 +463,44 @@ const btn_fn_23 = () => {
     ElMessage.error('没有基金信息');
     return false;
   }
-  var data = info.tableData.map(v => {
-    return {
-      fund_code: v.fund_code,
-      fund_name: v.fund_name,
-      fund_type: v.fund_type
-    }
-  });
+  let data = [];
+  if (info.selectedFunds.length) {
+    data = info.selectedFunds.map(v => {
+      return {
+        fund_code: v.fund_code,
+        fund_name: v.fund_name,
+        fund_type: v.fund_type
+      }
+    });
+  } else {
+    data = info.tableData.map(v => {
+      return {
+        fund_code: v.fund_code,
+        fund_name: v.fund_name,
+        fund_type: v.fund_type
+      }
+    });
+  }
   let str = JSON.stringify(data);
   fallbackCopyText(str);
 };
 // 复制-折行
 const btn_fn_24 = () => {
-  let str = info.tableData.map((item) => {
-    return `${item.fund_code}-${item.fund_name}`;
-  }).join('\n');
+  let str = '';
+  if (info.selectedFunds.length) {
+    str = info.selectedFunds.map((item) => {
+      return `${item.fund_code}-${item.fund_name}`;
+    }).join('\n');
+  } else {
+    str = info.tableData.map((item) => {
+      return `${item.fund_code}-${item.fund_name}`;
+    }).join('\n');
+  }
   fallbackCopyText(str);
+};
+
+const handleSelectionChange = (val) => {
+  info.selectedFunds = val;
 };
 
 onMounted(() => {
@@ -519,7 +547,7 @@ onMounted(() => {
 
       <div class="right_content flex-1 pd-10">
         <el-table :data="info.tableData" :key="info.tableKey" border style="width: 100%" :max-height="tableMaxHeight"
-          id="sortable-table">
+          id="sortable-table" @selection-change="handleSelectionChange">
           <el-table-column fixed label="序" type="index" width="50" align="center" />
 
           <el-table-column fixed label="拽" type="" width="40" align="center">
@@ -532,6 +560,9 @@ onMounted(() => {
               </div>
             </template>
           </el-table-column>
+
+          <!-- 复选框 -->
+          <el-table-column type="selection" width="55" align="center" />
 
           <el-table-column fixed label="操作" width="100" align="center">
             <template #default="{ row, $index }">

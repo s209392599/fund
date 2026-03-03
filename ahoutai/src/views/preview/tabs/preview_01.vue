@@ -267,7 +267,7 @@ const btn_fn_05 = () => {
           </template>
         </el-table-column>
 
-        <el-table-column fixed label="序" type="index" width="50" align="right" />
+        <el-table-column fixed label="序" type="index" width="50" align="center" />
 
         <el-table-column label="Operations" width="140">
           <template #default="{ row, $index }">
