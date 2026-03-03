@@ -443,6 +443,37 @@ const getList = async () => {
   });
 };
 
+const btn_fn_21 = () => {
+  if (confirm('确定要删除所有基金吗？')) {
+    info.tableData = [];
+  }
+};
+const btn_fn_22 = () => {
+  let str = info.tableData.map(v => v.fund_code).join(',');
+  fallbackCopyText(str);
+};
+const btn_fn_23 = () => {
+  if (!info.tableData.length) {
+    ElMessage.error('没有基金信息');
+    return false;
+  }
+  var data = info.tableData.map(v => {
+    return {
+      fund_code: v.fund_code,
+      fund_name: v.fund_name,
+      fund_type: v.fund_type
+    }
+  });
+  let str = JSON.stringify(data);
+  fallbackCopyText(str);
+};
+// 复制-折行
+const btn_fn_24 = () => {
+  let str = info.tableData.map((item) => {
+    return `${item.fund_code}-${item.fund_name}`;
+  }).join('\n');
+  fallbackCopyText(str);
+};
 
 onMounted(() => {
   getList();// 获取列表数据
@@ -480,6 +511,10 @@ onMounted(() => {
       <div class="right_top items-center flex pl-10 pr-10 border-b">
         <el-button type="primary" @click="btn_fn_03()" :disabled="!info.active_type">新增基金</el-button>
         <el-button type="primary" @click="btn_fn_04()" :disabled="!info.active_type">批量导入</el-button>
+        <el-button class="top_btn btn_3" @click="btn_fn_21()" :disabled="!info.active_type">删除所有基金</el-button>
+        <el-button class="top_btn btn_4" @click="btn_fn_22()" :disabled="!info.active_type">复制(逗号)</el-button>
+        <el-button class="top_btn btn_5" @click="btn_fn_23()" :disabled="!info.active_type">复制(数组)</el-button>
+        <el-button class="top_btn btn_5" @click="btn_fn_24()" :disabled="!info.active_type">复制(折行)</el-button>
       </div>
 
       <div class="right_content flex-1 pd-10">
@@ -615,6 +650,39 @@ onMounted(() => {
   .right_top {
     height: 50px;
     border-bottom: 1px solid #e8e8e8;
+  }
+}
+
+:deep(.top_btn) {
+  color: #fff;
+  border: none;
+
+  &.btn_1 {
+    background-color: #7e57c2 !important; // 紫色
+  }
+
+  &.btn_2 {
+    background-color: #26a69a !important; // 青色
+  }
+
+  &.btn_3 {
+    background-color: #ff7043 !important; // 橙红色
+  }
+
+  &.btn_4 {
+    background-color: #ffa726 !important; // 橙黄色
+  }
+
+  &.btn_5 {
+    background-color: #29b6f6 !important; // 天蓝色
+  }
+
+  &.btn_6 {
+    background-color: #f56c6c !important; // 红色
+  }
+
+  &.btn_7 {
+    background-color: #409eff !important; // 蓝色
   }
 }
 </style>
