@@ -60,6 +60,7 @@ const getList = async () => {
       });
       if (res_1.code === 200) {
         let obj = res_1.data || {};
+        console.log('obj', obj);
         /*
         {date: '2025-04-29', netValue: '1.0000', totalNetValue: '1.0000'}
         {
@@ -80,6 +81,7 @@ const getList = async () => {
             date: curDay,
             netValue: obj.dwjz,
             totalNetValue: obj.gsz,
+            gszzl: obj.gszzl,
           });
 
           // info.tableData[i].gszzl = Math.round(parseFloat(obj.gszzl) * 100 * 100) / 100;
@@ -111,6 +113,12 @@ const getList = async () => {
           ((count / (majorChartPointList.length - 1)) * 100).toFixed(2) + '%';
       }
       if (gz_arr.length > 0 && obj_1?.netValueList?.length > 0) {
+        // 修正预测的累计净值
+        let pre_totalNetValue = Number(obj_1.netValueList[obj_1.netValueList.length - 1].totalNetValue) * 10000;
+        let gszzl = Number(gz_arr[gz_arr.length - 1].gszzl) * 100;
+        let cur_totalNetValue = (pre_totalNetValue + gszzl) / 10000;
+        gz_arr[gz_arr.length - 1].totalNetValue = cur_totalNetValue;
+
         obj_1.netValueList = obj_1.netValueList.concat(gz_arr);
       }
       info.tableData[i] = {
