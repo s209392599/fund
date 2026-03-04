@@ -171,8 +171,25 @@ const btn_fn_07 = () => {
 
 // 导入群主基金
 const btn_fn_09 = () => {
-  //
+  info.tableData = [];
+  server_fund_amain_public_funds().then(res => {
+    if (res.code === 200) {
+      // const arr_1 = [...info.tableData];
+      // const arr_2 = res.data || [];
+      // arr_2.forEach(item => {
+      //   const flag = arr_1.some(fund => fund.fund_code === item.fund_code);
+      //   if (!flag) {
+      //     arr_1.push(item);
+      //   }
+      // });
+      // info.tableData = [...arr_1];
+      info.tableData = [...res.data];
+    } else {
+      ElMessage.error('操作失败，请重试！');
+    }
+  })
 }
+
 // 复制-折行
 const btn_fn_08 = () => {
   let str = info.tableData.map((item) => {
