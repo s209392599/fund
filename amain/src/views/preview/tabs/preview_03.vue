@@ -12,10 +12,68 @@ const info = reactive({
   tableMiddle: [],// 中间变量
 })
 
+const getHistoryPerformance = (fund_code) => {
+  server_fund_history_performance({
+    fund_code: fund_code,
+  }).then((res) => {
+    if (res.code === 200) {
+      info.tableData.forEach((item, index) => {
+        if (
+          item.fund_code === fund_code &&
+          (!item.zhang_his || item.zhang_his.length === 0)
+        ) {
+          item.zhang_his = res.data || [];
+        }
+        const fundCode = item.fund_code;
+        // 1. 创建 script 元素
+        const script = document.createElement('script');
+        script.src = `https://fundgz.1234567.com.cn/js/${fundCode}.js`;
+        script.type = 'text/javascript';
+        script.async = true; // 异步加载，避免阻塞渲染
+        script.onload = () => {
+          document.body.removeChild(script); // 3. 加载后移除
+        };
+        script.onerror = (error) => {
+          document.body.removeChild(script); // 即使失败也移除
+        };
+        document.body.appendChild(script);
+      });
+    } else {
+      ElMessage.error('获取列表失败，请重试！');
+    }
+  });
+};
+window.jsonpgz = (data) => {
+  /*
+    {
+      "fundcode": "002834",
+      "name": "华夏新锦绣混合C",
+      "jzrq": "2025-08-12",
+      "dwjz": "2.7597",
+      "gsz": "2.7728",
+      "gszzl": "0.48",
+      "gztime": "2025-08-13 15:00"
+    }
+  */
+  if (!data) {
+    return false;
+  }
+  info.tableData.forEach((item) => {
+    if (item.fund_code === data.fundcode) {
+      item.zhang_today = data.gszzl || '-';
+      item.dwjz = ['', null, undefined].includes(data.dwjz) ? '' : data.dwjz;
+    }
+  });
+}
+
 const slectItem = (item) => {
   info.active_id = item.type;
   info.tableData = JSON.parse(JSON.stringify(item.data)); // 深拷贝避免引用问题
   info.tableMiddle = JSON.parse(JSON.stringify(item.data)); // 深拷贝避免引用问题
+
+  info.tableData.forEach((item) => {
+    getHistoryPerformance(item.fund_code);
+  });
 }
 
 // 获取群主推荐基金
@@ -126,6 +184,7 @@ const sortToday = (a, b) => {
   const valB = parseFloat(b.zhang_today) || 0;
   return valA - valB;
 };
+
 
 onMounted(() => {
   query_qun_zhu_fund();
