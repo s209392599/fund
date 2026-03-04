@@ -1,9 +1,13 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_09.vue');
+import pLimit from 'p-limit';
 
 const info = reactive({
   tableData: [],
 });
+
+// 请求控制器，用于取消请求
+let abortController = null;
 const tableMaxHeight = computed(() => {
   return `calc(100vh - 140px)`;
 });
@@ -29,24 +33,51 @@ watch(() => info.tableData, () => {
 }, { deep: true });
 
 const getList = async () => {
-  for (let i = 0; i < info.tableData.length; i++) {
-    const item = info.tableData[i];
+  // 取消之前的请求
+  if (abortController) {
+    abortController.abort();
+  }
+  abortController = new AbortController();
+  const { signal } = abortController;
 
-    await server_fund_amain_getfundgz({
-      fund_code: item.fund_code,
-    }).then((res) => {
-      if (res.code === 200) {
-        info.tableData[i] = {
-          ...info.tableData[i],
-          gszzl: res.data.gszzl || '',
-          gztime: res.data.gztime || '',
-        };
-      }
+  // 创建并发限制器，最多同时6个请求
+  const limit = pLimit(6);
 
-      if (i === info.tableData.length - 1) {
-        ElMessage.success('已获取所有基金的交易规则');
+  const tasks = info.tableData.map((item, index) =>
+    limit(async () => {
+      // 检查是否已取消
+      if (signal.aborted) return;
+
+      try {
+        const res = await server_fund_amain_getfundgz(
+          { fund_code: item.fund_code },
+          { signal }
+        );
+        if (signal.aborted) return;
+
+        if (res.code === 200) {
+          info.tableData[index] = {
+            ...info.tableData[index],
+            gszzl: res.data.gszzl || '',
+            gztime: res.data.gztime || '',
+          };
+        }
+      } catch (error) {
+        if (error.name === 'AbortError' || signal.aborted) return;
+        console.error(`获取基金 ${item.fund_code} 估值失败:`, error);
       }
-    });
+    })
+  );
+
+  try {
+    await Promise.all(tasks);
+    if (!signal.aborted) {
+      ElMessage.success('已获取所有基金的交易规则');
+    }
+  } catch (error) {
+    if (!signal.aborted) {
+      console.error('获取基金估值失败:', error);
+    }
   }
 };
 
@@ -70,6 +101,14 @@ const btn_fn_01 = () => {
 
 onMounted(() => {
   getList();
+});
+
+// 页面离开时取消所有请求
+onBeforeUnmount(() => {
+  if (abortController) {
+    abortController.abort();
+    abortController = null;
+  }
 });
 </script>
 

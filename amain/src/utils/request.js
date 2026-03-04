@@ -51,6 +51,10 @@ service.interceptors.response.use(
     }
   },
   (error) => {
+    // 如果是请求被取消，不弹出错误消息
+    if (error.name === 'AbortError' || error.code === 'ERR_CANCELED') {
+      return Promise.reject(error);
+    }
     ElMessage({
       message: error.msg || '响应错误',
       type: 'error',
@@ -71,11 +75,12 @@ request.get = (url, params) => {
   });
 };
 
-request.post = (url, data) => {
+request.post = (url, data, options = {}) => {
   return service({
     url,
     method: 'post',
     data: data || {}, // 自动处理空参数
+    signal: options.signal, // 支持 AbortController signal
   });
 };
 

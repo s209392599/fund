@@ -1,5 +1,6 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_08.vue');
+import pLimit from 'p-limit';
 const echartsInstance = inject('echarts');
 
 const info = reactive({
@@ -7,6 +8,9 @@ const info = reactive({
   dayArr: [5, 10, 20, 40, 60, 120, 244], // 488, 730
   tableData: [],
 });
+
+// 请求控制器，用于取消请求
+let abortController = null;
 if (localStorage.getItem('fund_duibi_arr')) {
   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
 } else {
@@ -42,20 +46,30 @@ const getShowName = (item) => {
 /*
 fund_code 基金代码
 list_index： 基金数组的下标
+signal： AbortController signal
 */
-const getHisData = (fund_code, list_index) => {
+const getHisData = async (fund_code, list_index, signal) => {
   // 请求历史数据
-  server_fund_history_data({
-    fund_code: fund_code,
-    pageSize: info.dayArr[info.dayArr.length - 1],
-  }).then((res) => {
+  try {
+    const res = await server_fund_history_data(
+      {
+        fund_code: fund_code,
+        pageSize: info.dayArr[info.dayArr.length - 1],
+      },
+      { signal }
+    );
+    if (signal.aborted) return;
+
     if (res.code === 200) {
       page.list[list_index].his_data = res.data || [];
       render_chart_fn(); // 渲染图形
     } else {
       ElMessage.error(`${fund_code}未正确获取数据`);
     }
-  });
+  } catch (error) {
+    if (error.name === 'AbortError' || signal.aborted) return;
+    console.error(`获取基金 ${fund_code} 历史数据失败:`, error);
+  }
 };
 
 // 渲染图形
@@ -270,16 +284,29 @@ const UnSelectAll = () => {
 
 
 // 获取用户数据
-const getUserInfo = () => {
+const getUserInfo = async () => {
+  // 取消之前的请求
+  if (abortController) {
+    abortController.abort();
+  }
+  abortController = new AbortController();
+  const { signal } = abortController;
+
   page.list = (info.tableData || []).map((v) => {
     v.his_data = []; // 添加一个历史数据的字段
     return v;
   });
-  for (let i = 0; i < page.list.length; i++) {
-    setTimeout(() => {
-      getHisData(page.list[i].fund_code, i); //请求历史数据
-    }, i * 100);
-  }
+
+  // 创建并发限制器，最多同时6个请求
+  const limit = pLimit(6);
+
+  const tasks = page.list.map((item, index) =>
+    limit(async () => {
+      await getHisData(item.fund_code, index, signal);
+    })
+  );
+
+  await Promise.all(tasks);
 };
 
 // 在组件挂载时初始化图表
@@ -293,6 +320,12 @@ onMounted(() => {
 
 // 在组件卸载时销毁图表
 onUnmounted(() => {
+  // 取消所有请求
+  if (abortController) {
+    abortController.abort();
+    abortController = null;
+  }
+
   if (chart.value && echartsInstance) {
     // const myChart = echartsInstance.getInstanceByDom(chart.value);
     if (myChart) {

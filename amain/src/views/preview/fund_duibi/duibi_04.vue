@@ -1,8 +1,13 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_04.vue');
+import pLimit from 'p-limit';
+
 const info = reactive({
   tableData: [],
 });
+
+// 请求控制器，用于取消请求
+let abortController = null;
 
 // 存储基金信息
 const saveFundInfoToLocalstorage = () => {
@@ -20,85 +25,95 @@ watch(() => info.tableData, () => {
 }, { deep: true });
 
 const getList = async () => {
-  for (let i = 0; i < info.tableData.length; i++) {
-    const item = info.tableData[i];
+  // 取消之前的请求
+  if (abortController) {
+    abortController.abort();
+  }
+  abortController = new AbortController();
+  const { signal } = abortController;
 
-    let gz_arr = [];
-    info.tableData[i].gszzl = '-';// 预测涨幅
-    try {
-      let res_1 = await server_fund_amain_getfundgz({
-        fund_code: item.fund_code,
-      });
-      if (res_1.code === 200) {
-        let obj = res_1.data || {};
-        /*
-        {date: '2025-04-29', netValue: '1.0000', totalNetValue: '1.0000'}
-        {
-          "fund_code": "023918",
-          "fund_name": "华夏国证自由现金流ETF发起式联接C",
-          "gszzl": "0.68",
-          "dwjz": "1.2468",
-          "gsz": "1.2552",
-          "gztime": "2026-01-09 15:00"
-        }
-        */
-        let flag_1 = obj.hasOwnProperty('gztime') && obj.gztime !== '';
-        let flag_2 = obj.hasOwnProperty('gsz') && obj.gsz !== '';
-        let flag_3 = obj.hasOwnProperty('gszzl') && obj.gszzl !== '';
-        if (flag_1 && flag_2 && flag_3) {
-          let curDay = CustomDateFtt(new Date(), 'yyyy-MM-dd');
-          gz_arr.push({
-            date: curDay,
-            netValue: obj.dwjz,
-            totalNetValue: obj.gsz,
-            gszzl: obj.gszzl,
-          });
+  // 创建并发限制器，最多同时6个请求
+  const limit = pLimit(6);
 
-          // info.tableData[i].gszzl = Math.round(parseFloat(obj.gszzl) * 100 * 100) / 100;
-          info.tableData[i].gszzl = parseFloat(obj.gszzl);
-        }
-      }
-    } catch (e) {
-    }
+  const tasks = info.tableData.map((item, index) =>
+    limit(async () => {
+      // 检查是否已取消
+      if (signal.aborted) return;
 
-    await server_fund_jd_HistoryNetValuePageInfo({
-      fund_code: item.fund_code,
-      pageSize: 310, // 245 + 60
-    }).then((res) => {
-      let obj_1 = res.data || {};
-      let majorChartPointList = obj_1.majorChartPointList || [];
-      obj_1.zheng = '-';
-      if (majorChartPointList.length > 1) {
-        let count = 0;
-        for (let j = 1; j < majorChartPointList.length - 1; j++) {
-          let obj_2 = majorChartPointList[j] || {};
-          let obj_3 = majorChartPointList[j + 1] || {};
-          let close_1 = parseFloat(obj_2.yAxis) || 0;
-          let close_2 = parseFloat(obj_3.yAxis) || 0;
-          if (close_1 > close_2) {
-            count++;
+      let gz_arr = [];
+      info.tableData[index].gszzl = '-';// 预测涨幅
+
+      try {
+        const res_1 = await server_fund_amain_getfundgz(
+          { fund_code: item.fund_code },
+          { signal }
+        );
+        if (signal.aborted) return;
+
+        if (res_1.code === 200) {
+          let obj = res_1.data || {};
+          let flag_1 = obj.hasOwnProperty('gztime') && obj.gztime !== '';
+          let flag_2 = obj.hasOwnProperty('gsz') && obj.gsz !== '';
+          let flag_3 = obj.hasOwnProperty('gszzl') && obj.gszzl !== '';
+          if (flag_1 && flag_2 && flag_3) {
+            let curDay = CustomDateFtt(new Date(), 'yyyy-MM-dd');
+            gz_arr.push({
+              date: curDay,
+              netValue: obj.dwjz,
+              totalNetValue: obj.gsz,
+              gszzl: obj.gszzl,
+            });
+            info.tableData[index].gszzl = parseFloat(obj.gszzl);
           }
         }
-        obj_1.zheng =
-          ((count / (majorChartPointList.length - 1)) * 100).toFixed(2) + '%';
+      } catch (error) {
+        if (error.name === 'AbortError' || signal.aborted) return;
+        console.error(`获取基金 ${item.fund_code} 估值失败:`, error);
       }
-      if (gz_arr.length > 0 && obj_1?.netValueList?.length > 0) {
-        // 修正预测的累计净值
-        let pre_totalNetValue = Number(obj_1.netValueList[obj_1.netValueList.length - 1].totalNetValue) * 10000;
-        let gszzl = Number(gz_arr[gz_arr.length - 1].gszzl) * 100;
-        let cur_totalNetValue = (pre_totalNetValue + gszzl) / 10000;
-        gz_arr[gz_arr.length - 1].totalNetValue = cur_totalNetValue;
 
-        obj_1.netValueList = obj_1.netValueList.concat(gz_arr);
+      try {
+        const res = await server_fund_jd_HistoryNetValuePageInfo(
+          { fund_code: item.fund_code, pageSize: 310 },
+          { signal }
+        );
+        if (signal.aborted) return;
+
+        let obj_1 = res.data || {};
+        let majorChartPointList = obj_1.majorChartPointList || [];
+        obj_1.zheng = '-';
+        if (majorChartPointList.length > 1) {
+          let count = 0;
+          for (let j = 1; j < majorChartPointList.length - 1; j++) {
+            let obj_2 = majorChartPointList[j] || {};
+            let obj_3 = majorChartPointList[j + 1] || {};
+            let close_1 = parseFloat(obj_2.yAxis) || 0;
+            let close_2 = parseFloat(obj_3.yAxis) || 0;
+            if (close_1 > close_2) {
+              count++;
+            }
+          }
+          obj_1.zheng = ((count / (majorChartPointList.length - 1)) * 100).toFixed(2) + '%';
+        }
+        if (gz_arr.length > 0 && obj_1?.netValueList?.length > 0) {
+          let pre_totalNetValue = Number(obj_1.netValueList[obj_1.netValueList.length - 1].totalNetValue) * 10000;
+          let gszzl = Number(gz_arr[gz_arr.length - 1].gszzl) * 100;
+          let cur_totalNetValue = (pre_totalNetValue + gszzl) / 10000;
+          gz_arr[gz_arr.length - 1].totalNetValue = cur_totalNetValue;
+          obj_1.netValueList = obj_1.netValueList.concat(gz_arr);
+        }
+        info.tableData[index] = {
+          ...info.tableData[index],
+          ...obj_1,
+        };
+        console.log('i', info.tableData[index]);
+      } catch (error) {
+        if (error.name === 'AbortError' || signal.aborted) return;
+        console.error(`获取基金 ${item.fund_code} 历史净值失败:`, error);
       }
-      info.tableData[i] = {
-        ...info.tableData[i],
-        ...obj_1,
-      };
+    })
+  );
 
-      console.log('i', info.tableData[i]);
-    });
-  }
+  await Promise.all(tasks);
 };
 
 // 删除
@@ -113,6 +128,14 @@ onMounted(() => {
     localStorage.setItem('fund_duibi_arr', JSON.stringify([]));
   }
   getList();
+});
+
+// 页面离开时取消所有请求
+onBeforeUnmount(() => {
+  if (abortController) {
+    abortController.abort();
+    abortController = null;
+  }
 });
 </script>
 

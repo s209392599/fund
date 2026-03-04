@@ -3,10 +3,14 @@ console.log('amain/src/views/preview/fund_duibi/duibi_02.vue');
 /*
 011496 多个基金经理
 */
+import pLimit from 'p-limit';
 
 const info = reactive({
   tableData: [],
 });
+
+// 请求控制器，用于取消请求
+let abortController = null;
 const tableMaxHeight = computed(() => {
   return `calc(100vh - 140px)`;
 });
@@ -32,23 +36,53 @@ const saveFundInfoToLocalstorage = () => {
 };
 
 const getList = async () => {
-  for (let i = 0; i < info.tableData.length; i++) {
-    const item = info.tableData[i];
+  // 取消之前的请求
+  if (abortController) {
+    abortController.abort();
+  }
+  abortController = new AbortController();
+  const { signal } = abortController;
 
-    await server_fund_jd_detailPageInfoWithNoPin({
-      fund_code: item.fund_code,
-    }).then((res) => {
-      info.tableData[i] = {
-        ...info.tableData[i],
-        ...res.data,
-        fund_name: res.data?.headerOfItem?.fundName || '',
-        fund_type: res.data?.headerOfItem?.fundTypeName || '',
-      };
+  // 创建并发限制器，最多同时6个请求
+  const limit = pLimit(6);
 
-      if (i === info.tableData.length - 1) {
-        ElMessage.success('已获取所有基金的交易规则');
+  const tasks = info.tableData.map((item, index) =>
+    limit(async () => {
+      // 检查是否已取消
+      if (signal.aborted) return;
+
+      try {
+        const res = await server_fund_jd_detailPageInfoWithNoPin(
+          { fund_code: item.fund_code },
+          { signal }
+        );
+
+        // 再次检查是否已取消（请求完成后可能页面已离开）
+        if (signal.aborted) return;
+
+        info.tableData[index] = {
+          ...info.tableData[index],
+          ...res.data,
+          fund_name: res.data?.headerOfItem?.fundName || '',
+          fund_type: res.data?.headerOfItem?.fundTypeName || '',
+        };
+      } catch (error) {
+        // 请求被取消时不报错
+        if (error.name === 'AbortError' || signal.aborted) return;
+        console.error(`获取基金 ${item.fund_code} 信息失败:`, error);
       }
-    });
+    })
+  );
+
+  try {
+    await Promise.all(tasks);
+    if (!signal.aborted) {
+      ElMessage.success('已获取所有基金的交易规则');
+    }
+  } catch (error) {
+    if (!signal.aborted) {
+      console.error('获取基金信息失败:', error);
+    }
   }
 };
 
@@ -222,6 +256,14 @@ watch(() => info.tableData, (newVal, oldVal) => {
 onMounted(() => {
   getList();
 });
+
+// 页面离开时取消所有请求
+onBeforeUnmount(() => {
+  if (abortController) {
+    abortController.abort();
+    abortController = null;
+  }
+});
 </script>
 
 <template>
@@ -352,7 +394,7 @@ onMounted(() => {
           <template v-slot="{ row }">
             <div class="">{{
               row?.fundProfileOfItem?.fundScaleList?.join('；')
-            }}</div>
+              }}</div>
           </template>
         </el-table-column>
 

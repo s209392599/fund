@@ -34,8 +34,8 @@ export async function server_fund_history_performance(data) {
 }
 
 // 获取基金历史数据
-export async function server_fund_history_data(data) {
-  return request.post('/fund_history_data', data);
+export async function server_fund_history_data(data, options) {
+  return request.post('/fund_history_data', data, options);
 }
 // 获取timer基金数据
 export async function server_fund_today_rate_by_timer(data) {
@@ -63,32 +63,32 @@ export async function server_fund_search_bytiantian(data) {
 }
 
 // fund_amain_getfundgz-获取实时涨幅
-export async function server_fund_amain_getfundgz(data) {
-  return request.post('/fund_amain_getfundgz', data);
+export async function server_fund_amain_getfundgz(data, options) {
+  return request.post('/fund_amain_getfundgz', data, options);
 }
 // fund_jd_getFundTradeRulesPageInfo 获取京东基金交易规则
-export async function server_fund_jd_getFundTradeRulesPageInfo(data) {
-  return request.post('/fund_jd_getFundTradeRulesPageInfo', data);
+export async function server_fund_jd_getFundTradeRulesPageInfo(data, options) {
+  return request.post('/fund_jd_getFundTradeRulesPageInfo', data, options);
 }
 // fund_jd_detailPageInfoWithNoPin 获取基金的基本信息
-export async function server_fund_jd_detailPageInfoWithNoPin(data) {
-  return request.post('/fund_jd_detailPageInfoWithNoPin', data);
+export async function server_fund_jd_detailPageInfoWithNoPin(data, options) {
+  return request.post('/fund_jd_detailPageInfoWithNoPin', data, options);
 }
 // fund_jd_getFundDividendPageInfo 获取基金分红
-export async function server_fund_jd_getFundDividendPageInfo(data) {
-  return request.post('/fund_jd_getFundDividendPageInfo', data);
+export async function server_fund_jd_getFundDividendPageInfo(data, options) {
+  return request.post('/fund_jd_getFundDividendPageInfo', data, options);
 }
 // fund_jd_InvestmentDistributionPageInfo 获取基金持仓
-export async function server_fund_jd_InvestmentDistributionPageInfo(data) {
-  return request.post('/fund_jd_InvestmentDistributionPageInfo', data);
+export async function server_fund_jd_InvestmentDistributionPageInfo(data, options) {
+  return request.post('/fund_jd_InvestmentDistributionPageInfo', data, options);
 }
 // fund_jd_getFundDetailChartPageInfo 获取基金历史数据
 export async function server_fund_jd_getFundDetailChartPageInfo(data) {
   return request.post('/fund_jd_getFundDetailChartPageInfo', data);
 }
 // fund_jd_HistoryNetValuePageInfo 获取基金历史净值
-export async function server_fund_jd_HistoryNetValuePageInfo(data) {
-  return request.post('/fund_jd_HistoryNetValuePageInfo', data);
+export async function server_fund_jd_HistoryNetValuePageInfo(data, options) {
+  return request.post('/fund_jd_HistoryNetValuePageInfo', data, options);
 }
 // fund_apifolder_jiaichapaihang 获取天天基金排行榜交叉数据
 export async function server_fund_apifolder_jiaichapaihang(data) {

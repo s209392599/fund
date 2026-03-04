@@ -1,8 +1,13 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_07.vue');
+import pLimit from 'p-limit';
+
 const info = reactive({
   tableData: [],
 });
+
+// 请求控制器，用于取消请求
+let abortController = null;
 if (localStorage.getItem('fund_duibi_arr')) {
   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
 } else {
@@ -26,18 +31,40 @@ watch(() => info.tableData, () => {
 }, { deep: true });
 
 const getList = async () => {
-  for (let i = 0; i < info.tableData.length; i++) {
-    const item = info.tableData[i];
-
-    await server_fund_jd_InvestmentDistributionPageInfo({
-      fund_code: item.fund_code,
-    }).then((res) => {
-      info.tableData[i] = {
-        ...info.tableData[i],
-        ...res.data,
-      };
-    });
+  // 取消之前的请求
+  if (abortController) {
+    abortController.abort();
   }
+  abortController = new AbortController();
+  const { signal } = abortController;
+
+  // 创建并发限制器，最多同时6个请求
+  const limit = pLimit(6);
+
+  const tasks = info.tableData.map((item, index) =>
+    limit(async () => {
+      // 检查是否已取消
+      if (signal.aborted) return;
+
+      try {
+        const res = await server_fund_jd_InvestmentDistributionPageInfo(
+          { fund_code: item.fund_code },
+          { signal }
+        );
+        if (signal.aborted) return;
+
+        info.tableData[index] = {
+          ...info.tableData[index],
+          ...res.data,
+        };
+      } catch (error) {
+        if (error.name === 'AbortError' || signal.aborted) return;
+        console.error(`获取基金 ${item.fund_code} 持仓信息失败:`, error);
+      }
+    })
+  );
+
+  await Promise.all(tasks);
 };
 
 // 删除
@@ -107,6 +134,14 @@ const Turn_bond = (lineData) => {
 
 onMounted(() => {
   getList();
+});
+
+// 页面离开时取消所有请求
+onBeforeUnmount(() => {
+  if (abortController) {
+    abortController.abort();
+    abortController = null;
+  }
 });
 </script>
 

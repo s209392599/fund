@@ -49,7 +49,7 @@ onMounted(() => {
 <template>
   <div class="page_wrapper flex" :class="{ 'big-screen': info.isBigScreen }">
     <div class="page_left flex flex-col overflow-y-auto h-full">
-      <div class="pd-10">
+      <div class="pd-10 btn_wrapper">
         <el-button type="primary" @click="getData" style="width: 100%;">刷新</el-button>
       </div>
 
@@ -118,5 +118,9 @@ onMounted(() => {
   .page_right {
     max-width: 1040px;
   }
+}
+
+.btn_wrapper {
+  border-bottom: 1px solid #ddd;
 }
 </style>

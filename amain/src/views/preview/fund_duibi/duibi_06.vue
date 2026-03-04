@@ -1,9 +1,13 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_06.vue');
+import pLimit from 'p-limit';
 
 const info = reactive({
   tableData: [],
 });
+
+// 请求控制器，用于取消请求
+let abortController = null;
 if (localStorage.getItem('fund_duibi_arr')) {
   info.tableData = JSON.parse(localStorage.getItem('fund_duibi_arr'));
 } else {
@@ -26,41 +30,61 @@ watch(() => info.tableData, () => {
 }, { deep: true });
 
 const getList = async () => {
-  for (let i = 0; i < info.tableData.length; i++) {
-    const item = info.tableData[i];
-
-    await server_fund_jd_getFundDividendPageInfo({
-      fund_code: item.fund_code,
-    }).then((res) => {
-      let arr = res.data.dividendList || [];
-      info.tableData[i].dividendList = arr;
-
-      let cur_year = new Date().getFullYear();
-      let last_year = cur_year - 1;
-      let total_year_count = 0;
-      let last_year_count = 0;
-
-      let total_cishu_count = 0;
-      let last_year_cishu_count = 0;
-      arr.forEach((item) => {
-        let year = new Date(item.executeDate).getFullYear();
-        // 使用 parseInt 或 Math.round 来避免浮点数精度问题
-        if (year === cur_year) {
-          total_year_count += Math.round(Number(item.unitProfit) * 10000);
-          total_cishu_count += 1;
-        } else if (year === last_year) {
-          last_year_count += Math.round(Number(item.unitProfit) * 10000);
-          last_year_cishu_count += 1;
-        }
-      });
-
-      info.tableData[i].total_year_count = total_year_count;
-      info.tableData[i].last_year_count = last_year_count;
-
-      info.tableData[i].total_cishu_count = total_cishu_count;
-      info.tableData[i].last_year_cishu_count = last_year_cishu_count;
-    });
+  // 取消之前的请求
+  if (abortController) {
+    abortController.abort();
   }
+  abortController = new AbortController();
+  const { signal } = abortController;
+
+  // 创建并发限制器，最多同时6个请求
+  const limit = pLimit(6);
+
+  const tasks = info.tableData.map((item, index) =>
+    limit(async () => {
+      // 检查是否已取消
+      if (signal.aborted) return;
+
+      try {
+        const res = await server_fund_jd_getFundDividendPageInfo(
+          { fund_code: item.fund_code },
+          { signal }
+        );
+        if (signal.aborted) return;
+
+        let arr = res.data.dividendList || [];
+        info.tableData[index].dividendList = arr;
+
+        let cur_year = new Date().getFullYear();
+        let last_year = cur_year - 1;
+        let total_year_count = 0;
+        let last_year_count = 0;
+        let total_cishu_count = 0;
+        let last_year_cishu_count = 0;
+
+        arr.forEach((item) => {
+          let year = new Date(item.executeDate).getFullYear();
+          if (year === cur_year) {
+            total_year_count += Math.round(Number(item.unitProfit) * 10000);
+            total_cishu_count += 1;
+          } else if (year === last_year) {
+            last_year_count += Math.round(Number(item.unitProfit) * 10000);
+            last_year_cishu_count += 1;
+          }
+        });
+
+        info.tableData[index].total_year_count = total_year_count;
+        info.tableData[index].last_year_count = last_year_count;
+        info.tableData[index].total_cishu_count = total_cishu_count;
+        info.tableData[index].last_year_cishu_count = last_year_cishu_count;
+      } catch (error) {
+        if (error.name === 'AbortError' || signal.aborted) return;
+        console.error(`获取基金 ${item.fund_code} 分红信息失败:`, error);
+      }
+    })
+  );
+
+  await Promise.all(tasks);
 };
 
 // 删除
@@ -70,6 +94,14 @@ const btn_line_1 = (row, index) => {
 
 onMounted(() => {
   getList();
+});
+
+// 页面离开时取消所有请求
+onBeforeUnmount(() => {
+  if (abortController) {
+    abortController.abort();
+    abortController = null;
+  }
 });
 </script>
 

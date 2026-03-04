@@ -1,9 +1,13 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_03.vue');
+import pLimit from 'p-limit';
 
 const info = reactive({
   tableData: [],
 });
+
+// 请求控制器，用于取消请求
+let abortController = null;
 const tableMaxHeight = computed(() => {
   return `calc(100vh - 140px)`;
 });
@@ -29,27 +33,56 @@ watch(() => info.tableData, () => {
 }, { deep: true });
 
 const getList = async () => {
-  for (let i = 0; i < info.tableData.length; i++) {
-    const item = info.tableData[i];
+  // 取消之前的请求
+  if (abortController) {
+    abortController.abort();
+  }
+  abortController = new AbortController();
+  const { signal } = abortController;
 
-    await server_fund_jd_getFundTradeRulesPageInfo({
-      fund_code: item.fund_code,
-    }).then((res) => {
+  // 创建并发限制器，最多同时6个请求
+  const limit = pLimit(6);
 
-      let purchaseRule = res.data.purchaseRule || {};
-      console.log(22, res);
+  const tasks = info.tableData.map((item, index) =>
+    limit(async () => {
+      // 检查是否已取消
+      if (signal.aborted) return;
 
-      let depositFeeRatio = parseFloat(purchaseRule.depositFeeRatio || 0);
-      let manageFeeRatio = parseFloat(purchaseRule.manageFeeRatio || 0);
-      let saleServiceFeeRatio = parseFloat(purchaseRule.saleServiceFeeRatio || 0);
-      let total_fei = depositFeeRatio + manageFeeRatio + saleServiceFeeRatio;
-      res.data.zonghe_fei = Number(total_fei.toFixed(2));
-      info.tableData[i].rules = res.data;
+      try {
+        const res = await server_fund_jd_getFundTradeRulesPageInfo(
+          { fund_code: item.fund_code },
+          { signal }
+        );
 
-      if (i === info.tableData.length - 1) {
-        ElMessage.success('已获取所有基金的交易规则');
+        // 再次检查是否已取消
+        if (signal.aborted) return;
+
+        let purchaseRule = res.data.purchaseRule || {};
+        console.log(22, res);
+
+        let depositFeeRatio = parseFloat(purchaseRule.depositFeeRatio || 0);
+        let manageFeeRatio = parseFloat(purchaseRule.manageFeeRatio || 0);
+        let saleServiceFeeRatio = parseFloat(purchaseRule.saleServiceFeeRatio || 0);
+        let total_fei = depositFeeRatio + manageFeeRatio + saleServiceFeeRatio;
+        res.data.zonghe_fei = Number(total_fei.toFixed(2));
+        info.tableData[index].rules = res.data;
+      } catch (error) {
+        // 请求被取消时不报错
+        if (error.name === 'AbortError' || signal.aborted) return;
+        console.error(`获取基金 ${item.fund_code} 交易规则失败:`, error);
       }
-    });
+    })
+  );
+
+  try {
+    await Promise.all(tasks);
+    if (!signal.aborted) {
+      ElMessage.success('已获取所有基金的交易规则');
+    }
+  } catch (error) {
+    if (!signal.aborted) {
+      console.error('获取基金交易规则失败:', error);
+    }
   }
 };
 
@@ -130,6 +163,14 @@ const btn_fn_03 = () => {
 
 onMounted(() => {
   getList();
+});
+
+// 页面离开时取消所有请求
+onBeforeUnmount(() => {
+  if (abortController) {
+    abortController.abort();
+    abortController = null;
+  }
 });
 </script>
 
