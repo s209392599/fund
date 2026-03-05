@@ -128,6 +128,17 @@ const getHisData = async () => {
 
 // 获取-列表数据
 const query_list = () => {
+  // info.tableData = [
+  //   {
+  //     fund_code: '023918',
+  //     fund_name: '华夏国证自由现金流ETF发起式联接C',
+  //     fund_type: '红利',
+  //     point_top: 1.35,
+  //     point_down: 1.2
+  //   }
+  // ]
+  // getHisData();
+  // return;
   server_fund_table_query_by_user({
     fund_user_id: localStorage.getItem('user_id'),
   }).then((res) => {
