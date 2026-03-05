@@ -12,11 +12,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "p-limit": "^6.1.0",
     "axios": "^1.11.0",
-    "dexie": "^4.2.1",
+    "dexie": "^4.3.0",
     "echarts": "^6.0.0",
     "element-plus": "^2.10.4",
+    "p-limit": "^6.1.0",
     "pinia": "^3.0.4",
     "sortablejs": "^1.15.6",
     "unplugin-auto-import": "^19.3.0",

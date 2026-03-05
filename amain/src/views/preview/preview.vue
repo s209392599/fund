@@ -16,6 +16,24 @@ const info = reactive({
       desc: '',
     },
     {
+      id: 7,
+      show: true,
+      name: '基金维护',
+      component: markRaw(
+        defineAsyncComponent(() => import('./tabs/preview_07.vue'))
+      ),
+      desc: '',
+    },
+    {
+      id: 19,
+      show: true,
+      name: '其它',
+      component: markRaw(
+        defineAsyncComponent(() => import('./tabs/preview_19.vue'))
+      ),
+      desc: '',
+    },
+    {
       id: 20,
       show: true,
       name: '综合信息',
@@ -33,15 +51,7 @@ const info = reactive({
       ),
       desc: '',
     },
-    {
-      id: 7,
-      show: true,
-      name: '基金维护',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_07.vue'))
-      ),
-      desc: '',
-    },
+
     {
       id: 14,
       show: true,
@@ -97,15 +107,6 @@ const info = reactive({
       desc: '',
     },
     {
-      id: 13,
-      show: true,
-      name: '基金对比',
-      component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_13.vue'))
-      ),
-      desc: '',
-    },
-    {
       id: 17,
       show: true,
       name: '指数中心',
@@ -132,13 +133,12 @@ const info = reactive({
       ),
       desc: '',
     },
-
     {
-      id: 19,
+      id: 13,
       show: true,
-      name: '其它',
+      name: '基金对比',
       component: markRaw(
-        defineAsyncComponent(() => import('./tabs/preview_19.vue'))
+        defineAsyncComponent(() => import('./tabs/preview_13.vue'))
       ),
       desc: '',
     },

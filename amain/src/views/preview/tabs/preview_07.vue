@@ -29,7 +29,6 @@ const info = reactive({
     "point_down": 1,
     "point_top": 1,
     "fund_desc": "",
-    "fund_sign": "正常",
   }
 })
 const rules = {
@@ -136,7 +135,6 @@ const resetForm = () => {
     "point_down": 1,
     "point_top": 1,
     "fund_desc": "",
-    "fund_sign": "正常",
   }
   diaForm?.value?.resetFields();
 
@@ -296,7 +294,7 @@ const btn_fn_08 = () => {
 
 <template>
   <div class="page-wrapper pd-10">
-    <div class="desc_box">注：基金数量有变化时一定要点<span style="color:red;">“保存数据”</span>按钮！最多保存30条数据</div>
+    <div class="desc_box">注：最多保存30条数据；操作完毕后记得点<span style="color:red;">“保存数据”</span>按钮！</div>
     <div class="top_btn_wrapper flex flex-wrap pb-5">
       <el-button class="top_btn btn_1" @click="addNewFund()" :disabled="info.tableData.length >= 30">新增基金</el-button>
       <el-button class="top_btn btn_2" @click="SaveData()">保存数据</el-button>
@@ -342,36 +340,36 @@ const btn_fn_08 = () => {
           <template v-slot="{ row }">
             <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
               style="text-decoration: none;">
-              <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span>
-              <span v-else>{{ row.fund_code }}</span>
+              <!-- <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span> -->
+              <span>{{ row.fund_code }}</span>
             </a>
           </template>
         </el-table-column>
 
         <el-table-column prop="fund_name" label="基金名称" :width="width_name" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
-            <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span>
-            <span v-else>{{ row.fund_name }}</span>
+            <!-- <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span> -->
+            <span>{{ row.fund_name }}</span>
           </template>
         </el-table-column>
 
         <el-table-column prop="fund_type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
-            <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_type }}</span>
-            <span v-else>{{ row.fund_type }}</span>
+            <!-- <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_type }}</span> -->
+            <span>{{ row.fund_type }}</span>
           </template>
         </el-table-column>
 
         <el-table-column prop="fund_fixed" label="定投金额" width="70" align="right" />
         <el-table-column prop="point_down" label="低点" width="100" align="right" />
         <el-table-column prop="point_top" label="高点" width="100" align="right" />
-        <el-table-column prop="fund_sign" label="状态" width="50" align="center" />
         <el-table-column prop="fund_desc" label="备注" width="300" />
         <el-table-column prop="zhang_url" label="涨幅的URL" width="320" />
       </el-table>
     </VueDraggable>
 
-    <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="500" :close-on-click-modal="false">
+    <el-dialog v-model="info.dialogFormVisible" :title="info.update_flag" width="90%" :close-on-click-modal="false"
+      style="max-width: 600px;">
       <el-form :model="info.form" :rules="rules" ref="diaForm">
         <el-form-item label="基金代码" prop="fund_code" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.fund_code" @change="change_fund_code" autocomplete="off" />
@@ -409,14 +407,6 @@ const btn_fn_08 = () => {
         <el-form-item label="备注" prop="fund_desc" :label-width="info.formLabelWidth">
           <el-input v-model="info.form.fund_desc" autocomplete="off" />
         </el-form-item>
-
-        <el-form-item label="状态" prop="fund_sign" :label-width="info.formLabelWidth">
-          <el-radio-group v-model="info.form.fund_sign">
-            <el-radio value="正常">正常</el-radio>
-            <el-radio value="观察">观察</el-radio>
-            <el-radio value="历史">历史</el-radio>
-          </el-radio-group>
-        </el-form-item>
       </el-form>
       <template #footer>
         <div class="dialog-footer">
@@ -430,8 +420,9 @@ const btn_fn_08 = () => {
 
 <style scoped lang="scss">
 .desc_box {
-  height: 25px;
-  line-height: 25px;
+  min-height: 25px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .top_btn_wrapper button {
@@ -442,6 +433,7 @@ const btn_fn_08 = () => {
 :deep(.top_btn) {
   color: #fff;
   border: none;
+  margin: 0 5px 5px 0;
 
   &.btn_1 {
     background-color: #7e57c2 !important; // 紫色

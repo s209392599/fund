@@ -7,63 +7,32 @@ const info = reactive({
     {
       id: 'other_001_000',
       name: '其它菜单说明',
-      component: () => import('@/views/preview/other/other_001_000.vue'),
+      component: markRaw(defineAsyncComponent(() => import('@/views/preview/other/other_001_000.vue'))),
       hasComponent: true, // 标识该节点有组件
     },
     {
       id: 'other_002_000',
       name: '交叉排行(天天基金)',
       hasComponent: true, // 标识该节点没有组件，仅为父节点
-      component: () => import('@/views/preview/other/other_002_000.vue')
+      component: markRaw(defineAsyncComponent(() => import('@/views/preview/other/other_002_000.vue'))),
     },
     {
       id: 'other_003_000',
       name: '榜单(京东金融)',
       hasComponent: true, // 标识该节点没有组件，仅为父节点
-      component: () => import('@/views/preview/other/other_003_000.vue')
+      component: markRaw(defineAsyncComponent(() => import('@/views/preview/other/other_003_000.vue'))),
     },
-    // {
-    //   id: 'other_004_001',
-    //   name: '新成立基金',
-    //   hasComponent: true,
-    //   component: () => import('@/views/preview/other/other_004_000.vue')
-    // },
-    // {
-    //   id: 'other_002_000',
-    //   name: '交叉排行',
-    //   hasComponent: false, // 标识该节点没有组件，仅为父节点
-    //   children: [
-    //     {
-    //       id: 'other_002_001',
-    //       name: '全部',
-    //       component: () => import('@/views/preview/other/other_002_001.vue'),
-    //       hasComponent: true,
-    //     },
-    //     {
-    //       id: 'other_002_002',
-    //       name: '子菜单2-2sdfsdfsdf方式第三方斯蒂芬斯蒂芬',
-    //       component: () => import('@/views/preview/other/other_002_002.vue'),
-    //       hasComponent: true,
-    //     },
-    //     {
-    //       id: 'other_002_003',
-    //       name: '子菜单2-3',
-    //       component: () => import('@/views/preview/other/other_002_003.vue'),
-    //       hasComponent: true,
-    //     },
-    //   ],
-    // },
     {
       id: 'other_005_000',
       name: 'choice资讯',
       hasComponent: true, // 标识该节点没有组件，仅为父节点
-      component: () => import('@/views/preview/other/other_005_000.vue')
+      component: markRaw(defineAsyncComponent(() => import('@/views/preview/other/other_005_000.vue'))),
     },
     {
       id: 'other_006_000',
       name: '同花顺-基金要闻',
       hasComponent: true, // 标识该节点没有组件，仅为父节点
-      component: () => import('@/views/preview/other/other_006_000.vue')
+      component: markRaw(defineAsyncComponent(() => import('@/views/preview/other/other_006_000.vue'))),
     },
   ],
 });
