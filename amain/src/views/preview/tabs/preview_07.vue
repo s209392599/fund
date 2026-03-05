@@ -263,8 +263,13 @@ const groupPublic = () => {
     }
   })
 }
+//
+const btn_fn_03 = () => {
+  let str = info.tableData.map(v => v.fund_code).join(',');
+  fallbackCopyText(str);
+};
 // 复制数据
-const btn_copy_data = () => {
+const btn_fn_05 = () => {
   if (!info.tableData.length) {
     ElMessage.error('没有基金信息');
     return false;
@@ -278,9 +283,14 @@ const btn_copy_data = () => {
   });
   fallbackCopyText(JSON.stringify(str));
 }
-const btn_copy_tabledata = () => {
-  fallbackCopyText(info.tableData);
-}
+
+// 复制-折行
+const btn_fn_08 = () => {
+  let str = info.tableData.map((item) => {
+    return `${item.fund_code}-${item.fund_name}`;
+  }).join('\n');
+  fallbackCopyText(str);
+};
 
 </script>
 
@@ -293,8 +303,10 @@ const btn_copy_tabledata = () => {
       <el-button class="top_btn btn_4" @click="groupPublic()">合并群主基金</el-button>
       <el-button class="top_btn btn_5" @click="query_list()">恢复到初始化数据</el-button>
       <el-button class="top_btn btn_3" @click="btn_delete_all()" :disabled="!info.tableData.length">全部删除</el-button>
-      <el-button class="top_btn btn_5" @click="btn_copy_data()">复制数据</el-button>
-      <el-button class="top_btn btn_5" @click="btn_copy_tabledata()">复制(表格)</el-button>
+
+      <el-button class="top_btn btn_4" @click="btn_fn_03()">复制(逗号)</el-button>
+      <el-button class="top_btn btn_5" @click="btn_fn_05()">复制(数组)</el-button>
+      <el-button class="top_btn btn_5" @click="btn_fn_08()">复制(折行)</el-button>
     </div>
 
     <!--
