@@ -24,7 +24,6 @@ const info = reactive({
     "point_down": "",
     "point_top": "",
     "fund_desc": "",
-    "fund_sign": "当前",
   }
 })
 const rules = {
@@ -124,7 +123,6 @@ const resetForm = () => {
     "point_down": "",
     "point_top": "",
     "fund_desc": "",
-    "fund_sign": "当前",
   }
   diaForm?.value?.resetFields();
 
@@ -345,13 +343,6 @@ const btn_fn_05 = () => {
           <el-input v-model="info.form.fund_desc" autocomplete="off" />
         </el-form-item>
 
-        <el-form-item label="状态" prop="fund_sign" :label-width="info.formLabelWidth">
-          <el-radio-group v-model="info.form.fund_sign">
-            <el-radio value="正常">正常</el-radio>
-            <el-radio value="历史">历史</el-radio>
-            <el-radio value="观察">观察</el-radio>
-          </el-radio-group>
-        </el-form-item>
       </el-form>
       <template #footer>
         <div class="dialog-footer">

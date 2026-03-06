@@ -142,7 +142,7 @@ const sortHisData8 = (a, b) => sortHistoricalData(a, b, 8);
     <div class="img-box">
       <template v-for="item in info.tableData" :key="item.id">
         <!-- 推荐添加 :key -->
-        <template v-if="item.fund_sign === '正常' && item.zhang_url?.startsWith('http')">
+        <template v-if="item.zhang_url?.startsWith('http')">
           <a class="type_1" :href="`https://fund.eastmoney.com/${item.fund_code}.html`" target="_blank">
             <img :src="item.zhang_url" :alt="item.fund_name" />
           </a>

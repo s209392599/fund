@@ -341,7 +341,6 @@ const btn_fn_08 = () => {
           <template v-slot="{ row }">
             <a :href="`https://fund.eastmoney.com/${row.fund_code}.html`" target="_blank"
               style="text-decoration: none;">
-              <!-- <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_code }}</span> -->
               <span>{{ row.fund_code }}</span>
             </a>
           </template>
@@ -349,14 +348,12 @@ const btn_fn_08 = () => {
 
         <el-table-column prop="fund_name" label="基金名称" :width="width_name" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
-            <!-- <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_name }}</span> -->
             <span>{{ row.fund_name }}</span>
           </template>
         </el-table-column>
 
         <el-table-column prop="fund_type" label="类型" width="70" align="center" sortable show-overflow-tooltip>
           <template v-slot="{ row }">
-            <!-- <span v-if="row.fund_sign === '历史'" style="color:#876ad2;font-weight: 700;">{{ row.fund_type }}</span> -->
             <span>{{ row.fund_type }}</span>
           </template>
         </el-table-column>
