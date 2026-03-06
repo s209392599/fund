@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted, inject } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 // 重仓基金
 const props = defineProps({
   data: {
@@ -9,8 +9,9 @@ const props = defineProps({
   },
 });
 
-// 注入 echarts
-const echarts = inject('echarts');
+// 获取 echarts 实例
+import { getEcharts } from '@/utils/echarts.js';
+const echarts = getEcharts();
 const chartRef = ref(null);
 let myChart = null;
 

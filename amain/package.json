@@ -7,8 +7,8 @@
     "dev": "vite",
     "api": "cd api && yarn dev",
     "api/": "cd api && yarn dev",
-    "build": "vite build",
-    "build/": "vite build",
+    "build": "vite build && node build/add_build_time.js",
+    "build/": "vite build && node build/add_build_time.js",
     "preview": "vite preview"
   },
   "dependencies": {

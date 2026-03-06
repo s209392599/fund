@@ -1,7 +1,9 @@
 <script setup>
 console.log('amain/src/views/preview/fund_duibi/duibi_08.vue');
 import pLimit from 'p-limit';
-const echartsInstance = inject('echarts');
+// 获取 echarts 实例
+import { getEcharts } from '@/utils/echarts.js';
+const echartsInstance = getEcharts();
 
 const info = reactive({
   active: 2,

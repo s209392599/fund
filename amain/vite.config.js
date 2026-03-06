@@ -29,6 +29,10 @@ export default defineConfig({
   base: './',
   build: {
     // 输出文件命名，添加哈希值防止缓存
+    // 启用更激进的 tree-shaking
+    treeShaking: true,
+    // 启用 CSS 代码分割
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
         // JS 文件命名
@@ -36,8 +40,23 @@ export default defineConfig({
         chunkFileNames: `assets/js/[name].[hash].js`,
         // CSS 文件命名
         assetFileNames: `assets/[ext]/[name].[hash].[ext]`,
+        // 代码分割策略：将大型依赖库分离到单独的 chunk
+        manualChunks: {
+          // Vue 核心库
+          'vue-core': ['vue', 'vue-router', 'pinia'],
+          // Element Plus 核心 UI 库（单独拆分）
+          'element-plus': ['element-plus'],
+          // ECharts 核心模块（已按需引入）
+          'echarts-core': ['echarts/core'],
+          // 工具库
+          'utils': ['axios', 'dexie', 'p-limit'],
+          // 拖拽相关（sortablejs 只在这里使用）
+          'draggable': ['vue-draggable-plus', 'sortablejs'],
+        },
       },
     },
+    // 调整 chunk 大小警告限制（element-plus 本身就很大）
+    chunkSizeWarningLimit: 1200,
     // 生成 manifest 用于服务-worker 等场景（可选）
     // manifest: true,
   },

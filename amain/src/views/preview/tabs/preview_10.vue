@@ -1,6 +1,8 @@
 <script setup>
 console.log('amain/src/views/preview/tabs/preview_10.vue');
-const echartsInstance = inject('echarts');
+// 获取 echarts 实例
+import { getEcharts } from '@/utils/echarts.js';
+const echartsInstance = getEcharts();
 
 const chart = ref(null);
 var myChart = null;
