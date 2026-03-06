@@ -67,22 +67,10 @@ const loadComponent = async (nodeId) => {
   const node = findNode(info.tree_data);
   if (node && node.hasComponent && !loadedComponents[nodeId]) {
     try {
-      // 添加超时机制，遵循项目规范
-      const timeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('组件加载超时')), 5000);
-      });
-
-      const modulePromise = node.component();
-
-      const module = await Promise.race([
-        modulePromise,
-        timeoutPromise
-      ]);
-
-      // 使用 markRaw 避免组件被转换为响应式对象
-      loadedComponents[nodeId] = markRaw(module.default);
+      // 直接使用已定义的组件，defineAsyncComponent 已经处理了异步加载
+      loadedComponents[nodeId] = node.component;
     } catch (error) {
-      console.error(`加载组件失败: ${error.message}`);
+      console.error(`加载组件失败：${error.message}`);
     }
   }
 };

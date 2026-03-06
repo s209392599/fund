@@ -20,7 +20,7 @@ const {
 
 // 过滤条件
 const filterObj = {
-  nian_hua: 20, // 年化收益不低于10
+  nian_hua: 30, // 年化收益不低于10
   mai_chu_gui_ze: 3, // 卖出规则只有两条，三条则可能是要求30天之后
   xiu_fu_tian_shu: 100,// 回撤修复天数要小于120
   zui_da_hui_che: -20,// 最大回撤要小于10%
@@ -522,7 +522,7 @@ async function zhenduanFn() {
         // 波动率
         let returnSd = datas.returnSd || {};
         let boDongVal = Number(returnSd.value || 0);
-        if(boDongVal > filterObj.volatility){
+        if (boDongVal > filterObj.volatility) {
           info.err_data.zhenduan.push({
             fund_code: item.fund_code,
             fund_name: item.fund_name,
@@ -533,7 +533,7 @@ async function zhenduanFn() {
         // 夏普比率
         let sharpRatio = datas.sharpRatio || {};
         let sharpVal = Number(sharpRatio.value || 0);
-        if(sharpVal < filterObj.sharp_ratio){
+        if (sharpVal < filterObj.sharp_ratio) {
           info.err_data.zhenduan.push({
             fund_code: item.fund_code,
             fund_name: item.fund_name,
@@ -544,7 +544,7 @@ async function zhenduanFn() {
         // 卡玛比率
         let calmarRatioMap = datas.calmarRatioMap || {};
         let calmarVal = Number(calmarRatioMap.value || 0);
-        if(calmarVal < filterObj.calmar_ratio){
+        if (calmarVal < filterObj.calmar_ratio) {
           info.err_data.zhenduan.push({
             fund_code: item.fund_code,
             fund_name: item.fund_name,
