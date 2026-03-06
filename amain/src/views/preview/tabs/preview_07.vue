@@ -47,7 +47,7 @@ const rules = {
 const query_list = () => {
   setTimeout(() => {
     server_fund_table_query_by_user({
-      fund_user_id: localStorage.getItem('user_id')
+      user_id: localStorage.getItem('user_id'),
     }).then(res => {
       if (res.code === 200) {
         ElMessage.success('已读取最新数据');
@@ -185,12 +185,13 @@ const onSubmit = () => {
 
 const SaveData = () => {
   const fund_info = info.tableData.map((item, index) => {
-    item.sort_order = index + 1;
+    // item.sort_order = index + 1;
     return item;
   })
-  server_fund_amain_save_fund_data({
-    fund_info: fund_info,
-    fund_user_id: localStorage.getItem('user_id'),
+
+  server_fund_table_users_save_fundlist({
+    fund_list: fund_info,
+    user_id: localStorage.getItem('user_id'),
   }).then(res => {
     if (res.code === 200) {
       ElMessage.success('操作成功');

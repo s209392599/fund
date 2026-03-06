@@ -9,8 +9,9 @@ const noText = require('../../utils/noText.js'); // 排除的关键词
 const noFundCode = require('../../utils/noFundCode.js'); // 排除的基金代码
 const { DatabasePostQuery } = require('../../utils/DatabasePostQuery.js'); // post请求数据库查询封装
 
+
 // 排序-公共的基金数据
-router.post('/fund_msssssssssssssssssssss', async (req, res) => {
+router.post('/fund_ms', async (req, res) => {
   const { fund_code = [], fund_user_id = null } = req.body;
   if (!fund_user_id || fund_code.length === 0) {
     res.send({

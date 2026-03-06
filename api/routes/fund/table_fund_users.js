@@ -15,11 +15,47 @@ router.post('/fund_table_query_by_user', async (req, res) => {
   user_id = parseFloat(user_id);
   DatabasePostQuery({
     res: res,
-    query: `SELECT fundlist FROM fund_users WHERE id = ${user_id}`,
-    format: (results) => results,
-    // format: (results) => ({
-    //   data: results,
-    // }),
+    query: `SELECT fund_list FROM fund_users WHERE id = ${user_id}`,
+    // format: (results) => results,
+    format: (results) => {
+      let res = results?.[0]?.fund_list || '[]';
+      return JSON.parse(res);
+    }
+  });
+});
+
+// 保存用户基金
+router.post('/fund_table_users_save_fundlist', async (req, res) => {
+  const { user_id = '', fund_list = '' } = req.body;
+  if (!user_id) {
+    res.send({
+      code: 400,
+      msg: '未传入用户ID',
+      data: [],
+    });
+    return;
+  }
+
+  var query = `UPDATE fund_users SET fund_list = ? WHERE id = ?`;
+  DatabasePostQuery({
+    res: res,
+    query: query,
+    values: [fund_list, user_id],
+    format: (results) => {
+      if (results.affectedRows > 0) {
+        return {
+          code: 200,
+          msg: '保存成功',
+          data: []
+        };
+      } else {
+        return {
+          code: 500,
+          msg: '保存失败或未找到用户',
+          data: []
+        };
+      }
+    },
   });
 });
 

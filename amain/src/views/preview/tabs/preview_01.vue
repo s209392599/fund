@@ -68,7 +68,7 @@ window.jsonpgz = (data) => {
 const query_list = () => {
   setTimeout(() => {
     server_fund_table_query_by_user({
-      fund_user_id: localStorage.getItem('user_id'),
+      user_id: localStorage.getItem('user_id'),
     }).then((res) => {
       if (res.code === 200) {
         info.tableData = (res.data || []).map((item, index) => {
