@@ -3,8 +3,8 @@ const fs = require('fs');
 const os = require('os');
 const { default: pLimit } = require('p-limit');
 // const limit = pLimit(5); // 设置并发数为5
-// const limit = pLimit(os.cpus().length * 2); // CPU核心数
-const limit = pLimit(os.cpus().length); // CPU核心数
+const limit = pLimit(os.cpus().length * 2); // CPU核心数
+// const limit = pLimit(os.cpus().length); // CPU核心数
 const limit_2 = pLimit(2);
 
 const {
@@ -20,7 +20,7 @@ const {
 
 // 过滤条件
 const filterObj = {
-  nian_hua: 30, // 年化收益不低于10
+  nian_hua: 20, // 年化收益不低于10
   mai_chu_gui_ze: 3, // 卖出规则只有两条，三条则可能是要求30天之后
   xiu_fu_tian_shu: 100,// 回撤修复天数要小于120
   zui_da_hui_che: -20,// 最大回撤要小于10%
@@ -32,30 +32,61 @@ const filterObj = {
   calmar_ratio: 2,// 卡玛比率,越大越好
 };
 const params_keywords = {
-  keyword_arr: [
-    '量化',
-    '策略',
-    '灵活',
-    '因子',
-    '增强',
-    '绝对收益',
-    '动量',
-    '成长',
-    '趋势',
-    '绩优',
-    '智选',
-    '优选',
-    '周期驱动',
+  noFundType: [
+    '债券',
+    '纯债',
+    '偏债',
+    '混合债',
+    '固收',
+    '指数',
+    'QDII',
+    '货币'
   ],
-  noFundType: ['债券', '货币', '指数', 'QDII'],
-  noEndWith: ['A', 'ETF', '(后端)'],// 不以什么结尾
+  // B:三年以上 I/R:高门槛 H:港股通 Y:养老金
+  noEndWith: ['A', 'B', 'I', 'R', 'H', 'Y', 'ETF', '(后端)'],// 不以什么结尾
   // 额外去除的关键词或者基金名称
   extraFundNameArr: [
-    // '混合',
+    'A1',
+    'A2',
+    'A3',
+    '医疗',
+    '医药',
+    '指数',
+    '个月',
+    '60天',
+    '90天',
+    '180天',
+    '封闭',
+    '定期',
+    '定开',
+    '年持有', // 1年持有期 三年持有 等
+    '60天持有',
+    '90天持有',
+    '120天持有',
+    '180天持有',
+    '一年',
+    '两年',
+    '三年',
+    '五年',
+    '1年',
+    '套利',
+    '后端',
+    '房地产',
+    '滚动',
+    '不动产',
+    // '白银期货',
+    '养老',
+    'REIT',
+    '货币',
+    '(后端)',
+    '人民币',
+    '绝对收益',
+    'A/B',
   ],
   // 额外去除的基金代码
   extraFundCodeArr: [
-    // '000001',// 华夏成长混合
+    '000075',// 华夏恒生ETF联接现汇
+    '000076',// 华夏恒生ETF联接现钞
   ],
   // 额外添加的基金
   extraAddFundArr: [
@@ -67,6 +98,7 @@ const params_keywords = {
   ],
 }
 const info = {
+  jian_ce_num: 0,// 需要检测的数量
   filter_data: [], // 过滤后的数据
   err_data: {
     feilv: [],// 费率错误的
@@ -563,7 +595,8 @@ async function zhenduanFn() {
   const results = await Promise.all(promises);
   const new_data = results.filter(result => result !== null);
   info.filter_data = new_data;
-  console.log(`符合综合诊断的有 ${info.filter_data.length} 个`);
+
+  console.log(`检测 ${info.jian_ce_num} 个基金, 剩余 ${info.filter_data.length} 个符合综合诊断`);
 }
 
 async function main() {
@@ -577,6 +610,8 @@ async function main() {
       filter_data: info.filter_data,
       ...params_keywords,
     });
+
+    info.jian_ce_num = info.filter_data.length;
 
     // 京东金融基本信息
     await jingdongBaseInfo();

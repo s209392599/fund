@@ -156,6 +156,7 @@ const onSubmit = () => {
   diaForm.value.validate((valid) => {
     if (valid) {
       console.log('form', info.form);
+      return false;
       info.form.update_time = CustomDateFtt(new Date(), "yyyy-MM-dd hh:mm:ss");
 
       if (info.update_flag === 'add') {
@@ -221,12 +222,12 @@ const onSubmit = () => {
       <el-table-column prop="fund_count" label="基金数量" width="100" />
       <el-table-column prop="fund_list" label="基金列表" width="150" :show-overflow-tooltip="true" />
 
-      <el-table-column prop="create_time" label="创建时间" width="145">
+      <el-table-column prop="create_time" label="创建时间" width="155">
         <template #default="{ row }">
           {{ CustomDateFtt(new Date(row.create_time), "yyyy-MM-dd hh:mm:ss") }}
         </template>
       </el-table-column>
-      <el-table-column prop="update_time" label="更新时间" width="145">
+      <el-table-column prop="update_time" label="更新时间" width="155">
         <template #default="{ row }">
           {{ CustomDateFtt(new Date(row.update_time), "yyyy-MM-dd hh:mm:ss") }}
         </template>
