@@ -5,7 +5,7 @@
  * 日期 2024-09-23 14:54:23
  */
 
-/* 
+/*
 OrgChart.js修改日志
 6.11: 添加代码[ ?.replaceAll(',NaN','')  ]
 6.12: 修改代码[ .replaceAll('NaN',+(t.getAttribute("viewBox").split(',')[2])-500)  ]
@@ -66,12 +66,12 @@ OrgChart.js修改日志
                 }
             ]
         }
-        
+
         let arr = res.data || [];
         let nodes = [];
 
         let num = 100;
-        // num = 200;
+        num = 300;
         for(let i = 0; i < num; i++) {
             arr.push({
                 "company": "中远海运重工" + i,
@@ -84,7 +84,7 @@ OrgChart.js修改日志
                 ]
             });
         }
-        
+
         arr.map(item => {
             nodes.push({
                 ...item,
@@ -121,17 +121,17 @@ OrgChart.js修改日志
             `<text width="230" style="font-size: 18px;" fill="#ffffff" x="125" y="30" text-anchor="middle">{val}</text>`;
         const y_num = originFrom == 'zdzx' ? 65 : 30;
         OrgChart.templates.greyTemplate.field_1 =
-            `<text 
-                width="230" 
+            `<text
+                width="230"
                 style="
                     font-size: 18px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     width: 230px;
-                    font-weight="bold;" 
+                    font-weight="bold;"
                 fill="#ffffff"
-                x="125" y="${y_num}" 
+                x="125" y="${y_num}"
                 text-anchor="middle">{val}</text>`;
         const y_2_num = originFrom == 'zdzx' ? 90 : 60;
         OrgChart.templates.greyTemplate.field_2 =
@@ -149,8 +149,8 @@ OrgChart.js修改日志
             nodeBinding.field_2 = "info";
             content_id = document.getElementById("zdzx_tree");
         }
-        let chart = new OrgChart(content_id, {   
-            // mouseScrool: OrgChart.action.scroll, 
+        let chart = new OrgChart(content_id, {
+            // mouseScrool: OrgChart.action.scroll,
             mouseScrool: OrgChart.action.ctrlZoom,
             enableDragDrop: false,
             enableSearch: false,
@@ -175,7 +175,7 @@ OrgChart.js修改日志
             },
         });
 
-        console.log('nodes', nodes);
+        console.log('nodes length:', nodes.length);
         chart.load(nodes);
         chart.fit(); // 数据加载完成后适应
     }

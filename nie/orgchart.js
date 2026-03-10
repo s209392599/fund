@@ -17230,7 +17230,7 @@ var OrgChart = function (t, e) {
   (OrgChart.filterUI.all = "[All]"),
   void 0 === OrgChart && (OrgChart = {}),
   void 0 === OrgChart.remote && (OrgChart.remote = {}),
-  (OrgChart.LIMIT_NODES = !0),
+  (OrgChart.LIMIT_NODES = !1),
   (OrgChart.remote._fromResDTO = function (t, e, r, i, n) {
     var a = e[t.id];
     (t.x = a.p[0]),
