@@ -20,6 +20,8 @@ const {
 
 // 过滤条件
 const filterObj = {
+  is_quan_liang: true, //
+  is_quan_liang: false, // 排除bu_man_zu.jsoon
   nian_hua: 20, // 年化收益不低于10
   mai_chu_gui_ze: 3, // 卖出规则只有两条，三条则可能是要求30天之后
   xiu_fu_tian_shu: 100,// 回撤修复天数要小于120
@@ -610,6 +612,12 @@ async function main() {
       filter_data: info.filter_data,
       ...params_keywords,
     });
+    if(!filterObj.is_quan_liang){
+      const buManZuData = JSON.parse(fs.readFileSync('./data/bu_man_zu.json', 'utf-8'));
+      const buManZuCodes = buManZuData.map(item => item.fund_code);
+      info.filter_data = info.filter_data.filter(item => !buManZuCodes.includes(item.fund_code));
+    }
+    console.log(`过滤关键词后剩余 ${info.filter_data.length} 个基金`);
 
     info.jian_ce_num = info.filter_data.length;
 
@@ -663,6 +671,10 @@ async function main() {
       console.log('不符合条件错误数据长度:', info.err_data.not_meet_condition.length);
     }
 
+    if(filterObj.is_quan_liang){
+      let arr = info.err_data.not_meet_condition.filter(item => ['前十仓位超过40%','规模不到一亿'].includes(item.reason));
+      fs.writeFileSync('./data/bu_man_zu.json', JSON.stringify(arr, null, 2));
+    }
   } catch (err) {
     console.log('err => ', err);
   } finally {
