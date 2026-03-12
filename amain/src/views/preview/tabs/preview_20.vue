@@ -66,16 +66,16 @@ const getKanPanData = async () => {
 };
 // 主力流入
 const getZhuliInData = async () => {
-  let res = await server_fund_cls_zhuliu({});
+  let res = await server_fund_cls_zhuliu({
+    main_fund_diff: 1
+  });
   if (res.code === 200) {
     info.zhuliuInObj = res.data;
   }
 };
 // 主力流出
 const getZhuliuOutData = async () => {
-  let res = await server_fund_cls_zhuliu({
-    main_fund_diff: 1
-  });
+  let res = await server_fund_cls_zhuliu({});
   if (res.code === 200) {
     info.zhuliuOutObj = res.data;
   }
